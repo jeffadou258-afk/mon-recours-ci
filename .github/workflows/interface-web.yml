@@ -20,14 +20,50 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Fige les versions exactes : génère package-lock.json et l'ajoute à la branche
+  # feature/interface-web s'il a changé (jamais sur main, jamais sur une PR).
+  verrou-des-versions:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/feature/interface-web'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Générer package-lock.json (sans exécuter de script)
+        run: npm install --package-lock-only --ignore-scripts --no-fund --no-audit
+      - name: Ajouter le verrou à la branche s'il a changé
+        run: |
+          if git diff --quiet -- package-lock.json && git ls-files --error-unmatch package-lock.json >/dev/null 2>&1; then
+            echo "::notice title=package-lock::inchangé"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          git commit -m "Verrou des versions (package-lock.json) généré par la CI"
+          git push origin HEAD:feature/interface-web
+          echo "::notice title=package-lock::ajouté à la branche ($(git rev-parse --short HEAD))"
+
   controles:
+    needs: [verrou-des-versions]
+    if: always()
     runs-on: ubuntu-latest
     timeout-minutes: 30
     defaults:
       run:
         working-directory: web
     steps:
+      # Sur un envoi, on contrôle la tête de branche, verrou des versions compris.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.sha || github.ref }}
 
       - uses: actions/setup-node@v4
         with:
@@ -52,7 +88,7 @@ jobs:
       - name: Installation (sans scripts d'installation)
         run: |
           node --version && npm --version
-          npm install --ignore-scripts --no-fund
+          if [ -f package-lock.json ]; then npm ci --ignore-scripts --no-fund; else npm install --ignore-scripts --no-fund; fi
           echo "::notice title=Versions::$(node -p "['next','react','react-dom','postcss','playwright','esbuild','typescript'].map(n=>{try{return n+'@'+JSON.parse(require('fs').readFileSync('node_modules/'+n+'/package.json','utf8')).version}catch{return n+'@absent'}}).join(' ')")"
 
       - name: Copies de postcss installées (doivent être >= 8.5.23)
@@ -84,11 +120,18 @@ jobs:
 
       - name: Construction Next.js
         if: always()
-        run: npm run build
+        run: |
+          set -o pipefail
+          npm run build 2>&1 | tee ../build.txt
+          RESUME=$(grep -E "Compiled|Generating static|^Route|^[┌├└]|First Load|^ƒ|^○" ../build.txt | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
+          echo "::notice title=Construction Next.js::$RESUME"
 
       - name: Secrets dans le code client
         if: always()
-        run: npm run verifier:secrets
+        run: |
+          set -o pipefail
+          npm run verifier:secrets 2>&1 | tee ../secrets.txt
+          echo "::notice title=Secrets::$(tail -1 ../secrets.txt)"
 
       - name: Intégration avec le moteur Python réel
         if: always()
