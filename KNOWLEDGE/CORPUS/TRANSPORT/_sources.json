@@ -1,0 +1,22 @@
+{
+ "domaine": "transport_responsabilite_civile",
+ "dossier": "TRANSPORT",
+ "date_collecte": "2026-10-17",
+ "sources": [
+  {
+   "cle": "decret_2013_711_telephone_conduite",
+   "titre": "DECRET N° 2013-711 DU 18 OCTOBRE 2013 PORTANT INTERDICTION DE L'USAGE DU TELEPHONE PORTABLE ET DE TOUT AUTRE MOYEN DE COMMUNICATION EN SITUATION DE CONDUITE AUTOMOBILE",
+   "type_texte": "decret",
+   "numero_texte": "2013-711",
+   "date_texte": "2013-10-18",
+   "autorite": "Secrétariat Général du Gouvernement (photo_doc) / Présidence de la République",
+   "url": "https://www.sgg.gouv.ci/photo_doc/1399281886Decret_N_2013_791_du_20_novembre_2013%20.pdf",
+   "fichier": "decret_2013-711_telephone_au_volant.pdf",
+   "pages": 3,
+   "limites": "Attention : le NOM DE FICHIER annonce « Decret N° 2013-791 du 20 novembre 2013 », alors que le DOCUMENT lui-meme porte « Decret n° 2013-711 du 18 octobre 2013 ». C'est le document qui fait foi ; l'ecart est signale et n'a pas ete corrige en silence. Vigueur non garantie au-delà de la date de consultation.",
+   "reserves": [
+    "Ecart entre le nom de fichier de la source et le numero lu dans le document (711 contre 791, 18 octobre contre 20 novembre). Non tranche : aucun autre exemplaire."
+   ]
+  }
+ ]
+}

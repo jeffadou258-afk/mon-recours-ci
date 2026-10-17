@@ -1,0 +1,1044 @@
+
+--- PAGE 1 ---
+4.74
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+8 août 2013
+24 iuin ......
+Arrêté n° 294/MPMEF/DGTCP/DCP
+portant
+— agrément, la reconnaissance formelle par un organisme
+création, organisation et fonctionnement d'une
+agréé que le produit ou le système évalué peut protéger jusqu'à
+équipe- projet pour la mise en œuvre des directives
+un niveau spécifié ;
+de l'UEMOA à la direction générale du Trésor et de
+la Comptabilité publique.
+— archivage électronique sécurisé, l'ensemble des modalités
+487
+de conservation et de gestion des archives électroniques destinées
+15 juillet .... Arrêté n° 356/MPMEF/DGTCP/DT/SDAMB
+à garantir leur valeur juridique pendant toute la durée nécessaire ;
+portant dérogation à la condition de nationalité en
+— atteinte à la dignité humaine, toute atteinte, hors les cas d'at-
+faveur de M. Edouard Michel Marie Joseph
+tentat à la vie, à l'intégrité ou à la liberté, qui a pour effet essentiel
+MASSON BACHASSON de MONTALIVET.
+488
+de traiter la personne comme une chose, comme un animal ou
+17 juillet .... Arrêté n° 367/MPMEF/CAB portant nomination
+comme un être auquel serait dénié tout droit ;
+de deux commissaires aux comptes auprès du
+— autorité de protection, l'autorité administrative indépen-
+Conseil de Régulation, de Stabilisation et de Déve-
+dante chargée de veiller à ce que les traitements des données à
+loppement de la Filière café-cacao, en abrégé
+caractère personnel soient mis en œuvre conformément aux dis-
+«le Conseil du Café-Cacao».
+489
+positions de la présente loi ;
+- chiffrement, toute technique qui consiste à transformer des
+MINISTERE DES RESSOURCES ANIMALES
+données numériques en un format inintelligible en employant des
+ET HALIEUTIQUES
+moyens de cryptologie ;
+27 juin.
+Arrêté n° 012/MIRAH/CAB autorisant la société
+— code de conduite, la charte d'utilisation élaborée par le res-
+Carrefour d'Importation de Produits et Matériels
+ponsable du traitement afin d'instaurer un usage correct des res-
+vétérinaires «CIPROVET» à importer et à distribuer
+sources informatiques, de l'Internet et des communications
+en gros des produits et matériels vétérinaires.
+489
+électroniques de la structure concernée et homologuée par l'Au-
+27 juin
+Arrêté n° 018/MIRAH/CAB autorisant la Pharmacie
+torité de protection ;
+vétérinaire de Côte d'Ivoire «PHARMAVET-CI», à
+importer et à distribuer en gros des produits et
+— commerce électronique, l'activité économique par laquelle
+matériels vétérinaires.
+490
+une personne propose ou assure, à distance et par voie électro-
+27 juin
+.. Arrêté n° 019/MIRAH/CAB portant agrément
+nique, la fourniture de biens et la prestation de services ;
+de la Pharmacie vétérinaire de Côte d'Ivoire
+entrent également dans le champ du commerce électronique,
+«PHARMAVET-CI» pour l'importation et la distri-
+bution des produits et matériels vétérinaires.
+491
+les activités de fourniture de services telles que celles consistant
+à fournir des informations en ligne, des communications com-
+merciales, des outils de recherches, d'accès et de récupération de
+données, d'accès à un réseau de communication ou d'héberge-
+PARTIE NON OFFICIELLE
+ment d'informations, même s'ils ne sont pas rémunérés par ceux
+qui les reçoivent;
+Avis et annonces.
+492
+— communication électronique, toute émission, transmission
+ou réception de signes, de signaux, d'écrits, d'images, de sons ou
+de vidéos par voie électromagnétique, optique ou par tout autre
+PARTIE OFFICIELLE
+moyen;
+-consentement de la personne concernée, toute manifestation
+ACTES PRESIDENTIELS
+de volonté expresse, non équivoque, libre, spécifique et informée
+par laquelle la personne concernée ou son représentant légal,
+PRESIDENCE DE LA REPUBLIQUE
+judiciaire ou conventionnel accepte que ses données à caractère
+personnel fassent l'objet d'un traitement manuel ou électronique ;
+LOI n° 2013-450 du 19 juin 2013 relative à la protection des
+- conventions secrètes, toutes clés non publiées, nécessaires
+données à caractère personnel.
+à la mise en œuvre d'un moyen ou d'une prestation de cryptologie
+L'ASSEMBLEE NATIONALE a adopté,
+pour les opérations de chiffrement ou de déchiffrement ;
+le Président de la République promulgue la loi dont la teneur
+- courrier électronique, tout message, sous forme de texte,
+suit:
+CHAPITRE 1
+de voix, de son ou d'image, envoyé par un réseau public de com-
+munication, stocké sur un serveur du réseau ou dans l'équipement
+Définitions
+terminal du destinataire, jusqu'à ce que ce dernier le récupère ;
+Article premier. — Les définitions des instruments juridiques
+de la CEDEAO, de l'Union africaine ou de l'Union internationale
+— cryptologie, la science relative à la protection et à la sécurité
+des Télécommunications prévalent pour les termes non définis
+des informations notamment pour la confidentialité, l'authenti-
+par la présente loi.
+fication, l'intégrité et la non-répudiation ;
+Au sens de la présente loi, on entend par :
+— cybercriminalité, toute infraction pénale qui se commet au
+— activité de cryptologie, toute activité ayant pour but la
+moyen ou sur un réseau de communications électroniques ou un
+production, l'utilisation, l'importation, l'exportation ou la com-
+système informatique ;
+mercialisation des moyens de cryptologie ;
+
+--- PAGE 2 ---
+8 août 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+475
+- destinataire d'un traitement des données à caractère per-
+— information, tout élément de connaissance susceptible d'être
+sonnel, toute personne habilitée à recevoir une communication
+représenté à l'aide de conventions pour être utilisé, conservé,
+de ces données, autre que la personne concernée, le responsable
+traité ou communiqué. L'information peut être exprimée sous
+du traitement, le sous-traitant et les personnes qui, en raison de
+forme écrite, visuelle, sonore, numérique, etc. ;
+leurs fonctions, sont chargés de traiter les données ;
+— infrastructures critiques, les installations physiques et des
+— document, le résultat d'une série de lettres, de caractères, de
+technologies de l'information, les réseaux, les services et les actifs
+chiffres, de figures ou de tous autres signes ou symboles qui a
+qui, en cas d'arrêt ou de destruction, peuvent avoir de graves
+une signification intelligible, quels que soient leur média et leurs
+incidences sur la santé, la sécurité ou le bien-être économique et
+modalités de transmission ;
+social des citoyens ou encore le fonctionnement continu des
+- données à caractère personnel, toute information de
+services de l'Etat ;
+quelque nature qu'elle soit et indépendamment de son support, y
+compris le san et l'image relative à une personne physique identi-
+— interconnexion des données à caractère personnel, tout
+fiée ou identifiable directement ou indirectement, par référence à
+mécanisme de connexion consistant en la mise en relation de
+un numéro d'identification ou à un ou plusieurs éléments spéci-
+données traitées pour une finalité déterminée avec d'autres don-
+fiques, propres à son identifié physique, physiologique, génétique,
+nées traitées pour des finalités identiques ou non, ou liées par un
+psychique, culturelle, sociale ou économique ;
+ou plusieurs responsables de traitement ;
+— données informatiques ou données, toute représentation de
+— message électronique, toute information créée, envoyée,
+faits, d'informations ou de concepts sous une forme qui se prête
+reçue ou conservée par des moyens électroniques ou optiques ou
+à un traitement informatique, y compris un programme de nature
+des moyens analogues, notamment, mais non exclusivement,
+à faire exécuter une fonction par un système d'information ;
+l'échange de données informatisées (EDI), la messagerie électro-
+— données relatives aux abonnés, toute information, sous
+nique, le télégraphe, le télex et la télécopie.
+forme de données informatiques ou sous toute autre forme,
+détenue par un fournisseur de services et se rapportant aux
+— mineur, toute personne âgée de moins de dix-huit ans,
+abonnés de ses services, autres que des données relatives au trafic
+conformément au code pénal ;
+ou au contenu, et permettant d'établir sur la base d'un contrat ou
+— moyens de cryptologie, l'ensemble des outils scientifiques
+d'un arrangement de services ;
+et techniques (matériel ou logiciel) qui permettent de chiffrer
+— le type de service de communication, les dispositions tech-
+et/ou de déchiffrer ; on entend, également, par moyen de crypto-
+niques prises à cet égard et la période de service ;
+logie tout matériel ou logiciel conçu ou modifié pour transformer
+— l'identité, l'adresse postale ou géographique, le numéro de
+des données, qu'il s'agisse d'écrits ou de signaux, à l'aide de
+téléphone et tout autre numéro d'accès, les informations relatives
+conventions secrètes ou pour réaliser l'opération inverse avec ou
+à la localisation, la facturation et à l'endroit où se trouvent les
+sans convention secrète ;
+équipements de communication ;
+— pays tiers, tout Etat non membre de la CEDEAO ;
+— données relatives au trafic, toutes données ayant trait à une
+—personne concernée, toute personne physique qui fait l'objet
+communication passant par un système d'information, produites
+d'un traitement de données à caractère personnel ;
+par ce dernier en tant qu'élément de la chaîne de communication,
+— prestation de cryptologie, toute opération visant à la mise
+indiquant l'origine, la destination, l'itinéraire, l'heure, la date,
+la taille et la durée de la communication ou le type de service
+en œuvre, pour le compte de soi ou d'autrui, des moyens de
+sous-jacent ;
+cryptologie;
+— prestataire de services de cryptologie, toute personne,
+— données sensibles, toutes données à caractère personnel
+relatives aux opinions ou activités religieuse, philosophique,
+physique ou morale, qui fournit une prestation de cryptologie;
+politique, syndicale, à la vie sexuelle ou raciale, à la santé, aux
+— pornographie infantile, toute donnée quelle qu'en soit la
+mesures d'ordre social, aux poursuites, aux sanctions pénales ou
+nature ou la forme représentant de manière visuelle un enfant de
+administratives;
+moins de 18 ans se livrant à un agissement sexuellement explicite
+- échange de données informatisées (EDI), tout transfert
+ou des images représentant un enfant de moins de 15 ans se
+électronique d'une information d'un système électronique à un
+livrant à un comportement sexuellement explicite ;
+autre mettant en œuvre une norme convenue pour structurer
+— prospection directe, tout envoi de message, quel qu'en soit
+l'information;
+le support ou la nature notamment commercial, politique ou
+— écrit, toute suite de lettres, de caractères, de chiffres ou de tous
+caritative, destiné à promouvoir, directement ou indirectement,
+autres signes ou symboles qui a une signification intelligible,
+des biens, des services ou l'image d'une personne vendant des
+quels que soient leur support et leurs modalités de transmission ;
+biens ou fournissant des services ;
+- fichier de données à caractère personnel, tout ensemble
+— racisme et xénophobie en matière des TIC, tout écrit, toute
+structuré de données accessibles selon des critères déterminés,
+image ou toute autre représentation d'idées ou de théories qui
+que cet ensemble soit centralisé, décentralisé ou réparti de
+préconise ou encourage la haine, la discrimination ou la violence
+manière fonctionnelle ou géographique permettant d'identifier
+contre une personne ou un groupe de personnes, en raison de la
+une personne déterminée ;
+race, de la couleur, de l'ascendance ou de l'origine nationale ou
+- fournisseur de services, toute personne morale qui fournit
+ethnique ou de la religion, dans la mesure où cette dernière sert
+au public des services de communications électroniques ou des
+de prétexte à l'un ou à l'autre de ces éléments ou qui incite à de
+prestations informatiques ;
+tels actes;
+
+--- PAGE 3 ---
+476
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+8 août 2013
+— responsable du traitement, la personne physique ou morale,
+Art. 4. — sont exclus du champ d'application de la présente loi :
+publique ou privée, tout autre organisme ou association qui, seul
+- les traitements de données mis en œuvre par une personne
+ou coniointement avec d'autres, prend la décision de collecter et
+physique dans le cadre exclusif de ses activités personnelles ou
+de traiter des données à caractère personnel et en détermine les
+domestiques, à condition toutefois que les données ne soient pas
+finalités;
+destinées à une communication systématique à des tiers ou à la
+— signature électronique, toute donnée qui résulte de l'usage
+diffusion ;
+d'un procédé fiable d'identification garantissant son lien avec
+- les copies temporaires faites dans le cadre des activités
+l'acte auquel elle s'attache ;
+techniques de transmission et de fourniture d'accès à un réseau
+- SMS, le sigle anglo-saxon signifiant « short message
+numérique, en vue du stockage automatique, intermédiaire et
+service » (en français : service de message court) ;
+transitoire des données et à seule fin de permettre à d'autres
+destinataires du service le meilleur accès possible aux informa-
+-- sous-traitant, toute personne physique ou morale, publique
+tions transmises.
+ou privée, tout autre organisme ou association qui traite des
+CHAPITRE 3
+données pour le compte du responsable du traitement ;
+Formalités nécessaires au traitement des données
+- surveillance, toute activité faisant appel à des moyens
+à caractère personnel
+techniques ou électroniques en vue de détecter, d'observer, de
+copier ou d'enregistrer les mouvements, images, paroles, écrits,
+Art. S. - Le traitement des données à caractère personnel
+ou l'état d'un objet ou d'une personne fixe ou mobile ;
+est soumis à une déclaration préalable auprès de l'Autorité de
+protection des données à caractère personnel.
+- système d'information ou système informatique, tout
+dispositif isolé ou non, tout ensemble de dispositifs interconnec-
+La déclaration comporte l'engagement que le traitement
+tés assurant en tout ou partie, un traitement automatisé de
+satisfait aux exigences de la loi.
+données en exécution d'un programme ;
+L'Autorité de protection délivre un récépissé en réponse à la
+— tiers, toute personne physique ou morale, publique ou
+déclaration, le cas échéant, par voie électronique. Le demandeur
+privée, tout autre organisme ou association autre que la personne
+peut mettre en oeuvre le traitement dès réception de son récépissé ;
+concernée, le responsable du traitement, le sous-traitant et les
+il n'est exonéré d'aucune de ses responsabilités.
+personnes qui, placés sous l'autorité directe du responsable du
+Les traitements relevant d'un même organisme et ayant des
+traitement ou du sous-traitant, sont habilités à traiter les données ;
+finalités identiques ou liées entre elles peuvent faire l'objet d'une
+— traitement des données à caractère personnel, toute opéra-
+déclaration unique. Les informations requises au titre de la
+déclaration ne sont fournies pour chacun des traitements que dans
+tion ou ensemble d'opérations effectuées ou non à l'aide de
+la mesure où elles lui sont propres.
+procédés automatisés ou non, et appliquées à des données, telles
+que la collecte, l'exploitation, l'enregistrement, l'organisation, la
+Art. 6. - Sont dispensés des formalités de déclaration préa-
+conservation, l'adaptation, la modification, l'extraction, la sauve-
+lable :
+garde, la copie, la consultation, l'utilisation, la communication
+- le traitement de données utilisées par une personne physique
+par transmission, la diffusion ou toute autre forme de mise à
+dans le cadre exclusif de ses activités personnelles, domestiques
+disposition, le rapprochement ou l'interconnexion, ainsi que le
+ou familiales ;
+verrouillage, le cryptage, l'effacement ou la destruction de
+- le traitement de données concernant une personne physique
+données à caractère personnel.
+dont la publication est prescrite par une disposition légale
+CHAPITRE 2
+ou réglementaire ;
+Objet et champ d'application du secrétaire permanent de
+—— le traitement de données ayant pour seul objet la tenue d'un
+la Commission nationale du Fonds pour l'Environnement mondia!.
+registre qui est destiné à un usage exclusivement privé ;
+- le traitement pour lequel le responsable a désigné un
+Art. 2. — La présente loi a pour objet de régir la protection
+correspondant à la protection des données à caractère personnel
+des données à caractère personnel.
+chargé d'assurer, d'une manière indépendante, le respect des
+Art. 3. — Sont soumis aux dispositions de la présente loi :
+obligations prévues dans la présente loi, sauf lorsqu'un transfert
+de données à caractère personnel à destination d'un pays tiers est
+- toute collecte, tout traitement, toute transmission, tout
+envisagé.
+stockage et toute utilisation des données à caractère personnel
+par une personne physique, l'Etat, les collectivités locales, les
+Art. 7. - Sont soumis à autorisation préalable de l'Autorité
+personnes morales de droit public ou de droit privé ;
+de protection avant toute mise en oeuvre :
+— tout traitement automatisé ou non de données contenues ou
+- le traitement des données à caractère personnel portant sur
+appelées à figurer dans un fichier;
+des données génétiques, médicales et sur la recherche scientifique
+dans ces domaines ;
+_ tout traitement de données mis en œuvre sur le territoire
+- le traitement des données à caractère personnel portant sur
+national:
+des données relatives aux infractions, aux condamnations ou aux
+- tout traitement de données concernant la sécurité publique,
+mesures de sûreté prononcées par les juridictions ;
+la défense, la recherche et la poursuite d'infractions pénales ou
+la sûreté de l'Etat, sous réserve des dérogations définies par des
+— le traitement portant sur un numéro national d'identification
+ou tout autre identifiant de la même nature, notamment les nu-
+dispositions spécifiques fixées par d'autres textes de loi en
+vigueur.
+méros de téléphones ;
+
+--- PAGE 4 ---
+8 août 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+477
+- le traitement des données à caractère personnel comportant
+Art. 10. - La déclaration ou la demande d'autorisation peut
+des données biométriques ;
+être adressée à l'Autorité de protection par voie électronique, pos-
+- le traitement des données à caractère personnel ayant un
+tale ou par tout autre moyen contre remise d'un accusé de
+motif d'intérêt public notamment à des fins historiques, statis-
+réception.
+tiques ou scientifiques ;
+Art. 11. — L'Autorité de protection se prononce dans un délai
+- le transfert de données à caractère personnel envisagé à
+d'un mois à compter de la réception de la déclaration ou de la
+destination d'un pays tiers.
+demande d'autorisation. Toutefois, ce délai peut être prorogé d'un
+La demande d'autorisation est présentée par le responsable
+mois supplémentaire sur décision motivée de l'Autorité de
+du traitement ou son représentant légal.
+protection.
+L'autorisation n'exonère pas de la responsabilité à l'égard des
+L'absence de réponse de l'Autorité de protection dans le délai
+tiers.
+imparti équivaut à un rejet de la déclaration ou de la demande
+Art. 8. — Pour les catégories les plus courantes de traitement
+d'autorisation. Dans ce cas, le responsable du traitement peut
+des données à caractère personnel notamment celles dont la mise
+exercer un recours devant la juridiction compétente.
+en oeuvre n'est pas susceptible de porter atteinte à la vie privée
+Les modalités de dépôt des déclarations ou d'octroi des autori-
+ou aux libertés, l'Autorité de protection établit et publie des
+sations pour le traitement des données à caractère personnel
+normes et procédures destinées à simplifier ou à exonérer le res-
+conformément aux dispositions de la présente loi sont fixées par
+ponsable du traitement de l'obligation de déclaration préalable.
+décret.
+Art. 9. - La demande d'avis, la déclaration et la demande
+Art. 12. — Le correspondant à la protection des données à
+d'autorisation sont adressés à l'Autorité de protection et contien-
+caractère personnel est une personne bénéficiant de qualifications
+nent au minimum les mentions suivantes :
+requises pour exercer de telles missions. Il tient une liste des
+— l'identité, le domicile, l'adresse postale ou géographique du
+traitements effectués immédiatement accessible à toute personne
+responsable du traitement ou si celui-ci n'est pas établi sur le ter-
+en faisant la demande et ne peut faire l'objet d'aucune sanction
+ritoire national, celles de son représentant dûment mandaté, et
+de la part de l'employeur, du fait de l'accomplissement de ses
+s'il s'agit d'une personne morale, sa dénomination sociale, son
+missions. Il peut saisir l'Autorité de protection des difficultés qu'il
+siège social, l'identité de son représentant légal, son numéro d'im-
+rencontre dans l'exercice de ses missions.
+matriculation au registre du commerce et du crédit mobilier, son
+La désignation du correspondant par le responsable du traite-
+numéro de déclaration fiscale ;
+ment est notifiée à l'Autorité de protection. Elle est, également,
+— la ou les finalité(s) du traitement ainsi que la description gé-
+portée, le cas échéant, à la connaissance des instances représen-
+nérale de ses fonctions ;
+tatives du personnel.
+— les interconnexions envisagées ou toutes autres formes de
+Le profil et les conditions de rémunération du correspondant à
+mise en relation avec d'autres traitements ;
+la protection des données à caractère personnel font l'objet d'un
+— les données à caractère personnel traitées, leur origine et les
+arrêté du ministre chargé des Technologies de l'Information et de
+la Communication, sur proposition de l'Autorité de protection.
+catégories de personnes concernées par le traitement ;
+— la durée de conservation des données traitées ;
+En cas de manquement constaté à ses devoirs, le correspondant
+est déchargé de ses fonctions sur demande, ou après consultation,
+— le ou les service(s) chargé(s) de mettre en œuvre le traite-
+de l'Autorité de protection.
+ment ainsi que les catégories de personnes qui, en raison de leurs
+fonctions ou pour les besoins du service, ont directement accès
+Art. 13. -- Les traitements des données à caractère personnel
+aux données collectées ;
+opérés pour le compte de l'Etat, d'une personne morale de droit
+- les destinataires habilités à recevoir communication des
+public ou de droit privé gérant un service public sont autorisés
+données traitées ;
+par décret, après avis motivé de l'Autorité de protection.
+- la fonction de la personne ou le service auprès duquel
+Ces traitements portent sur :
+s'exerce le droit d'accès ;
+- la sûreté de l'Etat, la défense nationale ou la sécurité
+'- les dispositions prises pour assurer la sécurité des traite-
+publique;
+ments, la protection et la confidentialité des données traitées ;
+— la prévention, la recherche, la constatation ou la poursuite
+— l'indication du recours à un sous-traitant ou du transfert des
+données à caractère personnel à destination d'un pays tiers.
+des infractions pénales ou l'exécution des condamnations pénales
+ou des mesures de sûreté ;
+En cas de changement intervenu dans les mentions énumérées
+ci-dessus, le responsable du traitement en informe, sans délai,
+— le recensement de la population ;
+l'Autorité nationale de protection des données à caractère personnel.
+— le traitement de salaires, pensions, impôts, taxes et autres
+Les conditions de la présentation de la demande d'autorisation
+liquidations.
+et les procédures d'octroi des autorisations sont fixées par décret
+CHAPITRE 4
+pris en Conseil des ministres.
+Principes-directeurs du traitement des données
+L'Autorité de protection peut, par décision, exiger des condi-
+à caractère personnel
+tions complémentaires de présentation de la demande d'autorisa-
+Art. 14. — Le traitement des données à caractère personnel est
+tion ou de déclaration et aux procédures d'octroi des
+considéré comme légitime si la personne concernée donne
+autorisations.
+expressément son consentement préalable.
+
+--- PAGE 5 ---
+478
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+8 août 2013
+Toutefois, il peut être dérogé à cette exigence du consentement
+la filiation, les opinions politiques, les convictions religieuses ou
+préalable lorsque le responsable du traitement est dûment autorisé
+philosophiques, l'appartenance syndicale, la vie sexuelle, les don-
+et que le traitement est nécessaire :
+nées génétiques ou plus généralement celles relatives à l'état de
+— soit au respect d'une obligation légale à laquelle le respon-
+santé de la personne concernée.
+sable du traitement est soumis ;
+Cette interdiction ne s'applique pas :
+— soit à l'exécution d'une mission d'intérêt public ou relevant
+- lorsque le traitement des données à caractère personnel
+de l'exercice de l'autorité publique, dont est investi le responsable
+porte sur des données manifestement rendues publiques par la
+du traitement ou le tiers auquel les données sont communiquées ;
+personne concernée ;
+— soit à l'exécution d'un contrat auquel la personne concernée
+-— lorsque le traitement des données génétiques ou relatives à
+est partie ou à l'exécution de mesures précontractuelles prises à
+l'état de santé est nécessaire à la sauvegarde des intérêts vitaux
+sa demande ;
+de la personne concernée ou d'une autre personne dans le cas où
+- soit à la sauvegarde de l'intérêt ou des droits et
+la personne concernée se trouve dans l'incapacité physique ou ju-
+libertés fondamentaux de la personne concernée ;
+ridique de donner son consentement ;
+Art. 15. — La collecte, l'enregistrement, le traitement, le
+- lorsque le traitement, notamment des données génétiques,
+stockage, la transmission et l'interconnexion de fichiers des
+est nécessaire à la constatation, à l'exercice ou à la défense d'un
+données à caractère personnel doivent se faire de manière licite
+droit en justice de la personne concernée :
+et loyale.
+— lorsqu'une procédure judiciaire ou une enquête pénale est
+Art. 16. — Les données doivent être collectées pour des
+ouverte. Dans ce cas, le traitement des données à caractère per-
+finalités déterminées, explicites et légitimes et ne peuvent pas
+sonnel n'est poursuivi que pour la constatation des faits ou pour
+être traitées ultérieurement de manière incompatible avec ces
+la manifestation de la vérité ;
+finalités.
+— lorsque le traitement est effectué dans le cadre des activités
+Elles doivent être adéquates, pertinentes et non excessives au
+légitimes d'une fondation, d'une association ou de tout autre or-
+regard des finalités pour lesquelles elles sont collectées et traitées
+ganisme à but non lucratif et à finalité politique, philosophique,
+ultérieurement.
+religieuse, mutualiste ou syndicale. Toutefois, le traitement doit
+Elles doivent être conservées pendant une durée qui n'excède
+se rapporter aux seuls membres de cet organisme ou aux per-
+pas la période nécessaire aux finalités pour lesquelles elles ont
+sonnes entretenant avec celui-ci des contacts réguliers liés à sa
+été collectées ou traitées.
+finalité et que les données ne soient pas communiquées à des tiers
+Au-delà de cette période requise, les données ne peuvent faire
+sans le consentement des personnes concernées.
+l'objet d'une conservation qu'en vue de répondre spécifiquement
+Tous ces cas de traitement de données à caractère personnel
+à un traitement à des fins historiques, statistiques ou de
+sont autorisés et contrôlés dans leur conception et leur mise en
+recherches en vertu des dispositions légales.
+œuvre par l'Autorité de protection.
+Art. 17. — Les données collectées doivent être exactes et, si
+Art. 22. — Est interdite et punie d'une peine d'emprisonnement
+nécessaire, mises à jour.
+de un à cinq ans et d'une amende de 1.000.000 à 10.000.000 de
+Toute mesure raisonnable doit être prise pour que les données
+francs CFA, la prospection directe à l'aide de tout moyen de
+inexactes ou incomplètes, au regard des finalités pour lesquelles
+communication utilisant, sous quelque forme que ce soit, les
+elles sont collectées et traitées ultérieurement, soient effacées ou
+données à caractère personnel d'une personne physique qui
+rectifiées.
+n'a pas exprimé son consentement préalable à recevoir de telles
+Art. 18. — Le principe de transparence implique une informa-
+prospections.
+tion obligatoire et claire de la part du responsable du traitement
+Art. 23. —Le traitement des données à caractère personnel
+portant sur les données à caractère personnel.
+réalisé aux fins de journalisme, de recherche, d'expression
+Art. 19. — Les données à caractère personnel doivent être
+artistique ou littéraire est admis lorsqu'il est mis en œuvre aux
+traitées de manière confidentielle et être protégées, notamment
+seules fins d'expression littéraire et artistique ou d'exercice, à titre
+lorsque le traitement de ces données comporte des transmissions
+professionnel, de l'activité de journaliste ou de chercheur, dans
+de données dans un réseau.
+le respect des règles déontologiques de ces professions.
+Art. 20. — Lorsque le traitement des données à caractère
+Art. 24. — Les dispositions de la présente loi ne font pas
+personnel est mis en œuvre pour le compte du responsable du
+obstacle à l'application des dispositions des lois relatives à la
+traitement, celui-ci doit choisir un sous-traitant qui apporte des
+presse écrite ou au secteur de l'audiovisuel et du code pénal qui
+garanties suffisantes pour la protection et la confidentialité de ces
+prévoient les conditions d'exercice du droit de réponse et qui
+données.
+préviennent, limitent, réparent et, le cas échéant, répriment les
+Il incombe au responsable du traitement ainsi qu'au sous-trai-
+atteintes à la vie privée et à la réputation des personnes physiques.
+tant de veiller au respect des dispositions de la présente loi.
+Art. 25. — Aucune décision de justice impliquant une appré-
+Art. 21. — Est interdit et puni d'une peine d'emprisonnement
+ciation sur le comportement d'une personne physique ne peut
+de dix à vingt ans et d'une amende de 20.000.000 à 40.000.000
+avoir pour fondement un traitement automatisé des données à
+de francs CFA, le fait de procéder à la collecte et à tout traitement
+caractère personnel destiné à évaluer certains aspects de sa
+de données qui révèlent l'origine raciale, ethnique ou régionale,
+personnalité.
+
+--- PAGE 6 ---
+8 août 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+479
+Aucune décision administrative ou privée impliquant une
+— des informations relatives aux finalités du traitement, aux
+appréciation sur un comportement humain ne peut avoir pour seul
+catégories de données à caractère personnel traitées et aux desti-
+fondement un traitement automatisé des données à caractère
+nataires ou aux catégories de destinataires auxquels les données
+personnel donnant une définition du profil ou de la personnalité
+sont communiquées.
+de l'intéressé.
+En cas d'impossibilité d'accès de la personne concernée, le droit
+Art. 26. — Le responsable d'un traitement ne peut être autorisé
+d'accès peut être exercé par l'Autorité de protection des données
+à transférer des données à caractère personnel vers un pays tiers
+qui dispose d'un pouvoir d'investigation en la matière et qui peut
+que si cet Etat assure un niveau de protection supérieur ou
+ordonner la rectification, l'effacement ou le verrouillage des don-
+équivalent de la vie privée, des libertés et droits fondamentaux
+nées dont le traitement n'est pas conforme à la présente loi.
+des personnes à l'égard du traitement dont ces données font ou
+L'Autorité de protection des données communique à la per-
+peuvent faire l'objet.
+sonne concernée le résultat de ses investigations.
+Avant tout transfert effectif des données à caractère personnel
+Le responsable du traitement peut s'opposer aux demandes ma-
+vers ce pays tiers, le responsable du traitement doit préalablement
+nifestement abusives de la même personne, notamment par leur
+obtenir l'autorisation de l'Autorité de protection.
+nombre, leur caractère répétitif ou systématique. En cas de
+Le transfert de données à caractère personnel vers les pays tiers
+contestation, la charge de la preuve du caractère manifestement
+fait l'objet d'un contrôle régulier de l'Autorité de protection au
+abusif des demandes incombe au responsable auprès duquel elles
+regard de leur finalité.
+sont adressées.
+Art. 27. — L'interconnexion des fichiers n'est autorisée que si
+Art. 30. — Toute personne physique concernée a le droit :
+elle permet d'atteindre des objectifs légaux ou statutaires présen-
+— de s'opposer, pour des motifs légitimes tenant à sa situation
+tant un intérêt légitime pour les responsables des traitements.
+particulière, à ce que des données à caractère personnel la concer-
+Elle ne peut pas entraîner de discrimination ou de réduction
+nant fassent l'objet d'un traitement, sauf en cas de dispositions
+des droits, libertés et garanties pour les personnes concernées ni
+légales prévoyant expressément le traitement. En cas d'opposition
+être assortie de mesures de sécurité inappropriées et doit tenir
+légitime, le traitement mis en œuvre par le responsable du traite-
+compte du principe de pertinence des données faisant l'objet de
+ment ne peut porter sur les données en cause ;
+l'interconnexion.
+— de s'opposer, sur sa demande et gratuitement, au traitement
+CHAPITRE 5
+de données la concernant à des fins de prospection ;
+Droits et exceptions aux droits de la personne concernée
+— d'être informée avant que des données la concernant ne
+Art. 28. — Le responsable du traitement est tenu de fournir à
+soient pour la première fois communiquées à des tiers ou utilisées
+la personne dont les données font l'objet d'un traitement, au plus
+pour le compte de tiers à des fins de prospection et de se voir
+tard, lors de la collecte et quels que soient les moyens et supports
+expressément accorder le droit de s'opposer, gratuitement, à ladite
+employés, les informations suivantes :
+communication ou utilisation.
+— son identité et, le cas échéant, celle de son représentant
+Art. 31. - Toute personne physique, justifiant de son identité,
+dûment mandaté ;
+peut exiger du responsable d'un traitement que soient, selon les
+— la ou les finalité(s) déterminée(s) du traitement auquel
+cas, rectifiées, complétées, mises à jour, verrouillées ou suppri-
+les données sont destinées ;
+mées les données à caractère personnel la concernant, qui sont
+— les catégories de données concernées ;
+inexactes, incomplètes, équivoques, périmées, ou dont la collecte,
+l'utilisation, la communication ou la conservation est interdite.
+— le ou les destinataire(s) auxquels les données sont suscep-
+Art. 32. —ration du secrétaire permanent de la Commission
+tibles d'être communiquées ;
+nationale du Fonds pour l'Environnement mondial.
+— la possibilité de refuser de figurer sur le fichier en cause ;
+Les ayants droit d'une personne décédée justifiant de leur iden-
+— l'existence d'un droit d'accès aux données concernant la
+tité peuvent, si des éléments portés à leur connaissance leur lais-
+personne et d'un droit de rectification de ces données ;
+sent présumer que les données à caractère personnel la
+— la durée de conservation des données ;
+concernant faisant l'objet d'un traitement n'ont pas été actualisées,
+— l'éventualité de tout transfert de données à destination de
+exiger du responsable de ce traitement qu'il prenne en considé-
+pays tiers.
+ration le décès et procède aux mises à jour qui doivent en être la
+conséquence.
+Art. 29. — Toute personne physique dont les données à carac-
+tère personnel font l'objet d'un traitement peut demander sous
+Lorsque les ayants droit en font la demande, le responsable du
+forme de questions et obtenir du responsable de ce traitement :
+traitement doit justifier, sans frais pour le demandeur, qu'il a
+procédé aux opérations exigées en vertu de l'alinéa précédent.
+- les informations permettant de connaître et de contester le
+traitement;
+Art. 33. — La personne concernée a le droit d'obtenir du
+responsable du traitement l'effacement de données à caractère
+personnel la concernant et la cessation de la diffusion de ces
+— la confirmation que des données à caractère personnel la
+données, en particulier en ce qui concerne des données à carac-
+concernant font ou ne font pas l'objet de ce traitement ;
+tère personnel que la personne concernée avait rendues disponi-
+- la communication des données à caractère personnel qui la
+bles lorsqu'elle était mineur, ou pour l'un des motifs suivants :
+concernent ainsi que de toute information disponible quant à
+— les données ne sont plus nécessaires au regard des finalités
+l'origine de celles-ci ;
+pour lesquelles elles ont été collectées ou traitées ;
+
+--- PAGE 7 ---
+480
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+8 août 2013
+— la personne concernée a retiré le consentement sur lequel
+Lorsque la personne concernée a fourni les données à caractère
+est fondé le traitement ou lorsque le délai de conservation auto-
+personnel et que le traitement est fondé sur le consentement ou
+risé a expiré et qu'il n'existe pas d'autre motif légal au traitement
+sur un contrat, elle a le droit de transmettre ces données à carac-
+des données ;
+tère personnel et toutes autres informations qu'elle a fournies et
+— la personne concernée s'oppose au traitement des données
+qui sont conservées par un système de traitement automatisé à
+à caractère personnel la concernant lorsqu'il n'existe pas de motif
+un autre système dans un format électronique qui est couramment
+légal audit traitement;
+utilisé, sans que le responsable du traitement auquel les données
+— le traitement des données n'est pas conforme aux disposi-
+à caractère personnel sont retirées n'y fasse obstacle.
+tions de la présente loi ;
+L'Autorité de protection des données peut préciser le format
+- pour tout autre motif légitime.
+électronique, ainsi que les normes techniques, les modalités et
+les procédures pour la transmission de données à caractère per-
+Art. 34. — Lorsque le responsable du traitement a rendu
+sonnel.
+publiques les données à caractère personnel de la personne
+concernée, il prend toutes les mesures raisonnables, y compris
+CHAPITRE 6
+les mesures techniques, en ce qui concerne les données publiées
+Obligations des responsables et de leurs subordonnés
+sous sa responsabilité, en vue d'informer les tiers qui traitent les-
+Art. 39. — Le traitement des données à caractère personnel est
+dites données qu'une personne concernée leur demande d'effacer
+confidentiel. Il est effectué exclusivement par des personnes qui
+tous liens vers ces données à caractère personnel, ou toute copie
+agissent sous l'autorité du responsable du traitement et seulement
+ou reproduction de celles-ci.
+sur ses instructions.
+Lorsque le responsable du traitement a autorisé un tiers à pu-
+Art. 40. — Le responsable du traitement est tenu de prendre
+blier des données à caractère personnel de la personne concernée,
+toute précaution au regard de la nature des données et, notam-
+il est réputé responsable de cette publication et prend toutes les
+ment, pour empêcher qu'elles soient déformées, endommagées,
+mesures appropriées pour mettre en œuvre le droit à l'oubli nu-
+ou que des tiers non autorisés y aient accès.
+mérique et à l'effacement des données à caractère personnel.
+Lorsque le traitement est mis en œuvre pour le compte du
+Art. 35. - Le responsable du traitement procède à l'effacement
+responsable du traitement, celui-ci choisi un sous-traitant qui
+sans délai, sauf lorsque la conservation des données à caractère
+apporte des garanties suffisantes au regard des mesures de
+personnel est nécessaire :
+sécurité technique et d'organisation relatives aux traitements à
+— soit à l'exercice du droit à la liberté d'expression ;
+effectuer. Il incombe au responsable du traitement ainsi qu'au
+— soit pour des motifs d'intérêt général dans le domaine de la
+sous-traitant de veiller au respect de ces mesures
+santé publique, conformément à la loi ;
+Art. 41. - Le responsable du traitement est tenu :
+- soit au respect d'une obligation légale de conserver les
+— d'empêcher toute personne non autorisée d'accéder aux
+données à caractère personnel prévue par la législation en vigueur
+installations utilisées pour le traitement de données ;
+à laquelle le responsable du traitement est soumis.
+- d'empêcher que des supports de données puissent être lus,
+Art. 36. — Le responsable du traitement met en place des
+copiés, modifiés ou déplacés par une personne non autorisée ;
+mécanismes appropriés assurant la mise en œuvre du respect du
+- d'empêcher l'introduction non autorisée de toute donnée
+droit à l'oubli numérique et à l'effacement des données à caractère
+dans le système d'information, ainsi que toute prise de connais-
+personnel ou examine périodiquement la nécessité de conserver
+sance, toute modification ou tout effacement non autorisés de
+ces données, conformément aux dispositions de la présente loi.
+données enregistrées ;
+Lorsque l'effacement est effectué, le responsable du traitement
+- d'empêcher que des systèmes de traitement de données
+ne procède à aucun autre traitement de ces données à caractère
+puissent être utilisés par des personnes non autorisées à l'aide
+personnel.
+d'installations de transmission de données ;
+Art. 37. - L'Autorité de protection des données adopte des
+— d'empêcher que des systèmes de traitement de données
+mesures et des lignes directrices aux fins de préciser :
+soient utilisés à des fins de blanchiment de capitaux et de
+— les conditions de la suppression des liens vers ces données
+financement du terrorisme;
+à caractère personnel, des copies ou des reproductions de celles-
+— de garantir que, lors de l'utilisation d'un système de
+ci existant dans les services de communication électronique
+traitement automatisé de données, les personnes autorisées ne
+accessibles au public;
+puissent accéder qu'aux données relevant de leur autorisation ;
+— les conditions et critères applicables à la limitation du
+— de garantir que puisse être vérifiée et constatée l'identité des
+traitement des données à caractère personnel.
+tiers auxquels des données peuvent être transmises par des
+Art. 38. — Lorsque des données à caractère personnel font
+installations de transmission ;
+l'objet d'un traitement automatisé dans un format structuré et
+— de garantir que puisse être vérifiée et constatée a posteriori
+couramment utilisé, la personne concernée a le droit d'obtenir
+l'identité des personnes ayant eu accès au système d'information
+auprès du responsable du traitement une copie des données fai-
+contenant des données à caractère personnel, la nature des
+sant l'objet du traitement automatisé dans un format électronique
+données qui ont été introduites, modifiées, altérées, copiées,
+structuré qui est couramment utilisé et qui permet la réutilisation
+effacées ou lues dans le système, le moment auquel ces données
+de ces données par la personne concernée.
+ont été manipulées ;
+
+--- PAGE 8 ---
+8 août 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+481
+— d'empêcher que, lors de la communication de données et du
+A ce titre, elle est chargée :
+transport de supports de données, les données puissent être lues,
+copiées, modifiées, altérées ou effacées de façon non autorisée ;
+— d'informer les personnes concernées et les responsables de
+traitement de leurs droits et obligations ;
+- de sauvegarder les données par la constitution de copies de
+sécurité protégées. Le responsable du traitement doit mettre en
+- de répondre à toute demande d'avis portant sur un traitement
+de données à caractère personnel ;
+œuvre toutes les mesures techniques et l'organisation appropriées
+pour assurer la protection des données qu'il traite contre la
+- d'établir un règlement intérieur qui précise, notamment, les
+destruction accidentelle ou illicite, la perte accidentelle, l'altéra-
+règles relatives aux délibérations, à l'instruction et à la présenta-
+tion, la diffusion ou l'accès non autorisés, notamment lorsque
+tion des dossiers ;
+le traitement comporte des transmissions de données dans un
+- de recevoir les déclarations et d'octroyer les autorisations
+réseau, ainsi que contre toute autre forme de traitement illicite.
+pour la mise en œuvre de traitement des données à caractère per-
+Art. 42. — Le responsable du traitement est tenu d'établir un
+sonnel, ou de les retirer dans les cas prévus par la présente loi ;
+rapport annuel pour le compte de l'Autorité de protection des
+—— de recevoir les réclamations et les plaintes relatives à la mise
+données sur le respect des dispositions annoncées à l'article 41
+en œuvre des traitements de données à caractère personnel et
+de la présente loi.
+informer les auteurs de la suite accordée à celles-ci ;
+Art. 43. - Les données à caractère personnel sont conservées
+- d'informer, sans délai, l'autorité judiciaire compétente des
+pendant une durée fixée par l'Autorité de protection des données
+infractions dont elle a connaissance dans le cadre de ses missions ;
+en fonction des finalités de chaque type de traitement pour
+- de déterminer les garanties indispensables et les mesures
+lesquelles elles ont été recueillies, conformément aux textes en
+appropriées pour la protection des données à caractère personnel ;
+vigueur.
+— de procéder, par le biais d'agents assermentés, à des vérifica-
+Art. 44. -- Le responsable du traitement est tenu de prendre
+tions portant sur tout traitement de données à caractère personnel ;
+toute mesure utile pour s'assurer que les données à caractère
+personnel traitées peuvent être exploitées quel que soit le support
+— de prononcer des sanctions administratives et pécuniaires à
+technique utilisé.
+l'égard des responsables de traitement qui ne se conforment pas
+aux dispositions de la présente loi ;
+Art. 45. — Est puni d'une peine d'emprisonnement d'un mois à
+deux ans et de 1.000.000 à 10.000.000 de francs CFA d'amende qui-
+— de mettre à jour et à la disposition du public pour consultation
+conque entrave l'action de l'Autorité de protection des données :
+un répertoire des traitements de données à caractère personnel ;
+- soit en s'opposant à l'exercice des missions confiées à ses
+— de conseiller les personnes et organismes qui font les
+membres ou aux agents habilités, en application des dispositions
+traitements de données à caractère personnel ou qui procèdent à
+de la présente loi ;
+des essais ou expériences en la matière ;
+- soit en refusant de communiquer à ses membres ou aux
+- de donner son avis sur tout projet de texte juridique en
+agents habilités, les renseignements et documents utiles à leur
+rapport avec la protection des libertés et de la vie privée ;
+mission, ou en dissimulant lesdits documents ou renseignements,
+— d'élaborer des règles de conduite relatives au traitement et
+ou en les faisant disparaître ;
+à la protection des données à caractère personnel ;
+- soit en communiquant des informations qui ne sont pas
+— de participer aux activités de recherche scientifique, de
+conformes au contenu des enregistrements tel qu'il était au
+formation et d'étude en rapport avec la protection des données à
+moment où la demande a été formulée ou qui ne présentent pas
+ce contenu sous une forme directement accessible.
+caractère personnel, et d'une manière générale, les libertés et la
+vie privée;
+Le procureur de la République ou le juge d'instruction compé-
+tent est informé, sans délai, des entraves aux actions de l'Autorité
+— d'autoriser à certaines conditions fixées par décret pris en
+de protection des données et prend toutes les mesures appropriées
+Conseil des ministres les transferts transfrontaliers de données à
+en vue de les lever et de poursuivre l'auteur ou le complice.
+caractère personnel ;
+CHAPITRE 7
+— de faire des propositions susceptibles de simplifier et d'amé-
+L'Autorité de protection des données à caractère personnel
+liorer le cadre législatif et réglementaire concernant le traitement
+des données à caractère personnel ;
+Art. 46. - Les missions de l'Autorité de protection des
+données à caractère personnel sont confiées à l'Autorité adminis-
+— de mettre en place des mécanismes de coopération avec les
+trative indépendante en charge de la Régulation des Télécommu-
+autorités de protection des données à caractère personnel d'autres
+nications et des Technologies de l'Information et de la
+pays;
+Communication.
+— de participer aux négociations internationales en matière de
+A ce titre, l'Autorité de protection veille à ce que les traitements
+protection des données à caractère personnel ;
+des données à caractère personnel soient mis en œuvre confor-
+mément aux dispositions de la présente loi et de ses décrets
+- d'établir et de remettre un rapport annuel d'activités au
+d'application.
+Président de la République et au Président de l'Assemblée
+nationale.
+Art. 47. - l'Autorité de protection s'assure que l'usage des
+Technologies de l'Information et de la Communication ne porte
+Art. 48. — Le prestataire de service de cryptologie ne peut
+pas atteinte ou ne comporte pas de menace pour les libertés et la
+opposer à l'Autorité de protection, le secret professionnel auquel
+vie privée pour les utilisateurs situés sur l'ensemble du territoire
+il est soumis conformément aux dispositions légales ou conven-
+national.
+tionnelles.
+
+--- PAGE 9 ---
+482
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+8 août 2013
+Le responsable du traitement agissant dans le cadre de l'accom-
+DECRET n° 2012-525 du 11 juin 2012 déterminant la composi-
+plissement de ses missions ne peut opposer à l'Autorité de
+tion du conseil d'administration de la société d'Etat dénommée
+protection le secret professionnel auquel il est assujetti.
+« Bureau national d'Etudes techniques et de Développement »,
+Art. 49. - l'Autorité de protection peut prononcer à l'égard
+en abrégé BNETD
+des responsables de traitement les mesures suivantes :
+LE PRESIDENT DE LA REPUBLIQUE,
+— un avertissement à l'égard du responsable du traitement qui
+Sur rapport conjoint du Premier Ministre et du ministre de l'Economie
+et des Finances,
+ne respecte pas les obligations découlant de la présente loi ;
+Vu la Constitution ;
+- une mise en demeure de faire cesser les manquements
+Vu l'Acte uniforme relatif au Droit des sociétés commerciales et du
+observés dans le délai qu'elle fixe.
+groupement d'intérêt économique ;
+Art. 50. — Lorsque la mise en œuvre d'un traitement de
+Vu la loi n°97-519 du 4 septembre 1997 portant définition et organi-
+données à caractère personnel entraîne une violation des droits
+sation des sociétés d'Etat ;
+et libertés, l'Autorité de protection après une procédure contra-
+Vu le décret n°94-508 du 14 septembre 1994 portant transformation
+dictoire, peut décider :
+de l'établissement public à caractère administratif dénommé « Direction
+— de l'interruption de la mise en œuvre du traitement ;
+et Contrôle des grands Travaux » en société d'Etat ;
+— du verrouillage de certaines données à caractère personnel
+Vu le décret n° 96-676 du 4 septembre 1996 modifiant le décret
+n° 94-508 du 14 septembre 1994 portant changement de dénomination
+traitées ;
+de la Direction et Contrôle des grands Travaux et instituant une tutelle
+- de l'interdiction temporaire ou définitive d'un traitement
+du Président de la République ;
+contraire aux dispositions de la présente loi.
+Vu le décret n°2011-118 du 22 juin 2011 portant attributions des
+Art. 51. — l'Autorité de protection peut, après avoir entendu
+membres du Gouvernement ;
+le responsable du traitement ou son sous-traitant qui ne se
+Vu le décret n° 2011-222 du 7 septembre 2011 portant organisation
+conforme pas aux dispositions prévues de la présente loi et à la
+du ministère de l'Economie et des Finances ;
+mise en demeure qui lui a été adressée, prononcer à son encontre,
+Vu le décret n° 2012-241 du 13 mars 2012 portant nomination
+les sanctions suivantes :
+du Premier Ministre;
+Vu le décret n° 2012-242 du 13 mars 2012 portant nomination des
+-- le retrait provisoire de l'autorisation accordée ;
+membres du Gouvernement, tel que modifié par le décret n° 2012-484
+— le retrait définitif de l'autorisation ;
+du 4 juin 2012,
+- une sanction pécuniaire.
+DECRETE :
+Le montant de la sanction pécuniaire est proportionnel à
+Article premier. — Le conseil d'administration de la société
+la gravité des manquements commis et aux avantages tirés de ce
+d'Etat dénommée « Bureau national d'Etudes techniques et de
+manquement.
+Développement », en abrégé BNETD, est composé :
+Le montant de cette sanction ne peut excéder la somme de
+— d'un représentant du Président de la République;
+10.000.000 de francs CFA.
+— d'un représentant du Premier Ministre;
+En cas de manquement réitéré dans les cinq années à compter
+- d'un représentant du ministre en charge du Plan et du
+de la date à laquelle la sanction pécuniaire précédemment
+Développement ;
+prononcée est devenue définitive, il ne peut excéder 100.000.000
+— d'un représentant du ministre en charge de l'Economie et
+de francs CFA ou, s'agissant d'une entreprise, il ne peut excéder
+des Finances ;
+5% du chiffre d'affaires hors taxes du dernier exercice clos dans
+- d'un représentant du ministre en charge des Infrastructures
+la limite de 500.000.000 de francs CFA.
+économiques;
+— d'un représentant du ministre en charge de la Santé ;
+Ces sanctions administratives et pécuniaires sont appliquées
+— d'un représentant du ministre en charge de l'Education
+sans préjudice de sanctions pénales.
+nationale ;
+Art. 52. — Les modalités de retrait de l'autorisation et de
+— d'un représentant du ministre en charge de l'Agriculture ;
+recouvrement de la sanction pécuniaire sont fixées par décret.
+— d'un représentant du ministre en charge de la Construction
+CHAPITRE 8
+et de l'Urbanisme ;
+Dispositions transitoires et finales
+— d'un représentant du ministre en charge des Transports.
+Art. 53. — Les responsables de traitement de données à carac-
+Art. 2. — Le présent décret abroge les dispositions antérieures
+contraires du décret n°94-508 du 14 septembre 1994 portant
+tère personnel disposent d'un délai de six mois, à compter de la
+date de l'entrée en vigueur de la présente loi, pour se mettre en
+transformation de l'établissement public à caractère administratif
+conformité avec ses dispositions.
+dénommé « Direction et Contrôle des grands Travaux » en
+société d'Etat et du décret nº96-676 du 4 septembre 1996
+Art. 54. - La présente loi sera publiée au Journal officiel de
+modifiant le décret n°94-503 du 14 septembre 1994 portant
+la République de Côte d'Ivoire et exécutée comme loi de l'Etat.
+changement de dénomination de la Direction et Contrôle des
+Fait à Abidjan, le 19 juin 2013.
+grands Travaux et instituant une tutelle du Président de la
+Alassane OUATTARA.
+République.

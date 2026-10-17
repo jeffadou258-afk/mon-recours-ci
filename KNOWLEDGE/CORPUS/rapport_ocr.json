@@ -1,0 +1,469 @@
+{
+  "horodatage": "2026-10-17T01:43:00+00:00",
+  "domaine": "donnees_personnelles_numerique",
+  "chaine_ocr": {
+    "swiftc": "/usr/bin/swiftc",
+    "vision_framework": true,
+    "pdfkit_framework": true,
+    "appkit_framework": true,
+    "disponible": true,
+    "swiftc_version": "Apple Swift version 6.3.2 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)"
+  },
+  "documents": [
+    {
+      "doc_id": "DOC-423816165608",
+      "titre": "LOI N° 2013-546 DU 30 JUILLET 2013 RELATIVE AUX TRANSACTIONS ELECTRONIQUES (exemplaire du Journal officiel du 12 septembre 2013)",
+      "numero_texte": "2013-546",
+      "sha256_pdf": "sha256:21f6d0535d0eb856286d55d791f274d0cc05afe5ab59c6eefb6dbb69c462b175",
+      "statut": "INTEGRE",
+      "ocr": {
+        "echelle": 3,
+        "fichier_sortie": "/Users/mac/mon_recours_ci/KNOWLEDGE/CORPUS/NUMERIQUE_DONNEES/loi_2013-546_transactions_electroniques.ocr.txt",
+        "lignes_reconnues": 691,
+        "pages_pdf": 6,
+        "pages_sans_texte": 0,
+        "pages_traitees": 6,
+        "sha256_texte_ocr": "sha256:d5ad7791fed186b9c2d9301e12d6bd4d4c63e263e1893b66b0741443b438a836",
+        "octets_texte_ocr": 37244
+      },
+      "duree_s": 13.8,
+      "articles_detectes": 48,
+      "controle_structurel": {
+        "ok": true,
+        "echecs": [],
+        "criteres": {
+          "nb_lignes": 691,
+          "nb_articles_detectes": 48,
+          "part_lignes_avec_lettres": 0.9913,
+          "chaines_attendues_manquantes": []
+        },
+        "articles_detectes": 48
+      },
+      "evaluation": {
+        "avec_reference": false,
+        "statistiques": null,
+        "nb_ecartes": 0,
+        "nb_a_surveiller": 0,
+        "absents_de_l_ocr": [],
+        "ecartes": []
+      },
+      "decision": {
+        "decision": "INTEGRER_OCR_A_CONFIRMER",
+        "raisons": [
+          "contrôle structurel réussi ; qualité non mesurable par recoupement"
+        ],
+        "articles_integrables": 48,
+        "articles_ecartes": 0
+      },
+      "articles_indexes": 48,
+      "texte_ocr": "sha256:d5ad7791fed186b9c2d9301e12d6bd4d4c63e263e1893b66b0741443b438a836",
+      "origine_texte": "OCR_AUTO",
+      "recoupe": false,
+      "hors_extraction": [],
+      "confiance_moyenne": null
+    },
+    {
+      "doc_id": "DOC-F9EA35E85B8C",
+      "titre": "LOI N° 2013-450 DU 19 JUIN 2013 RELATIVE A LA PROTECTION DES DONNEES A CARACTERE PERSONNEL (exemplaire du Journal officiel du 8 août 2013)",
+      "numero_texte": "2013-450",
+      "sha256_pdf": "sha256:0747822eec82da49b963c32de2517f3e747e361d01b9eb1be0fd493acf1c32a0",
+      "statut": "INTEGRE",
+      "ocr": {
+        "echelle": 3,
+        "fichier_sortie": "/Users/mac/mon_recours_ci/KNOWLEDGE/CORPUS/NUMERIQUE_DONNEES/loi_2013-450_protection_donnees_JO.ocr.txt",
+        "lignes_reconnues": 1026,
+        "pages_pdf": 9,
+        "pages_sans_texte": 0,
+        "pages_traitees": 9,
+        "sha256_texte_ocr": "sha256:5daf0f8e5deb20c1247f42c9ff61550b1d4f45e779a45ca68b47780bbc891703",
+        "octets_texte_ocr": 56457
+      },
+      "duree_s": 18.5,
+      "articles_detectes": 53,
+      "controle_structurel": {
+        "ok": true,
+        "echecs": [],
+        "criteres": {
+          "nb_lignes": 1026,
+          "nb_articles_detectes": 53,
+          "part_lignes_avec_lettres": 0.9844,
+          "chaines_attendues_manquantes": []
+        },
+        "articles_detectes": 53
+      },
+      "evaluation": {
+        "avec_reference": false,
+        "statistiques": null,
+        "nb_ecartes": 0,
+        "nb_a_surveiller": 0,
+        "absents_de_l_ocr": [],
+        "ecartes": []
+      },
+      "decision": {
+        "decision": "INTEGRER_OCR_A_CONFIRMER",
+        "raisons": [
+          "contrôle structurel réussi ; qualité non mesurable par recoupement"
+        ],
+        "articles_integrables": 53,
+        "articles_ecartes": 0
+      },
+      "articles_indexes": 53,
+      "texte_ocr": "sha256:5daf0f8e5deb20c1247f42c9ff61550b1d4f45e779a45ca68b47780bbc891703",
+      "origine_texte": "OCR_AUTO",
+      "recoupe": false,
+      "hors_extraction": [],
+      "confiance_moyenne": null
+    },
+    {
+      "doc_id": "DOC-744992A64543",
+      "titre": "LOI N° 2013-451 DU 19 JUIN 2013 RELATIVE A LA LUTTE CONTRE LA CYBERCRIMINALITE (exemplaire du Journal officiel du 12 août 2013)",
+      "numero_texte": "2013-451",
+      "sha256_pdf": "sha256:289b9cbf93f299d3c814850c439b65517f635f8a47cc0f4d2912ad71ee90e120",
+      "statut": "INTEGRE",
+      "ocr": {
+        "echelle": 3,
+        "fichier_sortie": "/Users/mac/mon_recours_ci/KNOWLEDGE/CORPUS/NUMERIQUE_DONNEES/loi_2013-451_cybercriminalite.ocr.txt",
+        "lignes_reconnues": 885,
+        "pages_pdf": 8,
+        "pages_sans_texte": 0,
+        "pages_traitees": 8,
+        "sha256_texte_ocr": "sha256:83d73bc94a07c652215bb31dc31e661617c4269717ee163fa10fff240d0b6123",
+        "octets_texte_ocr": 49461
+      },
+      "duree_s": 15.2,
+      "articles_detectes": 78,
+      "controle_structurel": {
+        "ok": true,
+        "echecs": [],
+        "criteres": {
+          "nb_lignes": 885,
+          "nb_articles_detectes": 78,
+          "part_lignes_avec_lettres": 0.9898,
+          "chaines_attendues_manquantes": []
+        },
+        "articles_detectes": 78
+      },
+      "evaluation": {
+        "avec_reference": false,
+        "statistiques": null,
+        "nb_ecartes": 0,
+        "nb_a_surveiller": 0,
+        "absents_de_l_ocr": [],
+        "ecartes": []
+      },
+      "decision": {
+        "decision": "INTEGRER_OCR_A_CONFIRMER",
+        "raisons": [
+          "contrôle structurel réussi ; qualité non mesurable par recoupement"
+        ],
+        "articles_integrables": 78,
+        "articles_ecartes": 0
+      },
+      "articles_indexes": 78,
+      "texte_ocr": "sha256:83d73bc94a07c652215bb31dc31e661617c4269717ee163fa10fff240d0b6123",
+      "origine_texte": "OCR_AUTO",
+      "recoupe": false,
+      "hors_extraction": [],
+      "confiance_moyenne": null
+    }
+  ],
+  "refus": [],
+  "compilation": "binaire à jour (pas de recompilation)",
+  "integrite": {
+    "horodatage": "2026-10-17T01:43:48+00:00",
+    "nb_documents": 26,
+    "conformes": [
+      {
+        "doc_id": "DOC-BB9AF3E961AF",
+        "sha256": "sha256:6ca6225e07bcdf6f8479f036b5611384c068c0f2e5d2b7b9f54eca15d1f5aee6",
+        "octets": 246080
+      },
+      {
+        "doc_id": "DOC-1EDDBBD930BF",
+        "sha256": "sha256:0fd97c056ea13874ca8b96b98002ee407ab03d7e7da70c9d533ed8e2ff7eacc0",
+        "octets": 524430
+      },
+      {
+        "doc_id": "DOC-DAFFEFDC4B7D",
+        "sha256": "sha256:e3fa70d741d8e0fd5a80a2b78085e5d09ec8d6789a4ef5a27b62c7a7e5c21473",
+        "octets": 1694630
+      },
+      {
+        "doc_id": "DOC-3C674637A31E",
+        "sha256": "sha256:9f3d27a91fae43f97dee80689447e731ee0a4de32fb57dba18591d06e68181fb",
+        "octets": 1596862
+      },
+      {
+        "doc_id": "DOC-F9B2C53EB909",
+        "sha256": "sha256:9bb45a1eda9b3e2da861f0d3c30623bee47d0bbda6ec34061c711a47ad612be9",
+        "octets": 796471
+      },
+      {
+        "doc_id": "DOC-4C67C010CD72",
+        "sha256": "sha256:2dd1655d11d49e85e735e0042c8deb2d0063a1b3e049aeeab2d84faa06643c34",
+        "octets": 3647755
+      },
+      {
+        "doc_id": "DOC-FC436680EEE7",
+        "sha256": "sha256:693b4007650a745d9e145a8da1ebdbc4e84fa33ba318f1dc0586dc400b21af7e",
+        "octets": 16061270
+      },
+      {
+        "doc_id": "DOC-CB3C9F2B2AAC",
+        "sha256": "sha256:a0570c10bd5eaf073d79224616cd5e80cf0c6d4bcf14b3209a043b3d2d07d894",
+        "octets": 1096416
+      },
+      {
+        "doc_id": "DOC-814370E4E6D2",
+        "sha256": "sha256:fd81f7c724c073cfe1cb1de4dfd708866348d4322cbdbc85bfe21917a1811884",
+        "octets": 1287528
+      },
+      {
+        "doc_id": "DOC-B722D1F51881",
+        "sha256": "sha256:4959603eba9f2a9240b1969695c400143b60a09ad9219a1e0ec9edab75cd5707",
+        "octets": 188922
+      },
+      {
+        "doc_id": "DOC-A443F2E78D1D",
+        "sha256": "sha256:8a0cbf5e34540b964addfaa6913b57cee36b0564087f901734c71f5d91bccad1",
+        "octets": 1324711
+      },
+      {
+        "doc_id": "DOC-6A33514AB7DF",
+        "sha256": "sha256:46e73858e41555d1d46edad183ac8c504c8c8fa449b8cd8ae2f196c4edbe0b49",
+        "octets": 1277407
+      },
+      {
+        "doc_id": "DOC-AC714CEB4E83",
+        "sha256": "sha256:72c42303958ce3d24c99f309c927bfa51adf8717bd968245064f67498786c6b6",
+        "octets": 2036600
+      },
+      {
+        "doc_id": "DOC-30FD07C1A483",
+        "sha256": "sha256:acb84e77c7bab2b4103d18076323e9576df3d610c1a01b68e9f95fd55f40c337",
+        "octets": 1077564
+      },
+      {
+        "doc_id": "DOC-FC471C34DE21",
+        "sha256": "sha256:b25a53fe78761c91fc2f528da829c10f795f15392b4aa8c2b5408e00a63f904d",
+        "octets": 161743
+      },
+      {
+        "doc_id": "DOC-423816165608",
+        "sha256": "sha256:21f6d0535d0eb856286d55d791f274d0cc05afe5ab59c6eefb6dbb69c462b175",
+        "octets": 3544782
+      },
+      {
+        "doc_id": "DOC-F9EA35E85B8C",
+        "sha256": "sha256:0747822eec82da49b963c32de2517f3e747e361d01b9eb1be0fd493acf1c32a0",
+        "octets": 6191231
+      },
+      {
+        "doc_id": "DOC-744992A64543",
+        "sha256": "sha256:289b9cbf93f299d3c814850c439b65517f635f8a47cc0f4d2912ad71ee90e120",
+        "octets": 5753387
+      },
+      {
+        "doc_id": "DOC-AB97B11FA7AE",
+        "sha256": "sha256:893d7567416e8a9eb2dbc8d9a4cdddf0de6ccdc8bd777b072822cf1e3b6699e3",
+        "octets": 182808
+      },
+      {
+        "doc_id": "DOC-9B30C0B1263F",
+        "sha256": "sha256:309fac2a8d7323e32f6e4131f653f425ac12e319677cd9fb1d8de4873617fe3f",
+        "octets": 1279713
+      },
+      {
+        "doc_id": "DOC-2CD0D346F0EE",
+        "sha256": "sha256:0a2664ce9993f0a0c6156688cf845cb4b04e5ee4ccc6c47196665314f0bb3cd3",
+        "octets": 828314
+      },
+      {
+        "doc_id": "DOC-CC2B6457296C",
+        "sha256": "sha256:86deb5247b51c2e627e5e554babad0ee4cbe2d3a8b5924e6eef9e2f10348eb57",
+        "octets": 1616028
+      },
+      {
+        "doc_id": "DOC-E8B83E447CA5",
+        "sha256": "sha256:d9160103e6ef9bf1477e613b4ba2b603023c7d4b9f601850891d93b00a59ae15",
+        "octets": 15961114
+      },
+      {
+        "doc_id": "DOC-D098B13E00DA",
+        "sha256": "sha256:f8ce3bf4581b5addef0f407193efa3ced7a29fb1b56816efe43ca4f89cb286ea",
+        "octets": 198630
+      },
+      {
+        "doc_id": "DOC-D754ACEE8E29",
+        "sha256": "sha256:1a451c2557a60a9aa2176fe99b233cbbe5e7ac658da66ef5221533002b6b7703",
+        "octets": 1165726
+      },
+      {
+        "doc_id": "DOC-BEA207BA48BF",
+        "sha256": "sha256:32c73837481191a1d86c62fec9bd2b52628ddc1749cab56b19102974f500bf6f",
+        "octets": 320208
+      }
+    ],
+    "alteres": [],
+    "absents": [],
+    "verdict": "INTEGRE"
+  },
+  "synthese": {
+    "horodatage": "2026-10-17T01:43:48+00:00",
+    "domaine": "donnees_personnelles_numerique",
+    "nb_documents": 3,
+    "nb_documents_exploitables": 0,
+    "nb_documents_scans_seulement": 3,
+    "nb_articles_indexes": 1777,
+    "articles_par_origine": {
+      "CALQUE_TEXTE": {
+        "articles": 1111,
+        "recoupes": 0,
+        "confiance_moyenne": null
+      },
+      "OCR_AUTO": {
+        "articles": 666,
+        "recoupes": 287,
+        "confiance_moyenne": 0.9792
+      },
+      "VERIFIE_MANUELLEMENT": {
+        "articles": 0,
+        "recoupes": 0,
+        "confiance_moyenne": null
+      }
+    },
+    "documents": [
+      {
+        "doc_id": "DOC-423816165608",
+        "titre": "LOI N° 2013-546 DU 30 JUILLET 2013 RELATIVE AUX TRANSACTIONS ELECTRONIQUES (exemplaire du Journal officiel du 12 septembre 2013)",
+        "type_texte": "loi",
+        "numero_texte": "2013-546",
+        "date_texte": "2013-07-30",
+        "domaine": "donnees_personnelles_numerique",
+        "autorite": "Autorité de protection des données à caractère personnel (autoritedeprotection.ci)",
+        "url_source": "http://www.autoritedeprotection.ci/docs/Loi-2013_546.pdf",
+        "sha256": "sha256:21f6d0535d0eb856286d55d791f274d0cc05afe5ab59c6eefb6dbb69c462b175",
+        "octets": 3544782,
+        "pages": 6,
+        "calque_texte": 0,
+        "note_qualite": "scan sans calque texte — OCR requis",
+        "methode_extraction": "OCR_VISION_AUTO",
+        "fichier_ocr": "/Users/mac/mon_recours_ci/KNOWLEDGE/CORPUS/NUMERIQUE_DONNEES/loi_2013-546_transactions_electroniques.ocr.txt",
+        "sha256_ocr": "sha256:d5ad7791fed186b9c2d9301e12d6bd4d4c63e263e1893b66b0741443b438a836",
+        "recoupe_avec": null,
+        "qualite_ocr": null,
+        "articles_indexes": 48,
+        "exploitable": false
+      },
+      {
+        "doc_id": "DOC-F9EA35E85B8C",
+        "titre": "LOI N° 2013-450 DU 19 JUIN 2013 RELATIVE A LA PROTECTION DES DONNEES A CARACTERE PERSONNEL (exemplaire du Journal officiel du 8 août 2013)",
+        "type_texte": "loi",
+        "numero_texte": "2013-450",
+        "date_texte": "2013-06-19",
+        "domaine": "donnees_personnelles_numerique",
+        "autorite": "Autorité de protection des données à caractère personnel (autoritedeprotection.ci)",
+        "url_source": "http://www.autoritedeprotection.ci/docs/loi_2013_450_journal.pdf",
+        "sha256": "sha256:0747822eec82da49b963c32de2517f3e747e361d01b9eb1be0fd493acf1c32a0",
+        "octets": 6191231,
+        "pages": 9,
+        "calque_texte": 0,
+        "note_qualite": "scan sans calque texte — OCR requis",
+        "methode_extraction": "OCR_VISION_AUTO",
+        "fichier_ocr": "/Users/mac/mon_recours_ci/KNOWLEDGE/CORPUS/NUMERIQUE_DONNEES/loi_2013-450_protection_donnees_JO.ocr.txt",
+        "sha256_ocr": "sha256:5daf0f8e5deb20c1247f42c9ff61550b1d4f45e779a45ca68b47780bbc891703",
+        "recoupe_avec": null,
+        "qualite_ocr": null,
+        "articles_indexes": 53,
+        "exploitable": false
+      },
+      {
+        "doc_id": "DOC-744992A64543",
+        "titre": "LOI N° 2013-451 DU 19 JUIN 2013 RELATIVE A LA LUTTE CONTRE LA CYBERCRIMINALITE (exemplaire du Journal officiel du 12 août 2013)",
+        "type_texte": "loi",
+        "numero_texte": "2013-451",
+        "date_texte": "2013-06-19",
+        "domaine": "donnees_personnelles_numerique",
+        "autorite": "Autorité de protection des données à caractère personnel (autoritedeprotection.ci)",
+        "url_source": "http://www.autoritedeprotection.ci/docs/Loi-2013-451.pdf",
+        "sha256": "sha256:289b9cbf93f299d3c814850c439b65517f635f8a47cc0f4d2912ad71ee90e120",
+        "octets": 5753387,
+        "pages": 8,
+        "calque_texte": 0,
+        "note_qualite": "scan sans calque texte — OCR requis",
+        "methode_extraction": "OCR_VISION_AUTO",
+        "fichier_ocr": "/Users/mac/mon_recours_ci/KNOWLEDGE/CORPUS/NUMERIQUE_DONNEES/loi_2013-451_cybercriminalite.ocr.txt",
+        "sha256_ocr": "sha256:83d73bc94a07c652215bb31dc31e661617c4269717ee163fa10fff240d0b6123",
+        "recoupe_avec": null,
+        "qualite_ocr": null,
+        "articles_indexes": 78,
+        "exploitable": false
+      }
+    ]
+  },
+  "sans_articles": [
+    {
+      "doc_id": "DOC-2CD0D346F0EE",
+      "titre": "CONVENTION SUR LA PROTECTION DES ENFANTS ET LA COOPÉRATION EN MATIÈRE D’ADOPTION INTERNATIONALE : Convention de LAHAYE 93 (Conclue le 29 mai 1993)",
+      "calque_texte": 0,
+      "methode_extraction": "AUCUNE",
+      "note_qualite": "scan sans calque texte — OCR requis"
+    },
+    {
+      "doc_id": "DOC-30FD07C1A483",
+      "titre": "LOI No 2015-539 du 20 juillet 2015 portant Statut de pupille de l’Etat",
+      "calque_texte": 0,
+      "methode_extraction": "AUCUNE",
+      "note_qualite": "scan sans calque texte — OCR requis"
+    },
+    {
+      "doc_id": "DOC-6A33514AB7DF",
+      "titre": "Loi n°2018-862 du 19 novembre 2018 relative à l’état civil.",
+      "calque_texte": 0,
+      "methode_extraction": "AUCUNE",
+      "note_qualite": "scan sans calque texte — OCR requis"
+    },
+    {
+      "doc_id": "DOC-A443F2E78D1D",
+      "titre": "Loi n°2019-572 du 26 Juin 2019 relative à la minorité",
+      "calque_texte": 0,
+      "methode_extraction": "AUCUNE",
+      "note_qualite": "scan sans calque texte — OCR requis"
+    },
+    {
+      "doc_id": "DOC-B722D1F51881",
+      "titre": "LOI n° 2019-571 du 26 juin 2019 relative à la filiation",
+      "calque_texte": 1,
+      "methode_extraction": "CALQUE_TEXTE",
+      "note_qualite": "texte extrait mais decoupage en articles non fiable : non indexe"
+    },
+    {
+      "doc_id": "DOC-BB9AF3E961AF",
+      "titre": "COMMUNIQUE DU CONSEIL DES MINISTRES DU 12 JUIN 2024 — Porte-parolat du Gouvernement (contient la présentation du projet de loi relatif au contentieux du bail à usage d'habitation et à l'exécution des expulsions)",
+      "calque_texte": 1,
+      "methode_extraction": "TEXTE_NON_JURIDIQUE",
+      "note_qualite": "document non juridique (contexte)"
+    },
+    {
+      "doc_id": "DOC-BEA207BA48BF",
+      "titre": "LOI RELATIVE A L’ADOPTION",
+      "calque_texte": 0,
+      "methode_extraction": "AUCUNE",
+      "note_qualite": "scan sans calque texte — OCR requis"
+    },
+    {
+      "doc_id": "DOC-CC2B6457296C",
+      "titre": "Recueil de texte de lois adulte final 18-02-2026",
+      "calque_texte": 1,
+      "methode_extraction": "TEXTE_DE_COMPILATION",
+      "note_qualite": "compilation : texte conserve, non indexe"
+    },
+    {
+      "doc_id": "DOC-E8B83E447CA5",
+      "titre": "RECUEIL DES TEXTES JURIDIQUES : Protection des Droits des enfants, adolescents et jeunes dans la législation ivoirienne",
+      "calque_texte": 1,
+      "methode_extraction": "TEXTE_DE_COMPILATION",
+      "note_qualite": "compilation : texte conserve, non indexe"
+    }
+  ]
+}

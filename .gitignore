@@ -1,0 +1,79 @@
+# ---------------------------------------------------------------------------
+# Mon Recours CI — fichiers exclus du dépôt
+#
+# Principe : on versionne le CODE, les TESTS et la DOCUMENTATION. On exclut tout
+# ce qui est régénérable, volumineux, ou qui ne nous appartient pas.
+#
+# Ce qui est VOLONTAIREMENT versionné (et pourquoi) :
+#   KNOWLEDGE/corpus_juridique.sqlite3  — base du corpus (2 Mo) : sans elle, les
+#       371 tests échouent et l'API ne répond rien. Elle contient le texte
+#       d'actes officiels publics + leurs empreintes SHA-256, et AUCUNE donnée
+#       d'utilisateur final. Une partie est sous CC BY 4.0 (Laws.Africa) :
+#       l'attribution figure dans la colonne `licence_conditions` et au README.
+# ---------------------------------------------------------------------------
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Environnements virtuels ----------------------------------------------
+.venv/
+.venv-*/
+venv/
+env/
+ENV/
+
+# --- Secrets et configuration locale --------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets.json
+credentials.json
+
+# --- Bases de données dérivées / journaux ---------------------------------
+# La base principale du corpus est versionnée (voir en-tête) ; ses journaux ne
+# le sont pas.
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite-journal
+
+# --- Données d'exécution : dossiers de conversation ------------------------
+# Contiennent des récits de situations (données personnelles potentielles).
+# Régénérables par `bin/dialogue.py` ou `bin/demonstration*.py`.
+DOSSIERS/
+!DOSSIERS/.gitkeep
+
+# --- Documents tiers : PDF officiels --------------------------------------
+# 26 PDF (69 Mo) téléchargés depuis des sites ministériels. Leur redistribution
+# n'est pas établie : on ne les publie pas. Leur texte extrait est déjà dans la
+# base versionnée, avec URL d'origine et empreinte SHA-256 pour la traçabilité.
+KNOWLEDGE/CORPUS/**/*.pdf
+*.pdf
+
+# --- Artefacts de collecte / sorties intermédiaires ------------------------
+KNOWLEDGE/CORPUS/**/texte/
+*.tmp
+*.log
+
+# --- Outils de développement ----------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- macOS ----------------------------------------------------------------
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes

@@ -1,0 +1,20 @@
+{
+ "domaine": "contrats_dettes_commerce",
+ "dossier": "ENTREPRISES_COMMERCE",
+ "date_collecte": "2026-10-17",
+ "sources": [
+  {
+   "cle": "audcg_suretes_ohada_jo22",
+   "titre": "ACTE UNIFORME PORTANT ORGANISATION DES SURETES (OHADA) — Journal Officiel de l'OHADA, 15e annee, n° 22, 15 fevrier 2011",
+   "type_texte": "acte_uniforme",
+   "numero_texte": null,
+   "date_texte": "2011-02-15",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires (OHADA)",
+   "url": "https://www.ohada.org/wp-content/uploads/2016/05/JO_OHADA_Journal_officiel_n_22.pdf",
+   "fichier": "ohada_jo22_acte_uniforme_suretes.pdf",
+   "pages": 60,
+   "sans_texte_attendu": true,
+   "limites": "Texte supranational : il prime sur le droit national ivoirien dans son domaine. Le Journal officiel de l'OHADA n° 22 publie ce numéro dans son ensemble ; les articles extraits doivent être rattachés à l'acte uniforme sur les sûretés. Cette matière concerne aussi les garanties et le cautionnement entre particuliers, mais elle est classée ici (droit des affaires)."
+  }
+ ]
+}

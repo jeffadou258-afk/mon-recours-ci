@@ -1,0 +1,703 @@
+
+--- PAGE 1 ---
+12 septembre 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+583
+Ces propositions doivent être soumises au secrétaire exécutif
+Loi n° 2013-546 du 30 juillet 2013 relative aux transactions
+qui en informe les Etats membres au plus tard trente jours après
+leur réception. Les amendements ou révisions ne seront examinés
+électroniques.
+par la conférence que si les Etats membres en ont été informés
+L'ASSEMBLEE NATIONALE a adopté,
+Les amendements ou révisions sont adoptés par la Conférence.
+LE PRESIDENT DE LA REPUBLIQUE promulgue la loi dont la teneur suit :
+Art. 48. — Retrait
+Tout Etat membre souhaitant se retirer du Protocole additionnel
+Définitions
+doit, un an au préalable, faire parvenir un avis au secrétaire exé-
+Article premier. — Les définitions des instruments juridiques
+cutif qui en informe les Etats membres. A la fin de cette période
+de la CEDEAO, de l'Union africaine ou de l'Union internationale
+d'une année, si cet avis n'est pas retiré, l'Etat en question cesse
+d'être partie prenante au protocole additionnel.
+des Télécommunications prévalent pour les termes non définis
+Toutefois, au cours de cette période d'un an, l'Etat membre
+par la présente loi.
+continue
+d'observer les dispositions du présent Protocole
+Au sens de la présente loi, on entend par :
+additionnel et d'honorer ses obligations.
+activité de cryptologie, toute activité ayant pour but la produc-
+Art. 49. — Entrée en vigueur
+tion, l'utilisation, l'importation, l'exportation ou la commerciali-
+Le présent Protocole additionnel entrera en vigueur dès sa
+sation des moyens de cryptologie ;
+ratification par au moins neuf Etats signataires, conformément
+aux règles constitutionnelles de chaque Etat-membre.
+archivage électronique sécurisé, l'ensemble des modalités de
+Art. S0. — Autorité dépositaire.
+conservation et de gestion des archives électroniques destinées à
+Le présent Protocole additionnel, ainsi que tous les instruments
+garantir leur valeur juridique pendant toute la durée nécessaire ;
+de ratification seront déposés au secrétariat exécutif, qui en trans-
+certificat électronique, un document numérique permettant de
+mettra des copies certifiées conformes à tous les Etats-membres,
+valider le lien entre une signature électronique et son signataire;
+leur notifiera les dates de dépôt des instruments, et le fera
+enregistrer auprès de l'Organisation de l'Unité africaine/Union
+chiffrement, toute technique qui consiste à transformer des don-
+africaine (OUA/UA), et l'Organisation des Nations unies (ONU)
+nées numériques en un format inintelligible en employant des
+et auprès de toutes les autres organisations désignées par le
+moyens de cryptologie ;
+En foi de quoi, nous chefs d'Etat et de Gouvernement de la
+commerce électronique, toute activité économique par laquelle
+Communauté économique des Etats de l'Afrique de l'Ouest
+une personne propose ou assure, à distance et par voie électro-
+(CEDEAO), avons signé le présent Protocole additionnel en trois
+nique, la fourniture de biens et la prestation de services.
+originaux en langues française, anglaise et portugaise, les trois
+textes faisant également foi.
+Entrent également dans le champ du commerce électronique,
+les activités de fourniture de services telles que celles consistant
+Fait à Dakar, le 21 décembre 2001.
+à fournir des informations en ligne, des communications
+S.E. Mathicu KEREKOU
+S.E. Blaise COMPAORE
+commerciales, des outils de recherche, d'accès et de récupération
+Président de la République du Bénin.
+Président du FASO
+de données, d'accès à un réseau de communication ou d'héber-
+Président du Conseil des ministres.
+gement d'informations, même si elles ne sont pas rémunérées par
+S.E. Jose Maria Pereira NEVES
+S.E. Abou Drahamane SANGARE
+les bénéficiaires ;
+Premier Ministre, chef du Gouvernement
+ministre d'Etat
+communication électronique, toute émission, transmission ou
+de la République du CAP VERT.
+ministre des Affaires étrangères
+réception de signes, de signaux, d'écrits, d'images, de sons ou de
+Pour et par ordre du Président
+vidéos par voie électromagnétique ;
+de la République de Côte d'Ivoire.
+conventions secrètes, toutes clés non publiées, nécessaires à la
+S.E. Yanya A. J.J. JAMMEH
+S.E. John Agyckum KUFUOR
+mise en œuvre d'un moyen ou d'une prestation de cryptologie
+Président de la République de la Gambie. Président de la République du Ghana.
+pour les opérations de chiffrement ou de déchiffrement ;
+S.E. Lamine SIDIME
+S.E. Koumba Yala Kobde NHANCA
+courrier électronique, tout message, sous forme de texte, de
+Premier Ministre
+Président de la République
+voix, de son ou d'image, envoyé par un réseau public de commu-
+de la République de Guinée.
+de Guinée-Bissau.
+nication, stocké sur un serveur du réseau ou dans l'équipement
+S.E. Monie R. CAPTAN
+S.E. Alpha Oumar KONARE
+terminal du destinataire, jusqu'à ce que ce dernier le récupère ;
+ministre des Affaires étrangères
+Président de la République
+Pour et par ordre du Président
+du Mali.
+cryptologie, la science relative à la protection et à la sécurité
+de la République du Libéria.
+des informations notamment pour la confidentialité, l'authentifi-
+S.E. MINDAOUDOU Alchatou (Mme)
+S.E. Olusegun OBASANJO
+cation, l'intégrité et la non répudiation ;
+ministre des Affaires étrangères.
+Président et commandant en Chef
+document, le résultat d'une série de lettres, de caractères, de
+Pour et par ordre du Président
+des Forces armées de la République
+chiffres, de figures ou de tous autres signes ou symboles qui a
+de la République du Niger.
+fédérale du Nigéria.
+une signification intelligible, quels que soient leur média et leurs
+S.E. Abdoulaye WADE
+S.E. Alhadji Dr Ahmad Tejan KABBAH
+modalités de transmission ;
+Président de la République
+Président de la République
+du Sénégal.
+de Sierra-Léone.
+échange de données informatisées (EDI), tout transfert
+S.E. Gnassingbé EYADEMA
+électronique d'une information d'un système électronique à un
+Président de la République togolaise.
+autre mettant en œuvre une norme convenue pour structurer
+l'information ;
+
+--- PAGE 2 ---
+584
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+12 septembre 2013
+écrit, toute suite de lettres, de caractères, de chiffres ou de tous
+Les échanges ou transactions électroniques restent néanmoins
+autres signes ou symboles qui a une signification intelligible,
+sounis aux dispositions non contraires applicables en matière
+quels que soient leur support et leurs modalités de transmission;
+commerciale et civile, notamment les Actes uniformes de
+fournisseur de services, toute personne morale qui fournit au
+l'Organisation pour l'Harmonisation en Afrique du Droit des
+public des services de communication électronique ou des pres-
+Affaires (OHADA) et le Code civil.
+tations informatiques ;
+Art. 4. — Sont exclus du champ d'application de la présente loi :
+information, tout élément de connaissance pouvant revêtir
+- les jeux d'argent, même sous forme de paris et de loteries ;
+notamment la forme écrite, visuelle, sonore ou numérique,
+susceptible d'être représenté à l'aide de conventions pour être
+- les activités de représentation et d'assistance en justice ;
+utilisé, conservé, traité ou communiqué ;
+- les activités exercées par les notaires.
+infrastructures critiques, les installations physiques et des tech-
+CHAPITRE 3
+nologies de l'information, les réseaux, les services et les actifs
+Commerce électronique
+qui, en cas d'arrêt ou de destruction, peuvent avoir de graves
+Art. 5. — Sans préjudice des autres obligations d'information
+incidences sur la santé, la sécurité ou le bien-être économique et
+prévues par les textes législatifs et réglementaires en vigueur,
+social des citoyens ou encore le fonctionnement continu des
+toute personne physique ou morale qui exerce le commerce
+services de l'Etat;
+électronique est tenue d'assurer à ceux à qui est destinée la four-
+message électronique, toute information créée, envoyée, reçue
+niture de biens ou la prestation de services un accès facile, direct
+ou conservée par des moyens électroniques ou optiques ou des
+et permanent utilisant un standard ouvert aux informations
+moyens analogues, notamment, mais non exclusivement,
+suivantes:
+l'échange de données informatisées (EDI), la messagerie
+1) s'il s'agit d'une personne physique, ses nom et prénoms et,
+électronique, le télégraphe, le télex et la télécopie ;
+s'il s'agit d'une personne morale, sa raison sociale ou dénomi-
+moyens de cryptologie, l'ensemble des outils scientifiques et
+nation sociale ;
+techniques (matériel ou logiciel) qui permettent de chiffrer et/ou
+2) l'adresse complète de l'endroit où elle est établie, son adresse
+de déchiffrer ou tout matériel ou logiciel conçu ou modifié pour
+de courrier électronique, ainsi que son numéro de téléphone ;
+transformer des données, qu'il s'agisse d'écrits ou de signaux, à
+l'aide de conventions secrètes ou pour réaliser l'opération inverse
+3) si elle est assujettie aux formalités d'inscription au registre
+avec ou sans convention secrète ;
+du commerce et du crédit mobilier pour les entreprises ou à l'obli-
+gation de déclaration pour les associations, le numéro de son
+pays tiers, tout Etat non membre de la CEDEAO ;
+inscription ou de sa déclaration, son capital social et l'adresse de
+prestation de cryptologie, toute opération visant à la mise en
+son siège social;
+œuvre, pour le compte de soi ou d'autrui, des moyens de crypto-
+4) si elle est assujettie à la taxe sur la valeur ajoutée, le numéro
+logie;
+d'identification fiscale correspondant;
+prestataire de services de cryptologie, toute personne, physique
+5) si son activité est soumise à un régime d'autorisation ou
+ou morale, qui fournit une prestation de cryptologie ;
+d'agrément, le nom et l'adresse de l'autorité l'ayant délivré ainsi
+prospection directe, tout envoi de message, quel qu'en soit le
+que les références complètes de l'agrément ;
+support ou la nature notamment commerciale, politique ou cari-
+6) si elle est membre d'une profession réglementée, la référence
+tative, destiné à promouvoir, directement ou indirectement, des
+aux règles professionnelles applicables, son titre professionnel,
+biens, des services ou l'image d'une personne vendant des biens
+le nom de l'ordre ou de l'organisme professionnel auprès duquel
+ou fournissant des services ;
+elle est inscrite.
+signature électronique, toute donnée qui résulte de l'usage d'un
+Art. 6. - Toute personne physique ou morale qui exerce
+procédé fiable d'identification garantissant son lien avec l'acte
+le commerce électronique, tel que défini à l'article premier de la
+auquel elle s'attache ;
+présente loi, doit, même en l'absence d'offre de contrat, dès lors
+sms, le sigle anglo-saxon signifiant « short message service »
+qu'elle mentionne un prix, indiquer ce prix de manière claire et
+(en français : service de message court);
+non ambigue, et notamment préciser si les taxes et les frais de
+livraison sont inclus.
+surveillance, toute activité faisant appel à des moyens tech-
+niques ou électroniques en vue de détecter, d'observer, de copier
+Art. 7. - Toute personne physique ou morale exerçant le com-
+merce électronique, tel que défini à l'article premier de la présente
+ou d'enregistrer les mouvements, les images, les paroles, les
+loi est responsable de plein droit à l'égard de son cocontractant
+écrits, ou l'état d'un objet ou d'une personne fixe ou mobile.
+de la bonne exécution des obligations résultant du contrat, que
+CHAPITRE 2
+ces obligations soient à exécuter par elle-même ou par d'autres
+Objet et champ d'application
+prestataires de services, sans préjudice de son droit de recours
+Art. 2 . - La présente loi a pour objet de régir les transactions
+contre ceux-ci.
+électroniques.
+Toutefois, elle peut s'exonérer de tout ou partie de sa respon-
+Art. 3. — Sont soumis aux dispositions de la présente loi, les
+sabilité en apportant la preuve que l'inexécution ou la mauvaise
+échanges ou transactions, de quelque nature qu'ils soient, prenant
+exécution du contrat est imputable, soit au cocontractant, soit à
+la forme d'un message ou d'un document électronique.
+un cas de force majeure.
+
+--- PAGE 3 ---
+12 septembre 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+585
+Art. 8. — Les activités entrant dans le champ du commerce
+Art. 13. — Est puni d'un emprisonnement de un an à cinq ans
+électronique sont soumises aux lois ivoiriennes, dès lors que l'une
+et d'une amende de 1.000.000 de francs à 10.000.000 de francs
+des parties est établie en Côte d'Ivoire, y a une résidence ou est
+ou de l'une de ces deux peines seulement, quiconque exerce le
+de nationalité ivoirienne.
+commerce électronique en violation des dispositions des articles
+L'application de l'alinéa précédent est sans préjudice de la
+5 à ll de la présente loi.
+liberté des parties de choisir la loi applicable à leurs transactions.
+Art. 14. — Est interdite la prospection directe par envoi de
+Toutefois, le choix par les parties de la loi applicable à leurs tran-
+message au moyen d'un automate d'appel ou d'émission de SMS,
+sactions ne peut avoir pour but ni pour effet :
+d'un télécopieur ou d'un courrier électronique ou tout autre
+1) de priver le consommateur ayant sa résidence habituelle sur
+moyen de communication électronique utilisant, sous quelque
+le territoire national de la protection que lui assurent les disposi-
+forme que ce soit, les coordonnées d'une personne physique
+tions des lois ivoiriennes en matière de protection des droits du
+qui n'a pas exprimé son consentement préalable à recevoir des
+consommateur;
+prospections directes par ce moyen.
+2) de déroger aux règles de forme prévues par les lois ivoi-
+Est puni d'une peine d'emprisonnement de un an à cinq ans et
+riennes en matière d'obligations conventionnelles, notamment
+d'une amende de 1.000.000 à 10.000.000 de francs CFA, ou de
+celles relatives à la vente de bien immobilier situé sur le territoire
+l'une de ces deux peines seulement, quiconque fait de la prospec-
+national ;
+tion directe par voie électronique en violation de l'interdiction
+3) de déroger aux règles déterminant la loi applicable aux
+prévue au présent article.
+contrats d'assurance pour les risques situés sur le territoire natio-
+Toutefois, la prospection directe par courrier électronique est
+nal ;
+autorisée si:
+4) de déroger aux obligations de la réglementation régissant
+1) les coordonnées du destinataire ont été recueillies, en toute
+les relations financières extérieures de la Côte d'Ivoire, notam-
+connaissance de cause, directement auprès de lui-même ;
+ment en matière de domiciliation des exportations ainsi que du
+2) la prospection directe est adressée aux abonnés ou clients
+rapatriement des recettes d'exportation.
+d'une personne physique ou morale qui a recueilli leurs coordon-
+Art. 9. — En l'absence de choix de la loi applicable par les
+nées, en toute connaissance de cause pour des produits ou
+parties, les lois ivoiriennes s'appliquent à leurs transactions
+services analogues.
+lorsque les activités de l'une au moins des parties sont exercées
+Art. 15. — Les messages envoyés par des moyens électro-
+à partir du territoire national ou sont accessibles aux utilisateurs
+niques à des fins de prospection directe doivent indiquer des
+des réseaux de communication en ligne à partir du territoire
+coordonnées valables auxquelles le destinataire puisse utilement
+national et qu'il existe un lien suffisant, substantiel ou significatif
+transmettre une demande tendant à obtenir que ces communica-
+entre la prestation offerte aux utilisateurs des réseaux de com-
+tions cessent, sans frais autres que ceux liés à la transmission de
+munication en ligne et le territoire national, notamment, par la
+celle-ci.
+langue utilisée, la monnaie employée, les produits proposés, le
+nom de domaine utilisé par le site proposant ladite prestation.
+Art. 16. — Le consentement des personnes, dont les coordon-
+nées ont été recueillies avant la publication de la présente loi,
+CHAPITRE 4
+doit être sollicité par voie de courrier électronique, avant toute
+Publicité par voie électronique
+utilisation de celles-ci à compter de son entrée en vigueur.
+Art. 10. — Toute publicité, sous quelque forme que ce soit,
+CHAPITRE S
+accessible par voie de communication électronique, doit pouvoir
+Conclusion de contrat par voie électronique
+être clairement identifiée comme telle. Elle doit rendre clairement
+identifiable la personne physique ou morale pour le compte de
+Art.17. — Nul ne peut être contraint de poser un acte juridique
+laquelle elle est réalisée.
+par voie électronique, à défaut de dispositions légales contraires.
+Les publicités, et notamment les offres promotionnelles, telles
+Art. 18. La voie électronique peut être utilisée pour mettre
+que les rabais, les primes ou les cadeaux, ainsi que les concours
+à disposition des conditions contractuelles ou des informations
+ou les jeux promotionnels, adressés par courrier électronique,
+sur des biens ou services objets de la transaction.
+doivent pouvoir être identifiés de manière claire et non équivoque
+Art. 19. — Les informations qui sont demandées en vue de la
+sur l'objet du courrier dès leur réception par leur destinataire, ou
+conclusion d'un contrat ou celles qui sont adressées au cours de
+en cas d'impossibilité technique, dans le corps du message.
+son exécution peuvent être transmises par voie électronique si
+leur destinataire a accepté l'usage de ce procédé.
+Art. 11. — Les conditions auxquelles sont soumises la possi-
+Art. 20. — Les informations destinées à un professionnel
+bilité de bénéficier d'offres promotionnelles ainsi que celle de
+peuvent lui être adressées par voie électronique, dès lors qu'il a
+participer à des concours ou à des jeux promotionnels, lorsque
+communiqué son adresse électronique.
+ceux-ci sont proposés par voie électronique, doivent être claire-
+Si ces informations doivent être portées sur un formulaire,
+ment précisées et aisément accessibles.
+celui-ci est mis, par voie électronique, à la disposition de la
+Art. 12 . — Les sanctions prévues à l'article premier de la loi
+personne qui doit le remplir.
+n°63-301 du 28 juin 1963 relative à la répression des fraudes dans
+Art. 21. - Le fournisseur qui propose, à titre professionnel,
+les ventes de marchandises et des falsifications des denrées
+par voie électronique, la fourniture de biens ou la prestation de
+alimentaires et des produits agricoles sont applicables aux
+services, met à la disposition du public les conditions contrac-
+tuelles applicables d'une manière qui permette leur conservation
+activités du commerce électronique.
+et leur reproduction.
+
+--- PAGE 4 ---
+586
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+12 septembre 2013
+Sans préjudice des conditions de validité mentionnées dans
+Art. 28.
+- Les dispositions de l'article 23 de la présente loi
+l'offre, son auteur reste engagé par elle tant qu'elle est accessible
+ne sont pas applicables :
+par voie électronique de son fait.
+1) aux actes sous seing privé relatifs au droit de la famille et
+L'offre doit énoncer, en outre :
+des successions ;
+1) les différentes étapes à suivre pour conclure le contrat par
+2) aux actes sous seing privé relatifs à des sûretés personnelles
+voie électronique ;
+ou réelles, de nature civile ou commerciale, sauf s'ils sont passés
+2) les moyens techniques permettant à l'utilisateur, avant la
+par une personne pour les besoins de sa profession.
+conclusion du contrat, d'identifier les erreurs commises dans la
+Art. 29. — Dans l'hypothèse où il est exigé une mention
+saisie des données et de les corriger ;
+manuscrite de la part de celui qui s'oblige, ce dernier peut
+3) les langues proposées pour la conclusion du contrat ;
+l'apposer sous forme électronique si les conditions de cette
+4) en cas d'archivage du contrat, les modalités de cet archivage
+apposition sont de nature à garantir qu'elle ne peut être effectuée
+par l'auteur de l'offre et les conditions d'accès au contrat archivé ;
+que par lui-même.
+5) les moyens de consulter par voie électronique les règles
+Lorsque celui qui s'oblige par voie électronique ne sait ou ne
+professionnelles et commerciales auxquelles l'auteur de l'offre
+peut écrire, il doit se faire assister de deux témoins qui certifient,
+entend, le cas échéant, se soumettre.
+dans l'acte, l'identité de la personne qui s'oblige, son accord,
+leurs propres identités, et attestent, en outre, que la nature et les
+Art. 22. — Pour que le contrat soit valablement conclu, le
+effets de l'acte lui ont été précisés.
+destinataire de l'offre doit avoir eu la possibilité de vérifier le
+détail de sa commande et du prix total et de corriger d'éventuelles
+La présence des témoins certificateurs dispense celui qui
+erreurs, avant de confirmer celle-ci pour exprimer son accepta-
+s'oblige électroniquement de l'accomplissement des formalités
+tion.
+de la mention manuscrite.
+L'auteur de l'offre, après réception de la commande et correc-
+Art.30. — La remise d'un écrit sous forme électronique est
+tion d'éventuelles erreurs, envoie par voie électronique un accusé
+effective lorsque le destinataire, après en avoir pris connaissance,
+de réception de la commande qui lui a été ainsi adressée.
+en a accusé réception. Si une disposition prévoit que l'écrit doit
+être lu au destinataire, la remise d'un écrit électronique à l'inté-
+La commande, la confirmation de l'acceptation de l'offre et
+ressé, dans les conditions prévues au premier alinéa, vaut lecture.
+l'accusé de réception sont considérés comme reçus, lorsque les
+parties auxquelles ils sont adressés peuvent y avoir accès.
+Art. 31. — Lorsque l'écrit sur papier est soumis à des condi-
+tions particulières de lisibilité ou de présentation, l'écrit sous
+Les dispositions du présent article ne s'appliquent pas aux
+forme électronique doit répondre à des exigences équivalentes.
+contrats de fourniture de biens ou de prestation de services qui
+sont conclus exclusivement entre professionnels par échange de
+Art. 32. — L'exigence de l'envoi d'un écrit en plusieurs exem-
+courriers électroniques ou d'EDI.
+plaires est réputée satisfaite sous la forme électronique si celui-
+ci peut être imprimé par le destinataire.
+CHAPITRE 6
+Art. 33. — L'écrit sous forme électronique est admis en factu-
+De l'écrit sous forme électronique
+ration au même titre que l'écrit sur support papier, pour autant
+Art. 23. — L'écrit sous forme électronique est admis comme
+que l'authenticité de l'origine des données qu'il convient et
+mode de preuve au même titre que l'écrit sur support papier et a
+la même force probante que celui-ci, sous réserve de l'identifica-
+l'intégrité de leur contenu soient garanties.
+tion de la personne dont il émane et de sa conservation dans des
+Art. 34. — Une lettre recommandée peut être envoyée par
+conditions de nature à en garantir l'intégrité.
+courrier électronique, à condition que ce courrier soit acheminé
+Art. 24. — Lorsque la loi n'a pas fixé d'autres principes, et à
+par un tiers, selon un procédé permettant d'identifier le tiers,
+défaut de convention valable entre les parties, le juge règle les
+de désigner l'expéditeur, de garantir l'identité du destinataire et
+conflits de preuve par écrit ou preuve littérale en déterminant
+d'établir si la lettre a été remise ou non au destinataire.
+par tous moyens le titre le plus vraisemblable, quel qu'en soit le
+Le contenu de cette lettre, au choix de l'expéditeur, peut être
+support utilisé.
+imprimé par le tiers sur papier pour être distribué au destinataire
+Art. 25. — La copie ou la reproduction d'un acte passé par voie
+ou adressé à celui-ci par voie électronique.
+électronique sur support papier a la même force probante que cet
+Dans ce dernier cas, si le destinataire n'est pas un professionnel,
+acte, sous réserve de la preuve de l'intégrité du document copié
+il doit avoir demandé l'envoi par ce moyen ou en avoir accepté
+ou reproduit.
+l'usage au cours d'échanges antérieurs relativement au même
+Art. 26. - En cas de contestation de l'originalité ou de
+objet.
+l'intégrité de la copie ou de la reproduction sur support papier de
+Un avis de réception peut être adressé à l'expéditeur par voie
+l'acte passé par voie électronique, la juridiction compétente peut
+électronique ou par tout autre dispositif lui permettant de le
+recourir à la désignation d'un expert en la matière.
+conserver.
+Art. 27. — Lorsqu'un écrit est exigé pour la validité d'un acte
+Art. 35. — Le fournisseur de biens ou prestataire de services
+juridique, il peut être établi et conservé sous forme électronique
+par voie électronique qui réclame l'exécution d'une obligation
+dans les conditions définies par décret pris en Conseil des
+doit en prouver l'existence et, lorsqu'il se prétend libéré, doit
+ministres.
+prouver que l'obligation est inexistante ou éteinte.
+
+--- PAGE 5 ---
+12 septembre 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+587
+CHAPITRE 7
+Art. 4l. - L'archivage électronique doit garantir l'authenticité
+La sécurisation des transactions électroniques
+et l'intégrité des documents et des transactions électroniques
+Art. 36. — La signature nécessaire à la perfection d'un acte
+conservés par ce moyen.
+juridique identifie celui qui l'appose. Elle manifeste le consente-
+Art. 42 . — L'archivage électronique consiste à mettre en place
+ment des parties aux obligations qui découlent de cet acte.
+des actions, des outils et des méthodes pour conserver à moyen
+Lorsque la signature est électronique, elle consiste en l'usage
+et à long terme des informations sélectionnées dans le but de les
+d'un procédé fiable d'identification garantissant son lien avec
+exploiter ou de les réutiliser.
+l'acte auquel elle s'attache.
+Les données concernées doivent être structurées, indexées et
+Art. 37. — Une signature électronique créée par un dispositif
+conservées sur des formats appropriés à la conservation et à la
+sécurisé que le signataire peut garder sous son contrôle exclusif
+migration.
+et qui repose sur un certificat numérique est admise comme
+L'archivage doit garantir dans leur intégrité la restitution des
+signature au même titre que la signature manuscrite.
+données conservées ou leur accessibilité dans un contexte tech-
+La fiabilité d'un procédé de signature électronique est présumée
+nologique changeant.
+jusqu'à preuve contraire, lorsque ce procédé met en œuvre une
+Art. 43. — Les règles de l'archivage électronique s'appliquent
+signature électronique sécurisée, établie grâce à un dispositif
+indifféremment aux documents numérisés et aux documents
+sécurisé de création de signature électronique et que la vérifica-
+conçus initialement sur support électronique.
+tion de cette signature repose sur l'utilisation d'un certificat
+Art. 44 . — La valeur juridique des archives ne peut être déniée
+qualifié.
+du seul fait de l'archivage électronique mis en œuvre.
+Une signature électronique sécurisée est une signature électro-
+Art. 45 . — Les modalités de mise en œuvre de l'archivage
+nique qui satisfait aux exigences fixées par décret pris en Conseil
+électronique, en vue de conserver la valeur juridique à long terme
+des ministres.
+des documents électroniques, sont définies par décret pris en
+Une signature électronique ne peut être déclarée irrecevable au
+Conseil des ministres.
+seul motif qu'elle se présente sous forme électronique ou qu'elle
+CHAPITRE 9
+ne repose pas sur un certificat qualifié ou qu'elle n'est pas créée
+par un dispositif sécurisé de création de signature.
+Des moyens et prestations de cryptologie
+La signature électronique sécurisée liée à un certificat électro-
+Art. 46. — Les moyens de cryptologie ont principalement pour
+nique qualifié a la même force probante que la signature manus-
+objet de garantir la sécurité du stockage ou de la transmission de
+crite.
+données, en permettant d'assurer leur confidentialité, leur authen-
+tification ou le contrôle de leur intégrité.
+Art. 38. — Un certificat électronique délivré par un prestataire
+de services de certification électronique établi dans un Etat étran-
+Art. 47. — La fourniture de prestations de cryptologie est
+ger a la même valeur juridique que celui délivré par un prestataire
+soumise à des conditions définies par décret pris en Conseil des
+établi sur le territoire national, dès lors :
+ministres.
+- que le prestataire satisfait aux exigences fixées par la présente
+Ce décret définit les conditions de fourniture des prestations
+loi et ses textes d'application;
+de cryptologie, au regard des impératifs de défense nationale et
+de sécurité intérieure ou extérieure de l'Etat.
+- qu'un accord bilatéral ou multilatéral avec cet Etat étranger
+l'a expressément prévu.
+Art. 48. — Les personnes fournissant des prestations de
+cryptologie sont assujetties au secret professionnel.
+Art. 39. — Sous réserve d'une disposition légale, nul ne peut
+être contraint de signer électroniquement.
+Les personnes fournissant des prestations de cryptologie à des
+fins de confidentialité sont responsables, nonobstant toute stipu-
+CHAPITRE 8
+lation contractuelle contraire, du préjudice causé aux personnes
+L'archivage des documents électroniques
+leur confiant la gestion de leurs conventions secrètes, en cas
+Art. 40. — Sous réserve des dispositions légales prévoyant un
+d'atteinte à l'intégrité, à la confidentialité ou à la disponibilité des
+délai plus court, la conservation des documents sous forme
+données transformées à l'aide de ces conventions, sauf à démon-
+électronique doit se faire pendant une période de dix ans et dans
+trer qu'elles n'ont commis aucune faute intentionnelle ou de
+les conditions suivantes :
+négligence.
+- l'information que contient le document doit être accessible
+Art. 49. — Lorsqu'un fournisseur de prestations de cryptologie
+pour être consultée ultérieurement ;
+ne respecte pas les obligations auxquelles il est assujetti, l'autorité
+- le document doit être conservé sous la forme sous laquelle il
+en charge de la Régulation des Télécommunications/TIC, peut
+a été créé, envoyé ou reçu, ou sous une forme dont on peut
+prononcer à son égard l'interdiction d'exercer la profession de
+démontrer qu'elle n'est susceptible ni de modification ni d'altéra-
+prestataire de cryptologie et le retrait des moyens de cryptologie
+tion dans son contenu et que le document transmis et celui
+concernés.
+conservé sont strictement identiques ;
+CHAPITRE 10
+- les informations qui permettent de déterminer l'origine et la
+Redevance et audit des systèmes d'information
+destination du document, ainsi que les indications de date et
+Art. S0 : L'autorité en charge de la Régulation des Télécom-
+d'heure de l'envoi ou de la réception, doivent être conservées si
+munications/TIC est chargée de veiller à la sécurité des réscaux
+elles existent.
+et systèmes d'information. A cet effet, elle :
+
+--- PAGE 6 ---
+588
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+12 septembre 2013
+- procède à l'audit et à la certification des systèmes d'informa- | DECRET n°2013-549 du 30 juillet 2013 portant promotion au
+tion des personnes morales établies en Côte d'Ivoire et exerçant
+grade A4 dans l'emploi d'attaché de recherche.
+des activités de transactions électroniques;
+LE PRESIDENT DE LA REPUBLIQUE,
+- délivre les certificats électroniques.
+Sur rapport du ministre de la Fonction publique et de la Réforme
+Art. 51.- L'audit, le contrôle des systèmes d'information et la
+administrative;
+certification électronique sont soumis à redevance.
+Vu la Constitution ;
+Le montant, les conditions et les modalités de paiement et de
+Vu la loi n° 92-570 du I1 septembre 1992 portant Statut général de la
+recouvrement de la redevance sont fixés par décret pris en
+Fonction publique ;
+Conseil des ministres.
+Vu le décret n° 93-607 du 2 juillet 1993 portant modalités communes
+Art. 52 . — La présente loi sera publiée au Journal officiel de
+d'application du Statut général de la Fonction publique ;
+la République de Côte d'Ivoire et exécutée comme loi de l'Etat.
+Vu le décret n°93-608 du 2 juillet 1993 portant classification des
+Fait à Abidjan, le 30 juillet 2013.
+grades et emplois dans l'Administration de l'Etat et dans les Etablisse-
+Alassane OUATTARA.
+ments publics nationaux;
+Vu le décret n°93-609 du 2 juillet 1993 portant modalités particulières
+d'application du Statut général de la Fonction publique ;
+DECRET n° 2013-545 du 30 juillet 2013 portant ratification du
+Vu le décret nº2011-395 du 16 novembre 2011 portant organisation
+Protocole A/SP 1/12/01 sur la démocratie et la bonne gouver-
+du ministère de la Fonction publique et de la Réforme administrative;
+nance, additionnel au Protocole relatif au mécanisme de
+Vu le décret n° 2012-1118 du 21 novembre 2012 portant nomination du
+prévention, de gestion, de règlement des conflits, de maintien
+Premier Ministre ;
+de la paix et de la sécurité, signé le 21 décembre 2001 à Dakar
+Vu le décret n° 2012-1119 du 22 novembre 2012 portant nomination
+(Sénégal).
+des membres du Gouvernement, tel que modifié par le décret
+LE PRESIDENT DE LA REPUBLIQUE,
+nº2013-505 du 25 juillet 2013 ;
+Vu la Constitution ;
+Vu le décret n° 2013-506 du 25 juillet 2013 portant attributions des
+membres du Gouvernement;
+Vu le Protocole A/SP1/12/01 sur la démocratie et la bonne gouver-
+nance, additionnel au Protocole relatif au mécanisme de prévention,
+Vu les dossiers des intéressés,
+de gestion, de règlement des conflits, de maintien de la paix et de la
+DECRETE :
+sécurité, signé le 21 décembre 2001 a Dakar (Sénégal) ;
+Article premier. — M. GBANE Mory, mle 252 621-C,
+Vu la loi n° 2013-544 du 30 juillet 2013 autorisant le Président de la
+médecin généraliste, catégorie A, grade A4, 2ª classe, 3* échelon,
+indice 850 à compter du 10 janvier 2006, retenu par le
+République à ratifier le Protocole A/SP1/12/01 sur la démocratie et la
+Comité technique scientifique pour le recrutement des attachés
+bonne gouverance, additionnel au Protocole relatif au mécanisme de
+de Recherche en sa session de l'année 2006, est promu au grade
+prévention, de gestion, de règlement des conflits, de maintien de la paix
+A4, dans l'emploi d'attaché de Recherche, catégorie A, 2° classe,
+et de la sécurité, signé le 21 décembre 2001 à Dakar (Sénégal) ;
+1ª échelon, indice 1270 à compter du 14 février 2007.
+Vu le décret n° 61-157 du 18 mai 1961 relatif à la ratification ct à la
+Art. 2 . - Mme GOHOU née KOUASSI Adri Valérie,
+publication des engagements internationaux souscrits par la Côte d'Ivoire ;
+mle 228 155-H, médecin généraliste, catégorie A, grade A4,
+Vu le décret n° 2012-625 du 6 juillet 2012 portant attributions des
+1tre classe, 2tme échelon, indice 1165 à compter du 11 mars 2006,
+membres du Gouverement ;
+retenue par le Comité technique scientifique pour le recrutement
+des attachés de Recherche en sa session de l'année 2006, est
+Vu le décret n° 2012-1118 du 21 novembre 2012 portant nomination
+promue au grade A4, dans l'emploi d'attaché de Recherche,
+du Premier Ministre :
+catégorie A, 2º classe, 1* échelon, indice 1270 à compter du
+Vu le décret n° 2012-1119 du 22 novembre 2012 portant nomination
+14 février 2007.
+des membres du Gouvernement,
+Art. 3. — Mlle BISSOUMA Anna Corinne Estelle Liéma,
+mle 297 622-T, médecin généraliste, catégorie A, grade A4,
+DECRETE :
+2ime classe, 2ime échelon, indice 790 à compter du 1* octobre
+Article premier. - Est ratifié le Protocole A/SP1/12/01 sur la
+| 2005, retenue par le Comité technique scientifique pour le recru-
+démocratie et la bonne gouvernance, additionnel au Protocole
+tement des attachés de Recherche en sa session de l'année 2006,
+relatif au mécanisme de prévention, de gestion, de règlement
+est promue au grade A4, dans l'emploi d'attaché de Recherche,
+des conflits, de maintien de la paix et de la sécurité, signé le
+catégorie A, 2* classe, 1" échelon, indice 1270 a compter du
+14 février 2007.
+21 décembre 2001 à Dakar (Sénégal).
+Art. 4. - M. ASSI Serge Brice, mle 250 634-K, médecin
+Art. 2. - Le présent décret sera publié au Journal officiel de
+généraliste, catégorie A, grade A4, 2tme classe, 4tne échelon,
+la République de Côte d'Ivoire.
+indice 950 à compter du 18 décembre 2006, retenu par le Comité
+technique scientifique pour le recrutement des attachés de
+Fait à Abidjan, le 30 juillet 2013.
+Recherche en sa session de l'année 2006, est promu au grade A4,
+Alassane OUATTARA.
+dans l'emploi d'attaché de Recherche, catégorie A, 2° classe,
+I" échelon, indice 1270 à compter du 14 février 2007.

@@ -1,0 +1,329 @@
+{
+  "horodatage": "2026-10-17T00:27:32+00:00",
+  "domaine": "logement_baux_foncier",
+  "documents": [
+    {
+      "cle": "loi_2019_576",
+      "titre": "LOI N° 2019-576 DU 26 JUIN 2019 INSTITUANT CODE DE LA CONSTRUCTION ET DE L'HABITAT",
+      "url": "https://www.dgi.gouv.ci/assets/documents/transfert_propriete/lois_reglements/LOI%20N%C2%B0%202019-576%20DU%2026%20JUIN%202019%20INSTITUANT%20CODE%20DE%20LA%20CONSTRUCTION%20ET%20DE%20L%27HABITAT.pdf",
+      "numero_texte": "2019-576",
+      "statut": "IMPORTE",
+      "sha256": "sha256:fd81f7c724c073cfe1cb1de4dfd708866348d4322cbdbc85bfe21917a1811884",
+      "octets": 1287528,
+      "detection": {
+        "polices": 35,
+        "images": 0,
+        "pages_detectees": 117,
+        "calque_texte": true
+      },
+      "articles": {
+        "nb": 553,
+        "article_max": 553,
+        "couverture": 1.0
+      },
+      "etat_verification": "VERIFIE",
+      "ref_id": "REF-4596B86C3154",
+      "doc_id": "DOC-814370E4E6D2",
+      "articles_indexes": 553
+    },
+    {
+      "cle": "loi_2020_624",
+      "titre": "LOI N° 2020-624 DU 14 AOÛT 2020 INSTITUANT CODE DE L'URBANISME ET DU DOMAINE FONCIER URBAIN",
+      "url": "https://www.construction.gouv.ci/uploads/publications/178542377022.pdf",
+      "numero_texte": "2020-624",
+      "statut": "IMPORTE",
+      "sha256": "sha256:2dd1655d11d49e85e735e0042c8deb2d0063a1b3e049aeeab2d84faa06643c34",
+      "octets": 3647755,
+      "detection": {
+        "polices": 522,
+        "images": 1,
+        "pages_detectees": 66,
+        "calque_texte": true
+      },
+      "articles": {
+        "nb": 302,
+        "article_max": 303,
+        "couverture": 0.9967
+      },
+      "etat_verification": "VERIFIE",
+      "ref_id": "REF-A213C61AA69B",
+      "doc_id": "DOC-4C67C010CD72",
+      "articles_indexes": 302
+    },
+    {
+      "cle": "loi_2020_624_dgi_scan",
+      "titre": "LOI N° 2020-624 DU 14 AOÛT 2020 INSTITUANT CODE DE L'URBANISME ET DU DOMAINE FONCIER URBAIN (exemplaire numérisé DGI)",
+      "url": "https://www.dgi.gouv.ci/assets/documents/transfert_propriete/lois_reglements/LOI%20INSTITUANT%20CODE%20URBANISME%20ET%20DOMAINE%20FONCIER%20URBAIN-4-45.pdf",
+      "numero_texte": "2020-624",
+      "statut": "IMPORTE",
+      "sha256": "sha256:693b4007650a745d9e145a8da1ebdbc4e84fa33ba318f1dc0586dc400b21af7e",
+      "octets": 16061270,
+      "detection": {
+        "polices": 0,
+        "images": 42,
+        "pages_detectees": 42,
+        "calque_texte": false
+      },
+      "etat_verification": "PARTIELLEMENT_VERIFIE",
+      "ref_id": "REF-948E3A0AE393",
+      "doc_id": "DOC-FC436680EEE7",
+      "articles_indexes": 0
+    },
+    {
+      "cle": "loi_98_750",
+      "titre": "LOI N° 98-750 DU 23 DECEMBRE 1998 RELATIVE AU DOMAINE FONCIER RURAL (exemplaire numérisé SGG)",
+      "url": "https://www.sgg.gouv.ci/photo_doc/1339597849.pdf",
+      "numero_texte": "98-750",
+      "statut": "IMPORTE",
+      "sha256": "sha256:309fac2a8d7323e32f6e4131f653f425ac12e319677cd9fb1d8de4873617fe3f",
+      "octets": 1279713,
+      "detection": {
+        "polices": 0,
+        "images": 13,
+        "pages_detectees": 13,
+        "calque_texte": false
+      },
+      "etat_verification": "PARTIELLEMENT_VERIFIE",
+      "ref_id": "REF-DDA2C05259D9",
+      "doc_id": "DOC-9B30C0B1263F",
+      "articles_indexes": 0
+    },
+    {
+      "cle": "loi_2020_623",
+      "titre": "LOI N° 2020-623 DU 14 AOUT 2020 PORTANT RATIFICATION DE L'ORDONNANCE N° 2020-386 DU 15 AVRIL 2020 PORTANT SUSPENSION DES PROCEDURES D'EXPULSION DES LOCATAIRES ET DE REVISION A LA HAUSSE DU LOYER DES BAUX D'HABITATION",
+      "url": "https://construction.gouv.ci/uploads/publications/178542265442.pdf",
+      "numero_texte": "2020-623",
+      "statut": "IMPORTE",
+      "sha256": "sha256:a0570c10bd5eaf073d79224616cd5e80cf0c6d4bcf14b3209a043b3d2d07d894",
+      "octets": 1096416,
+      "detection": {
+        "polices": 0,
+        "images": 2,
+        "pages_detectees": 2,
+        "calque_texte": false
+      },
+      "etat_verification": "PARTIELLEMENT_VERIFIE",
+      "ref_id": "REF-E68B2BA5C646",
+      "doc_id": "DOC-CB3C9F2B2AAC",
+      "articles_indexes": 0
+    }
+  ],
+  "non_juridiques": [
+    {
+      "cle": "communique_2024_projet_loi_bail",
+      "titre": "COMMUNIQUE DU CONSEIL DES MINISTRES DU 12 JUIN 2024 — Porte-parolat du Gouvernement (contient la présentation du projet de loi relatif au contentieux du bail à usage d'habitation et à l'exécution des expulsions)",
+      "url": "https://communication.gouv.ci/uploads/publications/17204739632.pdf",
+      "numero_texte": null,
+      "statut": "IMPORTE",
+      "sha256": "sha256:6ca6225e07bcdf6f8479f036b5611384c068c0f2e5d2b7b9f54eca15d1f5aee6",
+      "octets": 246080,
+      "detection": {
+        "polices": 17,
+        "images": 2,
+        "pages_detectees": 15,
+        "calque_texte": true
+      },
+      "doc_id": "DOC-BB9AF3E961AF",
+      "articles_indexes": 0
+    }
+  ],
+  "echecs": [],
+  "integrite": {
+    "horodatage": "2026-10-17T00:27:32+00:00",
+    "nb_documents": 6,
+    "conformes": [
+      {
+        "doc_id": "DOC-BB9AF3E961AF",
+        "sha256": "sha256:6ca6225e07bcdf6f8479f036b5611384c068c0f2e5d2b7b9f54eca15d1f5aee6",
+        "octets": 246080
+      },
+      {
+        "doc_id": "DOC-4C67C010CD72",
+        "sha256": "sha256:2dd1655d11d49e85e735e0042c8deb2d0063a1b3e049aeeab2d84faa06643c34",
+        "octets": 3647755
+      },
+      {
+        "doc_id": "DOC-FC436680EEE7",
+        "sha256": "sha256:693b4007650a745d9e145a8da1ebdbc4e84fa33ba318f1dc0586dc400b21af7e",
+        "octets": 16061270
+      },
+      {
+        "doc_id": "DOC-CB3C9F2B2AAC",
+        "sha256": "sha256:a0570c10bd5eaf073d79224616cd5e80cf0c6d4bcf14b3209a043b3d2d07d894",
+        "octets": 1096416
+      },
+      {
+        "doc_id": "DOC-814370E4E6D2",
+        "sha256": "sha256:fd81f7c724c073cfe1cb1de4dfd708866348d4322cbdbc85bfe21917a1811884",
+        "octets": 1287528
+      },
+      {
+        "doc_id": "DOC-9B30C0B1263F",
+        "sha256": "sha256:309fac2a8d7323e32f6e4131f653f425ac12e319677cd9fb1d8de4873617fe3f",
+        "octets": 1279713
+      }
+    ],
+    "alteres": [],
+    "absents": [],
+    "verdict": "INTEGRE"
+  },
+  "synthese": {
+    "horodatage": "2026-10-17T00:27:32+00:00",
+    "domaine": "logement_baux_foncier",
+    "nb_documents": 6,
+    "nb_documents_exploitables": 3,
+    "nb_documents_scans_seulement": 3,
+    "nb_articles_indexes": 1171,
+    "articles_par_origine": {
+      "CALQUE_TEXTE": {
+        "articles": 855,
+        "recoupes": 0,
+        "confiance_moyenne": null
+      },
+      "OCR_AUTO": {
+        "articles": 316,
+        "recoupes": 287,
+        "confiance_moyenne": 0.9758
+      },
+      "VERIFIE_MANUELLEMENT": {
+        "articles": 0,
+        "recoupes": 0,
+        "confiance_moyenne": null
+      }
+    },
+    "documents": [
+      {
+        "doc_id": "DOC-BB9AF3E961AF",
+        "titre": "COMMUNIQUE DU CONSEIL DES MINISTRES DU 12 JUIN 2024 — Porte-parolat du Gouvernement (contient la présentation du projet de loi relatif au contentieux du bail à usage d'habitation et à l'exécution des expulsions)",
+        "type_texte": "communique",
+        "numero_texte": null,
+        "date_texte": "2024-06-12",
+        "domaine": "logement_baux_foncier",
+        "autorite": "Porte-parolat du Gouvernement (communication.gouv.ci)",
+        "url_source": "https://communication.gouv.ci/uploads/publications/17204739632.pdf",
+        "sha256": "sha256:6ca6225e07bcdf6f8479f036b5611384c068c0f2e5d2b7b9f54eca15d1f5aee6",
+        "octets": 246080,
+        "pages": 15,
+        "calque_texte": 1,
+        "note_qualite": "document non juridique (contexte)",
+        "methode_extraction": "TEXTE_NON_JURIDIQUE",
+        "fichier_ocr": null,
+        "sha256_ocr": null,
+        "recoupe_avec": null,
+        "qualite_ocr": null,
+        "articles_indexes": 0,
+        "exploitable": true
+      },
+      {
+        "doc_id": "DOC-4C67C010CD72",
+        "titre": "LOI N° 2020-624 DU 14 AOÛT 2020 INSTITUANT CODE DE L'URBANISME ET DU DOMAINE FONCIER URBAIN",
+        "type_texte": "loi",
+        "numero_texte": "2020-624",
+        "date_texte": "2020-08-14",
+        "domaine": "logement_baux_foncier",
+        "autorite": "Ministère de l'Urbanisme, du Logement et du Cadre de Vie",
+        "url_source": "https://www.construction.gouv.ci/uploads/publications/178542377022.pdf",
+        "sha256": "sha256:2dd1655d11d49e85e735e0042c8deb2d0063a1b3e049aeeab2d84faa06643c34",
+        "octets": 3647755,
+        "pages": 66,
+        "calque_texte": 1,
+        "note_qualite": "texte natif exploitable",
+        "methode_extraction": "CALQUE_TEXTE",
+        "fichier_ocr": null,
+        "sha256_ocr": null,
+        "recoupe_avec": null,
+        "qualite_ocr": null,
+        "articles_indexes": 302,
+        "exploitable": true
+      },
+      {
+        "doc_id": "DOC-FC436680EEE7",
+        "titre": "LOI N° 2020-624 DU 14 AOÛT 2020 INSTITUANT CODE DE L'URBANISME ET DU DOMAINE FONCIER URBAIN (exemplaire numérisé DGI)",
+        "type_texte": "loi",
+        "numero_texte": "2020-624",
+        "date_texte": "2020-08-14",
+        "domaine": "logement_baux_foncier",
+        "autorite": "DGI — Direction Générale des Impôts (exemplaire numérisé)",
+        "url_source": "https://www.dgi.gouv.ci/assets/documents/transfert_propriete/lois_reglements/LOI%20INSTITUANT%20CODE%20URBANISME%20ET%20DOMAINE%20FONCIER%20URBAIN-4-45.pdf",
+        "sha256": "sha256:693b4007650a745d9e145a8da1ebdbc4e84fa33ba318f1dc0586dc400b21af7e",
+        "octets": 16061270,
+        "pages": 42,
+        "calque_texte": 0,
+        "note_qualite": "texte OCR (recoupé avec la copie à calque texte, confiance moyenne 0.9646) ; 13 article(s) écarté(s)",
+        "methode_extraction": "OCR_VISION_AUTO",
+        "fichier_ocr": "/Users/mac/mon_recours_ci/KNOWLEDGE/CORPUS/LOGEMENT_BAUX_FONCIER/loi_2020-624_dgi_exemplaire_numerise.ocr.txt",
+        "sha256_ocr": "sha256:03ae00fdbec1a5f4af90dc485189f6405a38ffcdfa31dd4f8159184b5af87798",
+        "recoupe_avec": "DOC-4C67C010CD72",
+        "qualite_ocr": 0.9646,
+        "articles_indexes": 287,
+        "exploitable": false
+      },
+      {
+        "doc_id": "DOC-CB3C9F2B2AAC",
+        "titre": "LOI N° 2020-623 DU 14 AOUT 2020 PORTANT RATIFICATION DE L'ORDONNANCE N° 2020-386 DU 15 AVRIL 2020 PORTANT SUSPENSION DES PROCEDURES D'EXPULSION DES LOCATAIRES ET DE REVISION A LA HAUSSE DU LOYER DES BAUX D'HABITATION",
+        "type_texte": "loi",
+        "numero_texte": "2020-623",
+        "date_texte": "2020-08-14",
+        "domaine": "logement_baux_foncier",
+        "autorite": "Ministère de l'Urbanisme, du Logement et du Cadre de Vie",
+        "url_source": "https://construction.gouv.ci/uploads/publications/178542265442.pdf",
+        "sha256": "sha256:a0570c10bd5eaf073d79224616cd5e80cf0c6d4bcf14b3209a043b3d2d07d894",
+        "octets": 1096416,
+        "pages": 2,
+        "calque_texte": 0,
+        "note_qualite": "scan sans calque texte — OCR requis",
+        "methode_extraction": "AUCUNE",
+        "fichier_ocr": null,
+        "sha256_ocr": null,
+        "recoupe_avec": null,
+        "qualite_ocr": null,
+        "articles_indexes": 0,
+        "exploitable": false
+      },
+      {
+        "doc_id": "DOC-814370E4E6D2",
+        "titre": "LOI N° 2019-576 DU 26 JUIN 2019 INSTITUANT CODE DE LA CONSTRUCTION ET DE L'HABITAT",
+        "type_texte": "loi",
+        "numero_texte": "2019-576",
+        "date_texte": "2019-06-26",
+        "domaine": "logement_baux_foncier",
+        "autorite": "DGI — Direction Générale des Impôts (republication officielle)",
+        "url_source": "https://www.dgi.gouv.ci/assets/documents/transfert_propriete/lois_reglements/LOI%20N%C2%B0%202019-576%20DU%2026%20JUIN%202019%20INSTITUANT%20CODE%20DE%20LA%20CONSTRUCTION%20ET%20DE%20L%27HABITAT.pdf",
+        "sha256": "sha256:fd81f7c724c073cfe1cb1de4dfd708866348d4322cbdbc85bfe21917a1811884",
+        "octets": 1287528,
+        "pages": 117,
+        "calque_texte": 1,
+        "note_qualite": "texte natif exploitable",
+        "methode_extraction": "CALQUE_TEXTE",
+        "fichier_ocr": null,
+        "sha256_ocr": null,
+        "recoupe_avec": null,
+        "qualite_ocr": null,
+        "articles_indexes": 553,
+        "exploitable": true
+      },
+      {
+        "doc_id": "DOC-9B30C0B1263F",
+        "titre": "LOI N° 98-750 DU 23 DECEMBRE 1998 RELATIVE AU DOMAINE FONCIER RURAL (exemplaire numérisé SGG)",
+        "type_texte": "loi",
+        "numero_texte": "98-750",
+        "date_texte": "1998-12-23",
+        "domaine": "logement_baux_foncier",
+        "autorite": "Secrétariat Général du Gouvernement (photo_doc)",
+        "url_source": "https://www.sgg.gouv.ci/photo_doc/1339597849.pdf",
+        "sha256": "sha256:309fac2a8d7323e32f6e4131f653f425ac12e319677cd9fb1d8de4873617fe3f",
+        "octets": 1279713,
+        "pages": 13,
+        "calque_texte": 0,
+        "note_qualite": "texte OCR (non recoupé : qualité mesurée structurellement seulement)",
+        "methode_extraction": "OCR_VISION_AUTO",
+        "fichier_ocr": "/Users/mac/mon_recours_ci/KNOWLEDGE/CORPUS/LOGEMENT_BAUX_FONCIER/loi_98-750_domaine_foncier_rural_scan.ocr.txt",
+        "sha256_ocr": "sha256:ec326ab53a75e5f7e9fffd6e5d65235602f4dc45aa5292aca9b4ce9682159522",
+        "recoupe_avec": null,
+        "qualite_ocr": null,
+        "articles_indexes": 29,
+        "exploitable": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,597 @@
+{
+ "horodatage": "2026-10-17T02:23:13+00:00",
+ "domaines": [
+  {
+   "domaine": "logement_baux_foncier",
+   "code_domaine": "A",
+   "libelle": "Logement, baux et foncier",
+   "statut": "TERMINE_TECHNIQUEMENT",
+   "motif": "6 document(s), 1173 article(s), 2 reference(s) verifiee(s)",
+   "validation_juridique": "RECOMMANDEE",
+   "completude_juridique": "INCOMPLET",
+   "validation_humaine_obligatoire": false,
+   "perimetre": [
+    "bail d'habitation",
+    "bail professionnel et commercial",
+    "depot de garantie",
+    "avances sur loyers",
+    "revision et paiement des loyers",
+    "reparations",
+    "conge, resiliation et preavis",
+    "impayes et procedures d'expulsion",
+    "propriete immobiliere et titres fonciers",
+    "litiges vendeur/acquereur",
+    "conflits de limites et occupation de terrain",
+    "lotissement et amenagement",
+    "copropriete",
+    "domaine public",
+    "expropriation",
+    "foncier rural et coutumier"
+   ],
+   "lacunes": [
+    "loi n° 2025-221 (contentieux des baux, execution des expulsions) absente : aucun exemplaire *.gouv.ci — voir KNOWLEDGE/05_LACUNE_LOI_2025_221.md",
+    "textes d'application de la copropriete (decret 2013-225) non collectes",
+    "modificatifs du foncier rural (loi 2019-868, ordonnance 2025-85) non collectes"
+   ],
+   "sources_tentees": [
+    {
+     "source": "sgg.gouv.ci",
+     "resultat": "HTTP 200",
+     "usage": "portail ; Journal officiel derriere identifiant"
+    },
+    {
+     "source": "jorci.oneci.ci",
+     "resultat": "HTTP 503 (maintenance)",
+     "usage": "aucun Journal officiel consultable"
+    },
+    {
+     "source": "biblio.cndj.ci",
+     "resultat": "mur de connexion, acces payant",
+     "usage": "respecte, non contourne"
+    },
+    {
+     "source": "dgi.gouv.ci, construction.gouv.ci, sgg.gouv.ci/photo_doc",
+     "resultat": "PDF telecharges",
+     "usage": "textes effectivement collectes"
+    }
+   ],
+   "risque": "ELEVE — expulsion, perte du logement, delais de procedure",
+   "mesures": {
+    "code": "A",
+    "libelle": "Logement, baux et foncier",
+    "documents": 6,
+    "references": 5,
+    "references_verifiees": 2,
+    "articles": 1173,
+    "par_origine": {
+     "CALQUE_TEXTE": 855,
+     "OCR_AUTO": 318
+    },
+    "documents_illisibles": 3
+   }
+  },
+  {
+   "domaine": "travail",
+   "code_domaine": "C",
+   "libelle": "Travail, emploi et relations professionnelles",
+   "statut": "BLOQUE_SOURCE",
+   "motif": "aucun texte collecte : 2 source(s) identifiee(s), aucune exploitable",
+   "validation_juridique": "RECOMMANDEE",
+   "completude_juridique": "INCONNU",
+   "validation_humaine_obligatoire": false,
+   "perimetre": [
+    "contrat de travail",
+    "periode d'essai",
+    "salaire et retenues",
+    "heures supplementaires et conges",
+    "licenciement et demission",
+    "preavis et indemnites",
+    "harcelement et discrimination",
+    "accidents du travail",
+    "conflits employeur/salarie",
+    "stages et apprentissage",
+    "secteur prive / fonction publique / regimes speciaux"
+   ],
+   "lacunes": [
+    "Code du travail (loi n° 2015-532) : AUCUN exemplaire officiel libre localise",
+    "convention collective interprofessionnelle : non localisee",
+    "statut de la fonction publique : non localise (page ministerielle = HTML, pas de PDF de texte)"
+   ],
+   "sources_tentees": [
+    {
+     "source": "travail.gouv.ci",
+     "resultat": "injoignable (HTTP 000, DNS)",
+     "usage": "aucun texte collecte"
+    },
+    {
+     "source": "recherche web restreinte aux domaines officiels",
+     "resultat": "aucun exemplaire libre du Code du travail (loi 2015-532)",
+     "usage": "blocage constate, non contourne"
+    }
+   ],
+   "risque": "ELEVE — perte de revenus, licenciement",
+   "mesures": {
+    "code": "C",
+    "libelle": "Travail, emploi et relations professionnelles",
+    "documents": 0,
+    "references": 0,
+    "references_verifiees": 0,
+    "articles": 0,
+    "par_origine": {},
+    "documents_illisibles": 0
+   }
+  },
+  {
+   "domaine": "famille_mariage_filiation",
+   "code_domaine": "B",
+   "libelle": "Famille, couple et enfants",
+   "statut": "CORPUS_PARTIEL",
+   "motif": "15 document(s) collecte(s) mais aucun texte integral verifie",
+   "validation_juridique": "REQUISE",
+   "completude_juridique": "INCOMPLET",
+   "validation_humaine_obligatoire": true,
+   "perimetre": [
+    "mariage civil",
+    "droits et obligations des epoux",
+    "regimes matrimoniaux",
+    "separation et divorce",
+    "pension alimentaire",
+    "autorite parentale",
+    "garde et residence des enfants",
+    "filiation et reconnaissance",
+    "succession et heritage",
+    "donation et partage",
+    "violences familiales",
+    "protection de l'enfance",
+    "adoption"
+   ],
+   "lacunes": [
+    "loi n° 2019-570 (mariage) presente dans les recueils mais pas encore indexee comme texte autonome",
+    "divorce et regimes matrimoniaux : textes non encore identifies sur un domaine officiel",
+    "successions : aucun exemplaire officiel localise (loi 2019-573 non trouvee)",
+    "les deux RECUEILS sont conserves mais volontairement NON indexes : on ne peut pas rattacher une disposition d'un recueil a son texte d'origine avec certitude",
+    "5 des 11 scans ONT ETE REFUSES par l'OCR, et c'est ecrit sur chaque document : loi 2019-572 (minorite, 58% des articles 1..160), loi 2018-862 (etat civil, 49% des articles 1..113), loi 2015-539 (pupille de l'Etat, 50% des articles 1..54) — ces textes MODIFIENT le Code de la famille et renvoient a des articles d'autres textes : leur decoupage en articles n'est pas fiable. Convention de La Haye (adoption) et loi relative a l'adoption : aucun article n'atteint le seuil de similarite 0,80 face a l'autre copie officielle — divergence a trancher par un humain.",
+    "sur ces 5 textes, aucun article n'est citable : ni la loi sur la minorite, ni celle sur l'etat civil, ni le statut de pupille de l'Etat, ni les textes sur l'adoption. C'est une part importante du perimetre B qui reste hors de portee."
+   ],
+   "sources_tentees": [
+    {
+     "source": "famille.gouv.ci (publications)",
+     "resultat": "HTTP 200 — 15 textes juridiques telecharges",
+     "usage": "corpus effectivement collecte"
+    },
+    {
+     "source": "oneci.ci",
+     "resultat": "HTTP 200",
+     "usage": "texte de l'etat civil disponible"
+    },
+    {
+     "source": "mffe.ci (site famille)",
+     "resultat": "HTTP 200",
+     "usage": "meme texte de loi que famille.gouv.ci"
+    }
+   ],
+   "risque": "CRITIQUE quand des enfants ou des personnes vulnerables sont concernes",
+   "mesures": {
+    "code": "B",
+    "libelle": "Famille, couple et enfants",
+    "documents": 15,
+    "references": 13,
+    "references_verifiees": 0,
+    "articles": 191,
+    "par_origine": {
+     "OCR_AUTO": 169,
+     "CALQUE_TEXTE": 22
+    },
+    "documents_illisibles": 11
+   }
+  },
+  {
+   "domaine": "contrats_dettes_commerce",
+   "code_domaine": "D",
+   "libelle": "Entreprises, commerce et activites economiques",
+   "statut": "TERMINE_TECHNIQUEMENT",
+   "motif": "1 document(s), 228 article(s), 1 reference(s) verifiee(s)",
+   "validation_juridique": "RECOMMANDEE",
+   "completude_juridique": "INCOMPLET",
+   "validation_humaine_obligatoire": false,
+   "perimetre": [
+    "creation et fonctionnement d'entreprise",
+    "societes et entreprise individuelle",
+    "relations entre associes",
+    "contrats commerciaux",
+    "factures et impayes",
+    "recouvrement de creances",
+    "responsabilite contractuelle",
+    "rupture de contrat",
+    "difficultes d'entreprise",
+    "procedures collectives",
+    "droit OHADA et articulation avec le droit ivoirien"
+   ],
+   "lacunes": [
+    "SEUL l'acte uniforme sur les sûretés est présent. Manquent : AUSCGIE (sociétés commerciales et GIE), AUDCG (droit commercial général), AUPSRVE (recouvrement des créances), AUPC (procédures collectives)",
+    "le Journal officiel OHADA n° 22 publie plusieurs actes : les articles indexés doivent être rattachés à l'acte sur les sûretés, pas aux autres",
+    "aucun texte ivoirien sur l'entreprise individuelle, le registre du commerce ou les difficultés d'entreprise n'est collecté",
+    "la matière des sûretés touche aussi le cautionnement entre particuliers (domaine E) : le classement en droit des affaires est un choix documenté, pas une exclusion"
+   ],
+   "sources_tentees": [
+    {
+     "source": "ohada.org — Journal officiel OHADA n° 22 (15/02/2011)",
+     "resultat": "HTTP 200 — Acte uniforme portant organisation des sûretés, 131 911 caractères extraits, 228 articles indexés",
+     "usage": "corpus effectivement collecté et vérifié"
+    },
+    {
+     "source": "commerce.gouv.ci (publications)",
+     "resultat": "HTTP 200 — agenda des foires 2026 et rapport d'activités 2021 : aucun texte de loi",
+     "usage": "classés non juridiques, non indexés"
+    },
+    {
+     "source": "justice.gouv.ci, gouv.ci",
+     "resultat": "302 puis 403 sur les pages de publications",
+     "usage": "aucun texte collecté"
+    }
+   ],
+   "risque": "MOYEN",
+   "mesures": {
+    "code": "D",
+    "libelle": "Entreprises, commerce et activites economiques",
+    "documents": 1,
+    "references": 1,
+    "references_verifiees": 1,
+    "articles": 228,
+    "par_origine": {
+     "CALQUE_TEXTE": 228
+    },
+    "documents_illisibles": 0
+   }
+  },
+  {
+   "domaine": "penal_procedure_penale",
+   "code_domaine": "G",
+   "libelle": "Penal, plaintes et procedures judiciaires",
+   "statut": "BLOQUE_SOURCE",
+   "motif": "aucun texte collecte : 2 source(s) identifiee(s), aucune exploitable",
+   "validation_juridique": "REQUISE",
+   "completude_juridique": "INCONNU",
+   "validation_humaine_obligatoire": true,
+   "perimetre": [
+    "vol",
+    "escroquerie",
+    "abus de confiance",
+    "menaces",
+    "violences",
+    "diffamation",
+    "degradations",
+    "cyberinfractions",
+    "depot de plainte",
+    "convocation et audition",
+    "garde a vue",
+    "droits des victimes",
+    "presomption d'innocence",
+    "procedure et juridictions"
+   ],
+   "lacunes": [
+    "Code penal (loi n° 2019-574) : AUCUN exemplaire officiel",
+    "Code de procedure penale (loi n° 2018-975) : AUCUN exemplaire officiel",
+    "delais de prescription, de recours et d'appel : non documentes par un texte",
+    "DOMAINE A RISQUE ELEVE : ne jamais conclure sans avocat"
+   ],
+   "sources_tentees": [
+    {
+     "source": "justice.gouv.ci/publications",
+     "resultat": "HTTP 200 mais aucun lien de PDF de texte expose",
+     "usage": "aucun texte collecte"
+    },
+    {
+     "source": "recherche web (loi 2019-574 code penal ; loi 2018-975 procedure penale)",
+     "resultat": "exemplaires seulement sur des sites non officiels",
+     "usage": "blocage constate, non contourne"
+    }
+   ],
+   "risque": "CRITIQUE — liberte individuelle en jeu",
+   "mesures": {
+    "code": "G",
+    "libelle": "Penal, plaintes et procedures judiciaires",
+    "documents": 0,
+    "references": 0,
+    "references_verifiees": 0,
+    "articles": 0,
+    "par_origine": {},
+    "documents_illisibles": 0
+   }
+  },
+  {
+   "domaine": "consommation",
+   "code_domaine": "E",
+   "libelle": "Dettes, argent et consommation",
+   "statut": "BLOQUE_SOURCE",
+   "motif": "aucun texte collecte : 1 source(s) identifiee(s), aucune exploitable",
+   "validation_juridique": "RECOMMANDEE",
+   "completude_juridique": "INCONNU",
+   "validation_humaine_obligatoire": false,
+   "perimetre": [
+    "dettes entre particuliers",
+    "prets et reconnaissances de dette",
+    "creances impayees",
+    "litiges client/commercant",
+    "defaut de livraison",
+    "produits defectueux",
+    "pratiques commerciales contestees",
+    "remboursements",
+    "garanties et engagements"
+   ],
+   "lacunes": [
+    "loi n° 2016-412 (consommation) : aucun exemplaire officiel ivoirien libre",
+    "dettes civiles / commerciales / fiscales / sociales : distinction non encore adossee a des textes collectes"
+   ],
+   "sources_tentees": [
+    {
+     "source": "recherche web (loi 2016-412 relative a la consommation)",
+     "resultat": "exemplaires trouves uniquement sur des sites non officiels et des depots internationaux (FAO)",
+     "usage": "blocage constate : une source non officielle ne devient pas un texte verifie"
+    }
+   ],
+   "risque": "MOYEN",
+   "mesures": {
+    "code": "E",
+    "libelle": "Dettes, argent et consommation",
+    "documents": 0,
+    "references": 0,
+    "references_verifiees": 0,
+    "articles": 0,
+    "par_origine": {},
+    "documents_illisibles": 0
+   }
+  },
+  {
+   "domaine": "associations_organisations_religieuses",
+   "code_domaine": "H",
+   "libelle": "Religion, communautes et associations",
+   "statut": "BLOQUE_SOURCE",
+   "motif": "aucun texte collecte : 2 source(s) identifiee(s), aucune exploitable",
+   "validation_juridique": "RECOMMANDEE",
+   "completude_juridique": "INCONNU",
+   "validation_humaine_obligatoire": false,
+   "perimetre": [
+    "creation et fonctionnement d'association",
+    "gouvernance et responsabilite des dirigeants",
+    "conflits internes",
+    "biens et fonds associatifs",
+    "locaux et contrats",
+    "responsabilite civile",
+    "liberte de religion et ses limites",
+    "obligations de declaration"
+   ],
+   "lacunes": [
+    "loi n° 60-315 (associations) : aucun exemplaire officiel collecte",
+    "regime des organisations religieuses : non documente par un texte collecte"
+   ],
+   "sources_tentees": [
+    {
+     "source": "interieur.gouv.ci (publications)",
+     "resultat": "HTTP 200 — decrets de nomination et rapports statistiques, aucun texte sur les associations",
+     "usage": "aucun texte collecte"
+    },
+    {
+     "source": "recherche web (loi 60-315 relative aux associations)",
+     "resultat": "exemplaires seulement sur des sites non officiels",
+     "usage": "blocage constate, non contourne"
+    }
+   ],
+   "risque": "MOYEN — neutralite indispensable dans les conflits confessionnels",
+   "mesures": {
+    "code": "H",
+    "libelle": "Religion, communautes et associations",
+    "documents": 0,
+    "references": 0,
+    "references_verifiees": 0,
+    "articles": 0,
+    "par_origine": {},
+    "documents_illisibles": 0
+   }
+  },
+  {
+   "domaine": "donnees_personnelles_numerique",
+   "code_domaine": "I",
+   "libelle": "Numerique, internet et donnees personnelles",
+   "statut": "CORPUS_PARTIEL",
+   "motif": "3 document(s) collecte(s) mais aucun texte integral verifie",
+   "validation_juridique": "RECOMMANDEE",
+   "completude_juridique": "INCOMPLET",
+   "validation_humaine_obligatoire": false,
+   "perimetre": [
+    "escroqueries en ligne",
+    "usurpation d'identite",
+    "menaces numeriques",
+    "diffusion non autorisee de contenus",
+    "protection des donnees personnelles",
+    "comptes compromis",
+    "cyberharcelement",
+    "preuves numeriques"
+   ],
+   "lacunes": [
+    "les 3 lois proviennent d'OCR et ne sont RECOUPÉES AVEC AUCUNE autre copie officielle : leur fidélité n'est pas mesurable, seulement contrôlée structurellement. Statut `PARTIELLEMENT_VERIFIE`",
+    "aucun texte d'application (décrets, décisions de l'autorité de protection, règlements de l'ARTCI) n'est collecté : la loi seule ne dit pas comment elle est mise en œuvre",
+    "la loi 2013-451 (cybercriminalité) est un texte PÉNAL : elle engage la liberté des personnes et impose une orientation vers un avocat",
+    "cyberharcèlement, usurpation d'identité en ligne et diffusion non autorisée de contenus ne sont pas adossés à un article spécifique du corpus",
+    "preuves numériques : aucune règle de conservation ou d'identification n'est documentée par un texte collecté"
+   ],
+   "sources_tentees": [
+    {
+     "source": "autoritedeprotection.ci/lois/",
+     "resultat": "HTTP 200 — 3 PDF directs : lois 2013-450, 2013-451, 2013-546 (exemplaires du Journal officiel sécurisés en HTTP, pas en HTTPS)",
+     "usage": "corpus effectivement collecté, lu par OCR (179 articles)"
+    },
+    {
+     "source": "telecom.gouv.ci (publications)",
+     "resultat": "HTTP 200 — 2 PDF identiques, tous deux copies du MÊME Journal officiel que celui de l'autorité de protection des données",
+     "usage": "doublon écarté : le corpus ne référence qu'un exemplaire"
+    },
+    {
+     "source": "artci.ci",
+     "resultat": "HTTP 200",
+     "usage": "autorité de régulation identifiée, textes d'application à collecter"
+    }
+   ],
+   "risque": "MOYEN a ELEVE",
+   "mesures": {
+    "code": "I",
+    "libelle": "Numerique, internet et donnees personnelles",
+    "documents": 3,
+    "references": 3,
+    "references_verifiees": 0,
+    "articles": 179,
+    "par_origine": {
+     "OCR_AUTO": 179
+    },
+    "documents_illisibles": 3
+   }
+  },
+  {
+   "domaine": "administratif_voies_de_recours",
+   "code_domaine": "F",
+   "libelle": "Administration et documents officiels",
+   "statut": "BLOQUE_SOURCE",
+   "motif": "aucun texte collecte : 2 source(s) identifiee(s), aucune exploitable",
+   "validation_juridique": "REQUISE",
+   "completude_juridique": "INCONNU",
+   "validation_humaine_obligatoire": true,
+   "perimetre": [
+    "actes d'etat civil",
+    "erreurs sur les actes",
+    "documents d'identite",
+    "demandes et recours administratifs",
+    "refus ou silence d'une administration",
+    "autorisations et agrements",
+    "fiscalite declarative",
+    "recours gracieux / hierarchique / juridictionnel"
+   ],
+   "lacunes": [
+    "code des procedures administratives : non identifie",
+    "textes fiscaux : aucun exemplaire collecte (la DGI publie des loi_finances, non collectees)"
+   ],
+   "sources_tentees": [
+    {
+     "source": "onet.gouv.ci / interieur.gouv.ci (etat civil)",
+     "resultat": "rapports statistiques publies, aucun texte de loi expose",
+     "usage": "aucun texte collecte ; les textes d'etat civil viennent du domaine famille (loi 2018-862, 2018-863)"
+    },
+    {
+     "source": "fonctionpublique.gouv.ci",
+     "resultat": "HTTP 200, pages HTML",
+     "usage": "aucun PDF de texte expose dans le HTML servi"
+    }
+   ],
+   "risque": "MOYEN — delais de recours pouvant expirer",
+   "mesures": {
+    "code": "F",
+    "libelle": "Administration et documents officiels",
+    "documents": 0,
+    "references": 0,
+    "references_verifiees": 0,
+    "articles": 0,
+    "par_origine": {},
+    "documents_illisibles": 0
+   }
+  },
+  {
+   "domaine": "transport_responsabilite_civile",
+   "code_domaine": "J",
+   "libelle": "Transport, accidents et responsabilite civile",
+   "statut": "TERMINE_TECHNIQUEMENT",
+   "motif": "1 document(s), 6 article(s), 1 reference(s) verifiee(s)",
+   "validation_juridique": "REQUISE",
+   "completude_juridique": "INCOMPLET",
+   "validation_humaine_obligatoire": true,
+   "perimetre": [
+    "accidents de circulation",
+    "dommages materiels et corporels",
+    "responsabilite civile",
+    "assurance",
+    "litiges avec un transporteur",
+    "contrats de transport",
+    "indemnisation"
+   ],
+   "lacunes": [
+    "ATTENTION : le domaine n'a qu'UN texte, et il ne porte que sur l'usage du téléphone en conduisant. Il ne dit RIEN sur la responsabilité civile, l'indemnisation des dommages corporels, l'assurance ou les litiges avec un transporteur",
+    "code de la route : non collecté",
+    "régime des assurances (code CIMA) : non collecté",
+    "accidents de circulation : aucune règle de responsabilité adossée à un texte du corpus — le statut technique du domaine ne doit PAS se lire comme une couverture du transport",
+    "écart non tranché : le nom de fichier de la source annonce « décret n° 2013-791 du 20 novembre 2013 », le document porte « n° 2013-711 du 18 octobre 2013 ». C'est le document qui fait foi ; aucun autre exemplaire pour confirmer"
+   ],
+   "sources_tentees": [
+    {
+     "source": "sgg.gouv.ci/photo_doc/",
+     "resultat": "HTTP 200 — décret n° 2013-711 (téléphone au volant), 4 517 caractères extraits, 6 articles indexés",
+     "usage": "corpus effectivement collecté et vérifié"
+    },
+    {
+     "source": "transports.gouv.ci",
+     "resultat": "HTTP 200 — pages d'information sur la sécurité routière, aucun texte de loi exposé",
+     "usage": "aucun texte collecté"
+    }
+   ],
+   "risque": "ELEVE — prejudice corporel",
+   "mesures": {
+    "code": "J",
+    "libelle": "Transport, accidents et responsabilite civile",
+    "documents": 1,
+    "references": 1,
+    "references_verifiees": 1,
+    "articles": 6,
+    "par_origine": {
+     "CALQUE_TEXTE": 6
+    },
+    "documents_illisibles": 0
+   }
+  },
+  {
+   "domaine": "sante_droits_usagers",
+   "code_domaine": "K",
+   "libelle": "Sante et droits des usagers",
+   "statut": "BLOQUE_SOURCE",
+   "motif": "aucun texte collecte : 1 source(s) identifiee(s), aucune exploitable",
+   "validation_juridique": "REQUISE",
+   "completude_juridique": "INCONNU",
+   "validation_humaine_obligatoire": true,
+   "perimetre": [
+    "droits des patients",
+    "consentement et information",
+    "reclamations contre un etablissement",
+    "confidentialite des donnees de sante",
+    "responsabilite professionnelle",
+    "voies de recours"
+   ],
+   "lacunes": [
+    "aucun texte sur les droits des patients collecte",
+    "aucun texte sur la responsabilite medicale collecte",
+    "DOMAINE HORS PORTEE : ne jamais repondre a une question medicale"
+   ],
+   "sources_tentees": [
+    {
+     "source": "sante.gouv.ci (publications)",
+     "resultat": "HTTP 200 — 2 decrets d'organisation administrative, pas de texte sur les droits des patients",
+     "usage": "aucun texte utile collecte"
+    }
+   ],
+   "risque": "CRITIQUE — urgence vitale possible",
+   "mesures": {
+    "code": "K",
+    "libelle": "Sante et droits des usagers",
+    "documents": 0,
+    "references": 0,
+    "references_verifiees": 0,
+    "articles": 0,
+    "par_origine": {},
+    "documents_illisibles": 0
+   }
+  }
+ ],
+ "total_documents": 26,
+ "total_articles": 1777,
+ "articles_par_origine": {
+  "CALQUE_TEXTE": 1111,
+  "OCR_AUTO": 666
+ },
+ "methode_de_comptage": "documents = lignes de la table documents pour le domaine ; articles = lignes de articles_corpus rattachees a ces documents (comptees une par une, pas estimees) ; references = lignes de references_juridiques pour le domaine.",
+ "avertissement": "La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHNIQUEMENT reste juridiquement incomplet."
+}

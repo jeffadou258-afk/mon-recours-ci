@@ -1,0 +1,901 @@
+
+--- PAGE 1 ---
+450 E.C.
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+12 août 2013
+PARTIE NON OFFICIELLE
+données relatives au trafic, toutes données ayant trait à une
+communication passant par un système d'information, produites
+Avis et annonces.
+468
+par ce dernier en tant qu'élément de la chaîne de communication,
+indiquant l'origine, la destination, l'itinéraire, l'heure, la date, la
+taille et la durée de la communication ou le type de service sous-
+PARTIE OFFICIELLE
+données sensibles, toutes données à caractère personnel rela-
+ACTES PRESIDENTIELS
+tives aux opinions ou activités religieuse, philosophique, poli-
+tique, syndicale, à la vie sexuelle ou raciale, à la santé, aux
+PRESIDENCE DE LA REPUBLIQUE
+mesures d'ordre social, aux poursuites, aux sanctions pénales ou
+administratives;
+infrastructures critiques, les installations physiques et des tech-
+LOI n° 2013-451 du 19 juin 2013 relative à la lutte contre
+nologies de l'information, les réseaux, les services et les actifs
+la cybercriminalité.
+qui, en cas d'arrêt ou de destruction, peuvent avoir de graves
+incidences sur la santé, la sécurité ou le bien-être économique
+CHAPITRE 1 : Définitions
+et social des citoyens ou encore le fonctionnement continu des
+L'ASSEMBLEE NATIONALE a adopté,
+services de l'Etat ;
+LE PRESIDENT DE LA REPUBLIQUE promulgue la loi dont la teneur suit :
+mineur, toute personne âgée de moins de dix-huit ans, confor-
+mément au Code pénal;
+Article premier. — Les définitions des instruments juridiques
+de la CEDEAO, de l'Union africaine ou de l'Union Internationale
+pays tiers, tout Etat non membre de la CEDEAO;
+des Télécommunications prévalent pour les termes non définis
+personne concernée, toute personne physique qui fait l'objet
+par la présente loi.
+d'un traitement de données à caractère personnel ;
+Au sens de la présente loi, on entend par :
+pornographie infantile, toute donnée quelle qu'en soit la nature
+ou la forme représentant de manière visuelle un enfant de moins
+cybercriminalité, l'ensemble des infractions pénales qui se
+de dix-huit ans se livrant à un agissement sexuellement explicite
+commettent au moyen ou sur un réseau de télécommunication ou
+ou des images représentant un enfant de moins de quinze ans se
+un système d'information ;
+livrant à un comportement sexuellement explicite;
+atteinte à la dignité humaine, toute atteinte, hors les cas
+racisme et xénophobie en matière des TIC, tout écrit, toute
+d'attentat à la vie, d'atteinte à l'intégrité ou à la liberté, qui a pour
+image ou toute autre représentation d'idées ou de théories qui
+effet essentiel de traiter la personne comme une chose, comme
+préconise ou encourage la haine, la discrimination ou la violence
+un animal ou comme un être auquel serait dénié tout droit ;
+contre une personne ou un groupe de personnes, en raison de la
+race, de la couleur, de l'ascendance ou de l'origine nationale ou
+communication électronique, toute émission, transmission ou
+ethnique ou de la religion, dans la mesure où cette dernière sert
+réception de signes, de signaux, d'écrits, d'images, de sons ou de
+de prétexte à l'un ou à l'autre de ces éléments ou qui incite à de
+vidéos par voie électromagnétique, optique ou par tout autre
+tels actes;
+moyen,
+SMS, le sigle anglo-saxon signifiant « short message service »
+données à caractère personnel, toute information de quelque
+(en français: service de message court) ;
+nature qu'elle soit et indépendamment de son support, y compris
+surveillance, toute activité faisant appel à des moyens tech-
+le son et l'image relative à une personne physique identifiée.ou
+niques ou électroniques en vue de détecter, d'observer, de copier
+identifiable directement ou indirectement, par référence à un
+ou d'enregistrer les mouvements, images, paroles, écrits, ou l'état
+numéro d'identification ou à un ou plusieurs éléments spéci-
+d'un objet ou d'une personne fixe ou mobile ;
+fiques, propres à son identité physique, physiologique, génétique,
+système d'information ou système informatique : tout dispositif
+psychique, culturelle, sociale ou économique ;
+isolé ou non, tout ensemble de dispositifs interconnectés assurant
+données informatiques ou données, toute représentation de
+en tout ou partie, un traitement automatisé de données en exécu-
+faits, d'informations ou de concepts sous une forme qui se prête
+tion d'un programme.
+à un traitement informatique, y compris un programme de nature
+CHAPITRE 2
+à faire exécuter une fonction par un système d'information ;
+Objet et champ d'application
+données relatives aux abonnés, toute information, sous forme
+Art. 2. — La présente loi a pour objet de lutter contre la
+de données informatiques ou sous toute autre forme, détenue par
+cybercriminalité.
+un fournisseur de services et se rapportant aux abonnés de ses
+Art. 3. — Sont soumis aux dispositions de la présente loi.
+services, autres que des données relatives au trafic ou au contenu,
+les infractions relatives à la cybercriminalité, ainsi que les
+et permettant d'établir sur la base d'un contrat ou d'un arrange-
+infractions pénales dont la constatation requiert la collecte d'une
+ment de services :
+preuve électronique.
+— le type de service de communication, les dispositions tech-
+CHAPITRE 3
+niques prises à cet égard et la période de service ;
+Infractions spécifiques aux technologies
+de l'information et de la communication
+— l'identité, l'adresse postale ou géographique, le numéro de
+téléphone et tout autre numéro d'accès, les informations
+Art. 4. - Est puni de un à deux ans d'emprisonnement et de
+relatives à la localisation, la facturation et à l'endroit où se
+5.000.000 à 10.000.000 de francs CFA d'amende, quiconque
+trouvent les équipements de communication ;
+accède ou tente d'accéder frauduleusement à tout ou partie d'un
+système d'information.
+
+--- PAGE 2 ---
+12 août 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+451 E.C
+Art. 5. - Est puni de un à deux ans d'emprisonnement et de
+Art. 14. — Est puni de dix à vingt ans d'emprisonnement et de
+5.000.000 à 10.000.000 de francs CFA d'amende, quiconque.
+75.000.000 à 100.000.000 de francs CFA d'amende, quiconque
+se maintient ou tente de se maintenir frauduleusement dans tout
+participe à une association formée ou à une entente établie en vue
+ou partie d'un système d'information.
+de préparer ou de commettre une ou plusieurs des infractions
+prévues dans la présente loi. L'infraction ci-dessus définie est un
+Art. 6. - Est puni de un à cinq ans d'emprisonnement et de
+délit.
+10.000.000 à 40.000.000 de francs CFA d'amende, quiconque
+Art. 15. — Est puni de deux à cinq ans d'emprisonnement et
+entrave, fausse ou tente d'entraver ou de fausser frauduleusement
+de 75.000.000 à 100.000.000 de francs CFA d'amende, quiconque
+le fonctionnement d'un système d'information.
+produit, enregistre, offre, met à disposition, diffuse, transmet une
+Art. 7. - Est puni de un à cinq ans d'emprisonnement et de
+image ou une représentation présentant un caractère de porno-
+10.000.000 à 40.000.000 de francs CFA d'amende, quiconque
+graphie infantile par le biais d'un système d'information ou d'un
+introduit ou tente d'introduire frauduleusement des données dans
+moyen de stockage de données informatiques.
+un système d'information.
+Art. 16. — Est puni de deux à cinq ans d'emprisonnement et de
+Art. 8. - Est puni de cinq à dix ans d'emprisonnement et de
+75:000.000 à 100.000.000 de francs CFA d'amende, quiconque
+40.000.000 à 60.000.000 de francs CFA d'amende, quiconque
+se procure ou procure à autrui, importe ou fait importer, exporte
+intercepte ou tente d'intercepter frauduleusement par des moyens
+ou fait exporter une image ou une représentation présentant un
+caractère de pornographie infantile par le biais d'un système
+techniques des données informatiques lors de leur transmission
+d'information ou d'un moyen de stockage de données informa-
+non publique à destination, en provenance ou à l'intérieur d'un
+tiques.
+système d'information.
+Art. 17. — Est puni de un à trois ans d'emprisonnement et de
+Art. 9. — Est puni de cinq à dix ans d'emprisonnement et de
+20.000.000 à 40.000.000 de francs CFA d'amende, quiconque
+40.000.000 à 60.000.000 de francs CFA d'amende, quiconque
+possède intentionnellement une image ou une représentation
+altère ou tente d'altérer, modifie ou tente de modifier, supprime
+présentant un caractère de pornographie infantile dans un
+ou tente de supprimer frauduleusement des données informa-
+système d'information ou dans un moyen de stockage de données
+tiques.
+informatiques.
+Art. 10. - Est puni de cinq à dix ans d'emprisonnement et de
+Art. 18. — Est puni de un à cinq ans d'emprisonnement et de
+40.000.000 à 60.000.000 de francs CFA d'amende, quiconque
+20.000.000 à 40.000.000 de francs CFA d'amende, quiconque
+facilite l'accès à des images, des documents, du son ou une
+produit ou fabrique un ensemble de données par l'introduction,
+représentation présentant un caractère de pornographie à un
+la modification, l'altération ou la suppression frauduleuse de
+mineur.
+données informatiques, engendrant des données contrefaites,
+Art. 19. — Est puni de deux à cinq ans d'emprisonnement et
+dans l'intention qu'elles soient prises en compte ou utilisées
+de 5.000.000 à 10.000.000 de francs CFA d'amende, quiconque
+à des fins légales comme si elles étaient originales.
+utilise frauduleusement un ou des éléments d'identification d'une
+personne physique ou morale par le biais d'un système d'infor-
+Art. 11. - Est puni de un à cinq ans d'emprisonnement et de
+mation.
+20.000.000 à 40.000.000 de francs CFA d'amende, quiconque fait
+Quiconque utilise, possède, offre, vend, met à disposition,
+usage, en connaissance de cause, de données informatiques
+transmet en toute connaissance de cause de fausses données
+frauduleusement obtenues.
+d'identification est puni de deux ans à cinq ans d'emprisonnement
+et de 5.000.000 à 10.000.000 de francs CFA d'amende.
+Art. 12. - Est puni de un à cinq ans d'emprisonnement et de
+Quiconque réalise ou tente de réaliser de fausses données
+30.000.000 à 50.000.000 de francs CFA d'amende, quiconque
+d'identification est puni de deux à cinq ans d'emprisonnement
+obtient frauduleusement, pour soi-même ou pour autrui, un avan-
+et de 5.000.000 à 10.000.000 de francs CFA d'amende.
+tage quelconque, par l'introduction, l'utilisation, la modification,
+Art. 20. — Est puni d'une peine d'emprisonnement de un
+l'altération ou la suppression de données informatiques ou par
+à cinq ans et d'une amende de 10.000.000 à 100.000.000 de
+toute forme d'atteinte au système d'information.
+francs CFA, quiconque ne respecte pas l'interdiction d'exercer
+Art. 13. — Est puni de un an à deux ans d'emprisonnement
+la profession de prestataire de cryptologie ou l'obligation de
+et de 10.000.000 à 50.000.000 de francs CFA d'amende, quiconque,
+retrait des moyens de cryptologie.
+dans l'intention de commettre l'une des infractions prévues par
+Art. 21. - Est puni d'une peine d'emprisonnement de un
+la présente loi produit, vend, importe, détient, diffuse, offre, cède
+à cinq ans et d'une amende de 1.000.000 à 10.000.000 de francs
+ou met à disposition, en connaissance de cause :
+CFA, quiconque procède à la prospection directe à l'aide de tout
+moyen de communication utilisant, sous quelque forme que ce
+— un équipement, un dispositif ou un programme informatique;
+soit, les données à caractère personnel d'une personne physique
+— un mot de passe, un code d'accès ou des données informa-
+qui n'a pas exprimé son consentement préalable par écrit à rece-
+tiques similaires.
+voir de telles prospections.
+
+--- PAGE 3 ---
+452 E.C.
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+12 août 2013
+Art. 22. — Est puni d'une peine d'emprisonnement de un à cinq
+- dans une maison habitée ou servant d'habitation ou dans
+ans et d'une amende de 1.000.000 à 10.000.000 de francs CFA,
+les locaux professionnels ;
+quiconque utilise des procédés illicites d'envoi de messages
+— avec l'usage d'un masque ;
+électroniques non sollicités sur la base de la collecte de données
+à caractère personnel.
+— avec l'usage d'un véhicule pour faciliter son entreprise
+Art. 23. — Est puni d'une peine d'emprisonnement de un mois
+ou sa fuite ;
+à un an et d'une amende de 500.000 à 1.000.000 de francs, qui-
+- la nuit.
+conque dissimule l'identité de la personne pour le compte de
+Art. 28. — Le vol d'information ou la tentative de vol d'infor-
+laquelle une offre commerciale est émise ou mentionne une offre
+mation est puni de vingt ans d'emprisonnement et de 10.000.000
+sans rapport avec la prestation ou le service proposé.
+de francs CFA d'amende, s'il est accompagné de l'une des
+Art. 24. — Est puni d'une peine d'emprisonnement de un à cinq
+ans et de 5.000.000 à 100.000.000 de francs CFA d'amende,
+circonstances ci-après :
+quiconque procède au traitement de données à caractère person-
+— lorsque l'auteur ou le complice est porteur d'une arme
+nel par un moyen frauduleux, déloyal ou illicite.
+apparente ou cachée ;
+La peine d'amende ne peut être inférieure à 10.000.000 de
+— lorsque l'auteur ou le complice a fait usage d'une arme
+francs CFA lorsque le traitement frauduleux, déloyal ou illicite a
+ayant entraîné des blessures ou la mort de la victime.
+été faite en vue de l'envoi de messages électroniques non sollici-
+Art. 29. — Lorsqu'elle est faite intentionnellement et sans droit,
+tés par une personne morale, autre que l'Etat.
+la production, la vente, l'obtention pour utilisation, l'importation,
+Art. 25. — Est puni d'une peine d'emprisonnement d'un an
+la diffusion ou d'autres formes de mise à disposition d'un dispo-
+à cinq ans et d'une amende de 5.000.000 à 100.000.000 de
+sitif, y compris un programme informatique, principalement
+francs CFA, quiconque utilise les éléments d'identification d'une
+conçu ou adapté pour permettre la commission d'un vol d'infor-
+personne physique ou morale dans le but de tromper les destina-
+mation, ou l'usage d'un mot de passe, d'un code d'accès ou de
+taires d'un message électronique ou les usagers d'un site Internet
+données informatiques similaires permettant d'accéder à tout ou
+en vue de les amener à communiquer des données à caractère
+partie d'un système d'information, dans l'intention qu'ils soient
+personnel ou des informations confidentielles.
+utilisés afin de commettre l'une ou l'autre des infractions prévues
+La peine d'emprisonnement ne peut être inférieure à cinq ans
+par la présente loi, est punie des peines prévues pour l'infraction
+et la peine d'amende ne peut être inférieure à 20.000.000
+elle-même ou pour l'infraction la plus sévèrement réprimée
+de francs CFA, lorsque les données à caractère personnel ou les
+informations confidentielles communiquées ont servi au détour-
+d'entre elles.
+nement de fonds publics ou privés.
+Art. 30. — Lorsque les faits punis par la présente loi portent
+sur un système d'information ou un programme de traitement
+Art. 26. - Quiconque prend frauduleusement connaissance
+d'une information à l'intérieur d'un système d'information élec-
+de données protégé par un code d'accès secret, la peine encourue
+tronique, ou copie frauduleusement une information à partir d'un
+ne peut être inférieure à dix ans d'emprisonnement.
+tel système, ou encore soustrait frauduleusement le support
+Art. 31. - Est puni d'un emprisonnement de un à cinq ans et
+physique sur lequel se trouve une information, est coupable de
+de 1.000.000 de francs CFA d'amende, quiconque de mauvaise
+vol d'information.
+foi, ouvre, supprime, retarde ou détourne des correspondances
+Quiconque commet un vol d'information est puni d'un empri-
+électroniques arrivées ou non à destination et adressées à un tiers,
+sonnement de cinq à dix ans et de 3.000.000 à 5.000.000 de
+ou en prend frauduleusement connaissance.
+francs d'amende.
+Est puni des mêmes peines, quiconque de mauvaise foi,
+La tentative est punissable.
+intercepte, détourne, utilise ou divulgue des correspondances
+L'infraction ci-dessus définie est un délit.
+électroniques émises, transmises ou reçues par la voie des télécom-
+Art. 27. — La peine est d'un emprisonnement de dix à vingt
+munications ou procède à l'installation d'appareils conçus pour
+ans et d'une amende de 5.000.000 à 10.000.000 de francs CFA
+réaliser de telles interceptions.
+si le vol d'information ou la tentative de vol d'information a été
+Art. 32. — Les personnes condamnées pour les délits prévus
+commis accompagné d'une au moins des circonstances ci-après :
+au présent chapitre encourent également les peines complémen-
+- avec des violences ayant entraîné des blessures ;
+taires suivantes :
+— avec effraction, escalade ou usage de fausse clé ;
+— l'interdiction, pour une durée de cinq ans, d'exercer une
+fonction publique ou d'exercer l'activité professionnelle ou
+— en réunion par au moins deux personnes ;
+sociale dans l'exercice de laquelle ou à l'occasion de laquelle
+— avec usage frauduleux, soit d'un uniforme ou d'un costume
+l'infraction a été commise ;
+d'un fonctionnaire public, civil ou militaire, soit d'un titre
+— la confiscation du moyen qui a servi à commettre l'infrac-
+d'un fonctionnaire, soit d'un faux ordre d'une autorité civile
+tion ou qui était destiné à la commission de l'infraction ou
+ou militaire ;
+du bien qui en est le produit ;
+
+--- PAGE 4 ---
+12 août 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+453 E.C.
+— la fermeture, pour une durée de cinq ans s'il y a lieu, des
+— la parodie et la caricature de l'œuvre originale réalisée sans
+établissements ou de l'un ou de plusieurs des établissements
+intention de nuire à l'image et à l'honorabilité de l'auteur de
+de l'entreprise ayant servi à commettre les faits incriminés ;
+ladite œuvre ;
+— l'exclusion, pour une durée de cinq ans, des marchés
+— les copies ou reproductions provisoires présentant un carac-
+publics;
+tère transitoire et accessoire lorsqu'elles sont une partie
+- l'interdiction, pour une durée de cinq ans, d'émettre des
+intégrante et essentielle d'un procédé technique et qu'elles
+ont pour objet de permettre la transmission ou l'utilisation
+chèques autres que ceux qui permettent le retrait de fonds
+par le tireur auprès du tiré ou ceux qui sont certifiés ;
+licite de l'œuvre sur un système d'information ou électro-
+nique ;
+- l'affichage ou la diffusion de la décision prononcée, aux
+— la reproduction et la représentation réalisée à des fins non
+frais du condamné.
+lucratives par des personnes morales de droit public et par
+CHAPITRE 4
+des établissements ouverts au public, tels que les biblio-
+Atteintes à la propriété intellectuelle
+thèques, les services d'archives, les musées, les centres de
+documentation et les espaces culturels multimédias, en vue
+Art. 33. — Sont punies d'une peine d'emprisonnement de un
+d'une consultation strictement personnelle de l'œuvre
+à dix ans et d'une amende de 500.000 à 100.000.000 de francs
+par des personnes atteintes d'une ou de plusieurs déficiences
+CFA, les atteintes à la propriété intellectuelle commises au
+des fonctions motrices, physiques, sensorielles, mentales,
+moyen d'un système d'information.
+cognitives ou psychiques dont le niveau d'incapacité est
+reconnu dans un certificat médical dûment établi ;
+Constitue une atteinte à la propriété intellectuelle :
+— le fait, sans autorisation de l'auteur ou de ses ayants droit,
+— la reproduction d'une œuvre, effectuée à des fins de conser-
+de reproduire, de représenter ou de mettre à la disposition du
+vation ou destinée à préserver les conditions de sa consul-
+public sur un système d'information ou un support numérique ou
+tation sur place par des bibliothèques accessibles au public,
+analogique, intégralement ou partiellement une œuvre de l'esprit
+par des musées ou par des services d'archives, sous réserve
+protégée par le droit d'auteur ou un droit voisin ;
+que ceux-ci ne recherchent aucun avantage économique ou
+— le fait, sans autorisation de l'auteur ou de ses ayants droit,
+commercial;
+de traduire ou d'adapter une œuvre de l'esprit par le biais
+- la reproduction et la représentation d'œuvre de l'esprit
+d'un programme informatique ou de mettre cette traduction
+réalisée à des fins exclusivement pédagogiques par les
+ou adaptation sur un système d'information ou un support
+enseignants et les chercheurs dans le cadre strict de leurs
+numérique ou analogique à la disposition du public ;
+enseignements ou de leurs recherches pour leurs élèves
+— le fait, sans autorisation de l'auteur ou de ses ayants droit,
+et étudiants ou pour d'autres enseignants et chercheurs
+de reproduire, d'utiliser, de vendre, de dénaturer, de dénigrer
+directement concernés, sous réserve que cette reproduction
+une marque, une raison sociale, un nom commercial, un
+ou représentation ne donne lieu à aucune exploitation com-
+nom de domaine Internet ou tout autre signe distinctif
+merciale ou lucrative.
+appartenant à un tiers par le biais d'un système d'informa-
+tion ouvert au public ou par le biais d'un programme infor-
+Art. 35. — L'auteur d'une œuvre de l'esprit ou Ses ayants droit
+matique ou sur un support numérique ou analogique ;
+peuvent faire obstacle à la copie de l'œuvre en limitant le droit
+- le fait, en toute connaissance de cause, d'exploiter par
+de copie reconnue par la présente loi, notamment, par la mise
+reproduction ou par représentation une œuvre de l'esprit mise
+en œuvre de mesures techniques de protection lorsque la mise
+de façon illicite à disposition du public sur un réseau de
+en œuvre du droit de copie porte atteinte à l'exploitation normale
+communication électronique ;
+de l'œuvre ou cause un préjudice injustifié aux intérêts de
+— le fait, en toute connaissance de cause, sans droit, de vendre
+l'auteur.
+ou de mettre à disposition du public par reproduction ou par
+On entend par mesure technique de protection, toute techno-
+représentation un bien ou un produit protégé par un brevet
+logie, dispositif, composant qui, dans le cadre normal de son
+d'invention.
+fonctionnement, accomplit la fonction de contrôle des utilisations
+Art. 34. — Ne constituent pas une atteinte à la propriété intel-
+de l'œuvre ou de limitation des copies de l'œuvre considérée.
+lectuelle lorsqu'elles sont réalisées par le biais d'un système ou
+L'usager doit être clairement informé de l'existence des mesures
+un programme informatique ou électronique :
+techniques de protection sur l'œuvre qu'il acquiert ou utilise et
+—les copies ou reproductions d'œuvres de l'esprit strictement
+sur les fonctions de ces mesures techniques, notamment si elles
+réservées à l'usage privé du copiste et non destinées à une
+interdisent ou non l'usage de l'œuvre sur d'autres systèmes d'in-
+utilisation collective, à l'exclusion des copies des œuvres
+d'art destinées à être utilisées pour des fins identiques ou
+formation ou d'exploitation.
+similaires à celles pour lesquelles l'œuvre originale a été
+Art. 36. — Le titulaire d'un service d'accès à internet ou à tout
+réseau de communication électronique est tenu de veiller à ce que
+— les analyses et courses citations, sous réserve que soient
+cet accès ne soit pas utilisé à des fins manifestement illicites,
+clairement indiqués le nom de l'auteur de l'œuvre et de la
+notamment de reproduction ou de représentation d'œuvres de
+source, justifiées par le caractère critique, polémique, péda-
+l'esprit sans l'autorisation de leurs auteurs ou leurs ayants droit.
+gogique, scientifique ou d'information de l'œuvre à laquelle
+En cas de non-respect de cette obligation, il peut être poursuivi
+elles sont incorporées ;
+pour complicité par fourniture de moyen.
+
+--- PAGE 5 ---
+454 E.C.
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+12 août 2013
+CHAPITRE 5
+Art. 44. — Les personnes dont l'activité est d'offrir un accès
+Agissements illicites sur les réseaux
+à des services de communication en ligne informent leurs abon-
+de communication électronique
+nés de l'existence de moyens techniques permettant de restreindre
+Art. 37. — L'organisation des jeux d'argent sur les réseaux de
+l'accès à certains services ou de les sélectionner et leur proposent
+communication électronique est placée sous un régime de droits
+au moins un de ces moyens.
+exclusifs de l'Etat concédés à un nombre restreint d'opérateurs.
+Art. 45. — Est puni d'une peine d'amende de 1.000.000
+Art. 38. — Est puni d'une peine d'emprisonnement de un à cinq
+à 10.000.000 de francs CFA, quiconque ne respecte pas l'obliga-
+ans et d'une amende de 5.000.000 à 100.000.000 de francs CFA,
+tion d'information et de mise à disposition de moyens techniques
+quiconque sans autorisation, organise des jeux d'argent illicites
+de filtrage.
+en ligne caractérisés par la tenue de jeux de hasard, de loterie
+Le fournisseur de services offrant un accès à des services de
+illicite, de publicité de loterie prohibée, de prise de paris illicite
+communication ou assurant à titre gratuit ou onéreux le stockage
+sur les réseaux de communication électronique.
+direct et permanent pour mise à disposition de contenus, est tenu,
+Art. 39. — Sont interdits les transferts d'argent par cartes de
+sur décision du juge compétent, de suspendre immédiatement
+paiement ou par virement ou par tout autre moyen de paiement
+effectués par des personnes physiques ou morales dans le cadre
+l'accès auxdits services ou contenus.
+de jeux d'argent illicites sur les réseaux de communication
+Art. 46. — Les personnes physiques ou morales qui offrent un
+électronique.
+accès à des services de communication en ligne ou qui assurent,
+Les établissements bancaires ou financiers exerçant sur le
+même à titre gratuit, pour mise à disposition du public par des
+territoire national veillent au respect de cette interdiction. Ces
+services de communication en ligne, le stockage de signaux,
+établissements notifient aux autorités compétentes toute violation
+d'écrits, d'images, de sons ou de messages de toute nature fournis
+constatée ou tentative de violation de cette interdiction.
+par des destinataires de ces services ne peuvent voir leur respon-
+Art. 40. — Est puni d'une peine d'emprisonnement de cinq ans
+sabilité civile ou pénale engagée du fait des activités ou des
+et d'amende de 5.000.000 à 10.000.000 de francs CFA, quiconque
+informations stockées à la demande d'un destinataire de ces
+ne respecte pas l'interdiction de transfert d'argent.
+services :
+La peine encourue par la personne morale responsable est le
+double de l'amende prévue pour la personne physique ayant
+— si elles n'avaient effectivement connaissance de leur carac-
+commis l'infraction.
+tère illicite ou de faits et circonstances faisant apparaître
+Si le transfert est effectué à destination de l'étranger, l'infraction
+ce caractère ;
+commise constitue également une infraction à la réglementation
+— si, dès le moment où elles en ont eu cette connaissance, elles
+régissant les relations financières extérieures et elle est punie sans
+ont agi promptement pour retirer ces données ou en rendre l'accès
+préjudice des dispositions de la loi relative au contentieux des
+impossible;
+infractions au contrôle des changes.
+— si le retrait de ces données n'a pas été ordonné par un tribunal.
+Art. 41. - Les juridictions nationales sont compétentes pour
+constater ou punir les infractions lorsque les activités de jeux
+Art. 47. — La connaissance des faits litigieux est présumée
+d'argent illicites sont offertes à partir du territoire national ou sont
+acquise par les personnes mentionnées à l'article précédent,
+accessibles aux utilisateurs des réseaux de communication
+lorsqu'il leur est notifié par la victime ou par une personne
+électronique à partir du territoire national et qu'il existe un lien
+intéressée, les activités illicites ou les faits et circonstances faisant
+suffisant, substantiel ou significatif entre la prestation illicite
+apparaître ce caractère. Pour être prise en compte la notification
+offerte aux utilisateurs des réseaux de communication en ligne
+doit comporter les éléments suivants :
+et le territoire national, notamment, par la langue utilisée, la
+monnaie employée, les produits proposés, le nom de domaine
+— si l'auteur de la notification est une personne physique :
+utilisé par le site proposant ladite prestation.
+ses nom, prénoms, profession, domicile, nationalité, date
+et lieu de naissance.
+CHAPITRE 6
+Responsabilité des prestataires techniques
+— si l'auteur de la notification est une personne morale :
+sa dénomination et son siège social ;
+de service en ligne
+Art. 42.— L'accès au service internet à partir d'un cybercafé
+— les nom, prénoms et domicile du destinataire du service
+situé sur le territoire national est soumis à l'identification
+en cause ou s'il s'agit d'une personne morale, sa dénomina-
+préalable des usagers.
+tion et son siège social ;
+Les exploitants de cybercafé sont tenus de procéder à cette
+— la description des faits litigieux et leur localisation précise
+identification suivant les modalités fixées par décret.
+sur le réseau ;
+Art. 43. — Le mineur de moins de dix ans ne peut accéder
+— les droits et les motifs pour lesquels le retrait du contenu
+à un cybercafé qu'accompagné d'un adulte.
+litigieux est demandé ;
+L'accès à internet dans un cybercafé pour un mineur de moins
+— la copie de la correspondance adressée à l'auteur ou à défaut
+de dix-huit ans est un accès limité, qui exclut les sites web
+à l'éditeur des informations ou activités litigieuses deman-
+à caractère pornographique, violent, raciste ou dégradant et de
+dant leur interruption, leur retrait ou leur modification, ou
+manière générale tous les sites web portant atteinte à la dignité
+la justification de ce que l'auteur ou l'éditeur n'a pu être
+humaine ou incitant à l'incivisme.
+contacté.
+
+--- PAGE 6 ---
+12 août 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+455 E.C.
+Art. 48. — La procédure de notification des faits ou d'activités
+Ces données d'identification doivent comporter les éléments
+illicites prévue à l'article précèdent n'a pas pour effet d'engager
+suivants :
+la responsabilité d'une des personnes concernées par les excep-
+s'il s'agit de personnes physiques: leurs nom, prénoms, domi-
+tions prévues à l'article 47 de la présente loi.
+cile, date et lieu de naissance, numéro de téléphone, adresse
+Art. 49. — Est puni d'une peine d'emprisonnement de un à cinq
+postale, adresse électronique et, si elles sont assujetties aux
+ans et d'une amende de 1.000.000 à 5.000.000 de francs CFA,
+formalités d'inscription au registre de commerce et du crédit
+le fait, pour toute personne de présenter de mauvaise foi aux
+mobilier ou au répertoire des métiers, le numéro de leur inscrip-
+personnes mentionnées à l'article 47 de la présente loi, un contenu
+tion.
+ou une activité comme étant illicite dans le but d'en obtenir le
+s'il s'agit de personnes morales, leur dénomination sociale et
+retrait ou d'en faire cesser la diffusion.
+l'adresse de leur siège social, leur numéro de téléphone et, si elles
+Art. 50. — Les personnes mentionnées à l'article 47 de la
+sont assujetties aux formalités d'inscription au registre de com-
+présente loi ne sont pas soumises à une obligation de surveillance
+merce et du crédit mobilier ou au répertoire des métiers,
+des informations qu'elles transmettent ou stockent, ni à une obli-
+le numéro de leur inscription, leur capital social et leur adresse
+gation de recherche des faits ou des circonstances révélant des
+électronique.
+activités illicites.
+Toutefois, les personnes éditant à titre non professionnel
+Toutefois, l'autorité judiciaire peut requérir de ces personnes
+un service de communication électronique peuvent ne tenir à la
+une surveillance ciblée et temporaire des activités exercées par
+disposition du public, pour préserver leur anonymat, que le nom,
+le biais de leurs services.
+la dénomination sociale et l'adresse de la personne mentionnée
+Art. S1. — Les fournisseurs d'accès internet sont tenus de
+à l'article 47 de la présente loi, sous réserve d'avoir satisfait
+mettre en place un dispositif facilement accessible et visible sur
+auprès de cette dernière à son obligation d'identification telle que
+leur site internet permettant à toute personne de porter à leur
+prévue ci-dessus.
+connaissance ce type d'activités illicites et sont tenus de rendre
+Art. 55. — Est puni d'une peine d'emprisonnement de un an
+publics les moyens consacrés à cette lutte.
+à cinq ans et d'une amende de 1.000.000 à 5.000.000 de francs CFA
+Les fournisseurs c'accès internet sont tenus également d'infor-
+le fait pour une personne physique ou le dirigeant de droit ou de
+mer promptement les autorités publiques compétentes de toutes
+fait d'une personne morale exerçant l'une des activités mention-
+activités illicites qui leur sont signalées et qu'exercent les desti-
+nées à l'article 47 de la présente loi, de ne pas satisfaire aux obli-
+nataires de leurs services.
+gations définies aux articles 53 et 54 ci-dessus.
+Tout manquement aux obligations définies ci-dessus est puni
+Art. 56. — Toute personne assurant une activité de transmis-
+d'une peine d'emprisonnement de un à cinq ans et d'une amende
+sion de contenus sur un réseau de télécommunications ou de four-
+de 1.000.000 à 5.000.000 de francs CFA.
+niture d'accès à un réseau de télécommunications ne peut voir
+Art. 52. — L'autorité judiciaire peut prescrire, à toute personne
+sa responsabilité civile ou pénale engagée en raison de ces conte-
+mentionnée à l'article 47 de la présente loi, toutes mesures
+nus que dans l'un des cas suivants :
+propres à prévenir un dommage ou à faire cesser un dommage
+— lorsqu'elle est à l'origine de la demande de transmission
+occasionné par le contenu d'un service de communication élec-
+litigieuse;
+tronique.
+— lorsqu'elle sélectionne le destinataire de la transmission ;
+Tout manquement aux prescriptions judiciaires définies
+—lorsqu'elle sélectionne ou modifie les contenus faisant l'objet
+ci-dessus est puni d'une peine d'emprisonnement d'un an à cinq
+de la transmission.
+ans et d'une amende de 1.000.000 à 5.000.000 de francs CFA.
+Art. 57. — Toute personne assurant dans le seul but de rendre
+Art. 53. — Les personnes mentionnées à l'article 47 de la
+plus efficace leur transmission ultérieure, une activité de stockage
+présente loi sont tenues de détenir et de conserver sur une période
+automatique, intermédiaire et temporaire des contenus qu'un
+de trois ans les données informatiques de nature à permettre
+prestataire transmet ne peut voir sa responsabilité civile ou pénale
+l'identification de quiconque a contribué à la création d'un
+engagée à raison de ces contenus que si :
+contenu ou de l'un des contenus des services dont elles sont pres-
+— elle a modifié ces contenus et ne s'est pas conformée à leurs
+tataires conformément aux dispositions légales ou réglementaires
+conditions d'accès et aux règles usuelles concernant leur mise
+relatives à la protection des données à caractère personnel.
+à jour ou a entravé l'utilisation licite et usuelle de la technologie
+L'autorité judiciaire peut requérir auprès de ces personnes
+utilisée pour obtenir des données ;
+la communication des données d'identification des destinataires
+— elle n'a pas agi avec promptitude pour retirer les contenus
+des services dont elles sont prestataires.
+qu'elle a stockés ou pour en rendre l'accès impossible, dès qu'elle
+Art. 54. — Les personnes mentionnées à l'article 47 de la
+a effectivement eu connaissance soit du fait que les contenus
+présente loi sont tenues de mettre à la disposition du public en
+transmis initialement ont été retirés du réseau, soit du fait que
+ligne leurs propres données permettant de les identifier lorsque
+l'accès aux contenus transmis initialement a été rendu impossible,
+leurs services sont offerts à partir du territoire national ou sont
+soit du fait que les autorités judiciaires ont ordonné de retirer du
+accessibles à partir de ce territoire et destinés aux utilisateurs des
+réseau les contenus transmis initialement ou d'en rendre l'accès
+réseaux de communication en ligne dudit territoire.
+impossible.
+
+--- PAGE 7 ---
+456 E.C.
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+12 août 2013
+CHAPITRE 7
+Est puni des mêmes peines, le fait de communiquer ou de
+Adaptation des infractions classiques aux technologies
+divulguer par le biais d'un système d'information, une fausse
+de l'information et de la communication
+information faisant croire à un sinistre ou à toute autre situation
+Art. 58. — Est puni de dix à vingt ans d'emprisonnement et de
+d'urgence.
+5.000.000 à 10.000.000 de francs CFA d'amende, le fait pour
+Art. 66. — Est puni de cinq à dix ans d'emprisonnement et de
+5.000.000 à 20.000.000 de francs CFA d'amende, le fait pour
+toute personne de créer, de diffuser ou de mettre à disposition
+sous quelque forme, que ce soient des écrits, messages, photos,
+toute personne de menacer de commettre par le biais d'un
+sons, vidéos, dessins ou toute autre représentation d'idées ou de
+système d'information, une destruction, une dégradation ou une
+détérioration de biens ou une atteinte aux personnes, lorsqu'elle
+théories, de nature raciste ou xénophobe, par le biais d'un système
+est matérialisée par un écrit, une image, un son, une vidéo ou
+d'information.
+toute autre donnée.
+L'infraction ci-dessus définie est un délit.
+Art. 67. — Est coupable de trahison et puni de l'emprisonne-
+Art. 59. — Est puni de deux à cinq ans d'emprisonnement et
+ment à vie, le fait pour un Ivoirien :
+de 5.000.000 à 20.000.000 de francs CFA d'amende, le fait pour
+toute personne de menacer autrui de mort ou de violence par
+—de livrer ou de s'assurer de la possession en vue de la livrai-
+son à un pays étranger ou à une personne physique ou morale
+le biais d'un système d'information.
+étrangère par le biais d'un système d'information, un renseigne-
+Lorsque la menace a un caractère raciste, xénophobe, ethnique,
+ment, un document, un procédé ou une donnée informatique qui
+religieux ou fait référence à un groupe qui se caractérise par la
+doit être tenu (e) secret dans l'intérêt de la Défense nationale ;
+race, la couleur, l'ascendance ou l'origine nationale ou ethnique,
+la peine d'emprisonnement est de dix à vingt ans et l'amende est
+de détruire ou de laisser détruire un renseignement, un docu-
+de 20.000.000 à 40.000.000 de francs CFA.
+ment, un procédé ou une donnée informatique qui doit être tenu (e)
+secret dans l'intérêt de la Défense nationale, en vue de favoriser
+L'infraction ci-dessus définie est un délit.
+un pays étranger ou une personne physique ou morale étrangère.
+Art. 60. — Est puni de un à cinq ans d'emprisonnement et de
+Art. 68. — Est coupable d'espionnage et puni de l'emprison-
+5.000.000 à 10.000.000 de francs CFA d'amende, le fait pour
+nement à vie, le fait pour un étranger :
+toute personne de proférer ou d'émettre toute expression outra-
+—de livrer ou de s'assurer de la possession en vue de la livrai-
+geante, tout terme de mépris ou toute invective qui ne renferme
+l'imputation d'aucun fait, par le biais d'un système d'information.
+son à un pays étranger ou à une personne physique ou morale
+étrangère par le biais d'un système d'information, un renseigne-
+Art. 61. — Est puni de trois à cinq ans d'emprisonnement et de
+ment, un document, un procédé ou une donnée informatique qui
+75.000.000 à 100.000.000 de francs CFA d'amende, le fait pour
+doit être tenu (e) secret dans l'intérêt de la Défense nationale,
+toute personne de nier, d'approuver ou de justifier, intentionnel-
+lement, des actes constitutifs de génocide ou de crimes contre
+— de détruire ou de laisser détruire un tel renseignement, un
+l'humanité par le biais d'un système d'information.
+document, un procédé ou une donnée informatique qui doit être
+tenu (e) secret dans l'intérêt de la Défense nationale, en vue de
+Art. 62. — Est puni de un mois à cinq ans d'emprisonnement
+favoriser un pays étranger ou une personne physique ou morale
+et de 1.000.000 a 20.000.000 de francs CFA d'amende, le fait
+étrangère.
+pour une personne de produire, de mettre à la disposition d'autrui
+ou de diffuser des données de nature à troubler l'ordre public ou
+Art. 69. — Toute personne morale, à l'exception de l'Etat est
+à porter atteinte à la dignité humaine par le biais d'un système
+pénalement responsable des infractions prévues par la présente
+d'information.
+loi, lorsqu'elles sont commises pour son compte par ses repré-
+sentants.
+Art. 63. — Est puni de un à cinq ans d'emprisonnement et de
+5.000.000 à 20.000.000 de francs CFA d'amende, le fait pour
+La responsabilité des personnes morales n'exclut pas celle des
+toute personne de diffuser ou de mettre à disposition d'autrui par
+personnes physiques auteurs ou complices des mêmes faits.
+le biais d'un système d'information, sauf à destination des
+La peine encourue par les personnes morales responsables est
+personnes autorisées, un mode d'emploi ou un procédé permet-
+le double de l'amende prévue pour la personne physique ayant
+tant la fabrication de moyens de destruction de nature à porter
+commis l'infraction.
+atteinte à la vie, aux biens ou à l'environnement.
+Art. 70. — En cas de condamnation au titre de la présente loi,
+Art. 64. - Est puni de un à cinq ans d'emprisonnement et de
+outre la publicité de la condamnation ordonnée et exécutée,
+5.000.000 à 20.000.000 de francs CFA d'amende, le fait pour
+conformément à l'article 75 du Code pénal, le juge peut pronon-
+toute personne de diffuser ou de mettre à disposition d'autrui,
+cer à titre complémentaire, la confiscation spéciale la privation
+par le biais d'un système d'information, des procédés ou des
+des droits et l'interdiction de séjour prévues respectivement
+informations d'incitation au suicide.
+aux articles 63, 66 et 80 du Code pénal.
+Art. 65. - Est puni de six mois à deux ans d'emprisonnement
+CHAPITRE 8
+et de 1.000.000 à 5.000.000 de francs CFA d'amende, le fait pour
+Procédure pénale en matière de cybercriminalité
+toute personne de communiquer ou de divulguer par le biais d'un
+Art. 71. — Les officiers de police judiciaire définis à l'article
+système d'information, une fausse information tendant à faire
+16 nouveau du Code de Procédure pénale, les experts agréés
+croire qu'une destruction, une dégradation ou une détérioration
+auprès des tribunaux et toute autre personne dont les compé-
+de biens ou une atteinte aux personnes a été commise ou va être
+tences sont requises, serment préalablement prêté, peuvent
+commise.
+procéder aux opérations prévues par la présente loi.
+
+--- PAGE 8 ---
+12 août 2013
+JOURNAL OFFICIEL DE LA REPUBLIQUE DE COTE D'IVOIRE
+457 E.C.
+Les autorités compétentes visées ci-dessus n'ayant pas la
+Si une copie est réalisée dans le cadre de cette procédure,
+qualité d'officier de Police judiciaire ne peuvent procéder à une
+il peut être procédé, sur décision du juge, à l'effacement définitif
+perquisition qu'en présence de ces officiers.
+sur le support physique qui n'a pas été placé sous-main de justice,
+des données informatiques dont la détention ou l'usage est illégal
+Art. 72. — Les données relatives aux abonnés doivent être
+ou dangereux pour la sécurité des personnes ou des biens.
+conservées par les fournisseurs de services. Cette obligation
+Lorsque les systèmes informatiques ou les supports de stockage
+impose aux fournisseurs de services de conserver et de protéger
+informatique sont mis sous scellés, ils ne peuvent être ouverts
+l'intégrité desdites données pendant une durée de dix ans.
+que selon les modalités prévues par le Code de Procédure pénale.
+Lorsqu'il est impossible de retrouver l'auteur diune communi-
+Art. 77. — L'autorité compétente, sur réquisition du procureur
+ou ordonnance du juge d'instruction, est habilitée :
+cation électronique pour défaut de conservation des données
+— à collecter ou enregistrer par tout moyen technique les
+relatives aux abonnés, le fournisseur de services encourt une
+données relatives au trafic ou au contenu associées à des
+peine d'amende de 10.000.000 à 50.000.000 de francs CFA.
+communications spécifiques transmises sur son territoire
+Art. 73. — Lorsque dans le cadre d'une enquête ou d'une
+au moyen d'un système d'information ;
+instruction, il y a des raisons de penser que des données informa-
+— à obliger un fournisseur de services, dans le cadre de ses
+tiques spécifiées, y compris des données relatives aux abonnés et
+capacités techniques existantes, & collecter ou enregistrer
+au trafic, stockées au moyen d'un système d'information, sont
+par tout moyen technique ou prêter aux autorités compé-
+tentes son concours et son assistance pour collecter ou
+susceptibles de perte ou de modification, l'autorité compétente
+enregistrer en temps réel, les données relatives au trafic ou
+procède ou fait procéder à la conservation immédiate desdites
+au contenu associées à des communications spécifiques
+données.
+transmises sur son territoire au moyen d'un système
+La personne physique ou morale à qui injonction est faite,
+d'information.
+conserve et protège l'intégrité desdites données pendant une durée
+Les surcoûts identifiables et spécifiques éventuellement
+exposés par les fournisseurs de services pour répondre à ces
+aussi longue que nécessaire pour les besoins de l'enquête ou l'ins-
+demandes font l'objet d'une compensation financière de l'Etat.
+truction.
+Art. 78. — Est puni d'une peine d'emprisonnement de trois
+Art. 74. — L'autorité compétente, sur réquisition du procureur
+à six mois et de 1.000.000 à 5.000.000 de francs CFA d'amende,
+ou ordonnance du juge d'instruction, peut requérir :
+quiconque refuse de déférer à la demande du procureur ou du
+juge d'instruction.
+de toute personne physique ou morale, l'obligation de commu-
+Lorsqu'il s'agit d'une personne morale, elle encourt une peine
+niquer des données spécifiées, en sa possession ou sous son
+d'amende de 10.000.000 à 100.000.000 de francs CFA.
+contrôle, qui sont stockées dans un système d'information ou un
+Art. 79. — La présente loi sera publiée au Journal officiel de
+support de stockage informatique;
+la République de Côte d'Ivoire et exécutée comme loi de l'Etat.
+d'un fournisseur de services, de communiquer les données
+Fait à Abidjan, le 19 juin 2013.
+spécifiées relatives au trafic et aux abonnés en sa possession ou
+Alassane OUATTARA.
+sous son contrôle.
+Art. 75. — L'autorité compétente peut, au cours d'une perqui-
+DECRET n° 2013-352 du 22 mai 2013 portant nomination
+sition effectuée dans les conditions prévues par le Code de
+des membres de la Commission centrale de la Commission
+Procédure pénale, accéder à un système d'information ou à un
+nationale des Droits de l'Homme de Côte d'Ivoire, en
+support de stockage numérique et à des données intéressant
+abrégé CNDHCI.
+l'enquête en cours et stockées dans ledit système ou ledit support
+LE PRESIDENT DE LA REPUBLIQUE,
+se trouvant sur les lieux de la perquisition.
+Sur rapport conjoint du garde des Sceaux, ministre de la Justice,
+L'autorité compétente peut également accéder à des données
+des Droits de l'Homme et des Libertés publiques,
+intéressant l'enquête en cours et stockées dans un autre système
+Vu la Constitution,
+d'information, dès lors que ces données sont accessibles à partir
+Vu la loi n° 2012-1132 du 13 décembre 2012 portant création, attri-
+du système initial ou disponibles pour le système initial.
+butions, organisation et fonctionnement de la commission nationale
+des Droits de l'Homme de Côte d'Ivoire ;
+S'il est avéré que ces données, accessibles à partir du système
+Vu le décret n° 2012-1118 du 21 novembre 2012 portant nomination
+initial ou disponibles pour le système initial, sont stockées dans
+du Premier Ministre ;
+un autre système d'information situé hors du territoire national,
+Vu le décret n° 2012-1119 du 22 novembre 2012 portant nomination
+elles sont recueillies par l'autorité compétente, sous réserve du
+des membres du Gouvernement ;
+respect des engagements internationaux.
+Le Conseil des ministres entendu,
+Art. 76. — L'autorité compétente peut, dans les conditions
+DECRETE :
+prévues par le Code de Procédure pénale, procéder à la saisie des
+Article premier. —Sont nommées membres de la Commission
+systèmes informatiques, des supports de stockage informatique
+centrale de la Commission nationale des Droits de l'Homme
+ou procéder à la copie des données informatiques nécessaires
+de Côte d'Ivoire, en abrégé CNDHCI, avec voix délibérative,
+à la manifestation de la vérité.
+les personnalités dont la liste suit:

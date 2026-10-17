@@ -1,0 +1,49 @@
+{
+ "domaine": "donnees_personnelles_numerique",
+ "dossier": "NUMERIQUE_DONNEES",
+ "date_collecte": "2026-10-17",
+ "sources": [
+  {
+   "cle": "loi_2013_450_protection_donnees",
+   "titre": "LOI N° 2013-450 DU 19 JUIN 2013 RELATIVE A LA PROTECTION DES DONNEES A CARACTERE PERSONNEL (exemplaire du Journal officiel du 8 août 2013)",
+   "type_texte": "loi",
+   "numero_texte": "2013-450",
+   "date_texte": "2013-06-19",
+   "autorite": "Autorité de protection des données à caractère personnel (autoritedeprotection.ci)",
+   "url": "http://www.autoritedeprotection.ci/docs/loi_2013_450_journal.pdf",
+   "fichier": "loi_2013-450_protection_donnees_JO.pdf",
+   "pages": 9,
+   "sans_texte_attendu": true,
+   "limites": "Exemplaire du Journal officiel publié par l'autorité de protection des données. Un numéro du Journal officiel contient PLUSIEURS textes : les articles extraits doivent être rattachés à la loi 2013-450, pas aux autres actes du même numéro. Vigueur non garantie au-delà de la date de consultation.",
+   "sha256": null
+  },
+  {
+   "cle": "loi_2013_451_cybercriminalite",
+   "titre": "LOI N° 2013-451 DU 19 JUIN 2013 RELATIVE A LA LUTTE CONTRE LA CYBERCRIMINALITE (exemplaire du Journal officiel du 12 août 2013)",
+   "type_texte": "loi",
+   "numero_texte": "2013-451",
+   "date_texte": "2013-06-19",
+   "autorite": "Autorité de protection des données à caractère personnel (autoritedeprotection.ci)",
+   "url": "http://www.autoritedeprotection.ci/docs/Loi-2013-451.pdf",
+   "fichier": "loi_2013-451_cybercriminalite.pdf",
+   "pages": 8,
+   "sans_texte_attendu": true,
+   "limites": "Texte pénal et procédural : les infractions et sanctions qu'il définit engagent la liberté des personnes. Ne jamais conclure seul. Vigueur non garantie au-delà de la date de consultation.",
+   "sha256": null
+  },
+  {
+   "cle": "loi_2013_546_transactions_electroniques",
+   "titre": "LOI N° 2013-546 DU 30 JUILLET 2013 RELATIVE AUX TRANSACTIONS ELECTRONIQUES (exemplaire du Journal officiel du 12 septembre 2013)",
+   "type_texte": "loi",
+   "numero_texte": "2013-546",
+   "date_texte": "2013-07-30",
+   "autorite": "Autorité de protection des données à caractère personnel (autoritedeprotection.ci)",
+   "url": "http://www.autoritedeprotection.ci/docs/Loi-2013_546.pdf",
+   "fichier": "loi_2013-546_transactions_electroniques.pdf",
+   "pages": 6,
+   "sans_texte_attendu": true,
+   "limites": "Exemplaire du Journal officiel. Vigueur non garantie au-delà de la date de consultation.",
+   "sha256": null
+  }
+ ]
+}

@@ -1,0 +1,3893 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Recueil élaboré par : 
+Le Programme National de prise en charge des Orphelins 
+et autres Enfants rendus Vulnérables du fait du VIH/sida 
+en collaboration avec ses partenaires techniques. 
+
+ 
+3 
+ 
+REPUBLIQUE DE COTE D’IVOIRE 
+Union—Discipline—Travail 
+Ministère de la Femme, de la Famille et de l’Enfant  
+…………………………………………………… 
+Programme National de prise en charge des Orphelins et autres 
+Enfants rendus Vulnérables de fait de VIH/sida 
+ 
+ 
+ 
+ 
+RECUEIL DES TEXTES  
+JURIDIQUES 
+Protection des Droits des enfants, adolescents et jeunes dans la 
+législation ivoirienne 
+ 
+ 
+ 
+ 
+Août 2025 
+ 
+……………………………………………….. 
+
+
+ 
+4 
+ 
+SOMMAIRE 
+CONTRIBUTEURS
+ .................................................................. 6 
+Avant-propos
+ ............................................................................. 9 
+Remerciement
+ .......................................................................... 12 
+CHAPITRE 1 :  
+DROIT À LA PROTECTION
+ ................................................. 13 
+Droit au nom
+ ............................................................................ 14 
+Obligations de l’Officier ou de l’agent d’état civil
+ .................. 16 
+La filiation de l’enfant
+ ............................................................. 17 
+Effets de la filiation
+ ................................................................. 22 
+Conditions de l’adoption
+ .......................................................... 24 
+Effets de l’adoption
+ .................................................................. 27 
+Mesures de protection ou d’assistance éducative
+ .................... 32 
+Autorité parentale
+ .................................................................... 38 
+Délégation des droits de l’autorité parentale
+ ........................... 44 
+Tutelle
+ ...................................................................................... 47 
+Succession
+ ................................................................................ 53 
+Mesures de protection pénale du mineur
+ ................................. 57 
+Protection physique et morale de l’enfant
+ ............................... 61 
+Protection pénale de l’état civil de l’enfant
+ ............................. 73 
+
+ 
+5 
+ 
+CHAPITRE 2 :  
+DROIT A LA SANTÉ
+ ............................................................. 78 
+Violences faites sur enfant
+ ....................................................... 79 
+Abandon et délaissement d’enfant
+ ........................................... 80 
+Avortement
+ .............................................................................. 82 
+Enlèvement d’enfants
+ .............................................................. 85 
+Travail dangereux
+ .................................................................... 87 
+VIH/sida
+ ................................................................................... 91 
+Gratuité des soins
+ ..................................................................... 96 
+CHAPITRE 3 :  
+DROIT À L’ÉDUCATION
+ ..................................................... 98 
+Mise en apprentissage
+ .............................................................. 99 
+Obligations du maître
+ ............................................................ 101 
+Obligations de l’enfant
+ .......................................................... 104 
+Age légal d’accès à l’emploi ou apprentissage
+ ...................... 105 
+Obligations de l’enfant à l’égard de ses parents
+ .................... 106 
+Obligations de l’administrateur légal à l’égard de l’enfant
+ ... 107 
+Immoralité des parents ou de l’administrateur légal
+ .............. 108 
+Réinsertion sociale de l’enfant
+ ............................................... 109 
+Droit à l’éducation
+ ................................................................. 111 
+ 
+
+ 
+6 
+ 
+CONTRIBUTEURS
+ 
+Facilités par Issa KONE, Expert en Droit et Protection de l’Enfant, les 
+travaux pour l’élaboration de ce document ont vu la participation des 
+experts nationaux ci-dessous cités : 
+▪ Dr Flore KOUASSI LAGO, Directrice – Coordonnatrice (PN -
+OEV) 
+▪ Colonel LOBOGNON, Directeur de la Législation Militaire au 
+Ministère d’Etat, Ministère de la Défense (MEMDEF) 
+▪ ZOZO Lalée Frédérique, Cheffe du Service ROQ (PN-OEV)  
+▪ OGOU Serge, Assistant Programme (PN-OEV) 
+▪ DOSSO Fatoumata, chargée de la recherche (PN-OEV) 
+▪ DAFFE Karidja, Coordonnatrice Technique (PN-OEV) 
+▪ ANKOTCHE Mireille, Conseillère Technique (PN-OEV) 
+▪ KOUADJO Micafui Mardochée, Direction des Affaires Juridiques 
+et du Contentieux (DAJC MSHPCMU) 
+▪ OTTANGBA Rosine épse KOUASSI, Direction des Affaires 
+Juridiques de la Coopération et du Contentieux (MCNSLP) 
+▪ TOUMAN Janvier Desnoces, Conseiller aux Droits Humains 
+(CNDH) 
+▪ KOUASSI Mekoundè Nadège, Direction des Affaires Juridiques et 
+de la Coopération Internationale (DAJCI/MFFE) 
+▪ KOUAME N’Dri Valère, Chargé D’étude (DRH MSHPCMU) 
+▪ AGBO Dazo Ella, Chargé d’études Juridiques (MEPS, Direction 
+des Affaires Juridiques) 
+▪ CATCHA -Picard Hermann, Direction de la Protection Judiciaire 
+de l’Enfance et de la Jeunesse (MJDH) 
+
+ 
+7 
+ 
+▪ AKA N’Zi Larissa Bénédicte, Chargée de Programme (Forum des 
+ONG) 
+▪ Reine Affiba Tahou Nia mvom epse Tahou, Cheffe de service 
+Renforcement du système (PN-OEV) 
+▪ KOFFI Lydie Pascaline, Coordonnatrice au Projet PALAJ4 
+(AFJCI) 
+▪ ASSALE Taiwa Venance, Chef de Service Suivi et Évaluation (PN-
+OEV) 
+▪ KOUAME Kouassi Kevin, Informaticien (PN-OEV) 
+▪ KOUAKOU Emma, Chargée de Soins, Soutien et Prévention (PN -
+OEV) 
+▪ KONE Mohamed, Chef de Service Mobilisation, Plaidoyer et 
+Communication (PN-OEV) 
+▪ ZOUZOU Seraphin, Chargé de Mobilisation et Plaidoyer (PN -
+OEV) 
+▪ YAO Nicolas, Chargé de Renforcement du système (PN-OEV) 
+▪ Adonis N’GUESSAN, Chargé de Communication 
+▪ AGOUASSEY Danho, Cheffe de Service Veille Stratégique et Projet 
+(PN-OEV) 
+▪ N’GUETTA Ablan Clémence, Assistante (PN-OEV) 
+▪ KOUAKOU N’Guessan Clotilde Alexise, Gestionnaire en Charge 
+du Suivi de la Qualité de l’Enseignement au Préscolaire 
+(DELC/MENA) 
+ 
+
+ 
+8 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+« Protéger l’enfant, c’est reconnaître sa 
+dignité humaine, garantir ses droits 
+fondamentaux et lui offrir un environnement 
+sûr où il peut grandir, apprendre et 
+s’épanouir pleinement. Une société qui 
+protège ses enfants construit les bases solides 
+de son propre avenir. » 
+
+ 
+9 
+ 
+ 
+Avant-propos 
+Considérant la place privilégiée de 
+l’enfant dans la société mais notant 
+avec inquiétude sa situation difficile 
+dans bien des cas en raison de sa 
+fragilité physique et psychologique, la 
+Côte D’Ivoire s’est dotée de textes 
+spécifiques pour assurer à l’enfan t un 
+développement harmonieux.  
+Cependant, des défis importants 
+entravent la réalisation des droits 
+inaliénables qui lui sont reconnus à être 
+protégés sans discrimination contre  
+toutes formes d’abus, de violences, d’exploitation et de négligence en 
+cas d’une situation de vulnérabilité comme le VIH/Sida. 
+L`un des impacts dévastateurs de la pandémie du VIH/Sida, est le 
+nombre croissant d`orphelins et d`enfants vulnérables qu`elle laisse 
+dans son sillage. Cette situation est particulièrement préoccupante en 
+Afrique, précisément en Côte d`Ivoire où les statis tiques sont 
+alarmantes. 
+Selon les estimations du SPECTRUM 2024, la prévalence du VIH est 
+estimée à 1,82% dans la tranche de 15 à 49 ans en fin 2023. Aussi, 407 
+595 personnes vivent avec le VIH à fin 2022, dont 20 981 enfants. 
+Chez les enfants âgés de 0 à 14 ans, 18% des nouvelles infections 
+proviennent de la tranche d’âge de 0 -4 ans. En plus de ces données, 
+Nassénéba TOURÉ 
+Ministre de la Femme, de la 
+Famille et de l’Enfant 
+
+
+ 
+10 
+ 
+l’Enquête Nationale sur les Violences faites aux enfants  de 2018 a 
+permis d’en savoir plus sur l’interaction entre le VIH et la violence.   
+Les OEV sont le plus souvent privés des chances de pouvoir jouir de 
+leurs droits essentiels notamment le droit à l’éducation, à une 
+alimentation équilibrée, à un logement décent, un encadrement social 
+correct et à une prise en charge familiale adéquate etc…. 
+Plusieurs analyses effectuées sur la situation de ces enfants ont mis en 
+exergue le disfonctionnement du circuit traditionnel de prise en 
+charge, l`apparition de nouvelles formes de vulnérabilité et surtout 
+l`effritement de la solidarité familiale du fait de la paupérisation 
+grandissante. 
+Conscient de l`ampleur des violations constantes des droits des enfants 
+confrontés à la dure réalité du VIH/sida, le Programme National de 
+Prise en charge des Orphelins et autres enfants rendus vulnérables du 
+fait du VIH a mis en place la Cellule Juridique  qui est un réseau de 
+personnes ressources cooptées et sensibilisées pour contribuer à la 
+protection des droits des enfants et leurs familles.  Depuis sa création, 
+de nombreuses actions ont été menées en direction des OEV et de leurs 
+familles afin de faciliter la résolution de leurs problèmes juridiques.  
+Dans le cadre de la vulgarisation de ces textes, et pour une meilleure 
+prise en charge juridique de l’enfant, le Ministère de la Femme, de la 
+Famille et de l’Enfant (MFFE), à travers le Programme National de 
+prise en charge des Orphelins et autres Enfants rendus Vulnérables du 
+fait du VIH/sida (PNOEV) a élaboré ce recueil à l’endroit des 
+intervenants sociaux.  
+ 
+
+
+ 
+11 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+« Chaque enfant, sans distinction d’origine, de condition 
+sociale ou de vulnérabilité, a droit à une enfance 
+protégée. Respecter et promouvoir ses droits est une 
+obligation morale, juridique et collective pour toute 
+société qui se veut juste et humaine. » 
+
+ 
+12 
+ 
+Remerciement 
+Le présent recueil de textes juridiques 
+sur la protection des enfants, des 
+adolescents et des jeunes est le fruit 
+d’une collaboration étroite entre les 
+partenaires techniques et financiers, les 
+Organisations non gouvernementales 
+et l’ensemble des acteurs d e la 
+protection de l’enfant. 
+Je remercie Madame la Ministre de la 
+Femme, de la Famille et de l’Enfant 
+pour son appui constant et sa vision  
+stratégique, ainsi que l’ensemble des partenaires institutionnels, 
+techniques et financiers, les ONG et les organisations de la société 
+civile pour leur engagement déterminant. 
+Une mention particulière est adressée aux jeunes engagés dans la lutte 
+contre le VIH, ainsi qu’aux collaborateurs du programme, dont 
+l’implication et le professionnalisme ont été essentiels à 
+l’aboutissement de ce manuel. 
+À toutes et à tous, j’adresse l’expression de ma profonde gratitude. 
+ 
+ 
+ 
+Dr Kouassi Flore LAGO 
+Directrice Coordonnatrice du 
+Programme National de prise en 
+charge des Orphelins et autres 
+Enfants rendus Vulnérables du fait 
+du VIH/sida (PN-OEV) 
+
+
+ 
+13 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+14 
+ 
+Droit au nom 
+Loi N 2020-490 du 29 Mai 2020 relative au nom (Code civil I : Droit 
+des personnes et de la famille) Art. 1 et Art. 4 (Nom) / Art. 1, Art.8, 
+Art.11, Art. 16, Art 31 (paternité et filiation). 
+     Nom et filiation : Tout enfant doit avoir un nom de famille et au 
+moins un prénom. L’enfant acquiert le nom de la personne (père et  / 
+ou mère) à l`égard de laquelle sa filiation est légalement établie. Ce 
+nom ne peut être modifié sans motif légitime.     
+     Déclaration de naissance :  Sa naissance doit être déclaré dans les 
+centres d'état civil (Mairie et Sous-Préfecture) du lieu où il est né, dans 
+un délai de trois (03) mois à compter du jour de l’accouchement. Passé 
+ce délai, il faut demander un jugement supplétif d`acte de naissance au 
+Tribunal du lieu de naissance Les personnes habilitées à faire la 
+déclaration de naissance sont : le père ou la mère, les ascendants (grand 
+parents), les plus proches parents, toute personne ayant assisté à la 
+naissance, l a personne chez qui la mère est accouchée.   Dans les 
+hôpitaux, maternités, formations sanitaires, les centres secondaires 
+d’état civil. Un registre spécial est dressé pour les déclarations de 
+naissance. 
+     Découverte d’enfant : Toute personne qui trouve un enfant, doit 
+le présenter à un agent de l’état civil qui avise par la suite, selon la 
+situation de l’enfant, les services sociaux, après avoir dressé un 
+Procès-Verbal.  Dans la pratique, l’enfant est présenté à un 
+commissariat de police, une brigade de gendarmerie, ou un service 
+social du lieu de sa découverte.  
+
+ 
+15 
+ 
+ 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise 
+en œuvre 
+Prévention - Sensibilisation des parents à 
+l`obtention et à la 
+conservation d`un Certificat 
+médical de naissance ; 
+- Sensibilisation des parents à 
+la déclaration de naissance 
+et à l’obtention d’un extrait 
+d`acte de naissance ; 
+- Sensibilisation de la 
+communauté à la 
+déclaration des naissances ; 
+- Sensibilisation des agents 
+d’état civil à la gratuité de 
+la déclaration de 
+naissance ; 
+- Vulgarisation des textes 
+auprès des acteurs clés. 
+ 
+- Animations 
+communautaires ; 
+- Focus groupe avec 
+les familles ; 
+- VAD ; 
+- Campagne radio et 
+télé ; 
+- Messages dans les 
+langues locales ; 
+- Production d’affiches 
+et dépliants. 
+ 
+Réponse/ 
+Assistance 
+- Obtention d`un jugement 
+supplétif d`acte de 
+naissance ; 
+- Etablissement d’extrait 
+blanc. 
+Renforcement des 
+capacités techniques 
+et opérationnelles 
+des services clés 
+
+ 
+16 
+ 
+Obligations de l’Officier ou de l’agent d’état civil 
+Loi N 2018-862 du 19 Novembre 2018 modifiée par la loi N 2025-220 
+du 28 Mars 2025 relative à l’Etat civil (article 45,46 nouveau) Art. 13, 
+38 nouveau, 40, 52 nouveau (Etat civil). 
+     Cas d’opposition de l’officier ou de l’agent de l’état civil  : Les 
+officiers et agents de l’état civil ont l’obligation de recevoir toute 
+demande d’établissement d’acte de naissance à l’exception de celle 
+contraire aux dispositions légales en vigueur.  Passé le délai de 15 
+jours à compter de la date du refus de l’officier ou agent de l’état civil, 
+les demandeurs disposent d’un délai de 15 jours pour saisir le Tribunal 
+compétent. 
+     Défaut de signature des actes d’état civil  :  Sur requête du 
+Procureur de la république ou de toute personne qui a intérêt à agir, le 
+Président du tribunal peut ordonner la validité de l’acte de l’état civil 
+non signé par l’officier ou l’agent de l’état civil en cas d’incapacité 
+médicale, d’empêchement absolu ou de décès de ce dernier (l’officier 
+ou de l’agent de l’état civil). 
+     Délivrance de la copie conforme intégrale de l’acte de 
+naissance : Tout enfant, son ascendant, son descendant en ligne 
+directe, son tuteur ou représentant légal, le procureur de la république 
+peut obtenir une copie conforme intégrale de l’acte de naissance.  
+Toute autre personne ne peut l’obtenir qu’avec autorisation du 
+Président du Tribunal, sur demande écrite.  Cette autorisation est 
+délivrée gratuitement. 
+En cas de refus, un appel est possible devant la cour d’appel. 
+ 
+
+ 
+17 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention - Sensibilisation des 
+parents ; 
+- Sensibilisation des 
+autorités 
+coutumières ; 
+- Séances de travail 
+avec les Officiers 
+d’Etat civil 
+- Information des 
+Officiers d’Etat civil, 
+des acteurs 
+judiciaires et des 
+travailleurs sociaux ; 
+- Information des 
+communautés et des 
+familles adoptantes. 
+ 
+- Animations 
+communautaires ; 
+- Atelier de 
+renforcement des 
+capacités des agents 
+de l’état civil et les 
+chefferies, leaders 
+religieux, société 
+civile ; 
+- Elaboration et 
+production de 
+manuels/ guides de 
+procédures à 
+l’attention des 
+acteurs.  
+ 
+ 
+La filiation de l’enfant 
+Loi N 2019-571 du 26 juin 2019 relative à la filiation  (Code civil I :  
+Droit des personnes et de la famille) : Art. 1 ; Art. 9, 11 ; Art. 19, 28 ; 
+Art. 16, Art. 22, Art. 26 (Paternité et Filiation). 
+Définition : La filiation est le lien juridique qui unit un enfant à ses 
+parents. Elle détermine qui est légalement le père et/ou la mère. 
+Article 1  : Tout enfant a droit à l’établissement de sa filiation à 
+l’égard de ses auteurs. 
+
+ 
+18 
+ 
+     Tout enfant a droit à un acte de naissance qui mentionne les noms 
+et prénoms de son père et/ou sa mère. 
+La preuve de la filiation 
+Article 9 :   La filiation des enfants nés dans le mariage se prouve par 
+les actes de naissance inscrits sur les registres de l’Etat civil. A défaut 
+de ce titre la possession d’état d’enfant née dans le mariage suffit. 
+     La filiation se prouve par les moyens suivants : 
+o L’acte de naissance inscrit sur les registres de l’état civil ; 
+o A défaut d’acte, pour l’enfant né dans le mariage, la preuve de 
+sa filiation résulte de sa naissance dans ledit mariage ;  
+o Pour l’enfant né hors mariage, sa filiation s’établit par le simple 
+fait de sa naissance à l’égard de la mère. Si l’acte ne comporte 
+aucune mention relative à la mère, la filiation doit être établie 
+par reconnaissance ou par un jugement (action judiciaire) . La 
+filiation vis -à-vis du père peut également être faite par 
+reconnaissance ou par un jugement (action judiciaire). 
+Article 11 : Nul ne peut réclamer un état contraire à celui que lui 
+donne son titre de naissance ou la possession conforme à ce titre Et 
+réciproquement nul ne peut contester l’état de celui qui a une 
+possession conforme à son titre de naissance.  
+Par principe, personne ne peut réclamer un état contraire à son acte 
+de naissance ou le contester, sauf décision de justice.  
+Article 16 : L’action en réclamation de filiation peut être exercée à 
+tout moment par l’enfant devant les tribunaux. 
+
+ 
+19 
+ 
+Article 19 : La filiation des enfants nés hors mariage résulte à l’égard 
+de la mère, du seul fait de la naissance. Toutefois, dans le cas où l’acte 
+de naissance ne porte pas d’indication du nom de la mère, elle est 
+établie par une reconnaissance ou un jugement.  
+A l’égard du père, la preuve de la filiation ne peut résulter que d’une 
+reconnaissance ou d’un jugement. 
+Quant à l’enfant naturel, c’est-à-dire, celui qui est né hors mariage  ; 
+sa filiation à l’égard de la mère est établie du seul fait de la naissance. 
+ 
+Article 22 : La reconnaissance par le père de l’enfant né de sa relation 
+hors mariage doit être précédée de l’information donnée à l’épouse 
+du projet de reconnaissance. 
+L’acte de reconnaissance, doit, à peine de nullité, contenir la mention 
+de l’information donnée à l’épouse par acte de commissaire de 
+Justice. 
+Lorsque s’applique la présomption de paternité établie par l’article 2, 
+l’enfant né de la relation hors mariage de la mère ne peut être reconnu 
+qu’autant qu’il a été antérieurement désavoué. 
+     La reconnaissance par le père de l’enfant né de sa relation hors 
+mariage doit être précédée de l’information donnée à l’épouse par acte 
+de commissaire de Justice sous peine de nullité. 
+ 
+ 
+
+ 
+20 
+ 
+Article 24  : La paternité hors mariage peut être judiciairement 
+déclarée dans le cas : 
+1°) d’enlèvement ou de viol, lorsque la période de l’enlèvement ou du 
+viol se rapporte à celle de la conception ; 
+2°) de séduction, abus d’autorité, promesse de mariage ou fiançailles 
+suivies de relations sexuelles dans la période légale de conception ; 
+3°) où il existe des lettres ou quelque autre écrit émanant du père 
+prétendu, propre à établir la paternité d’une manière non équivoque ; 
+4°) où le père prétendu et la mère ont vécu en état de concubinage 
+notoire pendant la période légale de conception ; 
+5°) où le père prétendu a pourvu ou participé à l’entretien, à 
+l’éducation et à l’établissement de l’enfant en qualité de père. 
+     La filiation de l’enfant, né hors mariage, vis-à-vis du père peut être 
+déclaré à la suite d’une action judiciaire dans les cas : 
+•  D’enlèvement ou de viol, lorsque la période de l’enlèvement 
+ou du viol se rapporte à celle de la conception ; 
+•  De séduction, abus d’autorité, promesse de mariage ou 
+fiançailles suivies de relations sexuelles dans la période légale 
+de conception ; 
+• Où il existe des lettres ou quelque autre écrit émanant du père 
+prétendu, propre à établir la paternité d’une manière non 
+équivoque ; 
+• Où le père prétendu et la mère ont vécu en état de concubinage 
+notoire pendant la période légale de conception ; 
+• Où le père prétendu a pourvu ou participé à l’entretien, à 
+l’éducation et à l’établissement de l’enfant en qualité de père. 
+
+ 
+21 
+ 
+Article 25 : L’action en recherche de paternité n’est pas fondée si : 
+1°) le père prétendu était, pendant la période légale de conception 
+dans l’impossibilité physique d’être l’auteur de l’enfant ; 
+2°) les données acquises de la science établissent qu’il ne peut être le 
+père de l’enfant. 
+     L’action en recherche de paternité n’est pas fondée si : 
+• Le père prétendu était, pendant la période légale de 
+conception dans l’impossibilité physique d’être l’auteur de 
+l’enfant ; 
+• Les données acquises de la science établissent qu’il ne peut 
+être le père de l’enfant. 
+Article 26 :  L’action est dirigée contre le père prétendu ou ses 
+héritiers. L’action n’appartient qu’à l’enfant. Pendant la minorité de 
+l’enfant, la mère même mineure, a seule qualité pour l’intenter. Si la 
+mère est décédée, incapable ou présumée absente, l’action est exercée 
+par la personne qui a la garde de l’enfant. 
+     L’action en recherche de paternité est dirigée contre le père 
+prétendu ou ses héritiers.  
+En principe, elle ne peut être exercée que par l’enfant.  Cependant elle 
+peut être exercée par la mère, même mineure, pour le compte de son 
+enfant mineur. Si la mère est décédée, incapable ou présumée absente, 
+l’action est exercée par la personne qui a la garde de l’enfant. 
+ 
+ 
+
+ 
+22 
+ 
+Article 28  : Lorsqu’une filiation est établie par un acte ou par un 
+jugement, nulle filiation contraire ne pourra être postérieurement 
+reconnue sans qu’un jugement établisse, préalablement, 
+l’inexactitude de la première. 
+     Lorsqu’une filiation est établie par un acte ou par un jugement, 
+nulle filiation contraire ne pourra être postérieurement reconnue sans 
+qu’un jugement établisse, préalablement, l’inexactitude de la 
+première. 
+ 
+ 
+Effets de la filiation 
+Loi N°2019-573 du 26 juin 2019 relative aux successions  
+Les enfants nés hors mariage dont la filiation est légalement établie 
+ont les mêmes droits que ceux nés dans le mariage. 
+  
+Article 28 : Les enfants ou leurs descendants succèdent à leurs pères, 
+mère, aïeuls, aïeules ou autres ascendants, sans distinction de sexe ni 
+de primogéniture et encore qu’ils soient issus de différents mariages 
+ou nés hors mariage.  
+Actions 
+essentielles 
+Activités clés Démarches de la mise 
+en œuvre 
+Prévention - Sensibilisation des 
+parents ; 
+- Sensibilisation des 
+autorités coutumières et 
+religieuses. 
+Animations 
+communautaires 
+VAD. 
+
+ 
+23 
+ 
+Ils succèdent par égales portions et par tête, quand ils sont tous au 
+premier degré et appelés de leur chef. Ils succèdent par souche 
+lorsqu’ils viennent tous ou en partie par représentation. 
+Cependant, même lorsqu'aucune filiation n'est établie, le père est tenu 
+de verser des aliments à ses enfants hors mariage ou incestueux. 
+     Tous les enfants, filles ou garçons, quel que soit leur rang dans la 
+fratrie, né dans le mariage ou issu de différent mariage, hors mariage 
+ont les mêmes droits. Ils héritent à part égale leurs pères, mères, aïeuls, 
+aïeules ou autres ascendants. 
+Un enfant né hors mariage ou incestueux dont la filiation n’est pas 
+établie par le père doit bénéficier d’une prise en charge de la part de 
+ce dernier. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise 
+en œuvre 
+Prévention Information des communautés 
+et des familles.  
+ 
+- Animations 
+communautaires ; 
+- VAD.  
+Réponse/ 
+Assistance 
+Soutien aux OEV. Appui judiciaire/ 
+Orientations/ 
+Counseling. 
+ 
+ 
+ 
+ 
+
+ 
+24 
+ 
+Conditions de l’adoption 
+loi n° 2019-987 du 27 novembre 2019 relative à l’adoption 
+Article 1 : L’adoption ne peut avoir lieu que par décision de justice, 
+s’il y a de justes motifs et si elle présente un intérêt certain pour 
+l’adopté. L’adoption crée un lien de filiation entre l’adoptant et 
+l’adopté. 
+     Seul  le Juge peut  autoriser légalement une adoption . L’adoption 
+n’est pas un acte privé. Elle est décidée au terme d’une une procédure 
+judiciaire.  Ce faisant, le juge doit vérifier qu’il y a des raisons valables 
+et sérieuses pour adopter. Par exemple le bien-être de l’enfant, un lien 
+affectif fort entre l’adoptant et l’adopté, ou une situation familiale 
+stable. Le juge évalue si l’adoption améliore la situation de l’enfant 
+sur le plan affectif, social, ou matériel. Une fois l’adoption prononcée, 
+l’adoptant devient légalemen t le parent  de l’adopté. Il s’agit d’un 
+nouveau lien familial, avec des droits et devoirs réciproques (autorité 
+parentale, héritage, etc.). 
+Article 6 : Nul ne peut être adopté s’il n’est déjà né. 
+     On ne peut pas adopter un enfant à naître (un bébé encore dans le 
+ventre de sa mère. 
+L’adoption ne peut concerner qu’une personne déjà née, même s’il 
+s’agit d’un nouveau-né. L’adoption concerne une personne existante, 
+dont la situation, les besoins et l’interêt peuvent être évalués. Tant que 
+l’enfant n’est pas né, on ne peut pas savoir ce qui est le mieux pour lui, 
+ni prendre de décision juridique à son sujet. 
+ 
+
+ 
+25 
+ 
+Article 7  : Le mineur âgé de plus de quatorze ans doit consentir 
+personnellement à son adoption. 
+     si un enfant a 14 ans ou plus, il doit donner lui -même son accord 
+pour être adopté. L’adoption ne peut pas se faire sans s on 
+consentement. Le mineur à partir de 14 ans est est considéré comme 
+suffisamment mature pour comprendre ce que signifie une adoption 
+(changement de filiation, de nom, etc.). 
+Le juge ou l’autorité compétente demande donc directement son avis.  
+ 
+Article 18  : L’adoption simple est permise quel que soit l’âge de 
+l’adopté. 
+     L’adoption simple peut concerner aussi bien un enfant qu’un 
+adulte. Il n’y a pas de limite d’âge pour être adopté sous le régime de 
+l’adoption simple.Concrètement Un enfant, un adolescent, ou même  
+un adulte (par exemple, une personne de 30, 40 ou 60 ans) peut être 
+adopté en adoption simple.  Cette forme d’adoption ne rompt pas les 
+liens avec la famille d’origine, contrairement à l’adoption plénière.  
+Article 24 : L’adoption simple peut être révoquée, s’il est justifié de 
+motifs graves, par une décision du tribunal rendue à la demande de 
+l’adoptant, des père ou mère de l’adopté, de l’adopté et, si ce dernier 
+est encore mineur, du ministère public. 
+Néanmoins, aucune demande de révocation d’adoption émanant de 
+l’adoptant n’est recevable lorsque l’adopté est encore mineur de 
+quinze ans. 
+
+ 
+26 
+ 
+Le jugement rendu par le tribunal compétent en vertu du droit 
+commun, à la suite de la procédure ordinaire, après conclusions 
+écrites du ministère public, doit être motivé. Il peut être attaqué par 
+des voies de recours. Son dispositif est mentionné en marg e de l’acte 
+de naissance, ou transcrit, conformément à l’article 13 et à peine des 
+mêmes sanctions.  
+La révocation fait cesser, pour l’avenir, tous les effets de l’adoption. 
+     L’adoption simple peut être annulée  (révoquée), mais seulement 
+dans des cas très sérieux, appelés "motifs graves". Cette révocation ne 
+peut avoir lieu que par décision d’un tribunal. 
+Les motifs graves sont des situations très graves, comme : 
+• Des violences : 
+• Un abandon ; 
+• Des conflits profonds et durables ; 
+• Ou tout comportement mettant en danger la personne adoptée. 
+C’est le tribunal habituel, chargé de juger ce type d’affaire qui rend la 
+décision concernant la révocation de l’adoption. La décision est prise 
+selon les règles normales de procédure judiciaire , avec audience, 
+débats, etc. Le ministère public donne son avis par écrit  avant que le 
+juge prenne sa décision. Le juge doit expliquer clairement les raisons 
+de sa décision . Il ne peut pas se contenter d’un "oui" ou "non" sans 
+justification. Si quelqu’un n’est pas d’accord avec la décision, il peut 
+faire appel ou se pourvoir en cassation, selon le cas. 
+La décision du tribunal doit être transcrite dans l’acte de naissance de 
+l’adopté. Une fois la révocation décidée tous les liens juridiques créés 
+par l’adoption prennent fin , mais uniquement pour l’avenir . Elle ne 
+supprime pas rétroactivement ce qui a existé jusque-là. 
+
+ 
+27 
+ 
+Article 26 : L’adoption plénière n’est permise qu’en faveur du mineur 
+âgé de moins de quinze ans, accueilli au foyer de l’adoptant ou des 
+adoptants depuis au moins six mois. 
+Toutefois, si l’enfant a plus de quinze ans et a été accueilli avant 
+d’avoir atteint cet âge par des personnes qui ne remplissaient pas les 
+conditions légales pour adopter ou s’il a fait l’objet d’une adoption 
+simple avant d’avoir atteint cet âge, l’adopti on plénière peut être 
+demandée, si les conditions en sont remplies, pendant toute la minorité 
+de l’enfant. 
+     En règle générale, l’adoption plénière  (celle qui remplace 
+totalement la filiation d’origine) est réservée aux enfants de moins de 
+15 ans. L’enfant  doit avoir été accueilli chez l’adoptant  depuis au 
+moins 6 mois. 
+Toutefois, même si l’enfant a plus de 15 ans, l’adoption plénière reste 
+possible, mais à certaines conditions : 
+• L’enfant a été accueilli avant ses 15 ans , mais par des 
+personnes qui ne pouvaient pas encore adopter légalement à 
+ce moment-là ; 
+• L’enfant a été adopté de façon simple avant ses 15 ans. 
+Effets de l’adoption 
+loi n° 2019-987 du 27 novembre 2019 relative à l’adoption 
+Article 2 : L’adopté a, dans la famille de l’adoptant, les mêmes droits 
+et obligations qu’un enfant de l’adoptant par le sang. 
+
+ 
+28 
+ 
+     L’enfant adopté est considéré exactement comme un enfant 
+biologique de l’adoptant. Il a les mêmes droits (héritage, nom, autorité 
+parentale, etc.) et les mêmes devoirs (respect, assistance, etc.). 
+Concrètement, cela veut dire : 
+• Il hérite comme un enfant biologique ; 
+• Il porte le nom de l’adoptant ; 
+• Il est inscrit dans le livret de famille de l’adoptant ; 
+• Il doit respecter les obligations familiales, comme tout enfant 
+envers ses parents. 
+L’adopté est juridiquement traité comme un vrai enfant de l’adoptant.il 
+fait pleinement partie de sa famille, avec les mêmes droits et les mêmes 
+responsabilités qu’un enfant biologique. 
+Article 14  : Dans le même délai prévu à l’article précédent, la 
+décision prononçant l’adoption plénière est transcrite sur les registres 
+de l’état civil du lieu de naissance de l’adopté à la requête du ministère 
+public.  
+La transcription énonce le jour, l’heure et le lieu de naissance, le sexe 
+de l’adopté ainsi que ses prénoms tels qu’ils résultent de la décision 
+d’adoption, les prénoms, nom, date et lieu de naissance, profession et 
+domicile du ou des adoptants. Elle ne co ntient aucune indication 
+relative à la filiation réelle de l’adopté. 
+La transcription tient lieu d’acte de naissance à l’adopté.  
+     Une fois l’adoption plénière prononcée par le juge, cette décision 
+est inscrite dans les registres  d’état civil  du lieu de naissance  de 
+l’adopté. 
+Elle indique : 
+
+ 
+29 
+ 
+• Les informations de naissance de l’adopté : jour, heure, lieu, 
+sexe ; 
+• Ses prénoms (tels qu’ils ont été décidés lors de l’adoption) ; 
+• Les informations sur l’adoptant ou les adoptants.  
+Elle ne mentionne pas les parents biologiques . Il n’y a aucune 
+référence à la filiation d’origine. Ce nouvel acte de naissance remplace 
+entièrement l’ ancien. Il  tient lieu d’acte de naissance officiel  pour 
+l’adopté. Il est désormais l’enfant des adoptants uniquement. 
+Article 18  : Elle confère le nom de l’adoptant à l’adopté dans les 
+conditions prévues en matière de nom.  
+L’adopté reste membre de sa famille d’origine et y conserve tous ses 
+droits. Les prohibitions au mariage s’appliquent à l’adopté et à sa 
+famille d’origine.  
+L’adoptant est, du fait de l’adoption, seul investi à l’égard de l’adopté, 
+de tous les droits de l’autorité parentale.  
+Si l’adoptant est le conjoint du père ou de la mère de l’adopté, il a 
+concurremment avec lui l’autorité parentale. 
+ Les droits résultant de l’autorité parentale sont exercés par le ou les 
+adoptants dans les mêmes conditions qu’à l’égard de l’enfant né dans 
+le mariage.  
+Les règles de l’administration légale et de la tutelle de l’enfant né dans 
+le mariage s’appliquent à l’adopté.  
+     L’adoption simple donne le nom de l’adoptant à l’adopté selon la 
+législation en la matière.  
+L’adopté reste membre de sa famille biologique et conserve ses 
+droits dans cette famille : par exemple, il peut hériter de ses parents 
+
+ 
+30 
+ 
+biologiques. Donc l’adoption simple ne remplace pas la filiation 
+d’origine, elle s’ajoute à elle. 
+Cependant, même s’il a été adopté, l’adopté ne peut pas se marier avec 
+un membre de sa  famille d’origine  (comme un frère ou une sœur 
+biologique, un parent…). Les mêmes règles d’interdiction que pour les 
+enfants biologiques s’appliquent. 
+S’agissant de l’autorité parentale, e n principe, l’adoptant a seul 
+l’autorité parentale sur l’adopté. Mais si l’adoptant est le conjoint d’un 
+des parents biologiques (par exemple, le beau -père ou la belle-mère), 
+alors l’autorité parentale est partagée entre le parent biologique et le 
+parent adoptif. Une fois l’adoption faite, les droits et devoirs parentaux 
+(nourrir, loger, éduquer, représenter l’enfant, etc.) sont exercés 
+exactement comme pour un enfant né dans le mariage. 
+Article 20 : L’adopté doit des aliments à l’adoptant s’il est dans le 
+besoin, ainsi qu’à ses parents d’origine, et réciproquement. Toutefois, 
+les père et mère de l'adopté ne sont tenus de lui fournir des aliments 
+que s'il ne peut les obtenir de l'adoptant. 
+     L’adopté doit aider l’adoptant s’il est capable et que l’adoptant est 
+dans le besoin. En adoption simple, l’adopté  doit aussi aider ses 
+parents biologiques si ces derniers sont dans le besoin.  
+Réciproquement, les parents adoptifs doivent aider l’adopté s’il est 
+dans le besoin. Les parents biologiques ont aussi cette obligation, mais 
+seulement si l’adopté ne peut pas obtenir cette aide de ses parents 
+adoptifs. En résumé, i l y a une obligation d’entraide matérielle entre 
+l’adopté, l’adoptant et la famille d’origine  dans le cadre d’une 
+adoption simple . Mais les parents adoptifs sont les premiers 
+responsables pour aider l’ adopté. Les parents biologiques ne doivent 
+intervenir que si les parents adoptifs ne peuvent pas aider. 
+
+ 
+31 
+ 
+Article 27 : L’adoption plénière confère à l’enfant une filiation qui se 
+substitue à la filiation d’origine ; l’adopté cesse d’appartenir à sa 
+famille par le sang, sous réserve des prohibitions au mariage prévues 
+par la loi.  
+Toutefois, l’adoption de l’enfant du conjoint laisse subsister sa 
+filiation d’origine à l’égard de ce conjoint et de sa famille. Elle produit 
+pour le surplus, les effets d’une adoption par deux époux. 
+     L’adoption plénière crée une nouvelle  filiation qui remplace 
+complètement la filiation biologique. En conséquence, l’enfant adopté 
+n’appartient plus juridiquement à sa famille d’origine  (celle par le 
+sang). Cependant, les interdictions de mariage  restent valables : 
+l’adopté ne peut pas se marier avec certains membres de sa famille 
+biologique, même s’il n’y a plus de lien juridique. 
+Si l’adoption plénière concerne l’enfant du conjoint (par exemple, un 
+beau-fils ou une belle-fille), alors la filiation d’origine vis-à-vis du 
+parent conjoint est maintenue. L’enfant garde un lien juridique avec 
+ce parent-là et sa famille. 
+L’adoption plénière de l’enfant du conjoint produit les mêmes effets 
+que si les deux époux adoptaient ensemble. Cela signifie que l’enfant 
+est considéré comme l’enfant des deux époux, avec tous les droits et 
+devoirs associés. 
+Article 28 : L’adoption plénière est irrévocable. 
+     L’adoption plénière ne peut pas être annulée ou révoquée une fois 
+qu’elle a été prononcée par la justice. En d’autres termes, une fois que 
+l’adoption plénière est validée, elle est définitive. Les liens juridiques 
+créés entre l’adoptant et l’adopté sont permanents.  Contrairement à 
+
+ 
+32 
+ 
+l’adoption simple, où la révocation peut être possible dans certains cas, 
+ici, il n’y a aucune possibilité de revenir en arrière. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise 
+en œuvre 
+Prévention - Sensibilisation sur les 
+procédures d’adoption 
+nationale et internationale ; 
+- Renforcement des capacités 
+techniques des acteurs clés. 
+ 
+- Focus groupes ; 
+- Ateliers de 
+formation des ; 
+acteurs clés sur les 
+procédures ; 
+- Publication du guide 
+sur les procédures 
+d’adoption en CIV ; 
+- Promotion de 
+l’adoption nationale 
+des enfants 
+vulnérables. 
+ 
+Réponses ; 
+/ 
+Assistances 
+- Accompagnement des 
+familles candidates à 
+l’adoption ; 
+- Suivi des enfants adoptés. 
+- Formation des 
+familles candidates 
+à l’adoption ; 
+- Suivi post adoption 
+des enfants. 
+ 
+Mesures de protection ou d’assistance éducative 
+ Loi N° 2015-539 du 20juillet 2015 portant Statut de pupille de l'Etat 
+Article 2 : La qualité de pupille de l'Etat est reconnue aux enfants de 
+0 à moins de 18 ans, se trouvant dans l'une des situations ci -après 
+
+ 
+33 
+ 
+énumérées et ayant satisfait à la procédure d'admission prévue au 
+chapitre 3 de la présente loi : 
+- les enfants dont la filiation n'est pas établie ou est inconnue, qui 
+ont été recueillis par les structures agréées p ar le ministère en 
+charge de l'Enfant depuis plus de trois mois, ou confiés auxdites 
+structures ou aux personnes qui les ont trouvés par le  juge de 
+tutelle ; 
+- les enfants dont la filiation est établie et connue, qui ont 
+expressément été remis, pour cause grave, aux structures -
+agréées par le ministère en charge de l'Enfant, en vue de leur 
+admission connue pupilles de l'Etat, par les personnes qui ont 
+qualité pour  consentir à leur adoption depuis plus de trois 
+mois ;  
+- les enfants dont la filiation est établie et connue; qui ont 
+expressément été remis, pour cause grave, aux structures 
+agréées par le ministère en charge de l'Enfant depuis plus d'un 
+an par le père ou la mère en vue de leur admission comme 
+pupilles de l'Etat, et dont l'autre parent n'a pas fait connaître, 
+pendant ce délai, son intention d'en assumer la charge ;avant 
+l'expiration de ce délai d'un an, le service s'emploie à connaître 
+les intentions de l'autre parent ; 
+- les enfants orphelins de père et de mère pour lesquels la tutelle 
+n'est pas organisée et qui ont été confiés aux -structures agréées 
+par le ministère en charge de l'Enfant depuis plus de trois 
+mois ; 
+-  les enfants dont les parents ont été déclarés déchus de 
+l'ensemble des droits et obligations leur appartenant sur la 
+
+ 
+34 
+ 
+personne et les biens de leur enfant mineur et qui ont été confiés 
+aux structures agréées par le ministère en charge de l'Enfant. 
+     Le statut de pupille de l'État est accordé à des mineurs (de 0 à 
+moins de 18 ans) qui sont placés sous la protection de l'État parce 
+qu’ils ne peuvent pas être élevés par leurs parents pour diverses raisons. 
+L'État en devient le représentant légal. 
+Pour qu’un enfant soit reconnu comme pupille de l'État, deux éléments 
+sont nécessaires. Il doit se trouver dans l'une des situations listées par 
+la loi (exemples fréquents : orphelin, enfant abandonné, enfant dont 
+les parents ont été déchus de l’autorité p arentale, etc.) et doit avoir 
+suivi une procédure d’admission spécifique. 
+Loi N°2019-572 du 26 juin 2019 relative à la minorité 
+Article 27  : Les mineurs peuvent faire l’objet de mesures de 
+protection lorsque leur santé, leur moralité ou leur éducation sont 
+compromises ou insuffisamment sauvegardées en raison de 
+l’immoralité ou de l'incapacité des père et mère ou de la personne 
+investie du droit de garde. 
+Ils peuvent faire l'objet d'assistance éducative lorsqu'ils donnent à 
+leurs parents ou à la personne investie du droit de garde des sujets de 
+mécontentement très graves, par leur inconduite ou leur indiscipline. 
+Ces mesures sont prises à la requête soit des père et mère ou l’un 
+d'eux, soit du tuteur ou du ministère public.  
+     Mesures de protection  : Les mineurs peuvent faire l’objet de 
+mesures de protection lorsque leur santé, leur moralité ou leur 
+éducation sont compromises ou insuffisamment sauvegardées. Cela 
+
+ 
+35 
+ 
+peut être dû à l’immoralité des parents ou du tuteur , o u à leur 
+incapacité (physique, psychologique, éducative, sociale…). L’objectif 
+est de protéger l’enfant lorsque l’environnement familial est défaillant. 
+     Assistance éducative  : Les mineurs peuvent aussi faire l’objet 
+d’assistance éducative lorsqu’eux -mêmes donnent des sujets de 
+mécontentement très graves à leurs parents ou au tuteur,  notamment 
+par leur inconduite (comportement inapproprié ), ou leur indiscipline 
+(refus d’autorité, comportements à risque…).  Ici, c’est le 
+comportement de l’enfant qui motive l’intervention, pas celui des 
+adultes. 
+     Les mesures peuvent être demandées par les père et mère (ou l’un 
+des deux), Le tuteur légal ou le ministère public. 
+Article 28  : Chaque fois qu'il est possible, le mineur doit être 
+maintenu dans son milieu habituel de vie. Dans ce cas, le Juge des 
+tutelles désigne une personne qualifiée ou un service d’assistance 
+sociale ou d’éducation ou  un service de protection judiciaire de 
+l’enfance pour apporter aide et conseil à la famille, afin de suivre le 
+développement de l'enfant et de lui en faire périodiquement rapport. 
+Le juge peut également subordonner le maintien de l’enfant dans son 
+milieu à des obligations particulières telles que celles de fréquenter 
+régulièrement un établissement sanitaire ou d’éducation ou un service 
+de protection judiciaire de l’enfance ou d’exer cer une activité 
+professionnelle. 
+     Le maintien de l’enfant dans son milieu habituel reflète une 
+philosophie de de protection de l’enfance moderne car l ’intérêt de 
+l’enfant est souvent mieux garanti dans son environnement familial, à 
+
+ 
+36 
+ 
+condition que des mesures de soutien soient mises en place pour 
+encadrer et aider la famille. 
+Lorsque l’enfant reste dans sa famille, le juge désigne une personne 
+qualifiée ou un service compétent (Service d’assistance sociale, 
+Service d’éducation ou Service de protection judiciaire de l’enfance ) 
+en vue d’apporter aide et conseil à la famille, suivre le développement 
+de l’enfant et faire rapport périodique au juge sur l’évolution de la 
+situation de l’enfant.  
+     Le maintien dans la famille  peut être conditionné par certaines 
+obligations, imposées à l’enfant (et parfois à la famille), par exemple : 
+• Fréquenter régulièrement : 
+• Un établissement sanitaire (si problème de santé) ; 
+• Un établissement d’éducation (école, internat, etc.) ; 
+• Un service de protection judiciaire de l’enfance ; 
+• Ou encore, exercer une activité professionnelle (souvent pour les 
+adolescents déscolarisés ou en voie d’autonomie). 
+Article 29 : S’il est nécessaire de retirer l’enfant de son milieu de vie 
+actuel, le Juge des tutelles peut décider de confier tout ou partie des 
+droits de l'autorité parentale : 
+1-  à celui des père et mère qui n'a pas l’exercice du droit de garde ;  
+2-  à un autre membre de la famille ou à un tiers digne de confiance ; 
+3-  à un établissement public d’assistance sociale ou d’éducation, à 
+un établissement public relevant du service d’aide à l’enfance ou 
+un établissement de protection judiciaire de l’enfance ou un 
+établissement privé habilité. 
+
+ 
+37 
+ 
+     Le retrait de l’enfant intervient quand sa santé, sa sécurité, la 
+moralité ou son éducation sont gravement compromises et qu’aucune 
+mesure d’aide dans la famille ne suffit à remédier à la situation. 
+     Le juge des tutelles  peut confier tout ou partie des droits liés à 
+l’autorité parentale  à une autre personne ou structure. Si l’un des 
+parents est jugé défaillant mais que l’autre est capable d’assurer la 
+protection, le juge peut lui transférer les droits. Le juge peut le confier 
+à toute autre personne, il peut s’agir d’un oncle, d’une tante, d’un 
+grand parent, d’un ami proche de la famille à condition qu’elle soit 
+apte et volontaire. L’option de confier l’enfant à un établissement ou 
+service compétent est retenue lorsqu’ aucune solu tion familiale  ou 
+individuelle n’est possible.  
+Article 31  : Les frais d’entretien, d’instruction, d’éducation, de 
+rééducation et de réinsertion du mineur qui a fait l'objet d’une ou de 
+plusieurs mesures d’assistance éducative incombent aux père et mère. 
+Toutefois, lorsque les père et mère ne peuvent supporter la charge 
+totale de ces frais, la décision fixe le montant de leur participation ou 
+déclare qu’en raison de leur indigence, il ne leur sera imposé aucune 
+part contributive. 
+     Même si un enfant est placé ou suivi dans le cadre d’une mesure 
+d’assistance éducative, ce sont les parents (ou titulaires de l’autorité 
+parentale) qui restent financièrement responsables.  Cependant en cas 
+d’indigence ou de ressources insuffisantes, le juge peut fixer une 
+participation partielle en tenant compte des revenus des parents ou les 
+exonérer totalement s’ils sont indigents c’est -à-dire sans ressources 
+suffisantes. 
+
+ 
+38 
+ 
+En pratique, cette décision est prise par le juge suite à une enquête 
+sociale ou à l’analyse des ressources des parents. Elle est réévaluable 
+si la situation des parents évolue. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention Information des 
+communautés et des 
+familles. 
+ 
+-Animations ; 
+communautaires 
+-VAD ; 
+-Education parentale. 
+Assistance Accompagnement des 
+enfants placés en 
+famille d’accueil et 
+dans les Etablissements 
+de Protection de 
+Remplacement (EPR). 
+-Appui juridique ou 
+judicaire/ Counseling ; 
+-Prise en charge holistique 
+des enfants. 
+Plaidoyer -Adoption des textes sur 
+les pupilles de l’Etat ; 
+-Disponibilité des 
+ressources pour 
+l’accompagnement des 
+familles d’accueil. 
+-Rencontre avec les 
+autorités pour l’adoption du 
+décret d’application de la 
+loi sur les Pupilles de 
+l’Etat ; 
+-Budgétisation de la prise en 
+charge des enfants Placés. 
+Autorité parentale 
+Loi N°2019-572 du 26 juin 2019 relative à la minorité  Code Civil 
+I (droits des personnes et de la famille) : Art 2, 4, 5, 6, 8, 9 et 12 
+ 
+
+ 
+39 
+ 
+Définition de l’autorité parentale : 
+Article 3 : L’autorité parentale est l'ensemble des droits et obligations 
+reconnus aux père et mère sur la personne et les biens de leur enfant 
+mineur et ayant pour finalité l'intérêt de celui-ci. 
+     L’autorité parentale est l'ensemble des droits et obligations 
+reconnus aux père et mère sur la personne et les biens de leur enfant 
+mineur et ayant pour finalité l'intérêt de celui-ci. 
+Droits et obligations liés à l’autorité parentale : 
+Article 4  : L’autorité parentale comporte à l’égard du mineur des 
+droits et obligations notamment : 
+1-  Assurer la garde, la direction, la surveillance, l'entretien, 
+l'instruction et l'éducation de l'enfant ; 
+2-  Faire prendre à l'égard de celui -ci toute mesure d'assistance 
+éducative ; 
+3- Consentir à son adoption, à son émancipation dans les 
+conditions fixées par la loi ; 
+4-  Administrer ses biens et disposer des revenus desdits biens. 
+L'autorité parentale comporte, en outre, le droit pour le survivant des 
+père et mère de choisir un tuteur pour son enfant mineur, dans le cas 
+où il viendrait à décéder. 
+     L’autorité parentale est un ensemble de droits et de devoirs 
+conférés aux parents jusqu’à la majorité (ou l’émancipation) de 
+l’enfant, pour assurer sa protection, son développement et son 
+éducation. Cela les oblige à veiller à la sécurité physique et morale de 
+
+ 
+40 
+ 
+l’enfant, encadrer ses choix de vie, comportements, fréquentations, 
+pourvoir à ses besoins matériels (logement, nourriture, vêtements) et 
+assurer sa scolarisation, son éducation civique, sociale, morale. 
+Les parents peuvent demander eux -mêmes une intervention du juge 
+pour protéger leur enfant, si nécessaire par exemple, si l’enfant est en 
+danger ou s’ils se sentent dépassés.  Certains actes importants 
+requièrent le consentement parental notamment l’adoption de l’enfant 
+par un tiers et son émancipation  (déclaration légale donnant à un 
+mineur l’autonomie juridique avec autorisation des parents).  Les 
+parents gèrent les biens de l’enfant dans son intérêt. A cet effet, ils 
+peuvent percevoir et utiliser les revenus (ex : héritage, rentes, pensions) 
+mais doivent rendre des comptes et ne peuvent pas dilapider ou vendre 
+les biens sans autorisation dans certains cas.  Le parent survivant peut 
+désigner par testament ou acte notarié une personne pour assurer la 
+tutelle de son enfant en cas de décès, Cela garantit que le tuteur choisi 
+sera prioritaire dans la protection de l’enfant après leur mort, sauf 
+décision contraire du juge si l’intérêt de l’enfant l’exige. 
+Article 5 : Durant le mariage, l'autorité parentale est exercée en 
+commun par les père et mère, sauf décision judiciaire contraire. 
+S’il s'élève un conflit relativement à l’exercice de l'autorité parentale, 
+le juge statue en considérant l'intérêt de l’enfant. Il est saisi par 
+l'époux le plus diligent.  
+A l'égard des tiers de bonne foi, chacun des époux est réputé agir avec 
+l'accord de l'autre et dans le seul intérêt de l’enfant, quand il 
+accomplit seul un acte usuel de l’autorité parentale. 
+     Tant que les parents sont mariés et vivent ensemble, ils exercent 
+conjointement l’autorité parentale. Cela signifie qu’ils prennent d’un 
+
+ 
+41 
+ 
+commun accord  toutes les décisions importantes concernant leur 
+enfant. Toutefois, une décision judiciaire peut retirer l’exercice à l’un 
+des deux (ex : cas de violence, d’incapacité, de désintérêt 
+manifeste…). En cas de désaccord profond entre les parents (même 
+mariés), l’un des deux peut saisir le juge qui va trancher en priorité en 
+fonction de l’intérêt supérieur de l’enfant.  
+Si un parent accomplit seul un acte "usuel"  (c'est-à-dire courant, non 
+exceptionnel), un tiers (enseignant, médecin, banquier, etc.) n’a pas à 
+exiger le consentement de l’autre parent , à condition qu’il soit de 
+bonne foi. 
+     Exemples d’actes usuels : 
+• Inscrire l’enfant à une activité scolaire ou sportive, 
+• L’emmener chez le médecin pour une consultation classique, 
+• Participer à une réunion de parents d’élèves. 
+Pour les actes non usuels  (ex : changement de nom, opération 
+chirurgicale grave, changement d’établissement scolaire), l’accord des 
+deux parents est nécessaire. 
+Article 9 : L’autorité parentale sur les enfants nés hors mariage est 
+exercée par celui des père et mère à l’égard duquel la filiation est 
+établie. 
+Lorsque la filiation est établie à l’égard de la mère et du père, 
+l'autorité parentale est exercée par les deux parents.  S’il s’élève un 
+conflit entre les père et mère relativement à l’exercice de  l’autorité 
+parentale, le juge, saisi par le parent le plus diligent, statue en  
+considérant l’intérêt de l'enfant. 
+Les dispositions de l'article 5 alinéa 3 sont applicables aux père et 
+mère. 
+
+ 
+42 
+ 
+     L’autorité parentale est exercée conjointement par les père et mère 
+dans le mariage et hors mariage (lorsque la filiation est établie à 
+l’égard des deux parents). 
+Dans l’intérêt de l’enfant, le juge peut décider de confier cette autorité 
+à l’un des parents dans les cas suivants : 
+- Conflit ; 
+- Divorce ; 
+- Séparation de corps ou résidence séparée ; 
+- Décès de l’un des parents. 
+Par ailleurs, dans l’intérêt exclusif de l’enfant, le juge peut décider, à 
+la requête de tout intéressé, de confier sa garde et par conséquent 
+l’autorité parentale à toute autre personne. 
+Article 6 : Si les père et mère sont divorcés, séparés de corps ou en 
+résidence séparée, l'autorité parentale est exercée par celui d’entre 
+eux à qui le juge a confié la garde de l’enfant, sauf les droits de visite 
+et de surveillance et le droit de consentir à l’adopt ion ou à 
+l’émancipation de l’enfant mineur incombant à l'autre parent. 
+     En cas de séparation, c’est le parent chez qui l’enfant réside 
+habituellement qui exerce au quotidien l’autorité parentale. Le juge 
+désigne ce parent lors de la décision de séparation ou de divorce. 
+Même s’il n’a pas la garde, l’autre parent conserve le droit de visite et 
+d’hébergement, le droit de surveillance et le droit de consentir à 
+certains actes graves. Pour des décisions majeures comme l’adoption 
+ou l’émancipation l’accord des deux parents est indispensable, même 
+si l’un n’a pas la garde.  
+
+ 
+43 
+ 
+Article 8 : Si celui des père et mère ayant été investi de la garde de  
+l’enfant décède ou s’il se trouve dans l’un des cas prévus à l’article 
+11, l'autorité parentale est dévolue de plein droit au parent survivant. 
+Toutefois, dans l’intérêt exclusif de l’enfant, le juge peut décider, à la 
+requête de tout intéressé, de confier sa garde à toute autre personne.  
+Article 12 : Si l’un des père et mère décède ou se trouve dans l'un des 
+cas énumérés par l'article précédent, l'exercice de l'autorité parentale 
+est dévolu uniquement à l'autre. 
+    Lorsque le parent qui avait la garde de l’enfant meurt ou devient 
+incapable, l’autre parent survivant récupère automatiquement 
+l’exercice de l’autorité parentale en vue d’assurer la continuité de la 
+protection parentale par l’un des deux parents biologiques, chaque fois 
+que cela est possible. Toutefois, le juge peut faire obstacle à cette 
+dévolution automatique, si cela est nécessaire pour protéger l’enfant. 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention 
+Assistance 
+- Information des 
+communautés et des 
+familles ;  
+- Accompagnement des 
+parents. 
+- Animations ; 
+communautaires 
+- VAD ;  
+- Appui juridique ou 
+judicaire/ Counseling. 
+
+ 
+44 
+ 
+Délégation des droits de l’autorité parentale 
+Loi N°2019-572 du 26 juin 2019 relative à la minorité ( Code civil I 
+droits des personnes et de la famille) : Art. 13, 15, 16, 18, 19, 20, 21,24 
+25,26, 144 (Minorité). 
+Article 13 :  Ceux qui exercent l'autorité parentale peuvent, dans 
+l'intérêt du mineur, déléguer volontairement et temporairement à une 
+personne physique jouissant de ses droits civils, les droits qu'ils 
+détiennent et les obligations qui leur incombent relatifs, tant à la garde 
+du mineur, qu'à son instruction, son éducation et sa surveillance. 
+     Cette disposition évoque une délégation volontaire de l’autorité 
+parentale, une mesure souple permettant aux titulaires de l’autorité 
+parentale (généralement les parents) de confier temporairement tout 
+ou partie de leurs responsabilités à une autre personne. Elle est décidée 
+par les parents eux -mêmes, pour une durée limitée, selon les besoins 
+en tenant compte de l’ intérêt de l’enfant La délégation ne peut être 
+faite qu’à une personne majeure, juridiquement capable et digne de 
+confiance. Cette délégation peut porter sur la garde du mineur 
+(hébergement, soins, quotidien), son instruction (suivi scolaire), son 
+éducation (valeurs, comportement) et sa surveillance (sécurité, 
+encadrement). Toutefois, l’autorité parentale n’est pas transférée en 
+tant que telle, elle est seulement exercée par un tiers pour une durée 
+limitée. Les parents restent titulaires de l’autorité parentale et 
+responsables en dernier ressort. 
+Article 15 : Le Juge des tutelles, à la requête des parties intéressées 
+agissant conjointement, peut, en outre, décider qu'il y a lieu, dans 
+
+ 
+45 
+ 
+l'intérêt de l'enfant, de déléguer à la personne visée à l'article 13, tout 
+ou partie des droits qui ne lui avaient pas été conférés. 
+Lorsqu'une personne recueille un enfant mineur sans l'intervention de 
+ses père et mère ou tuteur, la déclaration doit être faite au juge des 
+tutelles qui peut déléguer tous les droits de l’autorité parentale à cette 
+personne.  
+     Cela vise les situations où un tiers (membre de la famille, voisin, 
+ami, etc.) prend en charge un enfant sans qu’il y ait eu de décision 
+judiciaire ni de consentement formel des titulaires de l’autorité 
+parentale (par exemple, parents absents, disparus, incarcérés, décédés, 
+ou défaillants) et sans que ce tiers ait de droits légaux sur l’enfant. 
+Cette situation doit être portée à la connaissance du juge pour éviter 
+que l’enfant reste dans un vide juridique et régulariser la situation en 
+fonction de l’inté rêt de l’enfant. Le juge peut décider de confier 
+provisoirement ou durablement l’exercice de l’autorité parentale à la 
+personne qui a recueilli l’enfant par une délégation judiciaire de 
+l’autorité parentale qui donne au tiers un cadre légal clair pour agir au 
+nom de l’enfant (école, soins, actes civils...), une responsabilité 
+juridique vis-à-vis de l’enfant. Il ne s’agit pas nécessairement d’une 
+adoption.  
+Article 16 : Lorsqu'une personne physique ou morale a recueilli un 
+enfant mineur, sans l'intervention des père, mère ou tuteur, 
+déclaration doit en être faite dans les soixante -douze heures au Juge 
+des tutelles de la résidence de la personne qui l'a recueilli, lequel e n 
+informe les parents ou le tuteur de l'enfant. 
+Les père et mère peuvent être déchus de  l’autorité parentale. Ils 
+pourront néanmoins en demander la restitution au juge.  
+
+ 
+46 
+ 
+     La délégation peut être ordonnée par voie judiciaire en cas de 
+découverte d’enfant. Toutefois, cette déclaration doit être faite dans 
+les soixante -douze heures (72H) au Juge des tutelles du lieu de 
+résidence de la personne qui l'a recueilli. En l’espèce, le juge des 
+tutelles en informe les parents ou le tuteur de l'enfant.  La non 
+déclaration est passible d’une peine d’emprisonnement et/ou d’une 
+amende.  
+Les père et mère peuvent être déchus de  l’autorité parentale. Ils 
+pourront néanmoins en demander la restitution au juge qui, dans 
+l’intérêt de l’enfant, en apprécie l’opportunité.   
+ 
+Article 19 : Dans les cas visés aux articles 13 à 17, les père, mère ou 
+tuteur peuvent demander au Juge des tutelles que le mineur leur soit 
+rendu. S’il estime qu’il y a lieu, dans l'intérêt de l'enfant, de rejeter la 
+demande, le juge peut accorder au demandeur un droi t de visite dont 
+il fixe les modalités. La décision du juge est susceptible d’appel.  
+Une nouvelle demande ne peut être formulée qu’à l’expiration du délai 
+d’un an à compter du jour où la décision de rejet est devenue 
+irrévocable. 
+     Cela signifie que même après une décision de placement ou de 
+délégation d’autorité parentale les parents ou le tuteur légal  peuvent 
+saisir le juge pour demander le retour de l’enfant à leur domicile. Cela 
+suppose que le demandeur estime être redevenu capable d’assumer la 
+charge de l’enfant, ou que les raisons ayant justifié la séparation ont 
+disparu. Le juge statue en fonction de l’intérêt supérieur de l’enfant , 
+pas de la seule volonté du parent ou tuteur. Si le retour est jugé possible 
+L’enfant peut être restitué à sa famille d’origine. Si le retour est jugé 
+
+ 
+47 
+ 
+contraire à l’intérêt de l’enfant le juge rejette la demande, mais peut 
+accorder un droit de visite  au parent ou tuteur dont la fréquence, la 
+durée et le lieu sont fixés par lui. 
+Le parent ou tuteur mécontent de la décision (qu’il s’agisse d’un rejet 
+ou des modalités du droit de visite) peut exercer un recours devant la 
+cour d’appel, dans le délai légal prévu ( généralement 1 mois). Après 
+un rejet définitif, les parents/tuteurs doivent attendre un an avant de 
+présenter une nouvelle demande de restitution. Ce délai vise à 
+stabiliser la situation de l’enfant et à éviter les procédures répétitives 
+ou abusives. Ce délai peut être utile pour le s parents afin d’améliorer 
+leur situation et préparer un dossier solide en vue de récupérer leur 
+enfant. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention Information des 
+communautés et des 
+familles ; 
+ 
+- Animations 
+communautaires ; 
+- VAD ; 
+- Education parentale. 
+Tutelle 
+Loi N°2019-572 du 26 juin 2019 relative à la minorité ( Code civil I 
+droits des personnes et de la famille) : Art. 48, 52, 81, 82, 83, 84, 90, 
+91, 93, 94,95.  
+Article 52 : La tutelle est un régime de protection de l’enfant. Elle est 
+une charge publique et personnelle. Nul ne peut refuser de l’exercer 
+sauf dérogations prévues par les articles 63 et 64. La tutelle ne se 
+transmet ni au conjoint ni aux héritiers du tuteur.  Toutefois, les 
+héritiers sont responsables de la gestion de leur auteur. 
+ 
+
+ 
+48 
+ 
+ Définition : 
+La tutelle est un régime de protection de l’enfant par lequel une tierce 
+personne exerce l’autorité parentale sur un enfant.   La tutelle est une 
+mission d’intérêt général, imposée par la loi et qui doit être assumée 
+directement par la personne désignée sous contrôle du juge des 
+tutelles. 
+ Cas d’ouverture de la tutelle 
+Article 53 : La tutelle s’ouvre : 
+1° lorsque le père et la mère sont tous deux décédés ou hors d'état de 
+manifester leur volonté en raison de leur incapacité, de leur absence, 
+de leur éloignement ou de toute autre cause ; 
+2°lorsqu’ils sont tous deux déchus des droits de l'autorité parentale ; 
+3°lorsque le survivant est déchu des droits de l’autorité parentale ; 
+4° lorsque tous deux ont été condamnés pour abandon de famille dans 
+le cas où la victime de cet abandon est un de leurs enfants, et même si 
+la déchéance de l'autorité parentale n'a pas été prononcée ; 
+5° lorsque la filiation de l’enfant n’est pas établie à l’égard de ses 
+parents. Le tuteur qui a les mêmes obligations que l'administrateur 
+légal du mineur est désigné par le juge des tutelles. 
+     La tutelle s’ouvre en cas de décès ou d’incapacité des deux parents 
+(parents décédés, hospitalisés longuement, portés disparus, en prison 
+à l’étranger, ou en état mental empêchant toute décision ), de 
+déchéance de l’autorité parentale des deux parents, c ela suppose une 
+décision judiciaire antérieure constatant que les parents ont gravement 
+manqué à leurs devoirs (violence, abandon, mise en danger…) , de 
+déchéance du parent survivant, de condamnation pour abandon de 
+
+ 
+49 
+ 
+famille, de filiation non établie ( C’est le cas des enfants nés sous X, 
+abandonnés, ou dont les parents ne sont pas identifiés légalement). 
+Le tuteur légal est nommé par décision judiciaire  et doit p rotéger la 
+personne et les biens du mineur, Rendre compte au juge ou au conseil 
+de famille,  agir dans l’intérêt exclusif du mineur  et demander 
+autorisation du juge pour certains actes importants (vente de biens, 
+changement d’établissement, etc.). 
+Conditions et exclusion d’exercice de la charge tutorale 
+Article 81 : Les différentes charges de la tutelle peuvent être remplies 
+par toute personne, sous réserve des dispositions ci-après. 
+Article 82 : Sont incapables d’exercer les différentes charges de la 
+tutelle : 
+1 ° les mineurs ; 
+2° lés majeurs protégés par la loi.  
+ 
+Article 83 : Sont exclus ou destitués de plein droit des différentes 
+charges de la tutelle : 
+1° ceux qui ont été condamnés pour proxénétisme, ou condamnés pour 
+crime ou délit commis sur la personne d'un enfant, ou condamnés 
+comme complices d'un crime commis par un enfant ; 
+2° ceux à qui l'exercice des charges tutélaires a été interdit,  
+conformément aux dispositions du code pénal ; 
+3° ceux qui ont été déchus de l'autorité parentale. 
+
+ 
+50 
+ 
+Article 84 : Peuvent être exclues ou destituées des différentes charges 
+de la tutelle, les  personnes dont l'inconduite notoire, l’improbité, la 
+négligence habituelle ou l'inaptitude aux affairés est manifeste. 
+Peuvent également être exclus ou destitués des différentes charges de 
+la tutelle, ceux qui, personnellement ou dont les ascendants ou 
+descendants, ont avec le mineur un litige mettant en cause l'état de 
+celui-ci ou une partie notable de ses biens. 
+     Toute personne peut être tuteur excepté les mineurs, les majeurs 
+protégés par la loi ainsi que toute personne frappée d’une quelconque 
+interdiction par la loi. Les critères essentiels sont la capacité juridique, 
+la moralité le lien affectif ou familial dans la mesure du possible. 
+ 
+Les obligations du tuteur 
+Article 93 : Le tuteur représente le mineur dans tous les actés civils, 
+sauf les cas dans lesquels la loi ou les usages autorisent les mineurs à 
+agir eux-mêmes. 
+Le tuteur accomplit seul, comme représentant du mineur, tous les actes 
+d'administration. 
+Il peut ainsi aliéner à titre onéreux les meubles d'usage courant et les 
+biens ayant le caractère de fruits. 
+Il administre les biens du mineur en bon père de famille et répond des 
+dommages qui pourraient résulter d'une mauvaise gestion. 
+Il ne peut ni acheter les biens du mineur, ni les prendre à loyer ou à 
+ferme, à moins que le conseil de famille ne l'ait autorisé à en passer 
+bail, ni accepter d’aucun droit de créance contre le mineur, ni faire 
+des donations au nom du mineur. 
+ 
+
+ 
+51 
+ 
+Article 94 : Le tuteur administre et agit en cette qualité du jour de sa 
+nomination si elle a été faite en sa présence, sinon, du jour où elle lui 
+a été notifiée. 
+Dans les quinze jours qui suivent, il requiert la levée des scellés s’ils 
+ont été apposés et fait procéder immédiatement à l'inventaire des biens 
+du mineur en présence du conseil de famille. Expédition de cet 
+inventaire est transmise au Juge des tutelles. 
+Le Juge des tutelles peut autoriser le tuteur à dresser l'inventaire par 
+acte sous seing privé. En ce cas, cet inventaire est établi en présence 
+de deux  membres du conseil de famille, désignés par le Juge des 
+tutelles. La  réquisition prévue à l'alinéa précédent sera, en ce cas, 
+faite par le Juge des tutelles. 
+A défaut d’inventaire dans le délai prescrit, le Juge des tutelles peut,  
+d'office ou à la requête de tout intéressé, y faire procéder. 
+Le défaut d'inventaire autorise le mineur à faire la preuve de la valeur 
+et de la consistance de ses biens par tous moyens, même par la 
+commune renommée. 
+Article 95 : Si le mineur est débiteur du tuteur, celui-ci doit le déclarer 
+dans l'inventaire, à peine de déchéance, et ce, sur la réquisition que 
+l'officier public est tenu de lui en faire et dont mention est portée au 
+procès-verbal. 
+    Le tuteur agit au nom et pour le compte du mineur dans la vie civile 
+(ex. : signer un bail, gérer un compte bancaire, souscrire un contrat, 
+etc.). Il peut accomplir tout acte d’administration normale en ayant une 
+conduite prudente, attentive et désintéressée  et u ne gestion loyale, 
+efficace et sans négligence.  Le tuteur ne peut jamais faire certains 
+actes, sauf autorisation spéciale du conseil de famille. 
+
+ 
+52 
+ 
+L’entrée en fonction du tuteur débute soit le jour même de sa 
+nomination, en sa présence, ou à la date de notification officielle de la 
+décision s’il était absent. Cela permet de sécuriser la gestion des biens 
+à partir d’une date claire pour garantir la transparence et prévenir les 
+abus. 
+Dans les quinze jours qui suivent, le tuteur doit demander la levée des 
+scellés, si des biens ont été protégés par scellés (par exemple, après le 
+décès d’un parent), faire procéder à un inventaire complet des biens du 
+mineur, en présence du conseil de famille et transmettre une copie de 
+cet inventaire au Juge des tutelles. 
+Si le juge l’autorise, l’inventaire Peut être rédigé sans notaire ou 
+huissier mais en présence de deux membres du conseil de famille 
+désignés par le juge qui, l se charge lui -même de la réquisition 
+d’inventaire.  
+Si l’inventaire n’est pas réalisé dans les 15 jours, le juge peut agir 
+d’office, ou être saisi par tout intéresser et ordonner l’inventaire lui -
+même. Si aucun inventaire n’a été fait , le mineur (une fois devenu 
+majeur) pourra contester la gestion du tuteur,  réclamer des comptes 
+sur des biens non déclarés, et utiliser tous moyens de preuve, y compris 
+des témoignages ou rumeurs sérieuses ("commune renommée"). 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en œuvre 
+Prévention Information des 
+communautés et 
+des familles ; 
+ 
+- Animations communautaires ; 
+- VAD ; 
+- Focus groupe ; 
+- Confection d’affiches. 
+Assistance Suivi des 
+mineurs sous 
+tutelles 
+- Accompagnement des tuteurs légaux ; 
+- Prise en charge psychosociale/ 
+Counseling/ Orientations. 
+
+ 
+53 
+ 
+Succession 
+Code civil : Loi N°2019-573 du 26 juin 2019, relative aux successions 
+(Art. 1, 5,7, 8, 9, 10, 11,22, 26, 28).  
+Définition : 
+La succession est la transmission du patrimoine (biens) laissé par une 
+personne décédée au profit d’autres personnes survivantes (héritiers).  
+La succession est prévue par la loi. Elle est dite testamentaire 
+lorsqu’elle est établie selon la volonté du défunt (ce testament doit être 
+également conforme à la loi).  
+Ouverture de la succession (art 1 et 5) : 
+     La succession s’ouvre au dernier domicile du défunt pour 
+l’ensemble des biens le jour de la mort ou du prononcé du jugement 
+déclaratif du décès. L’acte de décès ou jugement supplétif de décès 
+ainsi que le jugement d’hérédité sont les documents de base pou r 
+constater l’ouverture d’une succession. 
+Conditions pour succéder  
+Article 7 : Pour succéder, il faut exister à l’instant de la succession. 
+Sont donc incapables de succéder : 
+1°) celui qui n’est pas encore conçu ; 
+2°) l’enfant qui n’est pas né vivant. 
+Article 8  : Lorsque deux personnes, dont l’une avait vocation à 
+succéder à l’autre, périssent dans un même événement, l’ordre des 
+décès est établi par tous moyens. 
+Si cet ordre ne peut être déterminé, la succession de chacune d’elles 
+est dévolue sans que l’autre y soit appelée. 
+
+ 
+54 
+ 
+Toutefois, si l’un des codécédés laisse des descendants, ceux -ci 
+peuvent représenter leur auteur dans la succession de l’autre lorsque 
+la représentation est admise. 
+     Pour succéder, il faut : 
+• Exister au moment de l’ouverture de la succession (est pris en 
+compte l’enfant conçu moins de moins de 180 jours au moment 
+du décès du défunt si sin intérêt l’exige) ; 
+• Ne pas avoir été déclaré indigne. 
+La qualité d’héritier est constatée par un jugement rendu par le tribunal 
+du lieu d’ouverture de la succession. 
+Perte du titre d’héritier  
+Article 9 : Est indigne de succéder, celui qui a été condamné en tant 
+qu’auteur, ou complice, pour avoir volontairement donné ou tenté de 
+donner la mort ou porté des coups mortels au défunt. 
+Peut être déclaré indigne de succéder : 
+1°) celui qui s’est rendu coupable envers le défunt, de sévices, délits 
+ou injures graves ; 
+2°) celui qui a gravement porté atteinte à l’honneur, à la considération 
+ou aux intérêts patrimoniaux du défunt ou de sa famille ; celui qui a 
+commis les faits mentionnés à l’alinéa 1 du présent article et à l’égard 
+de qui l’action publique n’a pu être exercée ; 
+3°) L’action en déclaration d’indignité est ouverte à tous les 
+successibles, jusqu’au partage. 
+
+ 
+55 
+ 
+Le pardon accordé par le défunt fait cesser l’indignité. La preuve du 
+pardon peut être faite par tous moyens. Les enfants sont les héritiers 
+de leurs parents décédés. 
+Article 10 : L’indignité est personnelle. Les descendants de l’indigne 
+succèdent comme si leur auteur était prédécédé. 
+L’indigne ne peut réclamer sur les biens de cette succession, l’usufruit 
+que la loi accorde aux père et mère sur les biens de leurs enfants, ni 
+en être l’administrateur. 
+     L’indignité est une peine prononcée à raison des tords graves 
+commis à un hériter envers le défunt. 
+L’héritier peut être déclaré indigne de succéder lorsqu’il : 
+- S’est rendu coupable envers le défunt, de sévices, délits ou 
+injure grave ; 
+- A gravement porté atteinte à l’honneur, à la considération ou aux 
+intérêts patrimoniaux du défunt ou de sa famille ; 
+- A commis les faits de l’indignité de plein droit, mais qui n’a pu 
+être condamné (pour absence d’exercice de l’action publique). 
+ 
+L’ordre de la succession (art 11)  
+Article 11  : Les successions sont déférées aux enfants et autres 
+descendants du défunt, à ses ascendants, à ses parents collatéraux et 
+à son conjoint survivant dans l’ordre et suivant les règles ci -après 
+déterminées. 
+     La succession tient compte des personnes suivantes : 
+• Les descendants ; les enfants (y compris les adopté(e)s et autres 
+descendants ; 
+
+ 
+56 
+ 
+• Les ascendants  : père, mère (ascendants privilégiés), grand 
+parents (ascendants ordinaires) ; 
+• Les parents collatéraux ; frères et sœurs et leurs enfants 
+(collatéraux privilégiés) oncles, tantes, cousins, cousines et leurs 
+enfants (collatéraux ordinaires) ; 
+• Le conjoint survivant ; mari ou femme du défunt. 
+Les modalités de transmissions de la succession (Art 26 et 28) 
+Article 26 : Les enfants ou leurs descendants et le conjoint survivant 
+succèdent au défunt. Les trois quarts de la succession sont dévolus aux 
+enfants ou leurs descendants et un quart au conjoint survivant. 
+A défaut de conjoint survivant, les enfants ou leurs descendants 
+succèdent seuls au défunt. 
+L’enfant peut hériter des biens de ses ascendants quelle qu'en soit la 
+provenance. 
+Article 28 : Les enfants ou leurs descendants succèdent à leurs père, 
+mère, aïeuls, aïeules ou autres ascendants, sans distinction de sexe ni 
+de primogéniture et encore qu’ils soient issus de différents mariages 
+ou nés hors mariage. 
+Ils succèdent par égales portions et par tête, quand ils sont tous au 
+premier degré et appelés de leur chef. Ils succèdent par souche 
+lorsqu’ils viennent tous ou en partie par représentation. 
+L'indignité des père et mère ne s'étend pas à leurs descendants. En 
+conséquence, l'enfant peut hériter de son grand-père. 
+     La transmission successorale se fait selon la règle de la priorité des 
+ordres et des degrés. Le principe est que les ordres s’excluent les uns 
+des autres. 
+
+ 
+57 
+ 
+En présence de tous les ordres, les enfants se partagent la succession 
+avec le conjoint survivant. 
+Tous les enfants recueillent ¾ de la succession et le ¼ est dévolu au 
+conjoint survivant. A défaut de conjoint survivant, les enfants 
+recueillent la totalité de la succession. 
+Les enfants ou leurs descendants succèdent à leur père, mère, aïeuls 
+ou autres ascendants à part égal portion et par tête 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en œuvre 
+Prévention Information des 
+communautés et des 
+familles ; 
+ 
+- Animations communautaires 
+- VAD 
+- Focus groupe 
+- Confection d’affiches 
+- Emissions radio en langues 
+locales sur la succession 
+Assistance Soutien aux enfants 
+privés illégalement de 
+leurs droits 
+successoraux 
+- Accompagnement des mineurs 
+dans les procédures ; 
+- Assistance judiciaire et juridique 
+- Assistance psychosociale 
+- / Counseling/ Orientations 
+Mesures de protection pénale du mineur 
+Code pénal loi N°2024-358 du 11 juin 2024 modifiant la loi N°2019 -
+574 du 26 juin 2019 portant code pénal ; Article 783 de la loi N°2018-
+975 du 27 décembre 2018 portant code de procédure pénale ; Art. 113 
+Nouveau al 1, Art. 103. 
+ 
+
+ 
+58 
+ 
+Définition du mineur 
+Art 18 la loi N°2019-574 du 26 juin 2019 portant code pénal :  
+Est mineur, toute personne âgée de moins de dix-huit (18) ans lors de 
+la commission de l’infraction. 
+Les mineurs de dix (10), treize (13) et seize (16) ans sont ceux qui n’ont 
+pas atteints ces âges lors de la commission de l’infraction. 
+L'enfant qui commet une infraction sur les biens de ses parents ne peut 
+pas être poursuivi parce qu`il bénéficie d`une immunité familiale.  
+Protection du mineur infracteur 
+Article 103 al 2 la loi N°2019-574 du 26 juin 2019 portant code pénal 
+Ne peuvent donner lieu qu'à des réparations civiles les infractions 
+contre la propriété commises : 
+2°) par un enfant ou autre descendant au préjudice de ses père ou 
+mère ou autres ascendants, par les mères ou père ou autres ascendants 
+au préjudice de leurs enfants ou autres descendants. 
+Les faits commis par un enfant de moins de 10 ans ne peuvent faire 
+l'objet d'aucune qualification et de poursuites pénales.  
+ 
+Article 113 Nouveau al 1 la loi n° 2021 -893 du 21 décembre 2021  : 
+Les faits commis par un mineur de 10 ans ne sont pas susceptibles de 
+qualification et de poursuites pénales. Cependant, les parents sont 
+civilement responsables des actes répréhensibles posés par leurs 
+enfants. 
+L’enfant de 13 ans reconnu coupable d’une infraction ne peut être 
+condamné à une peine privative de liberté. Il ne peut faire l’objet que 
+de mesures de protection, d’assistance, de surveillance et d'éducation 
+de même que l’enfant de 10 à 13 ans. 
+
+ 
+59 
+ 
+Article 113 Nouveau al 2 la loi n° 2021 -893 du 21 décembre 2021) : 
+Le mineur de treize ans bénéficie de droit, en cas de culpabilité, de 
+l'excuse absolutoire de minorité. Il ne peut faire l'objet que des 
+mesures de protection, d'assistance, de surveillance et d'éducation 
+prévues par la loi. 
+Les enfants de 16 à 18 ans qui commettent une infraction bénéficient 
+d'une excuse atténuante. 
+Article 113 Nouveau al 3, 4 et 5 la loi n° 2021 -893 du 21 décembre 
+2021) : Le mineur âgé de treize ans et plus bénéficie de l'excuse 
+atténuante de minorité. En matière de crime et de délit, l'excuse 
+atténuante de minorité entraîne l’application de la moitié des peines 
+prévues par l'article 112. En matière de contravention, elle e xclut 
+toute peine privative de liberté. Le juge ne peut prononcer qu'une 
+peine de travail d’intérêt général ou une admonestation. 
+Article 783  Code de procédure pénale  : Lorsqu'un mineur est 
+impliqué dans une procédure pénale, soit en tant qu'auteur ou 
+complice soit en tant que victime ou témoin, l'officier de police 
+judiciaire, le procureur de la République ou le juge, selon le cas, en 
+avise le  service de la protection judiciaire de l'enfance et de la 
+jeunesse placé auprès de chaque juridiction, aux fins d'assurer une 
+assistance à ce mineur. 
+     Les mineurs de dix (10), treize (13) et seize (16) ans sont ceux qui 
+n’ont pas atteints ces âges lors de la commission de l’infraction. Les 
+mineurs de dix (10), treize (13) et seize (16) ans sont ceux qui 
+bénéficient d’une protection spéciale parce que co nsidéré comme 
+vulnérables ; Les faits commis par les mineurs de moins 10ans ne 
+peuvent faire l’objet de poursuite pénal. Ils bénéficient des mesures de 
+
+ 
+60 
+ 
+protection d’assistance, de surveillance et d’éducation. L’éducation de 
+l’enfant mineur prime sur la répression mais il revient que ceux -ci 
+peuvent faire preuve de sanctions pénales adaptées à la minorité. Ces 
+mesures peuvent être ordonnées par le juge. L'enfant qui commet une 
+infraction sur les biens de ses parents ne peut pas être poursuivi parce 
+qu`il bénéficie d`une immunité familiale.  
+La responsabilité civile des parents peut être engagée lorsque les 
+mineurs portent atteintes aux biens d’autrui.  Les faits commis par un 
+enfant de moins de 10 ans ne peuvent faire l'objet d'aucune 
+qualification et de poursuites pénales.  
+ 
+Limites d’âge et responsabilité pénale 
+     Les faits commis par un mineur de 10 ans ne sont pas susceptibles 
+de qualification et de poursuites pénales. Cependant, les parents sont 
+civilement responsables des actes répréhensibles posés par leurs 
+enfants. 
+L’enfant de 13 ans reconnu coupable d’une infraction ne peut être 
+condamné à une peine privative de liberté. Il ne peut faire l’objet que 
+de mesures de protection, d’assistance, de surveillance et d'éducation 
+de même que l’enfant de 10 à 13 ans. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention - Formation des acteurs 
+clés sur les dispositions 
+légales en matière de 
+protection des mineurs 
+infracteurs ; 
+ 
+- Ateliers de formation/ 
+Séminaires ; 
+- Elaboration de guides/ 
+brochures 
+
+ 
+61 
+ 
+Protection physique et morale de l’enfant 
+Loi n°2021‐893 du 21 décembre 2021 modifiant la loi n°2019‐574 du 
+26 juin 2019 portant Code pénal  : Art 357, 358, 359, 360, 401, 
+402,403 nouveau, 404, 410, 412, 439  ; la loi n°2019‐574 du 26 juin 
+2019 portant Code pénal ; loi n° 2019-570 du 26 juin 2019 relative au 
+mariage. 
+Loi n° 2010-272 du 30 septembre 2010 portant interdiction de la traite 
+et des pires formes de travail des enfants : Art 16, 21 
+Loi n°2016-1111 du 08 décembre 2016 relative à la lutte contre la 
+traite des personnes : Art 4 
+Arrêté n°0075/MEN/DELC du 28 septembre 2009 portant interdiction 
+des punitions physiques et humiliantes à l’endroit des élèves en milieu 
+scolaire : Art 1 
+ 
+Pour protéger l’enfant contre toutes formes de violences tant 
+physiques que morales, la loi réprime sévèrement  les infractions 
+suivantes : 
+▪ L’atteinte à la moralité  
+ 
+Article 357 : Est puni d'un emprisonnement d’un mois à deux ans et 
+d'une amende de 50.000 à 500.000 francs quiconque : 
+1° fabrique, détient, importe, exporte, transporte en vue d'en faire 
+commerce, distribution, location, affichage ou exposition, tous 
+imprimés, tous écrits, dessins, affiches, gravures, peintures, 
+photographies, films ou clichés, matières ou reproductions 
+phonographiques, emblèmes et d'une manière générale, tous objets ou 
+images contraires aux bonnes mœurs ; 
+
+ 
+62 
+ 
+2° vend, loue, même à titre gratuit et même non publiquement, sous 
+quelque forme que ce soit, affiche, expose ou projette les documents 
+imprimés ou objets énumérés au paragraphe précédent ; 
+3° fait entendre dans les conditions de l'article 184, des chants, cris et 
+discours contraires aux bonnes mœurs ; 
+4° attire publiquement l'attention sur une occasion de débauche ou 
+publie une annonce ou une correspondance de ce genre quels qu'en 
+soient les termes. 
+Les peines sont portées au double si le délit est commis envers un 
+mineur. 
+Quand les délits prévus par le présent article sont commis par la voie 
+de la presse, les dispositions du deuxième alinéa de l'article 183 sont 
+applicables. La tentative est punissable.  
+     L’article 357 protège la société en général, mais surtout les 
+enfants. Toute diffusion ou tentative de diffusion de contenus 
+obscènes, immoraux ou incitant à la débauche est interdite. Si cela 
+concerne un mineur, la loi punit beaucoup plus sévèrement tout e 
+personne qui les expose à de tels contenus afin de protéger son 
+développement psychologique, affectif et moral ainsi que son intégrité 
+(peine allant jusqu’à quatre (4) ans de prison et 1.000.000 FCFA 
+d’amende). 
+▪ Le proxénétisme 
+ 
+Article 358  : Est considéré comme proxénète et puni d'un 
+emprisonnement d'un à cinq ans et d'une amende de1.000.000 à 
+10.000.000 de francs, celui qui : 
+
+ 
+63 
+ 
+1°) d'une manière quelconque, aide, assiste ou protège sciemment la 
+prostitution d'autrui ou le racolage en vue de la prostitution ; 
+2°) sous une forme quelconque, partage les produits de la prostitution 
+d'autrui et reçoit des subsides d'une personne se livrant 
+habituellement à la prostitution ; 
+3°) vit sciemment avec une personne se livrant habituellement à la 
+prostitution et ne peut justifier de ressources correspondant à son 
+train de vie ; 
+4°) entraîne ou entretient, même avec son consentement, une personne 
+même majeure en vue de la prostitution ou la livre à la prostitution ou 
+à la débauche ; 
+5°) fait office d'intermédiaire à un titre quelconque, entre les 
+personnes se livrant à la prostitution ou à la débauche et les individus 
+qui exploitent ou rémunèrent la prostitution ou la débauche d'autrui. 
+La tentative des délits visés au présent article est punissable. 
+ 
+Article 359 : Les peines prévues par l'article précédent sont portées au 
+double, dans les cas où le délit a été commis à l'égard d'une personne 
+de moins de dix-huit (18) ans. 
+     Est proxénète toute personne qui, d’une manière ou d’une autre, 
+profite, organise, favorise ou vit de la prostitution d’autrui (majeur ou 
+mineur), même avec le consentement de la victime. La tentative et la 
+complicité sont aussi punissables. Les peines sont doublées (prison + 
+amendes), et encore plus aggravées dans le cas des mineurs car cela 
+constitue une violation grave des droits fondamentaux de l’enfant. Par 
+ailleurs, les dispositions de cet article protègent l’enfant contre toute 
+forme d’exploitation sexuelle.  
+
+ 
+64 
+ 
+▪ Atteinte aux mœurs 
+ 
+Article 360 : Est puni d'un emprisonnement de deux à cinq ans et 
+d'une amende de 500.000 à 5.000.000 de francs quiconque attente aux 
+mœurs en excitant, favorisant ou facilitant la débauche ou la 
+corruption de mineurs. Il est tenu compte pour le prononcé de la peine, 
+des actes accomplis même à l’étranger. La tentative est punissable. 
+     Toute personne qui pousse, encourage, aide ou facilite la débauche 
+ou la corruption d’un mineur commet un délit. La protection du mineur 
+s’étend même si l’acte est commis hors du pays. En l’espèce, les 
+auteurs peuvent être poursuivis sur le territoire ivoi rien. Exemple : Si 
+une personne emmène un mineur à l’étranger pour le corrompre 
+sexuellement, elle peut être jugée en Côte d’Ivoire même si la 
+personne ne passe pas à l’acte, le simple fait d’inciter ou de tenter est 
+punit par la loi. Au titre des peines, l’emprisonnement est de deux (2) 
+à cinq (5) ans plus une amende de 500.000 à 5.000.000 FCFA.  
+▪ Traitements dégradants 
+Article 401 : Constituent des traitements dégradants, des agissements 
+qui humilient un individu et portent manifestement atteinte à sa 
+dignité. 
+Est puni d'un emprisonnement de six mois à deux ans et d'une amende 
+de 100.000 à 1.000.000 de francs quiconque inflige des traitements 
+dégradants. 
+Article 402 : La peine est portée au double dans les cas prévus à la 
+présente section : 
+
+ 
+65 
+ 
+1°) si l'auteur est un agent public ou s'il a agi à l'instigation d'un agent 
+public ou avec le consentement de celui-ci ; 
+2°) si la victime est le conjoint ou le concubin du coupable ; 
+3°) si la victime est un mineur ; 
+4°) s'il en est résulté pour la victime une infirmité permanente ou si la 
+mort s'est ensuivie. 
+     Constituent des traitements dégradants, des actes qui humilient 
+une personne et portent clairement atteinte à sa dignité humaine.  
+Exemple : forcer un enfant à subir des humiliations, l’exposer à des 
+moqueries, l’humilier devant d’autres, lui infliger des punitions 
+avilissantes (le déshabiller en public, l’obliger à ramper, etc.). 
+La loi prévoit des sanctions plus lourdes (peine doublée) dans 
+certains cas : 
+- Si l’auteur est un agent public (enseignant, policier, agent 
+social, etc.) ou s’il agit avec leur appui ; 
+Exemple : un instituteur qui humilie ou rabaisse un élève.  
+- Si la victime est le conjoint ou le concubin du coupable. 
+Cela vise la violence conjugale ; 
+- Si la victime est un mineur, c’est la situation la plus grave : 
+un parent, un tuteur, un éducateur ou toute autre personne 
+qui humilie un enfant encourt le double de la peine ; 
+- Si les traitements dégradants causent une infirmité 
+permanente ou la mort de la victime. 
+Exemple : un enfant soumis à des sévices humiliants et violents qui 
+entraînent un handicap ou même son décès. 
+ 
+
+ 
+66 
+ 
+▪ Le viol 
+ 
+Article 403 : Constitue un viol, tout acte de pénétration vaginale, 
+anale, buccale ou de quelque nature qu’il soit, à but sexuel, imposé à 
+autrui sans son consentement en usant d’une partie du corps humain 
+ou d’un objet, par violence, menace, contrainte ou surprise. 
+Constitue également un viol, tout acte de pénétration vaginale, anale, 
+buccale ou de quelque nature qu’il soit, à but sexuel, commis sur un 
+mineur de quinze ans où obtenu de lui, même avec son consentement. 
+Article 404 : Le viol est puni de l'emprisonnement à vie lorsqu'il est 
+commis : 
+1°) sur un mineur ; 
+2°) sur une personne dont la vulnérabilité est due à son âge, à une 
+maladie, à une infirmité, à une déficience physique ou psychique ou à 
+un état de grossesse apparente ou connue de l'auteur ; 
+3°) par un ascendant ou par toute autre personne ayant autorité sur 
+la victime ; 
+4°) par une personne qui abuse de l'autorité que lui confèrent ses 
+fonctions ; 
+5°) par plusieurs personnes ;  
+6°) avec usage ou menace d'une arme ; 
+7°) par une personne agissant en état d'ivresse manifeste ou sous 
+l'emprise manifeste de produits stupéfiants. 
+Le viol est puni de la même peine : 
+1°) lorsque l'auteur, à cette fin, a eu recours à un réseau de 
+communication électronique pour la  diffusion de messages à 
+destination d’un public non déterminé, ayant permis de rencontrer la 
+victime ; 
+
+ 
+67 
+ 
+2°) lorsqu'il est précédé, accompagné ou suivi de tortures ou d'actes 
+de barbarie. 
+     Désormais, le viol est le fait d’entretenir des rapports sexuels avec 
+une personne sans son consentement par un acte de pénétration à but 
+sexuel, vaginal, anal, buccal ou de quelque nature qu’il soit, avec une 
+partie du corps ou un objet quelconque  avec violence, menace, 
+contrainte ou par surprise. Tout acte à caractère sexuel commis sur un 
+enfant de moins de 15 ans même avec son consentement, est toujours 
+considéré comme un viol. 
+Le viol est sévèrement puni (emprisonnement à vie) dans les situations 
+suivantes : 
+• Si la victime est un mineur ; 
+• Si la victime est une personne vulnérable (âge avancé, 
+malade, en situation d’handicap, déficience mentale, ou 
+femme enceinte) ; 
+• Si l’auteur du viol est un parent proche (père, oncle, grand 
+frère, etc.) ou toute personne ayant une autorité (tuteur, 
+enseignant, éducateur, etc.) ; 
+• Si l’auteur du viol est une personne qui profite de son pouvoir 
+ou sa fonction (chef, patron, agent de sécurité, etc.) ; 
+• Si le viol est commis par plusieurs personnes ensemble ; 
+• S’il est commis avec une arme ou sous l’effet de 
+l’alcool/drogues ;  
+• S’il est associé à des tortures ou actes de barbarie  (violence 
+supplémentaire sur la victime) ; 
+• Si l’auteur utilise Internet ou un réseau social  pour attirer, 
+piéger ou rencontrer la victime. 
+ 
+
+ 
+68 
+ 
+▪ L’acte impudique et contre nature 
+Article 410 : Constitue l'inceste, le fait d'avoir des rapports sexuels 
+avec ses ascendants ou descendants sans limitation de degré ou avec 
+un frère ou une sœur germaine, consanguins ou utérins. 
+Quiconque commet un inceste est puni d'un emprisonnement de six 
+mois à un an et d'une amende de 100.000 à 1.000.000 de francs ou de 
+l'une de ces deux peines seulement. 
+Article 412  : Les dispositions concernant les mineurs relatives à 
+l'attentat à la pudeur sont applicables lorsque l'inceste est commis sur 
+une personne incapable de se protéger en raison de son état physique 
+ou mental. La privation des droits prévus à l'article 68 peut être 
+prononcée. 
+▪ Le délaissement ou l’abandon d’enfant en un lieu solitaire ; 
+▪ L’abandon ou l’incitation à l’abandon d’un enfant dans un but 
+lucratif ; 
+▪ L’enlèvement d’enfant ; 
+▪ Torture et autres traitements inhumains et dégradants. 
+     La loi définit l ’inceste comme :  le fait d’avoir des relations 
+sexuelles avec : 
+o Un ascendant ou descendant (grands-parents, père et mère ; 
+enfants, petits-enfants, etc.), sans limite de degré ; 
+o Un frère ou une sœur, qu’ils soient : 
+▪ Germains (même père et même mère) ; 
+▪ Consanguins (même père seulement) ; 
+▪ Utérins (même mère seulement). 
+ 
+
+ 
+69 
+ 
+Lorsque l’inceste est commis sur un mineur, ou une personne 
+incapable de se défendre (handicap physique, déficience mentale, 
+maladie, etc.), la loi applique alors les dispositions déjà prévues pour 
+l’attentat à la pudeur sur mineur (qui sont beaucoup plus sévères). 
+En outre, le juge peut décider d’une privation de droits de l’auteur 
+(article 68 du Code pénal) qui sont pour rappel : 
+ 
+• Interdiction d’exercer certaines fonctions ; 
+• Perte de droits civiques ; 
+• Interdiction d’exercer une activité impliquant des 
+enfants, etc. 
+ 
+▪ Mariage forcé  
+ 
+Article 439 : Est puni d'un emprisonnement d'un à cinq ans et d'une 
+amende de 360. 000 à 1.000.000 de francs ou de l'une de ces deux 
+peines seulement, quiconque : 
+1° contraint une personne à entrer dans une union matrimoniale de 
+nature civile, coutumière ou religieuse ; 
+2° ayant autorité sur un mineur, autorise son union matrimoniale, 
+qu’elle soit de nature civile, coutumière ou religieuse ; 
+3° pour satisfaire exclusivement son intérêt personnel, impose à 
+autrui un travail ou un service pour lequel il ne s'est pas offert de 
+son plein gré. 
+Le maximum de la peine est prononcé si la personne contrainte à 
+l’union matrimoniale ou au travail ou service pour lequel elle ne s’est 
+pas offerte de son plein gré est un mineur. 
+L’autorité civile, coutumière ou religieuse qui prête son ministère, en 
+connaissance de cause, à la célébration de l’union matrimoniale visée 
+au paragraphe 1 ci -dessus ou à celle de toute union impliquant un 
+mineur, est punie de la même peine que l’auteur. 
+
+ 
+70 
+ 
+Les dispositions des articles 114, 115 et 130 ne sont pas applicables 
+si la victime est mineure. 
+La tentative est punissable. 
+     Contraindre une personne à se marier, que celle-ci soit majeure ou 
+mineure, quelle que soit la nature de l’union ( civile, coutumière ou 
+religieuse.) est passible de poursuites et de condamnations pénales. 
+Un chef coutumier ou religieux qui célèbre un mariage forcé ou un 
+mariage impliquant un enfant, en connaissance de cause , est puni au 
+même titre que l’auteur principal. 
+Aucune excuse n’est possible si la victime est un mineur 
+- Les articles 114, 115 et 130 (qui permettent parfois d’atténuer 
+la responsabilité pénale) ne s’appliquent pas  lorsqu’il s’agit 
+d’un enfant ; 
+- Cela signifie que même si le mariage était « accepté » par la 
+famille, ou si l’auteur invoque une coutume, l’excuse 
+n’exonère pas la responsabilité de l’auteur. 
+La tentative est punissable.  Même si le mariage forcé n’a pas eu lieu 
+mais que les préparatifs ou pressions étaient engagés, l’infraction est 
+déjà constituée. 
+▪ Traite, pires formes de travail des enfants et esclavage  
+Loi n° 2010-272 du 30 septembre 2010 portant interdiction de la traite 
+et des pires formes de travail des enfants.  
+ 
+Article 16 : L’état et les collectivités prennent toutes les mesures 
+appropriées en vue d’assurer la protection de tous les enfants contre 
+le travail dangereux, la traite et toute forme d’exploitation. 
+ 
+
+ 
+71 
+ 
+Article 21 : Quiconque se livre à la traite d’enfants telle que définie à 
+l’article 11 de la présente loi est puni d’un emprisonnement de 10 à 
+20 ans et d’une amande de 5 000 000 à 20 000 000 de francs CFA. 
+Loi n°2016-1111 du 08 décembre 2016 relative à la lutte contre la 
+traite des personnes. 
+ 
+Article 4  : Constitue la traite de personne, le recrutement, le 
+transport, le transfert, l’hébergement ou l’accueil d’une personne à 
+des fins d’exploitation dans une des circonstances suivantes : 
+1°) soit avec l’emploi de menaces, de contraintes, de violences ou 
+de manœuvre dolosive visant la victime, sa famille ou une personne 
+en relation habituelle avec la victime ; 
+3°) soit par abus d’une situation de vulnérabilité dûe à son âge, à 
+une maladie, à une infirmité, à une déficience physique ou 
+psychique ou à un état de grossesse apparente ou connue de son 
+auteur ou par enlèvement. 
+ 
+     L’État ivoirien et les collectivités locales (communes, régions, 
+etc.) assurent la protection de tous les enfants contre : 
+- Le travail dangereux (ex. : travail dans les champs de cacao avec 
+machettes, mines, carrières, usines, ou toute activité qui menace 
+leur santé et leur développement) ; 
+- La traite des enfants (recrutement, transport, transfert, hébergement 
+ou accueil d’enfants dans le but de les exploiter) ; 
+- Toute forme d’exploitation (sexuelle, domestique, économique, 
+esclavage moderne, mendicité forcée, etc.).  
+En l’espèce, ce n’est pas seulement une responsabilité des familles : 
+l’État et les collectivités doivent agir activement (prévenir, surveiller, 
+intervenir, sanctionner).  
+La traite c’est lorsqu’une personne pose l’une des actions suivantes  : 
+recruter, transporter un enfant (le déplacer d’un endroit à un autre, 
+
+ 
+72 
+ 
+parfois loin de sa famille), transférer un enfant (le remise à une autre 
+personne, souvent contre de l’argent ou une promesse), héberger et 
+accueillir un enfant.  
+Si c’est fait dans le but de l’exploiter (par exemple : le faire travailler, 
+mendier, voler, se prostituer ou toute autre activité dangereuse)  ; Et 
+utilise l’un de ces moyens : la menace, la violence, la peur, la tromperie 
+ou profite de la faiblesse de l’enfant. Cette personne commet un crime 
+grave qui est sévèrement puni par la loi. C’est un crime contre les 
+droits fondamentaux de l’enfant qui compromet sa dignité, son 
+éducation et sa sécurité. 
+ 
+▪ Interdiction des punitions physiques et humiliantes à l’école 
+Arrêté n°0075/MEN/DELC du 28 septembre 2009 portant interdiction 
+des punitions physiques et humiliantes à l’endroit des élèves en milieu 
+scolaire. 
+Article 1 : Il est interdit à tout enseignant du secteur publique ou privé 
+d’infliger aux élèves des punitions physiques et humiliantes sous 
+quelques formes que ce soit. 
+ 
+     L’école est un lieu de protection et d’apprentissage positif. Les 
+violences physiques et psychologiques y sont donc interdites par le 
+législateur ivoirien. 
+Les sanctions qui sont infligées aux élèves par leurs encadreurs ne 
+doivent pas être de nature à causer des traumatismes physiques et 
+psychologiques (peur, perte de confiance en soi, décrochage scolaire). 
+• Punitions physiques interdites : coups de bâton, gifles, 
+pincements, tirage d’oreilles, agenouillement prolongé au 
+soleil, corvées épuisantes, etc. 
+
+ 
+73 
+ 
+• Punitions humiliantes interdites : insultes, moqueries, 
+exposition de l’enfant devant la classe, paroles dévalorisantes, 
+privation injustifiée de nourriture, mise au piquet, etc. 
+L’objectif est de garantir à l’enfant un environnement scolaire sûr, 
+digne et propice à son épanouissement.  
+Actions 
+essentielles 
+Activités clés Démarches de la mise 
+en œuvre 
+Prévention - Sensibilisation des 
+familles et des 
+communautés ; 
+- Sensibilisation des guides 
+religieux et des chefs 
+traditionnels ; 
+-Formation des enfants sur 
+les dispositifs de 
+signalement anonymes ; 
+- Renforcement des 
+capacités des acteurs clés. 
+ 
+-Animations 
+communautaires ; 
+- Education parentale ; 
+- Ateliers/ séminaires ; 
+- Emissions radio en 
+langues locales ; 
+- Campagne sur les 
+lignes d’assistance dans 
+les écoles et les 
+communautés. 
+ 
+Protection pénale de l’état civil de l’enfant 
+Article 386  Loi n° 2019 -574 du 26 juin 2019 portant Code Pénal 
+Ivoirien modifié par la Loi n° 2021-893 du 21 décembre 2021. 
+     La protection pénale de l’état civil de l’enfant signifie que la loi 
+intervient pour réprimer et sanctionner toute atteinte frauduleuse à son 
+identité légale et sociale afin de garantir à l’enfant une personnalité 
+juridique stable et respectée. 
+
+ 
+74 
+ 
+La protection vise : 
+- Les enfants de moins de 10 ans ; 
+- Les enfants de plus de 10 ans, mais atteint d’une infirmité 
+mentale les empêchant de reconnaître leur propre 
+identité. 
+Sont sanctionnés, tous les actes qui ont pour effet de : 
+- Compromettre ; 
+- Détruire ; 
+- Ou modifier l’état civil de l’enfant. 
+Il s’agit de protéger les enfants contre : 
+- La falsification d’actes de naissance ; 
+- L’usurpation d’identité ; 
+- Les déclarations frauduleuses ou mensongères ; 
+- Toute autre manœuvre à leur identité au regard de la loi et de 
+la société. 
+5 à 10 ans d’emprisonnement sont requis pour quiconque compromet, 
+détruit ou modifié l’état civil d’un enfant de moins de 10 ans, ou d’un 
+enfant plus âgé rendu incapable de reconnaître son identité par une 
+infirmité mentale. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise 
+en œuvre 
+Prévention - Sensibilisation des familles 
+et des communautés 
+- Sensibilisation des guides 
+religieux et des chefs 
+traditionnels. 
+ 
+-Animations 
+communautaires ; 
+-Education parentale ; 
+- VAD. 
+
+ 
+75 
+ 
+Existence de juridictions pour mineurs 
+Article 795 : Le mineur qui comparait devant le juge des enfants est 
+assisté d'un avocat. Lorsqu'il n'en a pas, le procureur de la République 
+saisit le bâtonnier qui lui en désigne un d'office.Toutefois, dans les 
+localités où il n'y a pas d'avocat, le mineur est assisté  de son 
+représentant légal ou d'un éducateur de la protection judiciaire de 
+l'enfance et de la jeunesse. 
+    L’assistance du mineur  : Lorsqu’ une infraction est reprochée à 
+un mineur, celui-ci peut être conduit devant le juge des enfants ou il 
+doit être assisté par un avocat désigné par ses soins. A défaut d’avocat 
+désigné par le mineur, il revient au bâtonnier, saisit par le Procureur 
+de la République, de lui en désigner un. Toutefois, dans les juridictions 
+ou il n’y a pas d’avocat, le mineur est assisté soit par son père, sa mère 
+ou son tuteur, soit encore par un agent du Service de la Protection 
+Judiciaire de l'Enfance et de la Jeunesse (SPJEJ).  
+Article 808 : Le juge des enfants prévient des poursuites les parents, 
+tuteurs ou gardiens connus. A défaut de choix d'un défenseur par le 
+mineur ou son représentant légal, il fait désigner par le bâtonnier un 
+défenseur d'office.  Dans les juridictions aux sièges desquelles ne 
+réside pas d'avocat, il est désigné un défenseur choisi parmi les 
+personnes présentant toutes garanties désirables inscrites sur une liste 
+établie par le président du tribunal sur proposition du juge des 
+enfants. 
+ 
+
+ 
+76 
+ 
+    La défense du mineur : Lorsqu’ une infraction est reprochée à un 
+mineur, celui -ci comparait devant le juge des enfants qui est tenu 
+d’aviser les père, mère, tuteur ou la personne qui héberge ledit mineur. 
+La défense de ce mineur est assurée par un avocat désigné soit par le 
+mineur lui -même, soit par le père , mère, tuteur ou la personne qui 
+assure sa garde. A défaut d’avocat désigné par le mineur ou son 
+représentant légal, il revient au bâtonnier, saisit par le Juge des enfants, 
+de lui en désigner un. Dans les juridictions ou il n’ya pas d’avocat, la 
+défense du mineur auquel est reprochée une infraction est assurée par 
+une personne inscrite sur une liste dressée par le président du tribunal 
+sur proposition du juge des enfants. 
+Article 817 : Le mineur âgé de seize ans au moins, accusé de crime 
+est jugé par le tribunal criminel pour mineurs. Celui -ci se réunit 
+durant la session du tribunal criminel.  
+Il est composé : 
+• d'un président ; 
+• de deux membres magistrats ; 
+• de deux assesseurs. 
+    Lorsqu’un mineur âgé de 16 ans au moins commet un crime 
+(notamment un viol, un assassinat ou un meurtre) il est jugé par un 
+tribunal spécial dénommé Tribunal Criminel pour mineur qui est 
+composé de 5 personnes à savoir 3 magistrats et 2 accesseurs non 
+magistrats (nommé par arrête du garde de sceaux) qui sont choisis 
+parmi des personnes qui s’intéressent à la question des mineurs. 
+
+ 
+77 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention - Sessions de formations 
+des acteurs clés sur le 
+fonctionnement des 
+juridictions pour 
+mineurs ; 
+- Information des familles, 
+des communautés et des 
+Organisations à base 
+communautaire. 
+- Animations 
+communautaires ; 
+- Séminaires de 
+formation. 
+Plaidoyer Rencontres - Séances d’échanges 
+avec le Gouvernement 
+pour l’extension des 
+juridictions pour mineurs 
+dans toutes les localités ; 
+- Séances de travail avec 
+le CNDH ; 
+- Séances de travail avec 
+l’Ordre des avocats. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+78 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+79 
+ 
+Violences faites sur enfant 
+ Article 381 du code péna l : La violence  constitue une atteinte à 
+l’intégrité physique d’un individu. 
+Article 382 du code pénal : Constitue une voie de fait, le fait d'exercer 
+volontairement sur une personne une violence ou tout autre acte qui 
+ne constitue aucun coup ni n'occasionne aucune blessure, mais est de 
+nature à impressionner la victime ou à lui causer un trouble.  
+Est puni d'un emprisonnement d'un à cinq ans et d'une amende de 
+100.000 à 1.000.000 de francs, quiconque exerce des violences ou 
+voies de fait sur la personne d'un mineur ou sur une personne 
+incapable de se protéger en raison de son état physique ou mental, ou 
+la prive volontairement d'aliments ou de soins au point de 
+compromettre sa santé.  
+Est puni d'un emprisonnement de quinze jours à six mois et d'une 
+amende de 100.000 à 1.000.000 de francs, quiconque commet une voie 
+de fait.  
+     La violence peut se manifester par des coups, des blessures, ou 
+toute autre forme d’agression corporelle. Cela porte directement 
+atteinte au corps de la personne et peut entraîner des douleurs, des 
+lésions ou des séquelles. Même en l’absence de contact physique, des 
+formes de violence comme les menaces, l’intimidation, l’humiliation 
+ou le harcèlement peuvent profondément affecter l’état mental ou 
+émotionnel d’une personne. La voie de fait est un acte de violence ou 
+de contrainte, commis volontairement qu i porte atteinte gravement à 
+une liberté fondamentale ou à l’intégrité physique, même sans coups 
+ni blessures visibles, mais qui est de nature à impressionner, intimider 
+ou troubler la victime. 
+
+ 
+80 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention Sensibilisation des 
+familles et des 
+communautés. 
+ 
+- Mobilisation communautaire ; 
+- Production de supports audio 
+et visuels ; 
+- Focus groupe avec les enfants 
+dans les communautés et les 
+écoles. 
+Protection Accompagnement 
+des victimes. 
+- Prise en charge 
+psychosociale ; 
+- Prise en charge médicale ; 
+- Prise en charge juridique et 
+judiciaire. 
+Réponse - Renforcement des 
+capacités des 
+acteurs clés sur la 
+gestion des cas : 
+- Offrir des services 
+adéquats de prise 
+en charge aux 
+victimes. 
+- Organiser des sessions 
+d’orientation sur la gestion des 
+cas ; 
+- Faire des VAD ; 
+- Prise en charge par un 
+psychologue, travailleurs 
+sociaux, accompagnement 
+familiale, structures 
+spécialisées, abri et soins, 
+hébergement d’urgence. 
+ 
+Abandon et délaissement d’enfant 
+Article 422 code pénal : Quiconque expose ou fait exposer, délaisse 
+ou fait délaisser, en un lieu solitaire, un mineur de treize (13) ans ou 
+une personne incapable de se protéger en raison de son état physique 
+ou mental. 
+
+ 
+81 
+ 
+Article 422, 423  code pénal : Est puni d'un emprisonnement d'un à 
+trois ans et d'une amende de 50.000 à 500.000 francs quiconque 
+abandonne un enfant. 
+Est puni de dix jours à six mois d'emprisonnement et de 50.000 à 
+500.000 francs d'amende, quiconque :  
+1°) dans un esprit de lucre, provoque les parents ou l'un 
+d'eux à abandonner à lui-même ou un tiers leur enfant né 
+ou à naître ;  
+2°) fait souscrire ou tente de faire souscrire, par les futurs 
+parents ou l'un d'eux, un acte aux termes duquel ils 
+s'engagent à abandonner à lui-même ou à un tiers, l'enfant 
+à naître. 
+     le fait d’exposer, de délaisser ou de faire délaisser une personne 
+vulnérable, soit un mineur de moins de 13 ans, soit une personne 
+incapable de se protéger (du fait de son âge, de son handicap, de sa 
+maladie, etc.) dans un endroit isolé ou dangereux, augmentant le risque 
+pour la victime de façon volontaire est punissable.  L’incitation à 
+l’abandon est également punissable. A titre d’exemple : 
+• Une personne paie une femme enceinte pour qu’elle lui 
+"cède" son futur enfant après l’accouchement ; 
+• Quelqu’un convainc une mère en difficulté de signer un 
+accord pour abandonner son enfant en échange d'argent ; 
+• Un individu propose une somme d'argent à des parents 
+pauvres pour qu’ils renoncent à leur bébé. 
+ 
+
+ 
+82 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention Sensibilisation des 
+familles et des 
+communautés ; 
+ 
+-Mobilisation 
+communautaire 
+- Production de supports 
+audio et visuels 
+ 
+Protection Accompagnement des 
+victimes 
+- Prise en charge 
+psychosociale 
+- Prise en charge médicale 
+- Prise en charge juridique 
+et judiciaire 
+- Placement en EPR ou en 
+famille d’accueil 
+Réponse Renforcement des 
+capacités des acteurs 
+clés sur la gestion des 
+cas d’enfants 
+abandonnés 
+ 
+- Organiser des sessions 
+d’orientation sur la gestion 
+des cas  
+- Prise en charge par un 
+psychologue, travailleurs 
+sociaux, accompagnement 
+familiale, structures 
+spécialisées, abri et soins, 
+hébergement d’urgence 
+ 
+Avortement 
+Article 425 du code pénal  : Constitue l'avortement, l'emploi 
+d'aliments, breuvages, médicaments, substances, manœuvres, 
+violences ou de tout autre moyen en vue de provoquer l'expulsion 
+prématurée de l’embryon ou du fœtus, quel que soit le moment de la 
+
+ 
+83 
+ 
+grossesse où cette expulsion est pratiquée, que la femme y ait consenti 
+ou non. 
+Article 425 du code pénal : Est puni de l'emprisonnement d'un à cinq 
+ans et d'une amende de 150.000 à 1.500.000 francs, quiconque 
+commet ou tente de commettre un avortement. L'emprisonnement est 
+de cinq à dix ans et l'amende de 1.000.000 à 10.000.000 de francs, si 
+l'auteur se livre habituellement aux actes visés à l'alinéa 1. 
+L'emprisonnement est de deux à cinq ans et l’amende 200.000 à 
+2.000.000 de francs s'il en est résulté une stérilité, des atteintes graves 
+à la santé physique, gynécologique ou mentale de la victime. 
+Article 427 du code pénal : Il n'y a pas d'infraction lorsque :  
+1°) l’interruption de la grossesse est nécessitée par la sauvegarde 
+de la vie de la mère gravement menacé ;  
+2°) le médecin procure l'avortement à une victime de viol à la 
+demande de celle -ci. Dans ces cas, le médecin traitant ou le 
+chirurgien doit prendre l'avis de deux médecins consultants, qui, 
+après examen, attestent que la vie de la mère ne peut être 
+sauvegardée qu'au moyen d'une telle intervention chirurgicale ou 
+thérapeutique ou que telle était la volonté de la victime de viol, 
+dûment constatée par écrit. Si le nombre de médecin résidant, au 
+lieu de l'intervention est de deux, le médecin traitant n'est tenu de 
+prendre que l'avis de son confrère. 
+     Une personne qui fournit une décoction à une femme pour “faire 
+passer” sa grossesse, un médecin qui pratique un avortement hors du 
+cadre légal (par exemple, hors délai autorisé) ou un partenaire qui 
+administre à son insu une substance abortive à sa conjoin te commet 
+une infraction. Ce qui compte, c’est l’intention de provoquer 
+
+ 
+84 
+ 
+l’expulsion prématurée  de l’embryon ou du fœtus. Même si 
+l’expulsion n’a pas abouti, l’infraction peut être consommée ou tentée. 
+Le texte précise que l’avortement est répréhensible à tout stade  de la 
+grossesse. Cela inclut les tout premiers jours (même avant 
+confirmation biologique) jusqu’aux derniers mois (avant la viabilité 
+du fœtus ou même après). En Côte d’Ivoire, l’avortement est 
+totalement interdit sauf exceptions (danger pour la vie de la mère, viol, 
+inceste, etc.). 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en œuvre 
+Prévention Promotion des 
+compétences de 
+vie courante. 
+ 
+- Approche DREAMS ;  
+- Education à la santé sexuelle 
+reproductive (SSR) dans les 
+communautés, les écoles, les 
+institutions… 
+ 
+Protection Accompagnement 
+des victimes. 
+- Prise en charge psychosociale ; 
+- Prise en charge médicale ; 
+- Prise en charge juridique et 
+judiciaire ; 
+- Placement en EPR ou en famille 
+d’accueil. 
+Réponse Renforcement 
+des capacités des 
+acteurs clés sur 
+la gestion des cas 
+d’enfants 
+abandonnés. 
+ 
+- Organiser des sessions 
+d’orientation sur la gestion des 
+cas ;  
+- Prise en charge par un 
+psychologue, travailleurs sociaux, 
+accompagnement familiale, 
+structures spécialisées, abri et 
+soins, hébergement d’urgence. 
+
+ 
+85 
+ 
+Enlèvement d’enfants 
+Article 430  du code pénal  : Quiconque, par fraude ou violences 
+enlève sous quelque forme que ce soit des mineurs des lieux où ils 
+étaient placés par ceux à l'autorité ou sous la direction desquels ils 
+étaient soumis. 
+Est puni d'un emprisonnement de cinq à dix ans et d’une amende de 
+500.000 à 50.000.000 de francs quiconque enlève un mineur. Si le 
+mineur ainsi enlevé est un mineur de quinze (15) ans, le maximum de 
+la peine est prononcé. 
+La peine est l'emprisonnement à vie :  
+1°) si l'auteur s'est fait payer ou a eu pour but de se faire payer 
+une rançon par les personnes sous la surveillance desquelles le 
+mineur était placé ;  
+2°) si l'enlèvement est suivi de la mort du mineur, ou s'il en est 
+résulté pour lui une infirmité entraînant une incapacité 
+permanente de plus de 30 %. 
+     Lorsqu’une personne, cela peut être un membre de la famille, un 
+étranger, ou toute personne étrangère à l’autorité légale sur le mineur 
+par manipulation, mensonge, ruse, fausse identité, etc. ou par violence 
+physique (usage de la force), ou morale (menaces, intimidation) enlève 
+un mineur, légalement sous la garde d’un parent ou tuteur légal, d’une 
+institution (orphelinat, centre éducatif, etc.), d’un établissement 
+scolaire ou de santé, elle commet une infraction et est donc passible de 
+poursuites pénales.  
+Par exemple un individu se faisant passer pour un proche vient 
+chercher un enfant à l’école sans autorisation des parents, un parent 
+divorcé enlève son enfant placé chez l’autre parent, en violant une 
+
+ 
+86 
+ 
+décision de justice ou une personne qui attire un enfant hors d’un foyer 
+en lui promettant des cadeaux, puis l’emmène sans autorisation. En 
+cas de trafic, exploitation ou séquestration, les peines peuvent 
+atteindre le maximum légal. 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en œuvre 
+Prévention -Campagne de 
+sensibilisation sur 
+l’enlèvement des 
+enfants ;  
+  
+- Sensibilisation des 
+enfants et des 
+organisations sur la 
+prévention contre 
+l’enlèvement. 
+- Mobilisation des parents, de 
+communautés, des élèves, les 
+focus groupe ; … 
+- Faire les spots radios de 
+proximités dans les langues 
+locales et dans un langage 
+adapté aux enfants ; 
+- Faire une communication 
+adaptée à travers la télévision, 
+la presse écrite, les capsules 
+vidéo, les affiches, les 
+prospectus, document version 
+enfant…  
+Protection Accompagnement 
+des victimes 
+- Prise en charge psychosociale ; 
+- Prise en charge médicale. 
+Réponse Renforcement des 
+capacités des 
+acteurs clés sur la 
+gestion des cas 
+d’enlèvement 
+d’enfant. 
+Organiser des sessions  de 
+formation/ Ateliers/ séminaires.  
+ 
+ 
+
+ 
+87 
+ 
+Travail dangereux 
+Article 433 du code pénal  : Sont considérés comme dangereux par 
+nature ou selon les conditions dans lesquelles ils s'exercent et interdits 
+aux mineurs, les travaux dont la liste est fixée par arrêté du ministre 
+chargé du Travail. 
+Est puni d'un emprisonnement d'un à cinq ans et d'une amende de 
+500.000 à 1.000.000 de francs ou de l'une de ces deux peines 
+seulement, quiconque fait ou laisse exécuter sciemment par un mineur 
+des travaux dangereux.  
+Article 16 Constitution :  
+Il est interdit d’employer l’enfant dans une activité qui le met en 
+danger ou qui affecte sa santé, sa croissance ainsi que son équilibre 
+physique et mental.  
+     Il est interdit d’employer un enfant dans une activité susceptible 
+de le mettre en danger, d’affecter sa santé, de compromettre sa 
+croissance ou porter atteinte à son équilibre physique ou mental. 
+L’activité ne doit pas mettre ses droits fondamentaux. L’i nterdiction 
+s’applique aussi aux secteurs informels , domestiques ou agricoles, 
+lorsqu’ils mettent l’enfant en danger. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+88 
+ 
+BRANCHES 
+ACTIVISTES 
+TRAVAUX DANGEREUX 
+AGRICULTURE 
+ET FORESTERIE 
+Le défrichage ; 
+L’abattage des arbres ; 
+Le brûlage des parcelles ; 
+La chasse aux gibiers avec une arme ; 
+Le bûcheronnage ; 
+La production de charbon de bois ; 
+Le dessouchage ; 
+La trouaison ; 
+Le cabossage avec un objet tranchant ; 
+La récolte avec une machette ou une faucille ; 
+La manipulation de produits agrochimiques ; 
+La conduite d’engins motorisés 
+ÉLEVAGE Les activités de bouviers ; 
+La contention des animaux ; 
+La manipulation des produits vétérinaires ; 
+PÊCHE ET 
+AQUACULTURE 
+La pêche en eau profonde ; 
+Les travaux de construction d’étangs, de digues 
+et de barrages piscicoles, 
+Le nettoyage du poisson. 
+COMMERCE ET 
+SERVICES 
+La vidange de fosses septiques ; 
+La pré-collecte et la collecte d’ordures 
+ménagères ; 
+Le travail dans les débits de boisson et les boites 
+de nuit ; 
+Le travail de serveuse et de serveur dans les 
+restaurants-bars. 
+
+ 
+89 
+ 
+ARTISANAT ET 
+INDUSTRIE 
+Les activités générales de bâtiment et des 
+travaux publics ; 
+Les activités de chantier naval ; 
+L’extraction des matériaux de construction ; 
+Le creusement de fosses septiques ; 
+Le métier de puisatier ; 
+Le sciage du bois à la machine ; 
+La soudure ; 
+La chaudronnerie ; 
+La ferronnerie ; 
+L’affûtage à la meule ; 
+Le travail dans une forge ; 
+Le tannage de peaux d’animaux ; 
+La teinturerie sur cuir, tissu ou fil à tissage ; 
+Le métier de boucher ; 
+Le métier de souffleur dans les forges et 
+verreries ; 
+Le métier de tailleur de cristaux et autres articles 
+en verre ; 
+Le fumage d’aliments.      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+90 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention - Campagne de 
+sensibilisation sur la 
+différence entre le 
+travail socialisant et 
+les pires formes des 
+travails des enfants ;   
+- Vulgarisation des 
+textes. 
+- Mobilisation 
+communautaire à travers les 
+spots radios de proximités, 
+la télévision, la presse 
+écrite, les capsules vidéo, 
+les affiches, les prospectus, 
+document version enfant ; 
+- Contrôle/ Inspection dans 
+les lieux de travail. 
+Protection Accompagnement des 
+victimes. 
+- Retrait des enfants ; 
+- Prise en charge 
+psychosociale ; 
+- Prise en charge médicale ; 
+- Abri, placement d’urgence 
+- Remédiation. 
+Réponse - Renforcement des 
+capacités des acteurs 
+clés sur le travail 
+dangereux ; 
+- Sanction des auteurs. 
+ 
+Organiser des sessions de 
+formation/ Ateliers/ 
+séminaires . 
+ 
+ 
+ 
+ 
+ 
+
+ 
+91 
+ 
+VIH/sida 
+Loi n°2014-430 du 14 juillet 2014 portant régime de prévention, de 
+protection et de répression en matière de lutte contre le VIH et le sida. 
+Article 1 : (…) Orphelin et autre Enfant rendu Vulnérable du fait du 
+VIH et du sida, en abrégé OEV : 
+-tout enfant de 0 à 18 ans ayant perdu au moins un parent 
+biologique du fait du VIH ; 
+-tout enfant de 0 à 18 ans qui se trouve dans l’un des cas suivants : 
+- est lui-même infecté par le VIH ; 
+- a au moins un de ses parents biologiques infecté par le VIH ; 
+- vit dans un ménage où demeure un adulte vivant avec le VIH ; 
+- vit dans un ménage qui accueille d’autres OEV du fait du VIH. 
+     Un OEV est un enfant dont la vulnérabilité est liée à son propre 
+statut d’une part, à la situation de ses parents, de ses proches liés  
+essentiellement au VIH sida d’autre part. L’OEV, peut être aussi 
+considéré en tant que tel en prenant en compte son environnement de 
+vie impacté par le VIH/sida.  
+Pour le PN -OEV la tranche d’ âge considérée part de 0 à 24 ans en 
+raison de l’accompagnement des OEV jusqu’à leur insertion. 
+Article 4 : Toute personne âgée d’au moins seize ans révolus ont le 
+droit de se faire dépister pour le VIH. 
+Pour le mineur de moins de seize ans, le majeur incapable ou pour 
+toute personne se trouvant dans l’impossibilité de manifester sa 
+volonté, le consentement du père, de la mère, du conjoint ou du 
+représentant légal est requis. 
+L’intérêt supérieur de l’enfant et de l’adulte incapable doit toujours 
+prévaloir s’ils doivent subir un test. 
+
+ 
+92 
+ 
+     À partir de 16 ans révolus, une personne peut exercer seule son 
+droit au dépistage, sans autorisation parentale. Cela respecte le droit à 
+la santé, le secret médical et l’autonomie progressive du mineur. Pour 
+les mineurs de moins de 16 ans et majeurs inca pables qui ne peuvent 
+donner un consentement éclairé par elles -mêmes, la loi impose une 
+protection supplémentaire. Le représentant légal ( parent, tuteur, 
+conjoint) est requis pour autoriser le test. Cependant, toute décision 
+médicale doit être prise dans l’intérêt de la santé, de la vie ou du bien-
+être de l’enfant  même si cela nécessite de déroger à des règles 
+habituelles dans des cas exceptionnels. 
+Article 13 : Le mineur est informé de son statut sérologique, des actes 
+et examens nécessaires à son état de santé, en fonction de son âge et 
+de ses facultés de compréhension. 
+Le majeur incapable vivant avec le VIH bénéficie d’une information 
+appropriée.  
+Le médecin ou tout personnel paramédical veille notamment à ce que 
+l’annonce soit faite au mineur, au majeur incapable ou se trouvant 
+dans l’impossibilité de manifester sa volonté en présence de ses 
+représentants légaux et que les moyens mis en œuvre soien t adaptés 
+aux éventuelles difficultés de communication et de compréhension de 
+l’intéressé et de son représentant légal. 
+    En matière de santé, toute personne a droit à une information claire, 
+loyale et adaptée sur son état de santé. Cela inclut le statut sérologique 
+VIH, qui est une information médicale sensible et personnelle. Pour 
+les mineurs, l’information doit être transm ise de manière progressive 
+et compréhensible Pour les majeurs incapables, l’information doit être 
+simplifiée, accompagnée et encadrée. C’est une mise en œuvre du 
+principe de respect de la dignité et de l’autonomie restreinte, même 
+
+ 
+93 
+ 
+pour les personnes sous protection juridique. Le personnel médical 
+doit informer le patient  de façon appropriée et  s’assurer que le 
+représentant légal  est présent et comprend lui aussi  les enjeux 
+médicaux. Le secret médical  reste en vigueur, mais  adapté à la 
+situation du patient. L'information n’est pas une simple formalité, mais 
+un acte de soin, de respect et de soutien psychologique. 
+Article 39 : L’État a l’obligation de veiller à la protection des femmes 
+et des jeunes filles contre toute attitude susceptible de favoriser 
+l’infection par le VIH ou d’augmenter le risque de transmission du 
+VIH. 
+Article 40 : Les autorités compétentes doivent concevoir et appliquer 
+des politiques, stratégies, programmes et projets qui respectent, 
+protègent et réalisent les droits fondamentaux spécifiques des femmes 
+et des filles dans le contexte de l’épidémie de l’infection à VIH. 
+Article 41 : Les femmes et les filles en âge de procréer ou en état de 
+grossesse doivent bénéficier de conseils, d’informations et de services 
+suffisants leur permettant de prendre des décisions pleinement 
+éclairées et volontaires sur toute question touchant leur santé  et leur 
+grossesse, y compris : 
+ - un test de dépistage du VIH ; 
+ - des options pour protéger leur santé compte tenu de leur statut 
+sérologique ;  
+- des options pour prévenir la transmission du VIH à leur enfant 
+avant, pendant et après la naissance. 
+ 
+
+ 
+94 
+ 
+Article 42  : Le Ministre chargé de la Santé fixe, par voie 
+réglementaire, des mesures que doivent respecter les professionnels 
+de la santé et autres intervenants dans la fourniture de soins de santé 
+aux femmes et aux filles en état de grossesse vivant avec le VIH. 
+Article 43 : Les enfants appartenant aux populations vulnérables, les 
+orphelins et les enfants rendus vulnérables du fait du VIH bénéficient 
+du secours, du soutien et de l'assistance de l’Etat. A cet effet, des 
+programmes de prévention et de prise en charge en matière de VIH et 
+de sida sont organisés en leur faveur.  
+Article 44  : L’État encourage et favorise toutes les initiatives des 
+communautés ou de toute organisation de la société civile œuvrant 
+dans le domaine de la protection, de l’assistance et de la prise en 
+charge des OEV.  
+Article 45 : L’État assure la protection des OEV contre les abus et 
+l’exploitation. 
+     L’État doit adopter des mesures législatives, administratives, 
+sociales et éducatives pour prévenir l’exposition des femmes et jeunes 
+filles au VIH et réduire les facteurs de vulnérabilité. Cette obligation 
+s’inscrit dans plusieurs textes internationaux. A cet effet, l’Etat et ses 
+partenaires mènent des Campagnes d'information et d’éducation  sur 
+les modes de transmission du VIH, adaptées aux filles et femmes, 
+facilitent l’accès au dépistage, au traitement, et à la contraception , y 
+compris pour les adolescentes, assurent leur protection juridique 
+contre les violences sexistes  en développant des programmes ciblés 
+pour les groupes à risque. L’Etat agit pour empêcher que des facteurs 
+
+ 
+95 
+ 
+sociaux, économiques ou  culturels n’augmentent l’exposition des 
+femmes et jeunes filles au VIH. 
+     L’État reconnaît la complémentarité entre ses propres services 
+(santé, éducation, protection sociale) et les initiatives locales ou 
+organisations de la société civile (associations, ONG, groupes 
+religieux, etc.). Ces acteurs jouent souvent un rôle de proxi mité, 
+d’écoute et d’action rapide que les institutions publiques ne peuvent 
+pas toujours assurer seules . L’État a une obligation de solidarité 
+nationale et de partenariat actif.  Il ne peut agir seul, et doit mobiliser 
+toutes les forces sociales capables  de contribuer à la protection de 
+l’enfance en danger. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention - Faire la 
+divulgation de la 
+loi VIH ; 
+- Campagne de 
+sensibilisation la 
+sur Prévention de 
+la Transmission 
+Mère Enfant 
+(PTME) et les 
+Consultations 
+Prénatales (CPN).   
+ 
+- Communication sur la loi 
+VIH à travers la création focus 
+groupes, les spots radios de 
+proximités dans les langues 
+locales, la télévision, la presse 
+écrite, les capsules vidéo, les 
+affiches, les prospectus ; 
+- Formation des prestataires de 
+santé et les travailleurs sociaux 
+sur la bonne utilisation de la 
+loi VIH (discrimination, 
+dénonciation …)  
+ 
+ 
+
+ 
+96 
+ 
+Gratuité des soins 
+Décret n°2019 -498 du 12 juin de 2019 instituant des mesures 
+d’exemption sélective des paiements des frais de prise en charge 
+médicale des usagers des établissements sanitaires publics et des 
+établissements sanitaires prives investir d’une mission de servic e 
+public. 
+Article 4.b : La consultation de tout venant des enfants âgés de 0 à 
+5ans. La prise en charge thérapeutique, l’hospitalisation et les 
+examens paracliniques chez les enfants de 0 à 5ans pour les cas 
+d’anémie, paludisme grave, les maladies diarrhéiques et les cas 
+d’infections respiratoire aigues. 
+La prise en charge des 4 première causes de morbidités et de 
+mortalités du nouveau -né : prématuré, détresse respiratoire, 
+souffrance cérébrale et infections bactériennes du nouveau-né.   
+      Pour les enfants âgés de 0 à 5ans la consultation est gratuite dans 
+les établissements sanitaires publiques. Pour les cas d’anémie, 
+paludisme grave, les maladies diarrhéiques et les cas d’infections 
+respiratoire aigues les analyses médicales et les médicam ents sont 
+gratuits. En outre la prise en charge médicales des cas de prématurité, 
+détresse respiratoire, souffrance cérébrale et d’infections bactériennes 
+du nouveau-né est gratuite. 
+ 
+ 
+ 
+
+ 
+97 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention Sensibilisation sur la 
+gratuité de la prise 
+en charge médicale 
+de certaines 
+pathologies pour les 
+enfants.  
+ 
+Communication sur la 
+gratuité de la prise en charge 
+médicale à travers les spots 
+radios dans de proximités les 
+langues locales, la télévision, 
+la presse écrite, les capsules 
+vidéo, les affiches, les 
+prospectus, dans les centres 
+de santé. 
+Plaidoyer Séances de travail 
+avec le Ministère en 
+charge de la santé. 
+- Echanges sur l’extension de 
+la gratuité à d’autres 
+pathologies ; 
+- Prise en compte de tous les 
+vaccins pour enfants par la 
+CMU ; 
+- Renforcement du plateau 
+technique des centres de 
+santé surtout en milieu rural. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+98 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+
+
+ 
+99 
+ 
+Mise en apprentissage 
+Ordonnance N° 2021-902 du 22 décembre 2021 ; code du travail 2025 
+Article 13.3 Nouveau : Nul ne peut recevoir des apprentis mineurs s’il 
+n’est âgé de dix-huit ans au moins.  
+    Personne ne peut accueillir ou former des apprentis mineurs (c’est-
+à-dire de moins de 18 ans) s’il n’a pas lui -même au moins 18 ans. 
+Autrement dit, pour pouvoir encadrer un apprenti mineur, il faut avoir 
+18 ans ou plus . Il s’agit d’une règle juridique ou réglementaire issue 
+du Code du travail visant à garantir que la personne qui encadre un 
+jeune en formation ait un  minimum de maturité et de responsabilité 
+légale. 
+Article. 13.4 : Aucun maître d'apprentissage, s'il ne vit en famille ou 
+en communauté, ne peut loger en son domicile personnel ou dans son 
+atelier des apprentis mineurs.  
+    Un maître d’apprentissage qui vit seul (c’est -à-dire, ni en famille, 
+ni en communauté) n’a pas le droit de loger chez lui (dans son domicile 
+personnel ou dans son atelier) des apprentis mineurs. C’est une mesure 
+de protection des mineurs, visant à éviter qu’un jeune apprenti vive 
+isolé avec un adulte seul, ce qui pourrait poser des risques sur les plans 
+de la sécurité, du bien être en vue de prévenir les abus. 
+Article. 13.5 : Ne peuvent recevoir des apprentis mineurs les individus 
+qui ont été condamnés soit pour crime, soit pour délit contre les 
+mœurs. 
+
+ 
+100 
+ 
+     Toute personne avec un casier judiciaire incompatible notamment 
+avec des condamnations graves  pour meurtre, viol et toute autre 
+infraction infractions portant atteinte à la morale publique ou à 
+l’intégrité sexuelle (ex. : harcèlement sexuel, agression sexuelle, 
+corruption de mineurs, etc.) ne peut pas être maître d’apprentissage 
+pour un mineur. C’est une mesure de protection des mineurs, visant à 
+prévenir les risques d’abus ou de violences  et à garantir que les 
+personnes en contact direct et prolongé avec des jeunes soient 
+moralement fiables et sûres. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en œuvre 
+Prévention - Sensibilisation des 
+Maitres Artisans 
+formateurs ; 
+- Information des 
+communautés, des 
+familles et des 
+enfants ; 
+- Information et 
+Sensibilisation des 
+parents, substituts 
+parentaux, des 
+maitres artisans et de 
+la communauté sur 
+les conditions de mise 
+en apprentissage. 
+ 
+ 
+- Réaliser des VAD dans les 
+ménages et sur les sites (adultes 
+et enfants/ adolescents) pour 
+sensibiliser les parents sur 
+l’importance du suivi de leurs 
+enfants à l’école ou en 
+apprentissage ; 
+- Campagne de masse de 
+proximité dans la communauté ; 
+- Création de cadre d’échange 
+avec les maitres artisans et les 
+parents ; 
+- Vulgariser les lois et les lignes 
+d’assistance dans les écoles, les 
+centres de métiers, etc. ; 
+- Traduction des dispositions du 
+Code du travail dans les langues 
+locales les plus parlées. 
+
+ 
+101 
+ 
+Obligations du maître 
+Code du travail Art 13.6, Art 13.7, Art 13.8 
+Article13.6 : Le maître d'apprentissage doit prévenir sans retard les 
+parents de l'apprenti ou leurs représentants en cas de maladie, 
+d'absence ou de tout autre fait de nature à motiver leur intervention. 
+Il ne doit employer l'apprenti dans la mesure de ses aptitudes et de ses 
+forces, qu'aux travaux et services qui se rattachent à l'exercice de sa 
+profession.  
+    Le maître d’apprentissage doit informer rapidement les parents de 
+tout problème important concernant l’apprenti mineur et respecter ses 
+limites et ne lui confier que des tâches professionnelles adaptées à son 
+apprentissage. Concrètement, en cas de maladie, absence inexpliquée, 
+accident, comportement inquiétant , ou tout événement sérieux 
+concernant l’apprenti mineur, le maître d’apprentissage a le devoir 
+d’informer immédiatement  les parents ou représentants légaux. Il 
+s'agit d'une obligation de vigilance et de communication, dans l’intérêt 
+de la santé, de la sécurité et du bon encadrement du jeune. L’apprenti 
+ne doit faire que des tâches liées à sa formation professionnelle . Le 
+maître ne peut pas lui faire faire des tâches sans lien avec le métier (ex 
+: faire le ménage ou des courses personnelles), ni lui imposer un travail 
+au-dessus de ses capacités physiques ou techniques, surtout vu son âge 
+et son statut de débutant. Cette mesure vise à protéger l’apprenti contre 
+l’exploitation, les accidents, ou la fatigue excessive et garantir une 
+formation de qualité répondant à ses besoins. 
+ 
+
+ 
+102 
+ 
+Article 13.7 : Le maître d'apprentissage doit traiter l'apprenti en bon 
+père de famille. Si l'apprenti ne sait pas lire, écrire ou compter, le 
+maître est tenu de lui accorder le temps et la liberté nécessaires pour 
+son instruction. Ce temps est donné à l'apprenti selon u n accord 
+réalisé entre les parties, mais il ne peut excéder une durée calculée 
+sur la base de deux heures de travail par jour.  
+     Le maître doit se comporter avec bienveillance, équité, prudence 
+et responsabilité , comme le ferait un parent raisonnable  envers son 
+propre enfant. Il doit veiller à la sécurité, à la formation, au bien-être 
+moral et physique de l’apprenti. C’est une formule classique en droit 
+civil, qui impose une attitude responsable  et protectrice. Aussi, si 
+l’apprenti n’a pas acquis les compétences de base  (lecture, écriture, 
+calcul), le maître doit lui permettre de suivre un enseignement pour y 
+remédier. Cela va au -delà de la formation professionnelle  : c’est une 
+obligation d’ordre éducatif . Pour ce faire, l’organisation du temps 
+d’instruction est négociée entre le maître, l’apprenti et ses 
+représentants légaux (s’il est mineur) et le temps dédié à l’instruction 
+est limité à l’équivalent de deux heures de travail par jour, pour éviter 
+d’empiéter excessivement sur la formation pratique. 
+Article 13.8 : Le maître d'apprentissage doit enseigner à l'apprenti, 
+progressivement et complètement, l'art, le métier ou la profession 
+spéciale qui fait l'objet du contrat.  Il lui délivre, à la fin de 
+l'apprentissage, une attestation constatant l'exécution du contrat. 
+    Le maître d’apprentissage doit Transmettre l'ensemble des savoir-
+faire et connaissances liés au métier ou à la spécialité prévue dans le 
+contrat d’apprentissage, le faire de manière progressive (adaptée au 
+
+ 
+103 
+ 
+rythme et aux capacités de l’apprenti) et couvrir toutes les facettes du 
+métier et pas seulement quelques tâches répétitives. Cette disposition 
+empêche les situations où l’apprenti ne ferait que des tâches 
+subalternes sans réelle montée en compétence.  À la fin de la période 
+d’apprentissage, le maître doit fournir à l’apprenti une attestation 
+officielle confirmant que l’apprentissage a bien eu lieu et que le contrat 
+a été exécuté jusqu’à son terme. Cette  attestation peut être utile à 
+l’apprenti pour justifier de son expérience professionnelle, notamment 
+pour passer un examen, chercher un emploi ou poursuivre une 
+formation. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en œuvre 
+Prévention - Identifier des 
+solutions aux 
+obstacles/ barrières 
+qui empêchent l’accès 
+et le maintien de 
+l’enfant en 
+apprentissage ; 
+- Organiser des 
+campagnes de 
+sensibilisation à 
+l’endroit des parents, 
+substituts parentaux, 
+des maitres artisans et 
+de la communauté sur 
+les conditions de 
+mises en 
+apprentissage. 
+ 
+- Information et Sensibilisation 
+des parents, substituts parentaux, 
+des maitres artisans et de la 
+communauté sur les conditions de 
+mise en apprentissage ; 
+- Campagne de masse de 
+proximité dans la communauté ; 
+- Création de cadre d’échange 
+avec les maitres artisans et les 
+parents ; 
+- Vulgarisation des lois et des 
+lignes d’assistance dans les 
+écoles, les centres de métiers, etc. 
+- Réaliser des VAD dans les 
+ménages et sur les sites (adultes 
+et enfants/ adolescents) pour 
+sensibiliser les parents sur 
+l’importance du suivi de leurs 
+enfants à l’école ou en 
+apprentissage). 
+
+ 
+104 
+ 
+Obligations de l’enfant 
+Code du travail Art 13.9 
+Article 13.9  : L'apprenti doit à son maître, dans le cadre de 
+l'apprentissage, obéissance et respect. Il doit l'aider par son travail 
+dans la mesure de ses aptitudes et de ses forces. L'apprenti dont le 
+temps d'apprentissage est terminé, passe un examen devant un 
+organisme agréé par l'État. Un certificat d'aptitude professionnel est 
+délivré à l'apprenti qui a subi l'examen avec succès. 
+     L’apprenti est tenu de respecter les consignes, les règles de 
+l’entreprise et le cadre du contrat, de se montrer discipliné et 
+respectueux envers son maître d’apprentissage et l’environnement 
+professionnel et de contribuer activement  au travail, mais dans des 
+limites raisonnables, adaptées à son âge, son niveau de compétence et 
+sa force physique. L’apprenti n’est pas un simple exécutant ; il est là 
+pour apprendre, mais aussi participer, dans un cadre encadré et 
+équilibré. À la fin de son apprentissage, l’apprenti doit se présenter à 
+un examen professionnel, organisé par un organisme reconnu par l'État 
+(chambre des métiers). Cet exa men vise à évaluer ses compétences 
+acquises tout au long de sa formation. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention Informer les parents 
+et l’enfant sur les 
+obligations et devoir 
+de l’enfant vis-à-vis 
+de son maitre. 
+ 
+- Focus groupe ; 
+- Visites dans les lieux 
+d’apprentissage. 
+
+ 
+105 
+ 
+Age légal d’accès à l’emploi ou apprentissage 
+Arrêté n 2017 -017 MEPS /CAB de 02 juin 2017 déterminant la liste 
+des travaux interdits aux enfants. 
+Article 4 : Les âges minima pour les travaux pouvant être exercés par 
+les enfants sont fixés comme suit : 
+- 18 ans pour l’exercice des travaux dangereux ;  
+- 16 ans pour l’admission de l’emploi ;  
+- 14 ans pour l’admission en apprentissage.  
+     Les personnes de moins de 18 ans  ne peuvent pas exercer de 
+travaux dangereux qui comportent des risques pour la santé, la sécurité 
+ou la moralité. Un mineur peut entrer dans le monde du travail à partir 
+de 16 ans, sous certaines conditions , notamment après avoir terminé 
+sa scolarité obligatoire, jusqu’à 16 ans en Côte d’Ivoire et bénéficier 
+de conditions de travail adaptées  (temps de travail, repos, tâches 
+autorisées, etc.). L'apprentissage peut débuter dès 14 ans , mais 
+uniquement dans un cadre spécifique  avec des règles  strictes pour 
+garantir sa protection (encadrement pédagogique, pas de travaux 
+dangereux, horaires réduits, etc.). 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention - Informer les 
+communautés, les parents 
+et les enfants sur l’âge 
+légal d’accès à l’emploi 
+ou à l’apprentissage en 
+Côte d’Ivoire ; 
+- Détection des cas. 
+- Focus groupe ; 
+- Animation communautaire ; 
+- Campagne médiatique  
+ (Presse, audiovisuelle, 
+réseaux sociaux) ; 
+- Inspection/ visite dans les 
+lieux d’apprentissage, ateliers, 
+garages etc.. 
+
+ 
+106 
+ 
+Obligations de l’enfant à l’égard de ses parents 
+Loi N°2019-572 du 26 juin 2019 relative à la minorité 
+Article 2 : L’enfant, à tout âge doit honneur et respect à ses père et 
+mère et à ses autres ascendants. Jusqu’à sa majorité ou son 
+émancipation, il leur doit obéissance.  
+     Peu importe l’âge de l’enfant (même adulte), il est moralement et 
+légalement tenu de traiter ses parents et grands -parents (ascendants) 
+avec respect. Il s’agit d’un devoir moral permanent, enraciné dans les 
+valeurs de la famille et de la filiation. Ce devoir ne cesse jamais, même 
+après la majorité ou l’émancipation.  Tant que l’enfant est mineur ou 
+non émancipé, il est soumis à l’autorité parentale . Il doit obéir à ses 
+parents (ou représentants légaux) dans tout ce qui concerne 
+l’éducation, la résidence, la santé, les études, la discipline familiale…. 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise 
+en œuvre 
+Prévention  Informer les 
+communautés, les parents 
+et les enfants sur les 
+obligations de l’enfant à 
+l’égard de ses parents. 
+Focus groupe dans les 
+communautés et les 
+écoles. 
+ 
+ 
+ 
+ 
+
+ 
+107 
+ 
+Obligations de l’administrateur légal à l’égard de l’enfant 
+Loi N°2019-572 du 26 juin 2019 relative à la minorité 
+Article 46 : L’administrateur légal perçoit les revenus des biens de 
+son enfant mineur et en dispose sous réserve de satisfaire aux charges 
+ci-après : 
+1° la nourriture, l’entretien et l’éducation du mineur selon sa 
+fortune ; 
+2° le paiement des arrérages ou intérêt des capitaux ; 
+3° d’une façon générale, toutes dépenses nécessitées pour 
+l’entretien et la conservation du patrimoine du mineur. 
+     L’administrateur légal peut utiliser les revenus des biens du 
+mineur, à condition qu’ils servent en priorité au bien-être de l’enfant, 
+au paiement des charges financières liées à ses biens  et à la 
+préservation de son patrimoine. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise 
+en œuvre 
+Prévention - Informer les 
+administrateurs légaux sur 
+leurs obligations ; 
+- Faire le suivi des actions 
+de l’administrateur légal ; 
+- Informer l’enfant sur les 
+obligations de 
+l’administrateur légal vis-à-
+vis de lui. 
+ 
+- Echanges avec les 
+différentes parties ; 
+- Suivi périodique des 
+actions de 
+l’administrateur légal. 
+ 
+ 
+
+ 
+108 
+ 
+Immoralité des parents ou de l’administrateur légal 
+Loi N°2019-572 du 26 juin 2019 relative à la minorité 
+Article 22 : Les parents ou tout autre personne exerçant l’autorité 
+parentale peuvent être déchus de l’autorité, de l’ensemble de tous les 
+droits qui s’y rattachent, notamment par des mauvais traitements, une 
+consommation habituelle et excessive de boissons alcooliques , de 
+stupéfiants, ou de tout autre substances nocives ; par des exemples 
+pernicieux d’ivrogneries habituelles, d’inconduites notoires ou de 
+délinquance, par un défaut de soins ou manque de directions, par un 
+désintérêt de plus d’un an sans motif. 
+    La déchéance signifie que les parents ou toute personne exerçant 
+l’autorité parentale perdent tous les droits et responsabilités liés à cette 
+autorité. Cela peut concerner la garde, l’éducation, la gestion des 
+biens, et la représentation légale de l’enfant. La déchéance de l’autorité 
+parentale peut être prononcée en cas de violences ou mauvais 
+traitements, addictions graves, comportements dangereux ou 
+immoraux, négligence ou abandon prolongé. Par conséquent, la 
+personne déchue ne peut plus exercer les droits parentaux ni prendre 
+de décisions concernant l’enfant. Une mesure judiciaire est nécessaire 
+pour prononcer cette déchéance. L’enfant est alors placé  sous la 
+responsabilité d’un tiers. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en œuvre 
+Prévention Informer les 
+administrateurs 
+légaux et les parents. 
+- Echanges avec les différentes 
+parties ; 
+- Séances d’éducation parentale/ 
+Coaching/ VAD. 
+
+ 
+109 
+ 
+Réinsertion sociale de l’enfant 
+Loi N°2019-572 du 26 juin 2019 relative à la minorité 
+Article 27 : Les mineurs peuvent faire l’objet d’assistance éducative 
+lorsqu’ils donnent à leurs parents ou à la personne investie du droit 
+de garde des sujets de mécontentements très grave par leurs 
+inconduites par leur indiscipline. Ces mesures sont prises à la requête 
+soit des père et mère ou l’un d’eux, soit du tuteur ou du ministère 
+public. 
+    Cette disposition décrit les conditions dans lesquelles un mineur 
+peut faire l’objet de mesures d’assistance éducative , c’est-à-dire une 
+intervention de la justice pour l’aider à se redresser , dans l’intérêt de 
+sa sécurité, de son éducation ou de son avenir. L’assistance éducative 
+est une mesure judiciaire prise par le juge des enfants quand un mineur 
+est en danger , que ce soit à cause de son comportement ou de 
+l’incapacité des parents à exercer correctement leur autorité parentale. 
+Elle vise à protéger l e mineur et à l’accompagner  via des services 
+sociaux, éducateurs, ou placements temporaires.  
+Article 28  : Chaque fois qu’il est possible, le mineur doit être 
+maintenu dans son milieu habituel de vie.  
+     Le maintien de l’enfant dans son milieu de vie habituel  est la 
+solution privilégiée, sauf si cela représente un risque sérieux. Le but 
+est de protéger le mineur sans rompre inutilement ses repères  
+familiaux et sociaux. Cela signifie que, même en cas de difficulté 
+familiale ou de procédure judiciaire (comme une mesure d’assistance 
+éducative), le maintien du mineur dans sa famille ou son 
+
+ 
+110 
+ 
+environnement habituel (école, quartier, entourage)  doit être la 
+priorité, tant que cela ne met pas en danger sa santé, sa sécurité ou son 
+développement. L’objectif est d’éviter  les traumatismes liés à 
+l’arrachement du milieu familial  et favoriser la stabilité affective et 
+sociale de l’enfant. Le placement en foyer ou famille d’accueil est une 
+solution de dernier recours, utilisée uniquement si le maintien dans le 
+milieu habituel est impossible ou dangereux. 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention - Renforcement des 
+capacités des acteurs 
+clés sur la mise en 
+œuvre et le suivi des 
+Mesures d’assistance 
+éducatives ; 
+- Renforcement des 
+familles d’accueil ; 
+- Renforcement des 
+Etablissement de 
+Protection de 
+Remplacement. 
+- Echanges avec les 
+différentes parties ; 
+- Ateliers/ Séminaires 
+- Suivi de l’application des 
+normes et standards des 
+EPR ; 
+- Appui aux familles 
+d’accueil. 
+ 
+ 
+ 
+ 
+ 
+Assistance Suivi des enfants. Prise en charge holistique 
+des enfants (santé, 
+éducation, nutrition, abris, 
+formation, suivi familial. 
+ 
+ 
+
+ 
+111 
+ 
+Droit à l’éducation 
+Loi 2015-635, du 17 septembre 2015, portant modification de la loi 
+N°95-696, du 7 septembre 1995 relative à l’enseignement. 
+Article 2  : Dans le cadre du service public de l’enseignement, la 
+scolarisation est obligatoire pour tous les enfants des deux sexes âgés 
+de 6 à 16 ans.  L’Etat a l’obligation de maintenir, au sein du système 
+scolaire, les enfants âgés de six à seize ans y compris ceux à besoins 
+spécifiques et de mettre en place un mécanisme permettant d’intégrer 
+ou de réintégrer les enfants de neuf à seize ans, qui sont ho rs du 
+système ; notamment par des classes passerelles pour la tranche de 
+neuf à treize et à la formatio n professionnelle pour celle de quatorze 
+à seize ans. 
+    Tous les enfants, filles et garçons, doivent être scolarisés entre 6 et 
+16 ans. Cela relève de la loi et non d’un simple choix des familles. 
+L’État doit garantir que tous les enfants, même ceux en situation de 
+handicap ou ayant des besoins éducatifs particuliers , soient intégrés 
+dans le système scolaire ordinaire , autant que possible. Les enfants 
+sortis prématurément du système scolaire  (déscolarisés, en rupture, 
+exclus, etc.), l’État mette en place des solutions adaptées pour les 
+ramener à l’école. A cet effet, l’Etat met en place un système de classes 
+passerelles ou de dispositifs de remise à niveau  pour faciliter la 
+réintégration dans les classes ordinaires pour les 9 à 13 ans  et un 
+mécanisme d’orientation vers la formation professionnelle , afin de 
+favoriser l’insertion future tout en respectant l’obligation scolaire pour 
+ceux âgés de 14 à 16 ans. 
+
+ 
+112 
+ 
+Article 17 nouveau : Il est fait obligation aux parents dont les enfants 
+atteignent l’âge de six ans, de les inscrire dans un établissement 
+scolaire. Les parents sont tenus de s’assurer de l’assiduité de leurs 
+enfants jusqu’à l’âge de seize ans. 
+Les parents d’élèves sont responsables du déroulement des études de 
+leurs enfants  ; ils sont associés par l’intermédiaire de leurs 
+représentants aux instances de concertation et de gestion instituées 
+aux niveaux des établissements d’enseignements ainsi qu’ aux 
+instances de concertation nationales. 
+Sont parents, au sens de la présente loi, les père et mère, le tuteur ou 
+ceux qui ont la charge de l'enfant, soit qu'ils en assument la garde à 
+la demande des père et mère, du tuteur ou d'une autorité compétente, 
+soit qu'ils exercent sur lui, de façon continue, une autorité de fait.  
+Le parent qui viole l'obligation de scolarisation prévue par la présente 
+loi, est puni d'une peine d'emprisonnement de deux à six mois et d'une 
+amende de 50 000 à 500 000 Francs CFA ou de l'une de ces deux 
+peines seulement.  
+    Dès que leur enfant atteint 6 ans , les parents doivent 
+obligatoirement l’inscrire à l’école . Cette obligation marque le début 
+de la scolarité obligatoire, généralement à partir du cours préparatoire 
+(CP). Les parents ont la responsabilité légale de veiller à ce que leur 
+enfant fréquente l’école régulièrement. 
+    Les parents ont un rôle essentiel dans la réussite scolaire de leurs 
+enfants. Ils doivent veiller à l ’assiduité et à la  ponctualité, suivre les 
+résultats et le comportement de leur enfant et soutenir l’apprentissage 
+à la maison. Ce n’est pas seulement une responsabilité morale, c’est 
+aussi une obligation légale. 
+
+ 
+113 
+ 
+    Les parents ont le droit de participer à la vie des établissements 
+scolaires, par l’intermédiaire de leurs représentants élus (par exemple, 
+les délégués de parents d’élèves ou les COGES). Ces derniers 
+participent aussi à des organes consultatifs nationaux au sein desquels 
+ils peuvent ainsi influencer les politiques éducatives , défendre les 
+droits des élèves et faire entendre la voix des familles. 
+    Est désigné comme «  parent », Les père et mère biologiques ou 
+adoptifs, celui qui a été désigné par une décision de justice ou un acte 
+officiel pour représenter et protéger l’enfant ou toute personne ayant 
+la charge effective de l’enfant, même sans lien juridique formel, si elle 
+a reçu la garde de l’enfant à la demande des parents, du tuteur ou d’une 
+autorité compétente (ex. : un oncle, une tante, un grand -parent) ou 
+exerce une autorité de fait sur lui, de manière continue (ex. : une 
+famille d’accueil non officiellement désignée, mais qui élève l’enfant 
+depuis longtemps).  
+    Cette définition est ainsi élargie pour garantir la protection 
+juridique de l’enfant, même si ses responsables ne sont pas ses parents 
+biologiques pour que les obligations légales (éducation, santé, 
+scolarité) puissent s’appliquer à toute personne qui agit  concrètement 
+comme un parent. Cela permet aussi d’éviter les vides juridiques en 
+cas d’abandon, d’absence ou de défaillance des parents biologiques. 
+    Ne pas inscrire un enfant à l’école  ou ne pas veiller à sa présence 
+régulière, alors que la scolarisation est obligatoire , constitue une 
+violation de la loi. 
+ 
+
+ 
+114 
+ 
+Actions 
+essentielles 
+Activités clés Démarches de la mise en 
+œuvre 
+Prévention Organisation de 
+campagnes 
+nationales de 
+sensibilisation et 
+d’information.  
+ 
+- Echanges avec les différentes 
+parties ; 
+- Ateliers/ Séminaires ; 
+- Animations communautaires ; 
+- Emissions radio ; messages 
+dans les langues locales. 
+Plaidoyer Rencontre avec le 
+MENA, les 
+collectivités locales 
+et les Partenaires 
+Techniques et 
+Financiers. 
+- Echanges sur le financement et 
+la construction des écoles ; 
+- Recrutement d’enseignants. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+115 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+« La protection de l’enfant est un engagement 
+permanent qui implique l’État, les familles, les 
+communautés et les institutions. Elle exige des lois 
+fortes, des mécanismes efficaces et une volonté 
+commune de placer l’intérêt supérieur de l’enfant au 
+cœur de toute décision. » 
+
+ 
+116 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+117 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+ 
+118 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

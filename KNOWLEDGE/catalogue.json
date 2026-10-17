@@ -1,0 +1,337 @@
+{
+ "genere_le": "2026-10-17",
+ "fiches": [
+  {
+   "id": "LOGEME_416",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2019-576",
+   "article": "416",
+   "titre": "Dépôt de garantie (caution)",
+   "declencheurs": [
+    "caution",
+    "depot de garantie",
+    "garantie",
+    "caution non rendue",
+    "garantie non rendue",
+    "depot"
+   ],
+   "citation": "Le contrat de location peut prévoir un dépôt de garantie à la charge du locataire qui ne peut excéder deux mois de loyer pour garantir l’exécution de ses obligations en fin de cont",
+   "lecture": "Le dépôt de garantie demandé au locataire ne peut pas dépasser deux mois de loyer.",
+   "faits_requis": [
+    [
+     "logement",
+     "S'agit-il d'un bail à usage d'habitation ?"
+    ]
+   ],
+   "etape_plan": "Réunir le bail, la preuve du dépôt versé et l'état des lieux",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:b41f603c7ceb4d10f95704c8137c00e93842ea6ed96276baf239be4781a516be"
+  },
+  {
+   "id": "LOGEME_415",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2019-576",
+   "article": "415",
+   "titre": "Avance sur loyers",
+   "declencheurs": [
+    "avance",
+    "avance sur loyer",
+    "mois d'avance",
+    "avant la signature"
+   ],
+   "citation": "La conclusion du contrat de bail à usage d’habitation ne peut être liée au paiement de sommes autres que celles prévues par le présent sous-titre.",
+   "lecture": "Le bailleur ne peut pas exiger plus de deux mois de loyers d'avance.",
+   "faits_requis": [
+    [
+     "logement",
+     "S'agit-il d'un bail à usage d'habitation ?"
+    ]
+   ],
+   "etape_plan": "Comparer la somme versée au montant du loyer mensuel",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:5c76fb9b8b6758dad810956eb3822998571758af575628f4194f8f840a41d3a4"
+  },
+  {
+   "id": "LOGEME_423",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2019-576",
+   "article": "423",
+   "titre": "Révision du loyer",
+   "declencheurs": [
+    "revision",
+    "augmenter le loyer",
+    "augmentation",
+    "hausse du loyer",
+    "revalorisation"
+   ],
+   "citation": "Le loyer peut être révisé à la hausse ou à la baisse, tous les trois ans.",
+   "lecture": "Le loyer ne peut être révisé que tous les trois ans.",
+   "faits_requis": [
+    [
+     "logement",
+     "S'agit-il d'un bail à usage d'habitation ?"
+    ]
+   ],
+   "etape_plan": "Vérifier la date de la dernière révision et la notification reçue",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:092c4c47dc5aeb9435b0a9bacb0bce204bf4f7dcaa009850ab85e752b74cdeac"
+  },
+  {
+   "id": "LOGEME_414",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2019-576",
+   "article": "414",
+   "titre": "Forme du bail d'habitation",
+   "declencheurs": [
+    "bail ecrit",
+    "contrat ecrit",
+    "bail verbal",
+    "contrat de bail",
+    "sans contrat"
+   ],
+   "citation": "Le contrat de bail à usage d’habitation est écrit.",
+   "lecture": "Un bail à usage d'habitation doit être écrit.",
+   "faits_requis": [
+    [
+     "logement",
+     "S'agit-il d'un bail à usage d'habitation ?"
+    ]
+   ],
+   "etape_plan": "Réclamer un exemplaire écrit du bail et vérifier son enregistrement",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:d6758f8ecce8a342b6ca34e7d7fc0526627d3a9deb6efac18b8abf5e713a021b"
+  },
+  {
+   "id": "LOGEME_440",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2019-576",
+   "article": "440",
+   "titre": "Congé donné par le bailleur",
+   "declencheurs": [
+    "conge",
+    "reprendre le logement",
+    "reprise",
+    "donner conge",
+    "preavis",
+    "me faire partir"
+   ],
+   "citation": "Le bailleur qui souhaite reprendre son immeuble ou local dans les conditions prévues à l’Article 442 ci-dessous doit donner un congé au locataire, au moins trois mois avant la date",
+   "lecture": "Le bailleur qui reprend son logement doit donner congé au moins trois mois avant la date de reprise.",
+   "faits_requis": [
+    [
+     "logement",
+     "S'agit-il d'un bail à usage d'habitation ?"
+    ]
+   ],
+   "etape_plan": "Conserver l'avis reçu et vérifier sa date et sa forme",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:8bcae9c11c5924b5652f1c5e29846523ff5500d1b8e544efb67b4a8c3a1854d5"
+  },
+  {
+   "id": "LOGEME_443",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2019-576",
+   "article": "443",
+   "titre": "Demande de résiliation",
+   "declencheurs": [
+    "resiliation",
+    "resilier",
+    "mettre fin au bail",
+    "lettre de resiliation",
+    "quitter le logement"
+   ],
+   "citation": "La lettre de demande de résiliation du contrat de bail doit être écrite, motivée et accompagnée, le cas échéant, de pièces justificatives.",
+   "lecture": "La demande de résiliation du bail doit être écrite et motivée.",
+   "faits_requis": [
+    [
+     "logement",
+     "S'agit-il d'un bail à usage d'habitation ?"
+    ]
+   ],
+   "etape_plan": "Rédiger la demande par écrit, la motiver et garder une preuve d'envoi",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:73a332d85759d4a942966eca601b1f9a9ccb8bf44cc1934f6fe259f3c90b1ca6"
+  },
+  {
+   "id": "LOGEME_445",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2019-576",
+   "article": "445",
+   "titre": "Expulsion forcée",
+   "declencheurs": [
+    "expulsion",
+    "expulser",
+    "juge des referes",
+    "expulser sans jugement",
+    "me jeter dehors"
+   ],
+   "citation": "Lorsque le locataire manque à ses obligations contractuelles, le bailleur peut demander son expulsion forcée devant le Juge des référés, après la transmission de la lettre de deman",
+   "lecture": "L'expulsion forcée se demande devant le juge des référés, après la lettre de demande de résiliation.",
+   "faits_requis": [
+    [
+     "logement",
+     "S'agit-il d'un bail à usage d'habitation ?"
+    ]
+   ],
+   "etape_plan": "Ne pas quitter les lieux sans décision de justice ; conserver tous les écrits",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:da2db9c24b780232cf91134e034316063b5c2ac229c3564e6754ba8e8b45b82f"
+  },
+  {
+   "id": "LOGEME_181",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2020-624",
+   "article": "181",
+   "titre": "Domaine public urbain",
+   "declencheurs": [
+    "domaine public",
+    "terrain de l'etat",
+    "bord de mer",
+    "plage",
+    "occuper le domaine public"
+   ],
+   "citation": "Le domaine public urbain est inaliénable et imprescriptible.",
+   "lecture": "Le domaine public urbain ne peut être ni vendu ni acquis par prescription.",
+   "faits_requis": [],
+   "etape_plan": "Vérifier auprès du service du domaine si le terrain relève du domaine public",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:114f587e0ff9fa383d637a5f39946faf380791bf1c105791f30c89be70402ac7"
+  },
+  {
+   "id": "LOGEME_238",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2020-624",
+   "article": "238",
+   "titre": "Expropriation",
+   "declencheurs": [
+    "expropriation",
+    "exproprie",
+    "utilite publique",
+    "l'etat prend mon terrain"
+   ],
+   "citation": "L'expropriation pour cause d'utilité publique est la procédure par laquelle la puissance publique contraint, toute personne physique ou morale, à la cession forcée de ses droits de",
+   "lecture": "L'expropriation pour cause d'utilité publique contraint le propriétaire à céder ses droits, moyennant une indemnité.",
+   "faits_requis": [],
+   "etape_plan": "Réunir le titre de propriété et tout acte reçu de l'administration",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:2ca82dca3c34555bafc79ae425f90f7f5495bd9cffddedb69732300ef01ffa67"
+  },
+  {
+   "id": "LOGEME_69",
+   "domaine": "logement_baux_foncier",
+   "numero_texte": "2020-624",
+   "article": "69",
+   "titre": "Aménagement foncier",
+   "declencheurs": [
+    "amenagement",
+    "reserve fonciere",
+    "lotissement",
+    "amenagement foncier"
+   ],
+   "citation": "Tout aménagement foncier est précédé par la constitution de réserves foncières.",
+   "lecture": "Tout aménagement foncier est précédé de la constitution de réserves foncières.",
+   "faits_requis": [],
+   "etape_plan": "Demander l'acte d'aménagement ou de lotissement à la mairie",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:bba0cc67bbe0bd030f45534a4309bcfe8385338dd2eec19293c821014cda66ed"
+  },
+  {
+   "id": "TRANSP_2",
+   "domaine": "transport_responsabilite_civile",
+   "numero_texte": "2013-711",
+   "article": "2",
+   "titre": "Téléphone au volant",
+   "declencheurs": [
+    "telephone au volant",
+    "telephone en conduisant",
+    "usage du telephone",
+    "conduite"
+   ],
+   "citation": "Il e st interdit à toute personne en situation de conduite automobile, l’usage du téléphone portable et de tout autre moyen de communication.",
+   "lecture": "L'usage du téléphone portable est interdit à toute personne en situation de conduite automobile.",
+   "faits_requis": [],
+   "etape_plan": "Conserver l'avis de contravention et vérifier la date des faits",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:a37532ab8f5b7f4289ac485ddf18d468cf94f1479b9785fd39cfa35217bdc672"
+  },
+  {
+   "id": "CONTRA_1",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": null,
+   "article": "1",
+   "titre": "Définition de la sûreté (OHADA)",
+   "declencheurs": [
+    "surete",
+    "garantie",
+    "hypotheque",
+    "nantissement",
+    "garantir une dette"
+   ],
+   "citation": "Une sûreté est l’affectation au bénéfice d’un créancier d’un bien, d’un ensemble de biens ou d’un patrimoine afin de garantir l’exécution d’une obligation ou d’un ensemble d’obliga",
+   "lecture": "Une sûreté affecte un bien ou un patrimoine au bénéfice d'un créancier pour garantir une obligation.",
+   "faits_requis": [],
+   "etape_plan": "Identifier la sûreté invoquée et le contrat qui la constitue",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:d9660d4d3a013ba90dad22b448148dfa17f8f1145a9080f88b6f133892fb7507"
+  },
+  {
+   "id": "CONTRA_4",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": null,
+   "article": "4",
+   "titre": "Sûretés personnelles et cautionnement (OHADA)",
+   "declencheurs": [
+    "cautionnement",
+    "se porter caution",
+    "caution",
+    "garant personnel"
+   ],
+   "citation": "Les sûretés personnelles, au sens du présent Acte uniforme, consistent en l'engage- ment d'une personne de répondre de l'obligation du débiteur principal en cas de défail- lance de",
+   "lecture": "Les sûretés personnelles consistent en l'engagement d'une personne de répondre de l'obligation du débiteur principal.",
+   "faits_requis": [],
+   "etape_plan": "Rassembler l'acte de cautionnement et les mises en demeure reçues",
+   "etat_verification": "VERIFIE",
+   "origine_texte": "CALQUE_TEXTE",
+   "recoupe": false,
+   "confiance_ocr": null,
+   "sha256_article": "sha256:fb47c7180466a0024b410f669d2348e275a4ed074dc8af7e56fbbae655b5c728"
+  }
+ ],
+ "rejets": []
+}
