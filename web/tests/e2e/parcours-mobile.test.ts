@@ -193,6 +193,22 @@ test("perte de réseau côté navigateur : message « Pas de connexion »", asyn
   await ctx.close();
 });
 
+test("police de secours large (DejaVu Sans) : aucune page ne déborde sur 360 px", async () => {
+  // Les polices auto-hébergées peuvent manquer (réseau lent, blocage) : la mise
+  // en page doit tenir avec une police de secours large.
+  const ctx = await contexteMobile();
+  const page = await ctx.newPage();
+  for (const chemin of ["/", "/consultation", "/comprendre"]) {
+    await page.goto(base + chemin);
+    await page.addStyleTag({
+      content: ":root{--police-texte:'DejaVu Sans';--police-titre:'DejaVu Sans';--police-loi:'DejaVu Serif'} *{font-family:'DejaVu Sans',sans-serif}",
+    });
+    await page.waitForTimeout(100);
+    await sansDefilementHorizontal(page);
+  }
+  await ctx.close();
+});
+
 test("bureau : mise en page large lisible", async () => {
   const ctx = await navigateur.newContext({ viewport: { width: 1280, height: 900 }, locale: "fr-FR" });
   const page = await ctx.newPage();

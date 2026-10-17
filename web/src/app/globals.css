@@ -204,6 +204,18 @@ code {
 .marque:hover {
   color: #ffffff;
 }
+/* L'en-tête doit tenir sur un petit écran quelle que soit la police chargée. */
+.entete .marque {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+.entete .marque__nom {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.entete__action {
+  flex: none;
+}
 .marque__sceau {
   display: inline-grid;
   place-items: center;
