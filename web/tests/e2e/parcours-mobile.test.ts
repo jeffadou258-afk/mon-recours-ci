@@ -29,6 +29,7 @@ before(async () => {
   process.env.MONRECOURS_API_URL = moteur.url;
   process.env.MONRECOURS_API_KEY = moteur.cle;
   process.env.MONRECOURS_SESSION_SECRET = SECRET_SESSION;
+  process.env.MONRECOURS_DEBIT_VISITEUR = "1000"; // la limite par visiteur est testée en unitaire
   await construireClient();
   serveur = creerServeurApercu();
   await new Promise<void>((ok) => serveur.listen(0, "127.0.0.1", ok));
@@ -106,6 +107,10 @@ test("parcours complet au toucher : décrire → préciser → résultat avec ci
   assert.match(texte, /Le contrat de location peut prévoir un dépôt de garantie/);
   assert.match(texte, /Référence vérifiée/);
   assert.match(texte, /Faire relire votre situation/);
+  // Brouillon de courrier : visible, à compléter, copiable.
+  assert.match(texte, /BROUILLON — NON ENVOYÉ/);
+  assert.match(texte, /À COMPLÉTER/);
+  assert.ok(await page.getByRole("button", { name: "Copier le brouillon" }).isVisible());
   assert.doesNotMatch(texte, /DOSSIERS|\/home\/|traceabilite/);
 
   // Provenance dépliable, lien vers le document officiel.

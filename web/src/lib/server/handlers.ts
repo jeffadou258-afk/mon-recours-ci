@@ -20,6 +20,7 @@ import {
 } from "./assainir";
 import { ConfigurationInvalide, lireConfig, type ConfigServeur } from "./config";
 import { appelerMoteur, type Recuperateur, type ReponseMoteur } from "./moteur";
+import { identifiantVisiteur, limiteurParDefaut, type LimiteurVisiteurs } from "./limiteur";
 import { deballer, emballer, enteteCookie, lireCookie, nouvelIdentifiant } from "./session";
 
 export const TAILLE_MAX_CORPS = 16 * 1024;
@@ -28,6 +29,13 @@ export interface Dependances {
   config?: () => ConfigServeur;
   recuperer?: Recuperateur;
   journal?: (ligne: Record<string, unknown>) => void;
+  limiteur?: LimiteurVisiteurs;
+}
+
+/** Applique la limite par visiteur ; renvoie une réponse 429 si elle est atteinte. */
+function verifierDebitVisiteur(requete: Request, config: ConfigServeur, dep: Dependances): Response | null {
+  const attente = (dep.limiteur ?? limiteurParDefaut).consommer(identifiantVisiteur(requete), config.debitVisiteur);
+  return attente > 0 ? erreur("DEBIT_DEPASSE", { reessayerDans: attente }) : null;
 }
 
 const MESSAGES: Record<CodeErreur, string> = {
@@ -245,6 +253,8 @@ export async function gererOuvrir(requete: Request, dep: Dependances = {}): Prom
   if (!origineAutorisee(requete)) return erreur("ORIGINE_REFUSEE");
   const config = obtenirConfig(dep);
   if (config instanceof Response) return config;
+  const trop = verifierDebitVisiteur(requete, config, dep);
+  if (trop) return trop;
   const lu = await lireCorpsJson(requete);
   if (lu instanceof Response) return lu;
 
@@ -287,6 +297,8 @@ export async function gererRepondre(requete: Request, dep: Dependances = {}): Pr
 
   const dossierId = deballer(lireCookie(requete.headers.get("cookie")), config.secretSession);
   if (!dossierId) return erreur("SESSION_ABSENTE");
+  const trop = verifierDebitVisiteur(requete, config, dep);
+  if (trop) return trop;
 
   const lu = await lireCorpsJson(requete);
   if (lu instanceof Response) return lu;

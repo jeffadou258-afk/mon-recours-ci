@@ -1,0 +1,20 @@
+# Purge quotidienne des consultations web plus anciennes que la durée décidée.
+# À accompagner d'un service monrecours-purge.service :
+#
+#   [Service]
+#   Type=oneshot
+#   User=monrecours
+#   WorkingDirectory=/opt/mon-recours-ci/web
+#   ExecStart=/usr/bin/node scripts/purger-consultations.mjs --jours 30 --confirmer
+#
+# Remplacer 30 par la durée de conservation décidée et annoncée aux utilisateurs.
+
+[Unit]
+Description=Purge quotidienne des consultations Mon Recours CI
+
+[Timer]
+OnCalendar=*-*-* 03:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

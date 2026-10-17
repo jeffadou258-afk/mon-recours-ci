@@ -173,3 +173,15 @@ test("erreurs : réseau, service indisponible, session expirée", () => {
   assert.match(session, /Recommencer/);
   assert.doesNotMatch(session, /Réessayer/);
 });
+
+test("brouillon : texte affiché dans une zone lisible, avec bouton de copie", () => {
+  const vue: VueReponse = {
+    ...reponseCaution(),
+    brouillon: { disponible: true, note: "BROUILLON — NON ENVOYÉ.", raison: null, texte: "BROUILLON — NON ENVOYÉ\nObjet : Réclamation\n[À COMPLÉTER : vos nom, prénom et adresse]" },
+  };
+  const html = renderToStaticMarkup(<VueResultat vue={vue} urgence={null} />);
+  assert.match(html, /<pre id="texte-brouillon"/);
+  assert.match(texteVisible(html), /Copier le brouillon/);
+  assert.match(texteVisible(html), /À COMPLÉTER : vos nom, prénom et adresse/);
+  assert.match(texteVisible(html), /Rien n'est jamais envoyé à votre place/);
+});

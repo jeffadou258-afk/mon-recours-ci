@@ -1,0 +1,19 @@
+[Unit]
+Description=Mon Recours CI — moteur juridique (local uniquement)
+After=network.target
+
+[Service]
+User=monrecours
+Group=monrecours
+WorkingDirectory=/opt/mon-recours-ci
+EnvironmentFile=/etc/mon-recours-ci/env
+# Débit global du moteur : la limite par visiteur est appliquée par l'interface.
+ExecStart=/usr/bin/python3 bin/serveur_api.py --port 8765 --debit 300
+Restart=on-failure
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/mon-recours-ci/DOSSIERS
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

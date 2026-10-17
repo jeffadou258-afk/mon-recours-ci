@@ -2,6 +2,7 @@ import type { VueHorsCatalogue, VueRefus, VueReponse, VueUrgence } from "@/lib/t
 import { libelleDomaine, presentationStatut } from "@/lib/libelles";
 import { BandeauUrgence, EncadreVerrous, OrientationHumaine } from "./Alertes";
 import { BadgeVerification } from "./Badges";
+import { BoutonCopier } from "./BoutonCopier";
 import { CarteCitation, trouverSource } from "./CarteCitation";
 
 function EnteteStatut({ statut, idTitre }: { statut: string; idTitre: string }) {
@@ -113,11 +114,21 @@ export function VueResultat({ vue, urgence }: { vue: VueReponse; urgence: VueUrg
       {vue.brouillon ? (
         <section className="bloc" aria-labelledby="titre-brouillon">
           <h2 id="titre-brouillon">Brouillon de courrier</h2>
-          {vue.brouillon.disponible ? (
+          {vue.brouillon.disponible && vue.brouillon.texte ? (
+            <>
+              <p>
+                Un modèle de lettre de réclamation, préparé à partir de votre situation. Complétez les passages
+                marqués « À COMPLÉTER », relisez-le, puis envoyez-le vous-même si vous le jugez utile.
+              </p>
+              <pre id="texte-brouillon" className="brouillon" tabIndex={0}>
+                {vue.brouillon.texte}
+              </pre>
+              <BoutonCopier texte={vue.brouillon.texte} cible="texte-brouillon" />
+            </>
+          ) : vue.brouillon.disponible ? (
             <p>
-              Le moteur a préparé un brouillon de réclamation sur le serveur ({vue.brouillon.note ?? "non envoyé"}).
-              Cette version de l&apos;interface ne permet pas encore de le consulter : l&apos;API du moteur ne
-              transmet pas son contenu.
+              Le moteur a préparé un brouillon ({vue.brouillon.note ?? "non envoyé"}), mais son contenu n&apos;a pas
+              été transmis à l&apos;interface.
             </p>
           ) : (
             <p>Aucun brouillon disponible{vue.brouillon.raison ? ` : ${vue.brouillon.raison}` : "."}</p>

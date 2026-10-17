@@ -41,6 +41,8 @@ test("réponse réelle : citations mot pour mot, chemins de fichiers retirés", 
   assert.ok(source.urlSource?.startsWith("https://www.dgi.gouv.ci/"));
   assert.equal(vue.droit[1]?.noteLecture, brut.data.reponse.sections["2_droit"][1].note_lecture);
   assert.equal(vue.brouillon?.disponible, true);
+  // Fixture enregistrée avant l'ajout de `texte` au moteur : absence tolérée.
+  assert.equal(vue.brouillon?.texte, null);
   assert.equal(vue.demarches.length, 7);
 });
 

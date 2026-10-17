@@ -131,6 +131,8 @@ export interface VueBrouillon {
   disponible: boolean;
   note: string | null;
   raison: string | null;
+  /** Texte du brouillon préparé par le moteur, à relire et compléter. Jamais envoyé. */
+  texte: string | null;
 }
 
 export interface VueReponse {

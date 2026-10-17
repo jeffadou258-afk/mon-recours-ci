@@ -1,0 +1,19 @@
+[Unit]
+Description=Mon Recours CI — interface web Next.js
+After=network.target monrecours-moteur.service
+Requires=monrecours-moteur.service
+
+[Service]
+User=monrecours
+Group=monrecours
+WorkingDirectory=/opt/mon-recours-ci/web
+EnvironmentFile=/etc/mon-recours-ci/env
+ExecStart=/usr/bin/npm start -- --hostname 127.0.0.1 --port 3000
+Restart=on-failure
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/mon-recours-ci/web/.next
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

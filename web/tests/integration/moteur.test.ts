@@ -21,6 +21,7 @@ before(async () => {
     secretSession: "secret-de-session-integration-0123456789-abcdef",
     delaiMs: 15000,
     production: false,
+    debitVisiteur: 1000,
   });
 });
 
@@ -73,6 +74,12 @@ test("parcours complet de clarification : ouvrir → cookie → répondre → ci
   assert.match(art416.sha256, /^sha256:[0-9a-f]{64}$/);
   assert.equal(art416.etatVerification, "VERIFIE");
   assert.ok(art416.urlSource.startsWith("https://"));
+
+  // Le brouillon de courrier est transmis en texte, jamais avec un chemin de fichier.
+  assert.equal(vue.brouillon.disponible, true);
+  assert.match(vue.brouillon.texte, /BROUILLON — NON ENVOYÉ/);
+  assert.match(vue.brouillon.texte, /À COMPLÉTER/);
+  assert.doesNotMatch(JSON.stringify(vue.brouillon), /DOSSIERS|BROUILLONS\/|\.txt/);
 
   // Un second envoi sur le même dossier : le moteur répond « déjà répondu ».
   const encore = await gererRepondre(

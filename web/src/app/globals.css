@@ -1509,3 +1509,32 @@ textarea[aria-invalid="true"] {
     break-inside: avoid;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Brouillon de courrier
+   -------------------------------------------------------------------------- */
+
+.brouillon {
+  background: var(--surface);
+  border: 1px solid var(--ligne);
+  border-radius: var(--rayon-petit);
+  padding: 1rem;
+  font-family: var(--police-texte-pile);
+  font-size: var(--t-petit);
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 26rem;
+  overflow-y: auto;
+  margin: 0 0 0.75rem;
+}
+.copier {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+.copier__etat {
+  font-size: var(--t-petit);
+  color: var(--vert);
+}

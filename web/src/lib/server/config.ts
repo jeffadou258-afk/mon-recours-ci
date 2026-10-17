@@ -11,6 +11,8 @@ export interface ConfigServeur {
   secretSession: string;
   delaiMs: number;
   production: boolean;
+  /** Demandes autorisées par visiteur et par minute (ouvrir + répondre). */
+  debitVisiteur: number;
 }
 
 export class ConfigurationInvalide extends Error {}
@@ -22,6 +24,7 @@ export function lireConfig(env: Record<string, string | undefined> = process.env
   const cleMoteur = env.MONRECOURS_API_KEY || "";
   const secretSession = env.MONRECOURS_SESSION_SECRET || "";
   const delaiBrut = Number(env.MONRECOURS_API_TIMEOUT_MS || "15000");
+  const debitBrut = Number(env.MONRECOURS_DEBIT_VISITEUR || "12");
 
   let url: URL;
   try {
@@ -53,5 +56,6 @@ export function lireConfig(env: Record<string, string | undefined> = process.env
     secretSession,
     delaiMs: Number.isFinite(delaiBrut) && delaiBrut > 0 ? Math.min(delaiBrut, 60000) : 15000,
     production: env.NODE_ENV === "production",
+    debitVisiteur: Number.isFinite(debitBrut) && debitBrut >= 1 ? Math.min(Math.floor(debitBrut), 600) : 12,
   };
 }

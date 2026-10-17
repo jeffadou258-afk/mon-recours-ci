@@ -13,6 +13,7 @@ export const CONFIG_TEST: ConfigServeur = {
   secretSession: "secret-de-session-de-test-0123456789-abcdef",
   delaiMs: 2000,
   production: false,
+  debitVisiteur: 1000,
 };
 
 export interface AppelEnregistre {

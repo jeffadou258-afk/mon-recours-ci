@@ -224,10 +224,13 @@ function regle(r: Objet): VueRegleDroit {
 function brouillon(v: unknown): VueBrouillon | null {
   if (!estObjet(v)) return null;
   // `genere` contient des chemins de fichiers serveur : il n'est jamais transmis.
+  // `texte` est le contenu du brouillon (moteur ≥ domaine-famille), borné en taille.
+  const contenu = texte(v.texte);
   return {
     disponible: v.disponible === true,
     note: texte(v.note),
     raison: texte(v.raison),
+    texte: contenu ? contenu.slice(0, 12000) : null,
   };
 }
 

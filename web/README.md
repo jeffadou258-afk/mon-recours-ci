@@ -77,6 +77,7 @@ cp .env.example .env.local     # puis remplir les valeurs (voir ci-dessous)
 | `MONRECOURS_API_KEY` | **oui** | même valeur que celle donnée au moteur (≥ 16 caractères) |
 | `MONRECOURS_SESSION_SECRET` | **oui** | secret de signature du cookie (≥ 32 caractères, aléatoire) |
 | `MONRECOURS_API_TIMEOUT_MS` | non (défaut 15000) | délai maximal d'attente du moteur |
+| `MONRECOURS_DEBIT_VISITEUR` | non (défaut 12) | demandes par visiteur et par minute, appliquées par l'interface |
 
 Aucune variable `NEXT_PUBLIC_*` : rien n'est exposé au navigateur. Sans clé ou
 sans secret, l'interface refuse d'appeler le moteur et affiche « service mal configuré ».
@@ -198,18 +199,20 @@ La CI installe avec `--ignore-scripts` et tous les tests passent ainsi :
 Si les tests échouaient sans ces scripts, approuver la version exacte installée
 (`npm approve-scripts esbuild`), jamais `--all` ni `--dangerously-allow-all-scripts`.
 
-## Avant tout déploiement (non fait, et nécessaire)
+## Fonctions ajoutées depuis la première version
 
-1. **Le moteur n'écoute que sur 127.0.0.1** et refuse de démarrer autrement. Un
-   déploiement Vercel ne peut donc pas le joindre. Il faut soit héberger interface et
-   moteur sur le même serveur, soit exposer le moteur derrière TLS avec une revue de
-   sécurité (CLAUDE_HANDOFF.md §6 ter).
-2. **Limite de débit partagée** : le moteur limite à 30 requêtes / minute **par clé**.
-   Tous les visiteurs passant par la même clé, la limite est globale. Une limitation
-   par visiteur côté interface (ou un débit moteur adapté) est nécessaire.
-3. **Conservation des récits** : le moteur écrit chaque demande dans `DOSSIERS/`
-   (traçabilité). Une politique de durée de conservation et de suppression est à définir.
-4. **Brouillon de courrier** : le moteur en prépare un, mais l'API ne transmet pas son
-   contenu. Il faudrait une évolution du contrat (non faite ici) pour l'afficher.
-5. Faire confirmer les numéros d'urgence et les libellés par l'équipe et un juriste.
-6. Audit de sécurité externe, revue données personnelles, TLS, journalisation centralisée.
+- **Brouillon de courrier visible et copiable** : le moteur transmet désormais le texte
+  du brouillon (champ `brouillon.texte`) ; l'interface l'affiche avec un bouton
+  « Copier le brouillon ». Rien n'est jamais envoyé.
+- **Limite par visiteur** (`src/lib/server/limiteur.ts`) : protège la limite globale
+  du moteur, partagée par tous les visiteurs.
+- **Purge des consultations** : `npm run purger -- --jours 30` (simulation) puis
+  `--confirmer`. Ne supprime que les dossiers `web-*` plus anciens que N jours.
+
+## Avant tout déploiement (non fait)
+
+Le guide et les fichiers de configuration sont dans [`deploiement/`](deploiement/README.md)
+(un seul serveur, nginx + HTTPS, services systemd, purge planifiée). Restent à décider
+et à faire par le responsable du projet : serveur et nom de domaine, durée de
+conservation des récits, mentions légales et confidentialité, relecture juriste,
+confirmation des numéros d'urgence, revue de sécurité externe.
