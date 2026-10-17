@@ -9,3 +9,4 @@ next-env.d.ts
 apercu/dist/
 tests/e2e/captures/
 .vercel
+rapport-controle.txt

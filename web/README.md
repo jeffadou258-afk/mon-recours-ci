@@ -153,6 +153,35 @@ installable. `npm run apercu` le lance sur le port 3000.
 
 ---
 
+## Sécurité des dépendances
+
+| Paquet | Version | Pourquoi |
+|---|---|---|
+| `next` | **15.5.28** | dernière version corrigée de la branche 15.5 (maintenance LTS). Corrige les avis d'octobre 2026 (GHSA-673q-mjm6-r5xr critique, CVE-2026-96889 / GHSA-2464-fhr4-w9xw critique, GHSA-p3m5-59mp-jv5r élevé), ceux de septembre 2026 (15.5.27) et les correctifs React2Shell de décembre 2025. Pas de passage à la 16 : changement majeur non nécessaire pour corriger. |
+| `react`, `react-dom` | **19.1.10** | même ligne que les correctifs React d'octobre 2026 (les failles touchent `react-server-dom-*`, embarqué par Next.js ; React est aligné par cohérence). |
+| `playwright` (dev) | **≥ 1.55.1** | GHSA-7mvr-c777-76hp (élevé) : téléchargement des navigateurs sans vérification TLS avant 1.55.1. |
+
+Sources : [Next.js, 14 oct. 2026](https://nextjs.org/blog/nextjs-security-update-october-14-2026),
+[Next.js, 30 sept. 2026](https://nextjs.org/blog/september-2026-security-release),
+[React GHSA-xqc2-xf4c-x3h3](https://github.com/react/react/security/advisories/GHSA-xqc2-xf4c-x3h3),
+[OSV GHSA-7mvr-c777-76hp](https://osv.dev/vulnerability/GHSA-7mvr-c777-76hp).
+
+### Scripts d'installation (npm 12)
+
+`package.json` refuse explicitement les scripts d'installation de `esbuild` et `sharp`
+(`"allowScripts": { "esbuild": false, "sharp": false }`) :
+
+- **sharp** sert uniquement à l'optimisation d'images de Next.js, désactivée ici
+  (`images.unoptimized`). Ses binaires précompilés arrivent par les paquets
+  `@img/sharp-*` ; son script ne sert qu'à compiler depuis les sources quand aucun
+  binaire n'existe pour la plateforme.
+- **esbuild** n'est utilisé que par les outils de test (`tsx`, banc d'aperçu), pas par
+  Next.js. Son binaire arrive par le paquet de plateforme `@esbuild/*` ; le script
+  d'installation ne fait que le vérifier.
+
+Si les tests échouaient sans ces scripts, approuver la version exacte installée
+(`npm approve-scripts esbuild`), jamais `--all` ni `--dangerously-allow-all-scripts`.
+
 ## Avant tout déploiement (non fait, et nécessaire)
 
 1. **Le moteur n'écoute que sur 127.0.0.1** et refuse de démarrer autrement. Un

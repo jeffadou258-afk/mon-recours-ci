@@ -23,6 +23,12 @@ const csp = [
 const configuration: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // L'application n'utilise pas next/image : l'optimisation d'images est désactivée
+  // et aucun domaine distant n'est autorisé (pas de `remotePatterns`). Le traitement
+  // d'images a fait l'objet des avis GHSA-2464-fhr4-w9xw (oct. 2026) et
+  // GHSA-cjq9-62q9-8jv4 (sept. 2026). La correction reste la mise à jour de
+  // Next.js (15.5.28) ; ce réglage n'est qu'une précaution supplémentaire.
+  images: { unoptimized: true },
   async headers() {
     return [
       {
