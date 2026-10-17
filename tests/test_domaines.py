@@ -540,6 +540,8 @@ class TestAucunDocumentMuet(BaseDomaines):
                   if "refus" in (d.get("note_ocr") or "").lower()]
         self.assertTrue(refuse, "aucun refus d'OCR tracé : le test ne prouve rien")
         document = refuse[0]
+        if corpus.pdf_absent_et_tolere(document):
+            self.skipTest("PDF non distribué dans ce dépôt : la re-collecte exige le PDF")
         avant = document["note_ocr"]
         corpus.importer_document(
             ref_id=document["ref_id"], titre=document["titre"],

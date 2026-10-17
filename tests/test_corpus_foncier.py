@@ -43,7 +43,9 @@ class TestIntegriteDuCorpus(unittest.TestCase):
         self.assertEqual(resultat["alteres"], [], "documents altérés : %s" % resultat["alteres"])
         self.assertEqual(resultat["absents"], [], "documents absents : %s" % resultat["absents"])
         self.assertEqual(resultat["verdict"], "INTEGRE")
-        self.assertGreaterEqual(len(resultat["conformes"]), 4)
+        # Sans les PDF (mode explicite MONRECOURS_PDF_NON_DISTRIBUES=1), ce sont les
+        # empreintes des textes extraits qui sont vérifiées.
+        self.assertGreaterEqual(len(resultat["conformes"]) + len(resultat.get("pdf_non_distribues", [])), 4)
 
     def test_chaque_document_porte_une_empreinte_valide(self):
         for document in corpus.lister_documents(domaine=DOMAINE):
@@ -63,12 +65,18 @@ class TestIntegriteDuCorpus(unittest.TestCase):
             self.assertTrue(document["date_collecte"])
 
     def test_l_empreinte_stockee_est_recalculable(self):
+        verifies = 0
         for document in corpus.lister_documents(domaine=DOMAINE):
+            if corpus.pdf_absent_et_tolere(document):
+                continue  # PDF non distribué : ses textes sont vérifiés par verifier_integrite
+            verifies += 1
             h = hashlib.sha256()
             with open(document["chemin_local"], "rb") as f:
                 for bloc in iter(lambda: f.read(1 << 20), b""):
                     h.update(bloc)
             self.assertEqual("sha256:" + h.hexdigest(), document["sha256"])
+        if not verifies and corpus.pdf_non_distribues_toleres():
+            self.skipTest("PDF non distribués dans ce dépôt (MONRECOURS_PDF_NON_DISTRIBUES=1)")
 
 
 class TestTracabiliteDesArticles(unittest.TestCase):

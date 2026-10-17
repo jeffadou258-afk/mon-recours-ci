@@ -106,6 +106,15 @@ def nettoyer_pour_pdf(texte):
     return texte.encode("latin-1", "replace").decode("latin-1")
 
 
+def _formater(valeur):
+    """Une liste devient des lignes à puces, jamais la représentation Python
+    (« ['…'] ») qui apparaissait auparavant dans le courrier."""
+    if isinstance(valeur, (list, tuple)):
+        lignes = [str(v).strip() for v in valeur if str(v).strip()]
+        return "\n".join("- %s" % ligne for ligne in lignes)
+    return str(valeur).strip()
+
+
 def _remplir(gabarit, champs):
     """Remplit les {{champs}} fournis ; les autres deviennent VISIBLES.
 
@@ -114,8 +123,13 @@ def _remplir(gabarit, champs):
     """
     texte = gabarit
     for cle, valeur in (champs or {}).items():
-        if valeur not in (None, ""):
-            texte = texte.replace("{{%s}}" % cle, str(valeur))
+        if valeur in (None, "", [], ()):
+            continue
+        valeur = _formater(valeur)
+        # « {{demande}}. » avec une demande qui finit déjà par un point
+        # donnait « .. » : la ponctuation finale de la valeur prime.
+        texte = texte.replace("{{%s}}." % cle, valeur if valeur[-1:] in ".!?" else valeur + ".")
+        texte = texte.replace("{{%s}}" % cle, valeur)
     for cle in sorted(set(re.findall(r"\{\{(\w+)\}\}", texte))):
         texte = texte.replace("{{%s}}" % cle, "[À COMPLÉTER : %s]" % cle)
     return texte

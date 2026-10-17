@@ -154,11 +154,15 @@ jobs:
           fi
           ! grep -qE '^# fail [1-9]' ../e2e.txt
 
-      - name: Tests du moteur (information, non modifié)
+      # Les PDF officiels ne sont pas dans le dépôt : mode explicite qui vérifie
+      # les empreintes des textes extraits à la place (core/corpus.py).
+      - name: Tests du moteur
         if: always()
-        continue-on-error: true
         working-directory: .
+        env:
+          MONRECOURS_PDF_NON_DISTRIBUES: "1"
         run: |
+          set -o pipefail
           python3 tests/run_all.py 2>&1 | tee moteur.txt | tail -5
           echo "::notice title=Moteur::$(grep -E 'TESTS=' moteur.txt)"
 

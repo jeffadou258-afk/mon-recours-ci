@@ -254,11 +254,21 @@ class Conversation(object):
             # Champ laissé explicitement à compléter : on n'invente pas l'identité
             # ni l'adresse de l'utilisateur.
             "adresse_retour": "[À COMPLÉTER : vos nom, prénom et adresse]",
+            "pieces": "[À COMPLÉTER : liste des documents joints, par exemple le contrat et les reçus]",
         }
         try:
+            genere = fabricant(dossier_id, "reclamation", champs)
+            texte = None
+            chemin_txt = genere.get("fichier_txt") if isinstance(genere, dict) else None
+            if chemin_txt and os.path.isfile(chemin_txt):
+                with open(chemin_txt, encoding="utf-8") as flux:
+                    texte = flux.read()
+            # `texte` : le contenu du brouillon, pour l'afficher à l'utilisateur
+            # (les chemins de fichiers restent dans `genere`, côté serveur).
             return {"disponible": True,
                     "note": "BROUILLON — NON ENVOYÉ. À relire et compléter avant tout usage.",
-                    "genere": fabricant(dossier_id, "reclamation", champs)}
+                    "texte": texte,
+                    "genere": genere}
         except Exception as erreur:  # noqa: BLE001 — on déclare l'échec, on ne le masque pas
             return {"disponible": False, "raison": "génération impossible : %s" % (erreur,)}
 

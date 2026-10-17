@@ -15,7 +15,7 @@
     "garantie non rendue",
     "depot"
    ],
-   "citation": "Le contrat de location peut prévoir un dépôt de garantie à la charge du locataire qui ne peut excéder deux mois de loyer pour garantir l’exécution de ses obligations en fin de cont",
+   "citation": "Le contrat de location peut prévoir un dépôt de garantie à la charge du locataire qui ne peut excéder deux mois de loyer pour garantir l’exécution de ses obligations en fin de contrat notamment les dégradations, les impayés ainsi que les divers manquements qui pourraient survenir de son fait.",
    "lecture": "Le dépôt de garantie demandé au locataire ne peut pas dépasser deux mois de loyer.",
    "faits_requis": [
     [
@@ -127,7 +127,7 @@
     "preavis",
     "me faire partir"
    ],
-   "citation": "Le bailleur qui souhaite reprendre son immeuble ou local dans les conditions prévues à l’Article 442 ci-dessous doit donner un congé au locataire, au moins trois mois avant la date",
+   "citation": "Le bailleur qui souhaite reprendre son immeuble ou local dans les conditions prévues à l’Article 442 ci-dessous doit donner un congé au locataire, au moins trois mois avant la date de reprise indiquée par le bailleur, par acte de Commissaire de justice ou par remise de courrier contre décharge.",
    "lecture": "Le bailleur qui reprend son logement doit donner congé au moins trois mois avant la date de reprise.",
    "faits_requis": [
     [
@@ -183,7 +183,7 @@
     "expulser sans jugement",
     "me jeter dehors"
    ],
-   "citation": "Lorsque le locataire manque à ses obligations contractuelles, le bailleur peut demander son expulsion forcée devant le Juge des référés, après la transmission de la lettre de deman",
+   "citation": "Lorsque le locataire manque à ses obligations contractuelles, le bailleur peut demander son expulsion forcée devant le Juge des référés, après la transmission de la lettre de demande de résiliation, sans respecter le délai de contestation de la résiliation du bail prévu ci-dessus.",
    "lecture": "L'expulsion forcée se demande devant le juge des référés, après la lettre de demande de résiliation.",
    "faits_requis": [
     [
@@ -233,7 +233,7 @@
     "utilite publique",
     "l'etat prend mon terrain"
    ],
-   "citation": "L'expropriation pour cause d'utilité publique est la procédure par laquelle la puissance publique contraint, toute personne physique ou morale, à la cession forcée de ses droits de",
+   "citation": "L'expropriation pour cause d'utilité publique est la procédure par laquelle la puissance publique contraint, toute personne physique ou morale, à la cession forcée de ses droits de propriété sur un bien immobilier, moyennant une indemnisation juste et préalable.",
    "lecture": "L'expropriation pour cause d'utilité publique contraint le propriétaire à céder ses droits, moyennant une indemnité.",
    "faits_requis": [],
    "etape_plan": "Réunir le titre de propriété et tout acte reçu de l'administration",
@@ -300,7 +300,7 @@
     "nantissement",
     "garantir une dette"
    ],
-   "citation": "Une sûreté est l’affectation au bénéfice d’un créancier d’un bien, d’un ensemble de biens ou d’un patrimoine afin de garantir l’exécution d’une obligation ou d’un ensemble d’obliga",
+   "citation": "Une sûreté est l’affectation au bénéfice d’un créancier d’un bien, d’un ensemble de biens ou d’un patrimoine afin de garantir l’exécution d’une obligation ou d’un ensemble d’obligations, quelle que soit la nature juridique de celles-ci et notamment qu’elles soient présentes ou futures, déterminées ou déterminables, conditionnelles ou inconditionnel - les, et que leur montant soit fixe ou fluctuant.",
    "lecture": "Une sûreté affecte un bien ou un patrimoine au bénéfice d'un créancier pour garantir une obligation.",
    "faits_requis": [],
    "etape_plan": "Identifier la sûreté invoquée et le contrat qui la constitue",
@@ -322,7 +322,7 @@
     "caution",
     "garant personnel"
    ],
-   "citation": "Les sûretés personnelles, au sens du présent Acte uniforme, consistent en l'engage- ment d'une personne de répondre de l'obligation du débiteur principal en cas de défail- lance de",
+   "citation": "Les sûretés personnelles, au sens du présent Acte uniforme, consistent en l'engage- ment d'une personne de répondre de l'obligation du débiteur principal en cas de défail- lance de celui-ci ou à première demande du bénéficiaire de la garantie.",
    "lecture": "Les sûretés personnelles consistent en l'engagement d'une personne de répondre de l'obligation du débiteur principal.",
    "faits_requis": [],
    "etape_plan": "Rassembler l'acte de cautionnement et les mises en demeure reçues",

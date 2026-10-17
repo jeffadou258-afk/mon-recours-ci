@@ -33,6 +33,7 @@ import os
 import re
 import sqlite3
 
+import config
 from config import CHEMIN_DB
 from core.base import horodatage, normaliser
 from core.sources import est_hote_officiel
@@ -480,10 +481,41 @@ def enregistrer_articles(ref_id, doc_id, articles, origine_texte="CALQUE_TEXTE",
 # --------------------------------------------------------------------------
 # Lecture
 # --------------------------------------------------------------------------
+COLONNES_FICHIERS = ("chemin_local", "fichier_texte", "fichier_ocr")
+
+
+def localiser_fichier(chemin_enregistre):
+    """Chemin utilisable sur CETTE machine pour un fichier enregistré en base.
+
+    La base conserve le chemin absolu de la machine de collecte
+    (`/Users/mac/mon_recours_ci/KNOWLEDGE/...`). Sur un autre poste ou en CI,
+    ce chemin n'existe pas alors que le fichier est bien dans le dépôt : on le
+    retrouve par sa partie relative à `KNOWLEDGE/`. Si aucun des deux n'existe,
+    le chemin enregistré est rendu tel quel — l'absence reste visible, rien
+    n'est inventé. La base n'est jamais modifiée par cette fonction.
+    """
+    if not chemin_enregistre or os.path.exists(chemin_enregistre):
+        return chemin_enregistre
+    texte = str(chemin_enregistre).replace("\\", "/")
+    if "KNOWLEDGE/" in texte:
+        candidat = os.path.join(str(config.KNOWLEDGE_DIR), texte.split("KNOWLEDGE/", 1)[1])
+        if os.path.exists(candidat):
+            return candidat
+    return chemin_enregistre
+
+
+def _localiser(document):
+    if document:
+        for colonne in COLONNES_FICHIERS:
+            if colonne in document:
+                document[colonne] = localiser_fichier(document[colonne])
+    return document
+
+
 def obtenir_document(doc_id, chemin=None):
     with connexion(chemin) as conn:
         ligne = conn.execute("SELECT * FROM documents WHERE doc_id = ?", (doc_id,)).fetchone()
-    return dict(ligne) if ligne else None
+    return _localiser(dict(ligne)) if ligne else None
 
 
 def lister_documents(domaine=None, chemin=None):
@@ -494,7 +526,7 @@ def lister_documents(domaine=None, chemin=None):
         params.append(domaine)
     requete += " ORDER BY date_texte DESC"
     with connexion(chemin) as conn:
-        return [dict(r) for r in conn.execute(requete, params).fetchall()]
+        return [_localiser(dict(r)) for r in conn.execute(requete, params).fetchall()]
 
 
 def obtenir_article(doc_id, numero, chemin=None):
@@ -928,15 +960,62 @@ def verifier_provenance_analyse(analyse, chemin=None):
     return violations
 
 
+VARIABLE_PDF_NON_DISTRIBUES = "MONRECOURS_PDF_NON_DISTRIBUES"
+
+
+def pdf_non_distribues_toleres():
+    """Mode explicite pour un dépôt cloné SANS les PDF officiels.
+
+    Les PDF ne sont pas versionnés (droit de redistribution non établi, voir
+    .gitignore). Sur la machine de collecte, un PDF absent est un ÉCART : ce
+    mode est désactivé par défaut. En CI ou sur un clone, la variable
+    MONRECOURS_PDF_NON_DISTRIBUES=1 permet de vérifier ce qui EST distribué
+    (les textes extraits, sur lesquels reposent les citations) sans faire
+    passer l'absence d'un PDF pour une altération — ni pour une conformité.
+    """
+    return os.environ.get(VARIABLE_PDF_NON_DISTRIBUES, "") == "1"
+
+
+def pdf_absent_et_tolere(document):
+    return pdf_non_distribues_toleres() and not os.path.isfile(document.get("chemin_local") or "")
+
+
+def _verifier_texte_distribue(document):
+    """Empreintes des textes extraits (calque ou OCR) d'un document sans PDF."""
+    controles = []
+    for colonne_fichier, colonne_sha in (("fichier_texte", "sha256_texte"), ("fichier_ocr", "sha256_ocr")):
+        fichier, attendu = document.get(colonne_fichier), document.get(colonne_sha)
+        if not fichier or not attendu:
+            continue
+        if not os.path.isfile(fichier):
+            controles.append({"fichier": colonne_fichier, "etat": "absent"})
+            continue
+        reel = empreinte_fichier(fichier)
+        controles.append({"fichier": colonne_fichier,
+                          "etat": "conforme" if reel == attendu else "altere",
+                          "attendu": attendu, "reel": reel})
+    return controles
+
+
 def verifier_integrite(chemin=None):
     """Recalcule les empreintes sur disque. C'est la preuve que rien n'a dérivé."""
-    conformes, absents, alteres = [], [], []
-    for document in lister_documents(chemin=chemin):
+    conformes, absents, alteres, non_distribues = [], [], [], []
+    tolere = pdf_non_distribues_toleres()
+    documents = lister_documents(chemin=chemin)
+    for document in documents:
         chemin_pdf = document["chemin_local"]
         try:
             sha = empreinte_fichier(chemin_pdf)
         except FileNotFoundError:
-            absents.append({"doc_id": document["doc_id"], "chemin": chemin_pdf})
+            if not tolere:
+                absents.append({"doc_id": document["doc_id"], "chemin": chemin_pdf})
+                continue
+            textes = _verifier_texte_distribue(document)
+            entree = {"doc_id": document["doc_id"], "textes_verifies": textes}
+            if any(t["etat"] != "conforme" for t in textes):
+                alteres.append(dict(entree, motif="texte extrait absent ou altéré"))
+            else:
+                non_distribues.append(entree)
             continue
         if sha != document["sha256"]:
             alteres.append({"doc_id": document["doc_id"], "attendu": document["sha256"],
@@ -946,10 +1025,12 @@ def verifier_integrite(chemin=None):
                               "octets": document["octets"]})
     return {
         "horodatage": horodatage(),
-        "nb_documents": len(lister_documents(chemin=chemin)),
+        "nb_documents": len(documents),
         "conformes": conformes,
         "alteres": alteres,
         "absents": absents,
+        "pdf_non_distribues": non_distribues,
+        "mode": "pdf_non_distribues_toleres" if tolere else "strict",
         "verdict": "INTEGRE" if not alteres and not absents else "ECART DETECTE",
     }
 

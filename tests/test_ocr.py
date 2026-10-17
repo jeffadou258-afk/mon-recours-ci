@@ -241,9 +241,15 @@ class TestProvenanceDansLeCorpusLivre(unittest.TestCase):
 
     def test_le_pdf_original_est_intact_apres_ocr(self):
         """L'OCR ne doit jamais toucher au PDF source."""
+        verifies = 0
         for document in self._documents_a_ocr():
+            if corpus.pdf_absent_et_tolere(document):
+                continue
+            verifies += 1
             reel = "sha256:" + hashlib.sha256(open(document["chemin_local"], "rb").read()).hexdigest()
             self.assertEqual(reel, document["sha256"])
+        if not verifies and corpus.pdf_non_distribues_toleres():
+            self.skipTest("PDF non distribués dans ce dépôt (MONRECOURS_PDF_NON_DISTRIBUES=1)")
 
     def test_un_document_ocr_reste_un_scan(self):
         for document in self._documents_a_ocr():

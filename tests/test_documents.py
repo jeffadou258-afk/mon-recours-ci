@@ -96,3 +96,20 @@ class TestAucuneCapaciteDEnvoi(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class TestRenduDesListesDansLeBrouillon(unittest.TestCase):
+    """Régression : les faits apparaissaient sous la forme « ['…'] »."""
+
+    def test_une_liste_devient_des_lignes_a_puces_et_pas_de_double_point(self):
+        from core import documents as D
+        texte = D.rendre_texte("TEST_RENDU", "reclamation", {
+            "objet": "Dépôt de garantie",
+            "faits": ["Bail signé en 2024 : oui", "Clés rendues : oui"],
+            "demande": "Je demande la restitution de ma caution.",
+            "adresse_retour": "[À COMPLÉTER]",
+        })
+        self.assertNotIn("['", texte)
+        self.assertIn("- Bail signé en 2024 : oui\n- Clés rendues : oui", texte)
+        self.assertIn("Demande : Je demande la restitution de ma caution.\n", texte)
+        self.assertNotIn("caution..", texte)
