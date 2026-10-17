@@ -83,6 +83,13 @@ def normaliser(texte):
     t = (str(texte)
          .replace("\u2019", "'").replace("\u2018", "'")
          .replace("\u00b4", "'").replace("`", "'"))
+    # Trait d'union conditionnel (U+00AD) : par d\u00e9finition une coupure de mot
+    # FACULTATIVE, invisible hors fin de ligne. L'extraction PDF le laisse suivi
+    # d'un saut de ligne (\u00ab filia\u00ad\ntion \u00bb). Sans ce retrait, le mot coup\u00e9
+    # devenait deux mots (\u00ab filia tion \u00bb) et une citation exacte du mot entier
+    # \u00e9tait d\u00e9clar\u00e9e absente. Constat\u00e9 sur le Journal officiel du 12 juillet 2019
+    # (loi n\u00b0 2019-571).
+    t = re.sub("\u00ad\\s*", "", t)
     t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode("ascii")
     # Réparation des références numériques abîmées par l'extraction PDF.
     # Constaté sur le PDF officiel DGI du Code de la Construction et de

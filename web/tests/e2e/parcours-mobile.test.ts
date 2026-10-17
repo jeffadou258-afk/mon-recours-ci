@@ -63,7 +63,7 @@ test("accueil mobile : couverture réelle, pas de débordement", async () => {
   const page = await ctx.newPage();
   await page.goto(base + "/");
   await page.getByRole("heading", { level: 1 }).waitFor();
-  assert.match(await page.locator("body").innerText(), /13 situations sont couvertes/);
+  assert.match(await page.locator("body").innerText(), /\d+ situations sont couvertes/);
   await sansDefilementHorizontal(page);
   await page.screenshot({ path: join(CAPTURES, "01-accueil-mobile.png"), fullPage: true });
   await ctx.close();

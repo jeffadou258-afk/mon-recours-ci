@@ -1,0 +1,184 @@
+{
+  "_description": "Définitions des fiches du domaine famille. La citation n'est PAS écrite ici : elle est extraite du texte indexé entre 'citation_debut' et 'citation_fin' (inclus) par bin/ajouter_fiches.py, puis revalidée par core/catalogue.charger(). Texte source : loi n° 2019-571 du 26 juin 2019 relative à la filiation (famille.gouv.ci), état PARTIELLEMENT_VERIFIE, aucune relecture par un juriste.",
+  "domaine": "famille_mariage_filiation",
+  "numero_texte": "2019-571",
+  "fiches": [
+    {
+      "id": "FAMILL_1",
+      "article": "1",
+      "titre": "Droit de l'enfant à sa filiation",
+      "declencheurs": [
+        "filiation",
+        "lien de filiation",
+        "etablir la filiation"
+      ],
+      "citation_debut": "Tout enfant a droit",
+      "citation_fin": "à l’égard de ses auteurs.",
+      "lecture": "Tout enfant a le droit de voir établie sa filiation à l'égard de ses parents.",
+      "faits_requis": [],
+      "etape_plan": "Réunir l'acte de naissance de l'enfant et les pièces d'état civil"
+    },
+    {
+      "id": "FAMILL_2",
+      "article": "2",
+      "titre": "Paternité de l'enfant né pendant le mariage",
+      "declencheurs": [
+        "presomption de paternite",
+        "mari de la mere",
+        "ne pendant le mariage",
+        "enfant ne dans le mariage"
+      ],
+      "citation_debut": "L’enfant conçu pendant le mariage",
+      "citation_fin": "a pour père le mari de sa mère.",
+      "lecture": "L'enfant conçu pendant le mariage, ou né moins de trois cents jours après sa dissolution, a pour père le mari de sa mère.",
+      "faits_requis": [],
+      "etape_plan": "Noter les dates utiles (mariage, naissance, séparation)"
+    },
+    {
+      "id": "FAMILL_4",
+      "article": "4",
+      "titre": "Contester la paternité (désaveu par le mari)",
+      "declencheurs": [
+        "desaveu",
+        "desavouer",
+        "contester la paternite",
+        "test de paternite"
+      ],
+      "citation_debut": "Le mari peut désavouer",
+      "citation_fin": "il ne peut en être le père.",
+      "lecture": "Le mari peut désavouer l'enfant conçu pendant le mariage s'il prouve qu'il ne pouvait pas physiquement cohabiter avec sa femme pendant la période de conception, ou si la science médicale établit qu'il ne peut pas être le père.",
+      "faits_requis": [],
+      "etape_plan": "Agir vite : noter la date de naissance et consulter un avocat sans tarder"
+    },
+    {
+      "id": "FAMILL_6",
+      "article": "6",
+      "titre": "Délai pour contester la paternité",
+      "declencheurs": [
+        "delai desaveu",
+        "delai pour contester la paternite",
+        "combien de temps pour contester",
+        "desaveu"
+      ],
+      "citation_debut": "Dans les cas où le mari est autorisé à agir en désaveu",
+      "citation_fin": "si sa naissance lui a été cachée.",
+      "lecture": "Quand il peut agir en désaveu, le mari doit le faire dans les deux mois : de la naissance s'il était présent, de son retour s'il était absent, ou de la découverte de l'enfant si la naissance lui a été cachée.",
+      "faits_requis": [],
+      "etape_plan": "Agir vite : noter la date de naissance et consulter un avocat sans tarder"
+    },
+    {
+      "id": "FAMILL_9",
+      "article": "9",
+      "titre": "Prouver la filiation d'un enfant né dans le mariage",
+      "declencheurs": [
+        "prouver la filiation",
+        "preuve de filiation",
+        "preuve de la filiation",
+        "possession d'etat"
+      ],
+      "citation_debut": "La filiation des enfants nés dans le mariage",
+      "citation_fin": "la possession d’état d’enfant né dans le mariage suffit.",
+      "lecture": "La filiation d'un enfant né dans le mariage se prouve par son acte de naissance inscrit à l'état civil ; à défaut, la possession d'état suffit.",
+      "faits_requis": [],
+      "etape_plan": "Réunir l'acte de naissance de l'enfant et les pièces d'état civil"
+    },
+    {
+      "id": "FAMILL_19",
+      "article": "19",
+      "titre": "Filiation de l'enfant né hors mariage",
+      "declencheurs": [
+        "hors mariage",
+        "enfant naturel",
+        "pas maries",
+        "sans etre maries"
+      ],
+      "citation_debut": "La filiation des enfants nés hors mariage",
+      "citation_fin": "que d’une reconnaissance ou d’un jugement.",
+      "lecture": "Pour un enfant né hors mariage, le lien avec la mère résulte en principe de la naissance. Avec le père, il ne peut résulter que d'une reconnaissance ou d'un jugement.",
+      "faits_requis": [],
+      "etape_plan": "Réunir l'acte de naissance de l'enfant et les pièces d'état civil"
+    },
+    {
+      "id": "FAMILL_20",
+      "article": "20",
+      "titre": "Reconnaître un enfant",
+      "declencheurs": [
+        "reconnaitre mon enfant",
+        "reconnaitre l'enfant",
+        "reconnaissance d'enfant",
+        "faire reconnaitre",
+        "reconnaissance de paternite"
+      ],
+      "citation_debut": "La reconnaissance est faite dans l’acte de naissance.",
+      "citation_fin": "au moment de l’établissement de l’acte de naissance.",
+      "lecture": "La reconnaissance se fait dans l'acte de naissance, ou par acte authentique remis à l'officier de l'état civil lors de l'établissement de l'acte de naissance.",
+      "faits_requis": [],
+      "etape_plan": "Se rendre au centre d'état civil avec les pièces d'identité des parents"
+    },
+    {
+      "id": "FAMILL_21",
+      "article": "21",
+      "titre": "Reconnaissance après l'acte de naissance",
+      "declencheurs": [
+        "reconnaissance tardive",
+        "reconnaitre plus tard",
+        "apres l'acte de naissance",
+        "enfant majeur"
+      ],
+      "citation_debut": "Lorsque la reconnaissance est faite après",
+      "citation_fin": "n’est valable que du consentement de ce dernier.",
+      "lecture": "Une reconnaissance faite après l'acte de naissance est reçue par l'officier de l'état civil, après autorisation du procureur de la République. Pour un enfant de plus de 18 ans, son consentement est nécessaire.",
+      "faits_requis": [],
+      "etape_plan": "Se rendre au centre d'état civil avec l'acte de naissance de l'enfant"
+    },
+    {
+      "id": "FAMILL_22",
+      "article": "22",
+      "titre": "Homme marié qui reconnaît un enfant né hors mariage",
+      "declencheurs": [
+        "homme marie reconnaitre",
+        "marie et reconnaitre",
+        "reconnaitre un enfant hors mariage",
+        "informer mon epouse"
+      ],
+      "citation_debut": "La reconnaissance par le père de l’enfant né de",
+      "citation_fin": "par acte de commissaire de Justice.",
+      "lecture": "Un homme marié qui reconnaît un enfant né hors de son mariage doit d'abord en informer son épouse, par acte de commissaire de justice ; sinon la reconnaissance est nulle.",
+      "faits_requis": [],
+      "etape_plan": "Prévoir l'acte de commissaire de justice informant l'épouse"
+    },
+    {
+      "id": "FAMILL_24",
+      "article": "24",
+      "titre": "Faire déclarer la paternité par le juge",
+      "declencheurs": [
+        "recherche de paternite",
+        "refuse de reconnaitre",
+        "ne veut pas reconnaitre",
+        "declarer la paternite",
+        "action en paternite",
+        "paternite judiciaire"
+      ],
+      "citation_debut": "La paternité hors mariage peut être judiciairement",
+      "citation_fin": "à l’établissement de l’enfant en qualité de père.",
+      "lecture": "Le juge peut déclarer la paternité hors mariage dans des cas précis : enlèvement ou viol, séduction ou promesse de mariage, écrits du père prétendu, concubinage notoire, ou entretien et éducation de l'enfant en qualité de père.",
+      "faits_requis": [],
+      "etape_plan": "Rassembler les écrits et preuves de la relation et de l'entretien de l'enfant, puis consulter un avocat"
+    },
+    {
+      "id": "FAMILL_26",
+      "article": "26",
+      "titre": "Qui peut agir en recherche de paternité",
+      "declencheurs": [
+        "recherche de paternite",
+        "mere mineure",
+        "refuse de reconnaitre"
+      ],
+      "citation_debut": "L’action est dirigée contre le père prétendu",
+      "citation_fin": "par la personne qui a la garde de l’enfant.",
+      "lecture": "L'action en recherche de paternité appartient à l'enfant. Pendant sa minorité, seule la mère, même mineure, peut l'engager, contre le père prétendu ou ses héritiers.",
+      "faits_requis": [],
+      "etape_plan": "Rassembler les écrits et preuves de la relation et de l'entretien de l'enfant, puis consulter un avocat"
+    }
+  ]
+}

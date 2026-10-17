@@ -37,8 +37,12 @@ test("santé : chiffres lus sur le moteur réel", async () => {
   const rep = await gererSante(new Request("http://localhost:3000/api/sante"), { config });
   assert.equal(rep.status, 200);
   const { data } = await rep.json();
-  assert.equal(data.catalogue.fiches, 13);
-  assert.equal(data.corpus.articles, 1777);
+  // Le catalogue grandit avec les domaines (13 fiches au départ) : on vérifie
+  // la cohérence avec le moteur plutôt qu'un nombre figé.
+  assert.ok(data.catalogue.fiches >= 13);
+  const parDomaine = data.catalogue.parDomaine.reduce((n: number, d: { fiches: string[] }) => n + d.fiches.length, 0);
+  assert.equal(parDomaine, data.catalogue.fiches);
+  assert.ok(data.corpus.articles >= 1777);
   assert.equal(data.corpus.documents, 26);
 });
 

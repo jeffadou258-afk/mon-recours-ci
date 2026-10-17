@@ -133,17 +133,22 @@ class Test3InformationManquante(BaseDomaines):
 class Test4TexteIncomplet(BaseDomaines):
     """Épreuve 4 — un texte présent mais non exploitable ne doit pas être cité."""
 
-    def test_la_loi_de_filiation_est_conservee_mais_non_indexee(self):
+    # Cette épreuve portait sur la loi 2019-571 (filiation) tant qu'elle n'était
+    # pas indexée. Elle est désormais indexée PAR SEGMENT (bin/indexer_segment.py,
+    # contrôles dans tests/test_famille_segment.py). L'épreuve est conservée sur la
+    # loi 2019-572 (minorité), dont l'OCR reste refusé.
+
+    def test_la_loi_sur_la_minorite_est_conservee_mais_non_indexee(self):
         documents = [d for d in corpus.lister_documents(domaine=FAMILLE)
-                     if d["numero_texte"] == "2019-571"]
-        self.assertTrue(documents, "la loi 2019-571 doit être dans le corpus famille")
+                     if d["numero_texte"] == "2019-572"]
+        self.assertTrue(documents, "la loi 2019-572 doit être dans le corpus famille")
         document = documents[0]
         self.assertEqual(len(corpus.articles_dun_document(document["doc_id"])), 0,
                          "un découpage en articles non fiable ne doit produire AUCUN article")
-        self.assertIn("non fiable", (document["note_qualite"] or "").lower())
+        self.assertIn("refusé", (document["note_ocr"] or "").lower())
 
     def test_aucune_citation_possible_sur_un_texte_non_indexe(self):
-        reference = reference_de("2019-571", FAMILLE)
+        reference = reference_de("2019-572", FAMILLE)
         article = corpus.obtenir_article_par_reference(reference["ref_id"], "1")
         self.assertIsNone(article)
         ok, details = corpus.verifier_citation_article(reference["ref_id"], "1",

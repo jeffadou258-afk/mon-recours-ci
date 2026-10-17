@@ -6,10 +6,10 @@ name: Interface web — controles
 
 on:
   push:
-    branches: [feature/interface-web]
-    paths: ["web/**", ".github/workflows/interface-web.yml"]
+    branches: [feature/interface-web, feature/domaine-famille]
+    paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", ".github/workflows/interface-web.yml"]
   pull_request:
-    paths: ["web/**", ".github/workflows/interface-web.yml"]
+    paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", ".github/workflows/interface-web.yml"]
   workflow_dispatch:
 
 permissions:
