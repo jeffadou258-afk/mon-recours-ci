@@ -9,6 +9,13 @@ import { Etapes } from "./Etapes";
 import { Chargement, MessageErreur } from "./MessageErreur";
 import { VueRefusee, VueResultat, VueSansFiche } from "./Resultats";
 
+/** Amorces de rédaction : elles remplissent la zone de texte, la personne les modifie. */
+const AMORCES = [
+  "Mon bailleur refuse de me rendre ma caution depuis que j'ai quitté le logement.",
+  "Mon propriétaire veut augmenter mon loyer.",
+  "On veut m'expulser de mon logement.",
+];
+
 type Etat =
   | { phase: "saisie" }
   | { phase: "ouverture" }
@@ -102,6 +109,28 @@ export function Parcours() {
             Qui est concerné, ce qui s&apos;est passé, depuis quand. Inutile d&apos;indiquer votre nom,
             votre numéro de téléphone ou votre adresse : ils ne servent pas à l&apos;analyse.
           </p>
+          {etat.phase === "saisie" ? (
+            <div className="amorces">
+              <p className="amorces__titre">Pour commencer, vous pouvez partir d&apos;un exemple :</p>
+              <ul>
+                {AMORCES.map((a) => (
+                  <li key={a}>
+                    <button
+                      type="button"
+                      className="amorce"
+                      onClick={() => {
+                        setDemande(a);
+                        setErreurSaisie(null);
+                        document.getElementById("demande")?.focus();
+                      }}
+                    >
+                      {a}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
           <textarea
             id="demande"
             name="demande"

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Atkinson_Hyperlegible, Source_Serif_4 } from "next/font/google";
+import { Atkinson_Hyperlegible, Bricolage_Grotesque, Source_Serif_4 } from "next/font/google";
 import { EnTete, PiedDePage } from "@/components/Cadre";
 import { EnregistrementServiceWorker } from "@/components/EnregistrementServiceWorker";
 import "./globals.css";
@@ -10,6 +10,12 @@ const policeTexte = Atkinson_Hyperlegible({
   subsets: ["latin"],
   weight: ["400", "700"],
   variable: "--police-texte",
+  display: "swap",
+});
+const policeTitre = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["700", "800"],
+  variable: "--police-titre",
   display: "swap",
 });
 const policeLoi = Source_Serif_4({
@@ -29,14 +35,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1C2B26",
+  themeColor: "#0F2A22",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function Racine({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${policeTexte.variable} ${policeLoi.variable}`}>
+    <html lang="fr" className={`${policeTexte.variable} ${policeTitre.variable} ${policeLoi.variable}`}>
       <body>
         <a href="#contenu" className="lien-evitement">
           Aller au contenu
