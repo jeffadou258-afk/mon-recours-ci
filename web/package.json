@@ -1,0 +1,34 @@
+{
+  "name": "mon-recours-ci-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interface web de Mon Recours CI — consomme l'API locale du moteur juridique déterministe, sans logique juridique côté client.",
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --tsconfig tsconfig.test.json --test tests/unitaires/*.test.ts tests/composants/*.test.tsx",
+    "test:integration": "tsx --tsconfig tsconfig.test.json --test --test-concurrency=1 tests/integration/*.test.ts",
+    "test:e2e": "tsx --tsconfig tsconfig.test.json --test --test-concurrency=1 tests/e2e/*.test.ts",
+    "verifier:secrets": "node scripts/verifier-secrets.mjs",
+    "apercu": "tsx --tsconfig tsconfig.test.json apercu/serveur-apercu.tsx"
+  },
+  "dependencies": {
+    "next": "15.5.4",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "esbuild": "^0.25.0",
+    "playwright": "^1.55.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

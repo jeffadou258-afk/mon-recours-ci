@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mon Recours CI">
+  <rect width="512" height="512" rx="104" fill="#1C2B26"/>
+  <rect x="120" y="112" width="20" height="288" rx="10" fill="#E07A2E"/>
+  <text x="300" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="300" font-weight="700" fill="#F5F7F4">§</text>
+</svg>

@@ -1,0 +1,192 @@
+/**
+ * Types de l'interface.
+ *
+ * Deux familles :
+ *  - `Brut*`  : ce que renvoie réellement `bin/serveur_api.py` (relevé le
+ *    2026-10-17 en appelant le serveur, voir CLAUDE_HANDOFF.md §6 quinquies).
+ *    Ces types ne sont utilisés QUE côté serveur, par l'assainisseur.
+ *  - `Vue*`   : ce que la couche serveur de Next.js transmet au navigateur,
+ *    après avoir retiré les chemins de fichiers et tout champ non prévu.
+ *
+ * Aucun de ces types ne contient de règle de droit : ils transportent le
+ * contenu produit par le moteur, sans le modifier.
+ */
+
+// ---------------------------------------------------------------------------
+// Valeurs connues (le moteur peut en ajouter : on garde `string` en repli)
+// ---------------------------------------------------------------------------
+
+export type StatutReponse =
+  | "ANALYSE_CONFORME"
+  | "CONCLUSION_IMPOSSIBLE"
+  | "ANALYSE_REFUSEE"
+  | "REFUS";
+
+export type NiveauUrgence = "CRITIQUE" | "ELEVEE" | "NORMALE";
+
+export type EtatVerification =
+  | "VERIFIE"
+  | "PARTIELLEMENT_VERIFIE"
+  | "NON_VERIFIE"
+  | "NON_CONFIRME"
+  | "OBSOLETE";
+
+export type OrigineTexte = "CALQUE_TEXTE" | "OCR_AUTO" | "VERIFIE_MANUELLEMENT";
+
+// ---------------------------------------------------------------------------
+// Vues transmises au navigateur
+// ---------------------------------------------------------------------------
+
+export interface VueUrgence {
+  niveau: NiveauUrgence | string;
+  consigne: string | null;
+  declencheurs: { libelle: string; detecte: string | null }[];
+}
+
+export interface VueVerrou {
+  code: string | null;
+  motif: string;
+  rappel: string | null;
+}
+
+export interface VueFicheIdentifiee {
+  titre: string;
+  article: string;
+  numeroTexte: string | null;
+  etatVerification: EtatVerification | string;
+}
+
+export interface VueQuestion {
+  cle: string;
+  question: string;
+}
+
+export interface VueClarification {
+  etape: "clarification";
+  avertissement: string | null;
+  urgence: VueUrgence | null;
+  verrous: VueVerrou[];
+  fiches: VueFicheIdentifiee[];
+  questions: VueQuestion[];
+  noteCorpus: string | null;
+}
+
+export interface VueArticleSansFiche {
+  article: string;
+  numeroTexte: string | null;
+  etatVerification: string;
+}
+
+export interface VueHorsCatalogue {
+  etape: "hors_catalogue";
+  statut: "CONCLUSION_IMPOSSIBLE";
+  message: string;
+  domaines: string[];
+  articlesSansFiche: { domaine: string; articles: VueArticleSansFiche[] }[];
+  pistes: string[];
+  couverture: { domaine: string; fiches: string[] }[];
+  avertissement: string | null;
+}
+
+export interface VueRaisonRefus {
+  code: string | null;
+  libelle: string;
+  suite: string | null;
+}
+
+export interface VueRefus {
+  etape: "refus";
+  statut: "REFUS";
+  raisons: VueRaisonRefus[];
+  avertissement: string | null;
+}
+
+export type VueOuverture = VueClarification | VueHorsCatalogue | VueRefus;
+
+export interface VueRegleDroit {
+  titre: string;
+  article: string;
+  numeroTexte: string | null;
+  citation: string;
+  lecture: string | null;
+  noteLecture: string | null;
+}
+
+export interface VueSource {
+  reference: string | null;
+  numeroTexte: string | null;
+  article: string;
+  citation: string;
+  urlSource: string | null;
+  sha256: string | null;
+  etatVerification: EtatVerification | string;
+  origineTexte: OrigineTexte | string | null;
+  recoupe: boolean;
+  confianceOcr: number | null;
+  limites: string | null;
+  noteLecture: string | null;
+}
+
+export interface VueBrouillon {
+  disponible: boolean;
+  note: string | null;
+  raison: string | null;
+}
+
+export interface VueReponse {
+  etape: "reponse";
+  statut: StatutReponse | string;
+  /** `true` si le moteur indique que ce dossier avait déjà reçu sa réponse. */
+  dejaRepondu: boolean;
+  demande: string | null;
+  noteFaits: string | null;
+  droit: VueRegleDroit[];
+  application: string | null;
+  demarches: string[];
+  aVerifier: string[];
+  sources: VueSource[];
+  verrous: VueVerrou[];
+  actionsExternesAutorisees: boolean | null;
+  brouillon: VueBrouillon | null;
+  avertissement: string | null;
+}
+
+export interface VueSante {
+  catalogue: { fiches: number; parDomaine: { domaine: string; fiches: string[] }[] };
+  corpus: {
+    integrite: string | null;
+    documents: number | null;
+    articles: number | null;
+    parOrigine: { origine: string; articles: number }[];
+  };
+  domaines: { domaine: string; statut: string; completude: string }[];
+  avertissement: string | null;
+}
+
+// ---------------------------------------------------------------------------
+// Enveloppe des réponses de /api/*
+// ---------------------------------------------------------------------------
+
+export type CodeErreur =
+  | "ENTREE_INVALIDE"
+  | "TYPE_NON_SUPPORTE"
+  | "CORPS_TROP_GRAND"
+  | "ORIGINE_REFUSEE"
+  | "SESSION_ABSENTE"
+  | "DOSSIER_INCONNU"
+  | "DEBIT_DEPASSE"
+  | "SERVICE_INDISPONIBLE"
+  | "CONFIGURATION"
+  | "CATALOGUE_INVALIDE"
+  | "REPONSE_INVALIDE"
+  | "RESEAU"
+  | "INTERNE";
+
+export interface ErreurApi {
+  code: CodeErreur;
+  message: string;
+  reessayable: boolean;
+  reessayerDansSecondes?: number;
+}
+
+export type ResultatApi<T> = { ok: true; data: T } | { ok: false; erreur: ErreurApi };
