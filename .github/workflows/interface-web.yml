@@ -1,0 +1,132 @@
+# Contrôles de l'interface web (web/) — exécutés par GitHub Actions.
+# Aucun déploiement, aucun secret utilisé : les clés nécessaires aux tests sont
+# tirées au hasard pendant l'exécution puis jetées.
+
+name: Interface web — controles
+
+on:
+  push:
+    branches: [feature/interface-web]
+    paths: ["web/**", ".github/workflows/interface-web.yml"]
+  pull_request:
+    paths: ["web/**", ".github/workflows/interface-web.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: interface-web-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  controles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Clés de test éphémères (masquées)
+        run: |
+          K=$(node -e "console.log(require('crypto').randomBytes(24).toString('base64url'))")
+          S=$(node -e "console.log(require('crypto').randomBytes(32).toString('base64url'))")
+          echo "::add-mask::$K"
+          echo "::add-mask::$S"
+          echo "MONRECOURS_API_KEY=$K" >> "$GITHUB_ENV"
+          echo "MONRECOURS_SESSION_SECRET=$S" >> "$GITHUB_ENV"
+
+      # Les scripts d'installation (esbuild, sharp) ne sont pas exécutés, comme
+      # décidé dans package.json (allowScripts). Les tests vérifient que tout
+      # fonctionne sans eux.
+      - name: Installation (sans scripts d'installation)
+        run: |
+          node --version && npm --version
+          npm install --ignore-scripts --no-fund
+          echo "::notice title=Versions::$(node -p "['next','react','react-dom','postcss','playwright','esbuild','typescript'].map(n=>{try{return n+'@'+JSON.parse(require('fs').readFileSync('node_modules/'+n+'/package.json','utf8')).version}catch{return n+'@absent'}}).join(' ')")"
+
+      - name: Copies de postcss installées (doivent être >= 8.5.23)
+        run: |
+          npm ls postcss --all || true
+          V=$(npm ls postcss --all --json | node -e "let d='';process.stdin.on('data',c=>d+=c).on('end',()=>{const v=new Set();(function f(o){for(const [k,x] of Object.entries(o.dependencies||{})){if(k==='postcss')v.add(x.version);f(x)}})(JSON.parse(d));console.log([...v].join(' '))})")
+          echo "::notice title=postcss::versions installées : $V"
+
+      - name: Audit npm
+        id: audit
+        continue-on-error: true
+        run: |
+          npm audit --json > ../audit.json || true
+          npm audit
+          R=$(node -e "const a=require('../audit.json');const m=a.metadata.vulnerabilities;console.log(Object.entries(m).map(([k,v])=>k+'='+v).join(' '))")
+          echo "::notice title=npm audit::$R"
+          npm audit --audit-level=low
+
+      - name: TypeScript
+        if: always()
+        run: npm run typecheck
+
+      - name: Tests unitaires et composants
+        if: always()
+        run: |
+          npm test 2>&1 | tee ../unitaires.txt
+          echo "::notice title=Tests unitaires::$(grep -E '^# (tests|pass|fail)' ../unitaires.txt | tr '\n' ' ')"
+          ! grep -qE '^# fail [1-9]' ../unitaires.txt
+
+      - name: Construction Next.js
+        if: always()
+        run: npm run build
+
+      - name: Secrets dans le code client
+        if: always()
+        run: npm run verifier:secrets
+
+      - name: Intégration avec le moteur Python réel
+        if: always()
+        run: |
+          npm run test:integration 2>&1 | tee ../integration.txt
+          echo "::notice title=Integration::$(grep -E '^# (tests|pass|fail)' ../integration.txt | tr '\n' ' ')"
+          ! grep -qE '^# fail [1-9]' ../integration.txt
+
+      - name: Navigateur Chromium
+        if: always()
+        run: npx playwright install --with-deps chromium
+
+      - name: Bout en bout (Chromium mobile, moteur réel)
+        if: always()
+        run: |
+          npm run test:e2e 2>&1 | tee ../e2e.txt
+          echo "::notice title=E2E::$(grep -E '^# (tests|pass|fail)' ../e2e.txt | tr '\n' ' ')"
+          ! grep -qE '^# fail [1-9]' ../e2e.txt
+
+      - name: Tests du moteur (information, non modifié)
+        if: always()
+        continue-on-error: true
+        working-directory: .
+        run: |
+          python3 tests/run_all.py 2>&1 | tee moteur.txt | tail -5
+          echo "::notice title=Moteur::$(grep -E 'TESTS=' moteur.txt)"
+
+      - name: Résultat final de l'audit
+        if: always()
+        run: test "${{ steps.audit.outcome }}" = "success"
+
+      - name: Conserver le package-lock.json, l'audit et les captures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultats-interface-web
+          path: |
+            web/package-lock.json
+            audit.json
+            web/tests/e2e/captures/
+          retention-days: 14
