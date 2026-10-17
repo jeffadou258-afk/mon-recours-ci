@@ -149,6 +149,9 @@ jobs:
         run: |
           npm run test:e2e 2>&1 | tee ../e2e.txt
           echo "::notice title=E2E::$(grep -E '^# (tests|pass|fail)' ../e2e.txt | tr '\n' ' ')"
+          if grep -qE '^not ok' ../e2e.txt; then
+            echo "::warning title=E2E echecs::$(grep -E "^not ok|^  error: " ../e2e.txt | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')"
+          fi
           ! grep -qE '^# fail [1-9]' ../e2e.txt
 
       - name: Tests du moteur (information, non modifié)
