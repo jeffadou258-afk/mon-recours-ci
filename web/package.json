@@ -1,6 +1,6 @@
 {
   "name": "mon-recours-ci-web",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "Interface web de Mon Recours CI — consomme l'API locale du moteur juridique déterministe, sans logique juridique côté client.",
   "engines": {
@@ -30,6 +30,9 @@
     "playwright": "^1.55.1",
     "tsx": "^4.20.0",
     "typescript": "^5.9.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.23"
   },
   "allowScripts": {
     "esbuild": false,

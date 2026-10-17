@@ -36,6 +36,7 @@ etape() {
 etape "1. Installation propre" npm install
 etape "2. Audit de sécurité" npm audit
 etape "3. Versions installées" npm ls next react react-dom sharp esbuild playwright
+etape "3 bis. PostCSS (toutes les copies, doit être >= 8.5.23)" npm ls postcss --all
 etape "4. Scripts d'installation en attente" npm approve-scripts --allow-scripts-pending
 etape "5. Vérification TypeScript" npm run typecheck
 etape "6. Tests unitaires et composants" npm test

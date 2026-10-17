@@ -160,11 +160,23 @@ installable. `npm run apercu` le lance sur le port 3000.
 | `next` | **15.5.28** | dernière version corrigée de la branche 15.5 (maintenance LTS). Corrige les avis d'octobre 2026 (GHSA-673q-mjm6-r5xr critique, CVE-2026-96889 / GHSA-2464-fhr4-w9xw critique, GHSA-p3m5-59mp-jv5r élevé), ceux de septembre 2026 (15.5.27) et les correctifs React2Shell de décembre 2025. Pas de passage à la 16 : changement majeur non nécessaire pour corriger. |
 | `react`, `react-dom` | **19.1.10** | même ligne que les correctifs React d'octobre 2026 (les failles touchent `react-server-dom-*`, embarqué par Next.js ; React est aligné par cohérence). |
 | `playwright` (dev) | **≥ 1.55.1** | GHSA-7mvr-c777-76hp (élevé) : téléchargement des navigateurs sans vérification TLS avant 1.55.1. |
+| `postcss` (via `next`) | **≥ 8.5.23**, forcé par `overrides` | Next.js 15.5.28 fige `postcss@8.4.31`, visé par GHSA-qx2v-qp2m-jg93 (modéré, corrigé en 8.5.10), GHSA-6g55-p6wh-862q / CVE-2026-45623 (élevé, 8.5.12), GHSA-r28c-9q8g-f849 (élevé, 8.5.18) et GHSA-fxqj-rqcc-2cmp (modéré, 8.5.23). Mise à jour dans la même version majeure 8, compatible. |
+
+**Pourquoi un `override` plutôt que Next.js 16.** `npm audit fix --force` proposerait un
+changement de version majeure de Next.js. Ce n'est pas nécessaire : PostCSS 8.5.x reste
+compatible avec l'API 8.x utilisée par Next.js, alors qu'un passage à Next.js 16 imposerait
+des changements cassants et ne garantit pas, à lui seul, une version de PostCSS ≥ 8.5.23.
+Exposition réelle de cette application : faible. PostCSS ne traite que notre propre
+feuille de style, au moment du build ; aucun CSS fourni par un visiteur n'est analysé.
+À retirer quand une version de Next.js 15.5 (ou la version adoptée) embarquera elle-même
+PostCSS ≥ 8.5.23 : vérifier avec `npm ls postcss --all`.
 
 Sources : [Next.js, 14 oct. 2026](https://nextjs.org/blog/nextjs-security-update-october-14-2026),
 [Next.js, 30 sept. 2026](https://nextjs.org/blog/september-2026-security-release),
 [React GHSA-xqc2-xf4c-x3h3](https://github.com/react/react/security/advisories/GHSA-xqc2-xf4c-x3h3),
-[OSV GHSA-7mvr-c777-76hp](https://osv.dev/vulnerability/GHSA-7mvr-c777-76hp).
+[OSV GHSA-7mvr-c777-76hp](https://osv.dev/vulnerability/GHSA-7mvr-c777-76hp),
+[avis de sécurité PostCSS](https://github.com/postcss/postcss/security/advisories),
+[NVD CVE-2026-45623](https://nvd.nist.gov/vuln/detail/CVE-2026-45623).
 
 ### Scripts d'installation (npm 12)
 
