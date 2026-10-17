@@ -180,8 +180,12 @@ Sources : [Next.js, 14 oct. 2026](https://nextjs.org/blog/nextjs-security-update
 
 ### Scripts d'installation (npm 12)
 
-`package.json` refuse explicitement les scripts d'installation de `esbuild` et `sharp`
-(`"allowScripts": { "esbuild": false, "sharp": false }`) :
+`package.json` refuse explicitement les scripts d'installation de `esbuild`, `fsevents`
+et `sharp` (`"allowScripts": { "esbuild": false, "fsevents": false, "sharp": false }`).
+La CI installe avec `--ignore-scripts` et tous les tests passent ainsi :
+
+- **fsevents** (macOS seulement) est une dépendance facultative de surveillance de
+  fichiers, livrée précompilée ; inutile à l'application.
 
 - **sharp** sert uniquement à l'optimisation d'images de Next.js, désactivée ici
   (`images.unoptimized`). Ses binaires précompilés arrivent par les paquets
