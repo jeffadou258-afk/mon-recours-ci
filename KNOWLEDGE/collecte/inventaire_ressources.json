@@ -1,0 +1,769 @@
+{
+ "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
+ "genere_le": "2026-10-19T09:36:42+00:00",
+ "outils_collecte": {
+  "pdftotext": "pdftotext version 24.02.0",
+  "tesseract": "tesseract 5.3.4",
+  "qpdf": "qpdf version 11.9.0",
+  "tesseract_langues": [
+   "of",
+   "available",
+   "languages",
+   "in",
+   "\"/usr/share/tesseract-ocr/5/tessdata/\"",
+   "(3):",
+   "eng",
+   "fra",
+   "osd"
+  ]
+ },
+ "totaux": {
+  "entrees_manifeste": 83,
+  "documents_telecharges": 6,
+  "pages_de_decouverte_lues": 10,
+  "echecs": 27,
+  "non_encore_collectes": 40,
+  "par_statut_controle": {
+   "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 4,
+   "QUARANTAINE": 2
+  },
+  "par_categorie": {
+   "OFFICIEL_INSTITUTION": 1,
+   "SECONDAIRE_AUTRE": 2,
+   "SECONDAIRE_BASE_INTERNATIONALE": 1,
+   "SECONDAIRE_CONSOLIDE": 1,
+   "SECONDAIRE_FAC_SIMILE": 1
+  },
+  "par_methode_extraction": {
+   "CALQUE_TEXTE": 4,
+   "OCR_TESSERACT_PARTIEL": 2
+  },
+  "pdf_rapatries_et_verifies": 0
+ },
+ "documents": [
+  {
+   "cle": "aupsrve_2023_jo_ohadacom",
+   "titre": "Acte uniforme du 17 octobre 2023 portant organisation des procédures simplifiées de recouvrement et des voies d'exécution — Journal officiel de l'OHADA, numéro spécial du 15 novembre 2023",
+   "numero_texte": "AUPSRVE-2023",
+   "date_texte": "2023-10-17",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA (fac-similé hébergé par UNIDA / ohada.com)",
+   "domaines": [
+    23
+   ],
+   "url": "https://www.ohada.com/uploads/actualite/7010/J.O._special_AUVE_15.11.2023.pdf",
+   "url_finale": "https://www.ohada.com/uploads/actualite/7010/J.O._special_AUVE_15.11.2023.pdf",
+   "date_recuperation": "2026-10-19T09:24:17+00:00",
+   "categorie_source": "SECONDAIRE_FAC_SIMILE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.6",
+   "octets": 9179996,
+   "sha256": "sha256:851366a003327a59640a11b668d2a7817ff9308f240d12cf82cc96c2a56489ba",
+   "pages": 122,
+   "polices": 8,
+   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "methode_extraction": "OCR_TESSERACT_PARTIEL",
+   "densite_native_car_par_page": 166,
+   "confiance_ocr_moyenne": 91.5,
+   "articles_detectes": 332,
+   "article_max": 338,
+   "couverture_articles": 0.9822,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "qpdf signale des avertissements de structure",
+    "1 page(s) OCR de confiance < 70 : [9]"
+   ],
+   "notes": "Fac-similé du JO OHADA sur un site associatif ; l'exemplaire de ohada.org est recherché par découverte.",
+   "doublon_de": []
+  },
+  {
+   "cle": "aupsrve_2023_senlii",
+   "titre": "Acte uniforme portant organisation des procédures simplifiées de recouvrement et des voies d'exécution (SenLII, 2 juillet 2024)",
+   "numero_texte": "AUPSRVE-2023",
+   "date_texte": "2023-10-17",
+   "type_texte": "acte_uniforme",
+   "autorite": "Laws.Africa / SenLII (reproduction)",
+   "domaines": [
+    23
+   ],
+   "url": "https://senlii.org/en/akn/aa-ohada/act/2023/organisation-des-proc%C3%A9dures-simplifi%C3%A9es-de-recouvrement-et-des-voies-d-ex%C3%A9cution/fra@2024-07-02/source.pdf",
+   "url_finale": "https://senlii.org/en/akn/aa-ohada/act/2023/organisation-des-proc%C3%A9dures-simplifi%C3%A9es-de-recouvrement-et-des-voies-d-ex%C3%A9cution/fra@2024-07-02/source.pdf",
+   "date_recuperation": "2026-10-19T09:33:14+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 983263,
+   "sha256": "sha256:c2def27f6e6f1b9896f5f0f64f17527a282b37e756fc003a284c66949cdd5543",
+   "pages": 113,
+   "polices": 5,
+   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "methode_extraction": "CALQUE_TEXTE",
+   "densite_native_car_par_page": 2986,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 338,
+   "article_max": 338,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "mariage_2019_570_faolex",
+   "titre": "Loi n° 2019-570 du 26 juin 2019 relative au mariage",
+   "numero_texte": "2019-570",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "FAO — base FAOLEX (reproduction)",
+   "domaines": [
+    2
+   ],
+   "url": "https://faolex.fao.org/docs/pdf/ivc208186.pdf",
+   "url_finale": "https://faolex.fao.org/docs/pdf/ivc208186.pdf",
+   "date_recuperation": "2026-10-19T09:23:54+00:00",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.5",
+   "octets": 572678,
+   "sha256": "sha256:ce4a39e45321bb30c55ef2f0061f503b2632f8bc4c38e943dee44ad3e8da7627",
+   "pages": 7,
+   "polices": 17,
+   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "methode_extraction": "CALQUE_TEXTE",
+   "densite_native_car_par_page": 6360,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 105,
+   "article_max": 105,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "successions_2019_573_assnat",
+   "titre": "Loi relative aux successions (document de l'Assemblée nationale)",
+   "numero_texte": "2019-573",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Assemblée nationale de Côte d'Ivoire",
+   "domaines": [
+    2
+   ],
+   "url": "https://www.assnat.ci/IMG/pdf/loi_relative_aux_successions.pdf",
+   "url_finale": "https://www.assnat.ci/IMG/pdf/loi_relative_aux_successions.pdf",
+   "date_recuperation": "2026-10-19T09:23:55+00:00",
+   "categorie_source": "OFFICIEL_INSTITUTION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 372196,
+   "sha256": "sha256:31b46f9b0ac6d4f1735569234bd4633413b6cda765a474f4acdf361ec9fc455d",
+   "pages": 23,
+   "polices": 7,
+   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "methode_extraction": "CALQUE_TEXTE",
+   "densite_native_car_par_page": 2020,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 135,
+   "article_max": 135,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le numéro 2019-573 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [],
+   "notes": "Texte parlementaire : peut différer du texte promulgué publié au Journal officiel.",
+   "doublon_de": []
+  },
+  {
+   "cle": "successions_2019_573_bice",
+   "titre": "Loi n° 2019-573 relative aux successions (document diffusé par le BICE)",
+   "numero_texte": "2019-573",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "BICE — Bureau international catholique de l'enfance (diffusion)",
+   "domaines": [
+    2
+   ],
+   "url": "https://documentation.bice.org/app/uploads/2024/05/loi_2019-573_sur_la_succession.pdf",
+   "url_finale": "https://documentation.bice.org/app/uploads/2024/05/loi_2019-573_sur_la_succession.pdf",
+   "date_recuperation": "2026-10-19T09:24:14+00:00",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.5",
+   "octets": 725170,
+   "sha256": "sha256:0d7d1595d4c15a3b46624584e2f25c84023505e856eb9d72e1f20525bcacacdb",
+   "pages": 10,
+   "polices": 17,
+   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "methode_extraction": "CALQUE_TEXTE",
+   "densite_native_car_par_page": 5290,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 120,
+   "article_max": 160,
+   "couverture_articles": 0.75,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 75% des articles 1..160"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "travail_2015_532_uvci",
+   "titre": "Le Code du travail ivoirien (document diffusé par l'UVCI)",
+   "numero_texte": "2015-532",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Université virtuelle de Côte d'Ivoire (diffusion)",
+   "domaines": [
+    4
+   ],
+   "url": "https://www.uvci.online/portail/externes/documents/textes_officiels/Le_code_du_travail_ivoirien_-_20251.pdf",
+   "url_finale": "https://www.uvci.online/portail/externes/documents/textes_officiels/Le_code_du_travail_ivoirien_-_20251.pdf",
+   "date_recuperation": "2026-10-19T09:23:33+00:00",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.7",
+   "octets": 2147893,
+   "sha256": "sha256:db00d96f60bd707fc826056ea96ec20c51d4b3b883fa2155bc3acec53f3765f3",
+   "pages": 563,
+   "polices": 10,
+   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "methode_extraction": "OCR_TESSERACT_PARTIEL",
+   "densite_native_car_par_page": 1143,
+   "confiance_ocr_moyenne": 89.3,
+   "articles_detectes": 94,
+   "article_max": 110,
+   "couverture_articles": 0.8545,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "ivoire-juriste"
+   ],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "1 page(s) OCR de confiance < 70 : [202]"
+   ],
+   "notes": "Compilation de provenance non indiquée : recoupement seulement.",
+   "doublon_de": []
+  }
+ ],
+ "echecs": [
+  {
+   "cle": "code_penal_2019_574_mffe",
+   "url": "https://famille.gouv.ci/public/documents/doc_drcc/loi_2019-574_portant_code_p%C3%A9nal.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:23:28+00:00"
+  },
+  {
+   "cle": "code_penal_2019_574_civlii",
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/574/fra@2024-06-23?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:23:30+00:00"
+  },
+  {
+   "cle": "cpp_2018_975_civlii",
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2018/975/fra@2024-06-23?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:23:31+00:00"
+  },
+  {
+   "cle": "travail_2015_532_faolex",
+   "url": "https://faolex.fao.org/docs/pdf/ivc207091.pdf",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:23:32+00:00"
+  },
+  {
+   "cle": "travail_2015_532_civlii",
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2015/532/fra@2023-08-10?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:23:32+00:00"
+  },
+  {
+   "cle": "mariage_2019_570_civlii",
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/570/eng@2023-10-13?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:23:54+00:00"
+  },
+  {
+   "cle": "successions_2019_573_civlii",
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/573/fra@2023-10-13?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:24:13+00:00"
+  },
+  {
+   "cle": "minorite_2019_572_civlii",
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/572/fra@2023-10-13?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:24:16+00:00"
+  },
+  {
+   "cle": "filiation_2019_571_civlii",
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/571/fra@2023-10-13?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:24:17+00:00"
+  },
+  {
+   "cle": "gouvci_175043233774",
+   "url": "https://www.gouv.ci/uploads/publications/175043233774.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "statut": "ECHEC_RESEAU",
+   "http": null,
+   "erreur": "échec après 3 essais : <urlopen error [Errno -3] Temporary failure in name resolution>",
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:33:17+00:00"
+  },
+  {
+   "cle": "dec_emploi_gouv",
+   "url": "https://emploi.gouv.ci/",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 403,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:34:41+00:00"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_570_eng@2023-10-13",
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/570/eng@2023-10-13/publication",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:04+00:00"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_571_fra@2023-10-13",
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/571/fra@2023-10-13/publication",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:05+00:00"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_572_fra@2023-10-13",
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/572/fra@2023-10-13/publication",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:06+00:00"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_573_fra@2023-10-13",
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/573/fra@2023-10-13/publication",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:06+00:00"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_574_fra@2024-06-23",
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/574/fra@2024-06-23/publication",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:06+00:00"
+  },
+  {
+   "cle": "dec_civlii_publication_2018_975_fra@2024-06-23",
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2018/975/fra@2024-06-23/publication",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:07+00:00"
+  },
+  {
+   "cle": "dec_civlii_publication_2015_532_fra@2023-08-10",
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2015/532/fra@2023-08-10/publication",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:07+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p2",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=2",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:09+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p3",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=3",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:10+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p4",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=4",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:10+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p5",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=5",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:11+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p6",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=6",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:11+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p7",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=7",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:12+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p8",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=8",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:12+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p9",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=9",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:13+00:00"
+  },
+  {
+   "cle": "dec_civlii_legislation_p10",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=10",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T09:35:13+00:00"
+  }
+ ],
+ "decouvertes": [
+  {
+   "cle": "dec_ohada_journal_officiel_en",
+   "url": "https://www.ohada.org/en/official-gazette/",
+   "titre_page": "Official Gazette – OHADA",
+   "liens": 5
+  },
+  {
+   "cle": "dec_ohada_journal_officiel_fr",
+   "url": "https://www.ohada.org/journal-officiel/",
+   "titre_page": "Journal Officiel – OHADA",
+   "liens": 17
+  },
+  {
+   "cle": "dec_ohada_aupsrve_en",
+   "url": "https://www.ohada.org/en/organizing-simplified-recovery-procedures-and-measures-of-execution/",
+   "titre_page": "Organizing simplified recovery procedures and measures of execution – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_aupsrve_publication",
+   "url": "https://www.ohada.org/en/publication-in-the-ohada-official-gazette-of-the-uniform-act-organizing-simplified-recovery-procedures-and-enforcement-measures-of-the-17th-of-october-2023-yaounde-15-th-november-2023/",
+   "titre_page": "Publication in the OHADA Official Gazette of the Uniform Act organizing simplified recovery procedures and enforcement measures of the 17th of October 2023.  (Yaoundé, 15 th November 2023) – OHADA",
+   "liens": 1
+  },
+  {
+   "cle": "dec_ohada_actes_uniformes_fr",
+   "url": "https://www.ohada.org/actes-uniformes/",
+   "titre_page": "Actes Uniformes – OHADA",
+   "liens": 7
+  },
+  {
+   "cle": "dec_sgg",
+   "url": "https://www.sgg.gouv.ci/",
+   "titre_page": "Sécrétariat Général du Gouvernement de Côte d'Ivoire",
+   "liens": 4
+  },
+  {
+   "cle": "dec_cndj_codes",
+   "url": "https://www.cndj.ci/bases-de-recherche/codes-et-recueils-de-textes.html",
+   "titre_page": "Centre National de Documentation Juridique de Côte d'Ivoire",
+   "liens": 2
+  },
+  {
+   "cle": "dec_justice_gouv",
+   "url": "https://www.justice.gouv.ci/",
+   "titre_page": "Ministère de la Justice",
+   "liens": 0
+  },
+  {
+   "cle": "dec_assnat_lois",
+   "url": "https://www.assnat.ci/",
+   "titre_page": "Assemblée nationale de Côte d'Ivoire | Site officiel",
+   "liens": 8
+  },
+  {
+   "cle": "dec_civlii_legislation_p1",
+   "url": "https://civlii.laws.africa/fr/legislation/?page=1",
+   "titre_page": "Législation\n\n        – JuriCIV",
+   "liens": 48
+  }
+ ],
+ "non_encore_collectes": [
+  {
+   "cle": "dec_mffe_textes",
+   "url": "https://mffe.ci/MFFE/site_famille/document-dinteret-public/textes-juridiques/"
+  },
+  {
+   "cle": "dec_famille_gouv",
+   "url": "https://famille.gouv.ci/"
+  },
+  {
+   "cle": "officiel_famille_loi_n_202_894_du_21_d_cembre_2021_relative_aux_m",
+   "url": "https://famille.gouv.ci/uploads/publications/176960480223.pdf"
+  },
+  {
+   "cle": "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
+   "url": "https://famille.gouv.ci/uploads/publications/176937670169.pdf"
+  },
+  {
+   "cle": "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
+   "url": "https://famille.gouv.ci/uploads/publications/176937624358.pdf"
+  },
+  {
+   "cle": "officiel_famille_d_cret_portant_r_glementation_des_familles_d_acc",
+   "url": "https://famille.gouv.ci/uploads/publications/176937552921.pdf"
+  },
+  {
+   "cle": "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
+   "url": "https://famille.gouv.ci/uploads/publications/176937240619.pdf"
+  },
+  {
+   "cle": "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
+   "url": "https://famille.gouv.ci/uploads/publications/176937124389.pdf"
+  },
+  {
+   "cle": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
+   "url": "https://famille.gouv.ci/uploads/publications/176937063397.pdf"
+  },
+  {
+   "cle": "officiel_famille_loi_relative_a_l_adoption",
+   "url": "https://famille.gouv.ci/uploads/publications/176936997346.pdf"
+  },
+  {
+   "cle": "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
+   "url": "https://famille.gouv.ci/uploads/publications/176936984489.pdf"
+  },
+  {
+   "cle": "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
+   "url": "https://famille.gouv.ci/uploads/publications/176936945850.pdf"
+  },
+  {
+   "cle": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
+   "url": "https://famille.gouv.ci/uploads/publications/17693691723.pdf"
+  },
+  {
+   "cle": "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
+   "url": "https://famille.gouv.ci/uploads/publications/176936873529.pdf"
+  },
+  {
+   "cle": "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
+   "url": "https://famille.gouv.ci/uploads/publications/176936701697.pdf"
+  },
+  {
+   "cle": "mffe_cpp_2018_975",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/Loi_2018-975_du_27_decembre_2018_portant_Code_de_Procedure_penale.pdf"
+  },
+  {
+   "cle": "mffe_code_penal_2019_574",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf"
+  },
+  {
+   "cle": "mffe_mariage_2019_570",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf"
+  },
+  {
+   "cle": "mffe_successions_2019_573",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-573_sur_la_succession.pdf"
+  },
+  {
+   "cle": "mffe_traite_2016_1111",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2016-1111_du_08_decembre_2016_relative_a_la_lutte_contre_la_traite_des_personnes.pdf"
+  },
+  {
+   "cle": "mffe_constitution_2016",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/constitution_2016.pdf"
+  },
+  {
+   "cle": "mffe_etat_civil_2018_862",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_862_du_19_11_2018_etat_civil.pdf"
+  },
+  {
+   "cle": "mffe_naissance_2018_863",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_863_du_19_11_2018_instituant_une_procedure_declaration_naissance.pdf"
+  },
+  {
+   "cle": "mffe_pupille_2015_539",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2015-539_pupille_de_l-Etat.pdf"
+  },
+  {
+   "cle": "mffe_adoption",
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/1724365129_adoption_enfant.pdf"
+  },
+  {
+   "cle": "ohada_jo_special_aupsrve_2023",
+   "url": "https://www.ohada.org/wp-content/uploads/2023/11/J.O._special_AUVE_15.11.2023_Compressed.pdf"
+  },
+  {
+   "cle": "assnat_constitution",
+   "url": "https://www.assnat.ci/CONSTITUTION.pdf"
+  },
+  {
+   "cle": "civlii_code_penal_source_pdf",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source.pdf"
+  },
+  {
+   "cle": "civlii_cpp_source_pdf",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/975/fra@2024-06-23/source.pdf"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_cpp",
+   "url": "https://civlii.laws.africa/akn/ci/act/2018/975/fra@2023-12-11"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_penal",
+   "url": "https://civlii.laws.africa/akn/ci/act/2019/574/fra@2024-06-23"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_travail",
+   "url": "https://civlii.laws.africa/akn/ci/act/2015/532/fra@2023-08-10"
+  },
+  {
+   "cle": "dec_ohada_jo_n23",
+   "url": "https://www.ohada.org/journal-officiel-n-23/"
+  },
+  {
+   "cle": "dec_ohada_jo_n24",
+   "url": "https://www.ohada.org/journal-officiel-n-24/"
+  },
+  {
+   "cle": "dec_ohada_jo_special_2016",
+   "url": "https://www.ohada.org/journal-officiel-de-l-ohada-edition-speciale-nov-2016/"
+  },
+  {
+   "cle": "dec_ohada_jo_p2",
+   "url": "https://www.ohada.org/journal-officiel/2/"
+  },
+  {
+   "cle": "dec_ohada_jo_p3",
+   "url": "https://www.ohada.org/journal-officiel/3/"
+  },
+  {
+   "cle": "dec_ohada_jo_p4",
+   "url": "https://www.ohada.org/journal-officiel/4/"
+  },
+  {
+   "cle": "dec_famille_gouv_publications",
+   "url": "https://famille.gouv.ci/publications"
+  },
+  {
+   "cle": "dec_cndj_biblio_codes",
+   "url": "https://biblio.cndj.ci/search/codes"
+  }
+ ]
+}
