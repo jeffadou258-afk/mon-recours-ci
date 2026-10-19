@@ -113,6 +113,30 @@ def _variantes_numero(numero):
     return [re.compile(r"%s\s*[-‐–—_/]\s*%s(?!\d)" % (a, b)), re.compile(r"(?<!\d)%s%s(?!\d)" % (a, b))]
 
 
+MOTIF_ACTE = re.compile(r"(?im)^[ \t\-—]*(?:LO ?I|D[ÉE]CRET|ORDONNANCE)\s+n\s*[°o]\s*(\d{4})\s*[-–]\s*(\d{1,4})")
+
+
+def autres_actes_du_document(texte, numero):
+    """Numéros d'actes, autres que `numero`, qui ouvrent une ligne du document."""
+    trouves = []
+    for annee, rang in MOTIF_ACTE.findall(texte or ""):
+        acte = "%s-%s" % (annee, rang)
+        if acte != numero and acte not in trouves:
+            trouves.append(acte)
+    return trouves
+
+
+def segmenter(texte, segment):
+    """Ne garde que le texte compris entre deux motifs déclarés dans le manifeste."""
+    if not segment:
+        return texte
+    debut = re.search(segment["debut"], texte or "")
+    if not debut:
+        raise ValueError("début de segment introuvable : %r" % segment["debut"])
+    fin = re.search(segment["fin"], texte[debut.end():]) if segment.get("fin") else None
+    return texte[debut.start(): debut.end() + fin.start()] if fin else texte[debut.start():]
+
+
 def indices_ocr_editeur(chemin_pdf):
     """Même détection que la collecte distante, sur le PDF rapatrié."""
     indices = []
@@ -175,6 +199,11 @@ def controler_document(source, resultat):
                                   % (len(faibles), faibles[:15]))
         if extraction.get("ocr_tronque"):
             motifs.append("OCR tronqué : " + extraction["ocr_tronque"])
+    if source.get("segment"):
+        try:
+            texte = segmenter(texte, source["segment"])
+        except ValueError as erreur:
+            motifs.append(str(erreur))
     densite = len(texte) / float(max(1, pages))
     if densite < DENSITE_MINIMALE:
         motifs.append("texte trop peu dense (%.0f car./page)" % densite)
@@ -197,6 +226,13 @@ def controler_document(source, resultat):
             motifs.append("le numéro %s n'apparaît pas dans le texte extrait" % source["numero_texte"])
     if source.get("type_texte") == "inconnu":
         motifs.append("contenu non identifié")
+    # Un numéro du Journal officiel publie souvent plusieurs actes : indexé d'un
+    # bloc, leurs articles se mélangent (cas réel : mariage et filiation, JO du
+    # 12 juillet 2019). Sans segment déclaré dans le manifeste, quarantaine.
+    autres_actes = autres_actes_du_document(texte, source.get("numero_texte"))
+    if autres_actes and not source.get("segment"):
+        motifs.append("le document contient d'autres actes (%s) : segmentation requise"
+                      % ", ".join(autres_actes[:6]))
 
     # Provenance observée.
     contaminants = sorted(set(corpus.textes_contaminants(texte or "")) |
@@ -499,12 +535,13 @@ def officialiser_ocr(cles=None):
             bilan.append((d["cle"], "IGNORE", "aucun domaine du moteur"))
             continue
         resultat = lire_json(os.path.join(DOSSIER_RESULTATS, d["cle"] + ".json"))
+        source_m = manifeste[d["cle"]]
         extraction = resultat["extraction"]
         principal = _texte(resultat, "fichier_texte") if d["methode_extraction"] == "OCR_EDITEUR" \
             else _texte(resultat, "fichier_ocr")
         second = _texte(resultat, "fichier_ocr") if d["methode_extraction"] == "OCR_EDITEUR" \
             and extraction.get("ocr_force") else None
-        principal, retraits = nettoyer_lecture(principal)
+        principal, retraits = nettoyer_lecture(segmenter(principal, source_m.get("segment")))
         articles = corpus.extraire_articles(principal or "")
         confiance, ecartes = None, []
         comparateur = "LECTURE_INDEPENDANTE_TESSERACT:" + d["cle"] if second else None
@@ -521,7 +558,8 @@ def officialiser_ocr(cles=None):
                     comparateur = "SECONDAIRE:" + autre["cle"]
                     break
         if second:
-            articles_second = corpus.extraire_articles(nettoyer_lecture(second)[0])
+            articles_second = corpus.extraire_articles(nettoyer_lecture(
+                segmenter(second, source_m.get("segment")) if comparateur.startswith("LECTURE") else second)[0])
             confiance, retenus = {}, {}
             for numero, texte in articles.items():
                 if numero not in articles_second:

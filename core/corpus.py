@@ -107,9 +107,9 @@ CREATE INDEX IF NOT EXISTS idx_documents_domaine ON documents(domaine);
 MOTIF_ARTICLE = re.compile(
     r"(?m)^[ \t]*(?:\d{1,3}[ \t]*)?(?:Article|ARTICLE|Art\.|Art(?=[ \t]+\d))[ \t]+"
     r"(\d{1,4}\.\d{1,3}(?!\d)(?=[ \t]|$|[\.\-:)])"
-    r"|\d{1,4}(?:[ \t]*(?:bis|ter|quater|quinquies))?(?=[ \t]*(?:[\.\-:)]|$|[ \t]+nouveau))"
+    r"|\d{1,4}(?:[ \t]*(?:bis|ter|quater|quinquies))?(?=[ \t]*(?:[\.\-:)]|$|[ \t]+nouveau|,[ \t]*[—–\-]))"
     r"|premier|premiere|unique)"
-    r"(?:[ \t]+nouveau)?[ \t]*(?:[\.\-:)]|$|(?<=\d)(?=[ \t]))",
+    r"(?:[ \t]+nouveau)?[ \t]*(?:[\.\-:)]|$|(?<=\d)(?=[ \t])|,(?=[ \t]*[—–\-]))",
     re.IGNORECASE,
 )
 

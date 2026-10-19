@@ -877,7 +877,11 @@
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
-   "ocr_force": true
+   "ocr_force": true,
+   "segment": {
+    "debut": "LO ?I n\\s*°\\s*2019-570 du",
+    "fin": "LO ?I n\\s*°\\s*2019-571 du"
+   }
   },
   {
    "cle": "mffe_successions_2019_573",
@@ -909,7 +913,11 @@
    "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2016-1111_du_08_decembre_2016_relative_a_la_lutte_contre_la_traite_des_personnes.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées.",
+   "segment": {
+    "debut": "LOI n\\s*°\\s*2016-1111",
+    "fin": "ORDONNANCE n\\s*°\\s*2016-1012"
+   }
   },
   {
    "cle": "mffe_constitution_2016",

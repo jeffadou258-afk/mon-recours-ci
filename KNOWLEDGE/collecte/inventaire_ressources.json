@@ -1,6 +1,6 @@
 {
  "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
- "genere_le": "2026-10-19T11:19:02+00:00",
+ "genere_le": "2026-10-19T11:42:03+00:00",
  "outils_collecte": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -25,8 +25,8 @@
   "non_encore_collectes": 0,
   "par_statut_controle": {
    "EXPLOITABLE_OFFICIEL": 10,
-   "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 5,
-   "QUARANTAINE": 17
+   "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 2,
+   "QUARANTAINE": 20
   },
   "par_categorie": {
    "OFFICIEL_INSTITUTION": 1,
@@ -198,8 +198,10 @@
    "couverture_articles": 1.0,
    "numero_present_dans_le_texte": null,
    "marques_tierces": [],
-   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
-   "motifs_quarantaine": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le document contient d'autres actes (2010-272, 2013-35) : segmentation requise"
+   ],
    "avertissements": [
     "qpdf signale des avertissements de structure"
    ],
@@ -241,8 +243,10 @@
    "couverture_articles": 1.0,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
-   "motifs_quarantaine": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le document contient d'autres actes (2019-571, 2019-590) : segmentation requise"
+   ],
    "avertissements": [
     "qpdf signale des avertissements de structure"
    ],
@@ -320,9 +324,9 @@
    "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 5852,
    "confiance_ocr_moyenne": null,
-   "articles_detectes": 541,
+   "articles_detectes": 542,
    "article_max": 565,
-   "couverture_articles": 0.9575,
+   "couverture_articles": 0.9593,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
    "statut_controle": "EXPLOITABLE_OFFICIEL",
@@ -357,9 +361,9 @@
    "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 93.8,
-   "articles_detectes": 160,
+   "articles_detectes": 165,
    "article_max": 184,
-   "couverture_articles": 0.8696,
+   "couverture_articles": 0.8967,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
    "statut_controle": "EXPLOITABLE_OFFICIEL",
@@ -438,14 +442,14 @@
    "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 88.3,
-   "articles_detectes": 85,
+   "articles_detectes": 90,
    "article_max": 113,
-   "couverture_articles": 0.7522,
+   "couverture_articles": 0.7965,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
    "statut_controle": "QUARANTAINE",
    "motifs_quarantaine": [
-    "découpage en articles incomplet : 75% des articles 1..113"
+    "découpage en articles incomplet : 80% des articles 1..113"
    ],
    "avertissements": [
     "1 page(s) OCR de confiance < 70 : [2]"
@@ -483,9 +487,9 @@
    "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 6360,
    "confiance_ocr_moyenne": null,
-   "articles_detectes": 105,
+   "articles_detectes": 104,
    "article_max": 105,
-   "couverture_articles": 1.0,
+   "couverture_articles": 0.9905,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
    "statut_controle": "EXPLOITABLE_OFFICIEL",
@@ -658,9 +662,9 @@
    "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 113,
    "confiance_ocr_moyenne": 93.6,
-   "articles_detectes": 23,
+   "articles_detectes": 27,
    "article_max": 27,
-   "couverture_articles": 0.8519,
+   "couverture_articles": 1.0,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
    "statut_controle": "EXPLOITABLE_OFFICIEL",
@@ -928,15 +932,16 @@
    "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 75.3,
-   "articles_detectes": 13,
+   "articles_detectes": 23,
    "article_max": 108,
-   "couverture_articles": 0.1204,
+   "couverture_articles": 0.213,
    "numero_present_dans_le_texte": false,
    "marques_tierces": [],
    "statut_controle": "QUARANTAINE",
    "motifs_quarantaine": [
-    "découpage en articles incomplet : 12% des articles 1..108",
-    "le numéro 2018-862 n'apparaît pas dans le texte extrait"
+    "découpage en articles incomplet : 21% des articles 1..108",
+    "le numéro 2018-862 n'apparaît pas dans le texte extrait",
+    "le document contient d'autres actes (2018-8462) : segmentation requise"
    ],
    "avertissements": [
     "2 page(s) OCR de confiance < 70 : [1, 2]"
@@ -1020,7 +1025,8 @@
    "marques_tierces": [],
    "statut_controle": "QUARANTAINE",
    "motifs_quarantaine": [
-    "découpage en articles incomplet : 31% des articles 1..105"
+    "découpage en articles incomplet : 31% des articles 1..105",
+    "le document contient d'autres actes (2019-590) : segmentation requise"
    ],
    "avertissements": [
     "qpdf signale des avertissements de structure"
@@ -1055,14 +1061,14 @@
    "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 80.4,
-   "articles_detectes": 20,
-   "article_max": 149,
-   "couverture_articles": 0.1342,
+   "articles_detectes": 32,
+   "article_max": 150,
+   "couverture_articles": 0.2133,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
    "statut_controle": "QUARANTAINE",
    "motifs_quarantaine": [
-    "découpage en articles incomplet : 13% des articles 1..149"
+    "découpage en articles incomplet : 21% des articles 1..150"
    ],
    "avertissements": [
     "2 page(s) OCR de confiance < 70 : [1, 9]"
@@ -1107,7 +1113,8 @@
    "statut_controle": "QUARANTAINE",
    "motifs_quarantaine": [
     "découpage en articles incomplet : 65% des articles 1..16",
-    "le numéro 202-894 n'apparaît pas dans le texte extrait"
+    "le numéro 202-894 n'apparaît pas dans le texte extrait",
+    "le document contient d'autres actes (2021-902, 2015-532) : segmentation requise"
    ],
    "avertissements": [
     "qpdf signale des avertissements de structure"
@@ -1361,8 +1368,10 @@
    "marques_tierces": [
     "ivoire-juriste"
    ],
-   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
-   "motifs_quarantaine": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le document contient d'autres actes (2010-272, 2023-582, 2023-583, 2023-584, 2022-31, 2022-986) : segmentation requise"
+   ],
    "avertissements": [
     "1 page(s) OCR de confiance < 70 : [202]"
    ],
