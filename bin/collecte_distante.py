@@ -235,12 +235,29 @@ def extraire(chemin, pages, cle):
 
 
 def liens_pdf(page_html, url_base, filtre):
-    liens = set()
+    return sorted({a["url"] for a in ancres(page_html, url_base, filtre)})
+
+
+def ancres(page_html, url_base, filtre):
+    """Liens retenus avec le texte visible de l'ancre (titre du document sur la page)."""
+    trouves = {}
+    for attributs, contenu in re.findall(r"<a\b([^>]*)>(.*?)</a>", page_html, re.I | re.S):
+        href = re.search(r"""href\s*=\s*["']([^"']+)["']""", attributs, re.I)
+        if not href:
+            continue
+        lien = urllib.parse.urljoin(url_base, html.unescape(href.group(1)))
+        if not re.search(filtre, lien, re.I):
+            continue
+        texte = html.unescape(re.sub(r"<[^>]+>", " ", contenu))
+        titre = re.search(r"""title\s*=\s*["']([^"']+)["']""", attributs, re.I)
+        texte = " ".join((texte or (titre.group(1) if titre else "")).split())[:240]
+        if texte or lien not in trouves:
+            trouves[lien] = texte or trouves.get(lien, "")
     for brut in re.findall(r"""href\s*=\s*["']([^"']+)["']""", page_html, re.I):
         lien = urllib.parse.urljoin(url_base, html.unescape(brut))
         if re.search(filtre, lien, re.I):
-            liens.add(lien)
-    return sorted(liens)
+            trouves.setdefault(lien, "")
+    return [{"url": u, "texte": t} for u, t in sorted(trouves.items())]
 
 
 def traiter(source):
@@ -259,7 +276,8 @@ def traiter(source):
 
     if source.get("mode") == "decouverte":
         texte = octets.decode("utf-8", "replace")
-        resultat["liens"] = liens_pdf(texte, url_finale, source.get("filtre_liens", r"\.pdf(\?|$)"))
+        resultat["ancres"] = ancres(texte, url_finale, source.get("filtre_liens", r"\.pdf(\?|$)"))
+        resultat["liens"] = [a["url"] for a in resultat["ancres"]]
         titre = re.search(r"<title>(.*?)</title>", texte, re.I | re.S)
         resultat["titre_page"] = html.unescape(titre.group(1)).strip()[:200] if titre else None
         resultat["statut"] = "DECOUVERTE"

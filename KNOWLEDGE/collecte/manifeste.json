@@ -826,6 +826,365 @@
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "mffe_cpp_2018_975",
+   "titre": "Loi n° 2018-975 du 27 décembre 2018 portant Code de procédure pénale",
+   "numero_texte": "2018-975",
+   "date_texte": "2018-12-27",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    5,
+    22
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/Loi_2018-975_du_27_decembre_2018_portant_Code_de_Procedure_penale.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+  },
+  {
+   "cle": "mffe_code_penal_2019_574",
+   "titre": "Loi n° 2019-574 du 26 juin 2019 portant Code pénal",
+   "numero_texte": "2019-574",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    5,
+    22,
+    2
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+  },
+  {
+   "cle": "mffe_mariage_2019_570",
+   "titre": "Loi n° 2019-570 du 26 juin 2019 relative au mariage",
+   "numero_texte": "2019-570",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+  },
+  {
+   "cle": "mffe_successions_2019_573",
+   "titre": "Loi n° 2019-573 du 26 juin 2019 relative aux successions",
+   "numero_texte": "2019-573",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-573_sur_la_succession.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+  },
+  {
+   "cle": "mffe_traite_2016_1111",
+   "titre": "Loi n° 2016-1111 du 8 décembre 2016 relative à la lutte contre la traite des personnes",
+   "numero_texte": "2016-1111",
+   "date_texte": "2016-12-08",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    22,
+    5
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2016-1111_du_08_decembre_2016_relative_a_la_lutte_contre_la_traite_des_personnes.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+  },
+  {
+   "cle": "mffe_constitution_2016",
+   "titre": "Loi n° 2016-886 du 8 novembre 2016 portant Constitution de la République de Côte d'Ivoire",
+   "numero_texte": "2016-886",
+   "date_texte": "2016-11-08",
+   "type_texte": "constitution",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    10
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/constitution_2016.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Version de 2016 : la révision constitutionnelle de 2020 n'y figure pas."
+  },
+  {
+   "cle": "mffe_etat_civil_2018_862",
+   "titre": "Loi n° 2018-862 du 19 novembre 2018 relative à l'état civil",
+   "numero_texte": "2018-862",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_862_du_19_11_2018_etat_civil.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+  },
+  {
+   "cle": "mffe_naissance_2018_863",
+   "titre": "Loi n° 2018-863 du 19 novembre 2018 instituant une procédure spéciale de déclaration de naissance",
+   "numero_texte": "2018-863",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2,
+    22
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_863_du_19_11_2018_instituant_une_procedure_declaration_naissance.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+  },
+  {
+   "cle": "mffe_pupille_2015_539",
+   "titre": "Loi n° 2015-539 du 20 juillet 2015 portant statut de pupille de l'État",
+   "numero_texte": "2015-539",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    22
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2015-539_pupille_de_l-Etat.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+  },
+  {
+   "cle": "mffe_adoption",
+   "titre": "Loi relative à l'adoption (document mffe.ci « adoption_enfant »)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2,
+    22
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/1724365129_adoption_enfant.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Numéro et date à lire dans le document."
+  },
+  {
+   "cle": "ohada_jo_special_aupsrve_2023",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 15 novembre 2023 — Acte uniforme du 17 octobre 2023 portant organisation des procédures simplifiées de recouvrement et des voies d'exécution",
+   "numero_texte": "AUPSRVE-2023",
+   "date_texte": "2023-10-17",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — Secrétariat permanent (ohada.org)",
+   "domaines": [
+    23
+   ],
+   "url": "https://www.ohada.org/wp-content/uploads/2023/11/J.O._special_AUVE_15.11.2023_Compressed.pdf",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Version « compressée » publiée par ohada.org."
+  },
+  {
+   "cle": "assnat_constitution",
+   "titre": "Constitution de la République de Côte d'Ivoire (document de l'Assemblée nationale)",
+   "numero_texte": "2016-886",
+   "date_texte": null,
+   "type_texte": "constitution",
+   "autorite": "Assemblée nationale de Côte d'Ivoire",
+   "domaines": [
+    10
+   ],
+   "url": "https://www.assnat.ci/CONSTITUTION.pdf",
+   "categorie_source": "OFFICIEL_INSTITUTION",
+   "mode": "fichier",
+   "notes": "Version à identifier (2016 ou révisée en 2020)."
+  },
+  {
+   "cle": "civlii_code_penal_source_pdf",
+   "titre": "Loi n° 2019-574 portant Code pénal — version consolidée CIVLII au 23 juin 2024",
+   "numero_texte": "2019-574",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    5
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "Sert à repérer les modifications postérieures à 2019."
+  },
+  {
+   "cle": "civlii_cpp_source_pdf",
+   "titre": "Loi n° 2018-975 portant Code de procédure pénale — version consolidée CIVLII au 23 juin 2024",
+   "numero_texte": "2018-975",
+   "date_texte": "2018-12-27",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    5
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/975/fra@2024-06-23/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "Sert à repérer les modifications postérieures à 2018."
+  },
+  {
+   "cle": "dec_civlii_oeuvre_cpp",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/akn/ci/act/2018/975/fra@2023-12-11",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|akn/ci/act/2018/975"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_penal",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/akn/ci/act/2019/574/fra@2024-06-23",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|akn/ci/act/2019/574"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_travail",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/akn/ci/act/2015/532/fra@2023-08-10",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|akn/ci/act/2015/532"
+  },
+  {
+   "cle": "dec_ohada_jo_n23",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/journal-officiel-n-23/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf"
+  },
+  {
+   "cle": "dec_ohada_jo_n24",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/journal-officiel-n-24/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf"
+  },
+  {
+   "cle": "dec_ohada_jo_special_2016",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/journal-officiel-de-l-ohada-edition-speciale-nov-2016/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf"
+  },
+  {
+   "cle": "dec_ohada_jo_p2",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/journal-officiel/2/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|journal-officiel"
+  },
+  {
+   "cle": "dec_ohada_jo_p3",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/journal-officiel/3/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|journal-officiel"
+  },
+  {
+   "cle": "dec_ohada_jo_p4",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/journal-officiel/4/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|journal-officiel"
+  },
+  {
+   "cle": "dec_famille_gouv_publications",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://famille.gouv.ci/publications",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|publication"
+  },
+  {
+   "cle": "dec_cndj_biblio_codes",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.cndj.ci/search/codes",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|code|document"
   }
  ]
 }
