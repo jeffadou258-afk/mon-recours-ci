@@ -1,0 +1,635 @@
+{
+ "objet": "Manifeste des sources à collecter par GitHub Actions (bin/collecte_distante.py). Une entrée = une URL. La catégorie est DÉCLARÉE ici et n'est jamais déduite : seules les catégories OFFICIEL_* peuvent alimenter le corpus de référence, après contrôle local.",
+ "categories": {
+  "OFFICIEL_JO": "Journal officiel sur un hôte officiel",
+  "OFFICIEL_PORTAIL_GOUV": "Republication sur un hôte *.gouv.ci",
+  "OFFICIEL_ORGANISATION": "Site officiel d'une organisation (ohada.org)",
+  "OFFICIEL_INSTITUTION": "Institution publique hors *.gouv.ci (assnat.ci) : texte possiblement non promulgué",
+  "SECONDAIRE_FAC_SIMILE": "Image du Journal officiel hébergée par un tiers",
+  "SECONDAIRE_CONSOLIDE": "Version consolidée par un tiers (Laws.Africa)",
+  "SECONDAIRE_BASE_INTERNATIONALE": "Base d'une organisation internationale (FAOLEX)",
+  "SECONDAIRE_AUTRE": "Autre diffusion de provenance incertaine",
+  "DECOUVERTE": "Page HTML lue pour y relever des liens, rien n'est intégré"
+ },
+ "date_creation": "2026-10-19",
+ "sources": [
+  {
+   "cle": "code_penal_2019_574_mffe",
+   "titre": "Loi n° 2019-574 du 26 juin 2019 portant Code pénal",
+   "numero_texte": "2019-574",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant (republication)",
+   "domaines": [
+    5,
+    22,
+    2
+   ],
+   "url": "https://famille.gouv.ci/public/documents/doc_drcc/loi_2019-574_portant_code_p%C3%A9nal.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Republication sur un portail ministériel : version d'origine probable, sans les modifications ultérieures."
+  },
+  {
+   "cle": "code_penal_2019_574_civlii",
+   "titre": "Loi n° 2019-574 du 26 juin 2019 portant Code pénal (version consolidée au 23 juin 2024)",
+   "numero_texte": "2019-574",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    5,
+    22,
+    2
+   ],
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/574/fra@2024-06-23?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "CC BY 4.0. Consolidation tierce : sert au recoupement et à repérer les modifications, jamais de source de référence."
+  },
+  {
+   "cle": "cpp_2018_975_civlii",
+   "titre": "Loi n° 2018-975 du 27 décembre 2018 portant Code de procédure pénale (version consolidée au 23 juin 2024)",
+   "numero_texte": "2018-975",
+   "date_texte": "2018-12-27",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    5,
+    22
+   ],
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2018/975/fra@2024-06-23?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "CC BY 4.0."
+  },
+  {
+   "cle": "travail_2015_532_faolex",
+   "titre": "Loi n° 2015-532 du 20 juillet 2015 portant Code du travail",
+   "numero_texte": "2015-532",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "FAO — base FAOLEX (reproduction)",
+   "domaines": [
+    4
+   ],
+   "url": "https://faolex.fao.org/docs/pdf/ivc207091.pdf",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "mode": "fichier",
+   "notes": "FAOLEX conserve en général le fac-similé du Journal officiel ; à confirmer à la lecture."
+  },
+  {
+   "cle": "travail_2015_532_civlii",
+   "titre": "Loi n° 2015-532 du 20 juillet 2015 portant Code du travail (version CIVLII du 10 août 2023)",
+   "numero_texte": "2015-532",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    4
+   ],
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2015/532/fra@2023-08-10?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "CC BY 4.0."
+  },
+  {
+   "cle": "travail_2015_532_uvci",
+   "titre": "Le Code du travail ivoirien (document diffusé par l'UVCI)",
+   "numero_texte": "2015-532",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Université virtuelle de Côte d'Ivoire (diffusion)",
+   "domaines": [
+    4
+   ],
+   "url": "https://www.uvci.online/portail/externes/documents/textes_officiels/Le_code_du_travail_ivoirien_-_20251.pdf",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "mode": "fichier",
+   "notes": "Compilation de provenance non indiquée : recoupement seulement."
+  },
+  {
+   "cle": "mariage_2019_570_faolex",
+   "titre": "Loi n° 2019-570 du 26 juin 2019 relative au mariage",
+   "numero_texte": "2019-570",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "FAO — base FAOLEX (reproduction)",
+   "domaines": [
+    2
+   ],
+   "url": "https://faolex.fao.org/docs/pdf/ivc208186.pdf",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "mode": "fichier"
+  },
+  {
+   "cle": "mariage_2019_570_civlii",
+   "titre": "Loi n° 2019-570 du 26 juin 2019 relative au mariage (version CIVLII du 13 octobre 2023)",
+   "numero_texte": "2019-570",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    2
+   ],
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/570/eng@2023-10-13?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "Expression « eng » sur CIVLII : la langue réelle du texte est à vérifier."
+  },
+  {
+   "cle": "successions_2019_573_assnat",
+   "titre": "Loi relative aux successions (document de l'Assemblée nationale)",
+   "numero_texte": "2019-573",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Assemblée nationale de Côte d'Ivoire",
+   "domaines": [
+    2
+   ],
+   "url": "https://www.assnat.ci/IMG/pdf/loi_relative_aux_successions.pdf",
+   "categorie_source": "OFFICIEL_INSTITUTION",
+   "mode": "fichier",
+   "notes": "Texte parlementaire : peut différer du texte promulgué publié au Journal officiel."
+  },
+  {
+   "cle": "successions_2019_573_civlii",
+   "titre": "Loi n° 2019-573 du 26 juin 2019 relative aux successions (version CIVLII du 13 octobre 2023)",
+   "numero_texte": "2019-573",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    2
+   ],
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/573/fra@2023-10-13?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "CC BY 4.0."
+  },
+  {
+   "cle": "successions_2019_573_bice",
+   "titre": "Loi n° 2019-573 relative aux successions (document diffusé par le BICE)",
+   "numero_texte": "2019-573",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "BICE — Bureau international catholique de l'enfance (diffusion)",
+   "domaines": [
+    2
+   ],
+   "url": "https://documentation.bice.org/app/uploads/2024/05/loi_2019-573_sur_la_succession.pdf",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "mode": "fichier"
+  },
+  {
+   "cle": "minorite_2019_572_civlii",
+   "titre": "Loi n° 2019-572 du 26 juin 2019 relative à la minorité (version CIVLII du 13 octobre 2023)",
+   "numero_texte": "2019-572",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    2,
+    22
+   ],
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/572/fra@2023-10-13?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "Recoupement de l'exemplaire officiel déjà collecté (scan sans article indexé)."
+  },
+  {
+   "cle": "filiation_2019_571_civlii",
+   "titre": "Loi n° 2019-571 du 26 juin 2019 relative à la filiation (version CIVLII du 13 octobre 2023)",
+   "numero_texte": "2019-571",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    2
+   ],
+   "url": "https://resolver.laws.africa/resolve/akn/ci/act/2019/571/fra@2023-10-13?m=pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier",
+   "notes": "Recoupement de l'exemplaire officiel déjà indexé."
+  },
+  {
+   "cle": "aupsrve_2023_jo_ohadacom",
+   "titre": "Acte uniforme du 17 octobre 2023 portant organisation des procédures simplifiées de recouvrement et des voies d'exécution — Journal officiel de l'OHADA, numéro spécial du 15 novembre 2023",
+   "numero_texte": "AUPSRVE-2023",
+   "date_texte": "2023-10-17",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA (fac-similé hébergé par UNIDA / ohada.com)",
+   "domaines": [
+    23
+   ],
+   "url": "https://www.ohada.com/uploads/actualite/7010/J.O._special_AUVE_15.11.2023.pdf",
+   "categorie_source": "SECONDAIRE_FAC_SIMILE",
+   "mode": "fichier",
+   "notes": "Fac-similé du JO OHADA sur un site associatif ; l'exemplaire de ohada.org est recherché par découverte."
+  },
+  {
+   "cle": "aupsrve_2023_senlii",
+   "titre": "Acte uniforme portant organisation des procédures simplifiées de recouvrement et des voies d'exécution (SenLII, 2 juillet 2024)",
+   "numero_texte": "AUPSRVE-2023",
+   "date_texte": "2023-10-17",
+   "type_texte": "acte_uniforme",
+   "autorite": "Laws.Africa / SenLII (reproduction)",
+   "domaines": [
+    23
+   ],
+   "url": "https://senlii.org/en/akn/aa-ohada/act/2023/organisation-des-proc%C3%A9dures-simplifi%C3%A9es-de-recouvrement-et-des-voies-d-ex%C3%A9cution/fra@2024-07-02/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier"
+  },
+  {
+   "cle": "gouvci_175043233774",
+   "titre": "Document gouv.ci non identifié (175043233774.pdf)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "inconnu",
+   "autorite": "Portail du Gouvernement de Côte d'Ivoire",
+   "domaines": [],
+   "url": "https://www.gouv.ci/uploads/publications/175043233774.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Contenu inconnu : à identifier avant tout usage."
+  },
+  {
+   "cle": "dec_ohada_journal_officiel_en",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/en/official-gazette/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|journal"
+  },
+  {
+   "cle": "dec_ohada_journal_officiel_fr",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/journal-officiel/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|journal"
+  },
+  {
+   "cle": "dec_ohada_aupsrve_en",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/en/organizing-simplified-recovery-procedures-and-measures-of-execution/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)"
+  },
+  {
+   "cle": "dec_ohada_aupsrve_publication",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/en/publication-in-the-ohada-official-gazette-of-the-uniform-act-organizing-simplified-recovery-procedures-and-enforcement-measures-of-the-17th-of-october-2023-yaounde-15-th-november-2023/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)"
+  },
+  {
+   "cle": "dec_ohada_actes_uniformes_fr",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.ohada.org/actes-uniformes/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|acte"
+  },
+  {
+   "cle": "dec_mffe_textes",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://mffe.ci/MFFE/site_famille/document-dinteret-public/textes-juridiques/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)"
+  },
+  {
+   "cle": "dec_famille_gouv",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://famille.gouv.ci/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|document|texte"
+  },
+  {
+   "cle": "dec_sgg",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.sgg.gouv.ci/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|journal|texte|loi"
+  },
+  {
+   "cle": "dec_cndj_codes",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.cndj.ci/bases-de-recherche/codes-et-recueils-de-textes.html",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|code"
+  },
+  {
+   "cle": "dec_emploi_gouv",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://emploi.gouv.ci/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|texte|loi|code"
+  },
+  {
+   "cle": "dec_justice_gouv",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.justice.gouv.ci/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|texte|loi|code"
+  },
+  {
+   "cle": "dec_assnat_lois",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.assnat.ci/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf(\\?|$)|loi"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_570_eng@2023-10-13",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/570/eng@2023-10-13/publication",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|m=pdf"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_571_fra@2023-10-13",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/571/fra@2023-10-13/publication",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|m=pdf"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_572_fra@2023-10-13",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/572/fra@2023-10-13/publication",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|m=pdf"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_573_fra@2023-10-13",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/573/fra@2023-10-13/publication",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|m=pdf"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_574_fra@2024-06-23",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2019/574/fra@2024-06-23/publication",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|m=pdf"
+  },
+  {
+   "cle": "dec_civlii_publication_2018_975_fra@2024-06-23",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2018/975/fra@2024-06-23/publication",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|m=pdf"
+  },
+  {
+   "cle": "dec_civlii_publication_2015_532_fra@2023-08-10",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/akn/ci/act/2015/532/fra@2023-08-10/publication",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|/media/|m=pdf"
+  },
+  {
+   "cle": "dec_civlii_legislation_p1",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=1",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p2",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=2",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p3",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=3",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p4",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=4",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p5",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=5",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p6",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=6",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p7",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=7",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p8",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=8",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p9",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=9",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "dec_civlii_legislation_p10",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://civlii.laws.africa/fr/legislation/?page=10",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "/akn/ci/"
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+# Collecte documentaire du corpus juridique — exécutée par GitHub Actions parce que
+# l'espace de travail de développement n'a pas d'accès Internet vers les sites
+# juridiques. Aucun secret, aucun service payant, aucun déploiement.
+#
+# Ce que fait ce workflow :
+#   1. lit KNOWLEDGE/collecte/manifeste.json ;
+#   2. télécharge chaque document (bin/collecte_distante.py), mesure son empreinte,
+#      extrait le texte, fait l'OCR français des pages scannées ;
+#   3. pousse les CONSTATS (JSON + textes extraits) sur la branche de travail ;
+#   4. pousse les PDF sur la branche d'archive `corpus/archives-pdf` (jamais sur
+#      main) pour que l'intégration locale puisse recalculer leur empreinte.
+# Il ne modifie ni la base du corpus ni les fiches : l'intégration est locale et
+# passe par les garde-fous du moteur.
+
+name: Corpus — collecte documentaire
+
+on:
+  push:
+    branches: [corpus/collecte-24-domaines]
+    paths: ["KNOWLEDGE/collecte/manifeste.json", "bin/collecte_distante.py", ".github/workflows/collecte-corpus.yml"]
+  workflow_dispatch:
+    inputs:
+      forcer:
+        description: "Retraiter les entrées déjà collectées"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collecte-corpus
+  cancel-in-progress: false
+
+jobs:
+  collecte:
+    if: github.ref == 'refs/heads/corpus/collecte-24-domaines'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Outils (paquets Ubuntu officiels)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils qpdf tesseract-ocr tesseract-ocr-fra
+          pdftotext -v 2>&1 | head -1; tesseract --version | head -1; tesseract --list-langs
+
+      - name: Collecte
+        env:
+          COLLECTE_DOSSIER_PDF: ${{ runner.temp }}/pdf
+        run: |
+          OPTIONS=""
+          if [ "${{ inputs.forcer }}" = "true" ]; then OPTIONS="--forcer"; fi
+          python3 -I bin/collecte_distante.py $OPTIONS
+
+      - name: Archive des PDF (branche corpus/archives-pdf)
+        env:
+          PDF: ${{ runner.temp }}/pdf
+        run: |
+          git config user.name "collecte-corpus[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ ! -d "$PDF" ] || [ -z "$(ls -A "$PDF")" ]; then echo "aucun PDF"; exit 0; fi
+          ARCH="$RUNNER_TEMP/archives"
+          if git ls-remote --exit-code --heads origin corpus/archives-pdf >/dev/null; then
+            git fetch -q origin corpus/archives-pdf
+            git worktree add -q "$ARCH" -B corpus/archives-pdf FETCH_HEAD
+          else
+            git worktree add -q --detach "$ARCH"
+            git -C "$ARCH" switch -q --orphan corpus/archives-pdf
+          fi
+          mkdir -p "$ARCH/pdf"
+          cp "$PDF"/*.pdf "$ARCH/pdf/"
+          (cd "$ARCH/pdf" && sha256sum *.pdf > ../SHA256SUMS)
+          printf '%s\n' "# Archive des PDF collectés" "" \
+            "Branche d'archive : fichiers bruts téléchargés par le workflow « Corpus — collecte documentaire »." \
+            "Provenance, catégorie (officielle ou secondaire) et constats : KNOWLEDGE/collecte/resultats/ sur corpus/collecte-24-domaines." \
+            "Un fichier présent ici n'est NI authentifié NI réputé en vigueur." > "$ARCH/README.md"
+          git -C "$ARCH" add -f pdf SHA256SUMS README.md
+          if git -C "$ARCH" diff --cached --quiet; then echo "archive inchangée"; exit 0; fi
+          git -C "$ARCH" commit -q -m "Archive des PDF collectés (run ${{ github.run_id }})"
+          git -C "$ARCH" push -q origin corpus/archives-pdf
+
+      - name: Constats (branche de travail)
+        run: |
+          git add KNOWLEDGE/collecte/resultats KNOWLEDGE/collecte/textes KNOWLEDGE/collecte/derniere_execution.json
+          if git diff --cached --quiet; then echo "aucun constat nouveau"; exit 0; fi
+          git commit -q -m "Collecte : constats du run ${{ github.run_id }}"
+          for essai in 1 2 3; do
+            git pull -q --rebase origin corpus/collecte-24-domaines && git push -q origin HEAD:corpus/collecte-24-domaines && exit 0
+            sleep 5
+          done
+          exit 1

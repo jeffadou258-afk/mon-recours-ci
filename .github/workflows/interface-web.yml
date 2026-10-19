@@ -6,7 +6,7 @@ name: Interface web — controles
 
 on:
   push:
-    branches: [feature/interface-web, feature/domaine-famille, feature/produit-fonctionnel, audit/24-domaines]
+    branches: [feature/interface-web, feature/domaine-famille, feature/produit-fonctionnel, audit/24-domaines, corpus/collecte-24-domaines]
     paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", ".github/workflows/interface-web.yml"]
   pull_request:
     paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", ".github/workflows/interface-web.yml"]
