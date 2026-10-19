@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-19T11:18:33+00:00",
+ "execution": "2026-10-19T11:48:14+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -55,7 +55,7 @@
   },
   {
    "cle": "dec_mffe_textes",
-   "statut": "ECHEC_HTTP"
+   "statut": "DECOUVERTE"
   },
   {
    "cle": "dec_emploi_gouv",
@@ -151,7 +151,7 @@
   },
   {
    "cle": "assnat_constitution",
-   "statut": "ECHEC_RESEAU"
+   "statut": "ECHEC_HTTP"
   },
   {
    "cle": "civlii_code_penal_source_pdf",
@@ -171,18 +171,6 @@
   },
   {
    "cle": "dec_civlii_oeuvre_travail",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "dec_famille_gouv_publications",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "civlii_travail_enfants_2010_272",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "civlii_travail_source_pdf",
    "statut": "ECHEC_HTTP"
   }
  ],
@@ -222,17 +210,21 @@
   "mffe_etat_civil_2018_862",
   "mffe_naissance_2018_863",
   "mffe_adoption",
-  "ohada_jo_special_aupsrve_2023",
+  "ohada_jo_special_aupsrve_2023"
+ ],
+ "reportes": [
   "dec_ohada_jo_n23",
   "dec_ohada_jo_n24",
   "dec_ohada_jo_special_2016",
   "dec_ohada_jo_p2",
   "dec_ohada_jo_p3",
   "dec_ohada_jo_p4",
+  "dec_famille_gouv_publications",
   "dec_cndj_biblio_codes",
   "ilo_textes_pertinents_rci",
+  "civlii_travail_enfants_2010_272",
+  "civlii_travail_source_pdf",
   "dec_leap_travail_1",
   "dec_leap_travail_2"
- ],
- "reportes": []
+ ]
 }
