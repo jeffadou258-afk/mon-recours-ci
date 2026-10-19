@@ -236,8 +236,12 @@ class TestConfidentialiteEtTracabilite(BaseConversation):
         self.assertTrue(faits, "le dossier de traçabilité doit contenir les faits déclarés")
         self.assertTrue(any("2022" in (f.get("libelle") or "") for f in faits),
                         "la réponse de l'utilisateur doit y figurer")
-        self.assertTrue(all(f.get("etat") == "DECLARE_PAR_L_UTILISATEUR" for f in faits),
+        # Une question laissée sans réponse est un fait MANQUANT, nommé comme tel ;
+        # aucune réponse déclarée ne peut être notée « prouvée » (DOCUMENTE).
+        self.assertTrue(all(f.get("etat") in ("DECLARE_PAR_L_UTILISATEUR", "MANQUANT")
+                            for f in faits),
                         "une réponse déclarée ne peut pas être notée « prouvée »")
+        self.assertTrue(any(f.get("etat") == "DECLARE_PAR_L_UTILISATEUR" for f in faits))
 
     def test_une_conversation_ne_s_ouvre_pas_deux_fois(self):
         identifiant = dossier("DOUBLE")

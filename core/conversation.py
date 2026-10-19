@@ -28,7 +28,7 @@ import os
 import config
 from agent import MonRecoursCI
 from core import analyse as A
-from core import base, catalogue, corpus, documents as mod_documents
+from core import base, catalogue, clarification, corpus, documents as mod_documents
 from core import faits as mod_faits
 
 FICHIER_ETAT = "CONVERSATION.json"
@@ -48,6 +48,15 @@ class Conversation(object):
         self.chemin_db = path = (chemin_db or str(config.CHEMIN_DB))
         self.fiches = fiches if fiches is not None else catalogue.charger(chemin_db=path)
         self.catalogue = {f["id"]: f for f in self.fiches}
+        # Guide de clarification : validé contre le corpus. Non conforme -> il
+        # n'est PAS servi (les fiches restent utilisables, sans ses questions),
+        # et l'anomalie est exposée par `guide_erreur`.
+        self.guide_erreur = None
+        try:
+            self.guide = clarification.charger(self.fiches, chemin_db=path)
+        except clarification.GuideInvalide as erreur:
+            self.guide = {"statut_validation": None, "questions": []}
+            self.guide_erreur = str(erreur)
 
     # -- état ------------------------------------------------------------
     def _chemin_etat(self, dossier_id):
@@ -96,20 +105,40 @@ class Conversation(object):
                 if cle not in deja:
                     deja.add(cle)
                     questions.append({"cle": cle, "question": question})
+        guide = clarification.questions_pour(retenues, self.guide, deja_posees=deja)
+        questions.extend(self._question_guide(q, demande) for q in guide)
         etat = {"dossier_id": dossier_id, "demande": demande, "tour": 1,
                 "fiches": [f["id"] for f in retenues], "questions": questions,
-                "etape": "clarification", "domaines": domaines}
-        self._ecrire_etat(dossier_id, etat)
-        return {"etape": "clarification", "dossier_id": dossier_id,
-                "avertissement": AVERTISSEMENT,
+                "guide_posees": [q["cle"] for q in guide], "reponses": {},
+                "confirmations": [],
+                "etape": "clarification", "domaines": domaines,
                 "urgence": dossier.get("urgence"),
                 "verrous_humains": dossier.get("verrous_humains"),
+                "note_corpus": dossier.get("note_corpus")}
+        self._ecrire_etat(dossier_id, etat)
+        return self._vue_clarification(dossier_id, etat, retenues, questions)
+
+    def _question_guide(self, q, demande, confirmation=None):
+        vue = {"cle": q["cle"], "question": q["question"], "pourquoi": q["pourquoi"],
+               "type": "oui_non", "suggestion": clarification.suggestion(q, demande)}
+        if confirmation:
+            vue["confirmation"] = confirmation
+        return vue
+
+    def _vue_clarification(self, dossier_id, etat, retenues, questions, contradictions=()):
+        return {"etape": "clarification", "dossier_id": dossier_id,
+                "tour": etat.get("tour", 1),
+                "avertissement": AVERTISSEMENT,
+                "urgence": etat.get("urgence"),
+                "verrous_humains": etat.get("verrous_humains"),
                 "fiches_identifiees": [
                     {"titre": f["titre"], "article": f["article"],
                      "numero_texte": f.get("numero_texte"),
                      "etat_verification": f["etat_verification"]} for f in retenues],
                 "questions": questions,
-                "note_corpus": dossier.get("note_corpus")}
+                "contradictions": list(contradictions),
+                "statut_questions": self.guide.get("statut_validation"),
+                "note_corpus": etat.get("note_corpus")}
 
     # -- tours suivants --------------------------------------------------
     def repondre(self, dossier_id, reponses):
@@ -127,6 +156,19 @@ class Conversation(object):
             return {"etape": "erreur", "erreur": "AUCUNE_FICHE",
                     "message": "Aucune fiche n'est associée à ce dossier."}
 
+        # Réponses cumulées sur les tours. Seules les questions posées sont lues.
+        posees = {q["cle"] for q in etat.get("questions", [])}
+        cumul = dict(etat.get("reponses") or {})
+        for cle, valeur in (reponses or {}).items():
+            if cle in posees:
+                cumul[cle] = valeur
+        reponses = cumul
+        etat["reponses"] = cumul
+
+        relance = self._relance(etat, fiches, reponses)
+        if relance is not None:
+            return relance
+
         faits = mod_faits.Faits(dossier_id)
         fait_ids = []
         for fiche in fiches:
@@ -137,6 +179,13 @@ class Conversation(object):
                 else:
                     fait = faits.declarer("%s : %s" % (question, reponse))
                 fait_ids.append(fait["fait_id"])
+        for q in self._questions_guide(etat):
+            valeur = clarification.lire_valeur(reponses.get(q["cle"]))
+            if valeur is None:
+                fait = faits.nommer_manquant(q["question"], pourquoi=q["pourquoi"])
+            else:
+                fait = faits.declarer("%s : %s" % (q["question"], reponses.get(q["cle"])))
+            fait_ids.append(fait["fait_id"])
         if not fait_ids:
             fait_ids.append(faits.declarer(etat["demande"])["fait_id"])
         # Persistance : sans elle, les réponses de l'utilisateur ne figureraient
@@ -158,6 +207,40 @@ class Conversation(object):
         etat.update(etape="repondu", reponse=reponse)
         self._ecrire_etat(dossier_id, etat)
         return {"etape": "reponse", "dossier_id": dossier_id, "reponse": reponse}
+
+    def _questions_guide(self, etat):
+        index = {q["cle"]: q for q in self.guide.get("questions", [])}
+        return [index[c] for c in etat.get("guide_posees", []) if c in index]
+
+    def _relance(self, etat, fiches, reponses):
+        """Tour suivant si une réponse contredit le récit, ou ouvre une question.
+
+        Au plus `clarification.TOURS_MAX` tours : au-delà, la réponse est
+        construite avec ce qui est connu, contradictions et manques nommés.
+        """
+        if etat.get("tour", 1) >= clarification.TOURS_MAX:
+            return None
+        dossier_id = etat["dossier_id"]
+        posees_guide = self._questions_guide(etat)
+        deja_confirmees = set(etat.get("confirmations") or [])
+        a_confirmer = [c for c in clarification.contradictions(
+            posees_guide, reponses, etat.get("demande")) if c["cle"] not in deja_confirmees]
+        nouvelles = clarification.questions_pour(
+            fiches, self.guide, deja_posees=set(etat.get("guide_posees") or []),
+            reponses=reponses)
+        if not a_confirmer and not nouvelles:
+            return None
+        index = {q["cle"]: q for q in self.guide.get("questions", [])}
+        questions = [self._question_guide(index[c["cle"]], etat.get("demande"),
+                                          confirmation=c["message"]) for c in a_confirmer]
+        questions.extend(self._question_guide(q, etat.get("demande")) for q in nouvelles)
+        etat["tour"] = etat.get("tour", 1) + 1
+        etat["confirmations"] = sorted(deja_confirmees | {c["cle"] for c in a_confirmer})
+        etat["guide_posees"] = list(etat.get("guide_posees") or []) + [q["cle"] for q in nouvelles]
+        etat["questions"] = list(etat.get("questions") or []) + [
+            q for q in questions if q["cle"] not in {x["cle"] for x in etat.get("questions", [])}]
+        self._ecrire_etat(dossier_id, etat)
+        return self._vue_clarification(dossier_id, etat, fiches, questions, a_confirmer)
 
     def _construire_analyse(self, dossier_id, fiches, fait_ids):
         analyse = A.nouvelle_analyse(dossier_id, sorted({f["domaine"] for f in fiches}))
@@ -225,6 +308,26 @@ class Conversation(object):
                              + list(cloture.get("champs_non_renseignes") or [])),
             "6_sources": self._sources(fiches),
         }
+        guide = self._questions_guide(etat)
+        reponses = etat.get("reponses") or {}
+        lignes, manquantes = clarification.application(guide, reponses, self.catalogue)
+        restantes = clarification.contradictions(guide, reponses, etat.get("demande"))
+        sections["3_application_aux_faits"] = {
+            "statut": self.guide.get("statut_validation"),
+            "note": ("Lectures des articles au vu de VOS réponses. Ce ne sont pas des "
+                     "citations : elles n'ont pas encore été relues par un juriste."),
+            "lignes": lignes,
+        }
+        sections["5_informations_manquantes"] = manquantes
+        sections["5_contradictions"] = [
+            dict(c, message=c["message"] + " — réponse confirmée : c'est elle qui est retenue, "
+                 "mais le récit et la réponse divergent : faites vérifier ce point.")
+            for c in restantes]
+        sections["5_a_verifier"] = (
+            sections["5_a_verifier"]
+            + ["Information manquante — %s (%s)" % (m["question"], m["pourquoi"])
+               for m in manquantes]
+            + [c["message"] for c in sections["5_contradictions"]])
         brouillon = self._brouillon(cloture, fiches, etat)
         return {
             "statut_reponse": statut,
