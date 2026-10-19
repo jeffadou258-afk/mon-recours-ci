@@ -44,7 +44,8 @@ test("santé : chiffres lus sur le moteur réel", async () => {
   const parDomaine = data.catalogue.parDomaine.reduce((n: number, d: { fiches: string[] }) => n + d.fiches.length, 0);
   assert.equal(parDomaine, data.catalogue.fiches);
   assert.ok(data.corpus.articles >= 1777);
-  assert.equal(data.corpus.documents, 26);
+  // Le corpus grandit avec la collecte (26 documents au départ).
+  assert.ok(data.corpus.documents >= 26);
 });
 
 test("parcours complet de clarification : ouvrir → cookie → répondre → citations vérifiables", async () => {
