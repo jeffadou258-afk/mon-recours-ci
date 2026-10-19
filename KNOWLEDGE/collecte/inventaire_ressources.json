@@ -1,6 +1,6 @@
 {
  "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
- "genere_le": "2026-10-19T09:36:42+00:00",
+ "genere_le": "2026-10-19T11:19:02+00:00",
  "outils_collecte": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -18,27 +18,32 @@
   ]
  },
  "totaux": {
-  "entrees_manifeste": 83,
-  "documents_telecharges": 6,
-  "pages_de_decouverte_lues": 10,
-  "echecs": 27,
-  "non_encore_collectes": 40,
+  "entrees_manifeste": 88,
+  "documents_telecharges": 32,
+  "pages_de_decouverte_lues": 20,
+  "echecs": 36,
+  "non_encore_collectes": 0,
   "par_statut_controle": {
-   "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 4,
-   "QUARANTAINE": 2
+   "EXPLOITABLE_OFFICIEL": 10,
+   "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 5,
+   "QUARANTAINE": 17
   },
   "par_categorie": {
    "OFFICIEL_INSTITUTION": 1,
+   "OFFICIEL_ORGANISATION": 1,
+   "OFFICIEL_PORTAIL_GOUV": 24,
    "SECONDAIRE_AUTRE": 2,
-   "SECONDAIRE_BASE_INTERNATIONALE": 1,
+   "SECONDAIRE_BASE_INTERNATIONALE": 2,
    "SECONDAIRE_CONSOLIDE": 1,
    "SECONDAIRE_FAC_SIMILE": 1
   },
   "par_methode_extraction": {
-   "CALQUE_TEXTE": 4,
-   "OCR_TESSERACT_PARTIEL": 2
+   "CALQUE_TEXTE": 8,
+   "OCR_EDITEUR": 10,
+   "OCR_TESSERACT": 11,
+   "OCR_TESSERACT_PARTIEL": 3
   },
-  "pdf_rapatries_et_verifies": 0
+  "pdf_rapatries_et_verifies": 32
  },
  "documents": [
   {
@@ -61,8 +66,10 @@
    "sha256": "sha256:851366a003327a59640a11b668d2a7817ff9308f240d12cf82cc96c2a56489ba",
    "pages": 122,
    "polices": 8,
-   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "integrite_pdf": "OK",
    "methode_extraction": "OCR_TESSERACT_PARTIEL",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 166,
    "confiance_ocr_moyenne": 91.5,
    "articles_detectes": 332,
@@ -74,10 +81,13 @@
    "motifs_quarantaine": [],
    "avertissements": [
     "qpdf signale des avertissements de structure",
-    "1 page(s) OCR de confiance < 70 : [9]"
+    "1 page(s) OCR de confiance < 70 : [9]",
+    "même fichier que : ohada_jo_special_aupsrve_2023"
    ],
    "notes": "Fac-similé du JO OHADA sur un site associatif ; l'exemplaire de ohada.org est recherché par découverte.",
-   "doublon_de": []
+   "doublon_de": [
+    "ohada_jo_special_aupsrve_2023"
+   ]
   },
   {
    "cle": "aupsrve_2023_senlii",
@@ -99,8 +109,10 @@
    "sha256": "sha256:c2def27f6e6f1b9896f5f0f64f17527a282b37e756fc003a284c66949cdd5543",
    "pages": 113,
    "polices": 5,
-   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "integrite_pdf": "OK",
    "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 2986,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 338,
@@ -115,6 +127,83 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "gouvci_175043233774",
+   "titre": "Document gouv.ci non identifié (175043233774.pdf)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "inconnu",
+   "autorite": "Portail du Gouvernement de Côte d'Ivoire",
+   "domaines": [],
+   "url": "https://www.gouv.ci/uploads/publications/175043233774.pdf",
+   "url_finale": "https://www.gouv.ci/uploads/publications/175043233774.pdf",
+   "date_recuperation": "2026-10-19T10:46:37+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 649372,
+   "sha256": "sha256:1e3cf5bd855805d5a241fb255fbcef0eb52f8e4a7c9090d44ea4e4365887bc8a",
+   "pages": 11,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 1550,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "contenu non identifié"
+   ],
+   "avertissements": [],
+   "notes": "Contenu inconnu : à identifier avant tout usage.",
+   "doublon_de": []
+  },
+  {
+   "cle": "ilo_textes_pertinents_rci",
+   "titre": "Textes pertinents applicables en République de Côte d'Ivoire (compilation diffusée par l'OIT, 2025)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "recueil",
+   "autorite": "Organisation internationale du Travail (diffusion)",
+   "domaines": [
+    4,
+    22
+   ],
+   "url": "https://www.ilo.org/sites/default/files/2025-05/01_TEXTES_Pertinents_applicables_en_RCI.pdf",
+   "url_finale": "https://www.ilo.org/sites/default/files/2025-05/01_TEXTES_Pertinents_applicables_en_RCI.pdf",
+   "date_recuperation": "2026-10-19T11:15:39+00:00",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.5",
+   "octets": 1125455,
+   "sha256": "sha256:8fbae9b3b3ebe8b288733fb4bb48ff3cb9f70397bf15518ea0568ffe2809a489",
+   "pages": 96,
+   "polices": 12,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 1953,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 54,
+   "article_max": 54,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Compilation : aucune disposition n'en sera tirée ; sert à identifier les textes et leurs numéros.",
    "doublon_de": []
   },
   {
@@ -137,8 +226,14 @@
    "sha256": "sha256:ce4a39e45321bb30c55ef2f0061f503b2632f8bc4c38e943dee44ad3e8da7627",
    "pages": 7,
    "polices": 17,
-   "integrite_pdf": "PDF_NON_RAPATRIE",
-   "methode_extraction": "CALQUE_TEXTE",
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader",
+    "producteur : Hewlett-Packard MFP"
+   ],
+   "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 6360,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 105,
@@ -153,6 +248,998 @@
    ],
    "notes": null,
    "doublon_de": []
+  },
+  {
+   "cle": "mffe_adoption",
+   "titre": "Loi relative à l'adoption (document mffe.ci « adoption_enfant »)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2,
+    22
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/1724365129_adoption_enfant.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/1724365129_adoption_enfant.pdf",
+   "date_recuperation": "2026-10-19T11:05:20+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 190494,
+   "sha256": "sha256:44203eb2eefa719d748c36ef54a7d6e6bdb8d07e32bfd89aaf30eaf63419340a",
+   "pages": 3,
+   "polices": 9,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 1634,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Numéro et date à lire dans le document.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mffe_code_penal_2019_574",
+   "titre": "Loi n° 2019-574 du 26 juin 2019 portant Code pénal",
+   "numero_texte": "2019-574",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    5,
+    22,
+    2
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf",
+   "date_recuperation": "2026-10-19T10:59:26+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 3007857,
+   "sha256": "sha256:87eeac32797e8df37acc444f12ba7a791d50aa5e99070786007312c5b46a9a67",
+   "pages": 52,
+   "polices": 174,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : Paper Capture",
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 5852,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 541,
+   "article_max": 565,
+   "couverture_articles": 0.9575,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mffe_constitution_2016",
+   "titre": "Loi n° 2016-886 du 8 novembre 2016 portant Constitution de la République de Côte d'Ivoire",
+   "numero_texte": "2016-886",
+   "date_texte": "2016-11-08",
+   "type_texte": "constitution",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    10
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/constitution_2016.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/constitution_2016.pdf",
+   "date_recuperation": "2026-10-19T11:00:08+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 12267489,
+   "sha256": "sha256:c964b772cd64f4572c04f8c83b1f5af781d2e53cde81b4cb6e805d04b03d28db",
+   "pages": 16,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": 93.8,
+   "articles_detectes": 160,
+   "article_max": 184,
+   "couverture_articles": 0.8696,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Version de 2016 : la révision constitutionnelle de 2020 n'y figure pas.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mffe_cpp_2018_975",
+   "titre": "Loi n° 2018-975 du 27 décembre 2018 portant Code de procédure pénale",
+   "numero_texte": "2018-975",
+   "date_texte": "2018-12-27",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    5,
+    22
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/Loi_2018-975_du_27_decembre_2018_portant_Code_de_Procedure_penale.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/Loi_2018-975_du_27_decembre_2018_portant_Code_de_Procedure_penale.pdf",
+   "date_recuperation": "2026-10-19T10:59:23+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 2938610,
+   "sha256": "sha256:cd3bc6b85fff6612c0cc24c9c41e8d53fce21f8fa4901011717dd9b0f5b7b66d",
+   "pages": 64,
+   "polices": 198,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : Paper Capture",
+    "producteur : EPSON",
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 12449,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 831,
+   "article_max": 854,
+   "couverture_articles": 0.9731,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mffe_etat_civil_2018_862",
+   "titre": "Loi n° 2018-862 du 19 novembre 2018 relative à l'état civil",
+   "numero_texte": "2018-862",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_862_du_19_11_2018_etat_civil.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_862_du_19_11_2018_etat_civil.pdf",
+   "date_recuperation": "2026-10-19T11:02:46+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 4176724,
+   "sha256": "sha256:ab84704cb56c8c1cb9ab55436ba18ecf9e4ef5952133c7ce035c26109e7c8ad7",
+   "pages": 10,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": 88.3,
+   "articles_detectes": 85,
+   "article_max": 113,
+   "couverture_articles": 0.7522,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 75% des articles 1..113"
+   ],
+   "avertissements": [
+    "1 page(s) OCR de confiance < 70 : [2]"
+   ],
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mffe_mariage_2019_570",
+   "titre": "Loi n° 2019-570 du 26 juin 2019 relative au mariage",
+   "numero_texte": "2019-570",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf",
+   "date_recuperation": "2026-10-19T10:59:28+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 581004,
+   "sha256": "sha256:9c93ce80693df78c93842b9ac34b551848404e97ba00dc5c83aff187700d40e9",
+   "pages": 7,
+   "polices": 17,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader",
+    "producteur : Hewlett-Packard MFP"
+   ],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 6360,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 105,
+   "article_max": 105,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mffe_naissance_2018_863",
+   "titre": "Loi n° 2018-863 du 19 novembre 2018 instituant une procédure spéciale de déclaration de naissance",
+   "numero_texte": "2018-863",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2,
+    22
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_863_du_19_11_2018_instituant_une_procedure_declaration_naissance.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_863_du_19_11_2018_instituant_une_procedure_declaration_naissance.pdf",
+   "date_recuperation": "2026-10-19T11:04:38+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.3",
+   "octets": 4689181,
+   "sha256": "sha256:a9b36782ddde1b47f4de720bc67d7f96b9b3457cf6714a155575bed9e9a23b9a",
+   "pages": 5,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 3,
+   "confiance_ocr_moyenne": 93.2,
+   "articles_detectes": 7,
+   "article_max": 26,
+   "couverture_articles": 0.2692,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 27% des articles 1..26"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mffe_pupille_2015_539",
+   "titre": "Loi n° 2015-539 du 20 juillet 2015 portant statut de pupille de l'État",
+   "numero_texte": "2015-539",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    22
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2015-539_pupille_de_l-Etat.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2015-539_pupille_de_l-Etat.pdf",
+   "date_recuperation": "2026-10-19T11:05:18+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 1076976,
+   "sha256": "sha256:41a7422ddf02fb70923542c0001569440ebdf80d305fe8a71b9941ebd4a454d5",
+   "pages": 2,
+   "polices": 10,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : Paper Capture",
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 6556,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 21,
+   "article_max": 54,
+   "couverture_articles": 0.3889,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 39% des articles 1..54",
+    "le numéro 2015-539 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mffe_successions_2019_573",
+   "titre": "Loi n° 2019-573 du 26 juin 2019 relative aux successions",
+   "numero_texte": "2019-573",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    2
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-573_sur_la_succession.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-573_sur_la_succession.pdf",
+   "date_recuperation": "2026-10-19T10:59:29+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 725170,
+   "sha256": "sha256:0d7d1595d4c15a3b46624584e2f25c84023505e856eb9d72e1f20525bcacacdb",
+   "pages": 10,
+   "polices": 17,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader",
+    "producteur : Hewlett-Packard MFP"
+   ],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 5290,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 120,
+   "article_max": 160,
+   "couverture_articles": 0.75,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 75% des articles 1..160"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure",
+    "même fichier que : successions_2019_573_bice"
+   ],
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "doublon_de": [
+    "successions_2019_573_bice"
+   ]
+  },
+  {
+   "cle": "mffe_traite_2016_1111",
+   "titre": "Loi n° 2016-1111 du 8 décembre 2016 relative à la lutte contre la traite des personnes",
+   "numero_texte": "2016-1111",
+   "date_texte": "2016-12-08",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Femme, de la Famille et de l'Enfant — site mffe.ci (republication)",
+   "domaines": [
+    22,
+    5
+   ],
+   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2016-1111_du_08_decembre_2016_relative_a_la_lutte_contre_la_traite_des_personnes.pdf",
+   "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2016-1111_du_08_decembre_2016_relative_a_la_lutte_contre_la_traite_des_personnes.pdf",
+   "date_recuperation": "2026-10-19T10:59:30+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 1332425,
+   "sha256": "sha256:4dcb0a4423a3252e1e9ec110258cff1493195f70c1cc39cb1282a5aed421936b",
+   "pages": 3,
+   "polices": 1,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 113,
+   "confiance_ocr_moyenne": 93.6,
+   "articles_detectes": 23,
+   "article_max": 27,
+   "couverture_articles": 0.8519,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
+   "titre": "CONVENTION SUR LA PROTECTION DES ENFANTS ET LA COOPÉRATION EN MATIÈRE D’ADOPTION INTERNATIONALE : Convention de LAHAYE 93 (Conclue le 29 mai 1993)",
+   "numero_texte": null,
+   "date_texte": "1993-05-29",
+   "type_texte": "convention",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936701697.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176936701697.pdf",
+   "date_recuperation": "2026-10-19T10:58:58+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 828314,
+   "sha256": "sha256:0a2664ce9993f0a0c6156688cf845cb4b04e5ee4ccc6c47196665314f0bb3cd3",
+   "pages": 10,
+   "polices": 6,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 2698,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 48,
+   "article_max": 48,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
+   "titre": "DÉCRET No 2019-779 portant création, attributions, organisation et fonctionnement du comité interministériel de protection de l’enfant.",
+   "numero_texte": "2019-779",
+   "date_texte": null,
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937240619.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176937240619.pdf",
+   "date_recuperation": "2026-10-19T10:50:52+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.3",
+   "octets": 1165726,
+   "sha256": "sha256:1a451c2557a60a9aa2176fe99b233cbbe5e7ac658da66ef5221533002b6b7703",
+   "pages": 3,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 3,
+   "confiance_ocr_moyenne": 93.7,
+   "articles_detectes": 9,
+   "article_max": 9,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_d_cret_portant_r_glementation_des_familles_d_acc",
+   "titre": "Décret Portant Règlementation des Familles d'Accueil, 2023 (Décret 90 de 2023)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937552921.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176937552921.pdf",
+   "date_recuperation": "2026-10-19T10:50:43+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 198630,
+   "sha256": "sha256:f8ce3bf4581b5addef0f407193efa3ced7a29fb1b56816efe43ca4f89cb286ea",
+   "pages": 7,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 2507,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 22,
+   "article_max": 22,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "déclaré officiel mais porte des marques d'éditeur tiers : creative commons, laws.africa"
+   ],
+   "avertissements": [],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
+   "titre": "DECRET No 2020-907 DU 18 NOVEMBRE 2020 PORTANT ATTRIBUTIONS, ORGANISATION ET FONCTIONNEMENT DE L’AUTORITE CENTRALE POUR L’ADOPTION EN COTE D’IVOIRE : DECRET ACACI",
+   "numero_texte": "2020-907",
+   "date_texte": "2020-11-18",
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936873529.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176936873529.pdf",
+   "date_recuperation": "2026-10-19T10:57:45+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 796471,
+   "sha256": "sha256:9bb45a1eda9b3e2da861f0d3c30623bee47d0bbda6ec34061c711a47ad612be9",
+   "pages": 8,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": 92.8,
+   "articles_detectes": 15,
+   "article_max": 28,
+   "couverture_articles": 0.5357,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 54% des articles 1..28"
+   ],
+   "avertissements": [],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
+   "titre": "DECRET No 2023-89 DU 15 FEVRIER 2023 FIXANT LES NORMES ET STANDARDS APPLICABLES AUX ETABLISSEMENTS DE PROTECTION DE REMPLACEMENT DE L'ENFANT",
+   "numero_texte": "2023-89",
+   "date_texte": "2023-02-15",
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937624358.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176937624358.pdf",
+   "date_recuperation": "2026-10-19T10:48:09+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 1694630,
+   "sha256": "sha256:e3fa70d741d8e0fd5a80a2b78085e5d09ec8d6789a4ef5a27b62c7a7e5c21473",
+   "pages": 16,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": 91.6,
+   "articles_detectes": 60,
+   "article_max": 71,
+   "couverture_articles": 0.8451,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 85% des articles 1..71"
+   ],
+   "avertissements": [],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
+   "titre": "DECRET No 2023-90 DU 15 FEVRIER 2023 PORTANT REGLEMENTATION DES FAMILLES D'ACCUEIL",
+   "numero_texte": "2023-90",
+   "date_texte": "2023-02-15",
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937670169.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176937670169.pdf",
+   "date_recuperation": "2026-10-19T10:47:26+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 524430,
+   "sha256": "sha256:0fd97c056ea13874ca8b96b98002ee407ab03d7e7da70c9d533ed8e2ff7eacc0",
+   "pages": 5,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 3,
+   "confiance_ocr_moyenne": 90.6,
+   "articles_detectes": 22,
+   "article_max": 22,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
+   "titre": "Loi n°2018-862 du 19 novembre 2018 relative à l’état civil.",
+   "numero_texte": "2018-862",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937063397.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176937063397.pdf",
+   "date_recuperation": "2026-10-19T10:51:50+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 1277407,
+   "sha256": "sha256:46e73858e41555d1d46edad183ac8c504c8c8fa449b8cd8ae2f196c4edbe0b49",
+   "pages": 10,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": 75.3,
+   "articles_detectes": 13,
+   "article_max": 108,
+   "couverture_articles": 0.1204,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 12% des articles 1..108",
+    "le numéro 2018-862 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [
+    "2 page(s) OCR de confiance < 70 : [1, 2]"
+   ],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
+   "titre": "Loi n°2018-863 du 19 novembre 2018 instituant une procédure spéciale de déclaration de naissance, de rétablissement d’identité et de transcription d’acte de naissance.",
+   "numero_texte": "2018-863",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936984489.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176936984489.pdf",
+   "date_recuperation": "2026-10-19T10:54:09+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.3",
+   "octets": 2036600,
+   "sha256": "sha256:72c42303958ce3d24c99f309c927bfa51adf8717bd968245064f67498786c6b6",
+   "pages": 5,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 3,
+   "confiance_ocr_moyenne": 93.2,
+   "articles_detectes": 12,
+   "article_max": 26,
+   "couverture_articles": 0.4615,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 46% des articles 1..26"
+   ],
+   "avertissements": [],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
+   "titre": "LOI n° 2019-571 du 26 juin 2019 relative à la filiation",
+   "numero_texte": "2019-571",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937124389.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176937124389.pdf",
+   "date_recuperation": "2026-10-19T10:51:45+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 188922,
+   "sha256": "sha256:4959603eba9f2a9240b1969695c400143b60a09ad9219a1e0ec9edab75cd5707",
+   "pages": 2,
+   "polices": 17,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader",
+    "producteur : Hewlett-Packard MFP"
+   ],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 6410,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 33,
+   "article_max": 105,
+   "couverture_articles": 0.3143,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 31% des articles 1..105"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
+   "titre": "Loi n°2019-572 du 26 Juin 2019 relative à la minorité",
+   "numero_texte": "2019-572",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2,
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/17693691723.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/17693691723.pdf",
+   "date_recuperation": "2026-10-19T10:55:36+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 1324711,
+   "sha256": "sha256:8a0cbf5e34540b964addfaa6913b57cee36b0564087f901734c71f5d91bccad1",
+   "pages": 13,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": 80.4,
+   "articles_detectes": 20,
+   "article_max": 149,
+   "couverture_articles": 0.1342,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 13% des articles 1..149"
+   ],
+   "avertissements": [
+    "2 page(s) OCR de confiance < 70 : [1, 9]"
+   ],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_loi_n_202_894_du_21_d_cembre_2021_relative_aux_m",
+   "titre": "LOI n° 202-894 du 21 décembre 2021 relative aux mesures de protection des victimes de violences domestiques. de viol et de violences sexuelles autres que domestiques.",
+   "numero_texte": "202-894",
+   "date_texte": "2021-12-21",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176960480223.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176960480223.pdf",
+   "date_recuperation": "2026-10-19T10:47:11+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 1596862,
+   "sha256": "sha256:9f3d27a91fae43f97dee80689447e731ee0a4de32fb57dba18591d06e68181fb",
+   "pages": 3,
+   "polices": 11,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : Paper Capture",
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 5591,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 17,
+   "article_max": 16,
+   "couverture_articles": 0.6522,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 65% des articles 1..16",
+    "le numéro 202-894 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
+   "titre": "LOI No 2015-539 du 20 juillet 2015 portant Statut de pupille de l’Etat",
+   "numero_texte": "2015-539",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936945850.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176936945850.pdf",
+   "date_recuperation": "2026-10-19T10:55:04+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 1077564,
+   "sha256": "sha256:acb84e77c7bab2b4103d18076323e9576df3d610c1a01b68e9f95fd55f40c337",
+   "pages": 2,
+   "polices": 10,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : Paper Capture",
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 6556,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 21,
+   "article_max": 54,
+   "couverture_articles": 0.3889,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 39% des articles 1..54",
+    "le numéro 2015-539 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "doublon_de": []
+  },
+  {
+   "cle": "officiel_famille_loi_relative_a_l_adoption",
+   "titre": "LOI RELATIVE A L’ADOPTION",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936997346.pdf",
+   "url_finale": "https://famille.gouv.ci/uploads/publications/176936997346.pdf",
+   "date_recuperation": "2026-10-19T10:54:04+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 320208,
+   "sha256": "sha256:32c73837481191a1d86c62fec9bd2b52628ddc1749cab56b19102974f500bf6f",
+   "pages": 8,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 1829,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 37,
+   "article_max": 37,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_jo_special_aupsrve_2023",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 15 novembre 2023 — Acte uniforme du 17 octobre 2023 portant organisation des procédures simplifiées de recouvrement et des voies d'exécution",
+   "numero_texte": "AUPSRVE-2023",
+   "date_texte": "2023-10-17",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — Secrétariat permanent (ohada.org)",
+   "domaines": [
+    23
+   ],
+   "url": "https://www.ohada.org/wp-content/uploads/2023/11/J.O._special_AUVE_15.11.2023_Compressed.pdf",
+   "url_finale": "https://www.ohada.org/wp-content/uploads/2023/11/J.O._special_AUVE_15.11.2023_Compressed.pdf",
+   "date_recuperation": "2026-10-19T11:05:21+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 9179996,
+   "sha256": "sha256:851366a003327a59640a11b668d2a7817ff9308f240d12cf82cc96c2a56489ba",
+   "pages": 122,
+   "polices": 8,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_TESSERACT_PARTIEL",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "densite_native_car_par_page": 166,
+   "confiance_ocr_moyenne": 92.0,
+   "articles_detectes": 331,
+   "article_max": 338,
+   "couverture_articles": 0.9793,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "qpdf signale des avertissements de structure",
+    "même fichier que : aupsrve_2023_jo_ohadacom"
+   ],
+   "notes": "Version « compressée » publiée par ohada.org.",
+   "doublon_de": [
+    "aupsrve_2023_jo_ohadacom"
+   ]
   },
   {
    "cle": "successions_2019_573_assnat",
@@ -174,8 +1261,10 @@
    "sha256": "sha256:31b46f9b0ac6d4f1735569234bd4633413b6cda765a474f4acdf361ec9fc455d",
    "pages": 23,
    "polices": 7,
-   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "integrite_pdf": "OK",
    "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 2020,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 135,
@@ -211,8 +1300,14 @@
    "sha256": "sha256:0d7d1595d4c15a3b46624584e2f25c84023505e856eb9d72e1f20525bcacacdb",
    "pages": 10,
    "polices": 17,
-   "integrite_pdf": "PDF_NON_RAPATRIE",
-   "methode_extraction": "CALQUE_TEXTE",
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader",
+    "producteur : Hewlett-Packard MFP"
+   ],
+   "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 5290,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 120,
@@ -225,10 +1320,13 @@
     "découpage en articles incomplet : 75% des articles 1..160"
    ],
    "avertissements": [
-    "qpdf signale des avertissements de structure"
+    "qpdf signale des avertissements de structure",
+    "même fichier que : mffe_successions_2019_573"
    ],
    "notes": null,
-   "doublon_de": []
+   "doublon_de": [
+    "mffe_successions_2019_573"
+   ]
   },
   {
    "cle": "travail_2015_532_uvci",
@@ -250,13 +1348,15 @@
    "sha256": "sha256:db00d96f60bd707fc826056ea96ec20c51d4b3b883fa2155bc3acec53f3765f3",
    "pages": 563,
    "polices": 10,
-   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "integrite_pdf": "OK",
    "methode_extraction": "OCR_TESSERACT_PARTIEL",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
    "densite_native_car_par_page": 1143,
    "confiance_ocr_moyenne": 89.3,
-   "articles_detectes": 94,
+   "articles_detectes": 463,
    "article_max": 110,
-   "couverture_articles": 0.8545,
+   "couverture_articles": 0.9614,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [
     "ivoire-juriste"
@@ -279,7 +1379,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:23:28+00:00"
+   "date_recuperation": "2026-10-19T10:46:29+00:00"
   },
   {
    "cle": "code_penal_2019_574_civlii",
@@ -289,7 +1389,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:23:30+00:00"
+   "date_recuperation": "2026-10-19T10:46:31+00:00"
   },
   {
    "cle": "cpp_2018_975_civlii",
@@ -299,7 +1399,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:23:31+00:00"
+   "date_recuperation": "2026-10-19T10:46:32+00:00"
   },
   {
    "cle": "travail_2015_532_faolex",
@@ -309,7 +1409,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:23:32+00:00"
+   "date_recuperation": "2026-10-19T10:46:33+00:00"
   },
   {
    "cle": "travail_2015_532_civlii",
@@ -319,7 +1419,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:23:32+00:00"
+   "date_recuperation": "2026-10-19T10:46:33+00:00"
   },
   {
    "cle": "mariage_2019_570_civlii",
@@ -329,7 +1429,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:23:54+00:00"
+   "date_recuperation": "2026-10-19T10:46:34+00:00"
   },
   {
    "cle": "successions_2019_573_civlii",
@@ -339,7 +1439,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:24:13+00:00"
+   "date_recuperation": "2026-10-19T10:46:34+00:00"
   },
   {
    "cle": "minorite_2019_572_civlii",
@@ -349,7 +1449,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:24:16+00:00"
+   "date_recuperation": "2026-10-19T10:46:35+00:00"
   },
   {
    "cle": "filiation_2019_571_civlii",
@@ -359,17 +1459,17 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:24:17+00:00"
+   "date_recuperation": "2026-10-19T10:46:36+00:00"
   },
   {
-   "cle": "gouvci_175043233774",
-   "url": "https://www.gouv.ci/uploads/publications/175043233774.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
-   "statut": "ECHEC_RESEAU",
-   "http": null,
-   "erreur": "échec après 3 essais : <urlopen error [Errno -3] Temporary failure in name resolution>",
+   "cle": "dec_mffe_textes",
+   "url": "https://mffe.ci/MFFE/site_famille/document-dinteret-public/textes-juridiques/",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 403,
+   "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:33:17+00:00"
+   "date_recuperation": "2026-10-19T10:46:54+00:00"
   },
   {
    "cle": "dec_emploi_gouv",
@@ -379,7 +1479,7 @@
    "http": 403,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:34:41+00:00"
+   "date_recuperation": "2026-10-19T10:47:00+00:00"
   },
   {
    "cle": "dec_civlii_publication_2019_570_eng@2023-10-13",
@@ -389,7 +1489,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:04+00:00"
+   "date_recuperation": "2026-10-19T10:47:03+00:00"
   },
   {
    "cle": "dec_civlii_publication_2019_571_fra@2023-10-13",
@@ -399,7 +1499,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:05+00:00"
+   "date_recuperation": "2026-10-19T10:47:04+00:00"
   },
   {
    "cle": "dec_civlii_publication_2019_572_fra@2023-10-13",
@@ -409,7 +1509,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:06+00:00"
+   "date_recuperation": "2026-10-19T10:47:04+00:00"
   },
   {
    "cle": "dec_civlii_publication_2019_573_fra@2023-10-13",
@@ -419,7 +1519,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:06+00:00"
+   "date_recuperation": "2026-10-19T10:47:05+00:00"
   },
   {
    "cle": "dec_civlii_publication_2019_574_fra@2024-06-23",
@@ -429,7 +1529,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:06+00:00"
+   "date_recuperation": "2026-10-19T10:47:05+00:00"
   },
   {
    "cle": "dec_civlii_publication_2018_975_fra@2024-06-23",
@@ -439,7 +1539,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:07+00:00"
+   "date_recuperation": "2026-10-19T10:47:06+00:00"
   },
   {
    "cle": "dec_civlii_publication_2015_532_fra@2023-08-10",
@@ -449,7 +1549,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:07+00:00"
+   "date_recuperation": "2026-10-19T10:47:06+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p2",
@@ -459,7 +1559,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:09+00:00"
+   "date_recuperation": "2026-10-19T10:47:07+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p3",
@@ -469,7 +1569,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:10+00:00"
+   "date_recuperation": "2026-10-19T10:47:07+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p4",
@@ -479,7 +1579,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:10+00:00"
+   "date_recuperation": "2026-10-19T10:47:08+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p5",
@@ -489,7 +1589,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:11+00:00"
+   "date_recuperation": "2026-10-19T10:47:08+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p6",
@@ -499,7 +1599,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:11+00:00"
+   "date_recuperation": "2026-10-19T10:47:09+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p7",
@@ -509,7 +1609,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:12+00:00"
+   "date_recuperation": "2026-10-19T10:47:09+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p8",
@@ -519,7 +1619,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:12+00:00"
+   "date_recuperation": "2026-10-19T10:47:10+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p9",
@@ -529,7 +1629,7 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:13+00:00"
+   "date_recuperation": "2026-10-19T10:47:10+00:00"
   },
   {
    "cle": "dec_civlii_legislation_p10",
@@ -539,7 +1639,97 @@
    "http": 404,
    "erreur": null,
    "debut": "",
-   "date_recuperation": "2026-10-19T09:35:13+00:00"
+   "date_recuperation": "2026-10-19T10:47:11+00:00"
+  },
+  {
+   "cle": "assnat_constitution",
+   "url": "https://www.assnat.ci/CONSTITUTION.pdf",
+   "categorie_source": "OFFICIEL_INSTITUTION",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:03+00:00"
+  },
+  {
+   "cle": "civlii_code_penal_source_pdf",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:15+00:00"
+  },
+  {
+   "cle": "civlii_cpp_source_pdf",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/975/fra@2024-06-23/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:15+00:00"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_cpp",
+   "url": "https://civlii.laws.africa/akn/ci/act/2018/975/fra@2023-12-11",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:16+00:00"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_penal",
+   "url": "https://civlii.laws.africa/akn/ci/act/2019/574/fra@2024-06-23",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:17+00:00"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_travail",
+   "url": "https://civlii.laws.africa/akn/ci/act/2015/532/fra@2023-08-10",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:18+00:00"
+  },
+  {
+   "cle": "dec_famille_gouv_publications",
+   "url": "https://famille.gouv.ci/publications",
+   "categorie_source": "DECOUVERTE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:33+00:00"
+  },
+  {
+   "cle": "civlii_travail_enfants_2010_272",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2010/272/fra@2023-08-10/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:41+00:00"
+  },
+  {
+   "cle": "civlii_travail_source_pdf",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/532/fra@2023-08-10/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "statut": "ECHEC_HTTP",
+   "http": 404,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-19T11:15:41+00:00"
   }
  ],
  "decouvertes": [
@@ -574,6 +1764,12 @@
    "liens": 7
   },
   {
+   "cle": "dec_famille_gouv",
+   "url": "https://famille.gouv.ci/",
+   "titre_page": "Ministère de la Femme, de la Famille et de l'Enfant de la République de Côte d'Ivoire :: Accueil",
+   "liens": 151
+  },
+  {
    "cle": "dec_sgg",
    "url": "https://www.sgg.gouv.ci/",
    "titre_page": "Sécrétariat Général du Gouvernement de Côte d'Ivoire",
@@ -602,168 +1798,61 @@
    "url": "https://civlii.laws.africa/fr/legislation/?page=1",
    "titre_page": "Législation\n\n        – JuriCIV",
    "liens": 48
-  }
- ],
- "non_encore_collectes": [
-  {
-   "cle": "dec_mffe_textes",
-   "url": "https://mffe.ci/MFFE/site_famille/document-dinteret-public/textes-juridiques/"
-  },
-  {
-   "cle": "dec_famille_gouv",
-   "url": "https://famille.gouv.ci/"
-  },
-  {
-   "cle": "officiel_famille_loi_n_202_894_du_21_d_cembre_2021_relative_aux_m",
-   "url": "https://famille.gouv.ci/uploads/publications/176960480223.pdf"
-  },
-  {
-   "cle": "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
-   "url": "https://famille.gouv.ci/uploads/publications/176937670169.pdf"
-  },
-  {
-   "cle": "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
-   "url": "https://famille.gouv.ci/uploads/publications/176937624358.pdf"
-  },
-  {
-   "cle": "officiel_famille_d_cret_portant_r_glementation_des_familles_d_acc",
-   "url": "https://famille.gouv.ci/uploads/publications/176937552921.pdf"
-  },
-  {
-   "cle": "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
-   "url": "https://famille.gouv.ci/uploads/publications/176937240619.pdf"
-  },
-  {
-   "cle": "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
-   "url": "https://famille.gouv.ci/uploads/publications/176937124389.pdf"
-  },
-  {
-   "cle": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
-   "url": "https://famille.gouv.ci/uploads/publications/176937063397.pdf"
-  },
-  {
-   "cle": "officiel_famille_loi_relative_a_l_adoption",
-   "url": "https://famille.gouv.ci/uploads/publications/176936997346.pdf"
-  },
-  {
-   "cle": "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
-   "url": "https://famille.gouv.ci/uploads/publications/176936984489.pdf"
-  },
-  {
-   "cle": "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
-   "url": "https://famille.gouv.ci/uploads/publications/176936945850.pdf"
-  },
-  {
-   "cle": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
-   "url": "https://famille.gouv.ci/uploads/publications/17693691723.pdf"
-  },
-  {
-   "cle": "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
-   "url": "https://famille.gouv.ci/uploads/publications/176936873529.pdf"
-  },
-  {
-   "cle": "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
-   "url": "https://famille.gouv.ci/uploads/publications/176936701697.pdf"
-  },
-  {
-   "cle": "mffe_cpp_2018_975",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/Loi_2018-975_du_27_decembre_2018_portant_Code_de_Procedure_penale.pdf"
-  },
-  {
-   "cle": "mffe_code_penal_2019_574",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf"
-  },
-  {
-   "cle": "mffe_mariage_2019_570",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf"
-  },
-  {
-   "cle": "mffe_successions_2019_573",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-573_sur_la_succession.pdf"
-  },
-  {
-   "cle": "mffe_traite_2016_1111",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2016-1111_du_08_decembre_2016_relative_a_la_lutte_contre_la_traite_des_personnes.pdf"
-  },
-  {
-   "cle": "mffe_constitution_2016",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/constitution_2016.pdf"
-  },
-  {
-   "cle": "mffe_etat_civil_2018_862",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_862_du_19_11_2018_etat_civil.pdf"
-  },
-  {
-   "cle": "mffe_naissance_2018_863",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_863_du_19_11_2018_instituant_une_procedure_declaration_naissance.pdf"
-  },
-  {
-   "cle": "mffe_pupille_2015_539",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2015-539_pupille_de_l-Etat.pdf"
-  },
-  {
-   "cle": "mffe_adoption",
-   "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/1724365129_adoption_enfant.pdf"
-  },
-  {
-   "cle": "ohada_jo_special_aupsrve_2023",
-   "url": "https://www.ohada.org/wp-content/uploads/2023/11/J.O._special_AUVE_15.11.2023_Compressed.pdf"
-  },
-  {
-   "cle": "assnat_constitution",
-   "url": "https://www.assnat.ci/CONSTITUTION.pdf"
-  },
-  {
-   "cle": "civlii_code_penal_source_pdf",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source.pdf"
-  },
-  {
-   "cle": "civlii_cpp_source_pdf",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/975/fra@2024-06-23/source.pdf"
-  },
-  {
-   "cle": "dec_civlii_oeuvre_cpp",
-   "url": "https://civlii.laws.africa/akn/ci/act/2018/975/fra@2023-12-11"
-  },
-  {
-   "cle": "dec_civlii_oeuvre_penal",
-   "url": "https://civlii.laws.africa/akn/ci/act/2019/574/fra@2024-06-23"
-  },
-  {
-   "cle": "dec_civlii_oeuvre_travail",
-   "url": "https://civlii.laws.africa/akn/ci/act/2015/532/fra@2023-08-10"
   },
   {
    "cle": "dec_ohada_jo_n23",
-   "url": "https://www.ohada.org/journal-officiel-n-23/"
+   "url": "https://www.ohada.org/journal-officiel-n-23/",
+   "titre_page": "Journal Officiel N° 23 – OHADA",
+   "liens": 0
   },
   {
    "cle": "dec_ohada_jo_n24",
-   "url": "https://www.ohada.org/journal-officiel-n-24/"
+   "url": "https://www.ohada.org/journal-officiel-n-24/",
+   "titre_page": "Journal Officiel N° 24 – OHADA",
+   "liens": 0
   },
   {
    "cle": "dec_ohada_jo_special_2016",
-   "url": "https://www.ohada.org/journal-officiel-de-l-ohada-edition-speciale-nov-2016/"
+   "url": "https://www.ohada.org/journal-officiel-de-l-ohada-edition-speciale-nov-2016/",
+   "titre_page": "Journal Officiel de l’OHADA – Edition Spéciale Nov. 2016 – OHADA",
+   "liens": 1
   },
   {
    "cle": "dec_ohada_jo_p2",
-   "url": "https://www.ohada.org/journal-officiel/2/"
+   "url": "https://www.ohada.org/journal-officiel/2/",
+   "titre_page": "Journal Officiel – Page 2 – OHADA",
+   "liens": 17
   },
   {
    "cle": "dec_ohada_jo_p3",
-   "url": "https://www.ohada.org/journal-officiel/3/"
+   "url": "https://www.ohada.org/journal-officiel/3/",
+   "titre_page": "Journal Officiel – Page 3 – OHADA",
+   "liens": 13
   },
   {
    "cle": "dec_ohada_jo_p4",
-   "url": "https://www.ohada.org/journal-officiel/4/"
-  },
-  {
-   "cle": "dec_famille_gouv_publications",
-   "url": "https://famille.gouv.ci/publications"
+   "url": "https://www.ohada.org/journal-officiel/4/",
+   "titre_page": "Journal Officiel – Page 4 – OHADA",
+   "liens": 9
   },
   {
    "cle": "dec_cndj_biblio_codes",
-   "url": "https://biblio.cndj.ci/search/codes"
+   "url": "https://biblio.cndj.ci/search/codes",
+   "titre_page": "BIBLIOTHEQUE CNDJ - Accueil",
+   "liens": 11
+  },
+  {
+   "cle": "dec_leap_travail_1",
+   "url": "https://leap.unep.org/en/countries/ci/national-legislation/loi-no2015-532-du-20-juillet-2015-portant-code-du-travail",
+   "titre_page": "Loi nº2015-532 du 20 juillet 2015 portant Code du travail. | UNEP Law and Environment Assistance Platform",
+   "liens": 4
+  },
+  {
+   "cle": "dec_leap_travail_2",
+   "url": "https://leap.unep.org/en/countries/ci/national-legislation/loi-n-2015-532-du-20-juillet-1015-portant-code-du-travail",
+   "titre_page": "Loi n. 2015-532 du 20 juillet 2015 portant Code du travail. | UNEP Law and Environment Assistance Platform",
+   "liens": 3
   }
- ]
+ ],
+ "non_encore_collectes": []
 }

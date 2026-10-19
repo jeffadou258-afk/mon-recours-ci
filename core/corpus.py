@@ -771,7 +771,7 @@ def chercher_articles(mots_cles, domaine=None, limite=25, chemin=None):
 # Contrôles
 # --------------------------------------------------------------------------
 def enregistrer_ocr_document(doc_id, fichier_ocr, recoupe_avec=None, qualite_ocr=None,
-                             note=None, chemin=None):
+                             note=None, methode="OCR_VISION_AUTO", chemin=None):
     """Attache un texte OCR à un document SANS calque texte.
 
     Ne touche NI `calque_texte` (le PDF reste un scan), NI
@@ -788,11 +788,11 @@ def enregistrer_ocr_document(doc_id, fichier_ocr, recoupe_avec=None, qualite_ocr
         if ligne is None:
             raise KeyError("document inconnu : %r" % (doc_id,))
         conn.execute(
-            "UPDATE documents SET methode_extraction = 'OCR_VISION_AUTO', fichier_ocr = ?,"
+            "UPDATE documents SET methode_extraction = ?, fichier_ocr = ?,"
             " sha256_ocr = ?, recoupe_avec = ?, qualite_ocr = ?,"
             " note_ocr = COALESCE(?, note_ocr) WHERE doc_id = ?",
-            (os.path.abspath(fichier_ocr), sha_ocr, recoupe_avec, qualite_ocr, note, doc_id))
-    return {"doc_id": doc_id, "methode_extraction": "OCR_VISION_AUTO",
+            (methode, os.path.abspath(fichier_ocr), sha_ocr, recoupe_avec, qualite_ocr, note, doc_id))
+    return {"doc_id": doc_id, "methode_extraction": methode,
             "sha256_ocr": sha_ocr, "recoupe_avec": recoupe_avec,
             "qualite_ocr": qualite_ocr}
 

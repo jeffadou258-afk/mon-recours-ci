@@ -113,6 +113,21 @@ def _variantes_numero(numero):
     return [re.compile(r"%s\s*[-‐–—_/]\s*%s(?!\d)" % (a, b)), re.compile(r"(?<!\d)%s%s(?!\d)" % (a, b))]
 
 
+def indices_ocr_editeur(chemin_pdf):
+    """Même détection que la collecte distante, sur le PDF rapatrié."""
+    indices = []
+    infos = subprocess.run(["pdfinfo", chemin_pdf], capture_output=True, text=True, errors="replace").stdout
+    producteur = " ".join(l for l in infos.splitlines() if l.startswith(("Producer", "Creator")))
+    for marque in ("Paper Capture", "ABBYY", "FineReader", "OmniPage", "ScanSoft", "Tesseract",
+                   "ocrmypdf", "Readiris", "PDF Scanner", "EPSON", "Hewlett-Packard MFP", "Canon"):
+        if marque.lower() in producteur.lower():
+            indices.append("producteur : " + marque)
+    polices = subprocess.run(["pdffonts", chemin_pdf], capture_output=True, text=True, errors="replace").stdout
+    if re.search(r"HiddenHorzOCR|GlyphLessFont|OCR", polices):
+        indices.append("police d'OCR invisible")
+    return indices
+
+
 def controler_document(source, resultat):
     """Renvoie la fiche d'inventaire d'un document téléchargé."""
     extraction = resultat.get("extraction") or {}
@@ -132,6 +147,11 @@ def controler_document(source, resultat):
     elif qpdf == "avertissements":
         avertissements.append("qpdf signale des avertissements de structure")
 
+    # Un calque texte produit par un logiciel d'OCR n'est pas une lecture.
+    indices = (resultat.get("pdf") or {}).get("indices_ocr_editeur")
+    if indices is None and integrite == "OK":
+        indices = indices_ocr_editeur(chemin_pdf)
+
     # Texte : calque si dense, sinon texte mixte avec OCR.
     natif = _texte(resultat, "fichier_texte") or ""
     mixte = _texte(resultat, "fichier_ocr")
@@ -139,10 +159,12 @@ def controler_document(source, resultat):
     if mixte and extraction.get("pages_sans_texte", 0) > 0:
         texte, methode = mixte, ("OCR_TESSERACT_PARTIEL" if extraction.get("pages_sans_texte") < pages
                                  else "OCR_TESSERACT")
+    elif indices:
+        texte, methode = natif, "OCR_EDITEUR"
     else:
         texte, methode = natif, "CALQUE_TEXTE"
     confiance = extraction.get("confiance_ocr_moyenne")
-    if methode.startswith("OCR"):
+    if methode.startswith("OCR_TESSERACT"):
         if confiance is None:
             motifs.append("OCR sans mesure de confiance")
         elif confiance < CONFIANCE_OCR_MINIMALE:
@@ -213,6 +235,8 @@ def controler_document(source, resultat):
         "polices": (resultat.get("pdf") or {}).get("polices"),
         "integrite_pdf": integrite,
         "methode_extraction": methode,
+        "indices_ocr_editeur": indices or [],
+        "seconde_lecture_tesseract": bool(extraction.get("ocr_force") and extraction.get("fichier_ocr")),
         "densite_native_car_par_page": round(densite_native),
         "confiance_ocr_moyenne": confiance,
         "articles_detectes": len(articles),
@@ -417,13 +441,136 @@ def officialiser(cles=None):
                                                   doc.get("articles_indexes"), doc.get("motif_non_indexe") or ""))
 
 
+def officialiser_ocr(cles=None):
+    """Intègre les documents officiels dont le texte vient d'un OCR.
+
+    Lecture principale : le calque de l'éditeur (OCR_EDITEUR) ou tesseract.
+    Quand deux lectures indépendantes du MÊME scan existent (calque de l'éditeur
+    et tesseract), chaque article reçoit leur similarité comme confiance et
+    seuls ceux qui atteignent le seuil du corpus (0,80) sont indexés. Deux OCR
+    d'un même scan ne sont pas deux exemplaires officiels : `recoupe` reste à 0,
+    la référence reste PARTIELLEMENT_VERIFIE, et toute réponse qui s'y appuie
+    déclare l'incertitude (garde-fou existant du moteur).
+    """
+    import datetime as _dt
+    import shutil
+    sys.path.insert(0, os.path.join(RACINE, "bin"))
+    import collecter_domaine
+    from core import base
+    inventaire = lire_json(INVENTAIRE)
+    manifeste = {s["cle"]: s for s in lire_json(MANIFESTE)["sources"]}
+    bilan = []
+    for d in inventaire["documents"]:
+        if cles and d["cle"] not in cles:
+            continue
+        if not d["categorie_source"].startswith("OFFICIEL") or not d["methode_extraction"].startswith("OCR"):
+            continue
+        motifs_bloquants = [m for m in d["motifs_quarantaine"] if not m.startswith("découpage en articles")]
+        if motifs_bloquants or d["integrite_pdf"] != "OK":
+            bilan.append((d["cle"], "IGNORE", "; ".join(motifs_bloquants) or d["integrite_pdf"]))
+            continue
+        domaine = DOMAINE_MOTEUR.get((d["domaines"] or [None])[0])
+        if not domaine:
+            bilan.append((d["cle"], "IGNORE", "aucun domaine du moteur"))
+            continue
+        resultat = lire_json(os.path.join(DOSSIER_RESULTATS, d["cle"] + ".json"))
+        extraction = resultat["extraction"]
+        principal = _texte(resultat, "fichier_texte") if d["methode_extraction"] == "OCR_EDITEUR" \
+            else _texte(resultat, "fichier_ocr")
+        second = _texte(resultat, "fichier_ocr") if d["methode_extraction"] == "OCR_EDITEUR" \
+            and extraction.get("ocr_force") else None
+        articles = corpus.extraire_articles(principal or "")
+        confiance, ecartes = None, []
+        comparateur = "LECTURE_INDEPENDANTE_TESSERACT:" + d["cle"] if second else None
+        if not second:
+            # Sans seconde lecture du même scan : une reproduction secondaire du MÊME
+            # texte sert d'étalon pour MESURER l'OCR. Elle ne fournit aucun mot du
+            # texte indexé, et `recoupe` reste à 0 (ce n'est pas un exemplaire officiel).
+            for autre in inventaire["documents"]:
+                if (autre["numero_texte"] == d["numero_texte"] and autre["numero_texte"]
+                        and autre["statut_controle"] == "EXPLOITABLE_RECOUPEMENT_SEULEMENT"
+                        and autre["methode_extraction"] == "CALQUE_TEXTE"):
+                    second = _texte(lire_json(os.path.join(DOSSIER_RESULTATS, autre["cle"] + ".json")),
+                                    "fichier_texte")
+                    comparateur = "SECONDAIRE:" + autre["cle"]
+                    break
+        if second:
+            articles_second = corpus.extraire_articles(second)
+            confiance, retenus = {}, {}
+            for numero, texte in articles.items():
+                if numero not in articles_second:
+                    ecartes.append((numero, None))
+                    continue
+                valeur = round(ocr.similarite(texte, articles_second[numero]), 4)
+                if valeur >= ocr.QUALITE_MINIMALE:
+                    retenus[numero], confiance[numero] = texte, valeur
+                else:
+                    ecartes.append((numero, valeur))
+            articles = retenus
+        dossier, _ = collecter_domaine.chemin_manifeste(domaine)
+        os.makedirs(dossier, exist_ok=True)
+        chemin_pdf = os.path.join(dossier, d["cle"] + ".pdf")
+        shutil.copyfile(os.path.join(DOSSIER_PDF, d["cle"] + ".pdf"), chemin_pdf)
+        chemin_ocr = os.path.join(dossier, d["cle"] + ".ocr.txt")
+        with open(chemin_ocr, "w", encoding="utf-8") as flux:
+            flux.write(principal or "")
+        source = manifeste[d["cle"]]
+        aujourd_hui = _dt.date.today().isoformat()
+        lecture = ("calque texte produit par un logiciel d'OCR (%s)" % ", ".join(d["indices_ocr_editeur"])
+                   if d["methode_extraction"] == "OCR_EDITEUR" else
+                   "OCR tesseract (fra), confiance moyenne %s" % d["confiance_ocr_moyenne"])
+        ref_id = base.ajouter_reference(
+            titre_officiel=source["titre"], type_texte=source["type_texte"],
+            numero_texte=source.get("numero_texte"), date_publication=source.get("date_texte"),
+            domaine=domaine, source_nom=source["autorite"], source_url=source["url"],
+            date_consultation=aujourd_hui, texte_complet_present=False,
+            limites_interpretation=("Exemplaire officiel numérisé ; texte lu par %s. %s"
+                                    % (lecture, source.get("notes") or "")).strip())
+        base.promouvoir_verification(
+            ref_id, "PARTIELLEMENT_VERIFIE", preuve_url=source["url"], preuve_empreinte=d["sha256"],
+            date_consultation=aujourd_hui,
+            motif="exemplaire officiel téléchargé (empreinte recalculée) ; texte issu d'un OCR, non recoupé "
+                  "avec un autre exemplaire officiel")
+        doc_id = corpus.importer_document(
+            ref_id=ref_id, titre=source["titre"], type_texte=source["type_texte"],
+            numero_texte=source.get("numero_texte"), date_texte=source.get("date_texte"), domaine=domaine,
+            autorite=source["autorite"], url_source=source["url"], chemin_local=chemin_pdf,
+            licence_conditions=collecter_domaine.CONDITIONS_ACCES, pages=d["pages"], calque_texte=False,
+            sha256_declare=d["sha256"], note_qualite="scan du Journal officiel ; " + lecture,
+            date_collecte=d["date_recuperation"][:10], actualiser=True)
+        try:
+            indexation = corpus.enregistrer_articles(
+                ref_id, doc_id, articles, origine_texte="OCR_AUTO", confiance_ocr=confiance, recoupe=False,
+                doc_reference=comparateur,
+                remplacer=True)
+        except ValueError as erreur:
+            corpus.noter_refus_ocr(doc_id, "OCR intégré le %s — REFUSÉ à l'indexation : %s"
+                                   % (corpus.horodatage(), erreur), fichier_ocr=chemin_ocr)
+            bilan.append((d["cle"], "REFUSE", str(erreur)))
+            continue
+        moyenne = round(sum(confiance.values()) / len(confiance), 4) if confiance else None
+        corpus.enregistrer_ocr_document(
+            doc_id, chemin_ocr, recoupe_avec=None, qualite_ocr=moyenne, methode=d["methode_extraction"],
+            note=("%s ; %s ; %d article(s) écarté(s) faute d'accord entre les deux lectures"
+                  % (lecture, "accord moyen avec %s : %s" % (comparateur, moyenne) if second
+                     else "une seule lecture : qualité contrôlée structurellement seulement", len(ecartes))))
+        bilan.append((d["cle"], "INTEGRE", "%d articles (couverture %.0f %%), %d écartés%s" % (
+            indexation["articles_indexes"], 100 * indexation["couverture"], len(ecartes),
+            ", accord moyen %s" % moyenne if moyenne else "")))
+    for ligne in bilan:
+        print("%-46s %-8s %s" % ligne)
+    return bilan
+
+
 def main(argv=None):
     analyseur = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    analyseur.add_argument("etape", choices=("pdf", "controler", "recouper", "officialiser"))
+    analyseur.add_argument("etape", choices=("pdf", "controler", "recouper", "officialiser", "officialiser_ocr"))
     analyseur.add_argument("--cle", action="append")
     arguments = analyseur.parse_args(argv)
     if arguments.etape == "officialiser":
         officialiser(arguments.cle)
+    elif arguments.etape == "officialiser_ocr":
+        officialiser_ocr(arguments.cle)
     else:
         {"pdf": rapatrier_pdf, "controler": controler, "recouper": recouper}[arguments.etape]()
     return 0
