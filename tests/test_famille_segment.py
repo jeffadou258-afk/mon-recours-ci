@@ -60,11 +60,13 @@ class TestSegmentFiliation(unittest.TestCase):
             self.assertNotIn(intrus, textes)
         self.assertNotIn("­", textes, "les césures de fin de ligne doivent être recollées")
 
-    def test_la_preparation_est_reproductible_et_conforme_a_la_base(self):
-        preparation = indexer_segment.preparer(DOC_FILIATION, DEBUT, FIN)
-        self.assertEqual(preparation["rapport"]["couverture"], 1.0)
-        en_base = textes_en_base()
-        self.assertEqual(en_base, preparation["articles"])
+    def test_la_preparation_est_refusee_depuis_que_le_calque_est_reconnu_comme_ocr(self):
+        # Octobre 2026 : le PDF (ABBYY FineReader sur scan du JO) a été reconnu comme
+        # OCR (bin/corriger_provenance_ocr.py). L'outil de segmentation, réservé aux
+        # vraies lectures de calque, doit désormais refuser de le réindexer.
+        with self.assertRaises(indexer_segment.RefusIndexation):
+            indexer_segment.preparer(DOC_FILIATION, DEBUT, FIN)
+        self.assertEqual(len(textes_en_base()), 30)
 
     def test_l_outil_refuse_un_document_ocr(self):
         ocr = [d for d in corpus.lister_documents(domaine=FAMILLE) if d["numero_texte"] == "2019-572"][0]
@@ -84,7 +86,7 @@ class TestSegmentFiliation(unittest.TestCase):
             ref["ref_id"], "19", "A l’égard du père, la preuve de la filiation ne peut résulter "
                                  "que d’une reconnaissance ou d’un jugement.")
         self.assertTrue(ok, details)
-        self.assertEqual(details["origine_texte"], "CALQUE_TEXTE")
+        self.assertEqual(details["origine_texte"], "OCR_AUTO")  # calque = OCR d'éditeur
         ok, details = corpus.verifier_citation_article(
             ref["ref_id"], "19", "Le père doit verser une pension alimentaire.")
         self.assertFalse(ok)
@@ -137,7 +139,9 @@ class TestFichesFamille(unittest.TestCase):
         self.assertEqual(len(fiches), 11)
         for fiche in fiches:
             self.assertEqual(fiche["numero_texte"], "2019-571")
-            self.assertEqual(fiche["origine_texte"], "CALQUE_TEXTE")
+            # Le calque du PDF de la filiation est un OCR (ABBYY) : provenance déclarée.
+            self.assertEqual(fiche["origine_texte"], "OCR_AUTO")
+            self.assertFalse(fiche["recoupe"])
             self.assertNotEqual(fiche["etat_verification"], "VERIFIE")
 
     def test_reconnaissance_d_un_enfant_reponse_conforme_avec_incertitude(self):
