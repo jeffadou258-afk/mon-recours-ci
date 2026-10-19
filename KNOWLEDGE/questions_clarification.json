@@ -1,406 +1,458 @@
 {
-  "statut_validation": "A_RELIRE_PAR_UN_JURISTE",
-  "principe": "Chaque question vérifie une condition écrite dans l'article de la fiche. Chaque « effet » reformule cette condition ; il ne crée aucune règle. Tout nombre ou délai d'un effet doit figurer dans l'article cité (contrôle automatique au chargement, core/clarification.py).",
-  "questions": [
-    {
-      "cle": "depot_plus_deux_mois",
-      "fiches": [
-        "LOGEME_416"
-      ],
-      "question": "Le dépôt de garantie que vous avez versé dépasse-t-il deux mois de loyer ?",
-      "pourquoi": "L'article 416 fixe un plafond au dépôt de garantie.",
-      "indices_oui": [
-        "trois mois de caution",
-        "3 mois de caution",
-        "quatre mois de caution",
-        "4 mois de caution",
-        "six mois de caution",
-        "6 mois de caution",
-        "caution de trois mois",
-        "caution de 3 mois",
-        "caution de quatre mois",
-        "caution de 4 mois",
-        "caution de six mois",
-        "caution de 6 mois",
-        "depot de trois mois",
-        "depot de 3 mois"
-      ],
-      "indices_non": [
-        "un mois de caution",
-        "1 mois de caution",
-        "deux mois de caution",
-        "2 mois de caution",
-        "caution d'un mois",
-        "caution de un mois",
-        "caution de 1 mois",
-        "caution de deux mois",
-        "caution de 2 mois"
-      ],
-      "effets": {
-        "oui": "Selon l'article 416, le dépôt de garantie ne peut excéder deux mois de loyer : le montant que vous décrivez dépasse ce plafond.",
-        "non": "Le montant que vous décrivez reste dans le plafond de deux mois de loyer prévu par l'article 416."
-      }
-    },
-    {
-      "cle": "logement_quitte",
-      "fiches": [
-        "LOGEME_416"
-      ],
-      "question": "Avez-vous quitté le logement (fin du bail) ?",
-      "pourquoi": "Le dépôt garantit les obligations du locataire en fin de contrat.",
-      "indices_oui": [
-        "quitte l'appartement",
-        "quitte le logement",
-        "quitte la maison",
-        "demenage",
-        "rendu les cles",
-        "remis les cles",
-        "fin du bail",
-        "parti du logement"
-      ],
-      "indices_non": [
-        "j'habite toujours",
-        "j'y habite encore",
-        "toujours dans le logement"
-      ],
-      "effets": {
-        "oui": "Selon l'article 416, le dépôt sert à garantir l'exécution de vos obligations en fin de contrat, notamment les dégradations, les impayés et les manquements de votre fait.",
-        "non": "Selon l'article 416, le dépôt garantit les obligations de fin de contrat : la question de sa restitution se pose surtout au départ du logement."
-      }
-    },
-    {
-      "cle": "manquement_invoque",
-      "fiches": [
-        "LOGEME_416"
-      ],
-      "si": {
-        "logement_quitte": "oui"
-      },
-      "question": "Le bailleur invoque-t-il des dégradations, des loyers impayés ou un autre manquement de votre part pour garder le dépôt ?",
-      "pourquoi": "L'article 416 cite ces situations comme exemples de ce que le dépôt garantit.",
-      "indices_oui": [
-        "degradation",
-        "degats",
-        "impaye",
-        "arriere de loyer",
-        "loyers impayes"
-      ],
-      "indices_non": [],
-      "effets": {
-        "oui": "Ce que le bailleur invoque fait partie de ce que le dépôt peut garantir selon l'article 416. Le texte cité ne précise pas comment ces montants doivent être justifiés.",
-        "non": "Le texte cité ne mentionne pas d'autre motif. Il emploie toutefois le mot « notamment » : la liste n'est pas fermée. Un professionnel peut confirmer votre situation."
-      }
-    },
-    {
-      "cle": "avance_plus_deux_mois",
-      "fiches": [
-        "LOGEME_415"
-      ],
-      "question": "Le bailleur vous a-t-il demandé plus de deux mois de loyer d'avance à la signature du bail ?",
-      "pourquoi": "L'article 415 limite les loyers d'avance exigés à la conclusion du bail.",
-      "indices_oui": [
-        "trois mois d'avance",
-        "3 mois d'avance",
-        "quatre mois d'avance",
-        "4 mois d'avance",
-        "six mois d'avance",
-        "6 mois d'avance",
-        "un an d'avance",
-        "avance de trois mois",
-        "avance de 3 mois",
-        "avance de six mois",
-        "avance de 6 mois",
-        "avance de quatre mois",
-        "avance de 4 mois",
-        "avance d'un an"
-      ],
-      "indices_non": [
-        "un mois d'avance",
-        "1 mois d'avance",
-        "deux mois d'avance",
-        "2 mois d'avance",
-        "avance d'un mois",
-        "avance de deux mois",
-        "avance de 2 mois"
-      ],
-      "effets": {
-        "oui": "Selon l'article 415, le bailleur ne peut exiger le paiement de plus de deux mois de loyers d'avance lors de la conclusion du contrat de bail à usage d'habitation.",
-        "non": "La somme décrite reste dans la limite de deux mois de loyers d'avance prévue par l'article 415."
-      }
-    },
-    {
-      "cle": "autres_sommes",
-      "fiches": [
-        "LOGEME_415"
-      ],
-      "question": "Vous a-t-on demandé d'autres sommes (frais, commission…) pour pouvoir signer le bail ?",
-      "pourquoi": "L'article 415 interdit de lier la conclusion du bail au paiement d'autres sommes que celles prévues par le code.",
-      "indices_oui": [
-        "commission",
-        "frais de dossier",
-        "frais d'agence",
-        "droit de passage"
-      ],
-      "indices_non": [],
-      "effets": {
-        "oui": "Selon l'article 415, la conclusion du bail ne peut être liée au paiement de sommes autres que celles prévues par le code. Le texte cité ne dit pas lesquelles sont prévues : un professionnel peut le vérifier.",
-        "non": "Rien dans vos réponses n'indique une somme demandée en plus de celles prévues par le code."
-      }
-    },
-    {
-      "cle": "revision_moins_trois_ans",
-      "fiches": [
-        "LOGEME_423"
-      ],
-      "question": "La dernière révision du loyer (ou la signature du bail) date-t-elle de moins de trois ans ?",
-      "pourquoi": "L'article 423 fixe le rythme de révision du loyer.",
-      "indices_oui": [],
-      "indices_non": [],
-      "effets": {
-        "oui": "L'article 423 prévoit une révision du loyer tous les trois ans : une révision avant ce délai ne correspond pas à ce que prévoit ce texte.",
-        "non": "Le délai de trois ans prévu par l'article 423 semble écoulé : selon ce texte, le loyer peut être révisé à la hausse ou à la baisse."
-      }
-    },
-    {
-      "cle": "bail_ecrit",
-      "fiches": [
-        "LOGEME_414"
-      ],
-      "question": "Avez-vous un contrat de bail écrit ?",
-      "pourquoi": "L'article 414 prévoit la forme du bail d'habitation.",
-      "indices_oui": [
-        "contrat signe",
-        "bail signe",
-        "contrat de bail"
-      ],
-      "indices_non": [
-        "pas de contrat",
-        "sans contrat",
-        "pas de bail",
-        "bail verbal",
-        "contrat verbal",
-        "aucun contrat"
-      ],
-      "effets": {
-        "oui": "Conservez ce bail écrit : c'est la forme prévue par l'article 414.",
-        "non": "L'article 414 dispose que le bail à usage d'habitation est écrit. Le texte cité ne précise pas les conséquences d'un bail non écrit."
-      }
-    },
-    {
-      "cle": "conge_trois_mois",
-      "fiches": [
-        "LOGEME_440"
-      ],
-      "question": "Le congé vous a-t-il été donné au moins trois mois avant la date de reprise ?",
-      "pourquoi": "L'article 440 fixe un délai minimum entre le congé et la reprise.",
-      "indices_oui": [],
-      "indices_non": [
-        "sans preavis",
-        "du jour au lendemain",
-        "une semaine pour partir",
-        "un mois pour partir",
-        "deux semaines pour partir"
-      ],
-      "effets": {
-        "oui": "Le délai décrit respecte le minimum de trois mois prévu par l'article 440.",
-        "non": "L'article 440 exige que le congé soit donné au moins trois mois avant la date de reprise indiquée par le bailleur."
-      }
-    },
-    {
-      "cle": "conge_forme",
-      "fiches": [
-        "LOGEME_440"
-      ],
-      "question": "Le congé vous a-t-il été remis par un commissaire de justice, ou par courrier contre décharge (signature de réception) ?",
-      "pourquoi": "L'article 440 prévoit la forme du congé.",
-      "indices_oui": [
-        "commissaire de justice",
-        "huissier"
-      ],
-      "indices_non": [
-        "oralement",
-        "par telephone",
-        "par sms",
-        "verbalement",
-        "par whatsapp"
-      ],
-      "effets": {
-        "oui": "La forme décrite correspond à celle prévue par l'article 440.",
-        "non": "L'article 440 prévoit un congé par acte de commissaire de justice ou par remise de courrier contre décharge."
-      }
-    },
-    {
-      "cle": "lettre_resiliation_ecrite",
-      "fiches": [
-        "LOGEME_443",
-        "LOGEME_445"
-      ],
-      "question": "Avez-vous reçu une lettre de demande de résiliation écrite et motivée ?",
-      "pourquoi": "Les articles 443 et 445 parlent de cette lettre et de son contenu.",
-      "indices_oui": [
-        "lettre de resiliation",
-        "courrier de resiliation"
-      ],
-      "indices_non": [],
-      "effets": {
-        "oui": "Selon l'article 443, cette lettre doit être écrite, motivée et accompagnée, le cas échéant, de pièces justificatives : vérifiez ces éléments.",
-        "non": "Selon l'article 445, l'expulsion forcée se demande après la transmission de la lettre de demande de résiliation, qui doit être écrite et motivée (article 443)."
-      }
-    },
-    {
-      "cle": "decision_juge",
-      "fiches": [
-        "LOGEME_445"
-      ],
-      "question": "Un juge (juge des référés) a-t-il rendu une décision d'expulsion contre vous ?",
-      "pourquoi": "L'article 445 indique devant quel juge l'expulsion forcée est demandée.",
-      "indices_oui": [
-        "decision du juge",
-        "ordonnance",
-        "jugement d'expulsion"
-      ],
-      "indices_non": [
-        "sans jugement",
-        "sans decision",
-        "pas de jugement"
-      ],
-      "effets": {
-        "oui": "Une décision de justice a été rendue : faites-vous assister rapidement par un professionnel pour en connaître les suites.",
-        "non": "Selon l'article 445, le bailleur demande l'expulsion forcée devant le juge des référés."
-      },
-      "alerte_si": "non"
-    },
-    {
-      "cle": "mere_mariee",
-      "fiches": [
-        "FAMILL_2",
-        "FAMILL_9"
-      ],
-      "question": "La mère était-elle mariée au moment de la conception ou de la naissance de l'enfant ?",
-      "pourquoi": "Les règles de filiation diffèrent selon que l'enfant est né dans le mariage ou hors mariage.",
-      "indices_oui": [
-        "ma femme",
-        "mon mari",
-        "mon epouse",
-        "pendant le mariage",
-        "nous sommes maries"
-      ],
-      "indices_non": [
-        "hors mariage",
-        "pas mariee",
-        "pas maries",
-        "non mariee",
-        "concubin"
-      ],
-      "effets": {
-        "oui": "Selon l'article 2, l'enfant conçu pendant le mariage ou né moins de trois cents jours après la dissolution du mariage a pour père le mari de sa mère.",
-        "non": "Les règles de l'enfant né dans le mariage ne s'appliquent pas : voyez celles de l'enfant né hors mariage."
-      }
-    },
-    {
-      "cle": "mari_present_naissance",
-      "fiches": [
-        "FAMILL_6"
-      ],
-      "question": "Le mari était-il présent sur les lieux au moment de la naissance ?",
-      "pourquoi": "Le point de départ du délai pour contester la paternité en dépend.",
-      "indices_oui": [],
-      "indices_non": [
-        "j'etais absent",
-        "j'etais en voyage",
-        "on m'a cache la naissance",
-        "je ne savais pas qu'il existait"
-      ],
-      "effets": {
-        "oui": "Selon l'article 6, le délai de deux mois court à partir de la naissance.",
-        "non": "Selon l'article 6, le délai de deux mois court après le retour du mari, ou à compter du jour de la découverte de l'existence de l'enfant si sa naissance lui a été cachée."
-      }
-    },
-    {
-      "cle": "plus_de_deux_mois",
-      "fiches": [
-        "FAMILL_6"
-      ],
-      "question": "Plus de deux mois se sont-ils écoulés depuis ce point de départ (naissance, retour ou découverte) ?",
-      "pourquoi": "L'article 6 fixe un délai pour agir.",
-      "indices_oui": [],
-      "indices_non": [],
-      "effets": {
-        "oui": "L'article 6 fixe un délai de deux mois : il est peut-être dépassé. Consultez un avocat sans attendre.",
-        "non": "Vous êtes peut-être encore dans le délai de deux mois prévu par l'article 6 : consultez un avocat sans attendre."
-      },
-      "alerte_si": "oui"
-    },
-    {
-      "cle": "pere_a_reconnu",
-      "fiches": [
-        "FAMILL_19",
-        "FAMILL_20",
-        "FAMILL_24"
-      ],
-      "question": "Le père a-t-il reconnu l'enfant (dans l'acte de naissance ou par un acte authentique) ?",
-      "pourquoi": "Pour un enfant né hors mariage, la filiation à l'égard du père dépend de cette reconnaissance.",
-      "indices_oui": [
-        "il a reconnu",
-        "a reconnu l'enfant",
-        "reconnu mon enfant"
-      ],
-      "indices_non": [
-        "refuse de reconnaitre",
-        "ne veut pas reconnaitre",
-        "n'a pas reconnu",
-        "pas reconnu"
-      ],
-      "effets": {
-        "oui": "Selon l'article 20, la reconnaissance est faite dans l'acte de naissance ou par acte authentique : conservez une copie de cet acte.",
-        "non": "Selon l'article 19, à l'égard du père, la preuve de la filiation d'un enfant né hors mariage ne peut résulter que d'une reconnaissance ou d'un jugement."
-      }
-    },
-    {
-      "cle": "enfant_plus_18_ans",
-      "fiches": [
-        "FAMILL_21"
-      ],
-      "question": "L'enfant a-t-il plus de 18 ans ?",
-      "pourquoi": "L'article 21 prévoit une condition particulière pour l'enfant majeur.",
-      "indices_oui": [],
-      "indices_non": [],
-      "effets": {
-        "oui": "Selon l'article 21, la reconnaissance d'un enfant de plus de 18 ans n'est valable qu'avec son consentement.",
-        "non": "Selon l'article 21, une reconnaissance faite après l'acte de naissance est reçue par l'officier de l'état civil, qui saisit d'abord le procureur de la République pour y être autorisé."
-      }
-    },
-    {
-      "cle": "pere_marie_autre",
-      "fiches": [
-        "FAMILL_22"
-      ],
-      "question": "Le père est-il marié avec une autre femme que la mère de l'enfant ?",
-      "pourquoi": "L'article 22 impose une démarche préalable à l'homme marié.",
-      "indices_oui": [
-        "il est marie",
-        "deja marie",
-        "sa femme"
-      ],
-      "indices_non": [],
-      "effets": {
-        "oui": "Selon l'article 22, la reconnaissance doit être précédée de l'information donnée à l'épouse, et l'acte doit mentionner cette information faite par acte de commissaire de justice, à peine de nullité.",
-        "non": "La démarche préalable de l'article 22 concerne le père marié : elle ne semble pas s'appliquer."
-      }
-    },
-    {
-      "cle": "enfant_mineur_mere_agit",
-      "fiches": [
-        "FAMILL_26"
-      ],
-      "question": "L'enfant est-il mineur, et est-ce la mère qui souhaite agir ?",
-      "pourquoi": "L'article 26 désigne qui peut engager l'action en recherche de paternité.",
-      "indices_oui": [],
-      "indices_non": [],
-      "effets": {
-        "oui": "Selon l'article 26, pendant la minorité de l'enfant, la mère, même mineure, a seule qualité pour intenter l'action.",
-        "non": "Selon l'article 26, l'action n'appartient qu'à l'enfant ; si la mère est décédée, incapable ou présumée absente, elle est exercée par la personne qui a la garde de l'enfant."
-      }
-    }
-  ]
+ "statut_validation": "A_RELIRE_PAR_UN_JURISTE",
+ "principe": "Chaque question vérifie une condition écrite dans l'article de la fiche. Chaque « effet » reformule cette condition ; il ne crée aucune règle. Tout nombre ou délai d'un effet doit figurer dans l'article cité (contrôle automatique au chargement, core/clarification.py).",
+ "questions": [
+  {
+   "cle": "depot_plus_deux_mois",
+   "fiches": [
+    "LOGEME_416"
+   ],
+   "question": "Le dépôt de garantie que vous avez versé dépasse-t-il deux mois de loyer ?",
+   "pourquoi": "L'article 416 fixe un plafond au dépôt de garantie.",
+   "indices_oui": [
+    "trois mois de caution",
+    "3 mois de caution",
+    "quatre mois de caution",
+    "4 mois de caution",
+    "six mois de caution",
+    "6 mois de caution",
+    "caution de trois mois",
+    "caution de 3 mois",
+    "caution de quatre mois",
+    "caution de 4 mois",
+    "caution de six mois",
+    "caution de 6 mois",
+    "depot de trois mois",
+    "depot de 3 mois"
+   ],
+   "indices_non": [
+    "un mois de caution",
+    "1 mois de caution",
+    "deux mois de caution",
+    "2 mois de caution",
+    "caution d'un mois",
+    "caution de un mois",
+    "caution de 1 mois",
+    "caution de deux mois",
+    "caution de 2 mois"
+   ],
+   "effets": {
+    "oui": "Selon l'article 416, le dépôt de garantie ne peut excéder deux mois de loyer : le montant que vous décrivez dépasse ce plafond.",
+    "non": "Le montant que vous décrivez reste dans le plafond de deux mois de loyer prévu par l'article 416."
+   }
+  },
+  {
+   "cle": "logement_quitte",
+   "fiches": [
+    "LOGEME_416"
+   ],
+   "question": "Avez-vous quitté le logement (fin du bail) ?",
+   "pourquoi": "Le dépôt garantit les obligations du locataire en fin de contrat.",
+   "indices_oui": [
+    "quitte l'appartement",
+    "quitte le logement",
+    "quitte la maison",
+    "demenage",
+    "rendu les cles",
+    "remis les cles",
+    "fin du bail",
+    "parti du logement"
+   ],
+   "indices_non": [
+    "j'habite toujours",
+    "j'y habite encore",
+    "toujours dans le logement"
+   ],
+   "effets": {
+    "oui": "Selon l'article 416, le dépôt sert à garantir l'exécution de vos obligations en fin de contrat, notamment les dégradations, les impayés et les manquements de votre fait.",
+    "non": "Selon l'article 416, le dépôt garantit les obligations de fin de contrat : la question de sa restitution se pose surtout au départ du logement."
+   }
+  },
+  {
+   "cle": "manquement_invoque",
+   "fiches": [
+    "LOGEME_416"
+   ],
+   "si": {
+    "logement_quitte": "oui"
+   },
+   "question": "Le bailleur invoque-t-il des dégradations, des loyers impayés ou un autre manquement de votre part pour garder le dépôt ?",
+   "pourquoi": "L'article 416 cite ces situations comme exemples de ce que le dépôt garantit.",
+   "indices_oui": [
+    "degradation",
+    "degats",
+    "impaye",
+    "arriere de loyer",
+    "loyers impayes"
+   ],
+   "indices_non": [],
+   "effets": {
+    "oui": "Ce que le bailleur invoque fait partie de ce que le dépôt peut garantir selon l'article 416. Le texte cité ne précise pas comment ces montants doivent être justifiés.",
+    "non": "Le texte cité ne mentionne pas d'autre motif. Il emploie toutefois le mot « notamment » : la liste n'est pas fermée. Un professionnel peut confirmer votre situation."
+   }
+  },
+  {
+   "cle": "avance_plus_deux_mois",
+   "fiches": [
+    "LOGEME_415"
+   ],
+   "question": "Le bailleur vous a-t-il demandé plus de deux mois de loyer d'avance à la signature du bail ?",
+   "pourquoi": "L'article 415 limite les loyers d'avance exigés à la conclusion du bail.",
+   "indices_oui": [
+    "trois mois d'avance",
+    "3 mois d'avance",
+    "quatre mois d'avance",
+    "4 mois d'avance",
+    "six mois d'avance",
+    "6 mois d'avance",
+    "un an d'avance",
+    "avance de trois mois",
+    "avance de 3 mois",
+    "avance de six mois",
+    "avance de 6 mois",
+    "avance de quatre mois",
+    "avance de 4 mois",
+    "avance d'un an"
+   ],
+   "indices_non": [
+    "un mois d'avance",
+    "1 mois d'avance",
+    "deux mois d'avance",
+    "2 mois d'avance",
+    "avance d'un mois",
+    "avance de deux mois",
+    "avance de 2 mois"
+   ],
+   "effets": {
+    "oui": "Selon l'article 415, le bailleur ne peut exiger le paiement de plus de deux mois de loyers d'avance lors de la conclusion du contrat de bail à usage d'habitation.",
+    "non": "La somme décrite reste dans la limite de deux mois de loyers d'avance prévue par l'article 415."
+   }
+  },
+  {
+   "cle": "autres_sommes",
+   "fiches": [
+    "LOGEME_415"
+   ],
+   "question": "Vous a-t-on demandé d'autres sommes (frais, commission…) pour pouvoir signer le bail ?",
+   "pourquoi": "L'article 415 interdit de lier la conclusion du bail au paiement d'autres sommes que celles prévues par le code.",
+   "indices_oui": [
+    "commission",
+    "frais de dossier",
+    "frais d'agence",
+    "droit de passage"
+   ],
+   "indices_non": [],
+   "effets": {
+    "oui": "Selon l'article 415, la conclusion du bail ne peut être liée au paiement de sommes autres que celles prévues par le code. Le texte cité ne dit pas lesquelles sont prévues : un professionnel peut le vérifier.",
+    "non": "Rien dans vos réponses n'indique une somme demandée en plus de celles prévues par le code."
+   }
+  },
+  {
+   "cle": "revision_moins_trois_ans",
+   "fiches": [
+    "LOGEME_423"
+   ],
+   "question": "La dernière révision du loyer (ou la signature du bail) date-t-elle de moins de trois ans ?",
+   "pourquoi": "L'article 423 fixe le rythme de révision du loyer.",
+   "indices_oui": [],
+   "indices_non": [],
+   "effets": {
+    "oui": "L'article 423 prévoit une révision du loyer tous les trois ans : une révision avant ce délai ne correspond pas à ce que prévoit ce texte.",
+    "non": "Le délai de trois ans prévu par l'article 423 semble écoulé : selon ce texte, le loyer peut être révisé à la hausse ou à la baisse."
+   }
+  },
+  {
+   "cle": "bail_ecrit",
+   "fiches": [
+    "LOGEME_414"
+   ],
+   "question": "Avez-vous un contrat de bail écrit ?",
+   "pourquoi": "L'article 414 prévoit la forme du bail d'habitation.",
+   "indices_oui": [
+    "contrat signe",
+    "bail signe",
+    "contrat de bail"
+   ],
+   "indices_non": [
+    "pas de contrat",
+    "sans contrat",
+    "pas de bail",
+    "bail verbal",
+    "contrat verbal",
+    "aucun contrat"
+   ],
+   "effets": {
+    "oui": "Conservez ce bail écrit : c'est la forme prévue par l'article 414.",
+    "non": "L'article 414 dispose que le bail à usage d'habitation est écrit. Le texte cité ne précise pas les conséquences d'un bail non écrit."
+   }
+  },
+  {
+   "cle": "conge_trois_mois",
+   "fiches": [
+    "LOGEME_440"
+   ],
+   "question": "Le congé vous a-t-il été donné au moins trois mois avant la date de reprise ?",
+   "pourquoi": "L'article 440 fixe un délai minimum entre le congé et la reprise.",
+   "indices_oui": [],
+   "indices_non": [
+    "sans preavis",
+    "du jour au lendemain",
+    "une semaine pour partir",
+    "un mois pour partir",
+    "deux semaines pour partir"
+   ],
+   "effets": {
+    "oui": "Le délai décrit respecte le minimum de trois mois prévu par l'article 440.",
+    "non": "L'article 440 exige que le congé soit donné au moins trois mois avant la date de reprise indiquée par le bailleur."
+   }
+  },
+  {
+   "cle": "conge_forme",
+   "fiches": [
+    "LOGEME_440"
+   ],
+   "question": "Le congé vous a-t-il été remis par un commissaire de justice, ou par courrier contre décharge (signature de réception) ?",
+   "pourquoi": "L'article 440 prévoit la forme du congé.",
+   "indices_oui": [
+    "commissaire de justice",
+    "huissier"
+   ],
+   "indices_non": [
+    "oralement",
+    "par telephone",
+    "par sms",
+    "verbalement",
+    "par whatsapp"
+   ],
+   "effets": {
+    "oui": "La forme décrite correspond à celle prévue par l'article 440.",
+    "non": "L'article 440 prévoit un congé par acte de commissaire de justice ou par remise de courrier contre décharge."
+   }
+  },
+  {
+   "cle": "lettre_resiliation_ecrite",
+   "fiches": [
+    "LOGEME_443",
+    "LOGEME_445"
+   ],
+   "question": "Avez-vous reçu une lettre de demande de résiliation écrite et motivée ?",
+   "pourquoi": "Les articles 443 et 445 parlent de cette lettre et de son contenu.",
+   "indices_oui": [
+    "lettre de resiliation",
+    "courrier de resiliation"
+   ],
+   "indices_non": [],
+   "effets": {
+    "oui": "Selon l'article 443, cette lettre doit être écrite, motivée et accompagnée, le cas échéant, de pièces justificatives : vérifiez ces éléments.",
+    "non": "Selon l'article 445, l'expulsion forcée se demande après la transmission de la lettre de demande de résiliation, qui doit être écrite et motivée (article 443)."
+   }
+  },
+  {
+   "cle": "decision_juge",
+   "fiches": [
+    "LOGEME_445"
+   ],
+   "question": "Un juge (juge des référés) a-t-il rendu une décision d'expulsion contre vous ?",
+   "pourquoi": "L'article 445 indique devant quel juge l'expulsion forcée est demandée.",
+   "indices_oui": [
+    "decision du juge",
+    "ordonnance",
+    "jugement d'expulsion"
+   ],
+   "indices_non": [
+    "sans jugement",
+    "sans decision",
+    "pas de jugement"
+   ],
+   "effets": {
+    "oui": "Une décision de justice a été rendue : faites-vous assister rapidement par un professionnel pour en connaître les suites.",
+    "non": "Selon l'article 445, le bailleur demande l'expulsion forcée devant le juge des référés."
+   },
+   "alerte_si": "non"
+  },
+  {
+   "cle": "mere_mariee",
+   "fiches": [
+    "FAMILL_2",
+    "FAMILL_9"
+   ],
+   "question": "La mère était-elle mariée au moment de la conception ou de la naissance de l'enfant ?",
+   "pourquoi": "Les règles de filiation diffèrent selon que l'enfant est né dans le mariage ou hors mariage.",
+   "indices_oui": [
+    "ma femme",
+    "mon mari",
+    "mon epouse",
+    "pendant le mariage",
+    "nous sommes maries"
+   ],
+   "indices_non": [
+    "hors mariage",
+    "pas mariee",
+    "pas maries",
+    "non mariee",
+    "concubin"
+   ],
+   "effets": {
+    "oui": "Selon l'article 2, l'enfant conçu pendant le mariage ou né moins de trois cents jours après la dissolution du mariage a pour père le mari de sa mère.",
+    "non": "Les règles de l'enfant né dans le mariage ne s'appliquent pas : voyez celles de l'enfant né hors mariage."
+   }
+  },
+  {
+   "cle": "mari_present_naissance",
+   "fiches": [
+    "FAMILL_6"
+   ],
+   "question": "Le mari était-il présent sur les lieux au moment de la naissance ?",
+   "pourquoi": "Le point de départ du délai pour contester la paternité en dépend.",
+   "indices_oui": [],
+   "indices_non": [
+    "j'etais absent",
+    "j'etais en voyage",
+    "on m'a cache la naissance",
+    "je ne savais pas qu'il existait"
+   ],
+   "effets": {
+    "oui": "Selon l'article 6, le délai de deux mois court à partir de la naissance.",
+    "non": "Selon l'article 6, le délai de deux mois court après le retour du mari, ou à compter du jour de la découverte de l'existence de l'enfant si sa naissance lui a été cachée."
+   }
+  },
+  {
+   "cle": "plus_de_deux_mois",
+   "fiches": [
+    "FAMILL_6"
+   ],
+   "question": "Plus de deux mois se sont-ils écoulés depuis ce point de départ (naissance, retour ou découverte) ?",
+   "pourquoi": "L'article 6 fixe un délai pour agir.",
+   "indices_oui": [],
+   "indices_non": [],
+   "effets": {
+    "oui": "L'article 6 fixe un délai de deux mois : il est peut-être dépassé. Consultez un avocat sans attendre.",
+    "non": "Vous êtes peut-être encore dans le délai de deux mois prévu par l'article 6 : consultez un avocat sans attendre."
+   },
+   "alerte_si": "oui"
+  },
+  {
+   "cle": "pere_a_reconnu",
+   "fiches": [
+    "FAMILL_19",
+    "FAMILL_20",
+    "FAMILL_24"
+   ],
+   "question": "Le père a-t-il reconnu l'enfant (dans l'acte de naissance ou par un acte authentique) ?",
+   "pourquoi": "Pour un enfant né hors mariage, la filiation à l'égard du père dépend de cette reconnaissance.",
+   "indices_oui": [
+    "il a reconnu",
+    "a reconnu l'enfant",
+    "reconnu mon enfant"
+   ],
+   "indices_non": [
+    "refuse de reconnaitre",
+    "ne veut pas reconnaitre",
+    "n'a pas reconnu",
+    "pas reconnu"
+   ],
+   "effets": {
+    "oui": "Selon l'article 20, la reconnaissance est faite dans l'acte de naissance ou par acte authentique : conservez une copie de cet acte.",
+    "non": "Selon l'article 19, à l'égard du père, la preuve de la filiation d'un enfant né hors mariage ne peut résulter que d'une reconnaissance ou d'un jugement."
+   }
+  },
+  {
+   "cle": "enfant_plus_18_ans",
+   "fiches": [
+    "FAMILL_21"
+   ],
+   "question": "L'enfant a-t-il plus de 18 ans ?",
+   "pourquoi": "L'article 21 prévoit une condition particulière pour l'enfant majeur.",
+   "indices_oui": [],
+   "indices_non": [],
+   "effets": {
+    "oui": "Selon l'article 21, la reconnaissance d'un enfant de plus de 18 ans n'est valable qu'avec son consentement.",
+    "non": "Selon l'article 21, une reconnaissance faite après l'acte de naissance est reçue par l'officier de l'état civil, qui saisit d'abord le procureur de la République pour y être autorisé."
+   }
+  },
+  {
+   "cle": "pere_marie_autre",
+   "fiches": [
+    "FAMILL_22"
+   ],
+   "question": "Le père est-il marié avec une autre femme que la mère de l'enfant ?",
+   "pourquoi": "L'article 22 impose une démarche préalable à l'homme marié.",
+   "indices_oui": [
+    "il est marie",
+    "deja marie",
+    "sa femme"
+   ],
+   "indices_non": [],
+   "effets": {
+    "oui": "Selon l'article 22, la reconnaissance doit être précédée de l'information donnée à l'épouse, et l'acte doit mentionner cette information faite par acte de commissaire de justice, à peine de nullité.",
+    "non": "La démarche préalable de l'article 22 concerne le père marié : elle ne semble pas s'appliquer."
+   }
+  },
+  {
+   "cle": "enfant_mineur_mere_agit",
+   "fiches": [
+    "FAMILL_26"
+   ],
+   "question": "L'enfant est-il mineur, et est-ce la mère qui souhaite agir ?",
+   "pourquoi": "L'article 26 désigne qui peut engager l'action en recherche de paternité.",
+   "indices_oui": [],
+   "indices_non": [],
+   "effets": {
+    "oui": "Selon l'article 26, pendant la minorité de l'enfant, la mère, même mineure, a seule qualité pour intenter l'action.",
+    "non": "Selon l'article 26, l'action n'appartient qu'à l'enfant ; si la mère est décédée, incapable ou présumée absente, elle est exercée par la personne qui a la garde de l'enfant."
+   }
+  },
+  {
+   "cle": "ohada_signification_recue",
+   "fiches": [
+    "OHADA_8",
+    "OHADA_10",
+    "OHADA_16"
+   ],
+   "question": "L'ordonnance d'injonction de payer vous a-t-elle été signifiée (remise par un huissier ou un commissaire de justice) ?",
+   "pourquoi": "Le délai d'opposition de l'article 10 court à partir de la signification de l'ordonnance.",
+   "indices_oui": [
+    "huissier m'a remis",
+    "signifiee",
+    "signifié",
+    "on m'a signifie",
+    "recu l'ordonnance",
+    "reçu une ordonnance",
+    "recu une ordonnance"
+   ],
+   "indices_non": [
+    "pas encore recu",
+    "rien recu",
+    "pas ete signifiee"
+   ],
+   "effets": {
+    "oui": "Selon l'article 10, l'opposition doit être formée dans les dix jours qui suivent la signification de l'ordonnance : la date de la signification est décisive.",
+    "non": "Selon l'article 10, le délai d'opposition se compte à partir de la signification de l'ordonnance ; tant qu'elle n'a pas eu lieu, ce point reste à vérifier."
+   }
+  },
+  {
+   "cle": "ohada_titre_executoire",
+   "fiches": [
+    "OHADA_153",
+    "OHADA_173"
+   ],
+   "question": "Le créancier vous a-t-il présenté une décision de justice ou un autre titre exécutoire ?",
+   "pourquoi": "L'acte uniforme réserve la saisie-attribution et la saisie des rémunérations au créancier muni d'un titre exécutoire.",
+   "indices_oui": [
+    "jugement",
+    "decision du tribunal",
+    "titre executoire",
+    "formule executoire"
+   ],
+   "indices_non": [
+    "sans jugement",
+    "aucun jugement",
+    "pas de decision"
+   ],
+   "effets": {
+    "oui": "L'acte uniforme exige un titre exécutoire constatant une créance liquide et exigible : il reste à vérifier que celui qui est présenté remplit ces conditions.",
+    "non": "L'acte uniforme réserve ces saisies au créancier muni d'un titre exécutoire : en son absence, la base de la saisie est à vérifier."
+   }
+  }
+ ]
 }

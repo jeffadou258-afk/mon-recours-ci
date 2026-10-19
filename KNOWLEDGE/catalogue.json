@@ -1,5 +1,5 @@
 {
- "genere_le": "2026-10-17",
+ "genere_le": "2026-10-19",
  "fiches": [
   {
    "id": "LOGEME_416",
@@ -528,6 +528,161 @@
    "lecture": "L'action en recherche de paternité appartient à l'enfant. Pendant sa minorité, seule la mère, même mineure, peut l'engager, contre le père prétendu ou ses héritiers.",
    "faits_requis": [],
    "etape_plan": "Rassembler les écrits et preuves de la relation et de l'entretien de l'enfant, puis consulter un avocat"
+  },
+  {
+   "id": "OHADA_8",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "8",
+   "titre": "Injonction de payer : ce que doit contenir la signification",
+   "declencheurs": [
+    "injonction de payer",
+    "ordonnance d'injonction de payer",
+    "ordonnance portant injonction de payer",
+    "signification de l'ordonnance"
+   ],
+   "citation": "A peine de nullité, la signification de l'ordonnance portant injonction de payer contient sommation d'avoir, dans un délai de dix jours : - soit à payer au créancier le montant de la somme fixée par l’ordonnance ainsi que les intérêts et frais dont le montant est précisé ; - soit, si le débiteur entend faire valoir des moyens de défense, à former opposition.",
+   "lecture": "L'acte qui vous signifie une ordonnance d'injonction de payer doit, à peine de nullité, vous sommer, dans un délai de dix jours, soit de payer, soit de former opposition si vous contestez.",
+   "faits_requis": [],
+   "etape_plan": "Noter la date exacte à laquelle l'ordonnance vous a été signifiée et conserver l'acte"
+  },
+  {
+   "id": "OHADA_10",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "10",
+   "titre": "Injonction de payer : délai d'opposition",
+   "declencheurs": [
+    "opposition a l'injonction de payer",
+    "former opposition",
+    "contester l'injonction de payer",
+    "delai d'opposition",
+    "faire opposition"
+   ],
+   "citation": "L'opposition doit être formée dans les dix jours qui suivent la signification de l'ordonnance",
+   "lecture": "Pour contester une injonction de payer, l'opposition doit être formée dans les dix jours qui suivent sa signification.",
+   "faits_requis": [],
+   "etape_plan": "Consulter rapidement un avocat ou un huissier de justice : le délai court depuis la signification"
+  },
+  {
+   "id": "OHADA_13",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "13",
+   "titre": "Injonction de payer : la preuve de la créance",
+   "declencheurs": [
+    "prouver la dette",
+    "preuve de la creance",
+    "je ne dois pas cette somme",
+    "conteste la dette"
+   ],
+   "citation": "Celui qui a demandé l'ordonnance d'injonction de payer supporte la charge de la preuve de sa créance.",
+   "lecture": "C'est au créancier qui a demandé l'injonction de payer de prouver sa créance.",
+   "faits_requis": [],
+   "etape_plan": "Rassembler les preuves de paiement ou de contestation de la somme réclamée"
+  },
+  {
+   "id": "OHADA_16",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "16",
+   "titre": "Injonction de payer : faute d'opposition dans le délai",
+   "declencheurs": [
+    "formule executoire",
+    "pas fait opposition",
+    "delai d'opposition depasse"
+   ],
+   "citation": "En l'absence d'opposition dans les dix jours de la signification de l’ordonnance portant injonction de payer ou. en cas de désistement du débiteur qui a formé opposition, le créancier peut demander l'apposition de la formule exécutoire sur cette ordonnance. Celle-ci produit tous les effets d'une décision contradictoire et n'est pas susceptible d'appel.",
+   "lecture": "Sans opposition dans les dix jours de la signification, le créancier peut faire revêtir l'ordonnance de la formule exécutoire ; elle a alors les effets d'une décision contradictoire et n'est pas susceptible d'appel.",
+   "faits_requis": [],
+   "etape_plan": "Vérifier avec un professionnel du droit si une opposition reste possible (article 10)"
+  },
+  {
+   "id": "OHADA_28",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "28",
+   "titre": "Saisie : droit du créancier et limites",
+   "declencheurs": [
+    "saisie de mes biens",
+    "pratiquer une saisie",
+    "creancier veut saisir",
+    "mesure conservatoire",
+    "saisie abusive"
+   ],
+   "citation": "À défaut d'exécution volontaire, tout créancier peut, quelle que soit la nature de sa créance, dans les conditions prévues par le présent acte uniforme, pratiquer une saisie pour contraindre son débiteur défaillant à exécuter ses obligations à son égard ou pratiquer une mesure conservatoire pour assurer la sauvegarde de ses droits.",
+   "lecture": "Si le débiteur ne paie pas volontairement, le créancier peut, dans les conditions de l'acte uniforme, pratiquer une saisie ou une mesure conservatoire.",
+   "faits_requis": [],
+   "etape_plan": "Demander à voir le titre exécutoire ou l'autorisation sur lesquels la saisie s'appuie"
+  },
+  {
+   "id": "OHADA_50",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "50",
+   "titre": "Saisie : quels biens peuvent être saisis",
+   "declencheurs": [
+    "biens saisissables",
+    "biens insaisissables",
+    "que peut-on saisir",
+    "saisir mes meubles"
+   ],
+   "citation": "Les saisies peuvent porter sur tous les biens appartenant au débiteur alors même qu'ils seraient détenus par des tiers, sauf s'ils ont été déclarés insaisissables.",
+   "lecture": "Une saisie peut porter sur tous les biens du débiteur, même détenus par des tiers, sauf ceux déclarés insaisissables.",
+   "faits_requis": [],
+   "etape_plan": "Faire la liste des biens visés et de ceux qui pourraient être insaisissables"
+  },
+  {
+   "id": "OHADA_153",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "153",
+   "titre": "Saisie-attribution des créances (compte bancaire, mobile money)",
+   "declencheurs": [
+    "saisie attribution",
+    "saisie sur compte",
+    "compte bancaire saisi",
+    "compte bloque par huissier",
+    "saisie mobile money"
+   ],
+   "citation": "Tout créancier muni d'un titre exécutoire constatant une créance liquide et exigible peut, pour en obtenir le paiement, sans commandement préalable, saisir entre les mains d’un tiers les créances de son débiteur portant sur une somme d'argent, sous réserve des dispositions particulières à la saisie des rémunérations.",
+   "lecture": "Un créancier qui a un titre exécutoire pour une créance liquide et exigible peut saisir, entre les mains d'un tiers (une banque par exemple), les sommes que ce tiers doit à son débiteur, sans commandement préalable.",
+   "faits_requis": [],
+   "etape_plan": "Demander l'acte de saisie et le titre exécutoire invoqué"
+  },
+  {
+   "id": "OHADA_173",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "173",
+   "titre": "Saisie sur salaire : condition",
+   "declencheurs": [
+    "saisie sur salaire",
+    "saisie des remunerations",
+    "saisie de mon salaire",
+    "employeur retient mon salaire pour une dette"
+   ],
+   "citation": "Tout créancier muni d’un titre exécutoire constatant une créance liquide et exigible peut faire procéder à la saisie des rémunérations dues par un employeur à son débiteur.",
+   "lecture": "La saisie des rémunérations versées par un employeur exige que le créancier dispose d'un titre exécutoire pour une créance liquide et exigible.",
+   "faits_requis": [],
+   "etape_plan": "Demander le titre exécutoire et la décision qui autorise la saisie"
+  },
+  {
+   "id": "OHADA_177",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUPSRVE-2023",
+   "article": "177",
+   "titre": "Saisie sur salaire : part saisissable fixée par l'État",
+   "declencheurs": [
+    "quelle part du salaire",
+    "combien peut-on saisir sur mon salaire",
+    "plafond saisie salaire",
+    "quotite saisissable"
+   ],
+   "citation": "Les rémunérations ne peuvent être cédées ou saisies que dans les proportions déterminées par chaque État partie.",
+   "lecture": "La part du salaire qui peut être saisie est fixée par chaque État ; l'acte uniforme ne donne pas lui-même ces proportions, et elles ne figurent pas dans le corpus du service.",
+   "faits_requis": [],
+   "etape_plan": "Faire vérifier par un professionnel le texte ivoirien qui fixe la part saisissable"
   }
  ],
  "rejets": []

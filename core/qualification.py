@@ -53,6 +53,9 @@ _MOTS_CLES = {
         "cheque", "traite", "garantie", "interet",
         "porter caution", "cautionnement", "pret bancaire", "hypotheque", "nantissement",
         "surete", "suretes", "ohada",
+        "injonction de payer", "saisie", "saisie attribution", "saisie sur salaire",
+        "saisie des remunerations", "titre executoire", "formule executoire", "huissier",
+        "commissaire de justice", "mesure conservatoire",
     ),
     "penal_procedure_penale": (
         "plainte", "police", "gendarmerie", "vol", "escroquerie", "agression", "infraction",

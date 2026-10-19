@@ -382,6 +382,31 @@ def recouper():
             s.get("similarite_moyenne"), len(r["articles_divergents"])))
 
 
+# En-têtes et pieds de page du Journal officiel : ils tombent au milieu des
+# articles à chaque changement de page. Ils sont retirés de la LECTURE (jamais
+# du fichier brut, conservé dans KNOWLEDGE/collecte/textes/) et comptés.
+_MOIS = r"(?:janvier|f[ée]vrier|mars|avril|mai|juin|juillet|ao[uû]t|septembre|octobre|novembre|d[ée]cembre)"
+MOTIFS_EN_TETES = (
+    re.compile(r"(?m)^(--- PAGE \d+ ---)[ \t]*\[OCR conf=[^\]]*\][ \t]*$"),   # marqueur de page : conservé nu
+    re.compile(r"(?im)^[^\n]*Journal officiel OHADA 2023 Az[^\n]*$"),
+    re.compile(r"(?im)^[ \t]*ACTE UNIFORME PORTANT ORGANISATION DES PROC[ÉE]DURES SIMPLIFI[ÉE]ES DE"
+               r"(?:[ \t]*\n?[ \t]*RECOUVREMENT ET DES VOIES D.EX[ÉE]CUTION)?[ \t]*$"),
+    re.compile(r"(?im)^[ \t]*JOURNAL OFFICIEL DE LA R[ÉE]PUBLIQUE DE C[ÔO]TE D.IVOIRE[ \t]*$"),
+    re.compile(r"(?im)^[ \t]*[0-9IlO]{1,2}[ \t]+" + _MOIS + r"[ \t]+\d{4}[ \t]*$"),
+    re.compile(r"(?m)^[ \t]*\d{1,4}[ \t]*$"),
+)
+
+
+def nettoyer_lecture(texte):
+    """Retire en-têtes, pieds et numéros de page ; renvoie (texte, nombre de retraits)."""
+    retraits = 0
+    texte, n = MOTIFS_EN_TETES[0].subn(r"\1", texte or "")
+    for motif in MOTIFS_EN_TETES[1:]:
+        texte, n = motif.subn("", texte)
+        retraits += n
+    return texte, retraits
+
+
 # ---------------------------------------------------------------------------
 # 4. Intégration des documents OFFICIELS contrôlés (calque texte seulement)
 # ---------------------------------------------------------------------------
@@ -479,6 +504,7 @@ def officialiser_ocr(cles=None):
             else _texte(resultat, "fichier_ocr")
         second = _texte(resultat, "fichier_ocr") if d["methode_extraction"] == "OCR_EDITEUR" \
             and extraction.get("ocr_force") else None
+        principal, retraits = nettoyer_lecture(principal)
         articles = corpus.extraire_articles(principal or "")
         confiance, ecartes = None, []
         comparateur = "LECTURE_INDEPENDANTE_TESSERACT:" + d["cle"] if second else None
@@ -495,7 +521,7 @@ def officialiser_ocr(cles=None):
                     comparateur = "SECONDAIRE:" + autre["cle"]
                     break
         if second:
-            articles_second = corpus.extraire_articles(second)
+            articles_second = corpus.extraire_articles(nettoyer_lecture(second)[0])
             confiance, retenus = {}, {}
             for numero, texte in articles.items():
                 if numero not in articles_second:
@@ -519,11 +545,20 @@ def officialiser_ocr(cles=None):
         lecture = ("calque texte produit par un logiciel d'OCR (%s)" % ", ".join(d["indices_ocr_editeur"])
                    if d["methode_extraction"] == "OCR_EDITEUR" else
                    "OCR tesseract (fra), confiance moyenne %s" % d["confiance_ocr_moyenne"])
+        lecture += " ; %d en-tête(s), pied(s) ou numéro(s) de page retiré(s)" % retraits
         ref_id = base.ajouter_reference(
             titre_officiel=source["titre"], type_texte=source["type_texte"],
             numero_texte=source.get("numero_texte"), date_publication=source.get("date_texte"),
             domaine=domaine, source_nom=source["autorite"], source_url=source["url"],
-            date_consultation=aujourd_hui, texte_complet_present=False,
+            date_consultation=aujourd_hui,
+            # Même convention que la filiation (2019-571, OCR d'éditeur) : l'extrait
+            # enregistré est le texte des articles RETENUS, pour que toute citation
+            # soit vérifiée mot pour mot contre lui. L'état reste
+            # PARTIELLEMENT_VERIFIE et l'origine OCR voyage avec chaque article.
+            texte_complet_present=bool(articles),
+            extrait_texte="\n\n".join("Article %s\n%s" % (n, articles[n])
+                                        for n in sorted(articles, key=ocr._tri_numero)) or None,
+            articles=("%d articles indexés (OCR)" % len(articles)) if articles else None,
             limites_interpretation=("Exemplaire officiel numérisé ; texte lu par %s. %s"
                                     % (lecture, source.get("notes") or "")).strip())
         base.promouvoir_verification(

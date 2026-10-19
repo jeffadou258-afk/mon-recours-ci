@@ -51,6 +51,9 @@ _MARQUEURS_ELEVES = (
     (r"(mise en demeure|sommation)", "mise en demeure"),
     (r"(commandement de payer|saisie|saisie-vente|saisie des salaires)", "voie d'execution"),
     (r"\bsaisir\b", "voie d'execution"),
+    # Injonction de payer : l'opposition n'est recevable que dans un délai bref
+    # (article 10 de l'AUPSRVE) — le délai lui-même est donné par la fiche, pas ici.
+    (r"injonction de payer|ordonnance (d'|portant )injonction", "injonction de payer (delai d'opposition)"),
     (r"(demolir|detruire|raser|deguerpi\w*)[^.]{0,40}(demain|aujourd'hui|cette semaine|ce matin)", "demolition imminente"),
     (r"(demain|aujourd'hui|cette semaine)[^.]{0,40}(demolir|detruire|raser|deguerpi\w*)", "demolition imminente"),
     (r"\b(il|elle|ils|elles|on) (me|nous) menac\w*", "menaces"),
