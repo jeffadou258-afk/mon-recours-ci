@@ -193,6 +193,22 @@ export function VueSansFiche({ vue }: { vue: VueHorsCatalogue }) {
       <EncadreVerrous verrous={vue.verrous} />
       <p className="resultat__message">{vue.message}</p>
 
+      {vue.domainesVision.length > 0 ? (
+        <section className="bloc" aria-labelledby="titre-domaine-vision">
+          <h2 id="titre-domaine-vision">Votre question relève probablement de</h2>
+          <ul>
+            {vue.domainesVision.map((d) => (
+              <li key={d.code}>
+                <strong>{d.libelle}</strong>
+                {d.fichesDisponibles === 0
+                  ? " — domaine pas encore couvert par le service : aucun texte vérifié ne permet d'y répondre."
+                  : " — domaine partiellement couvert : votre situation ne correspond à aucune des fiches disponibles."}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       {vue.domaines.length > 0 ? (
         <section className="bloc" aria-labelledby="titre-domaines">
           <h2 id="titre-domaines">Domaine repéré</h2>

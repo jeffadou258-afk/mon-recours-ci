@@ -30,7 +30,7 @@ from agent import MonRecoursCI
 from core import analyse as A
 from core import base, catalogue, clarification, corpus, documents as mod_documents
 from core import faits as mod_faits
-from core import llm
+from core import domaines_vision, llm
 
 FICHIER_ETAT = "CONVERSATION.json"
 
@@ -426,11 +426,19 @@ class Conversation(object):
             par_domaine[domaine] = [{"article": a["numero"], "numero_texte": a["numero_texte"],
                                      "etat_verification": a["etat_verification"]}
                                     for a in articles]
+        try:
+            vision = domaines_vision.reconnaitre(demande)
+        except (OSError, ValueError, domaines_vision.RegistreInvalide):
+            vision = []
         return {
             "statut_reponse": "CONCLUSION_IMPOSSIBLE",
             "message": ("Je ne trouve pas de fiche de réponse correspondant à votre "
                         "question. Je préfère vous le dire plutôt que de citer un article "
                         "au hasard."),
+            # Domaine probable parmi les 24 de la vision, avec le nombre de fiches
+            # réellement disponibles : 0 = domaine non couvert, dit comme tel.
+            "domaines_vision": [{"code": v["code"], "libelle": v["libelle"],
+                                 "fiches_disponibles": v["fiches_disponibles"]} for v in vision],
             "domaines_identifies": domaines,
             "articles_du_domaine_sans_fiche": par_domaine,
             "pistes_sans_fiche": [f["titre"] for f in du_domaine],

@@ -91,3 +91,31 @@ class TestScenariosDeReference(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestTablesDeQualification(unittest.TestCase):
+    """Garde-fou ajouté après une régression (19/10/2026) : une table mal formée
+    faisait échouer TOUTE demande touchant le transport ou la santé."""
+
+    def test_questions_par_domaine_bien_formees(self):
+        from core import qualification
+        for domaine, questions in qualification._QUESTIONS_DOMAINE.items():
+            for element in questions:
+                self.assertEqual(len(element), 2, domaine)
+                self.assertTrue(all(isinstance(x, str) for x in element), domaine)
+
+    def test_chaque_domaine_du_moteur_est_reconnaissable(self):
+        from core import qualification
+        for domaine in config.DOMAINES_JURIDIQUES:
+            if domaine != "indetermine":
+                self.assertIn(domaine, qualification._MOTS_CLES, domaine)
+
+    def test_ouvrir_ne_plante_pour_aucun_domaine(self):
+        recits = ["J'ai eu un accident de voiture", "L'hôpital refuse de me soigner",
+                  "Je veux porter plainte", "Mon employeur ne me paie pas"]
+        for i, recit in enumerate(recits):
+            identifiant = "TEST_REF_PLANTE_%d" % i
+            try:
+                self.assertTrue(service.ouvrir(identifiant, recit)["ok"], recit)
+            finally:
+                shutil.rmtree(str(config.dossier_utilisateur(identifiant)), ignore_errors=True)

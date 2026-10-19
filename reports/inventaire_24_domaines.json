@@ -1,0 +1,3413 @@
+{
+ "genere_le": "2026-10-19 08:48",
+ "resume_statuts": {
+  "NON COUVERT": 19,
+  "PARTIEL": 5
+ },
+ "scenarios": {
+  "executes": 136,
+  "reussis": 136,
+  "echoues": 0,
+  "sans_objet": 32
+ },
+ "domaines": [
+  {
+   "code": 1,
+   "libelle": "Droit civil",
+   "cles_moteur": [
+    "contrats_dettes_commerce",
+    "transport_responsabilite_civile"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Mon voisin a construit un mur qui empiète sur ma parcelle, je veux des dommages et intérêts",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       1
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "mon voizin a cassé ma voiture et refuse de payer les domages et interets",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       1
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "j'ai un probleme avec quelqu'un",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Je veux faire un bornage avec mon voisin",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       1
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "mon voisin me menace avec une machette",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 3,
+      "vision": [
+       1
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Quel est le délai de prescription pour réclamer une dette à un voisin ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       1
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Aucun texte de droit civil général (Code civil, obligations, responsabilité) dans le corpus."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 2,
+   "libelle": "Droit de la famille",
+   "cles_moteur": [
+    "famille_mariage_filiation"
+   ],
+   "textes": [
+    {
+     "numero": "2019-571",
+     "titre": "LOI n° 2019-571 du 26 juin 2019 relative à la filiation",
+     "date": "2019-06-26",
+     "type": "loi",
+     "articles_indexes": 30,
+     "articles_citables": 30,
+     "lecture": "CALQUE_TEXTE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/176937124389.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2018-862",
+     "titre": "Loi n°2018-862 du 19 novembre 2018 relative à l’état civil.",
+     "date": "2018-11-19",
+     "type": "loi",
+     "articles_indexes": 0,
+     "articles_citables": 0,
+     "lecture": "AUCUNE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/176937063397.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2018-863",
+     "titre": "Loi n°2018-863 du 19 novembre 2018 instituant une procédure spéciale de déclaration de naissance, de rétablissement d’identité et de transcription d’acte de naissance.",
+     "date": "2018-11-19",
+     "type": "loi",
+     "articles_indexes": 26,
+     "articles_citables": 26,
+     "lecture": "AUCUNE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/176936984489.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2019-572",
+     "titre": "Loi n°2019-572 du 26 Juin 2019 relative à la minorité",
+     "date": "2019-06-26",
+     "type": "loi",
+     "articles_indexes": 0,
+     "articles_citables": 0,
+     "lecture": "AUCUNE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/17693691723.pdf",
+     "domaine_officiel": true
+    }
+   ],
+   "fiches": [
+    {
+     "id": "FAMILL_1",
+     "titre": "Droit de l'enfant à sa filiation",
+     "article": "1",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": []
+    },
+    {
+     "id": "FAMILL_2",
+     "titre": "Paternité de l'enfant né pendant le mariage",
+     "article": "2",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "mere_mariee"
+     ]
+    },
+    {
+     "id": "FAMILL_4",
+     "titre": "Contester la paternité (désaveu par le mari)",
+     "article": "4",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": []
+    },
+    {
+     "id": "FAMILL_6",
+     "titre": "Délai pour contester la paternité",
+     "article": "6",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "mari_present_naissance",
+      "plus_de_deux_mois"
+     ]
+    },
+    {
+     "id": "FAMILL_9",
+     "titre": "Prouver la filiation d'un enfant né dans le mariage",
+     "article": "9",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "mere_mariee"
+     ]
+    },
+    {
+     "id": "FAMILL_19",
+     "titre": "Filiation de l'enfant né hors mariage",
+     "article": "19",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "pere_a_reconnu"
+     ]
+    },
+    {
+     "id": "FAMILL_20",
+     "titre": "Reconnaître un enfant",
+     "article": "20",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "pere_a_reconnu"
+     ]
+    },
+    {
+     "id": "FAMILL_21",
+     "titre": "Reconnaissance après l'acte de naissance",
+     "article": "21",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "enfant_plus_18_ans"
+     ]
+    },
+    {
+     "id": "FAMILL_22",
+     "titre": "Homme marié qui reconnaît un enfant né hors mariage",
+     "article": "22",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "pere_marie_autre"
+     ]
+    },
+    {
+     "id": "FAMILL_24",
+     "titre": "Faire déclarer la paternité par le juge",
+     "article": "24",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "pere_a_reconnu"
+     ]
+    },
+    {
+     "id": "FAMILL_26",
+     "titre": "Qui peut agir en recherche de paternité",
+     "article": "26",
+     "texte": "2019-571",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "enfant_mineur_mere_agit"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "cle": "mere_mariee",
+     "question": "La mère était-elle mariée au moment de la conception ou de la naissance de l'enfant ?"
+    },
+    {
+     "cle": "mari_present_naissance",
+     "question": "Le mari était-il présent sur les lieux au moment de la naissance ?"
+    },
+    {
+     "cle": "plus_de_deux_mois",
+     "question": "Plus de deux mois se sont-ils écoulés depuis ce point de départ (naissance, retour ou découverte) ?"
+    },
+    {
+     "cle": "pere_a_reconnu",
+     "question": "Le père a-t-il reconnu l'enfant (dans l'acte de naissance ou par un acte authentique) ?"
+    },
+    {
+     "cle": "enfant_plus_18_ans",
+     "question": "L'enfant a-t-il plus de 18 ans ?"
+    },
+    {
+     "cle": "pere_marie_autre",
+     "question": "Le père est-il marié avec une autre femme que la mère de l'enfant ?"
+    },
+    {
+     "cle": "enfant_mineur_mere_agit",
+     "question": "L'enfant est-il mineur, et est-ce la mère qui souhaite agir ?"
+    }
+   ],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Le père de mon enfant refuse de le reconnaître",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "FAMILL_20",
+       "FAMILL_24",
+       "FAMILL_26"
+      ],
+      "questions": 2,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": []
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "le pere de mon enfan refuse de le reconaitre",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "FAMILL_20",
+       "FAMILL_24",
+       "FAMILL_26"
+      ],
+      "questions": 2,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "clarif",
+     "recit": "Je suis le mari et je veux contester la paternité de l'enfant né pendant notre mariage",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "FAMILL_2",
+       "FAMILL_4"
+      ],
+      "questions": 1,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": []
+     }
+    },
+    {
+     "type": "ambigu",
+     "recit": "j'ai un souci avec mon mari",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Je veux divorcer de mon mari",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       2
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "Mon mari frappe les enfants et me menace",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 3,
+      "vision": [
+       5
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien de temps j'ai pour contester la paternité, quel délai ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "FAMILL_4",
+       "FAMILL_6"
+      ],
+      "questions": 2,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [],
+      "fin": "ANALYSE_CONFORME"
+     }
+    }
+   ],
+   "scenarios_executes": 7,
+   "scenarios_reussis": 7,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 0,
+   "lacunes": [
+    "Seule la filiation (loi 2019-571) a des fiches.",
+    "Mariage, divorce, pension alimentaire, successions : aucun texte au corpus.",
+    "État civil (2018-862), minorité (2019-572), adoption, pupilles : textes présents mais 0 article indexé.",
+    "Loi « 202-894 » : numéro du document à vérifier (2021-894 probable, non confirmé)."
+   ],
+   "statut_technique": "PARTIEL",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 3,
+   "libelle": "Droit immobilier, foncier et logement",
+   "cles_moteur": [
+    "logement_baux_foncier"
+   ],
+   "textes": [
+    {
+     "numero": "2019-576",
+     "titre": "LOI N° 2019-576 DU 26 JUIN 2019 INSTITUANT CODE DE LA CONSTRUCTION ET DE L'HABITAT",
+     "date": "2019-06-26",
+     "type": "loi",
+     "articles_indexes": 553,
+     "articles_citables": 553,
+     "lecture": "CALQUE_TEXTE",
+     "reference": "VERIFIE",
+     "source": "https://www.dgi.gouv.ci/assets/documents/transfert_propriete/lois_reglements/LOI%20N%C2%B0%202019-576%20DU%2026%20JUIN%202019%20INSTITUANT%20CODE%20DE%20LA%20CONSTRUCTION%20ET%20DE%20L%27HABITAT.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2020-623",
+     "titre": "LOI N° 2020-623 DU 14 AOUT 2020 PORTANT RATIFICATION DE L'ORDONNANCE N° 2020-386 DU 15 AVRIL 2020 PORTANT SUSPENSION DES PROCEDURES D'EXPULSION DES LOCATAIRES ET DE REVISION A LA HAUSSE DU LOYER DES BAUX D'HABITATION",
+     "date": "2020-08-14",
+     "type": "loi",
+     "articles_indexes": 2,
+     "articles_citables": 2,
+     "lecture": "OCR_VISION_AUTO",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://construction.gouv.ci/uploads/publications/178542265442.pdf",
+     "domaine_officiel": true
+    }
+   ],
+   "fiches": [
+    {
+     "id": "LOGEME_414",
+     "titre": "Forme du bail d'habitation",
+     "article": "414",
+     "texte": "2019-576",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "bail_ecrit"
+     ]
+    },
+    {
+     "id": "LOGEME_415",
+     "titre": "Avance sur loyers",
+     "article": "415",
+     "texte": "2019-576",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "avance_plus_deux_mois",
+      "autres_sommes"
+     ]
+    },
+    {
+     "id": "LOGEME_416",
+     "titre": "Dépôt de garantie (caution)",
+     "article": "416",
+     "texte": "2019-576",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "depot_plus_deux_mois",
+      "logement_quitte",
+      "manquement_invoque"
+     ]
+    },
+    {
+     "id": "LOGEME_423",
+     "titre": "Révision du loyer",
+     "article": "423",
+     "texte": "2019-576",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "revision_moins_trois_ans"
+     ]
+    },
+    {
+     "id": "LOGEME_440",
+     "titre": "Congé donné par le bailleur",
+     "article": "440",
+     "texte": "2019-576",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "conge_trois_mois",
+      "conge_forme"
+     ]
+    },
+    {
+     "id": "LOGEME_443",
+     "titre": "Demande de résiliation",
+     "article": "443",
+     "texte": "2019-576",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "lettre_resiliation_ecrite"
+     ]
+    },
+    {
+     "id": "LOGEME_445",
+     "titre": "Expulsion forcée",
+     "article": "445",
+     "texte": "2019-576",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": [
+      "lettre_resiliation_ecrite",
+      "decision_juge"
+     ]
+    }
+   ],
+   "questions": [
+    {
+     "cle": "depot_plus_deux_mois",
+     "question": "Le dépôt de garantie que vous avez versé dépasse-t-il deux mois de loyer ?"
+    },
+    {
+     "cle": "logement_quitte",
+     "question": "Avez-vous quitté le logement (fin du bail) ?"
+    },
+    {
+     "cle": "manquement_invoque",
+     "question": "Le bailleur invoque-t-il des dégradations, des loyers impayés ou un autre manquement de votre part pour garder le dépôt ?"
+    },
+    {
+     "cle": "avance_plus_deux_mois",
+     "question": "Le bailleur vous a-t-il demandé plus de deux mois de loyer d'avance à la signature du bail ?"
+    },
+    {
+     "cle": "autres_sommes",
+     "question": "Vous a-t-on demandé d'autres sommes (frais, commission…) pour pouvoir signer le bail ?"
+    },
+    {
+     "cle": "revision_moins_trois_ans",
+     "question": "La dernière révision du loyer (ou la signature du bail) date-t-elle de moins de trois ans ?"
+    },
+    {
+     "cle": "bail_ecrit",
+     "question": "Avez-vous un contrat de bail écrit ?"
+    },
+    {
+     "cle": "conge_trois_mois",
+     "question": "Le congé vous a-t-il été donné au moins trois mois avant la date de reprise ?"
+    },
+    {
+     "cle": "conge_forme",
+     "question": "Le congé vous a-t-il été remis par un commissaire de justice, ou par courrier contre décharge (signature de réception) ?"
+    },
+    {
+     "cle": "lettre_resiliation_ecrite",
+     "question": "Avez-vous reçu une lettre de demande de résiliation écrite et motivée ?"
+    },
+    {
+     "cle": "decision_juge",
+     "question": "Un juge (juge des référés) a-t-il rendu une décision d'expulsion contre vous ?"
+    }
+   ],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Mon bailleur refuse de me rendre ma caution",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "LOGEME_416"
+      ],
+      "questions": 3,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "mon baileur veut pas me rendre ma caution",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "LOGEME_416"
+      ],
+      "questions": 3,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "clarif",
+     "recit": "Mon propriétaire veut augmenter mon loyer",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "LOGEME_423"
+      ],
+      "questions": 2,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "ambigu",
+     "recit": "j'ai un problème avec mon propriétaire",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       3
+      ]
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Je loue une boutique et le propriétaire veut résilier mon bail commercial",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "LOGEME_443"
+      ],
+      "questions": 2,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "On veut m'expulser demain matin avec la police, le bailleur a changé les serrures",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "LOGEME_445"
+      ],
+      "questions": 3,
+      "urgence": "ELEVEE",
+      "verrous": 2,
+      "vision": []
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Dans combien de jours le bailleur doit me rendre ma caution ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "LOGEME_416"
+      ],
+      "questions": 3,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [],
+      "fin": "ANALYSE_CONFORME"
+     }
+    }
+   ],
+   "scenarios_executes": 7,
+   "scenarios_reussis": 7,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 0,
+   "lacunes": [
+    "Loi 2025-221 (contentieux du bail, exécution des expulsions) non intégrée : la procédure d'expulsion n'est couverte que par les articles 443 et 445 du Code de la construction.",
+    "Bail commercial, copropriété, titre foncier, ACD : aucune fiche.",
+    "Les lectures des fiches et les questions ne sont pas relues par un juriste."
+   ],
+   "statut_technique": "PARTIEL",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 4,
+   "libelle": "Droit du travail et droit social",
+   "cles_moteur": [
+    "travail"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Mon employeur ne me paie plus mon salaire depuis trois mois",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       4
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "mon patron veu pas me payé mon salair",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       4
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "j'ai des soucis au travail",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "On m'a licencié sans préavis, ai-je droit à une indemnité ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       4
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "mon patron m'a frappé au travail et menace de me tuer",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 3,
+      "vision": [
+       4,
+       5
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien de mois de salaire mon employeur doit-il me verser après un licenciement ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 1,
+      "vision": [
+       4
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Aucun texte du droit du travail (Code du travail, conventions collectives, CNPS)."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 5,
+   "libelle": "Droit pénal et procédure pénale",
+   "cles_moteur": [
+    "penal_procedure_penale"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Je veux porter plainte pour vol de mon téléphone",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 2,
+      "vision": [
+       5
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "on ma volé mon telefone je veu porté plainte",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 2,
+      "vision": [
+       5
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "la police me cherche",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": [
+       5
+      ]
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Quelle est la peine pour escroquerie ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": [
+       5
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "mon frere est en garde a vue depuis 3 jours sans avocat",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 3,
+      "vision": [
+       5
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien de temps la garde à vue peut-elle durer ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 3,
+      "vision": [
+       5
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Aucun texte pénal (Code pénal, Code de procédure pénale)."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 6,
+   "libelle": "Droit commercial et droit des affaires",
+   "cles_moteur": [
+    "contrats_dettes_commerce"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Je veux créer une société et m'inscrire au registre du commerce",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       6
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "je veu cree ma societe et avoir le rccm",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       6
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "mon associé ne veut plus travailler",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       6
+      ]
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Comment vendre mon fonds de commerce ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       6
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "Quel capital minimum pour créer une société ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       6
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Aucun Acte uniforme de droit commercial ou des sociétés."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 7,
+   "libelle": "Droit de la consommation",
+   "cles_moteur": [
+    "consommation"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "J'ai acheté un téléphone défectueux et le vendeur refuse de me rembourser",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       7
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "le vendeur veu pa remboursé mon produit defectueux",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       7
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "je ne suis pas content de mon achat",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       7
+      ]
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Mon abonnement internet est facturé deux fois",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       7
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien de jours ai-je pour retourner un produit défectueux ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       7
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Aucun texte de droit de la consommation."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 8,
+   "libelle": "Droit bancaire et crédit",
+   "cles_moteur": [
+    "contrats_dettes_commerce"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "La banque refuse de m'accorder un crédit",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       8
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "la banque a bloqué mon compte bancaire sans raison",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       8,
+       3
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "j'ai un souci d'argent",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Le taux d'interet de mon credit a changé",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       8
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "une société de microfinance menace de saisir tous mes biens demain",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 2,
+      "vision": [
+       6,
+       8,
+       23
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Quel est le taux d'interet maximum autorisé pour un crédit ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       8
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Aucun texte bancaire (UEMOA, BCEAO, microfinance)."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 9,
+   "libelle": "Droit administratif",
+   "cles_moteur": [
+    "administratif_voies_de_recours"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "La mairie refuse de me délivrer un document administratif",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       9
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "la mairi veu pa me donner mon papier, c'est l'administration",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       9
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "on m'a refusé quelque chose",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Comment faire un recours administratif contre une décision ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       9
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "l'administration va démolir ma maison demain",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 1,
+      "vision": [
+       3,
+       9
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Quel est le délai pour faire un recours administratif ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       9
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Aucun texte de procédure administrative."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 10,
+   "libelle": "Droit constitutionnel et libertés fondamentales",
+   "cles_moteur": [],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "La police a interdit notre manifestation pacifique",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": [
+       5,
+       10
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "on m'a empeché de voter a l'election",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       10
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "je trouve que c'est injuste",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Que dit la constitution sur la liberté d'expression ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       10
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "Quel article de la constitution protège la liberté de culte ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       10
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Constitution absente du corpus."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 11,
+   "libelle": "Droit fiscal",
+   "cles_moteur": [
+    "administratif_voies_de_recours"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Les impôts me réclament une taxe que je ne dois pas",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       11
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "les impots me demande de payé une patente",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       11
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "on me demande de l'argent",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "J'ai reçu un redressement fiscal",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       11
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "Quel est le taux de la TVA ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       11
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Code général des impôts et lois de finances absents."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 12,
+   "libelle": "Droit des assurances",
+   "cles_moteur": [],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Mon assurance refuse d'indemniser mon sinistre",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       12
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "l'assureur veu pa payé apres mon sinistre",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       12
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "on ne veut pas me payer",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Mon assureur a résilié ma police d'assurance",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": [
+       12,
+       5
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "Dans quel délai l'assurance doit-elle payer après un sinistre ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       12
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Code CIMA absent."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 13,
+   "libelle": "Droit des transports et circulation routière",
+   "cles_moteur": [
+    "transport_responsabilite_civile"
+   ],
+   "textes": [
+    {
+     "numero": "2013-711",
+     "titre": "DECRET N° 2013-711 DU 18 OCTOBRE 2013 PORTANT INTERDICTION DE L'USAGE DU TELEPHONE PORTABLE ET DE TOUT AUTRE MOYEN DE COMMUNICATION EN SITUATION DE CONDUITE AUTOMOBILE",
+     "date": "2013-10-18",
+     "type": "decret",
+     "articles_indexes": 6,
+     "articles_citables": 6,
+     "lecture": "CALQUE_TEXTE",
+     "reference": "VERIFIE",
+     "source": "https://www.sgg.gouv.ci/photo_doc/1399281886Decret_N_2013_791_du_20_novembre_2013%20.pdf",
+     "domaine_officiel": true
+    }
+   ],
+   "fiches": [
+    {
+     "id": "TRANSP_2",
+     "titre": "Téléphone au volant",
+     "article": "2",
+     "texte": "2013-711",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": []
+    }
+   ],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Un policier m'a arrêté parce que je téléphonais en conduisant",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "TRANSP_2"
+      ],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "la police ma arreté car j'avais le telephone au volan",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "TRANSP_2"
+      ],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": []
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "la fiche TRANSP_2 n'a pas de question de clarification dans le guide"
+    },
+    {
+     "type": "ambigu",
+     "recit": "j'ai un souci avec ma voiture",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "J'ai eu un accident de voiture, l'autre conducteur refuse de payer",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       13
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "accident de moto, mon frère est blessé et saigne beaucoup",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 2,
+      "vision": [
+       13
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Quelle est l'amende pour le téléphone au volant ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "TRANSP_2"
+      ],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": [],
+      "fin": "ANALYSE_CONFORME"
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Une seule situation couverte (téléphone au volant, décret 2013-711, 6 articles).",
+    "Code de la route, accidents et indemnisation : absents.",
+    "Aucune question de clarification pour la fiche."
+   ],
+   "statut_technique": "PARTIEL",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 14,
+   "libelle": "Droit du numérique et données personnelles",
+   "cles_moteur": [
+    "donnees_personnelles_numerique"
+   ],
+   "textes": [
+    {
+     "numero": "2013-450",
+     "titre": "LOI N° 2013-450 DU 19 JUIN 2013 RELATIVE A LA PROTECTION DES DONNEES A CARACTERE PERSONNEL (exemplaire du Journal officiel du 8 août 2013)",
+     "date": "2013-06-19",
+     "type": "loi",
+     "articles_indexes": 53,
+     "articles_citables": 0,
+     "lecture": "OCR_VISION_AUTO",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "http://www.autoritedeprotection.ci/docs/loi_2013_450_journal.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2013-451",
+     "titre": "LOI N° 2013-451 DU 19 JUIN 2013 RELATIVE A LA LUTTE CONTRE LA CYBERCRIMINALITE (exemplaire du Journal officiel du 12 août 2013)",
+     "date": "2013-06-19",
+     "type": "loi",
+     "articles_indexes": 78,
+     "articles_citables": 0,
+     "lecture": "OCR_VISION_AUTO",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "http://www.autoritedeprotection.ci/docs/Loi-2013-451.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2013-546",
+     "titre": "LOI N° 2013-546 DU 30 JUILLET 2013 RELATIVE AUX TRANSACTIONS ELECTRONIQUES (exemplaire du Journal officiel du 12 septembre 2013)",
+     "date": "2013-07-30",
+     "type": "loi",
+     "articles_indexes": 48,
+     "articles_citables": 0,
+     "lecture": "OCR_VISION_AUTO",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "http://www.autoritedeprotection.ci/docs/Loi-2013_546.pdf",
+     "domaine_officiel": true
+    }
+   ],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Quelqu'un a publié mes photos sur les réseaux sociaux sans mon accord",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       14
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "on a piraté mon compte facebook",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       14
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "textes neutralisés (OCR non recoupé) : aucune fiche"
+    },
+    {
+     "type": "ambigu",
+     "recit": "j'ai un souci sur internet",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Une entreprise utilise mes données personnelles sans mon accord",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       14
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "quelqu'un menace de publier mes photos intimes si je ne paie pas",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 3,
+      "vision": [
+       14
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Quelle est la peine pour piratage informatique ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       14
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Lois 2013-450, 2013-451 et 2013-546 indexées par OCR non recoupé : 179 articles neutralisés (non citables), aucune fiche."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 15,
+   "libelle": "Droit de la santé",
+   "cles_moteur": [
+    "sante_droits_usagers"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "L'hôpital refuse de me donner mon dossier médical",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       15
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "le medecin a fait une erreur medicale sur mon operation",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       15
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "je ne suis pas bien soigné",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "La clinique me facture des soins que je n'ai pas reçus",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       15
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "mon enfant est très malade et l'hôpital refuse de le soigner sans payer",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 2,
+      "vision": [
+       15
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien de temps l'hôpital doit-il garder mon dossier médical ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       15,
+       5
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Aucun texte de santé ou de droits des patients."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 16,
+   "libelle": "Droit des associations et organisations",
+   "cles_moteur": [
+    "associations_organisations_religieuses"
+   ],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Le président de notre association refuse de convoquer l'assemblée générale",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       16
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "le tresorier de l'association a pris l'argent des cotisations",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       16
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "il y a des problèmes dans notre groupe",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Comment déclarer une ONG ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       16
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien de membres faut-il pour créer une association ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       16
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Aucun texte sur les associations."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 17,
+   "libelle": "Droit de l'éducation",
+   "cles_moteur": [],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "L'école a exclu mon enfant sans explication",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": [
+       17
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "l'ecole veut pas inscrire mon enfant, les frais de scolarite sont trop cher",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": [
+       17
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "mon fils a des problèmes",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Mon fils a été recalé au BEPC, peut-on contester ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       17
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "À quel âge l'école est-elle obligatoire ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       17
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Aucun texte sur l'éducation."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 18,
+   "libelle": "Droit rural et agricole",
+   "cles_moteur": [
+    "logement_baux_foncier"
+   ],
+   "textes": [
+    {
+     "numero": "98-750",
+     "titre": "LOI N° 98-750 DU 23 DECEMBRE 1998 RELATIVE AU DOMAINE FONCIER RURAL (exemplaire numérisé SGG)",
+     "date": "1998-12-23",
+     "type": "loi",
+     "articles_indexes": 29,
+     "articles_citables": 29,
+     "lecture": "OCR_VISION_AUTO",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://www.sgg.gouv.ci/photo_doc/1339597849.pdf",
+     "domaine_officiel": true
+    }
+   ],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Ma famille conteste mes droits sur une plantation de cacao au village",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       18
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "on veut prendre mon champ au village, j'ai pas de certificat foncier",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       18
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "loi 98-750 indexée (OCR non recoupé) mais aucune fiche"
+    },
+    {
+     "type": "ambigu",
+     "recit": "on se dispute pour une terre",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Comment obtenir un certificat foncier ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       18
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "des gens armés sont venus occuper notre plantation",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 2,
+      "vision": [
+       18
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "En combien de temps obtient-on un certificat foncier ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       18
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Loi 98-750 (foncier rural) indexée par OCR non recoupé, 29 articles, aucune fiche ni relecture."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 19,
+   "libelle": "Droit de l'environnement et de l'urbanisme",
+   "cles_moteur": [
+    "logement_baux_foncier"
+   ],
+   "textes": [
+    {
+     "numero": "2020-624",
+     "titre": "LOI N° 2020-624 DU 14 AOÛT 2020 INSTITUANT CODE DE L'URBANISME ET DU DOMAINE FONCIER URBAIN",
+     "date": "2020-08-14",
+     "type": "loi",
+     "articles_indexes": 302,
+     "articles_citables": 302,
+     "lecture": "CALQUE_TEXTE",
+     "reference": "VERIFIE",
+     "source": "https://www.construction.gouv.ci/uploads/publications/178542377022.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2020-624",
+     "titre": "LOI N° 2020-624 DU 14 AOÛT 2020 INSTITUANT CODE DE L'URBANISME ET DU DOMAINE FONCIER URBAIN (exemplaire numérisé DGI)",
+     "date": "2020-08-14",
+     "type": "loi",
+     "articles_indexes": 287,
+     "articles_citables": 287,
+     "lecture": "OCR_VISION_AUTO",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://www.dgi.gouv.ci/assets/documents/transfert_propriete/lois_reglements/LOI%20INSTITUANT%20CODE%20URBANISME%20ET%20DOMAINE%20FONCIER%20URBAIN-4-45.pdf",
+     "domaine_officiel": true
+    }
+   ],
+   "fiches": [
+    {
+     "id": "LOGEME_181",
+     "titre": "Domaine public urbain",
+     "article": "181",
+     "texte": "2020-624",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": []
+    },
+    {
+     "id": "LOGEME_238",
+     "titre": "Expropriation",
+     "article": "238",
+     "texte": "2020-624",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": []
+    },
+    {
+     "id": "LOGEME_69",
+     "titre": "Aménagement foncier",
+     "article": "69",
+     "texte": "2020-624",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": []
+    }
+   ],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "L'État veut exproprier mon terrain pour une route",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "LOGEME_181",
+       "LOGEME_238"
+      ],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "l'etat veut m'expropier pour faire une route",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "les fiches 181, 238 et 69 n'ont pas de question de clarification dans le guide"
+    },
+    {
+     "type": "ambigu",
+     "recit": "on construit à côté de chez moi",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Une usine pollue la rivière de notre village",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       19,
+       18
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "les bulldozers vont détruire nos maisons demain pour le déguerpissement",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 1,
+      "vision": [
+       3,
+       19
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien l'État doit-il me payer pour l'expropriation ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "LOGEME_238"
+      ],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [],
+      "fin": "ANALYSE_CONFORME"
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Trois fiches de définition (domaine public, expropriation, réserves foncières) sans question de clarification.",
+    "Code de l'environnement absent ; procédure et indemnisation d'expropriation non détaillées dans les fiches."
+   ],
+   "statut_technique": "PARTIEL",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 20,
+   "libelle": "Propriété intellectuelle",
+   "cles_moteur": [],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Une entreprise a copié mon logo et ma marque",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       20
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "on a copier ma musique sans payer, c'est de la contrefacon",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       20
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "on m'a volé mon idée",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Comment déposer un brevet ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       20
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien d'années dure le droit d'auteur ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       20
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Accord de Bangui (OAPI) et textes de propriété intellectuelle absents."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 21,
+   "libelle": "Droit des étrangers et nationalité",
+   "cles_moteur": [],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Comment obtenir la nationalité ivoirienne ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       21
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "ma carte de sejour a expiré",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       21
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "j'ai un problème de papiers",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Je suis étranger, puis-je acheter un terrain ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       3,
+       21
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "aucun cas urgent formulable sans inventer de procédure ; l'expulsion du territoire est couverte par la détection générale"
+    },
+    {
+     "type": "abstention",
+     "recit": "Après combien d'années de mariage peut-on obtenir la nationalité ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       2,
+       21
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Code de la nationalité et textes sur le séjour absents."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 22,
+   "libelle": "Protection de l'enfant et des personnes vulnérables",
+   "cles_moteur": [
+    "famille_mariage_filiation"
+   ],
+   "textes": [
+    {
+     "numero": "2023-89",
+     "titre": "DECRET No 2023-89 DU 15 FEVRIER 2023 FIXANT LES NORMES ET STANDARDS APPLICABLES AUX ETABLISSEMENTS DE PROTECTION DE REMPLACEMENT DE L'ENFANT",
+     "date": "2023-02-15",
+     "type": "decret",
+     "articles_indexes": 68,
+     "articles_citables": 68,
+     "lecture": "AUCUNE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/176937624358.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2023-90",
+     "titre": "DECRET No 2023-90 DU 15 FEVRIER 2023 PORTANT REGLEMENTATION DES FAMILLES D'ACCUEIL",
+     "date": "2023-02-15",
+     "type": "decret",
+     "articles_indexes": 21,
+     "articles_citables": 21,
+     "lecture": "AUCUNE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/176937670169.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "202-894",
+     "titre": "LOI n° 202-894 du 21 décembre 2021 relative aux mesures de protection des victimes de violences domestiques. de viol et de violences sexuelles autres que domestiques.",
+     "date": "2021-12-21",
+     "type": "loi",
+     "articles_indexes": 16,
+     "articles_citables": 16,
+     "lecture": "AUCUNE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/176960480223.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2019-779",
+     "titre": "DÉCRET No 2019-779 portant création, attributions, organisation et fonctionnement du comité interministériel de protection de l’enfant.",
+     "date": null,
+     "type": "decret",
+     "articles_indexes": 9,
+     "articles_citables": 9,
+     "lecture": "AUCUNE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/176937240619.pdf",
+     "domaine_officiel": true
+    },
+    {
+     "numero": "2020-907",
+     "titre": "DECRET No 2020-907 DU 18 NOVEMBRE 2020 PORTANT ATTRIBUTIONS, ORGANISATION ET FONCTIONNEMENT DE L’AUTORITE CENTRALE POUR L’ADOPTION EN COTE D’IVOIRE : DECRET ACACI",
+     "date": "2020-11-18",
+     "type": "decret",
+     "articles_indexes": 29,
+     "articles_citables": 29,
+     "lecture": "AUCUNE",
+     "reference": "PARTIELLEMENT_VERIFIE",
+     "source": "https://famille.gouv.ci/uploads/publications/176936873529.pdf",
+     "domaine_officiel": true
+    }
+   ],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Un enfant de mon quartier est maltraité par sa tutrice",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 3,
+      "vision": [
+       22
+      ]
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "un enfan travaille dans les champs et va pas a l'ecole, c'est du travail des enfants",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       17,
+       18,
+       22
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "décrets 2023-89, 2023-90 et loi 2021-894 indexés mais aucune fiche"
+    },
+    {
+     "type": "ambigu",
+     "recit": "je m'inquiète pour un petit",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Comment devenir famille d'accueil ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       22
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "un enfant est enfermé et battu chez mes voisins",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 3,
+      "vision": [
+       1
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Quel est l'âge minimum pour travailler ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Décrets 2023-89, 2023-90, 2019-779, 2020-907 et loi « 202-894 » indexés, mais aucune fiche.",
+    "Loi 2019-572 (minorité) et loi 2015-539 (pupilles) : 0 article indexé."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 23,
+   "libelle": "Droit OHADA, sûretés et voies d'exécution",
+   "cles_moteur": [
+    "contrats_dettes_commerce"
+   ],
+   "textes": [
+    {
+     "numero": "Acte uniforme OHADA (sûretés)",
+     "titre": "ACTE UNIFORME PORTANT ORGANISATION DES SURETES (OHADA) — Journal Officiel de l'OHADA, 15e annee, n° 22, 15 fevrier 2011",
+     "date": "2011-02-15",
+     "type": "acte_uniforme",
+     "articles_indexes": 228,
+     "articles_citables": 228,
+     "lecture": "CALQUE_TEXTE",
+     "reference": "VERIFIE",
+     "source": "https://www.ohada.org/wp-content/uploads/2016/05/JO_OHADA_Journal_officiel_n_22.pdf",
+     "domaine_officiel": true
+    }
+   ],
+   "fiches": [
+    {
+     "id": "CONTRA_1",
+     "titre": "Définition de la sûreté (OHADA)",
+     "article": "1",
+     "texte": "Acte uniforme OHADA",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": []
+    },
+    {
+     "id": "CONTRA_4",
+     "titre": "Sûretés personnelles et cautionnement (OHADA)",
+     "article": "4",
+     "texte": "Acte uniforme OHADA",
+     "reference": "VERIFIE",
+     "lecture_texte": "CALQUE_TEXTE",
+     "questions": []
+    }
+   ],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Mon ami m'a demandé de me porter caution pour son prêt bancaire",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "CONTRA_4"
+      ],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "la banque veut saisir ma maison hypotequée",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 1,
+      "vision": [
+       3,
+       8,
+       23
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "les fiches CONTRA_1 et CONTRA_4 n'ont pas de question de clarification"
+    },
+    {
+     "type": "ambigu",
+     "recit": "quelqu'un me doit de l'argent",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Le créancier a fait saisir mon salaire, comment contester la saisie ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "ELEVEE",
+      "verrous": 1,
+      "vision": [
+       4,
+       23
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "recit": "le commissaire de justice est devant ma porte pour saisir mes meubles",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "CRITIQUE",
+      "verrous": 2,
+      "vision": [
+       23
+      ]
+     }
+    },
+    {
+     "type": "abstention",
+     "recit": "Combien de temps a le créancier pour vendre les biens saisis ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       23
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 6,
+   "scenarios_reussis": 6,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 1,
+   "lacunes": [
+    "Seul l'Acte uniforme portant organisation des sûretés est présent (2 fiches de définition).",
+    "Acte uniforme sur le recouvrement et les voies d'exécution absent : saisies non couvertes.",
+    "Aucune question de clarification."
+   ],
+   "statut_technique": "PARTIEL",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  },
+  {
+   "code": 24,
+   "libelle": "Droit international privé et commerce international",
+   "cles_moteur": [],
+   "textes": [],
+   "fiches": [],
+   "questions": [],
+   "scenarios": [
+    {
+     "type": "simple",
+     "recit": "Je suis marié avec une étrangère et nous voulons divorcer à l'étranger",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "clarification",
+      "fiches": [
+       "FAMILL_19"
+      ],
+      "questions": 1,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": []
+     }
+    },
+    {
+     "type": "courant",
+     "recit": "je veu faire reconnaitre un jugement etranger ici",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 1,
+      "vision": [
+       21,
+       24
+      ]
+     }
+    },
+    {
+     "type": "clarif",
+     "resultat": "SANS_OBJET",
+     "raison": "aucune fiche dans ce domaine : pas de cas de clarification possible"
+    },
+    {
+     "type": "ambigu",
+     "recit": "ma famille est à l'étranger",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       21
+      ]
+     }
+    },
+    {
+     "type": "hors",
+     "recit": "Comment faire l'exequatur d'une décision étrangère ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       21,
+       24
+      ]
+     }
+    },
+    {
+     "type": "urgent",
+     "resultat": "SANS_OBJET",
+     "raison": "domaine sans risque typique pour la sécurité d'une personne"
+    },
+    {
+     "type": "abstention",
+     "recit": "Quel est le délai pour une adoption internationale ?",
+     "resultat": "REUSSI",
+     "ecarts": [],
+     "observe": {
+      "etape": "hors_catalogue",
+      "fiches": [],
+      "questions": 0,
+      "urgence": "NORMALE",
+      "verrous": 0,
+      "vision": [
+       2,
+       24
+      ]
+     }
+    }
+   ],
+   "scenarios_executes": 5,
+   "scenarios_reussis": 5,
+   "scenarios_echoues": 0,
+   "scenarios_sans_objet": 2,
+   "lacunes": [
+    "Aucune règle de conflit de lois ; Convention de La Haye 1993 (adoption internationale) présente mais 0 article indexé."
+   ],
+   "statut_technique": "NON COUVERT",
+   "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
+  }
+ ]
+}

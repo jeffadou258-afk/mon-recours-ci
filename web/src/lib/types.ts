@@ -107,6 +107,8 @@ export interface VueHorsCatalogue {
   /** Urgence et verrous : restitués même sans fiche (ex. violences). */
   urgence: VueUrgence | null;
   verrous: VueVerrou[];
+  /** Domaine(s) probable(s) parmi les 24 de la vision, et fiches réellement disponibles. */
+  domainesVision: { code: number; libelle: string; fichesDisponibles: number }[];
   message: string;
   domaines: string[];
   articlesSansFiche: { domaine: string; articles: VueArticleSansFiche[] }[];

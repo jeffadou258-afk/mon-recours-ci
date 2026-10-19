@@ -25,7 +25,8 @@ _MOTS_CLES = {
         "bail", "bailleur", "locataire", "loyer", "caution", "expulsion", "logement",
         "maison", "terrain", "foncier", "proprietaire", "titre foncier", "acd", "quittance",
         "etat des lieux", "syndic", "copropriete", "construction", "permis de construire",
-        "depot de garantie",
+        "depot de garantie", "expropriation", "exproprier", "domaine public", "urbanisme",
+        "deguerpissement", "lotissement", "expulser",
     ),
     "travail": (
         "employeur", "salarie", "contrat de travail", "licenciement", "salaire", "paie",
@@ -44,12 +45,14 @@ _MOTS_CLES = {
         # domaine dans le corpus. « naissance » seul reste trop large.
         "etat civil", "acte de naissance", "declaration de naissance",
         "declarer la naissance", "reconnaitre l'enfant", "reconnaissance de l'enfant",
+        "paternite", "desaveu", "desavouer",
     ),
     "contrats_dettes_commerce": (
         "contrat", "dette", "pret", "facture", "impaye", "remboursement", "creancier",
         "debiteur", "societe", "commercant", "bail commercial", "reconnaissance de dette",
         "cheque", "traite", "garantie", "interet",
         "porter caution", "cautionnement", "pret bancaire", "hypotheque", "nantissement",
+        "surete", "suretes", "ohada",
     ),
     "penal_procedure_penale": (
         "plainte", "police", "gendarmerie", "vol", "escroquerie", "agression", "infraction",
@@ -68,6 +71,17 @@ _MOTS_CLES = {
         "donnees personnelles", "artci", "internet", "reseaux sociaux", "image", "vie privee",
         "photo", "diffusion", "usurpation", "compte bloque", "harcèlement numerique",
         "harcelement numerique",
+    ),
+    # Domaines présents dans config.DOMAINES_JURIDIQUES mais sans mots-clés
+    # jusqu'au 19/10/2026 : ils ne pouvaient JAMAIS être reconnus (audit).
+    "transport_responsabilite_civile": (
+        "accident", "conduite", "conducteur", "volant", "permis de conduire", "code de la route",
+        "telephone au volant", "taxi", "gbaka", "moto", "vehicule", "responsabilite civile",
+        "dommages et interets",
+    ),
+    "sante_droits_usagers": (
+        "hopital", "clinique", "medecin", "erreur medicale", "dossier medical", "soins",
+        "patient", "pharmacie", "infirmier", "cmu",
     ),
     "administratif_voies_de_recours": (
         "mairie", "prefecture", "permis", "etat civil", "acte de naissance", "service public",

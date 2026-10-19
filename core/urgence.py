@@ -15,11 +15,17 @@ from core.garde_fous import normaliser
 
 # Marqueurs de danger immédiat. La personne d'abord, le droit ensuite.
 _MARQUEURS_CRITIQUES = (
-    (r"\b(couteau|machette|arme|pistolet|fusil)\b", "arme mentionnee"),
+    (r"\b(couteaux?|machettes?|armes?|pistolets?|fusils?|kalach\w*)\b", "arme mentionnee"),
     (r"menac\w*[^.]{0,25}(?:tuer|mort|frapper|blesser|faire du mal)", "menace de mort ou de blessures"),
     (r"\b(?:il|elle|ils|elles) (?:va|vont|veut|veulent) me tuer", "menace de mort"),
     (r"menace de mort", "menace de mort"),
     (r"(me|nous) (frappe|bat|batt?e|agresse|violente)", "violences physiques"),
+    (r"m'a (frappe|battu|agresse|blesse|poignarde)", "violences physiques"),
+    (r"(frappe|bat|battu|maltrait\w*|abuse\w*|enferm\w*)[^.]{0,25}\b(les|mes|nos|ses|son|un|une|l')\s?enfants?\b",
+     "danger pour un enfant"),
+    (r"\b(saigne|inconscient|ne respire plus|blesse grave|gravement blesse)\w*", "urgence medicale"),
+    (r"menac\w*[^.]{0,30}(publier|diffuser)[^.]{0,30}(photos?|videos?)[^.]{0,20}(intimes?|nue?s?)",
+     "chantage a la diffusion d'images intimes"),
     (r"violences? conjugales?", "violences conjugales"),
     (r"viol(er|e|s)?\b", "violences sexuelles"),
     (r"sequestr\w*", "sequestration"),
@@ -29,6 +35,8 @@ _MARQUEURS_CRITIQUES = (
     (r"\b(detenu|detenue|ecroue)\b", "detention"),
     (r"expulsion (a lieu |prevue )?(demain|aujourd'hui|cette semaine|ce matin)", "expulsion imminente"),
     (r"(les |on ) (huissier|force de l'ordre)\w* (sont|est) (devant|a) (ma|la) (porte|maison)", "execution en cours"),
+    (r"(huissier|commissaire de justice|forces? de l'ordre|police)\w*[^.]{0,15} (est|sont) devant (ma|la|notre) (porte|maison)",
+     "execution en cours"),
     (r"enfant[^.]{0,30}(danger|maltrait|frappe|bat|abuse)", "danger pour un enfant"),
     (r"mineur[^.]{0,25}(danger|maltrait|violence)", "danger pour un mineur"),
     (r"je (veux|vais) (me tuer|mourir|en finir)", "detresse / risque vital"),
@@ -42,6 +50,11 @@ _MARQUEURS_ELEVES = (
     (r"expuls\w*", "procedure d'expulsion"),
     (r"(mise en demeure|sommation)", "mise en demeure"),
     (r"(commandement de payer|saisie|saisie-vente|saisie des salaires)", "voie d'execution"),
+    (r"\bsaisir\b", "voie d'execution"),
+    (r"(demolir|detruire|raser|deguerpi\w*)[^.]{0,40}(demain|aujourd'hui|cette semaine|ce matin)", "demolition imminente"),
+    (r"(demain|aujourd'hui|cette semaine)[^.]{0,40}(demolir|detruire|raser|deguerpi\w*)", "demolition imminente"),
+    (r"\b(il|elle|ils|elles|on) (me|nous) menac\w*", "menaces"),
+    (r"\bmenace (de|d')\w*", "menaces"),
     (r"\bhuissier\w*", "commissaire de justice"),
     (r"licenciement", "licenciement"),
     (r"(convocation|entretien prealable) (de|a) licenciement", "procedure disciplinaire"),
@@ -66,7 +79,7 @@ def detecter(texte):
     declencheurs_critiques = []
     for motif, libelle in _MARQUEURS_CRITIQUES:
         m = re.search(motif, norm)
-        if m:
+        if m and libelle not in {d["libelle"] for d in declencheurs_critiques}:
             declencheurs_critiques.append({"libelle": libelle, "detecte": m.group(0)})
 
     if declencheurs_critiques:
@@ -85,7 +98,7 @@ def detecter(texte):
     declencheurs_eleves = []
     for motif, libelle in _MARQUEURS_ELEVES:
         m = re.search(motif, norm)
-        if m:
+        if m and libelle not in {d["libelle"] for d in declencheurs_eleves}:
             declencheurs_eleves.append({"libelle": libelle, "detecte": m.group(0)})
 
     if declencheurs_eleves:

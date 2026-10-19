@@ -173,6 +173,14 @@ function horsCatalogue(reponse: Objet, domainesData: unknown, d: Objet = {}): Vu
     statut: "CONCLUSION_IMPOSSIBLE",
     urgence: urgence(d.urgence),
     verrous: verrous(d.verrous_humains),
+    domainesVision: liste(reponse.domaines_vision)
+      .filter(estObjet)
+      .map((v) => ({
+        code: nombre(v.code) ?? 0,
+        libelle: texteRequis(v.libelle),
+        fichesDisponibles: nombre(v.fiches_disponibles) ?? 0,
+      }))
+      .filter((v) => v.code >= 1 && v.code <= 24 && v.libelle.length > 0),
     message: texteRequis(
       reponse.message,
       "Aucune fiche de réponse ne correspond à votre question.",

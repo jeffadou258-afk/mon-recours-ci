@@ -1,0 +1,630 @@
+{
+ "objet": "Les 24 domaines du document de vision, rapprochés du moteur. Ce fichier ne contient AUCUNE règle de droit : des mots de reconnaissance (pour nommer honnêtement le domaine d'une question, y compris non couverte), et le rattachement des fiches et des textes existants. Le statut d'un domaine n'est jamais déclaré ici : il est mesuré par bin/audit_domaines.py.",
+ "domaines": [
+  {
+   "code": 1,
+   "libelle": "Droit civil",
+   "cles_moteur": [
+    "contrats_dettes_commerce",
+    "transport_responsabilite_civile"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "code civil",
+    "responsabilite civile",
+    "dommages et interets",
+    "voisin",
+    "servitude",
+    "bornage",
+    "contrat de vente",
+    "pret entre particuliers",
+    "reconnaissance de dette",
+    "prescription"
+   ],
+   "lacunes": [
+    "Aucun texte de droit civil général (Code civil, obligations, responsabilité) dans le corpus."
+   ]
+  },
+  {
+   "code": 2,
+   "libelle": "Droit de la famille",
+   "cles_moteur": [
+    "famille_mariage_filiation"
+   ],
+   "fiches": [
+    "FAMILL_1",
+    "FAMILL_2",
+    "FAMILL_4",
+    "FAMILL_6",
+    "FAMILL_9",
+    "FAMILL_19",
+    "FAMILL_20",
+    "FAMILL_21",
+    "FAMILL_22",
+    "FAMILL_24",
+    "FAMILL_26"
+   ],
+   "textes": [
+    "2019-571",
+    "2018-862",
+    "2018-863",
+    "2019-572"
+   ],
+   "reconnaissance": [
+    "mariage",
+    "divorce",
+    "filiation",
+    "paternite",
+    "pension alimentaire",
+    "garde des enfants",
+    "succession",
+    "heritage",
+    "etat civil",
+    "acte de naissance",
+    "reconnaitre l'enfant",
+    "dot",
+    "concubinage",
+    "adoption"
+   ],
+   "lacunes": [
+    "Seule la filiation (loi 2019-571) a des fiches.",
+    "Mariage, divorce, pension alimentaire, successions : aucun texte au corpus.",
+    "État civil (2018-862), minorité (2019-572), adoption, pupilles : textes présents mais 0 article indexé.",
+    "Loi « 202-894 » : numéro du document à vérifier (2021-894 probable, non confirmé)."
+   ]
+  },
+  {
+   "code": 3,
+   "libelle": "Droit immobilier, foncier et logement",
+   "cles_moteur": [
+    "logement_baux_foncier"
+   ],
+   "fiches": [
+    "LOGEME_414",
+    "LOGEME_415",
+    "LOGEME_416",
+    "LOGEME_423",
+    "LOGEME_440",
+    "LOGEME_443",
+    "LOGEME_445"
+   ],
+   "textes": [
+    "2019-576",
+    "2020-623"
+   ],
+   "reconnaissance": [
+    "bail",
+    "bailleur",
+    "locataire",
+    "loyer",
+    "caution",
+    "expulsion",
+    "logement",
+    "proprietaire",
+    "titre foncier",
+    "acd",
+    "terrain",
+    "maison"
+   ],
+   "lacunes": [
+    "Loi 2025-221 (contentieux du bail, exécution des expulsions) non intégrée : la procédure d'expulsion n'est couverte que par les articles 443 et 445 du Code de la construction.",
+    "Bail commercial, copropriété, titre foncier, ACD : aucune fiche.",
+    "Les lectures des fiches et les questions ne sont pas relues par un juriste."
+   ]
+  },
+  {
+   "code": 4,
+   "libelle": "Droit du travail et droit social",
+   "cles_moteur": [
+    "travail"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "employeur",
+    "salaire",
+    "licenciement",
+    "contrat de travail",
+    "patron",
+    "cnps",
+    "heures supplementaires",
+    "conge",
+    "demission",
+    "inspection du travail",
+    "licencie",
+    "licencier",
+    "licenciement",
+    "indemnite de licenciement"
+   ],
+   "lacunes": [
+    "Aucun texte du droit du travail (Code du travail, conventions collectives, CNPS)."
+   ]
+  },
+  {
+   "code": 5,
+   "libelle": "Droit pénal et procédure pénale",
+   "cles_moteur": [
+    "penal_procedure_penale"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "plainte",
+    "police",
+    "gendarmerie",
+    "vol",
+    "escroquerie",
+    "agression",
+    "garde a vue",
+    "prison",
+    "procureur",
+    "frappe",
+    "viol",
+    "arnaque"
+   ],
+   "lacunes": [
+    "Aucun texte pénal (Code pénal, Code de procédure pénale)."
+   ]
+  },
+  {
+   "code": 6,
+   "libelle": "Droit commercial et droit des affaires",
+   "cles_moteur": [
+    "contrats_dettes_commerce"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "societe",
+    "commercant",
+    "registre du commerce",
+    "rccm",
+    "bail commercial",
+    "fonds de commerce",
+    "associe",
+    "gerant",
+    "facture impayee"
+   ],
+   "lacunes": [
+    "Aucun Acte uniforme de droit commercial ou des sociétés."
+   ]
+  },
+  {
+   "code": 7,
+   "libelle": "Droit de la consommation",
+   "cles_moteur": [
+    "consommation"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "produit defectueux",
+    "remboursement",
+    "achat",
+    "vendeur",
+    "garantie du produit",
+    "abonnement",
+    "publicite trompeuse",
+    "commande",
+    "livraison"
+   ],
+   "lacunes": [
+    "Aucun texte de droit de la consommation."
+   ]
+  },
+  {
+   "code": 8,
+   "libelle": "Droit bancaire et crédit",
+   "cles_moteur": [
+    "contrats_dettes_commerce"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "banque",
+    "credit",
+    "pret bancaire",
+    "compte bancaire",
+    "microfinance",
+    "taux d'interet",
+    "cheque",
+    "carte bancaire",
+    "mobile money"
+   ],
+   "lacunes": [
+    "Aucun texte bancaire (UEMOA, BCEAO, microfinance)."
+   ]
+  },
+  {
+   "code": 9,
+   "libelle": "Droit administratif",
+   "cles_moteur": [
+    "administratif_voies_de_recours"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "mairie",
+    "prefecture",
+    "administration",
+    "fonctionnaire",
+    "recours administratif",
+    "service public",
+    "permis",
+    "concours de la fonction publique"
+   ],
+   "lacunes": [
+    "Aucun texte de procédure administrative."
+   ]
+  },
+  {
+   "code": 10,
+   "libelle": "Droit constitutionnel et libertés fondamentales",
+   "cles_moteur": [],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "constitution",
+    "liberte d'expression",
+    "droit de manifester",
+    "manifestation",
+    "election",
+    "vote",
+    "liberte de culte",
+    "discrimination"
+   ],
+   "lacunes": [
+    "Constitution absente du corpus."
+   ]
+  },
+  {
+   "code": 11,
+   "libelle": "Droit fiscal",
+   "cles_moteur": [
+    "administratif_voies_de_recours"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "impot",
+    "impots",
+    "taxe",
+    "dgi",
+    "declaration fiscale",
+    "patente",
+    "tva",
+    "redressement fiscal",
+    "contribution fonciere"
+   ],
+   "lacunes": [
+    "Code général des impôts et lois de finances absents."
+   ]
+  },
+  {
+   "code": 12,
+   "libelle": "Droit des assurances",
+   "cles_moteur": [],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "assurance",
+    "assureur",
+    "sinistre",
+    "indemnisation de l'assurance",
+    "police d'assurance",
+    "cima",
+    "prime d'assurance"
+   ],
+   "lacunes": [
+    "Code CIMA absent."
+   ]
+  },
+  {
+   "code": 13,
+   "libelle": "Droit des transports et circulation routière",
+   "cles_moteur": [
+    "transport_responsabilite_civile"
+   ],
+   "fiches": [
+    "TRANSP_2"
+   ],
+   "textes": [
+    "2013-711"
+   ],
+   "reconnaissance": [
+    "accident de la route",
+    "accident de voiture",
+    "permis de conduire",
+    "conduite",
+    "volant",
+    "code de la route",
+    "taxi",
+    "gbaka",
+    "moto",
+    "amende routiere"
+   ],
+   "lacunes": [
+    "Une seule situation couverte (téléphone au volant, décret 2013-711, 6 articles).",
+    "Code de la route, accidents et indemnisation : absents.",
+    "Aucune question de clarification pour la fiche."
+   ]
+  },
+  {
+   "code": 14,
+   "libelle": "Droit du numérique et données personnelles",
+   "cles_moteur": [
+    "donnees_personnelles_numerique"
+   ],
+   "fiches": [],
+   "textes": [
+    "2013-450",
+    "2013-451",
+    "2013-546"
+   ],
+   "reconnaissance": [
+    "donnees personnelles",
+    "reseaux sociaux",
+    "facebook",
+    "whatsapp",
+    "piratage",
+    "compte pirate",
+    "photo publiee",
+    "cybercriminalite",
+    "arnaque en ligne",
+    "artci"
+   ],
+   "lacunes": [
+    "Lois 2013-450, 2013-451 et 2013-546 indexées par OCR non recoupé : 179 articles neutralisés (non citables), aucune fiche."
+   ]
+  },
+  {
+   "code": 15,
+   "libelle": "Droit de la santé",
+   "cles_moteur": [
+    "sante_droits_usagers"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "hopital",
+    "clinique",
+    "medecin",
+    "erreur medicale",
+    "dossier medical",
+    "soins",
+    "patient",
+    "pharmacie",
+    "cmu"
+   ],
+   "lacunes": [
+    "Aucun texte de santé ou de droits des patients."
+   ]
+  },
+  {
+   "code": 16,
+   "libelle": "Droit des associations et organisations",
+   "cles_moteur": [
+    "associations_organisations_religieuses"
+   ],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "association",
+    "ong",
+    "eglise",
+    "mosquee",
+    "statuts",
+    "assemblee generale",
+    "tresorier",
+    "cotisation",
+    "cooperative"
+   ],
+   "lacunes": [
+    "Aucun texte sur les associations."
+   ]
+  },
+  {
+   "code": 17,
+   "libelle": "Droit de l'éducation",
+   "cles_moteur": [],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "ecole",
+    "eleve",
+    "inscription scolaire",
+    "examen",
+    "bac",
+    "bepc",
+    "universite",
+    "frais de scolarite",
+    "enseignant",
+    "exclusion de l'ecole"
+   ],
+   "lacunes": [
+    "Aucun texte sur l'éducation."
+   ]
+  },
+  {
+   "code": 18,
+   "libelle": "Droit rural et agricole",
+   "cles_moteur": [
+    "logement_baux_foncier"
+   ],
+   "fiches": [],
+   "textes": [
+    "98-750"
+   ],
+   "reconnaissance": [
+    "foncier rural",
+    "plantation",
+    "champ",
+    "terre coutumiere",
+    "certificat foncier",
+    "village",
+    "cacao",
+    "agriculteur",
+    "planteur"
+   ],
+   "lacunes": [
+    "Loi 98-750 (foncier rural) indexée par OCR non recoupé, 29 articles, aucune fiche ni relecture."
+   ]
+  },
+  {
+   "code": 19,
+   "libelle": "Droit de l'environnement et de l'urbanisme",
+   "cles_moteur": [
+    "logement_baux_foncier"
+   ],
+   "fiches": [
+    "LOGEME_181",
+    "LOGEME_238",
+    "LOGEME_69"
+   ],
+   "textes": [
+    "2020-624"
+   ],
+   "reconnaissance": [
+    "permis de construire",
+    "urbanisme",
+    "lotissement",
+    "deguerpissement",
+    "expropriation",
+    "domaine public",
+    "pollution",
+    "dechets",
+    "environnement",
+    "pollue",
+    "polluer",
+    "pollution de la riviere",
+    "usine qui pollue"
+   ],
+   "lacunes": [
+    "Trois fiches de définition (domaine public, expropriation, réserves foncières) sans question de clarification.",
+    "Code de l'environnement absent ; procédure et indemnisation d'expropriation non détaillées dans les fiches."
+   ]
+  },
+  {
+   "code": 20,
+   "libelle": "Propriété intellectuelle",
+   "cles_moteur": [],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "droit d'auteur",
+    "marque",
+    "brevet",
+    "contrefacon",
+    "plagiat",
+    "oapi",
+    "burida",
+    "logo copie"
+   ],
+   "lacunes": [
+    "Accord de Bangui (OAPI) et textes de propriété intellectuelle absents."
+   ]
+  },
+  {
+   "code": 21,
+   "libelle": "Droit des étrangers et nationalité",
+   "cles_moteur": [],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "nationalite",
+    "carte de sejour",
+    "titre de sejour",
+    "etranger",
+    "naturalisation",
+    "expulsion du territoire",
+    "passeport",
+    "visa"
+   ],
+   "lacunes": [
+    "Code de la nationalité et textes sur le séjour absents."
+   ]
+  },
+  {
+   "code": 22,
+   "libelle": "Protection de l'enfant et des personnes vulnérables",
+   "cles_moteur": [
+    "famille_mariage_filiation"
+   ],
+   "fiches": [],
+   "textes": [
+    "2023-89",
+    "2023-90",
+    "202-894",
+    "2019-779",
+    "2020-907"
+   ],
+   "reconnaissance": [
+    "enfant maltraite",
+    "maltraitance",
+    "travail des enfants",
+    "enfant en danger",
+    "famille d'accueil",
+    "orphelin",
+    "personne agee",
+    "handicap",
+    "mineur abandonne"
+   ],
+   "lacunes": [
+    "Décrets 2023-89, 2023-90, 2019-779, 2020-907 et loi « 202-894 » indexés, mais aucune fiche.",
+    "Loi 2019-572 (minorité) et loi 2015-539 (pupilles) : 0 article indexé."
+   ]
+  },
+  {
+   "code": 23,
+   "libelle": "Droit OHADA, sûretés et voies d'exécution",
+   "cles_moteur": [
+    "contrats_dettes_commerce"
+   ],
+   "fiches": [
+    "CONTRA_1",
+    "CONTRA_4"
+   ],
+   "textes": [
+    "AU-SURETES"
+   ],
+   "reconnaissance": [
+    "ohada",
+    "surete",
+    "hypotheque",
+    "nantissement",
+    "cautionnement",
+    "porter caution",
+    "saisie",
+    "huissier",
+    "commissaire de justice",
+    "recouvrement"
+   ],
+   "lacunes": [
+    "Seul l'Acte uniforme portant organisation des sûretés est présent (2 fiches de définition).",
+    "Acte uniforme sur le recouvrement et les voies d'exécution absent : saisies non couvertes.",
+    "Aucune question de clarification."
+   ]
+  },
+  {
+   "code": 24,
+   "libelle": "Droit international privé et commerce international",
+   "cles_moteur": [],
+   "fiches": [],
+   "textes": [],
+   "reconnaissance": [
+    "etranger et mariage",
+    "mariage avec un etranger",
+    "divorce a l'etranger",
+    "jugement etranger",
+    "exequatur",
+    "import export",
+    "transfert d'argent a l'etranger",
+    "adoption internationale"
+   ],
+   "lacunes": [
+    "Aucune règle de conflit de lois ; Convention de La Haye 1993 (adoption internationale) présente mais 0 article indexé."
+   ]
+  }
+ ]
+}

@@ -189,3 +189,19 @@ test("compréhension : le résumé n'est transmis qu'en mode modèle de langage"
   assert.equal(avec.comprehension.resume, "La personne a quitté le logement.");
   assert.equal(absent.comprehension.mode, "deterministe");
 });
+
+test("hors catalogue : domaine de la vision transmis, valeurs hors bornes écartées", () => {
+  const vue = assainirOuverture({
+    etape: "hors_catalogue",
+    reponse: {
+      statut_reponse: "CONCLUSION_IMPOSSIBLE",
+      message: "Aucune fiche.",
+      domaines_vision: [
+        { code: 4, libelle: "Droit du travail et droit social", fiches_disponibles: 0 },
+        { code: 99, libelle: "Inventé", fiches_disponibles: 3 },
+      ],
+    },
+  });
+  if (vue.etape !== "hors_catalogue") return assert.fail("hors catalogue attendu");
+  assert.deepEqual(vue.domainesVision, [{ code: 4, libelle: "Droit du travail et droit social", fichesDisponibles: 0 }]);
+});

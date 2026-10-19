@@ -112,6 +112,37 @@ def charger(chemin=None, chemin_db=None):
     return fiches
 
 
+def _distance_au_plus_un(a, b):
+    """Vrai si les deux mots diffèrent d'au plus une lettre (ajout, retrait, remplacement)."""
+    if a == b:
+        return True
+    if abs(len(a) - len(b)) > 1:
+        return False
+    if len(a) > len(b):
+        a, b = b, a
+    if len(a) == len(b):
+        return sum(1 for x, y in zip(a, b) if x != y) <= 1
+    i = j = ecarts = 0
+    while i < len(a) and j < len(b):
+        if a[i] == b[j]:
+            i += 1
+        else:
+            ecarts += 1
+            if ecarts > 1:
+                return False
+        j += 1
+    return True
+
+
+def _mot_present(mot, mots_du_texte):
+    """Mot entier présent, ou à une faute près pour les mots de 5 lettres et plus."""
+    if mot in mots_du_texte:
+        return True
+    if len(mot) < 5:
+        return False
+    return any(len(m) >= 5 and _distance_au_plus_un(mot, m) for m in mots_du_texte)
+
+
 def _correspond(declencheur, texte_normalise):
     """Un déclencheur tombe-t-il dans le texte ?
 
@@ -120,14 +151,22 @@ def _correspond(declencheur, texte_normalise):
     déclencheur « reprendre le logement » — un mot intercalé suffisait à perdre
     la fiche. Les mots courts (< 4 lettres) sont ignorés : ils n'ont pas de
     pouvoir discriminant.
+
+    Correctifs du 19/10/2026 (audit des 24 domaines) :
+      * MOTS ENTIERS uniquement : « reprise » tombait dans « entreprise » et
+        servait le congé du bailleur à une question de marque ;
+      * UNE FAUTE tolérée par mot de 5 lettres ou plus (« reconaitre »,
+        « volan ») : l'utilisateur n'a pas à écrire sans faute.
     """
     declencheur = normaliser(declencheur)
     if not declencheur:
         return False
-    if declencheur in texte_normalise:
+    if re.search(r"(?<![a-z0-9])%s(?![a-z0-9])" % re.escape(declencheur), texte_normalise):
         return True
-    mots = [mot for mot in declencheur.split() if len(mot) >= 4]
-    return bool(mots) and all(mot in texte_normalise for mot in mots)
+    mots_du_texte = set(re.findall(r"[a-z0-9']+", texte_normalise))
+    mots_du_texte |= {m.split("'", 1)[1] for m in mots_du_texte if "'" in m}
+    mots = [mot for mot in re.findall(r"[a-z0-9']+", declencheur) if len(mot) >= 4]
+    return bool(mots) and all(_mot_present(mot, mots_du_texte) for mot in mots)
 
 
 def pour_demande(demande, domaines=(), fiches=None, chemin_db=None, scores=None):
@@ -141,14 +180,23 @@ def pour_demande(demande, domaines=(), fiches=None, chemin_db=None, scores=None)
     fiches = fiches if fiches is not None else charger(chemin_db=chemin_db)
     texte = normaliser(demande or "")
     retenues, par_domaine = [], []
+    def note(domaine):
+        return ((scores or {}).get(domaine) or {}).get("score", 0)
+
     for fiche in fiches:
-        if any(_correspond(d, texte) for d in fiche.get("declencheurs", ())):
+        touches = [d for d in fiche.get("declencheurs", ()) if _correspond(d, texte)]
+        # Un déclencheur d'UN SEUL mot (« préavis », « reprise », « résiliation »)
+        # ne suffit que si le domaine de la fiche est reconnu dans le récit :
+        # sinon « licencié sans préavis » servait le congé du BAILLEUR et
+        # « ma police d'assurance résiliée » la résiliation du BAIL (audit 19/10).
+        if touches and scores is not None and note(fiche["domaine"]) == 0 and \
+                all(len(normaliser(d).split()) == 1 for d in touches):
+            touches = []
+        if touches:
             retenues.append(fiche)
         elif fiche["domaine"] in domaines:
             par_domaine.append(fiche)
     if scores and len({f["domaine"] for f in retenues}) > 1:
-        def note(domaine):
-            return (scores.get(domaine) or {}).get("score", 0)
         meilleure = max(note(f["domaine"]) for f in retenues)
         retenues = [f for f in retenues if note(f["domaine"]) == meilleure]
     # Si aucun déclencheur ne tombe, on ne sert rien : proposer des articles au
