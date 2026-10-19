@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import {
   assainirOuverture,
   assainirReponse,
+  assainirSuite,
   assainirSante,
   ReponseInattendue,
 } from "../../src/lib/server/assainir";
@@ -17,7 +18,17 @@ test("clarification réelle : fiches, questions, urgence et verrous conservés",
   assert.equal(vue.urgence?.niveau, "ELEVEE");
   assert.equal(vue.fiches[0]?.article, "445");
   assert.equal(vue.fiches[0]?.etatVerification, "VERIFIE");
-  assert.deepEqual(vue.questions, [{ cle: "logement", question: "S'agit-il d'un bail à usage d'habitation ?" }]);
+  assert.deepEqual(vue.questions, [
+    {
+      cle: "logement",
+      question: "S'agit-il d'un bail à usage d'habitation ?",
+      pourquoi: null,
+      suggestion: null,
+      confirmation: null,
+    },
+  ]);
+  assert.equal(vue.tour, 1);
+  assert.deepEqual(vue.contradictions, []);
   assert.equal(vue.verrous.length, 2);
   assert.equal(vue.verrous[0]?.code, "RISQUE_PERTE_DE_DROITS");
   assert.ok(!JSON.stringify(vue).includes("dossier_id"));
@@ -108,4 +119,60 @@ test("champs de type inattendu : remplacés par une absence, pas par une valeur 
   assert.equal(vue.sources[0]?.recoupe, false);
   assert.equal(vue.sources[0]?.etatVerification, "NON_VERIFIE");
   assert.deepEqual(vue.demarches, ["a", "3"]);
+});
+
+test("tour suivant : questions, suggestion, confirmation et contradiction transmises", () => {
+  const vue = assainirSuite({
+    etape: "clarification",
+    dossier_id: "web-secret",
+    tour: 2,
+    questions: [
+      {
+        cle: "depot_plus_deux_mois",
+        question: "Le dépôt dépasse-t-il deux mois de loyer ?",
+        pourquoi: "L'article 416 fixe un plafond.",
+        suggestion: { valeur: "oui", indice: "caution de trois mois" },
+        confirmation: "Votre récit mentionne « caution de trois mois »…",
+      },
+      { cle: "x", question: "Pirate ?", suggestion: { valeur: "<script>", indice: "a" } },
+    ],
+    contradictions: [{ cle: "depot_plus_deux_mois", message: "Votre récit mentionne…", recit: "x" }],
+    statut_questions: "A_RELIRE_PAR_UN_JURISTE",
+  });
+  assert.equal(vue.etape, "clarification");
+  if (vue.etape !== "clarification") return;
+  assert.equal(vue.tour, 2);
+  assert.equal(vue.questions[0]?.suggestion?.valeur, "oui");
+  assert.match(vue.questions[0]?.confirmation ?? "", /caution de trois mois/);
+  assert.equal(vue.questions[1]?.suggestion, null, "une valeur de suggestion inconnue est écartée");
+  assert.deepEqual(vue.contradictions, [{ cle: "depot_plus_deux_mois", message: "Votre récit mentionne…" }]);
+  assert.equal(vue.statutQuestions, "A_RELIRE_PAR_UN_JURISTE");
+  assert.ok(!JSON.stringify(vue).includes("web-secret"));
+});
+
+test("résultat : lectures au vu des réponses, manques et contradictions transmis", () => {
+  const brut = fixture("repondre_caution");
+  const data = structuredClone(brut.data);
+  data.reponse.sections["3_application_aux_faits"] = {
+    statut: "A_RELIRE_PAR_UN_JURISTE",
+    note: "Lectures, pas des citations.",
+    lignes: [
+      {
+        cle: "depot_plus_deux_mois",
+        question: "Le dépôt dépasse-t-il deux mois de loyer ?",
+        reponse: "oui",
+        lecture: "Selon l'article 416, le dépôt ne peut excéder deux mois de loyer.",
+        articles: [{ article: "416", numero_texte: "2019-576" }],
+        alerte: false,
+      },
+    ],
+  };
+  data.reponse.sections["5_informations_manquantes"] = [{ cle: "q", question: "Avez-vous quitté le logement ?", pourquoi: "Fin de contrat." }];
+  data.reponse.sections["5_contradictions"] = [{ cle: "q", message: "Le récit et la réponse divergent." }];
+  const vue = assainirSuite(data);
+  assert.equal(vue.etape, "reponse");
+  if (vue.etape !== "reponse") return;
+  assert.equal(vue.applicationFaits?.lignes[0]?.articles[0]?.numeroTexte, "2019-576");
+  assert.equal(vue.manquantes[0]?.pourquoi, "Fin de contrat.");
+  assert.deepEqual(vue.contradictions, ["Le récit et la réponse divergent."]);
 });

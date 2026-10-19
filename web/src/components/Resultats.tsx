@@ -89,6 +89,30 @@ export function VueResultat({ vue, urgence }: { vue: VueReponse; urgence: VueUrg
         </section>
       ) : null}
 
+      {vue.applicationFaits && vue.applicationFaits.lignes.length > 0 ? (
+        <section className="bloc" aria-labelledby="titre-application-faits">
+          <h2 id="titre-application-faits">Au vu de vos réponses</h2>
+          <ul className="lectures">
+            {vue.applicationFaits.lignes.map((l, i) => (
+              <li key={i} className={l.alerte ? "lecture lecture--alerte" : "lecture"}>
+                <p className="lecture__question">
+                  {l.question} <strong>{l.reponse === "oui" ? "Oui" : l.reponse === "non" ? "Non" : l.reponse}</strong>
+                </p>
+                <p className="lecture__texte">{l.lecture}</p>
+                {l.articles.length > 0 ? (
+                  <p className="lecture__ref">
+                    {l.articles
+                      .map((a) => `Article ${a.article}${a.numeroTexte ? ` (texte n° ${a.numeroTexte})` : ""}`)
+                      .join(" · ")}
+                  </p>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+          {vue.applicationFaits.note ? <p className="bloc__note">{vue.applicationFaits.note}</p> : null}
+        </section>
+      ) : null}
+
       {vue.demarches.length > 0 ? (
         <section className="bloc" aria-labelledby="titre-demarches">
           <h2 id="titre-demarches">Démarches envisageables</h2>
@@ -97,6 +121,20 @@ export function VueResultat({ vue, urgence }: { vue: VueReponse; urgence: VueUrg
               <li key={i}>{d}</li>
             ))}
           </ol>
+        </section>
+      ) : null}
+
+      {vue.manquantes.length > 0 ? (
+        <section className="bloc bloc--attention" aria-labelledby="titre-manquantes">
+          <h2 id="titre-manquantes">Ce qui manque pour aller plus loin</h2>
+          <ul>
+            {vue.manquantes.map((m, i) => (
+              <li key={i}>
+                {m.question}
+                {m.pourquoi ? <span className="manquante__pourquoi"> — {m.pourquoi}</span> : null}
+              </li>
+            ))}
+          </ul>
         </section>
       ) : null}
 

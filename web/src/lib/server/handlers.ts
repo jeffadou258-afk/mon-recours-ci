@@ -13,7 +13,7 @@ import type { CodeErreur, ErreurApi, ResultatApi } from "../types";
 import { validerDemande, validerReponses } from "../validation";
 import {
   assainirOuverture,
-  assainirReponse,
+  assainirSuite,
   assainirSante,
   ReponseInattendue,
   reponseAnalyseRefusee,
@@ -322,7 +322,7 @@ export async function gererRepondre(requete: Request, dep: Dependances = {}): Pr
   if (!estSucces(reponse)) return traduireEchec(reponse, dep, "/repondre");
 
   try {
-    return succes(assainirReponse((reponse.corps as { data?: unknown }).data));
+    return succes(assainirSuite((reponse.corps as { data?: unknown }).data));
   } catch (e) {
     if (e instanceof ReponseInattendue) return erreur("REPONSE_INVALIDE");
     throw e;

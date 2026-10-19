@@ -1538,3 +1538,18 @@ textarea[aria-invalid="true"] {
   font-size: var(--t-petit);
   color: var(--vert);
 }
+
+/* ── Clarification en plusieurs tours, lectures au vu des réponses ───────── */
+.question__pourquoi { margin: 0.25rem 0 0.5rem; font-size: 0.9rem; color: var(--encre-douce, #5a5a52); }
+.question__suggestion {
+  margin: 0 0 0.5rem; padding: 0.4rem 0.6rem; border-radius: 0.5rem; font-size: 0.88rem;
+  background: color-mix(in oklab, currentColor 6%, transparent);
+}
+.question--confirmation { border-left: 4px solid #b45309; padding-left: 0.75rem; }
+.lectures { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+.lecture { padding: 0.75rem 0.9rem; border-radius: 0.6rem; border: 1px solid color-mix(in oklab, currentColor 14%, transparent); }
+.lecture--alerte { border-color: #b45309; background: color-mix(in oklab, #b45309 8%, transparent); }
+.lecture__question { margin: 0 0 0.35rem; font-size: 0.9rem; }
+.lecture__texte { margin: 0 0 0.35rem; }
+.lecture__ref { margin: 0; font-size: 0.82rem; opacity: 0.8; overflow-wrap: anywhere; }
+.manquante__pourquoi { opacity: 0.8; }

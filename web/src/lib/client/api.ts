@@ -4,7 +4,7 @@
  * dossier (cookie HttpOnly).
  */
 
-import type { ResultatApi, VueOuverture, VueReponse } from "../types";
+import type { ResultatApi, VueOuverture, VueSuite } from "../types";
 
 async function appeler<T>(chemin: string, corps: unknown): Promise<ResultatApi<T>> {
   let reponse: Response;
@@ -49,6 +49,6 @@ export function ouvrirDossier(demande: string): Promise<ResultatApi<VueOuverture
   return appeler<VueOuverture>("/api/ouvrir", { demande });
 }
 
-export function envoyerReponses(reponses: Record<string, string | null>): Promise<ResultatApi<VueReponse>> {
-  return appeler<VueReponse>("/api/repondre", { reponses });
+export function envoyerReponses(reponses: Record<string, string | null>): Promise<ResultatApi<VueSuite>> {
+  return appeler<VueSuite>("/api/repondre", { reponses });
 }

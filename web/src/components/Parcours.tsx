@@ -39,7 +39,7 @@ export function Parcours() {
       titre.focus({ preventScroll: true });
       titre.scrollIntoView?.({ block: "start", behavior: "auto" });
     }
-  }, [etat.phase]);
+  }, [etat.phase, etat.phase === "clarification" ? etat.vue.tour : 0]);
 
   async function lancerOuverture(texte: string) {
     setErreur(null);
@@ -76,6 +76,12 @@ export function Parcours() {
     if (!r.ok) {
       setEtat({ phase: "clarification", vue, envoi: false });
       setErreur({ e: r.erreur, reessayer: () => void lancerReponses(vue, derniereReponse.current) });
+      return;
+    }
+    if (r.data.etape === "clarification") {
+      // Tour suivant : de nouvelles questions (réponse contraire au récit, ou
+      // question ouverte par une réponse précédente).
+      setEtat({ phase: "clarification", vue: r.data, envoi: false });
       return;
     }
     setEtat({ phase: "fin", ouverture: vue, reponse: r.data });
@@ -173,6 +179,7 @@ export function Parcours() {
       {etat.phase === "clarification" ? (
         <>
           <Clarification
+            key={etat.vue.tour}
             vue={etat.vue}
             envoi={etat.envoi}
             onEnvoyer={(reponses) => void lancerReponses(etat.vue, reponses)}

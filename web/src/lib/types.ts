@@ -59,6 +59,17 @@ export interface VueFicheIdentifiee {
 export interface VueQuestion {
   cle: string;
   question: string;
+  /** Pourquoi la question compte (condition de l'article). */
+  pourquoi: string | null;
+  /** Ce que le récit laisse penser : pré-sélection modifiable, jamais une réponse. */
+  suggestion: { valeur: "oui" | "non"; indice: string } | null;
+  /** Message de confirmation quand la réponse précédente contredisait le récit. */
+  confirmation: string | null;
+}
+
+export interface VueContradiction {
+  cle: string;
+  message: string;
 }
 
 export interface VueClarification {
@@ -69,6 +80,11 @@ export interface VueClarification {
   fiches: VueFicheIdentifiee[];
   questions: VueQuestion[];
   noteCorpus: string | null;
+  /** Numéro du tour de questions (1, 2 ou 3). */
+  tour: number;
+  contradictions: VueContradiction[];
+  /** Statut des questions du guide (ex. A_RELIRE_PAR_UN_JURISTE). */
+  statutQuestions: string | null;
 }
 
 export interface VueArticleSansFiche {
@@ -135,6 +151,20 @@ export interface VueBrouillon {
   texte: string | null;
 }
 
+export interface VueLectureFait {
+  question: string;
+  reponse: "oui" | "non" | string;
+  lecture: string;
+  articles: { article: string; numeroTexte: string | null }[];
+  alerte: boolean;
+}
+
+export interface VueApplicationFaits {
+  statut: string | null;
+  note: string | null;
+  lignes: VueLectureFait[];
+}
+
 export interface VueReponse {
   etape: "reponse";
   statut: StatutReponse | string;
@@ -144,6 +174,10 @@ export interface VueReponse {
   noteFaits: string | null;
   droit: VueRegleDroit[];
   application: string | null;
+  /** Lectures des articles au vu des réponses (jamais des citations). */
+  applicationFaits: VueApplicationFaits | null;
+  manquantes: { question: string; pourquoi: string | null }[];
+  contradictions: string[];
   demarches: string[];
   aVerifier: string[];
   sources: VueSource[];
@@ -152,6 +186,9 @@ export interface VueReponse {
   brouillon: VueBrouillon | null;
   avertissement: string | null;
 }
+
+/** Réponse de /api/repondre : un nouveau tour de questions, ou le résultat. */
+export type VueSuite = VueClarification | VueReponse;
 
 export interface VueSante {
   catalogue: { fiches: number; parDomaine: { domaine: string; fiches: string[] }[] };

@@ -97,9 +97,21 @@ test("parcours complet au toucher : décrire → préciser → résultat avec ci
   await page.screenshot({ path: join(CAPTURES, "02-clarification-mobile.png"), fullPage: true });
   await sansDefilementHorizontal(page);
 
-  await page.getByRole("radio", { name: "Oui" }).tap();
-  assert.ok(await page.getByRole("radio", { name: "Oui" }).isChecked());
-  await page.getByRole("button", { name: "Obtenir le résultat" }).tap();
+  // Le récit pré-remplit ce qu'il dit clairement ; la personne le voit et peut corriger.
+  assert.match(await page.locator("main").innerText(), /Pré-rempli d'après votre récit/);
+  const quitte = page.getByRole("group", { name: /Avez-vous quitté le logement/ });
+  assert.ok(await quitte.getByRole("radio", { name: "Oui" }).isChecked(), "« quitté l'appartement » pré-remplit Oui");
+  const bail = page.getByRole("group", { name: /bail à usage d'habitation/ });
+  await bail.getByRole("radio", { name: "Oui" }).tap();
+  assert.ok(await bail.getByRole("radio", { name: "Oui" }).isChecked());
+  await page.getByRole("button", { name: "Envoyer mes réponses" }).tap();
+
+  // Deuxième tour : la réponse « oui » (logement quitté) ouvre une question.
+  await page.getByRole("heading", { name: "Encore quelques précisions" }).waitFor();
+  const manquement = page.getByRole("group", { name: /dégradations, des loyers impayés/ });
+  await manquement.getByRole("radio", { name: "Non" }).tap();
+  await sansDefilementHorizontal(page);
+  await page.getByRole("button", { name: "Envoyer mes réponses" }).tap();
 
   await page.getByRole("heading", { name: "Des textes du corpus correspondent à votre situation" }).waitFor();
   const texte = await page.locator("main").innerText();
@@ -107,6 +119,9 @@ test("parcours complet au toucher : décrire → préciser → résultat avec ci
   assert.match(texte, /Le contrat de location peut prévoir un dépôt de garantie/);
   assert.match(texte, /Référence vérifiée/);
   assert.match(texte, /Faire relire votre situation/);
+  // Lectures des articles au vu des réponses, présentées comme telles.
+  assert.match(texte, /Au vu de vos réponses/);
+  assert.match(texte, /plafond de deux mois de loyer prévu par l'article 416/);
   // Brouillon de courrier : visible, à compléter, copiable.
   assert.match(texte, /BROUILLON — NON ENVOYÉ/);
   assert.match(texte, /À COMPLÉTER/);

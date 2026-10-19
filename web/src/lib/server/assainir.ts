@@ -14,7 +14,9 @@
  */
 
 import type {
+  VueApplicationFaits,
   VueArticleSansFiche,
+  VueContradiction,
   VueBrouillon,
   VueClarification,
   VueFicheIdentifiee,
@@ -27,6 +29,7 @@ import type {
   VueReponse,
   VueSante,
   VueSource,
+  VueSuite,
   VueUrgence,
   VueVerrou,
 } from "../types";
@@ -119,7 +122,42 @@ function question(v: Objet): VueQuestion | null {
   const cle = texte(v.cle);
   const libelle = texte(v.question);
   if (!cle || !libelle) return null;
-  return { cle, question: libelle };
+  const s = objet(v.suggestion);
+  const valeur = texte(s.valeur);
+  const indice = texte(s.indice);
+  return {
+    cle,
+    question: libelle,
+    pourquoi: texte(v.pourquoi),
+    suggestion: (valeur === "oui" || valeur === "non") && indice ? { valeur, indice } : null,
+    confirmation: texte(v.confirmation),
+  };
+}
+
+function contradictions(v: unknown): VueContradiction[] {
+  return liste(v)
+    .filter(estObjet)
+    .map((c) => ({ cle: texteRequis(c.cle), message: texteRequis(c.message) }))
+    .filter((c) => c.cle && c.message);
+}
+
+function clarification(d: Objet): VueClarification {
+  const tour = nombre(d.tour);
+  return {
+    etape: "clarification",
+    avertissement: texte(d.avertissement),
+    urgence: urgence(d.urgence),
+    verrous: verrous(d.verrous_humains),
+    fiches: liste(d.fiches_identifiees).filter(estObjet).map(fiche),
+    questions: liste(d.questions)
+      .filter(estObjet)
+      .map(question)
+      .filter((q): q is VueQuestion => q !== null),
+    noteCorpus: texte(d.note_corpus),
+    tour: tour && tour >= 1 ? Math.floor(tour) : 1,
+    contradictions: contradictions(d.contradictions),
+    statutQuestions: texte(d.statut_questions),
+  };
 }
 
 function horsCatalogue(reponse: Objet, domainesData: unknown): VueHorsCatalogue {
@@ -173,21 +211,7 @@ function refus(reponse: Objet): VueRefus {
 export function assainirOuverture(data: unknown): VueOuverture {
   const d = objet(data);
   const etape = texte(d.etape);
-  if (etape === "clarification") {
-    const vue: VueClarification = {
-      etape: "clarification",
-      avertissement: texte(d.avertissement),
-      urgence: urgence(d.urgence),
-      verrous: verrous(d.verrous_humains),
-      fiches: liste(d.fiches_identifiees).filter(estObjet).map(fiche),
-      questions: liste(d.questions)
-        .filter(estObjet)
-        .map(question)
-        .filter((q): q is VueQuestion => q !== null),
-      noteCorpus: texte(d.note_corpus),
-    };
-    return vue;
-  }
+  if (etape === "clarification") return clarification(d);
   if (etape === "hors_catalogue") return horsCatalogue(objet(d.reponse), d.domaines);
   if (etape === "refus") return refus(objet(d.reponse));
   throw new ReponseInattendue(`étape d'ouverture inconnue : ${String(etape)}`);
@@ -234,6 +258,30 @@ function brouillon(v: unknown): VueBrouillon | null {
   };
 }
 
+function applicationFaits(v: unknown): VueApplicationFaits | null {
+  if (!estObjet(v)) return null;
+  const lignes = liste(v.lignes)
+    .filter(estObjet)
+    .map((l) => ({
+      question: texteRequis(l.question),
+      reponse: texteRequis(l.reponse),
+      lecture: texteRequis(l.lecture),
+      articles: liste(l.articles)
+        .filter(estObjet)
+        .map((a) => ({ article: texteRequis(a.article, "?"), numeroTexte: texte(a.numero_texte) })),
+      alerte: l.alerte === true,
+    }))
+    .filter((l) => l.question && l.lecture);
+  return { statut: texte(v.statut), note: texte(v.note), lignes };
+}
+
+/** `/repondre` peut demander un tour de questions supplémentaire. */
+export function assainirSuite(data: unknown): VueSuite {
+  const d = objet(data);
+  if (texte(d.etape) === "clarification") return clarification(d);
+  return assainirReponse(data);
+}
+
 export function assainirReponse(data: unknown): VueReponse {
   const d = objet(data);
   const etape = texte(d.etape);
@@ -253,6 +301,15 @@ export function assainirReponse(data: unknown): VueReponse {
     noteFaits: texte(faits.note),
     droit: liste(sections["2_droit"]).filter(estObjet).map(regle),
     application: texte(sections["3_application"]),
+    applicationFaits: applicationFaits(sections["3_application_aux_faits"]),
+    manquantes: liste(sections["5_informations_manquantes"])
+      .filter(estObjet)
+      .map((m) => ({ question: texteRequis(m.question), pourquoi: texte(m.pourquoi) }))
+      .filter((m) => m.question),
+    contradictions: liste(sections["5_contradictions"])
+      .filter(estObjet)
+      .map((c) => texteRequis(c.message))
+      .filter((m) => m.length > 0),
     demarches: textes(sections["4_demarches"]),
     aVerifier: textes(sections["5_a_verifier"]),
     sources: liste(sections["6_sources"]).filter(estObjet).map(source),
@@ -277,6 +334,9 @@ export function reponseAnalyseRefusee(): VueReponse {
     noteFaits: null,
     droit: [],
     application: null,
+    applicationFaits: null,
+    manquantes: [],
+    contradictions: [],
     demarches: [],
     aVerifier: [],
     sources: [],

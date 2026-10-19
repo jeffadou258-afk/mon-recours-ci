@@ -33,8 +33,15 @@ interface Props {
 }
 
 export function Clarification({ vue, envoi, onEnvoyer }: Props) {
+  // Une suggestion tirée du récit pré-sélectionne la réponse ; la personne la
+  // voit, peut la changer, et rien n'est envoyé sans son clic.
   const [saisies, setSaisies] = useState<Record<string, Saisie>>(() =>
-    Object.fromEntries(vue.questions.map((q) => [q.cle, { choix: "", precision: "" }])),
+    Object.fromEntries(
+      vue.questions.map((q) => [
+        q.cle,
+        { choix: q.confirmation ? "" : (q.suggestion?.valeur ?? ""), precision: "" },
+      ]),
+    ),
   );
 
   function modifier(cle: string, partiel: Partial<Saisie>) {
@@ -53,8 +60,30 @@ export function Clarification({ vue, envoi, onEnvoyer }: Props) {
   return (
     <section aria-labelledby="titre-clarification">
       <h2 id="titre-clarification" tabIndex={-1} className="titre-etape">
-        {vue.questions.length > 0 ? "Quelques précisions" : "Textes repérés"}
+        {vue.tour > 1
+          ? "Encore quelques précisions"
+          : vue.questions.length > 0
+            ? "Quelques précisions"
+            : "Textes repérés"}
       </h2>
+      {vue.tour > 1 ? (
+        <p className="info">
+          Vos réponses précédentes sont enregistrées. Ces questions complètent ou confirment ce que vous avez
+          indiqué.
+        </p>
+      ) : null}
+
+      {vue.contradictions.length > 0 ? (
+        <section className="bloc bloc--attention" aria-labelledby="titre-contradictions">
+          <h3 id="titre-contradictions">Une réponse ne correspond pas à votre récit</h3>
+          <ul>
+            {vue.contradictions.map((c) => (
+              <li key={c.cle}>{c.message}</li>
+            ))}
+          </ul>
+          <p className="bloc__note">Confirmez ou corrigez ci-dessous : c&apos;est votre réponse qui sera retenue.</p>
+        </section>
+      ) : null}
 
       <BandeauUrgence urgence={vue.urgence} />
       <EncadreVerrous verrous={vue.verrous} />
@@ -93,8 +122,14 @@ export function Clarification({ vue, envoi, onEnvoyer }: Props) {
           const s = saisies[q.cle] ?? { choix: "", precision: "" };
           const idPrecision = `precision-${q.cle}`;
           return (
-            <fieldset key={q.cle} className="question">
-              <legend>{q.question}</legend>
+            <fieldset key={q.cle} className={q.confirmation ? "question question--confirmation" : "question"}>
+              <legend>{q.confirmation ? `À confirmer : ${q.question}` : q.question}</legend>
+              {q.pourquoi ? <p className="question__pourquoi">{q.pourquoi}</p> : null}
+              {q.suggestion && !q.confirmation ? (
+                <p className="question__suggestion">
+                  Pré-rempli d&apos;après votre récit. Modifiez si ce n&apos;est pas exact.
+                </p>
+              ) : null}
               <div className="choix" role="radiogroup">
                 {(
                   [
@@ -130,11 +165,17 @@ export function Clarification({ vue, envoi, onEnvoyer }: Props) {
         })}
         <div className="actions">
           <button type="submit" className="bouton" disabled={envoi} aria-disabled={envoi}>
-            {envoi ? "Analyse en cours…" : "Obtenir le résultat"}
+            {envoi ? "Analyse en cours…" : "Envoyer mes réponses"}
           </button>
         </div>
       </form>
 
+      {vue.statutQuestions === "A_RELIRE_PAR_UN_JURISTE" ? (
+        <p className="bloc__note">
+          Ces questions reprennent les conditions écrites dans les articles. Elles n&apos;ont pas encore été relues par
+          un juriste.
+        </p>
+      ) : null}
       {vue.noteCorpus ? <p className="bloc__note">{vue.noteCorpus}</p> : null}
     </section>
   );
