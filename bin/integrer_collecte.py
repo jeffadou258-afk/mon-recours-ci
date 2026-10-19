@@ -358,11 +358,74 @@ def recouper():
             s.get("similarite_moyenne"), len(r["articles_divergents"])))
 
 
+# ---------------------------------------------------------------------------
+# 4. Intégration des documents OFFICIELS contrôlés (calque texte seulement)
+# ---------------------------------------------------------------------------
+# Domaine du moteur et dossier de rangement, déduits du premier domaine déclaré.
+DOMAINE_MOTEUR = {2: "famille_mariage_filiation", 22: "famille_mariage_filiation",
+                  5: "penal_procedure_penale", 4: "travail", 23: "contrats_dettes_commerce",
+                  10: "administratif_voies_de_recours"}
+
+
+def officialiser(cles=None):
+    """Range les documents EXPLOITABLE_OFFICIEL lus par calque texte et les fait passer
+    par le collecteur du corpus (bin/collecter_domaine.py) et ses garde-fous : hôte
+    officiel, empreinte recalculée, couverture des articles, marques d'éditeur tiers.
+    Un document OCR n'est PAS intégré ici : il exige un recoupement (étape distincte)."""
+    import shutil
+    sys.path.insert(0, os.path.join(RACINE, "bin"))
+    import collecter_domaine
+    inventaire = lire_json(INVENTAIRE)
+    manifeste = {s["cle"]: s for s in lire_json(MANIFESTE)["sources"]}
+    a_collecter = collections.defaultdict(list)
+    for d in inventaire["documents"]:
+        if cles and d["cle"] not in cles:
+            continue
+        if d["statut_controle"] != "EXPLOITABLE_OFFICIEL" or d["methode_extraction"] != "CALQUE_TEXTE":
+            continue
+        if d["integrite_pdf"] != "OK":
+            print("ignoré (PDF non rapatrié ou divergent) : %s" % d["cle"])
+            continue
+        domaine = DOMAINE_MOTEUR.get((d["domaines"] or [None])[0])
+        if not domaine:
+            print("ignoré (aucun domaine du moteur) : %s" % d["cle"])
+            continue
+        dossier, chemin_manifeste = collecter_domaine.chemin_manifeste(domaine)
+        os.makedirs(dossier, exist_ok=True)
+        shutil.copyfile(os.path.join(DOSSIER_PDF, d["cle"] + ".pdf"), os.path.join(dossier, d["cle"] + ".pdf"))
+        resultat = lire_json(os.path.join(DOSSIER_RESULTATS, d["cle"] + ".json"))
+        shutil.copyfile(os.path.join(RACINE, resultat["extraction"]["fichier_texte"]),
+                        os.path.join(dossier, d["cle"] + ".txt"))
+        local = lire_json(chemin_manifeste, {"domaine": domaine, "dossier": os.path.basename(dossier),
+                                             "sources": []})
+        source = manifeste[d["cle"]]
+        entree = {"cle": d["cle"], "titre": source["titre"], "type_texte": source["type_texte"],
+                  "numero_texte": source.get("numero_texte"), "date_texte": source.get("date_texte"),
+                  "autorite": source["autorite"], "url": source["url"], "fichier": d["cle"] + ".pdf",
+                  "pages": d["pages"],
+                  "limites": ("%s Collecté le %s par GitHub Actions (KNOWLEDGE/collecte/resultats/%s.json)."
+                              % (source.get("notes") or "", d["date_recuperation"][:10], d["cle"])).strip()}
+        local["sources"] = [e for e in local["sources"] if e["cle"] != d["cle"]] + [entree]
+        ecrire_json(chemin_manifeste, local)
+        a_collecter[domaine].append(d["cle"])
+    for domaine, liste in sorted(a_collecter.items()):
+        print("== %s : %s" % (domaine, ", ".join(liste)))
+        rapport = collecter_domaine.collecter(domaine, telecharger_si_absent=False)
+        for doc in rapport["documents"]:
+            if doc["cle"] in liste:
+                print("   %-34s %s art=%s %s" % (doc["cle"], doc.get("etat_verification"),
+                                                  doc.get("articles_indexes"), doc.get("motif_non_indexe") or ""))
+
+
 def main(argv=None):
     analyseur = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    analyseur.add_argument("etape", choices=("pdf", "controler", "recouper"))
+    analyseur.add_argument("etape", choices=("pdf", "controler", "recouper", "officialiser"))
+    analyseur.add_argument("--cle", action="append")
     arguments = analyseur.parse_args(argv)
-    {"pdf": rapatrier_pdf, "controler": controler, "recouper": recouper}[arguments.etape]()
+    if arguments.etape == "officialiser":
+        officialiser(arguments.cle)
+    else:
+        {"pdf": rapatrier_pdf, "controler": controler, "recouper": recouper}[arguments.etape]()
     return 0
 
 

@@ -51,6 +51,7 @@ jobs:
       - name: Collecte
         env:
           COLLECTE_DOSSIER_PDF: ${{ runner.temp }}/pdf
+          COLLECTE_BUDGET_S: "2400"
         run: |
           OPTIONS=""
           if [ "${{ inputs.forcer }}" = "true" ]; then OPTIONS="--forcer"; fi

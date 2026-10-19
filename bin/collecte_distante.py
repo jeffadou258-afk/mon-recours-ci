@@ -345,8 +345,16 @@ def main(argv=None):
     if doublons:
         raise SystemExit("clés en double dans le manifeste : %s" % doublons)
 
-    synthese = {"execution": maintenant(), "outils": version_outils(), "traites": [], "ignores": []}
+    synthese = {"execution": maintenant(), "outils": version_outils(), "traites": [], "ignores": [],
+                "reportes": []}
+    # Budget de temps : au-delà, les entrées restantes sont reportées au run suivant
+    # (le workflow se relance tant qu'il en reste) au lieu de perdre tout le run.
+    budget = float(os.environ.get("COLLECTE_BUDGET_S", "2400"))
+    depart = time.time()
     for source in sources:
+        if time.time() - depart > budget:
+            synthese["reportes"].append(source["cle"])
+            continue
         chemin_resultat = os.path.join(DOSSIER_RESULTATS, source["cle"] + ".json")
         if os.path.isfile(chemin_resultat) and not arguments.forcer:
             precedent = json.load(open(chemin_resultat, encoding="utf-8"))
