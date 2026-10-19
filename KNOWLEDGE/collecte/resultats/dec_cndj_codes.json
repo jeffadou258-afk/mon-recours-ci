@@ -1,0 +1,17 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_cndj_codes",
+ "date_recuperation": "2026-10-19T09:34:39+00:00",
+ "duree_s": 1.2,
+ "http": 200,
+ "liens": [
+  "https://biblio.cndj.ci/search/codes",
+  "https://www.cndj.ci/bases-de-recherche/codes-et-recueils-de-textes.html"
+ ],
+ "octets": 31836,
+ "statut": "DECOUVERTE",
+ "titre_page": "Centre National de Documentation Juridique de Côte d'Ivoire",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.cndj.ci/bases-de-recherche/codes-et-recueils-de-textes.html",
+ "url_finale": "https://www.cndj.ci/bases-de-recherche/codes-et-recueils-de-textes.html"
+}

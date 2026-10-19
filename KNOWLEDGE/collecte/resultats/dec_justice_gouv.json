@@ -1,0 +1,14 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_justice_gouv",
+ "date_recuperation": "2026-10-19T09:34:44+00:00",
+ "duree_s": 2.1,
+ "http": 200,
+ "liens": [],
+ "octets": 303,
+ "statut": "DECOUVERTE",
+ "titre_page": "Ministère de la Justice",
+ "type_contenu": "text/html",
+ "url": "https://www.justice.gouv.ci/",
+ "url_finale": "https://www.justice.gouv.ci/"
+}

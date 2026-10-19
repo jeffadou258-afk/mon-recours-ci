@@ -1,0 +1,34 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "aupsrve_2023_senlii",
+ "date_recuperation": "2026-10-19T09:33:14+00:00",
+ "duree_s": 3.2,
+ "extraction": {
+  "caracteres_natifs": 337096,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/aupsrve_2023_senlii.txt",
+  "pages": 113,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:e25a981cab743aa5d8a17cf63f5fdb32023bdd18579037888d21feddc6c6b285"
+ },
+ "fichier_pdf": "aupsrve_2023_senlii.pdf",
+ "http": 200,
+ "marques_tierces_observees": [
+  "creative commons",
+  "laws.africa"
+ ],
+ "octets": 983263,
+ "pdf": {
+  "CreationDate": "Tue Nov 18 16:00:48 2025 UTC",
+  "Creator": "Apache FOP Version 2.4",
+  "PDF version": "1.4",
+  "Pages": "113",
+  "Producer": "Apache FOP Version 2.4",
+  "polices": 5,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:c2def27f6e6f1b9896f5f0f64f17527a282b37e756fc003a284c66949cdd5543",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://senlii.org/en/akn/aa-ohada/act/2023/organisation-des-proc%C3%A9dures-simplifi%C3%A9es-de-recouvrement-et-des-voies-d-ex%C3%A9cution/fra@2024-07-02/source.pdf",
+ "url_finale": "https://senlii.org/en/akn/aa-ohada/act/2023/organisation-des-proc%C3%A9dures-simplifi%C3%A9es-de-recouvrement-et-des-voies-d-ex%C3%A9cution/fra@2024-07-02/source.pdf"
+}

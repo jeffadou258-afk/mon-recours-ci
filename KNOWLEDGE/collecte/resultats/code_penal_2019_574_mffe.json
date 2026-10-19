@@ -1,0 +1,12 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "code_penal_2019_574_mffe",
+ "date_recuperation": "2026-10-19T09:23:28+00:00",
+ "duree_s": 1.7,
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://famille.gouv.ci/public/documents/doc_drcc/loi_2019-574_portant_code_p%C3%A9nal.pdf",
+ "url_finale": "https://famille.gouv.ci/public/documents/doc_drcc/loi_2019-574_portant_code_p%C3%A9nal.pdf"
+}

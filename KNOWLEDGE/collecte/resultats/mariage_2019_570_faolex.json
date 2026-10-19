@@ -1,0 +1,32 @@
+{
+ "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+ "cle": "mariage_2019_570_faolex",
+ "date_recuperation": "2026-10-19T09:23:54+00:00",
+ "duree_s": 0.9,
+ "extraction": {
+  "caracteres_natifs": 44503,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mariage_2019_570_faolex.txt",
+  "pages": 7,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:3ed99cd54fdcb8d8b12202ef7e866e39cf0eba6aad58aa979acd707a84949fcf"
+ },
+ "fichier_pdf": "mariage_2019_570_faolex.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 572678,
+ "pdf": {
+  "CreationDate": "Thu Aug  1 08:39:48 2019 UTC",
+  "Creator": "Hewlett-Packard MFP",
+  "ModDate": "Tue Mar 15 09:25:25 2022 UTC",
+  "PDF version": "1.5",
+  "Pages": "7",
+  "Producer": "ABBYY FineReader 11",
+  "polices": 17,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:ce4a39e45321bb30c55ef2f0061f503b2632f8bc4c38e943dee44ad3e8da7627",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://faolex.fao.org/docs/pdf/ivc208186.pdf",
+ "url_finale": "https://faolex.fao.org/docs/pdf/ivc208186.pdf"
+}

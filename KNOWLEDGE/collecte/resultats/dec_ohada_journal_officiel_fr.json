@@ -1,0 +1,32 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_journal_officiel_fr",
+ "date_recuperation": "2026-10-19T09:34:12+00:00",
+ "duree_s": 2.7,
+ "http": 200,
+ "liens": [
+  "https://www.ohada.org/journal-officiel-de-l-ohada-edition-speciale-nov-2016/",
+  "https://www.ohada.org/journal-officiel-n-01/",
+  "https://www.ohada.org/journal-officiel-n-02/",
+  "https://www.ohada.org/journal-officiel-n-14/",
+  "https://www.ohada.org/journal-officiel-n-17/",
+  "https://www.ohada.org/journal-officiel-n-18/",
+  "https://www.ohada.org/journal-officiel-n-19/",
+  "https://www.ohada.org/journal-officiel-n-21/",
+  "https://www.ohada.org/journal-officiel-n-23/",
+  "https://www.ohada.org/journal-officiel-n-24/",
+  "https://www.ohada.org/journal-officiel/",
+  "https://www.ohada.org/journal-officiel/#main",
+  "https://www.ohada.org/journal-officiel/2/",
+  "https://www.ohada.org/journal-officiel/3/",
+  "https://www.ohada.org/journal-officiel/4/",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F&format=xml"
+ ],
+ "octets": 245004,
+ "statut": "DECOUVERTE",
+ "titre_page": "Journal Officiel – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/journal-officiel/",
+ "url_finale": "https://www.ohada.org/journal-officiel/"
+}

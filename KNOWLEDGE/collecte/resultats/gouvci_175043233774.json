@@ -1,0 +1,9 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "gouvci_175043233774",
+ "date_recuperation": "2026-10-19T09:33:17+00:00",
+ "duree_s": 53.1,
+ "erreur": "échec après 3 essais : <urlopen error [Errno -3] Temporary failure in name resolution>",
+ "statut": "ECHEC_RESEAU",
+ "url": "https://www.gouv.ci/uploads/publications/175043233774.pdf"
+}

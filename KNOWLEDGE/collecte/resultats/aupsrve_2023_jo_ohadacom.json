@@ -1,0 +1,40 @@
+{
+ "categorie_source": "SECONDAIRE_FAC_SIMILE",
+ "cle": "aupsrve_2023_jo_ohadacom",
+ "date_recuperation": "2026-10-19T09:24:17+00:00",
+ "duree_s": 536.3,
+ "extraction": {
+  "caracteres_natifs": 19893,
+  "confiance_ocr_moyenne": 91.5,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/aupsrve_2023_jo_ohadacom.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/aupsrve_2023_jo_ohadacom.txt",
+  "pages": 122,
+  "pages_ocr": 118,
+  "pages_ocr_faibles": [
+   9
+  ],
+  "pages_sans_texte": 118,
+  "sha256_ocr": "sha256:f237f7332af415ac7639dd31fdf87b75456a19bc8f950110a4602d9010d49d11",
+  "sha256_texte": "sha256:16b5c406da46066558580fcca90a2ed2539a1aa3aea59716ad48b252d3d3bc6a"
+ },
+ "fichier_pdf": "aupsrve_2023_jo_ohadacom.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 9179996,
+ "pdf": {
+  "CreationDate": "Wed Nov  8 15:00:53 2023 UTC",
+  "Creator": "QuarkXPress(R) 18.0",
+  "ModDate": "Tue Nov 14 14:40:59 2023 UTC",
+  "PDF version": "1.6",
+  "Pages": "122",
+  "Producer": "QuarkXPress(R) 18.0",
+  "Title": "OHADA",
+  "polices": 8,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:851366a003327a59640a11b668d2a7817ff9308f240d12cf82cc96c2a56489ba",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.ohada.com/uploads/actualite/7010/J.O._special_AUVE_15.11.2023.pdf",
+ "url_finale": "https://www.ohada.com/uploads/actualite/7010/J.O._special_AUVE_15.11.2023.pdf"
+}

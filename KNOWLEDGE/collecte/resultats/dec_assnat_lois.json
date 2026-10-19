@@ -1,0 +1,23 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_assnat_lois",
+ "date_recuperation": "2026-10-19T09:34:46+00:00",
+ "duree_s": 18.5,
+ "http": 200,
+ "liens": [
+  "https://www.assnat.ci/?%EF%83%98-examen-et-adoption-du-projet-de-loi-autorisant-le-president-de-la-republique-a-ratifier-l-accord-portant-creation-de-la-zone-de-libre-echange-continentale-africaine",
+  "https://www.assnat.ci/?-lois-82-",
+  "https://www.assnat.ci/?-projet-de-loi-",
+  "https://www.assnat.ci/?-proposition-de-loi-",
+  "https://www.assnat.ci/CONSTITUTION.pdf",
+  "https://www.assnat.ci/Code-Electoral.pdf",
+  "https://www.assnat.ci/liste_des_depute_anci.pdf",
+  "https://www.assnat.ci/reglement-assembleenationaledecotedivoire.pdf"
+ ],
+ "octets": 136549,
+ "statut": "DECOUVERTE",
+ "titre_page": "Assemblée nationale de Côte d'Ivoire | Site officiel",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://www.assnat.ci/",
+ "url_finale": "https://www.assnat.ci/"
+}

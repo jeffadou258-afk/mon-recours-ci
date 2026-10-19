@@ -1,0 +1,32 @@
+{
+ "categorie_source": "OFFICIEL_INSTITUTION",
+ "cle": "successions_2019_573_assnat",
+ "date_recuperation": "2026-10-19T09:23:55+00:00",
+ "duree_s": 18.2,
+ "extraction": {
+  "caracteres_natifs": 46401,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/successions_2019_573_assnat.txt",
+  "pages": 23,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:bc50955de6bb26de845d94d11a5dce31827844e647b90a3f69f251335ed8899d"
+ },
+ "fichier_pdf": "successions_2019_573_assnat.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 372196,
+ "pdf": {
+  "CreationDate": "Sat May  9 19:18:32 2020 UTC",
+  "Creator": "Microsoft® Word 2016",
+  "ModDate": "Sat May  9 19:18:32 2020 UTC",
+  "PDF version": "1.5",
+  "Pages": "23",
+  "Producer": "Microsoft® Word 2016",
+  "polices": 7,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:31b46f9b0ac6d4f1735569234bd4633413b6cda765a474f4acdf361ec9fc455d",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.assnat.ci/IMG/pdf/loi_relative_aux_successions.pdf",
+ "url_finale": "https://www.assnat.ci/IMG/pdf/loi_relative_aux_successions.pdf"
+}

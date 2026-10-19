@@ -1,0 +1,22 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_actes_uniformes_fr",
+ "date_recuperation": "2026-10-19T09:34:20+00:00",
+ "duree_s": 2.6,
+ "http": 200,
+ "liens": [
+  "https://www.ohada.org/acte-uniforme-relatif-a-la-mediation/",
+  "https://www.ohada.org/acte-uniforme-relatif-au-droit-comptable-et-a-linformation-financiere-audcif/",
+  "https://www.ohada.org/actes-uniformes/",
+  "https://www.ohada.org/actes-uniformes/#main",
+  "https://www.ohada.org/les-acteurs/",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Factes-uniformes%2F",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Factes-uniformes%2F&format=xml"
+ ],
+ "octets": 250536,
+ "statut": "DECOUVERTE",
+ "titre_page": "Actes Uniformes – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/actes-uniformes/",
+ "url_finale": "https://www.ohada.org/actes-uniformes/"
+}

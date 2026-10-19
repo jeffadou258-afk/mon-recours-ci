@@ -1,0 +1,12 @@
+{
+ "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+ "cle": "travail_2015_532_faolex",
+ "date_recuperation": "2026-10-19T09:23:32+00:00",
+ "duree_s": 0.2,
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html",
+ "url": "https://faolex.fao.org/docs/pdf/ivc207091.pdf",
+ "url_finale": "https://faolex.fao.org/docs/pdf/ivc207091.pdf"
+}

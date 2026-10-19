@@ -1,0 +1,19 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_sgg",
+ "date_recuperation": "2026-10-19T09:34:36+00:00",
+ "duree_s": 3.1,
+ "http": 200,
+ "liens": [
+  "http://www.gouv.ci/doc/1747851379Communique-du-Conseil-des-Ministres-du-mercredi-21-mai-2025.pdf",
+  "http://www.gouv.ci/doc/1749070468Communique-du-Conseil-des-Minsitres-du-04-juin-2025.pdf",
+  "http://www.gouv.ci/doc/1750274604Communique-du-Conseil-des-Ministres-du-mercredi-18-juin-2025.pdf",
+  "http://www.gouv.ci/doc/1751487162Communique-du-Conseil-des-Ministres-du-mercredi-02-juillet-2025.pdf"
+ ],
+ "octets": 16550,
+ "statut": "DECOUVERTE",
+ "titre_page": "Sécrétariat Général du Gouvernement de Côte d'Ivoire",
+ "type_contenu": "text/html",
+ "url": "https://www.sgg.gouv.ci/",
+ "url_finale": "https://www.sgg.gouv.ci/"
+}

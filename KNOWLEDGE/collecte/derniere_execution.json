@@ -1,0 +1,202 @@
+{
+ "execution": "2026-10-19T09:23:28+00:00",
+ "outils": {
+  "pdftotext": "pdftotext version 24.02.0",
+  "tesseract": "tesseract 5.3.4",
+  "qpdf": "qpdf version 11.9.0",
+  "tesseract_langues": [
+   "of",
+   "available",
+   "languages",
+   "in",
+   "\"/usr/share/tesseract-ocr/5/tessdata/\"",
+   "(3):",
+   "eng",
+   "fra",
+   "osd"
+  ]
+ },
+ "traites": [
+  {
+   "cle": "code_penal_2019_574_mffe",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "code_penal_2019_574_civlii",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "cpp_2018_975_civlii",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "travail_2015_532_faolex",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "travail_2015_532_civlii",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "travail_2015_532_uvci",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mariage_2019_570_faolex",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mariage_2019_570_civlii",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "successions_2019_573_assnat",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "successions_2019_573_civlii",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "successions_2019_573_bice",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "minorite_2019_572_civlii",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "filiation_2019_571_civlii",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "aupsrve_2023_jo_ohadacom",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "aupsrve_2023_senlii",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "gouvci_175043233774",
+   "statut": "ECHEC_RESEAU"
+  },
+  {
+   "cle": "dec_ohada_journal_officiel_en",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_journal_officiel_fr",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_aupsrve_en",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_aupsrve_publication",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_actes_uniformes_fr",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_mffe_textes",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_famille_gouv",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_sgg",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_cndj_codes",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_emploi_gouv",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_justice_gouv",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_assnat_lois",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_570_eng@2023-10-13",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_571_fra@2023-10-13",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_572_fra@2023-10-13",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_573_fra@2023-10-13",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_publication_2019_574_fra@2024-06-23",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_publication_2018_975_fra@2024-06-23",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_publication_2015_532_fra@2023-08-10",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p1",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_legislation_p2",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p3",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p4",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p5",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p6",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p7",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p8",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p9",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_legislation_p10",
+   "statut": "ECHEC_HTTP"
+  }
+ ],
+ "ignores": []
+}

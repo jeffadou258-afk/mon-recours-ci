@@ -1,0 +1,41 @@
+{
+ "categorie_source": "SECONDAIRE_AUTRE",
+ "cle": "travail_2015_532_uvci",
+ "date_recuperation": "2026-10-19T09:23:33+00:00",
+ "duree_s": 20.6,
+ "extraction": {
+  "caracteres_natifs": 641558,
+  "confiance_ocr_moyenne": 89.3,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/travail_2015_532_uvci.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/travail_2015_532_uvci.txt",
+  "pages": 563,
+  "pages_ocr": 17,
+  "pages_ocr_faibles": [
+   202
+  ],
+  "pages_sans_texte": 17,
+  "sha256_ocr": "sha256:3c4ca6388d83fbed39e2cd5457609605ba118a8048b23a1f3abb37e46137f63c",
+  "sha256_texte": "sha256:f8be9ebfc9e7da529dc04c8510cdc9dac86955ae13a33ca53a1a0c4b4ce7c2db"
+ },
+ "fichier_pdf": "travail_2015_532_uvci.pdf",
+ "http": 200,
+ "marques_tierces_observees": [
+  "ivoire-juriste"
+ ],
+ "octets": 2147893,
+ "pdf": {
+  "CreationDate": "Tue Dec 24 20:02:43 2024 UTC",
+  "Creator": "Microsoft® Word pour Microsoft 365",
+  "ModDate": "Tue Dec 24 20:02:43 2024 UTC",
+  "PDF version": "1.7",
+  "Pages": "563",
+  "Producer": "Microsoft® Word pour Microsoft 365",
+  "polices": 10,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:db00d96f60bd707fc826056ea96ec20c51d4b3b883fa2155bc3acec53f3765f3",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.uvci.online/portail/externes/documents/textes_officiels/Le_code_du_travail_ivoirien_-_20251.pdf",
+ "url_finale": "https://www.uvci.online/portail/externes/documents/textes_officiels/Le_code_du_travail_ivoirien_-_20251.pdf"
+}

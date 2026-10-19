@@ -1,0 +1,20 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_journal_officiel_en",
+ "date_recuperation": "2026-10-19T09:34:10+00:00",
+ "duree_s": 2.5,
+ "http": 200,
+ "liens": [
+  "https://www.ohada.org/en/official-journal-n-06/",
+  "https://www.ohada.org/en/official-journal-n-09/",
+  "https://www.ohada.org/en/official-journal-n-24/",
+  "https://www.ohada.org/en/ohada-official-journal-special-edition-nov-2016/",
+  "https://www.ohada.org/journal-officiel/"
+ ],
+ "octets": 137925,
+ "statut": "DECOUVERTE",
+ "titre_page": "Official Gazette – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/en/official-gazette/",
+ "url_finale": "https://www.ohada.org/en/official-gazette/"
+}

@@ -1,0 +1,12 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_legislation_p3",
+ "date_recuperation": "2026-10-19T09:35:10+00:00",
+ "duree_s": 0.5,
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/fr/legislation/?page=3",
+ "url_finale": "https://civlii.laws.africa/fr/legislation/?page=3"
+}
