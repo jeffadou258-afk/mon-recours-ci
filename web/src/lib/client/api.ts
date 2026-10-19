@@ -52,3 +52,7 @@ export function ouvrirDossier(demande: string): Promise<ResultatApi<VueOuverture
 export function envoyerReponses(reponses: Record<string, string | null>): Promise<ResultatApi<VueSuite>> {
   return appeler<VueSuite>("/api/repondre", { reponses });
 }
+
+export function supprimerConsultation(): Promise<ResultatApi<{ supprime: boolean; dejaAbsent: boolean }>> {
+  return appeler<{ supprime: boolean; dejaAbsent: boolean }>("/api/supprimer", {});
+}

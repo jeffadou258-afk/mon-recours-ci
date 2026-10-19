@@ -1553,3 +1553,17 @@ textarea[aria-invalid="true"] {
 .lecture__texte { margin: 0 0 0.35rem; }
 .lecture__ref { margin: 0; font-size: 0.82rem; opacity: 0.8; overflow-wrap: anywhere; }
 .manquante__pourquoi { opacity: 0.8; }
+
+/* ── Garder ou effacer la consultation ─────────────────────────────────── */
+.bouton--danger { background: #9b1c1c; color: #fff; border-color: #9b1c1c; }
+.lien-bouton {
+  background: none; border: 0; padding: 0.5rem 0; min-height: 44px; color: #9b1c1c;
+  text-decoration: underline; font: inherit; cursor: pointer;
+}
+.confirmation { padding: 0.75rem; border-radius: 0.6rem; border: 1px solid #9b1c1c; }
+@media print {
+  header, footer, nav, .etapes, .actions, .bloc--actions, .bouton, .lien-bouton { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .bloc { break-inside: avoid; border-color: #999 !important; }
+  .brouillon { white-space: pre-wrap; }
+}

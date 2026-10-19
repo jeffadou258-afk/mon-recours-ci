@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import type { ErreurApi, VueClarification, VueOuverture, VueReponse } from "@/lib/types";
 import { envoyerReponses, ouvrirDossier } from "@/lib/client/api";
 import { LONGUEUR_MAX_DEMANDE, validerDemande } from "@/lib/validation";
+import { ActionsConsultation } from "./ActionsConsultation";
 import { Clarification } from "./Clarification";
 import { Etapes } from "./Etapes";
 import { Chargement, MessageErreur } from "./MessageErreur";
@@ -200,15 +201,11 @@ export function Parcours() {
           ) : etat.ouverture.etape === "refus" ? (
             <VueRefusee vue={etat.ouverture} />
           ) : null}
+          <ActionsConsultation reponse={etat.reponse} />
           <div className="actions actions--fin">
             <button type="button" className="bouton" onClick={recommencer}>
               Nouvelle demande
             </button>
-            {etat.reponse ? (
-              <button type="button" className="bouton bouton--secondaire" onClick={() => window.print()}>
-                Imprimer
-              </button>
-            ) : null}
           </div>
         </>
       ) : null}

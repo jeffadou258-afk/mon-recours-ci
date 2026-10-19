@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { gererOuvrir, gererRepondre, gererSante } from "../../src/lib/server/handlers";
+import { gererOuvrir, gererRepondre, gererSante, gererSupprimer } from "../../src/lib/server/handlers";
 import { ConfigurationInvalide } from "../../src/lib/server/config";
 import { emballer, nouvelIdentifiant } from "../../src/lib/server/session";
 import { CONFIG_TEST, fauxMoteur, fixture, journalMuet, requeteJson } from "../aides";
@@ -33,13 +33,13 @@ test("ouvrir : l'identifiant est généré côté serveur et posé en cookie Htt
   assert.ok(!JSON.stringify(corps).includes(envoye.dossier_id), "l'identifiant ne doit pas être exposé");
 });
 
-test("ouvrir hors catalogue : pas de cookie (aucune suite possible)", async () => {
+test("ouvrir hors catalogue : cookie posé, pour pouvoir supprimer la consultation", async () => {
   const moteur = fauxMoteur(200, fixture("ouvrir_hors"));
   const rep = await gererOuvrir(requeteJson("/api/ouvrir", { demande: "Mon patron ne me paie plus." }), {
     config,
     recuperer: moteur.recuperer,
   });
-  assert.equal(rep.headers.get("set-cookie"), null);
+  assert.match(rep.headers.get("set-cookie") ?? "", /mrci_dossier=web-.*HttpOnly/);
   assert.equal((await rep.json()).data.statut, "CONCLUSION_IMPOSSIBLE");
 });
 
@@ -196,4 +196,29 @@ test("configuration absente : le service refuse proprement, sans révéler la va
   const texte = await rep.text();
   assert.equal(JSON.parse(texte).erreur.code, "CONFIGURATION");
   assert.doesNotMatch(texte, /MONRECOURS_/);
+});
+
+test("supprimer : session exigée, dossier transmis au moteur, cookie effacé", async () => {
+  const moteur = fauxMoteur(200, { ok: true, data: { supprime: true, deja_absent: false } });
+  const dep = { config, recuperer: moteur.recuperer };
+  const sans = await gererSupprimer(requeteJson("/api/supprimer", {}), dep);
+  assert.equal(sans.status, 409);
+  assert.equal(moteur.appels.length, 0);
+
+  const rep = await gererSupprimer(requeteJson("/api/supprimer", {}, { Cookie: cookieValide() }), dep);
+  assert.equal(rep.status, 200);
+  assert.deepEqual((await rep.json()).data, { supprime: true, dejaAbsent: false });
+  assert.match(rep.headers.get("set-cookie") ?? "", /mrci_dossier=;.*Max-Age=0/);
+  assert.match(moteur.appels[0]!.url, /\/supprimer$/);
+  assert.match(JSON.parse(String(moteur.appels[0]!.init.body)).dossier_id, /^web-/);
+});
+
+test("supprimer : origine étrangère refusée", async () => {
+  const moteur = fauxMoteur(200, { ok: true, data: { supprime: true } });
+  const rep = await gererSupprimer(
+    requeteJson("/api/supprimer", {}, { Cookie: cookieValide(), Origin: "https://pirate.exemple", "Sec-Fetch-Site": "cross-site" }),
+    { config, recuperer: moteur.recuperer },
+  );
+  assert.equal(rep.status, 403);
+  assert.equal(moteur.appels.length, 0);
 });

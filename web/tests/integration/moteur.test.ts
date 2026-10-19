@@ -5,7 +5,7 @@
 
 import { after, before, test } from "node:test";
 import assert from "node:assert/strict";
-import { gererOuvrir, gererRepondre, gererSante } from "../../src/lib/server/handlers";
+import { gererOuvrir, gererRepondre, gererSante, gererSupprimer } from "../../src/lib/server/handlers";
 import type { ConfigServeur } from "../../src/lib/server/config";
 import { journalMuet, requeteJson } from "../aides";
 import { lancerMoteur, type MoteurLance } from "../moteur-reel";
@@ -115,7 +115,8 @@ test("question hors catalogue : CONCLUSION_IMPOSSIBLE, aucune source", async () 
   const vue = (await rep.json()).data;
   assert.equal(vue.etape, "hors_catalogue");
   assert.equal(vue.statut, "CONCLUSION_IMPOSSIBLE");
-  assert.equal(rep.headers.get("set-cookie"), null);
+  // Le cookie est posé pour permettre à la personne de supprimer sa consultation.
+  assert.match(rep.headers.get("set-cookie") ?? "", /mrci_dossier=web-/);
 });
 
 test("demande de fraude : refus du moteur relayé", async () => {
@@ -183,4 +184,17 @@ test("moteur arrêté : SERVICE_INDISPONIBLE", async () => {
   });
   assert.equal(rep.status, 503);
   assert.equal((await rep.json()).erreur.code, "SERVICE_INDISPONIBLE");
+});
+
+test("suppression réelle : le dossier disparaît du moteur, l'autre reste", async () => {
+  const a = await gererOuvrir(requeteJson("/api/ouvrir", { demande: "Mon bailleur garde ma caution." }), { config });
+  const b = await gererOuvrir(requeteJson("/api/ouvrir", { demande: "Mon bailleur garde ma caution." }), { config });
+  const rep = await gererSupprimer(requeteJson("/api/supprimer", {}, { Cookie: cookieDe(a) }), { config });
+  assert.equal(rep.status, 200);
+  assert.deepEqual((await rep.json()).data, { supprime: true, dejaAbsent: false });
+  // Le dossier supprimé ne peut plus recevoir de réponses ; l'autre, si.
+  const apres = await gererRepondre(requeteJson("/api/repondre", { reponses: { logement: "oui" } }, { Cookie: cookieDe(a) }), { config });
+  assert.notEqual(apres.status, 200);
+  const autre = await gererRepondre(requeteJson("/api/repondre", { reponses: { logement: "oui" } }, { Cookie: cookieDe(b) }), { config });
+  assert.equal(autre.status, 200);
 });

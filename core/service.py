@@ -32,6 +32,7 @@ faire, et doit alors ajouter authentification, limitation de débit et journalis
 """
 
 import os
+import shutil
 import sys
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -75,6 +76,10 @@ SCHEMAS = {
                                 "5_a_verifier": "list", "6_sources": "list"},
                    "verrous_humains": "list", "traceabilite": "chemin du dossier JSON",
                    "brouillon": "{disponible, note, genere | raison}"},
+    },
+    "supprimer": {
+        "entree": {"dossier_id": "str"},
+        "sortie": {"supprime": "bool", "deja_absent": "bool"},
     },
     "sante": {
         "sortie": {"catalogue": "fiches par domaine", "corpus": "documents, articles, "
@@ -165,6 +170,27 @@ def repondre(dossier_id, reponses):
             raise _ErreurService(resultat.get("erreur") or "INTERNE",
                                  resultat.get("message") or "erreur inconnue")
         return resultat
+    return _executer(corps)
+
+
+def supprimer(dossier_id):
+    """Supprime le dossier d'une consultation, à la demande de la personne.
+
+    Ne touche QUE le dossier désigné, après la même validation que les autres
+    opérations (aucune traversée de chemin possible). Idempotent : un dossier
+    déjà absent est signalé comme tel, sans erreur.
+    """
+    def corps():
+        _valider_dossier(dossier_id)
+        chemin = config.dossier_utilisateur(dossier_id)
+        if not chemin.exists():
+            return {"supprime": False, "deja_absent": True}
+        racine = os.path.realpath(str(config.DOSSIERS_DIR))
+        cible = os.path.realpath(str(chemin))
+        if os.path.dirname(cible) != racine:
+            raise _ErreurService("DOSSIER_INVALIDE", "dossier hors de la racine des dossiers")
+        shutil.rmtree(cible)
+        return {"supprime": True, "deja_absent": False}
     return _executer(corps)
 
 

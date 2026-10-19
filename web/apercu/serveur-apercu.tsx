@@ -21,7 +21,7 @@ import * as esbuild from "esbuild";
 import { Accueil } from "../src/components/Accueil";
 import { EnTete, PiedDePage } from "../src/components/Cadre";
 import PageComprendre from "../src/app/comprendre/page";
-import { gererOuvrir, gererRepondre, gererSante, obtenirSante } from "../src/lib/server/handlers";
+import { gererOuvrir, gererRepondre, gererSante, gererSupprimer, obtenirSante } from "../src/lib/server/handlers";
 
 const RACINE_WEB = join(__dirname, "..");
 const DIST = join(__dirname, "dist");
@@ -129,6 +129,8 @@ export function creerServeurApercu() {
       if (chemin === "/api/ouvrir" && req.method === "POST") return envoyerWeb(await gererOuvrir(await versRequeteWeb(req)), res);
       if (chemin === "/api/repondre" && req.method === "POST")
         return envoyerWeb(await gererRepondre(await versRequeteWeb(req)), res);
+      if (chemin === "/api/supprimer" && req.method === "POST")
+        return envoyerWeb(await gererSupprimer(await versRequeteWeb(req)), res);
       if (chemin.startsWith("/api/")) {
         res.writeHead(405, { "Content-Type": "application/json" });
         return res.end('{"ok":false}');

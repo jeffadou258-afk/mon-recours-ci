@@ -21,7 +21,7 @@ import {
 import { ConfigurationInvalide, lireConfig, type ConfigServeur } from "./config";
 import { appelerMoteur, type Recuperateur, type ReponseMoteur } from "./moteur";
 import { identifiantVisiteur, limiteurParDefaut, type LimiteurVisiteurs } from "./limiteur";
-import { deballer, emballer, enteteCookie, lireCookie, nouvelIdentifiant } from "./session";
+import { deballer, emballer, enteteCookie, enteteCookieEfface, lireCookie, nouvelIdentifiant } from "./session";
 
 export const TAILLE_MAX_CORPS = 16 * 1024;
 
@@ -275,10 +275,9 @@ export async function gererOuvrir(requete: Request, dep: Dependances = {}): Prom
   try {
     const vue = assainirOuverture((reponse.corps as { data?: unknown }).data);
     const entetes: Record<string, string> = {};
-    // Le cookie n'est utile que si une suite est possible (questions à poser).
-    if (vue.etape === "clarification") {
-      entetes["Set-Cookie"] = enteteCookie(emballer(dossierId, config.secretSession), securise(requete, config));
-    }
+    // Le cookie relie le navigateur à SA consultation : il sert à répondre aux
+    // questions, et à supprimer la consultation (le dossier existe dans tous les cas).
+    entetes["Set-Cookie"] = enteteCookie(emballer(dossierId, config.secretSession), securise(requete, config));
     return succes(vue, entetes);
   } catch (e) {
     if (e instanceof ReponseInattendue) return erreur("REPONSE_INVALIDE");
@@ -327,4 +326,26 @@ export async function gererRepondre(requete: Request, dep: Dependances = {}): Pr
     if (e instanceof ReponseInattendue) return erreur("REPONSE_INVALIDE");
     throw e;
   }
+}
+
+// ---------------------------------------------------------------------------
+// POST /api/supprimer   {}   — la personne supprime sa consultation
+// ---------------------------------------------------------------------------
+
+export async function gererSupprimer(requete: Request, dep: Dependances = {}): Promise<Response> {
+  if (!origineAutorisee(requete)) return erreur("ORIGINE_REFUSEE");
+  const config = obtenirConfig(dep);
+  if (config instanceof Response) return config;
+  const dossierId = deballer(lireCookie(requete.headers.get("cookie")), config.secretSession);
+  if (!dossierId) return erreur("SESSION_ABSENTE");
+  const trop = verifierDebitVisiteur(requete, config, dep);
+  if (trop) return trop;
+
+  const reponse = await appelerMoteur(config, "/supprimer", { dossier_id: dossierId }, dep.recuperer);
+  if (!estSucces(reponse)) return traduireEchec(reponse, dep, "/supprimer");
+  const data = (reponse.corps as { data?: { supprime?: unknown; deja_absent?: unknown } }).data ?? {};
+  return succes(
+    { supprime: data.supprime === true, dejaAbsent: data.deja_absent === true },
+    { "Set-Cookie": enteteCookieEfface(securise(requete, config)) },
+  );
 }

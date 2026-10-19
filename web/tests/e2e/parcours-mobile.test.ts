@@ -142,6 +142,22 @@ test("parcours complet au toucher : décrire → préciser → résultat avec ci
   const session = cookies.find((c) => c.name === "mrci_dossier");
   assert.ok(session?.httpOnly && session.sameSite === "Strict");
 
+  // Enregistrer la synthèse : un vrai fichier, fabriqué dans le navigateur.
+  const [telechargement] = await Promise.all([
+    page.waitForEvent("download"),
+    page.getByRole("button", { name: "Enregistrer la synthèse (texte)" }).tap(),
+  ]);
+  assert.match(telechargement.suggestedFilename(), /^mon-recours-ci-synthese-\d{4}-\d{2}-\d{2}\.txt$/);
+  const contenu = await readFile((await telechargement.path())!, "utf8");
+  assert.match(contenu, /Le contrat de location peut prévoir un dépôt de garantie/);
+  assert.match(contenu, /AU VU DE VOS RÉPONSES/);
+
+  // Supprimer la consultation : confirmation, puis effacement réel côté moteur.
+  await page.getByRole("button", { name: "Supprimer cette consultation du serveur" }).tap();
+  await page.getByRole("button", { name: "Oui, supprimer" }).tap();
+  await page.getByText("Votre consultation a été supprimée du serveur.").waitFor();
+  assert.equal((await ctx.cookies()).find((c) => c.name === "mrci_dossier"), undefined, "cookie effacé");
+
   await page.getByRole("button", { name: "Nouvelle demande" }).tap();
   await page.getByRole("heading", { name: "Décrivez votre situation" }).waitFor();
   await ctx.close();

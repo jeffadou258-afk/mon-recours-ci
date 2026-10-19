@@ -67,3 +67,10 @@ export function enteteCookie(valeur: string, securise: boolean): string {
     .filter(Boolean)
     .join("; ");
 }
+
+/** En-tête qui efface le cookie de dossier (après suppression de la consultation). */
+export function enteteCookieEfface(securise: boolean): string {
+  return [`${NOM_COOKIE}=`, "Path=/api", "Max-Age=0", "HttpOnly", "SameSite=Strict", securise ? "Secure" : ""]
+    .filter(Boolean)
+    .join("; ");
+}

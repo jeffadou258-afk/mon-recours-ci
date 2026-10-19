@@ -48,7 +48,8 @@ from core import service  # noqa: E402
 
 TAILLE_MAX_CORPS = 64 * 1024
 NOM_VARIABLE_CLE = "MONRECOURS_API_KEY"
-ROUTES_POST = {"/ouvrir": service.ouvrir, "/repondre": service.repondre}
+ROUTES_POST = {"/ouvrir": service.ouvrir, "/repondre": service.repondre,
+               "/supprimer": service.supprimer}
 ROUTES_GET = {"/sante": lambda: service.sante()}
 
 
@@ -200,6 +201,8 @@ def _fabrique(cle_api, limiteur, journal=None):
             try:
                 if route == "/ouvrir":
                     resultat = service.ouvrir(charge.get("dossier_id"), charge.get("demande"))
+                elif route == "/supprimer":
+                    resultat = service.supprimer(charge.get("dossier_id"))
                 else:
                     resultat = service.repondre(charge.get("dossier_id"),
                                                 charge.get("reponses"))

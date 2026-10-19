@@ -221,3 +221,25 @@ class TestConversationEnPlusieursTours(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestSuppressionParLaPersonne(unittest.TestCase):
+    def test_suppression_du_seul_dossier_designe(self):
+        a, b = dossier("SUPPR_A"), dossier("SUPPR_B")
+        service.ouvrir(a, "Mon bailleur garde ma caution.")
+        service.ouvrir(b, "Mon bailleur garde ma caution.")
+        resultat = service.supprimer(a)
+        self.assertTrue(resultat["ok"], resultat)
+        self.assertTrue(resultat["data"]["supprime"])
+        self.assertFalse(config.dossier_utilisateur(a).exists())
+        self.assertTrue(config.dossier_utilisateur(b).exists(), "l'autre dossier reste intact")
+        # Idempotent, et la conversation supprimée ne peut plus être poursuivie.
+        self.assertTrue(service.supprimer(a)["data"]["deja_absent"])
+        self.assertFalse(service.repondre(a, {"logement": "oui"})["ok"])
+
+    def test_traversee_refusee(self):
+        for mauvais in ("../KNOWLEDGE", "..", "a/b", "", "x\\x00y"):
+            resultat = service.supprimer(mauvais)
+            self.assertFalse(resultat["ok"], mauvais)
+        self.assertTrue(os.path.isfile(os.path.join(os.path.dirname(config.DOSSIERS_DIR),
+                                                    "KNOWLEDGE", "catalogue.json")))
