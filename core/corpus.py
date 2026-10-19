@@ -101,10 +101,15 @@ CREATE INDEX IF NOT EXISTS idx_documents_domaine ON documents(domaine);
 # l'extraction PDF (cas réel : « 72Article 1. »). Le nombre doit être suivi soit
 # d'une ponctuation, soit d'une fin de ligne — sans quoi une phrase du type
 # « l'article 5 du code » en début de ligne créerait un faux article.
+# Numérotation décimale (« Art. 18.12 ») : celle du Code du travail de 2015. Le
+# point n'est lu comme séparateur décimal que s'il est immédiatement suivi d'un
+# chiffre — « Article 552. La présente loi » reste l'article 552.
 MOTIF_ARTICLE = re.compile(
-    r"(?m)^[ \t]*(?:\d{1,3}[ \t]*)?(?:Article|ARTICLE|Art\.)[ \t]+"
-    r"(\d{1,4}(?:[ \t]*(?:bis|ter|quater|quinquies))?|premier|premiere|unique)"
-    r"[ \t]*(?:[\.\-:)]|$)",
+    r"(?m)^[ \t]*(?:\d{1,3}[ \t]*)?(?:Article|ARTICLE|Art\.|Art(?=[ \t]+\d))[ \t]+"
+    r"(\d{1,4}\.\d{1,3}(?!\d)(?=[ \t]|$|[\.\-:)])"
+    r"|\d{1,4}(?:[ \t]*(?:bis|ter|quater|quinquies))?(?=[ \t]*(?:[\.\-:)]|$|[ \t]+nouveau))"
+    r"|premier|premiere|unique)"
+    r"(?:[ \t]+nouveau)?[ \t]*(?:[\.\-:)]|$|(?<=\d)(?=[ \t]))",
     re.IGNORECASE,
 )
 
@@ -297,8 +302,19 @@ def extraire_articles(texte):
         if not corps:
             continue
         precedent = trouves.get(numero)
-        if precedent is None or len(corps) > len(precedent[0]):
-            trouves[numero] = (corps, brut)
+        litteral = not re.match(r"^\d", brut)
+        if precedent is not None:
+            precedent_litteral = not re.match(r"^\d", precedent[1])
+            # Une forme littérale ne remplace jamais une forme chiffrée, et une
+            # forme chiffrée remplace toujours une forme littérale (sinon le
+            # « Article premier » d'un autre texte, plus long, effaçait l'article 1
+            # avant d'être lui-même retiré : l'article 1 disparaissait — constaté
+            # sur une compilation du Code du travail).
+            if litteral and not precedent_litteral:
+                continue
+            if not (precedent_litteral and not litteral) and len(corps) <= len(precedent[0]):
+                continue
+        trouves[numero] = (corps, brut)
 
     for numero, (_, brut) in list(trouves.items()):
         if not re.match(r"^\d", brut) and numero in chiffres:
@@ -318,13 +334,36 @@ def numeros_simples(articles):
 
 
 def taux_couverture(articles):
-    """(taux, maximum) : part des numéros 1..max effectivement présents."""
+    """(taux, maximum) : part des numéros 1..max effectivement présents.
+
+    Numérotation décimale (« 18.12 ») : chaque numéro principal 1..max compte
+    pour le nombre de ses subdivisions (1..plus grande subdivision vue), ou pour
+    un seul article s'il n'en a pas. Un texte sans numéro décimal est mesuré
+    exactement comme avant.
+    """
+    decimaux = {}
+    for numero in articles:
+        m = re.match(r"^(\d+)\.(\d+)$", numero.strip())
+        if m:
+            decimaux.setdefault(int(m.group(1)), set()).add(int(m.group(2)))
     nums = numeros_simples(articles)
-    if not nums:
-        return 0.0, 0
-    maximum = max(nums)
-    presents = {n for n in nums if 1 <= n <= maximum}
-    return len(presents) / float(maximum), maximum
+    if not decimaux:
+        if not nums:
+            return 0.0, 0
+        maximum = max(nums)
+        presents = {n for n in nums if 1 <= n <= maximum}
+        return len(presents) / float(maximum), maximum
+    maximum = max(set(nums) | set(decimaux))
+    attendus = presents = 0
+    for principal in range(1, maximum + 1):
+        if principal in decimaux:
+            subdivisions = decimaux[principal]
+            attendus += max(subdivisions)
+            presents += len({n for n in subdivisions if n >= 1})
+        else:
+            attendus += 1
+            presents += 1 if principal in nums else 0
+    return presents / float(attendus), maximum
 
 
 # --------------------------------------------------------------------------
