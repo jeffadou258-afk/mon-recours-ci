@@ -157,6 +157,10 @@ function clarification(d: Objet): VueClarification {
     tour: tour && tour >= 1 ? Math.floor(tour) : 1,
     contradictions: contradictions(d.contradictions),
     statutQuestions: texte(d.statut_questions),
+    comprehension: {
+      mode: objet(d.comprehension).mode === "llm" ? "llm" : "deterministe",
+      resume: objet(d.comprehension).mode === "llm" ? texte(objet(d.comprehension).resume) : null,
+    },
   };
 }
 
@@ -375,6 +379,7 @@ export function assainirSante(data: unknown): VueSante {
         statut: texteRequis(l.statut, "INCONNU"),
         completude: texteRequis(l.completude, "INCONNU"),
       })),
+    langageActif: objet(d.langage).actif === true,
     avertissement: texte(d.avertissement),
   };
 }

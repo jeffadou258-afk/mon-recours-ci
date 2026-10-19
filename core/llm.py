@@ -220,3 +220,169 @@ def statut():
         "Le mode LLM n'est PAS opérationnel : aucun appel réel n'a été validé. "
         "Le moteur déterministe reste la seule source de vérité.")
     return etat
+
+
+# ===========================================================================
+# COMPRÉHENSION DU RÉCIT — le modèle propose, le moteur dispose
+# ===========================================================================
+#
+# Rôle confié au modèle (et à lui seul) : lire le récit, choisir parmi les
+# fiches EXISTANTES celles qui le concernent, repérer dans le récit ce qui
+# répond déjà aux questions du guide, et résumer la situation.
+#
+# Ce qu'il ne fait jamais : citer un article, créer une fiche, répondre à la
+# place de la personne. Tout ce qu'il renvoie est contrôlé :
+#   * fiches       -> identifiants présents dans le catalogue, sinon rejet ;
+#   * suggestions  -> clés du guide des fiches retenues, valeur oui/non, et un
+#                     EXTRAIT recopié du récit (vérifié littéralement) ;
+#                     ce ne sont que des pré-remplissages que la personne confirme ;
+#   * résumé       -> borné, et aucun nombre absent du récit.
+# Activation : fournisseur choisi + clé + accord explicite sur l'envoi des
+# données (MONRECOURS_LLM_ACCORD_DONNEES=oui). Sans les trois : déterministe.
+
+import json as _json
+import re as _re
+
+from core import pseudonymisation
+from core.base import normaliser as _normaliser
+
+NOM_VARIABLE_ACCORD = "MONRECOURS_LLM_ACCORD_DONNEES"
+FOURNISSEURS_COMPREHENSION = ("anthropic", "compatible_openai")
+LONGUEUR_MAX_RESUME = 600
+
+_SYSTEME_COMPREHENSION = (
+    "Tu aides un service d'information juridique ivoirien. Tu ne donnes AUCUN avis "
+    "juridique et tu ne cites AUCUN texte de loi. Tu lis le récit d'une personne et tu "
+    "réponds UNIQUEMENT par un objet JSON, sans texte autour, de la forme : "
+    "{\"fiches\": [identifiants pris dans la liste fournie, au plus 4, les plus "
+    "pertinents ; liste vide si aucun ne convient], \"suggestions\": [{\"cle\": clé "
+    "d'une question fournie, \"valeur\": \"oui\" ou \"non\", \"extrait\": passage "
+    "RECOPIÉ MOT POUR MOT du récit qui justifie la valeur}], \"resume\": deux phrases "
+    "neutres qui reformulent la situation sans rien ajouter, sans aucun nombre absent "
+    "du récit}. Ne propose une suggestion que si le récit le dit clairement. "
+    "N'invente ni fiche, ni clé, ni fait."
+)
+
+
+def comprehension_active():
+    """Les trois conditions d'activation sont-elles réunies ?"""
+    nom = (os.environ.get(NOM_VARIABLE_FOURNISSEUR) or "").lower()
+    return (nom in FOURNISSEURS_COMPREHENSION
+            and bool(os.environ.get(NOM_VARIABLE_CLE))
+            and (os.environ.get(NOM_VARIABLE_ACCORD) or "").lower() == "oui")
+
+
+def fournisseur_comprehension():
+    """Fournisseur configuré, ou None (mode déterministe)."""
+    if not comprehension_active():
+        return None
+    adaptateur = charger_adaptateur_http()
+    if adaptateur is None:
+        return None
+    nom = os.environ.get(NOM_VARIABLE_FOURNISSEUR).lower()
+    classe = (adaptateur.FournisseurAnthropic if nom == "anthropic"
+              else adaptateur.FournisseurCompatibleOpenAI)
+    fournisseur = classe()
+    return fournisseur if fournisseur.disponible() else None
+
+
+def _message(recit, fiches, guide):
+    lignes = ["RÉCIT :", recit, "", "FICHES DISPONIBLES (identifiant — sujet) :"]
+    lignes += ["%s — %s" % (f["id"], f["titre"]) for f in fiches]
+    lignes += ["", "QUESTIONS (clé — question — fiches concernées) :"]
+    lignes += ["%s — %s — %s" % (q["cle"], q["question"], ", ".join(q["fiches"]))
+               for q in guide.get("questions", [])]
+    return "\n".join(lignes)
+
+
+def _extraire_json(texte):
+    debut, fin = texte.find("{"), texte.rfind("}")
+    if debut < 0 or fin <= debut:
+        raise ValueError("aucun objet JSON dans la réponse")
+    return _json.loads(texte[debut:fin + 1])
+
+
+_NOMBRE = _re.compile(r"\b\d+\b")
+_MOTS_NOMBRES = ("deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix",
+                 "onze", "douze", "quinze", "vingt", "trente", "cent", "mille")
+
+
+def _nombres(texte):
+    t = _normaliser(texte)
+    trouves = set(_NOMBRE.findall(t))
+    mots = set(_re.findall(r"[a-z]+", t))
+    return trouves | {m for m in _MOTS_NOMBRES if m in mots}
+
+
+def valider_comprehension(brut, recit, fiches, guide):
+    """Ne garde que ce que le moteur peut vérifier. Renvoie (retenu, rejets)."""
+    index = {f["id"]: f for f in fiches}
+    rejets = []
+    retenues = []
+    for fid in (brut.get("fiches") or [])[:4]:
+        if isinstance(fid, str) and fid in index:
+            if fid not in retenues:
+                retenues.append(fid)
+        else:
+            rejets.append({"element": "fiche", "valeur": fid, "raison": "absente du catalogue"})
+    cles_permises = {q["cle"] for q in guide.get("questions", [])
+                     if set(q["fiches"]) & set(retenues)}
+    recit_norm = _normaliser(recit)
+    suggestions = {}
+    for s in brut.get("suggestions") or []:
+        if not isinstance(s, dict):
+            rejets.append({"element": "suggestion", "valeur": s, "raison": "format"})
+            continue
+        cle, valeur, extrait = s.get("cle"), s.get("valeur"), s.get("extrait") or ""
+        if cle not in cles_permises:
+            rejets.append({"element": "suggestion", "valeur": cle,
+                           "raison": "clé hors des questions des fiches retenues"})
+        elif valeur not in ("oui", "non"):
+            rejets.append({"element": "suggestion", "valeur": cle, "raison": "valeur"})
+        elif len(_normaliser(extrait)) < 4 or _normaliser(extrait) not in recit_norm:
+            rejets.append({"element": "suggestion", "valeur": cle,
+                           "raison": "extrait absent du récit (non recopié)"})
+        else:
+            suggestions[cle] = {"valeur": valeur, "indice": extrait.strip()}
+    resume = brut.get("resume")
+    if not isinstance(resume, str) or not resume.strip():
+        resume = None
+    elif len(resume) > LONGUEUR_MAX_RESUME:
+        rejets.append({"element": "resume", "raison": "trop long"})
+        resume = None
+    elif _nombres(resume) - _nombres(recit):
+        rejets.append({"element": "resume",
+                       "raison": "nombre absent du récit : %s"
+                                 % ", ".join(sorted(_nombres(resume) - _nombres(recit)))})
+        resume = None
+    return {"fiches": retenues, "suggestions": suggestions, "resume": resume}, rejets
+
+
+def comprendre(recit, fiches, guide, fournisseur=None, delai=DELAI_PAR_DEFAUT):
+    """Compréhension assistée, avec repli. Ne lève jamais.
+
+    Renvoie un rapport : `mode` (« llm » ou « deterministe »), `fiches`,
+    `suggestions`, `resume`, `rejets`, `erreur`, `masquages`.
+    """
+    rapport = {"mode": "deterministe", "fournisseur": None, "fiches": [],
+               "suggestions": {}, "resume": None, "rejets": [], "erreur": None,
+               "masquages": 0}
+    fournisseur = fournisseur if fournisseur is not None else fournisseur_comprehension()
+    if fournisseur is None:
+        rapport["erreur"] = "aucun fournisseur actif"
+        return rapport
+    rapport["fournisseur"] = getattr(fournisseur, "nom", "inconnu")
+    recit_masque, rapport["masquages"] = pseudonymisation.masquer(recit)
+    try:
+        texte = fournisseur.completer(_SYSTEME_COMPREHENSION,
+                                      _message(recit_masque, fiches, guide), delai=delai)
+        brut = _extraire_json(texte or "")
+        retenu, rejets = valider_comprehension(brut, recit_masque, fiches, guide)
+    except Exception as erreur:  # noqa: BLE001 — repli déterministe, jamais de panne
+        rapport["erreur"] = "%s : %s" % (type(erreur).__name__, erreur)
+        return rapport
+    rapport.update(retenu)
+    rapport["rejets"] = rejets
+    if retenu["fiches"] or retenu["resume"]:
+        rapport["mode"] = "llm"
+    return rapport

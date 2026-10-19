@@ -85,6 +85,17 @@ export function Clarification({ vue, envoi, onEnvoyer }: Props) {
         </section>
       ) : null}
 
+      {vue.comprehension.mode === "llm" && vue.comprehension.resume ? (
+        <section className="bloc" aria-labelledby="titre-compris">
+          <h3 id="titre-compris">Ce que j&apos;ai compris</h3>
+          <p>{vue.comprehension.resume}</p>
+          <p className="bloc__note">
+            Résumé rédigé automatiquement à partir de votre texte. Il ne remplace pas votre récit : signalez-le
+            si c&apos;est inexact en recommençant votre demande.
+          </p>
+        </section>
+      ) : null}
+
       <BandeauUrgence urgence={vue.urgence} />
       <EncadreVerrous verrous={vue.verrous} />
 
@@ -107,8 +118,10 @@ export function Clarification({ vue, envoi, onEnvoyer }: Props) {
           </ul>
         )}
         <p className="bloc__note">
-          Ces textes sont repérés automatiquement. Le moteur confirmera ceux qu&apos;il retient après vos
-          réponses.
+          {vue.comprehension.mode === "llm"
+            ? "Textes choisis avec l'aide d'un modèle de langage, parmi les fiches vérifiées du service."
+            : "Textes repérés par les mots de votre récit (aucun modèle de langage n'est activé)."}{" "}
+          Le moteur confirmera ceux qu&apos;il retient après vos réponses.
         </p>
       </section>
 

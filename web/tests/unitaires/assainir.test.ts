@@ -176,3 +176,16 @@ test("résultat : lectures au vu des réponses, manques et contradictions transm
   assert.equal(vue.manquantes[0]?.pourquoi, "Fin de contrat.");
   assert.deepEqual(vue.contradictions, ["Le récit et la réponse divergent."]);
 });
+
+test("compréhension : le résumé n'est transmis qu'en mode modèle de langage", () => {
+  const base = { etape: "clarification", questions: [], fiches_identifiees: [] };
+  const sans = assainirSuite({ ...base, comprehension: { mode: "deterministe", resume: "texte parasite" } });
+  const avec = assainirSuite({ ...base, comprehension: { mode: "llm", resume: "La personne a quitté le logement." } });
+  const absent = assainirSuite(base);
+  if (sans.etape !== "clarification" || avec.etape !== "clarification" || absent.etape !== "clarification") {
+    assert.fail("clarification attendue");
+  }
+  assert.deepEqual(sans.comprehension, { mode: "deterministe", resume: null });
+  assert.equal(avec.comprehension.resume, "La personne a quitté le logement.");
+  assert.equal(absent.comprehension.mode, "deterministe");
+});

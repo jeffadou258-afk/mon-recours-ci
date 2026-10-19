@@ -72,6 +72,13 @@ export interface VueContradiction {
   message: string;
 }
 
+export interface VueComprehension {
+  /** « llm » si un modèle de langage a aidé à comprendre le récit, sinon « deterministe ». */
+  mode: "llm" | "deterministe";
+  /** Résumé rédigé par le modèle, contrôlé (aucun nombre ajouté) — à vérifier par la personne. */
+  resume: string | null;
+}
+
 export interface VueClarification {
   etape: "clarification";
   avertissement: string | null;
@@ -85,6 +92,7 @@ export interface VueClarification {
   contradictions: VueContradiction[];
   /** Statut des questions du guide (ex. A_RELIRE_PAR_UN_JURISTE). */
   statutQuestions: string | null;
+  comprehension: VueComprehension;
 }
 
 export interface VueArticleSansFiche {
@@ -199,6 +207,8 @@ export interface VueSante {
     parOrigine: { origine: string; articles: number }[];
   };
   domaines: { domaine: string; statut: string; completude: string }[];
+  /** Un modèle de langage est-il activé côté serveur ? */
+  langageActif: boolean;
   avertissement: string | null;
 }
 

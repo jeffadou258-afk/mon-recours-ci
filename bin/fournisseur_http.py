@@ -70,3 +70,94 @@ class FournisseurHTTP(object):
             raise ErreurTransport("transport : %s" % (erreur.reason,)) from erreur
         except ValueError as erreur:
             raise ErreurTransport("réponse non JSON") from erreur
+
+
+# ---------------------------------------------------------------------------
+# Fournisseurs de « complétion » utilisés par `core.llm.comprendre`.
+#
+# Même règles : aucune clé dans le code (variable d'environnement), délai borné,
+# erreurs traduites en `ErreurTransport` sans jamais recopier la clé.
+# L'URL de base est surchargeable (`MONRECOURS_LLM_URL`) : les tests pointent
+# vers un faux serveur local ; en production, l'URL officielle du fournisseur.
+# ---------------------------------------------------------------------------
+
+NOM_VARIABLE_MODELE = "MONRECOURS_LLM_MODELE"
+
+
+def _poster(url, entetes, corps, delai):
+    requete = urllib.request.Request(
+        url, data=json.dumps(corps).encode("utf-8"), method="POST",
+        headers=dict({"Content-Type": "application/json"}, **entetes))
+    try:
+        with urllib.request.urlopen(requete, timeout=delai) as reponse:
+            return json.loads(reponse.read().decode("utf-8"))
+    except urllib.error.HTTPError as erreur:
+        # Le corps d'erreur du fournisseur n'est pas recopié (il peut être long) :
+        # seul le statut HTTP est rapporté.
+        raise ErreurTransport("le fournisseur a répondu HTTP %s" % erreur.code) from erreur
+    except (socket.timeout, TimeoutError) as erreur:
+        raise ErreurTransport("délai dépassé") from erreur
+    except urllib.error.URLError as erreur:
+        raise ErreurTransport("transport : %s" % (erreur.reason,)) from erreur
+    except ValueError as erreur:
+        raise ErreurTransport("réponse non JSON") from erreur
+
+
+class FournisseurAnthropic(object):
+    """API Messages d'Anthropic (Claude). Modèle par défaut : le moins coûteux."""
+
+    nom = "anthropic"
+    URL_DEFAUT = "https://api.anthropic.com/v1/messages"
+    MODELE_DEFAUT = "claude-haiku-5-5"
+
+    def __init__(self, url=None, cle=None, modele=None, delai=DELAI_PAR_DEFAUT):
+        self.url = url or os.environ.get(NOM_VARIABLE_URL) or self.URL_DEFAUT
+        self._cle = cle if cle is not None else os.environ.get(NOM_VARIABLE_CLE, "")
+        self.modele = modele or os.environ.get(NOM_VARIABLE_MODELE) or self.MODELE_DEFAUT
+        self.delai = delai
+
+    def disponible(self):
+        return bool(self._cle)
+
+    def completer(self, systeme, message, delai=None, max_tokens=1200):
+        if not self.disponible():
+            raise ErreurTransport("clé absente de l'environnement")
+        donnees = _poster(
+            self.url,
+            {"x-api-key": self._cle, "anthropic-version": "2023-06-01"},
+            {"model": self.modele, "max_tokens": max_tokens, "temperature": 0,
+             "system": systeme, "messages": [{"role": "user", "content": message}]},
+            delai or self.delai)
+        try:
+            return "".join(b.get("text", "") for b in donnees["content"] if b.get("type") == "text")
+        except (KeyError, TypeError, AttributeError) as erreur:
+            raise ErreurTransport("réponse du fournisseur au format inattendu") from erreur
+
+
+class FournisseurCompatibleOpenAI(object):
+    """Toute API « chat/completions » compatible (OpenAI, Mistral, serveur local…)."""
+
+    nom = "compatible_openai"
+
+    def __init__(self, url=None, cle=None, modele=None, delai=DELAI_PAR_DEFAUT):
+        self.url = url or os.environ.get(NOM_VARIABLE_URL, "")
+        self._cle = cle if cle is not None else os.environ.get(NOM_VARIABLE_CLE, "")
+        self.modele = modele or os.environ.get(NOM_VARIABLE_MODELE, "")
+        self.delai = delai
+
+    def disponible(self):
+        return bool(self.url and self._cle and self.modele)
+
+    def completer(self, systeme, message, delai=None, max_tokens=1200):
+        if not self.disponible():
+            raise ErreurTransport("URL, clé ou modèle absent de l'environnement")
+        donnees = _poster(
+            self.url, {"Authorization": "Bearer %s" % self._cle},
+            {"model": self.modele, "max_tokens": max_tokens, "temperature": 0,
+             "messages": [{"role": "system", "content": systeme},
+                          {"role": "user", "content": message}]},
+            delai or self.delai)
+        try:
+            return donnees["choices"][0]["message"]["content"]
+        except (KeyError, IndexError, TypeError) as erreur:
+            raise ErreurTransport("réponse du fournisseur au format inattendu") from erreur

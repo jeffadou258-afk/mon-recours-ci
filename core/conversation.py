@@ -30,6 +30,7 @@ from agent import MonRecoursCI
 from core import analyse as A
 from core import base, catalogue, clarification, corpus, documents as mod_documents
 from core import faits as mod_faits
+from core import llm
 
 FICHIER_ETAT = "CONVERSATION.json"
 
@@ -43,7 +44,11 @@ AVERTISSEMENT = (
 class Conversation(object):
     """Une conversation = un dossier. L'état est écrit sur disque, jamais en mémoire."""
 
-    def __init__(self, chemin_db=None, chemin_sources=None, fiches=None):
+    def __init__(self, chemin_db=None, chemin_sources=None, fiches=None,
+                 fournisseur_langage=None):
+        # None : le fournisseur est lu dans l'environnement (désactivé par défaut).
+        self.fournisseur_langage = fournisseur_langage
+        self._suggestions_llm = {}
         self.agent = MonRecoursCI(chemin_db=chemin_db, chemin_sources=chemin_sources)
         self.chemin_db = path = (chemin_db or str(config.CHEMIN_DB))
         self.fiches = fiches if fiches is not None else catalogue.charger(chemin_db=path)
@@ -89,15 +94,25 @@ class Conversation(object):
         retenues, du_domaine = catalogue.pour_demande(
             demande, domaines, fiches=self.fiches, chemin_db=self.chemin_db)
 
+        # Compréhension assistée par un modèle de langage, SI elle est activée
+        # (fournisseur + clé + accord sur l'envoi des données). Ce qu'il propose
+        # est revalidé par `llm.valider_comprehension` ; sinon, déterministe.
+        comprehension = llm.comprendre(demande, self.fiches, self.guide,
+                                       fournisseur=self.fournisseur_langage)
+        if comprehension["mode"] == "llm" and comprehension["fiches"]:
+            retenues = [self.catalogue[i] for i in comprehension["fiches"]]
+        self._suggestions_llm = comprehension["suggestions"]
+
         if not retenues:
             # Aucun déclencheur ne tombe : on ne sert PAS d'articles au hasard.
             etat = {"dossier_id": dossier_id, "demande": demande, "tour": 1,
                     "fiches": [], "questions": [], "etape": "hors_catalogue",
-                    "domaines": domaines}
+                    "domaines": domaines,
+                    "comprehension": self._vue_comprehension(comprehension)}
             self._ecrire_etat(dossier_id, etat)
             return {"etape": "hors_catalogue", "dossier_id": dossier_id,
                     "reponse": self._restituer_sans_fiche(demande, domaines, du_domaine),
-                    "domaines": domaines}
+                    "domaines": domaines, "comprehension": etat["comprehension"]}
 
         questions, deja = [], set()
         for fiche in retenues:
@@ -112,6 +127,8 @@ class Conversation(object):
                 "guide_posees": [q["cle"] for q in guide], "reponses": {},
                 "confirmations": [],
                 "etape": "clarification", "domaines": domaines,
+                "comprehension": self._vue_comprehension(comprehension),
+                "suggestions_llm": comprehension["suggestions"],
                 "urgence": dossier.get("urgence"),
                 "verrous_humains": dossier.get("verrous_humains"),
                 "note_corpus": dossier.get("note_corpus")}
@@ -119,11 +136,21 @@ class Conversation(object):
         return self._vue_clarification(dossier_id, etat, retenues, questions)
 
     def _question_guide(self, q, demande, confirmation=None):
+        suggestion = (clarification.suggestion(q, demande)
+                      or (self._suggestions_llm or {}).get(q["cle"]))
         vue = {"cle": q["cle"], "question": q["question"], "pourquoi": q["pourquoi"],
-               "type": "oui_non", "suggestion": clarification.suggestion(q, demande)}
+               "type": "oui_non", "suggestion": suggestion}
         if confirmation:
             vue["confirmation"] = confirmation
         return vue
+
+    @staticmethod
+    def _vue_comprehension(rapport):
+        """Ce qui est montré de la compréhension : le mode, toujours ; le résumé, si validé."""
+        return {"mode": rapport["mode"], "fournisseur": rapport.get("fournisseur"),
+                "resume": rapport.get("resume") if rapport["mode"] == "llm" else None,
+                "elements_rejetes": len(rapport.get("rejets") or []),
+                "coordonnees_masquees": rapport.get("masquages", 0)}
 
     def _vue_clarification(self, dossier_id, etat, retenues, questions, contradictions=()):
         return {"etape": "clarification", "dossier_id": dossier_id,
@@ -138,6 +165,7 @@ class Conversation(object):
                 "questions": questions,
                 "contradictions": list(contradictions),
                 "statut_questions": self.guide.get("statut_validation"),
+                "comprehension": etat.get("comprehension"),
                 "note_corpus": etat.get("note_corpus")}
 
     # -- tours suivants --------------------------------------------------
@@ -221,6 +249,7 @@ class Conversation(object):
         if etat.get("tour", 1) >= clarification.TOURS_MAX:
             return None
         dossier_id = etat["dossier_id"]
+        self._suggestions_llm = etat.get("suggestions_llm") or {}
         posees_guide = self._questions_guide(etat)
         deja_confirmees = set(etat.get("confirmations") or [])
         a_confirmer = [c for c in clarification.contradictions(
