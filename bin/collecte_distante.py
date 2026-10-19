@@ -126,6 +126,19 @@ def infos_pdf(chemin):
                 infos[cle.strip()] = valeur.strip()
     code, sortie, _ = outil("pdffonts", chemin)
     infos["polices"] = max(0, len(sortie.decode("utf-8", "replace").splitlines()) - 2) if code == 0 else None
+    # Un calque texte peut n'être qu'un OCR fait par l'éditeur du PDF (scan du
+    # Journal officiel passé dans Acrobat « Paper Capture », ABBYY…) : ce n'est
+    # pas une lecture du document, et cela doit se voir.
+    indices = []
+    producteur = " ".join(str(infos.get(k) or "") for k in ("Producer", "Creator"))
+    for marque in ("Paper Capture", "ABBYY", "FineReader", "OmniPage", "ScanSoft", "Tesseract",
+                   "ocrmypdf", "Readiris", "PDF Scanner", "EPSON", "Hewlett-Packard MFP", "Canon"):
+        if marque.lower() in producteur.lower():
+            indices.append("producteur : " + marque)
+    code_f, sortie_f, _ = outil("pdffonts", chemin)
+    if code_f == 0 and re.search(rb"HiddenHorzOCR|GlyphLessFont|OCR", sortie_f):
+        indices.append("police d'OCR invisible")
+    infos["indices_ocr_editeur"] = indices
     code, _, erreur = outil("qpdf", "--check", chemin)
     infos["qpdf_check"] = "ok" if code == 0 else ("avertissements" if code == 3 else "erreur")
     if code not in (0, 3):
@@ -178,17 +191,18 @@ def ocr_page(chemin, numero, dossier_tmp):
     return "\n".join(lignes), confiance
 
 
-def extraire(chemin, pages, cle, ocr_autorise=True):
+def extraire(chemin, pages, cle, ocr_autorise=True, ocr_force=False):
     """Texte natif page par page ; OCR des pages sans texte. Renvoie un dict de constats."""
     natif, a_ocr = [], []
     for numero in range(1, pages + 1):
         texte = texte_page(chemin, numero)
         natif.append(texte)
-        if len(texte.strip()) < DENSITE_SCAN:
+        if ocr_force or len(texte.strip()) < DENSITE_SCAN:
             a_ocr.append(numero)
     constats = {"pages": pages, "caracteres_natifs": sum(len(t) for t in natif),
                 "pages_sans_texte": len(a_ocr)}
     ocr = {}
+    constats["ocr_force"] = bool(ocr_force)
     if a_ocr and not ocr_autorise:
         constats["ocr_non_tente"] = ("source secondaire : pas d'OCR (gain de temps) — "
                                      "le texte natif suffit au recoupement ou la source est écartée")
@@ -306,7 +320,8 @@ def traiter(source):
     infos = infos_pdf(chemin)
     resultat["pdf"] = {k: infos.get(k) for k in ("Pages", "Title", "Producer", "Creator",
                                                     "CreationDate", "ModDate", "PDF version",
-                                                    "polices", "qpdf_check", "qpdf_erreur")
+                                                    "polices", "qpdf_check", "qpdf_erreur",
+                                                    "indices_ocr_editeur")
                        if infos.get(k) is not None}
     try:
         pages = int(infos.get("Pages") or 0)
@@ -317,7 +332,8 @@ def traiter(source):
         return resultat
     resultat["extraction"] = extraire(
         chemin, pages, cle,
-        ocr_autorise=(source.get("categorie_source") or "").startswith("OFFICIEL") or source.get("ocr"))
+        ocr_autorise=(source.get("categorie_source") or "").startswith("OFFICIEL") or source.get("ocr"),
+        ocr_force=bool(source.get("ocr_force")))
     texte_complet = open(os.path.join(RACINE, resultat["extraction"]["fichier_texte"]),
                          encoding="utf-8").read()
     if resultat["extraction"].get("fichier_ocr"):
@@ -358,8 +374,9 @@ def main(argv=None):
         chemin_resultat = os.path.join(DOSSIER_RESULTATS, source["cle"] + ".json")
         if os.path.isfile(chemin_resultat) and not arguments.forcer:
             precedent = json.load(open(chemin_resultat, encoding="utf-8"))
+            deja_force = (precedent.get("extraction") or {}).get("ocr_force")
             if precedent.get("url") == source["url"] and precedent.get("statut") in (
-                    "TELECHARGE", "DECOUVERTE"):
+                    "TELECHARGE", "DECOUVERTE") and (deja_force or not source.get("ocr_force")):
                 synthese["ignores"].append(source["cle"])
                 continue
         journal("== %s  %s" % (source["cle"], source["url"]))

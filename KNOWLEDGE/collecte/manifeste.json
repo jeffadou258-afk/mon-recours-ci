@@ -749,7 +749,8 @@
    "url": "https://famille.gouv.ci/uploads/publications/176936997346.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "ocr_force": true
   },
   {
    "cle": "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
@@ -841,7 +842,8 @@
    "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/Loi_2018-975_du_27_decembre_2018_portant_Code_de_Procedure_penale.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "ocr_force": true
   },
   {
    "cle": "mffe_code_penal_2019_574",
@@ -858,7 +860,8 @@
    "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "ocr_force": true
   },
   {
    "cle": "mffe_mariage_2019_570",
@@ -873,7 +876,8 @@
    "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "ocr_force": true
   },
   {
    "cle": "mffe_successions_2019_573",
@@ -888,7 +892,8 @@
    "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-573_sur_la_succession.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "ocr_force": true
   },
   {
    "cle": "mffe_traite_2016_1111",
@@ -965,7 +970,8 @@
    "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2015-539_pupille_de_l-Etat.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées."
+   "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "ocr_force": true
   },
   {
    "cle": "mffe_adoption",
