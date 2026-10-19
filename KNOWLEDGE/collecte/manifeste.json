@@ -1185,6 +1185,78 @@
    "categorie_source": "DECOUVERTE",
    "mode": "decouverte",
    "filtre_liens": "\\.pdf|code|document"
+  },
+  {
+   "cle": "ilo_textes_pertinents_rci",
+   "titre": "Textes pertinents applicables en République de Côte d'Ivoire (compilation diffusée par l'OIT, 2025)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "recueil",
+   "autorite": "Organisation internationale du Travail (diffusion)",
+   "domaines": [
+    4,
+    22
+   ],
+   "url": "https://www.ilo.org/sites/default/files/2025-05/01_TEXTES_Pertinents_applicables_en_RCI.pdf",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "mode": "fichier",
+   "notes": "Compilation : aucune disposition n'en sera tirée ; sert à identifier les textes et leurs numéros."
+  },
+  {
+   "cle": "civlii_travail_enfants_2010_272",
+   "titre": "Loi n° 2010-272 du 30 septembre 2010 portant interdiction de la traite et des pires formes de travail des enfants — version CIVLII",
+   "numero_texte": "2010-272",
+   "date_texte": "2010-09-30",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    22,
+    4,
+    5
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2010/272/fra@2023-08-10/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier"
+  },
+  {
+   "cle": "civlii_travail_source_pdf",
+   "titre": "Loi n° 2015-532 portant Code du travail — version CIVLII du 10 août 2023",
+   "numero_texte": "2015-532",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction)",
+   "domaines": [
+    4
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/532/fra@2023-08-10/source.pdf",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "mode": "fichier"
+  },
+  {
+   "cle": "dec_leap_travail_1",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://leap.unep.org/en/countries/ci/national-legislation/loi-no2015-532-du-20-juillet-2015-portant-code-du-travail",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|faolex|ecolex"
+  },
+  {
+   "cle": "dec_leap_travail_2",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://leap.unep.org/en/countries/ci/national-legislation/loi-n-2015-532-du-20-juillet-1015-portant-code-du-travail",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|faolex|ecolex"
   }
  ]
 }
