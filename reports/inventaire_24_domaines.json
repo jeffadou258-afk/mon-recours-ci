@@ -1,5 +1,5 @@
 {
- "genere_le": "2026-10-19 08:48",
+ "genere_le": "2026-10-19 08:53",
  "resume_statuts": {
   "NON COUVERT": 19,
   "PARTIEL": 5
@@ -465,7 +465,7 @@
     "Seule la filiation (loi 2019-571) a des fiches.",
     "Mariage, divorce, pension alimentaire, successions : aucun texte au corpus.",
     "État civil (2018-862), minorité (2019-572), adoption, pupilles : textes présents mais 0 article indexé.",
-    "Loi « 202-894 » : numéro du document à vérifier (2021-894 probable, non confirmé)."
+    "Loi « 202-894 » du 21 décembre 2021 : numéro tel qu'il figure dans la base, à vérifier sur l'exemplaire officiel."
    ],
    "statut_technique": "PARTIEL",
    "validation_juridique": "AUCUNE relecture humaine tracée (VERIFIE_MANUELLEMENT = 0)"
