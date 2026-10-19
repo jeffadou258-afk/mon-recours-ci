@@ -44,6 +44,16 @@ ne représente personne et ne garantit aucun résultat.
 
 ## Installation
 
+**Démarrage complet (moteur + interface web) sur un Mac ou un poste Linux :**
+
+```bash
+bash scripts/demarrer-local.sh            # puis ouvrir http://localhost:3000
+bash scripts/demarrer-local.sh --tests    # contrôles complets avant démarrage
+```
+
+État du produit, matrice de conformité et limites : `RAPPORT_PRODUIT.md`.
+Spécification reconstituée : `SPEC_RECONSTITUEE.md`.
+
 Runtime : **Python 3.9+ et la bibliothèque standard** (`sqlite3`, `urllib`,
 `ssl`, `json`, `unittest`). Aucune dépendance obligatoire pour faire tourner
 l'agent.

@@ -46,3 +46,21 @@ Internet ──HTTPS──► nginx (443) ──► Next.js (127.0.0.1:3000) ─
 - Relecture des fiches par un juriste ; confirmation des numéros d'urgence.
 - Revue de sécurité externe ; sauvegardes chiffrées de `DOSSIERS/` et de la base.
 - Supervision : `GET /api/sante` doit renvoyer `ok: true`.
+
+## Coûts récurrents (19/10/2026) — montants connus et estimations
+
+| Poste | Montant | Nature |
+|---|---|---|
+| Serveur unique (VPS, 2 vCPU, 4 Go) | à chiffrer sur devis de l'hébergeur choisi | décision du propriétaire |
+| Nom de domaine | à chiffrer auprès du registraire | décision du propriétaire |
+| Certificat HTTPS (Let's Encrypt) | 0 | connu |
+| Vercel | non nécessaire : l'interface tourne sur le serveur du moteur (le plan gratuit Hobby est réservé à l'usage non commercial ; Pro : 20 $/mois — [source](https://vercel.com/pricing)) | connu |
+| Modèle de langage (facultatif) | ≈ 0,40 à 8 $ pour 1 000 consultations selon le modèle | **estimation**, voir `docs/COUCHE_LANGAGE.md` |
+| Sauvegardes hors serveur | selon le stockage choisi | décision du propriétaire |
+| Relecture juridique des fiches | honoraires à convenir | décision du propriétaire |
+
+## Essai local
+
+`bash scripts/demarrer-local.sh` (depuis la racine du dépôt) démarre le moteur et
+l'interface sur la machine, avec des clés tirées au hasard ; `--tests` lance
+d'abord tous les contrôles.
