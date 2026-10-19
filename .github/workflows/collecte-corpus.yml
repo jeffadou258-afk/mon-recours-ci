@@ -84,12 +84,21 @@ jobs:
           git -C "$ARCH" push -q origin corpus/archives-pdf
 
       - name: Constats (branche de travail)
+        # Les constats de CE run font foi pour les entrées qu'il a traitées : ils
+        # sont recopiés sur l'état le plus récent de la branche (pas de rebase,
+        # qui échoue dès qu'un même fichier de constat a changé des deux côtés).
         run: |
-          git add KNOWLEDGE/collecte/resultats KNOWLEDGE/collecte/textes KNOWLEDGE/collecte/derniere_execution.json
-          if git diff --cached --quiet; then echo "aucun constat nouveau"; exit 0; fi
-          git commit -q -m "Collecte : constats du run ${{ github.run_id }}"
+          SAUVE="$RUNNER_TEMP/constats"
+          mkdir -p "$SAUVE"
+          cp -r KNOWLEDGE/collecte/resultats KNOWLEDGE/collecte/textes KNOWLEDGE/collecte/derniere_execution.json "$SAUVE/"
           for essai in 1 2 3; do
-            git pull -q --rebase origin corpus/collecte-24-domaines && git push -q origin HEAD:corpus/collecte-24-domaines && exit 0
+            git fetch -q origin corpus/collecte-24-domaines
+            git reset -q --hard FETCH_HEAD
+            cp -r "$SAUVE"/* KNOWLEDGE/collecte/
+            git add KNOWLEDGE/collecte/resultats KNOWLEDGE/collecte/textes KNOWLEDGE/collecte/derniere_execution.json
+            if git diff --cached --quiet; then echo "aucun constat nouveau"; exit 0; fi
+            git commit -q -m "Collecte : constats du run ${{ github.run_id }}"
+            git push -q origin HEAD:corpus/collecte-24-domaines && exit 0
             sleep 5
           done
           exit 1
