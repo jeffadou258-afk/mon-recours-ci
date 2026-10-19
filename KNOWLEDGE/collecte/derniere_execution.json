@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-19T11:48:14+00:00",
+ "execution": "2026-10-19T12:28:39+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -126,27 +126,11 @@
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "officiel_famille_loi_relative_a_l_adoption",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mffe_cpp_2018_975",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "mffe_code_penal_2019_574",
    "statut": "TELECHARGE"
   },
   {
    "cle": "mffe_mariage_2019_570",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mffe_successions_2019_573",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mffe_pupille_2015_539",
    "statut": "TELECHARGE"
   },
   {
@@ -171,6 +155,18 @@
   },
   {
    "cle": "dec_civlii_oeuvre_travail",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_famille_gouv_publications",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "civlii_travail_enfants_2010_272",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "civlii_travail_source_pdf",
    "statut": "ECHEC_HTTP"
   }
  ],
@@ -200,31 +196,31 @@
   "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
   "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
   "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
+  "officiel_famille_loi_relative_a_l_adoption",
   "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
   "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
   "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
   "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
   "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
+  "mffe_cpp_2018_975",
+  "mffe_successions_2019_573",
   "mffe_traite_2016_1111",
   "mffe_constitution_2016",
   "mffe_etat_civil_2018_862",
   "mffe_naissance_2018_863",
+  "mffe_pupille_2015_539",
   "mffe_adoption",
-  "ohada_jo_special_aupsrve_2023"
- ],
- "reportes": [
+  "ohada_jo_special_aupsrve_2023",
   "dec_ohada_jo_n23",
   "dec_ohada_jo_n24",
   "dec_ohada_jo_special_2016",
   "dec_ohada_jo_p2",
   "dec_ohada_jo_p3",
   "dec_ohada_jo_p4",
-  "dec_famille_gouv_publications",
   "dec_cndj_biblio_codes",
   "ilo_textes_pertinents_rci",
-  "civlii_travail_enfants_2010_272",
-  "civlii_travail_source_pdf",
   "dec_leap_travail_1",
   "dec_leap_travail_2"
- ]
+ ],
+ "reportes": []
 }

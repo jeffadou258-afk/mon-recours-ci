@@ -1,8 +1,8 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "officiel_famille_loi_relative_a_l_adoption",
- "date_recuperation": "2026-10-19T11:48:37+00:00",
- "duree_s": 40.0,
+ "date_recuperation": "2026-10-19T11:18:59+00:00",
+ "duree_s": 36.0,
  "extraction": {
   "caracteres_natifs": 14608,
   "confiance_ocr_moyenne": 92.7,

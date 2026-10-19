@@ -1,8 +1,8 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "mffe_cpp_2018_975",
- "date_recuperation": "2026-10-19T11:49:17+00:00",
- "duree_s": 1517.4,
+ "date_recuperation": "2026-10-19T11:19:35+00:00",
+ "duree_s": 1068.7,
  "extraction": {
   "caracteres_natifs": 796556,
   "confiance_ocr_moyenne": 94.1,

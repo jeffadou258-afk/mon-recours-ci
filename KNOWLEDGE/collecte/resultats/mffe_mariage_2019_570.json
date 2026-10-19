@@ -1,11 +1,12 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "mffe_mariage_2019_570",
- "date_recuperation": "2026-10-19T12:24:07+00:00",
- "duree_s": 84.5,
+ "date_recuperation": "2026-10-19T12:40:37+00:00",
+ "duree_s": 99.8,
  "extraction": {
   "caracteres_natifs": 44503,
-  "confiance_ocr_moyenne": 92.4,
+  "confiance_ocr_moyenne": 92.7,
+  "dpi_ocr": 300,
   "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_mariage_2019_570.ocr.txt",
   "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_mariage_2019_570.txt",
   "ocr_force": true,
@@ -13,7 +14,7 @@
   "pages_ocr": 7,
   "pages_ocr_faibles": [],
   "pages_sans_texte": 7,
-  "sha256_ocr": "sha256:7028dc168454ca7bd995bfa78034363d2f0bea0fb394ebca336a05b03f7b22e9",
+  "sha256_ocr": "sha256:60b6f999c2b21e04d999f3512a07835a5f30b78a6c3a795a26764f38eb2e2756",
   "sha256_texte": "sha256:3ed99cd54fdcb8d8b12202ef7e866e39cf0eba6aad58aa979acd707a84949fcf"
  },
  "fichier_pdf": "mffe_mariage_2019_570.pdf",
@@ -39,5 +40,6 @@
  "statut": "TELECHARGE",
  "type_contenu": "application/pdf",
  "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf",
- "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf"
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf",
+ "version_ocr": 2
 }

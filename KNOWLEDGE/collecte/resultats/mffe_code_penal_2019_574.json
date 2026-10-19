@@ -1,11 +1,12 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "mffe_code_penal_2019_574",
- "date_recuperation": "2026-10-19T12:14:35+00:00",
- "duree_s": 572.2,
+ "date_recuperation": "2026-10-19T12:29:00+00:00",
+ "duree_s": 697.2,
  "extraction": {
   "caracteres_natifs": 304156,
   "confiance_ocr_moyenne": 94.7,
+  "dpi_ocr": 300,
   "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_code_penal_2019_574.ocr.txt",
   "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_code_penal_2019_574.txt",
   "ocr_force": true,
@@ -13,7 +14,7 @@
   "pages_ocr": 52,
   "pages_ocr_faibles": [],
   "pages_sans_texte": 52,
-  "sha256_ocr": "sha256:cb09385fac83f07198ad65d7d0cb8fe864701312666c8609b36bde4e23b7a083",
+  "sha256_ocr": "sha256:a9720b959aa6ad2e12c8b7553554db16e6bf5b353640c6f96280dcebf300af2e",
   "sha256_texte": "sha256:da63213000d77ff3a6cca0a0798f2a3e2f3713f5343528fd05faa94f0091641a"
  },
  "fichier_pdf": "mffe_code_penal_2019_574.pdf",
@@ -39,5 +40,6 @@
  "statut": "TELECHARGE",
  "type_contenu": "application/pdf",
  "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf",
- "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf"
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-574_portant_code_penal.pdf",
+ "version_ocr": 2
 }
