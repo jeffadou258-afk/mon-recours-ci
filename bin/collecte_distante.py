@@ -142,7 +142,7 @@ def texte_page(chemin, numero):
 def ocr_page(chemin, numero, dossier_tmp):
     """OCR d'une page : rendu 300 dpi en niveaux de gris, tesseract fra. Renvoie (texte, confiance)."""
     base = os.path.join(dossier_tmp, "p%04d" % numero)
-    code, _, _ = outil("pdftoppm", "-f", str(numero), "-l", str(numero), "-r", "300", "-gray",
+    code, _, _ = outil("pdftoppm", "-f", str(numero), "-l", str(numero), "-r", os.environ.get("COLLECTE_DPI_OCR", "200"), "-gray",
                        "-png", "-singlefile", chemin, base)
     image = base + ".png"
     if code != 0 or not os.path.isfile(image):
@@ -178,7 +178,7 @@ def ocr_page(chemin, numero, dossier_tmp):
     return "\n".join(lignes), confiance
 
 
-def extraire(chemin, pages, cle):
+def extraire(chemin, pages, cle, ocr_autorise=True):
     """Texte natif page par page ; OCR des pages sans texte. Renvoie un dict de constats."""
     natif, a_ocr = [], []
     for numero in range(1, pages + 1):
@@ -189,7 +189,10 @@ def extraire(chemin, pages, cle):
     constats = {"pages": pages, "caracteres_natifs": sum(len(t) for t in natif),
                 "pages_sans_texte": len(a_ocr)}
     ocr = {}
-    if a_ocr and shutil.which("tesseract"):
+    if a_ocr and not ocr_autorise:
+        constats["ocr_non_tente"] = ("source secondaire : pas d'OCR (gain de temps) — "
+                                     "le texte natif suffit au recoupement ou la source est écartée")
+    elif a_ocr and shutil.which("tesseract"):
         if len(a_ocr) > PAGES_OCR_MAX:
             constats["ocr_tronque"] = "%d pages à reconnaître, limite %d" % (len(a_ocr), PAGES_OCR_MAX)
             a_ocr = a_ocr[:PAGES_OCR_MAX]
@@ -312,7 +315,9 @@ def traiter(source):
     if pages <= 0:
         resultat["statut"] = "PDF_ILLISIBLE"
         return resultat
-    resultat["extraction"] = extraire(chemin, pages, cle)
+    resultat["extraction"] = extraire(
+        chemin, pages, cle,
+        ocr_autorise=(source.get("categorie_source") or "").startswith("OFFICIEL") or source.get("ocr"))
     texte_complet = open(os.path.join(RACINE, resultat["extraction"]["fichier_texte"]),
                          encoding="utf-8").read()
     if resultat["extraction"].get("fichier_ocr"):
