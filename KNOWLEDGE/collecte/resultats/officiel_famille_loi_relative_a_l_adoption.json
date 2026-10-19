@@ -1,13 +1,19 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "officiel_famille_loi_relative_a_l_adoption",
- "date_recuperation": "2026-10-19T10:54:04+00:00",
- "duree_s": 4.6,
+ "date_recuperation": "2026-10-19T11:18:59+00:00",
+ "duree_s": 36.0,
  "extraction": {
   "caracteres_natifs": 14608,
+  "confiance_ocr_moyenne": 92.7,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_loi_relative_a_l_adoption.ocr.txt",
   "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_loi_relative_a_l_adoption.txt",
+  "ocr_force": true,
   "pages": 8,
-  "pages_sans_texte": 0,
+  "pages_ocr": 8,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 8,
+  "sha256_ocr": "sha256:ed7f1863880e70e6c2f0c26f547dc471edc1642c8154f6ddedc52c80cb018498",
   "sha256_texte": "sha256:7782f769942cf8922fd381364934b36adbade18b5c71911c984fb60bb512082f"
  },
  "fichier_pdf": "officiel_famille_loi_relative_a_l_adoption.pdf",
@@ -21,6 +27,7 @@
   "PDF version": "1.5",
   "Pages": "8",
   "Producer": "Microsoft® Word 2016",
+  "indices_ocr_editeur": [],
   "polices": 5,
   "qpdf_check": "avertissements"
  },

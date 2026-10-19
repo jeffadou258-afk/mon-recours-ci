@@ -1,13 +1,19 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "mffe_code_penal_2019_574",
- "date_recuperation": "2026-10-19T10:59:26+00:00",
- "duree_s": 2.5,
+ "date_recuperation": "2026-10-19T11:37:23+00:00",
+ "duree_s": 402.1,
  "extraction": {
   "caracteres_natifs": 304156,
+  "confiance_ocr_moyenne": 94.7,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_code_penal_2019_574.ocr.txt",
   "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_code_penal_2019_574.txt",
+  "ocr_force": true,
   "pages": 52,
-  "pages_sans_texte": 0,
+  "pages_ocr": 52,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 52,
+  "sha256_ocr": "sha256:cb09385fac83f07198ad65d7d0cb8fe864701312666c8609b36bde4e23b7a083",
   "sha256_texte": "sha256:da63213000d77ff3a6cca0a0798f2a3e2f3713f5343528fd05faa94f0091641a"
  },
  "fichier_pdf": "mffe_code_penal_2019_574.pdf",
@@ -22,6 +28,10 @@
   "Pages": "52",
   "Producer": "Adobe Acrobat Pro 11.0.20 Paper Capture Plug-in",
   "Title": "",
+  "indices_ocr_editeur": [
+   "producteur : Paper Capture",
+   "police d'OCR invisible"
+  ],
   "polices": 174,
   "qpdf_check": "ok"
  },

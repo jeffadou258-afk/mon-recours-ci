@@ -1,8 +1,8 @@
 {
  "categorie_source": "DECOUVERTE",
  "cle": "dec_mffe_textes",
- "date_recuperation": "2026-10-19T10:46:54+00:00",
- "duree_s": 0.9,
+ "date_recuperation": "2026-10-19T11:18:47+00:00",
+ "duree_s": 0.8,
  "http": 403,
  "octets": 0,
  "statut": "ECHEC_HTTP",

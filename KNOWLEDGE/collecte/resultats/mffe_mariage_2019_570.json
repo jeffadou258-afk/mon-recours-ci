@@ -1,13 +1,19 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "mffe_mariage_2019_570",
- "date_recuperation": "2026-10-19T10:59:28+00:00",
- "duree_s": 1.1,
+ "date_recuperation": "2026-10-19T11:44:06+00:00",
+ "duree_s": 58.4,
  "extraction": {
   "caracteres_natifs": 44503,
+  "confiance_ocr_moyenne": 92.4,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_mariage_2019_570.ocr.txt",
   "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_mariage_2019_570.txt",
+  "ocr_force": true,
   "pages": 7,
-  "pages_sans_texte": 0,
+  "pages_ocr": 7,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 7,
+  "sha256_ocr": "sha256:7028dc168454ca7bd995bfa78034363d2f0bea0fb394ebca336a05b03f7b22e9",
   "sha256_texte": "sha256:3ed99cd54fdcb8d8b12202ef7e866e39cf0eba6aad58aa979acd707a84949fcf"
  },
  "fichier_pdf": "mffe_mariage_2019_570.pdf",
@@ -21,6 +27,11 @@
   "PDF version": "1.5",
   "Pages": "7",
   "Producer": "ABBYY FineReader 11",
+  "indices_ocr_editeur": [
+   "producteur : ABBYY",
+   "producteur : FineReader",
+   "producteur : Hewlett-Packard MFP"
+  ],
   "polices": 17,
   "qpdf_check": "avertissements"
  },

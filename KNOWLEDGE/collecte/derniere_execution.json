@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-19T10:46:29+00:00",
+ "execution": "2026-10-19T11:18:33+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -54,16 +54,8 @@
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "gouvci_175043233774",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "dec_mffe_textes",
    "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "dec_famille_gouv",
-   "statut": "DECOUVERTE"
   },
   {
    "cle": "dec_emploi_gouv",
@@ -134,55 +126,7 @@
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "officiel_famille_loi_n_202_894_du_21_d_cembre_2021_relative_aux_m",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_d_cret_portant_r_glementation_des_familles_d_acc",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "officiel_famille_loi_relative_a_l_adoption",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
    "statut": "TELECHARGE"
   },
   {
@@ -202,36 +146,12 @@
    "statut": "TELECHARGE"
   },
   {
-   "cle": "mffe_traite_2016_1111",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mffe_constitution_2016",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mffe_etat_civil_2018_862",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mffe_naissance_2018_863",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "mffe_pupille_2015_539",
    "statut": "TELECHARGE"
   },
   {
-   "cle": "mffe_adoption",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_jo_special_aupsrve_2023",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "assnat_constitution",
-   "statut": "ECHEC_HTTP"
+   "statut": "ECHEC_RESEAU"
   },
   {
    "cle": "civlii_code_penal_source_pdf",
@@ -254,40 +174,8 @@
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_ohada_jo_n23",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_jo_n24",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_jo_special_2016",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_jo_p2",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_jo_p3",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_jo_p4",
-   "statut": "DECOUVERTE"
-  },
-  {
    "cle": "dec_famille_gouv_publications",
    "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "dec_cndj_biblio_codes",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "ilo_textes_pertinents_rci",
-   "statut": "TELECHARGE"
   },
   {
    "cle": "civlii_travail_enfants_2010_272",
@@ -296,14 +184,6 @@
   {
    "cle": "civlii_travail_source_pdf",
    "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "dec_leap_travail_1",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_leap_travail_2",
-   "statut": "DECOUVERTE"
   }
  ],
  "ignores": [
@@ -313,16 +193,46 @@
   "successions_2019_573_bice",
   "aupsrve_2023_jo_ohadacom",
   "aupsrve_2023_senlii",
+  "gouvci_175043233774",
   "dec_ohada_journal_officiel_en",
   "dec_ohada_journal_officiel_fr",
   "dec_ohada_aupsrve_en",
   "dec_ohada_aupsrve_publication",
   "dec_ohada_actes_uniformes_fr",
+  "dec_famille_gouv",
   "dec_sgg",
   "dec_cndj_codes",
   "dec_justice_gouv",
   "dec_assnat_lois",
-  "dec_civlii_legislation_p1"
+  "dec_civlii_legislation_p1",
+  "officiel_famille_loi_n_202_894_du_21_d_cembre_2021_relative_aux_m",
+  "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
+  "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
+  "officiel_famille_d_cret_portant_r_glementation_des_familles_d_acc",
+  "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
+  "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
+  "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
+  "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
+  "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
+  "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
+  "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
+  "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
+  "mffe_traite_2016_1111",
+  "mffe_constitution_2016",
+  "mffe_etat_civil_2018_862",
+  "mffe_naissance_2018_863",
+  "mffe_adoption",
+  "ohada_jo_special_aupsrve_2023",
+  "dec_ohada_jo_n23",
+  "dec_ohada_jo_n24",
+  "dec_ohada_jo_special_2016",
+  "dec_ohada_jo_p2",
+  "dec_ohada_jo_p3",
+  "dec_ohada_jo_p4",
+  "dec_cndj_biblio_codes",
+  "ilo_textes_pertinents_rci",
+  "dec_leap_travail_1",
+  "dec_leap_travail_2"
  ],
  "reportes": []
 }

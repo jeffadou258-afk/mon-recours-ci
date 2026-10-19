@@ -1,13 +1,19 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "mffe_pupille_2015_539",
- "date_recuperation": "2026-10-19T11:05:18+00:00",
- "duree_s": 1.8,
+ "date_recuperation": "2026-10-19T11:46:27+00:00",
+ "duree_s": 19.7,
  "extraction": {
   "caracteres_natifs": 13110,
+  "confiance_ocr_moyenne": 94.8,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_pupille_2015_539.ocr.txt",
   "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_pupille_2015_539.txt",
+  "ocr_force": true,
   "pages": 2,
-  "pages_sans_texte": 0,
+  "pages_ocr": 2,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 2,
+  "sha256_ocr": "sha256:5a720b17c8daf7206fd5d2d407be6e346ab681e2ae44a95dcc93c9d9e0f93f19",
   "sha256_texte": "sha256:b57a43e4d99912220ecebe5ada1c0089ea3b8c87849e42450787bb2513c9b301"
  },
  "fichier_pdf": "mffe_pupille_2015_539.pdf",
@@ -21,6 +27,10 @@
   "PDF version": "1.6",
   "Pages": "2",
   "Producer": "Adobe Acrobat 8.0 Paper Capture Plug-in",
+  "indices_ocr_editeur": [
+   "producteur : Paper Capture",
+   "police d'OCR invisible"
+  ],
   "polices": 10,
   "qpdf_check": "avertissements"
  },

@@ -1,13 +1,19 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "mffe_successions_2019_573",
- "date_recuperation": "2026-10-19T10:59:29+00:00",
- "duree_s": 1.1,
+ "date_recuperation": "2026-10-19T11:45:04+00:00",
+ "duree_s": 83.5,
  "extraction": {
   "caracteres_natifs": 52872,
+  "confiance_ocr_moyenne": 94.5,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_successions_2019_573.ocr.txt",
   "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_successions_2019_573.txt",
+  "ocr_force": true,
   "pages": 10,
-  "pages_sans_texte": 0,
+  "pages_ocr": 10,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 10,
+  "sha256_ocr": "sha256:e16c4a3a88f3ed020d2064df6ce2ff997f8299d678c698f129394ee3712728a3",
   "sha256_texte": "sha256:dbd90cd2597f1ec6406756c3c2882e671ee590d50f67b66e38f8801a2f086a6e"
  },
  "fichier_pdf": "mffe_successions_2019_573.pdf",
@@ -21,6 +27,11 @@
   "PDF version": "1.5",
   "Pages": "10",
   "Producer": "ABBYY FineReader 11",
+  "indices_ocr_editeur": [
+   "producteur : ABBYY",
+   "producteur : FineReader",
+   "producteur : Hewlett-Packard MFP"
+  ],
   "polices": 17,
   "qpdf_check": "avertissements"
  },
