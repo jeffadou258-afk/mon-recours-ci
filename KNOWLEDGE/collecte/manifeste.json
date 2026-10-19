@@ -630,6 +630,202 @@
    "categorie_source": "DECOUVERTE",
    "mode": "decouverte",
    "filtre_liens": "/akn/ci/"
+  },
+  {
+   "cle": "officiel_famille_loi_n_202_894_du_21_d_cembre_2021_relative_aux_m",
+   "titre": "LOI n° 202-894 du 21 décembre 2021 relative aux mesures de protection des victimes de violences domestiques. de viol et de violences sexuelles autres que domestiques.",
+   "numero_texte": "202-894",
+   "date_texte": "2021-12-21",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176960480223.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
+   "titre": "DECRET No 2023-90 DU 15 FEVRIER 2023 PORTANT REGLEMENTATION DES FAMILLES D'ACCUEIL",
+   "numero_texte": "2023-90",
+   "date_texte": "2023-02-15",
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937670169.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
+   "titre": "DECRET No 2023-89 DU 15 FEVRIER 2023 FIXANT LES NORMES ET STANDARDS APPLICABLES AUX ETABLISSEMENTS DE PROTECTION DE REMPLACEMENT DE L'ENFANT",
+   "numero_texte": "2023-89",
+   "date_texte": "2023-02-15",
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937624358.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_d_cret_portant_r_glementation_des_familles_d_acc",
+   "titre": "Décret Portant Règlementation des Familles d'Accueil, 2023 (Décret 90 de 2023)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937552921.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
+   "titre": "DÉCRET No 2019-779 portant création, attributions, organisation et fonctionnement du comité interministériel de protection de l’enfant.",
+   "numero_texte": "2019-779",
+   "date_texte": null,
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937240619.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
+   "titre": "LOI n° 2019-571 du 26 juin 2019 relative à la filiation",
+   "numero_texte": "2019-571",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937124389.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
+   "titre": "Loi n°2018-862 du 19 novembre 2018 relative à l’état civil.",
+   "numero_texte": "2018-862",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176937063397.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_loi_relative_a_l_adoption",
+   "titre": "LOI RELATIVE A L’ADOPTION",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936997346.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
+   "titre": "Loi n°2018-863 du 19 novembre 2018 instituant une procédure spéciale de déclaration de naissance, de rétablissement d’identité et de transcription d’acte de naissance.",
+   "numero_texte": "2018-863",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936984489.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
+   "titre": "LOI No 2015-539 du 20 juillet 2015 portant Statut de pupille de l’Etat",
+   "numero_texte": "2015-539",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936945850.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
+   "titre": "Loi n°2019-572 du 26 Juin 2019 relative à la minorité",
+   "numero_texte": "2019-572",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2,
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/17693691723.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
+   "titre": "DECRET No 2020-907 DU 18 NOVEMBRE 2020 PORTANT ATTRIBUTIONS, ORGANISATION ET FONCTIONNEMENT DE L’AUTORITE CENTRALE POUR L’ADOPTION EN COTE D’IVOIRE : DECRET ACACI",
+   "numero_texte": "2020-907",
+   "date_texte": "2020-11-18",
+   "type_texte": "decret",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    22
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936873529.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+  },
+  {
+   "cle": "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
+   "titre": "CONVENTION SUR LA PROTECTION DES ENFANTS ET LA COOPÉRATION EN MATIÈRE D’ADOPTION INTERNATIONALE : Convention de LAHAYE 93 (Conclue le 29 mai 1993)",
+   "numero_texte": null,
+   "date_texte": "1993-05-29",
+   "type_texte": "convention",
+   "autorite": "Ministère de la Famille, de la Femme et de l'Enfant (famille.gouv.ci)",
+   "domaines": [
+    2
+   ],
+   "url": "https://famille.gouv.ci/uploads/publications/176936701697.pdf",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "mode": "fichier",
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
   }
  ]
 }
