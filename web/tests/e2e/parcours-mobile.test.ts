@@ -217,6 +217,19 @@ test("moteur indisponible : message clair et bouton Réessayer, saisie conservé
   await ctx.close();
 });
 
+test("violences hors catalogue : l'urgence critique est affichée malgré l'absence de texte", async () => {
+  const ctx = await contexteMobile();
+  const page = await ctx.newPage();
+  await page.goto(base + "/consultation");
+  await page.getByLabel("Expliquez avec vos mots ce qui vous arrive").fill("Mon mari me frappe et menace de me tuer.");
+  await page.getByRole("button", { name: "Analyser ma situation" }).tap();
+  await page.getByRole("heading", { name: "Aucune conclusion possible avec les textes disponibles" }).waitFor();
+  const alerte = page.getByRole("alert").first();
+  await alerte.waitFor();
+  assert.ok(await page.locator('a[href^="tel:"]').count() > 0, "numéros d'urgence cliquables");
+  await ctx.close();
+});
+
 test("perte de réseau côté navigateur : message « Pas de connexion »", async () => {
   const ctx = await contexteMobile();
   const page = await ctx.newPage();

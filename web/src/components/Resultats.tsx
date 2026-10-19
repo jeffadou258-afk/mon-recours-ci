@@ -188,6 +188,9 @@ export function VueSansFiche({ vue }: { vue: VueHorsCatalogue }) {
   return (
     <section className="resultat" aria-labelledby="titre-sans-fiche">
       <EnteteStatut statut={vue.statut} idTitre="titre-sans-fiche" />
+      {/* L'urgence passe avant tout, même quand aucun texte ne répond. */}
+      <BandeauUrgence urgence={vue.urgence} />
+      <EncadreVerrous verrous={vue.verrous} />
       <p className="resultat__message">{vue.message}</p>
 
       {vue.domaines.length > 0 ? (

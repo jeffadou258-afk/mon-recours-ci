@@ -25,6 +25,7 @@ _MOTS_CLES = {
         "bail", "bailleur", "locataire", "loyer", "caution", "expulsion", "logement",
         "maison", "terrain", "foncier", "proprietaire", "titre foncier", "acd", "quittance",
         "etat des lieux", "syndic", "copropriete", "construction", "permis de construire",
+        "depot de garantie",
     ),
     "travail": (
         "employeur", "salarie", "contrat de travail", "licenciement", "salaire", "paie",
@@ -39,11 +40,16 @@ _MOTS_CLES = {
         "garde des enfants", "droit de garde", "garde alternee", "garde exclusive",
         "residente", "dot", "concubinage", "adoption", "tutelle", "succession", "heritage",
         "acte de mariage", "autorite parentale",
+        # État civil : le texte de référence (loi n° 2018-862) est rangé dans ce
+        # domaine dans le corpus. « naissance » seul reste trop large.
+        "etat civil", "acte de naissance", "declaration de naissance",
+        "declarer la naissance", "reconnaitre l'enfant", "reconnaissance de l'enfant",
     ),
     "contrats_dettes_commerce": (
         "contrat", "dette", "pret", "facture", "impaye", "remboursement", "creancier",
         "debiteur", "societe", "commercant", "bail commercial", "reconnaissance de dette",
         "cheque", "traite", "garantie", "interet",
+        "porter caution", "cautionnement", "pret bancaire", "hypotheque", "nantissement",
     ),
     "penal_procedure_penale": (
         "plainte", "police", "gendarmerie", "vol", "escroquerie", "agression", "infraction",
@@ -114,6 +120,17 @@ def _distance_un(gauche, droite):
     return True
 
 
+# Mots très courants qui ne doivent JAMAIS servir de troncature : « pas » ne
+# désigne pas « pasteur », « mon » pas « monnaie ». Constaté : « il n'a pas
+# d'acte de naissance » orientait vers les associations religieuses.
+_MOTS_VIDES = frozenset((
+    "pas", "mon", "ton", "son", "mes", "tes", "ses", "nos", "vos", "les", "des", "une",
+    "par", "pour", "sur", "est", "ont", "sont", "dit", "fait", "tout", "tous", "elle",
+    "ils", "nous", "vous", "que", "qui", "car", "mais", "donc", "avec", "sans", "dans",
+    "chez", "plus", "moins", "tres", "bien", "peu", "ans", "jour", "mois", "fois",
+))
+
+
 def _mot_approchant(mot, mots_du_texte):
     """Mot du texte approchant un mot-clé, ou None.
 
@@ -125,7 +142,8 @@ def _mot_approchant(mot, mots_du_texte):
     if len(mot) < 4:
         return None
     for candidat in mots_du_texte:
-        if len(candidat) >= 3 and len(candidat) < len(mot) and mot.startswith(candidat):
+        if (len(candidat) >= 3 and len(candidat) < len(mot) and mot.startswith(candidat)
+                and candidat not in _MOTS_VIDES):
             return candidat
     for candidat in mots_du_texte:
         if (len(candidat) >= 4 and len(mot) >= 4 and candidat.startswith(mot)):

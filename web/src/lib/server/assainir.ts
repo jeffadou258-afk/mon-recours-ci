@@ -164,13 +164,15 @@ function clarification(d: Objet): VueClarification {
   };
 }
 
-function horsCatalogue(reponse: Objet, domainesData: unknown): VueHorsCatalogue {
+function horsCatalogue(reponse: Objet, domainesData: unknown, d: Objet = {}): VueHorsCatalogue {
   const sansFiche = objet(reponse.articles_du_domaine_sans_fiche);
   const couverture = objet(reponse.couverture_du_catalogue);
   const domaines = textes(reponse.domaines_identifies);
   return {
     etape: "hors_catalogue",
     statut: "CONCLUSION_IMPOSSIBLE",
+    urgence: urgence(d.urgence),
+    verrous: verrous(d.verrous_humains),
     message: texteRequis(
       reponse.message,
       "Aucune fiche de réponse ne correspond à votre question.",
@@ -216,7 +218,7 @@ export function assainirOuverture(data: unknown): VueOuverture {
   const d = objet(data);
   const etape = texte(d.etape);
   if (etape === "clarification") return clarification(d);
-  if (etape === "hors_catalogue") return horsCatalogue(objet(d.reponse), d.domaines);
+  if (etape === "hors_catalogue") return horsCatalogue(objet(d.reponse), d.domaines, d);
   if (etape === "refus") return refus(objet(d.reponse));
   throw new ReponseInattendue(`étape d'ouverture inconnue : ${String(etape)}`);
 }

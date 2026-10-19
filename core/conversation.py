@@ -92,7 +92,8 @@ class Conversation(object):
         qualification = dossier.get("qualification") or {}
         domaines = qualification.get("domaines_probables") or ["indetermine"]
         retenues, du_domaine = catalogue.pour_demande(
-            demande, domaines, fiches=self.fiches, chemin_db=self.chemin_db)
+            demande, domaines, fiches=self.fiches, chemin_db=self.chemin_db,
+            scores=qualification.get("scores_domaines"))
 
         # Compréhension assistée par un modèle de langage, SI elle est activée
         # (fournisseur + clé + accord sur l'envoi des données). Ce qu'il propose
@@ -110,9 +111,13 @@ class Conversation(object):
                     "domaines": domaines,
                     "comprehension": self._vue_comprehension(comprehension)}
             self._ecrire_etat(dossier_id, etat)
+            # L'urgence et les verrous humains sont TOUJOURS restitués, même sans
+            # fiche : une situation de violence hors catalogue doit être orientée.
             return {"etape": "hors_catalogue", "dossier_id": dossier_id,
                     "reponse": self._restituer_sans_fiche(demande, domaines, du_domaine),
-                    "domaines": domaines, "comprehension": etat["comprehension"]}
+                    "domaines": domaines, "comprehension": etat["comprehension"],
+                    "urgence": dossier.get("urgence"),
+                    "verrous_humains": dossier.get("verrous_humains")}
 
         questions, deja = [], set()
         for fiche in retenues:

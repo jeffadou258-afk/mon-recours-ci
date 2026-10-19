@@ -104,6 +104,9 @@ export interface VueArticleSansFiche {
 export interface VueHorsCatalogue {
   etape: "hors_catalogue";
   statut: "CONCLUSION_IMPOSSIBLE";
+  /** Urgence et verrous : restitués même sans fiche (ex. violences). */
+  urgence: VueUrgence | null;
+  verrous: VueVerrou[];
   message: string;
   domaines: string[];
   articlesSansFiche: { domaine: string; articles: VueArticleSansFiche[] }[];

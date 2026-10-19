@@ -208,6 +208,29 @@ def obtenir_reference(ref_id, chemin=None):
     return dict(ligne) if ligne else None
 
 
+def annoter_reference(ref_id, note, source_url, chemin=None):
+    """Ajoute une note datée et sourcée aux limites d'interprétation d'une référence.
+
+    N'efface rien (la note précédente est conservée), ne change ni l'extrait ni
+    l'état de vérification. Sert à consigner un recoupement ou une correction
+    documentée. Idempotent : la même note n'est pas ajoutée deux fois.
+    """
+    if not note or not str(source_url or "").startswith("http"):
+        raise ValueError("une note exige un texte et une source http(s)")
+    existante = obtenir_reference(ref_id, chemin)
+    if existante is None:
+        raise ValueError("référence inconnue : %s" % ref_id)
+    ajout = "[%s] %s (source : %s)" % (horodatage()[:10], note.strip(), source_url)
+    actuelles = existante.get("limites_interpretation") or ""
+    if note.strip() in actuelles:
+        return actuelles
+    nouvelles = (actuelles + " " + ajout).strip()
+    with connexion(chemin) as conn:
+        conn.execute("UPDATE references_juridiques SET limites_interpretation = ?, maj_le = ? "
+                     "WHERE ref_id = ?", (nouvelles, horodatage(), ref_id))
+    return nouvelles
+
+
 def lister_references(etat=None, domaine=None, chemin=None):
     requete = "SELECT * FROM references_juridiques"
     conditions, params = [], []

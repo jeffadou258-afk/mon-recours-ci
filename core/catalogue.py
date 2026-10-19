@@ -130,8 +130,14 @@ def _correspond(declencheur, texte_normalise):
     return bool(mots) and all(mot in texte_normalise for mot in mots)
 
 
-def pour_demande(demande, domaines=(), fiches=None, chemin_db=None):
-    """Fiches qui répondent à la demande, par déclencheur puis par domaine."""
+def pour_demande(demande, domaines=(), fiches=None, chemin_db=None, scores=None):
+    """Fiches qui répondent à la demande, par déclencheur puis par domaine.
+
+    `scores` (facultatif) : scores de routage par domaine (`qualification`).
+    Quand des fiches de plusieurs domaines tombent, seules celles du domaine le
+    mieux classé sont gardées (ex aequo : toutes). Sans ce tri, « mon bailleur
+    garde ma caution » servait aussi le cautionnement OHADA.
+    """
     fiches = fiches if fiches is not None else charger(chemin_db=chemin_db)
     texte = normaliser(demande or "")
     retenues, par_domaine = [], []
@@ -140,6 +146,11 @@ def pour_demande(demande, domaines=(), fiches=None, chemin_db=None):
             retenues.append(fiche)
         elif fiche["domaine"] in domaines:
             par_domaine.append(fiche)
+    if scores and len({f["domaine"] for f in retenues}) > 1:
+        def note(domaine):
+            return (scores.get(domaine) or {}).get("score", 0)
+        meilleure = max(note(f["domaine"]) for f in retenues)
+        retenues = [f for f in retenues if note(f["domaine"]) == meilleure]
     # Si aucun déclencheur ne tombe, on ne sert rien : proposer des articles au
     # hasard serait exactement le comportement qu'on veut éviter.
     return retenues, par_domaine

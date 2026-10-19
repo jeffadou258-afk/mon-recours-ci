@@ -303,9 +303,13 @@ class TestRobustesseDesFormulations(BaseConversation):
         _, donnees = self.parcours(
             "MULTI", "Je me suis porté caution pour la dette d'une société commerciale.")
         reponse = donnees["reponse"]
-        domaines = {s["numero_texte"] for s in reponse["sections"]["6_sources"]}
-        self.assertGreaterEqual(len(domaines), 2,
-                                "une caution donnée à une société touche sûretés et logement")
+        textes = {s["numero_texte"] for s in reponse["sections"]["6_sources"]}
+        # Comportement CORRIGÉ le 19/10/2026 : ce test exigeait aussi le dépôt de
+        # garantie locatif (art. 416), servi à tort à cause du mot « caution ».
+        # Un cautionnement donné pour la dette d'une société relève des sûretés
+        # OHADA ; le domaine le mieux classé l'emporte (catalogue.pour_demande).
+        self.assertEqual(textes, {None}, "seul l'acte uniforme OHADA (sans numéro de loi)")
+        self.assertNotIn("2019-576", textes, "le dépôt de garantie locatif ne doit pas être servi")
 
 
 class TestAucuneAffirmationSansSource(BaseConversation):

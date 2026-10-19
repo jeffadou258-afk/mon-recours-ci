@@ -275,7 +275,9 @@
     "telephone au volant",
     "telephone en conduisant",
     "usage du telephone",
-    "conduite"
+    "conduite",
+    "telephonais en conduisant",
+    "telephoner en conduisant"
    ],
    "citation": "Il e st interdit à toute personne en situation de conduite automobile, l’usage du téléphone portable et de tout autre moyen de communication.",
    "lecture": "L'usage du téléphone portable est interdit à toute personne en situation de conduite automobile.",
@@ -295,10 +297,12 @@
    "titre": "Définition de la sûreté (OHADA)",
    "declencheurs": [
     "surete",
-    "garantie",
     "hypotheque",
     "nantissement",
-    "garantir une dette"
+    "garantir une dette",
+    "garantie d'une dette",
+    "garantie bancaire",
+    "garantie sur un bien"
    ],
    "citation": "Une sûreté est l’affectation au bénéfice d’un créancier d’un bien, d’un ensemble de biens ou d’un patrimoine afin de garantir l’exécution d’une obligation ou d’un ensemble d’obligations, quelle que soit la nature juridique de celles-ci et notamment qu’elles soient présentes ou futures, déterminées ou déterminables, conditionnelles ou inconditionnel - les, et que leur montant soit fixe ou fluctuant.",
    "lecture": "Une sûreté affecte un bien ou un patrimoine au bénéfice d'un créancier pour garantir une obligation.",
@@ -319,8 +323,12 @@
    "declencheurs": [
     "cautionnement",
     "se porter caution",
-    "caution",
-    "garant personnel"
+    "garant personnel",
+    "porter caution",
+    "caution pour un pret",
+    "caution bancaire",
+    "porte caution",
+    "suis porte caution"
    ],
    "citation": "Les sûretés personnelles, au sens du présent Acte uniforme, consistent en l'engage- ment d'une personne de répondre de l'obligation du débiteur principal en cas de défail- lance de celui-ci ou à première demande du bénéficiaire de la garantie.",
    "lecture": "Les sûretés personnelles consistent en l'engagement d'une personne de répondre de l'obligation du débiteur principal.",
