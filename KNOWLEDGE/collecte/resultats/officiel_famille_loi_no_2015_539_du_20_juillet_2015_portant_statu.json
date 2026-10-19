@@ -1,0 +1,32 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
+ "date_recuperation": "2026-10-19T10:55:04+00:00",
+ "duree_s": 31.7,
+ "extraction": {
+  "caracteres_natifs": 13110,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu.txt",
+  "pages": 2,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:b57a43e4d99912220ecebe5ada1c0089ea3b8c87849e42450787bb2513c9b301"
+ },
+ "fichier_pdf": "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1077564,
+ "pdf": {
+  "CreationDate": "Fri Oct  2 11:17:55 2015 UTC",
+  "Creator": "Adobe Acrobat 8.0",
+  "ModDate": "Tue Jan  6 11:55:59 2026 UTC",
+  "PDF version": "1.6",
+  "Pages": "2",
+  "Producer": "Adobe Acrobat 8.0 Paper Capture Plug-in",
+  "polices": 10,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:acb84e77c7bab2b4103d18076323e9576df3d610c1a01b68e9f95fd55f40c337",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://famille.gouv.ci/uploads/publications/176936945850.pdf",
+ "url_finale": "https://famille.gouv.ci/uploads/publications/176936945850.pdf"
+}

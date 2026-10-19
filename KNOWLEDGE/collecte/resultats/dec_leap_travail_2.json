@@ -1,0 +1,32 @@
+{
+ "ancres": [
+  {
+   "texte": "http://faolex.fao.org/docs/pdf/ivc210897.pdf",
+   "url": "http://faolex.fao.org/docs/pdf/ivc210897.pdf"
+  },
+  {
+   "texte": "FAOLEX",
+   "url": "http://www.fao.org/faolex/en"
+  },
+  {
+   "texte": "FAOLEX",
+   "url": "http://www.fao.org/faolex/results/details/en/c/LEX-FAOC210897"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_leap_travail_2",
+ "date_recuperation": "2026-10-19T11:15:43+00:00",
+ "duree_s": 1.8,
+ "http": 200,
+ "liens": [
+  "http://faolex.fao.org/docs/pdf/ivc210897.pdf",
+  "http://www.fao.org/faolex/en",
+  "http://www.fao.org/faolex/results/details/en/c/LEX-FAOC210897"
+ ],
+ "octets": 37999,
+ "statut": "DECOUVERTE",
+ "titre_page": "Loi n. 2015-532 du 20 juillet 2015 portant Code du travail. | UNEP Law and Environment Assistance Platform",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://leap.unep.org/en/countries/ci/national-legislation/loi-n-2015-532-du-20-juillet-1015-portant-code-du-travail",
+ "url_finale": "https://leap.unep.org/en/countries/ci/national-legislation/loi-n-2015-532-du-20-juillet-2015-portant-code-du-travail"
+}

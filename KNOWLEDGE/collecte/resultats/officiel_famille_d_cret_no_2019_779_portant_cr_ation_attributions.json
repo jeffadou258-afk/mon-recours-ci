@@ -1,0 +1,38 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
+ "date_recuperation": "2026-10-19T10:50:52+00:00",
+ "duree_s": 53.4,
+ "extraction": {
+  "caracteres_natifs": 3,
+  "confiance_ocr_moyenne": 93.7,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions.txt",
+  "pages": 3,
+  "pages_ocr": 3,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 3,
+  "sha256_ocr": "sha256:397921721101f79386076cee5cadcbe32de14afb15fc7332b7277c8104584697",
+  "sha256_texte": "sha256:fbecb07d5e82f16629dfbc144448814bb1b662936cefc1bf422208f6febe85e3"
+ },
+ "fichier_pdf": "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1165726,
+ "pdf": {
+  "CreationDate": "",
+  "Creator": "",
+  "ModDate": "Sun Jan 25 20:17:11 2026 UTC",
+  "PDF version": "1.3",
+  "Pages": "3",
+  "Producer": "iLovePDF",
+  "Title": "",
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:1a451c2557a60a9aa2176fe99b233cbbe5e7ac658da66ef5221533002b6b7703",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://famille.gouv.ci/uploads/publications/176937240619.pdf",
+ "url_finale": "https://famille.gouv.ci/uploads/publications/176937240619.pdf"
+}

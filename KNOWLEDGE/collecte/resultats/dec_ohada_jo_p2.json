@@ -1,0 +1,102 @@
+{
+ "ancres": [
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-01/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-02/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-03/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-06/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-07/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-08/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-20-pt/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-22-pt/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-23/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-24/"
+  },
+  {
+   "texte": "Français",
+   "url": "https://www.ohada.org/journal-officiel/"
+  },
+  {
+   "texte": "Communauté",
+   "url": "https://www.ohada.org/journal-officiel/2/"
+  },
+  {
+   "texte": "Skip to content",
+   "url": "https://www.ohada.org/journal-officiel/2/#main"
+  },
+  {
+   "texte": "Suivant »",
+   "url": "https://www.ohada.org/journal-officiel/3/"
+  },
+  {
+   "texte": "Page 4",
+   "url": "https://www.ohada.org/journal-officiel/4/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F&format=xml"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_jo_p2",
+ "date_recuperation": "2026-10-19T11:15:26+00:00",
+ "duree_s": 2.4,
+ "http": 200,
+ "liens": [
+  "https://www.ohada.org/journal-officiel-n-01/",
+  "https://www.ohada.org/journal-officiel-n-02/",
+  "https://www.ohada.org/journal-officiel-n-03/",
+  "https://www.ohada.org/journal-officiel-n-06/",
+  "https://www.ohada.org/journal-officiel-n-07/",
+  "https://www.ohada.org/journal-officiel-n-08/",
+  "https://www.ohada.org/journal-officiel-n-20-pt/",
+  "https://www.ohada.org/journal-officiel-n-22-pt/",
+  "https://www.ohada.org/journal-officiel-n-23/",
+  "https://www.ohada.org/journal-officiel-n-24/",
+  "https://www.ohada.org/journal-officiel/",
+  "https://www.ohada.org/journal-officiel/2/",
+  "https://www.ohada.org/journal-officiel/2/#main",
+  "https://www.ohada.org/journal-officiel/3/",
+  "https://www.ohada.org/journal-officiel/4/",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F&format=xml"
+ ],
+ "octets": 243926,
+ "statut": "DECOUVERTE",
+ "titre_page": "Journal Officiel – Page 2 – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/journal-officiel/2/",
+ "url_finale": "https://www.ohada.org/journal-officiel/2/"
+}

@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-19T09:23:28+00:00",
+ "execution": "2026-10-19T10:46:29+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -38,28 +38,12 @@
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "travail_2015_532_uvci",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mariage_2019_570_faolex",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "mariage_2019_570_civlii",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "successions_2019_573_assnat",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "successions_2019_573_civlii",
    "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "successions_2019_573_bice",
-   "statut": "TELECHARGE"
   },
   {
    "cle": "minorite_2019_572_civlii",
@@ -70,64 +54,20 @@
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "aupsrve_2023_jo_ohadacom",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "aupsrve_2023_senlii",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "gouvci_175043233774",
-   "statut": "ECHEC_RESEAU"
-  },
-  {
-   "cle": "dec_ohada_journal_officiel_en",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_journal_officiel_fr",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_aupsrve_en",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_aupsrve_publication",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_ohada_actes_uniformes_fr",
-   "statut": "DECOUVERTE"
+   "statut": "TELECHARGE"
   },
   {
    "cle": "dec_mffe_textes",
-   "statut": "DECOUVERTE"
+   "statut": "ECHEC_HTTP"
   },
   {
    "cle": "dec_famille_gouv",
    "statut": "DECOUVERTE"
   },
   {
-   "cle": "dec_sgg",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_cndj_codes",
-   "statut": "DECOUVERTE"
-  },
-  {
    "cle": "dec_emploi_gouv",
    "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "dec_justice_gouv",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_assnat_lois",
-   "statut": "DECOUVERTE"
   },
   {
    "cle": "dec_civlii_publication_2019_570_eng@2023-10-13",
@@ -156,10 +96,6 @@
   {
    "cle": "dec_civlii_publication_2015_532_fra@2023-08-10",
    "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "dec_civlii_legislation_p1",
-   "statut": "DECOUVERTE"
   },
   {
    "cle": "dec_civlii_legislation_p2",
@@ -196,7 +132,197 @@
   {
    "cle": "dec_civlii_legislation_p10",
    "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "officiel_famille_loi_n_202_894_du_21_d_cembre_2021_relative_aux_m",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_d_cret_portant_r_glementation_des_familles_d_acc",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_d_cret_no_2019_779_portant_cr_ation_attributions",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_loi_relative_a_l_adoption",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_loi_n_2018_863_du_19_novembre_2018_instituant_un",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_cpp_2018_975",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_code_penal_2019_574",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_mariage_2019_570",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_successions_2019_573",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_traite_2016_1111",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_constitution_2016",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_etat_civil_2018_862",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_naissance_2018_863",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_pupille_2015_539",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "mffe_adoption",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "ohada_jo_special_aupsrve_2023",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "assnat_constitution",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "civlii_code_penal_source_pdf",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "civlii_cpp_source_pdf",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_cpp",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_penal",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_civlii_oeuvre_travail",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_ohada_jo_n23",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_jo_n24",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_jo_special_2016",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_jo_p2",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_jo_p3",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_jo_p4",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_famille_gouv_publications",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_cndj_biblio_codes",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "ilo_textes_pertinents_rci",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "civlii_travail_enfants_2010_272",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "civlii_travail_source_pdf",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_leap_travail_1",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_leap_travail_2",
+   "statut": "DECOUVERTE"
   }
  ],
- "ignores": []
+ "ignores": [
+  "travail_2015_532_uvci",
+  "mariage_2019_570_faolex",
+  "successions_2019_573_assnat",
+  "successions_2019_573_bice",
+  "aupsrve_2023_jo_ohadacom",
+  "aupsrve_2023_senlii",
+  "dec_ohada_journal_officiel_en",
+  "dec_ohada_journal_officiel_fr",
+  "dec_ohada_aupsrve_en",
+  "dec_ohada_aupsrve_publication",
+  "dec_ohada_actes_uniformes_fr",
+  "dec_sgg",
+  "dec_cndj_codes",
+  "dec_justice_gouv",
+  "dec_assnat_lois",
+  "dec_civlii_legislation_p1"
+ ],
+ "reportes": []
 }

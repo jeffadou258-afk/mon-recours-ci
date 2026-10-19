@@ -1,0 +1,38 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mffe_traite_2016_1111",
+ "date_recuperation": "2026-10-19T10:59:30+00:00",
+ "duree_s": 37.4,
+ "extraction": {
+  "caracteres_natifs": 333,
+  "confiance_ocr_moyenne": 93.6,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_traite_2016_1111.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_traite_2016_1111.txt",
+  "pages": 3,
+  "pages_ocr": 3,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 3,
+  "sha256_ocr": "sha256:88742a82448ad7d59de705586755ac6366ffe5da08f68dfb543e806e89ef7617",
+  "sha256_texte": "sha256:d85f5a819394b8284847e5ed341b4391731f839416c8393d2960d87d2fb6c8a4"
+ },
+ "fichier_pdf": "mffe_traite_2016_1111.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1332425,
+ "pdf": {
+  "CreationDate": "Tue Oct  9 10:28:14 2018 UTC",
+  "Creator": "PDFCreator Version 1.7.1",
+  "ModDate": "Tue Oct  9 10:28:14 2018 UTC",
+  "PDF version": "1.4",
+  "Pages": "3",
+  "Producer": "GPL Ghostscript 9.07",
+  "Title": "2017-11.pdf",
+  "polices": 1,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:4dcb0a4423a3252e1e9ec110258cff1493195f70c1cc39cb1282a5aed421936b",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2016-1111_du_08_decembre_2016_relative_a_la_lutte_contre_la_traite_des_personnes.pdf",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2016-1111_du_08_decembre_2016_relative_a_la_lutte_contre_la_traite_des_personnes.pdf"
+}

@@ -1,0 +1,32 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mffe_pupille_2015_539",
+ "date_recuperation": "2026-10-19T11:05:18+00:00",
+ "duree_s": 1.8,
+ "extraction": {
+  "caracteres_natifs": 13110,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_pupille_2015_539.txt",
+  "pages": 2,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:b57a43e4d99912220ecebe5ada1c0089ea3b8c87849e42450787bb2513c9b301"
+ },
+ "fichier_pdf": "mffe_pupille_2015_539.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1076976,
+ "pdf": {
+  "CreationDate": "Fri Oct  2 11:17:55 2015 UTC",
+  "Creator": "Adobe Acrobat 8.0",
+  "ModDate": "Fri Oct  2 11:17:59 2015 UTC",
+  "PDF version": "1.6",
+  "Pages": "2",
+  "Producer": "Adobe Acrobat 8.0 Paper Capture Plug-in",
+  "polices": 10,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:41a7422ddf02fb70923542c0001569440ebdf80d305fe8a71b9941ebd4a454d5",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2015-539_pupille_de_l-Etat.pdf",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2015-539_pupille_de_l-Etat.pdf"
+}

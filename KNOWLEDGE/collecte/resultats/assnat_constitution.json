@@ -1,0 +1,12 @@
+{
+ "categorie_source": "OFFICIEL_INSTITUTION",
+ "cle": "assnat_constitution",
+ "date_recuperation": "2026-10-19T11:15:03+00:00",
+ "duree_s": 11.6,
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html",
+ "url": "https://www.assnat.ci/CONSTITUTION.pdf",
+ "url_finale": "https://www.assnat.ci/CONSTITUTION.pdf"
+}

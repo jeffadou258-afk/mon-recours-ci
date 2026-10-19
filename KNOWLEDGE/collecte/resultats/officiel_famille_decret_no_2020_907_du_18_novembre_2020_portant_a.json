@@ -1,0 +1,38 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
+ "date_recuperation": "2026-10-19T10:57:45+00:00",
+ "duree_s": 73.3,
+ "extraction": {
+  "caracteres_natifs": 8,
+  "confiance_ocr_moyenne": 92.8,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a.txt",
+  "pages": 8,
+  "pages_ocr": 8,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 8,
+  "sha256_ocr": "sha256:ad698a63abecc5eda6027084090ff9cce82b63b70b4ec1c1858d2ed0aac508bf",
+  "sha256_texte": "sha256:ad17b9070fd34063d6aa5a9f6cbfbbd494f33745c7369c7c7a15bcd75a11f94a"
+ },
+ "fichier_pdf": "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 796471,
+ "pdf": {
+  "CreationDate": "",
+  "Creator": "",
+  "ModDate": "Sun Jan 25 19:17:42 2026 UTC",
+  "PDF version": "1.4",
+  "Pages": "8",
+  "Producer": "iLovePDF",
+  "Title": "",
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:9bb45a1eda9b3e2da861f0d3c30623bee47d0bbda6ec34061c711a47ad612be9",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://famille.gouv.ci/uploads/publications/176936873529.pdf",
+ "url_finale": "https://famille.gouv.ci/uploads/publications/176936873529.pdf"
+}

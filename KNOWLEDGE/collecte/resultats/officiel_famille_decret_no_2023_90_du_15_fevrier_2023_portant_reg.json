@@ -1,0 +1,38 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
+ "date_recuperation": "2026-10-19T10:47:26+00:00",
+ "duree_s": 43.4,
+ "extraction": {
+  "caracteres_natifs": 5,
+  "confiance_ocr_moyenne": 90.6,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg.txt",
+  "pages": 5,
+  "pages_ocr": 5,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 5,
+  "sha256_ocr": "sha256:e5ad1f41e352667d1db70e90e84d5938b1daee98037ac9a24b06829e79c576d2",
+  "sha256_texte": "sha256:995b8b8ce0ba8741fa40f2fde76788a14eac09794650298b3d2c87963bff31d6"
+ },
+ "fichier_pdf": "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 524430,
+ "pdf": {
+  "CreationDate": "Fri Mar 31 16:00:38 2023 UTC",
+  "Creator": "PDF24 Creator",
+  "ModDate": "Sun Jan 25 21:28:58 2026 UTC",
+  "PDF version": "1.4",
+  "Pages": "5",
+  "Producer": "iLovePDF",
+  "Title": "",
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:0fd97c056ea13874ca8b96b98002ee407ab03d7e7da70c9d533ed8e2ff7eacc0",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://famille.gouv.ci/uploads/publications/176937670169.pdf",
+ "url_finale": "https://famille.gouv.ci/uploads/publications/176937670169.pdf"
+}

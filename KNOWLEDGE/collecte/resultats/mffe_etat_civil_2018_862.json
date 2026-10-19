@@ -1,0 +1,39 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mffe_etat_civil_2018_862",
+ "date_recuperation": "2026-10-19T11:02:46+00:00",
+ "duree_s": 112.3,
+ "extraction": {
+  "caracteres_natifs": 10,
+  "confiance_ocr_moyenne": 88.3,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_etat_civil_2018_862.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_etat_civil_2018_862.txt",
+  "pages": 10,
+  "pages_ocr": 10,
+  "pages_ocr_faibles": [
+   2
+  ],
+  "pages_sans_texte": 10,
+  "sha256_ocr": "sha256:4e7bc881059511491daf0564189e2d543e2ae479f1ef755e6db744b9b6571d32",
+  "sha256_texte": "sha256:f60e1da0036e63065bdb02fa18d418a57baf3cfbaa79b4edd16f6016ecc5bbc9"
+ },
+ "fichier_pdf": "mffe_etat_civil_2018_862.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 4176724,
+ "pdf": {
+  "CreationDate": "Mon Mar  4 16:12:29 2019 UTC",
+  "Creator": "Nitro PDF Professional",
+  "ModDate": "Tue May 21 12:22:22 2019 UTC",
+  "PDF version": "1.7",
+  "Pages": "10",
+  "Producer": "3-Heights(TM) PDF Optimization Shell 4.8.25.2 (http://www.pdf-tools.com)",
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:ab84704cb56c8c1cb9ab55436ba18ecf9e4ef5952133c7ce035c26109e7c8ad7",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_862_du_19_11_2018_etat_civil.pdf",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_862_du_19_11_2018_etat_civil.pdf"
+}

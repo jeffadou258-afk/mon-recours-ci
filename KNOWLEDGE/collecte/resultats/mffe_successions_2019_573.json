@@ -1,0 +1,32 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mffe_successions_2019_573",
+ "date_recuperation": "2026-10-19T10:59:29+00:00",
+ "duree_s": 1.1,
+ "extraction": {
+  "caracteres_natifs": 52872,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_successions_2019_573.txt",
+  "pages": 10,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:dbd90cd2597f1ec6406756c3c2882e671ee590d50f67b66e38f8801a2f086a6e"
+ },
+ "fichier_pdf": "mffe_successions_2019_573.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 725170,
+ "pdf": {
+  "CreationDate": "Thu Aug  1 08:56:23 2019 UTC",
+  "Creator": "Hewlett-Packard MFP",
+  "ModDate": "Thu Aug  1 08:56:37 2019 UTC",
+  "PDF version": "1.5",
+  "Pages": "10",
+  "Producer": "ABBYY FineReader 11",
+  "polices": 17,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:0d7d1595d4c15a3b46624584e2f25c84023505e856eb9d72e1f20525bcacacdb",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-573_sur_la_succession.pdf",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-573_sur_la_succession.pdf"
+}

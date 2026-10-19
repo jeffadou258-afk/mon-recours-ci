@@ -1,0 +1,32 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mffe_mariage_2019_570",
+ "date_recuperation": "2026-10-19T10:59:28+00:00",
+ "duree_s": 1.1,
+ "extraction": {
+  "caracteres_natifs": 44503,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_mariage_2019_570.txt",
+  "pages": 7,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:3ed99cd54fdcb8d8b12202ef7e866e39cf0eba6aad58aa979acd707a84949fcf"
+ },
+ "fichier_pdf": "mffe_mariage_2019_570.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 581004,
+ "pdf": {
+  "CreationDate": "Thu Aug  1 08:39:48 2019 UTC",
+  "Creator": "Hewlett-Packard MFP",
+  "ModDate": "Thu Aug  1 08:43:24 2019 UTC",
+  "PDF version": "1.5",
+  "Pages": "7",
+  "Producer": "ABBYY FineReader 11",
+  "polices": 17,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:9c93ce80693df78c93842b9ac34b551848404e97ba00dc5c83aff187700d40e9",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_2019-570_sur_le_mariage.pdf"
+}

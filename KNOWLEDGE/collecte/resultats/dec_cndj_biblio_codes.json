@@ -1,0 +1,72 @@
+{
+ "ancres": [
+  {
+   "texte": "Codes et recueils de textes",
+   "url": "https://biblio.cndj.ci/search/codes"
+  },
+  {
+   "texte": "Recueil de textes Juridictions de la République de Côte d'Ivoire",
+   "url": "https://biblio.cndj.ci/search/codes/236"
+  },
+  {
+   "texte": "Recueil de textes relatifs à la Culture",
+   "url": "https://biblio.cndj.ci/search/codes/238"
+  },
+  {
+   "texte": "CODE MARITIME & AUTRES TEXTES RELATIFS AU SECTEUR MARITIME",
+   "url": "https://biblio.cndj.ci/search/codes/242"
+  },
+  {
+   "texte": "Recueil de textes Fonction Publique",
+   "url": "https://biblio.cndj.ci/search/codes/259"
+  },
+  {
+   "texte": "Code du Travail et autres textes relatifs au droit du travail",
+   "url": "https://biblio.cndj.ci/search/codes/274"
+  },
+  {
+   "texte": "Code de Prévoyance sociale et autres textes relatifs à la prévoyance sociale édition",
+   "url": "https://biblio.cndj.ci/search/codes/275"
+  },
+  {
+   "texte": "CODE DE L'EAU & AUTRES TEXTES RELATIFS AU SECTEUR DE L’EAU",
+   "url": "https://biblio.cndj.ci/search/codes/277"
+  },
+  {
+   "texte": "CODE DE L'ELECTRICITE & AUTRES TEXTES RELATIFS AU SECTEUR DE L'ELECTRICITE",
+   "url": "https://biblio.cndj.ci/search/codes/278"
+  },
+  {
+   "texte": "CODE DE L’HYGIENE ET DE LA SALUBRITE",
+   "url": "https://biblio.cndj.ci/search/codes/280"
+  },
+  {
+   "texte": "RECUEIL DE TEXTES - PROTECTION DES ŒUVRES DE L'ESPRIT",
+   "url": "https://biblio.cndj.ci/search/codes/281"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_cndj_biblio_codes",
+ "date_recuperation": "2026-10-19T11:15:37+00:00",
+ "duree_s": 2.2,
+ "http": 200,
+ "liens": [
+  "https://biblio.cndj.ci/search/codes",
+  "https://biblio.cndj.ci/search/codes/236",
+  "https://biblio.cndj.ci/search/codes/238",
+  "https://biblio.cndj.ci/search/codes/242",
+  "https://biblio.cndj.ci/search/codes/259",
+  "https://biblio.cndj.ci/search/codes/274",
+  "https://biblio.cndj.ci/search/codes/275",
+  "https://biblio.cndj.ci/search/codes/277",
+  "https://biblio.cndj.ci/search/codes/278",
+  "https://biblio.cndj.ci/search/codes/280",
+  "https://biblio.cndj.ci/search/codes/281"
+ ],
+ "octets": 98991,
+ "statut": "DECOUVERTE",
+ "titre_page": "BIBLIOTHEQUE CNDJ - Accueil",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://biblio.cndj.ci/search/codes",
+ "url_finale": "https://biblio.cndj.ci/search/codes"
+}

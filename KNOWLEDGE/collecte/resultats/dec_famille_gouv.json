@@ -1,0 +1,772 @@
+{
+ "ancres": [
+  {
+   "texte": "",
+   "url": "https://famille.gouv.ci/assets/contexte.css"
+  },
+  {
+   "texte": "DECRET-FIPPSH-2023",
+   "url": "https://famille.gouv.ci/uploads/publications/173012430216.pdf"
+  },
+  {
+   "texte": "DECRET-FIXANT-LES-NORMES-ET-STANDART-APPLICABLES-AUX-ETABLISSEMENTS-DE-PROTECTION-DE-REMPLACEMENT-DE-LENFANT",
+   "url": "https://famille.gouv.ci/uploads/publications/173012433470.pdf"
+  },
+  {
+   "texte": "ARRETE CMPP",
+   "url": "https://famille.gouv.ci/uploads/publications/173159249684.pdf"
+  },
+  {
+   "texte": "Arrêté critères d'accréditation des ONG dans le PS",
+   "url": "https://famille.gouv.ci/uploads/publications/173159251848.pdf"
+  },
+  {
+   "texte": "Arrêté Org et Fonct du Comité d'Agrément",
+   "url": "https://famille.gouv.ci/uploads/publications/173159255315.pdf"
+  },
+  {
+   "texte": "ARRETE UFI",
+   "url": "https://famille.gouv.ci/uploads/publications/173159256747.pdf"
+  },
+  {
+   "texte": "Décret n° 2021-468 portant organisation du MFFE",
+   "url": "https://famille.gouv.ci/uploads/publications/176366817985.pdf"
+  },
+  {
+   "texte": "SOIXANTE SIXIEME (66ème) SESSION DE LA COMMISSION DE LA CONDITION ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176461009436.pdf"
+  },
+  {
+   "texte": "Convention internationale relative aux droits de l’enfant intégral",
+   "url": "https://famille.gouv.ci/uploads/publications/176461346437.pdf"
+  },
+  {
+   "texte": "Convention sur l’élimination de toutes les formes de discrimination à ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176461350213.pdf"
+  },
+  {
+   "texte": "MARCHES PUBLICS PROGRAMMES ET MISE EN OEUVRE -2020-",
+   "url": "https://famille.gouv.ci/uploads/publications/176461466831.pdf"
+  },
+  {
+   "texte": "ETAT D’EXECUTION DES MARCHES PUBLICS 2022",
+   "url": "https://famille.gouv.ci/uploads/publications/176461483770.pdf"
+  },
+  {
+   "texte": "Situation d’exécution MFFE 2021",
+   "url": "https://famille.gouv.ci/uploads/publications/176461516067.pdf"
+  },
+  {
+   "texte": "MARCHES PUBLICS PASSES 2020",
+   "url": "https://famille.gouv.ci/uploads/publications/176461523018.pdf"
+  },
+  {
+   "texte": "PLAN DE PASSATION 2022 – PSPM GENERAL",
+   "url": "https://famille.gouv.ci/uploads/publications/176461532188.pdf"
+  },
+  {
+   "texte": "PLAN DE PASSATION 2022 – PPM",
+   "url": "https://famille.gouv.ci/uploads/publications/176461544565.pdf"
+  },
+  {
+   "texte": "Plans de passation MFFE 2022 – Marchés anticipés – PSPM-PSC ...",
+   "url": "https://famille.gouv.ci/uploads/publications/17646155449.pdf"
+  },
+  {
+   "texte": "Plans de passation MFFE 2022 – Marchés anticipés -PSL – ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176461568218.pdf"
+  },
+  {
+   "texte": "Plans de passation MFFE 2022 – Marchés anticipés – PSO ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176461577661.pdf"
+  },
+  {
+   "texte": "Plans de passation MFFE 2022 – Marchés anticipés – AOO ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176461586445.pdf"
+  },
+  {
+   "texte": "PLAN DE TRAVAIL BUDGETISE 2021 – 2024",
+   "url": "https://famille.gouv.ci/uploads/publications/17665080274.pdf"
+  },
+  {
+   "texte": "PROJET PIP 2022 DU MFFE",
+   "url": "https://famille.gouv.ci/uploads/publications/176650839665.pdf"
+  },
+  {
+   "texte": "PROFIL GENRE PAYS RÉPUBLIQUE DE CÔTE D’IVOIRE",
+   "url": "https://famille.gouv.ci/uploads/publications/176697649157.pdf"
+  },
+  {
+   "texte": "ANNUAIRE STATISTIQUE DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/17669766081.pdf"
+  },
+  {
+   "texte": "RAPPORT D’AUDIT DES MARCHES PUBLICS PASSES PAR LE MINISTERE DE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176697707277.pdf"
+  },
+  {
+   "texte": "RAPPORT D’ETUDE POUR UNE ANALYSE GENRE EN COTE D’IVOIRE (2017)",
+   "url": "https://famille.gouv.ci/uploads/publications/176697741526.pdf"
+  },
+  {
+   "texte": "MANUEL DE PROCEDURES QUALITE DE LA DSI",
+   "url": "https://famille.gouv.ci/uploads/publications/176697791923.pdf"
+  },
+  {
+   "texte": "PROCEDURE DE PROTECTION EN CAS VIOLENCES",
+   "url": "https://famille.gouv.ci/uploads/publications/176697822515.pdf"
+  },
+  {
+   "texte": "SPECIFICATIONS TECHNIQUES APPLICABLES AUX ETABLISSEMENTS A CARACTERE SOCIO-EDUCATIF DE PROTECTION ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176697829240.pdf"
+  },
+  {
+   "texte": "Formulaire de demande d’une autorisation de création d’une structure à ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176697838130.pdf"
+  },
+  {
+   "texte": "Formulaire de demande d’un agrément pour le compte d’une structure ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176697845267.pdf"
+  },
+  {
+   "texte": "FICHE DE RENSEIGNEMENT : DOSSIER D’AUTORISATION DE CREATION DES ETABLISSEMENTS ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176697866834.pdf"
+  },
+  {
+   "texte": "Missions et Services Offerts par le Ministère de la Femme, ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176697881663.pdf"
+  },
+  {
+   "texte": "DÉCRET N° 2022-301 DU 04 MAI 2022 PORTANT ATTRIBUTIONS DES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176697892427.pdf"
+  },
+  {
+   "texte": "DÉCRET n° 2021-468 du 08 septembre 2021 Portant Organisation du ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176697904782.pdf"
+  },
+  {
+   "texte": "DONS PARTENAIRES : Situation d’exécution 2022",
+   "url": "https://famille.gouv.ci/uploads/publications/176701154792.pdf"
+  },
+  {
+   "texte": "Dons de la Turquie aux pensionnaires des Orphelinats et pouponnières ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176701164666.pdf"
+  },
+  {
+   "texte": "Orientation et Politique Générale du MFFE : Bilan et Perspectives ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176701268746.pdf"
+  },
+  {
+   "texte": "PROCEDURE D’ADOPTION D’UN ENFANT (ACACI) : ADOPTION NATIONALE D’ENFANT TROUVE",
+   "url": "https://famille.gouv.ci/uploads/publications/176919820584.pdf"
+  },
+  {
+   "texte": "PROCEDURE D’ADOPTION D’UN ENFANT (ACACI) : ADOPTION NATIONALE D’ENFANTS PAR ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176919839724.pdf"
+  },
+  {
+   "texte": "PROCEDURE D’ADOPTION D’UN ENFANT (ACACI) : ADOPTION INTERNATIONALE D’ENFANTS PUPILLES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176919854650.pdf"
+  },
+  {
+   "texte": "PROCEDURE D’ADOPTION D’UN ENFANT (ACACI) : ADOPTION NATIONALE D’ENFANTS PUPILLES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176919867150.pdf"
+  },
+  {
+   "texte": "PROCEDURE D’ADOPTION D’UN ENFANT (ACACI) : ADOPTION NATIONALE INTRAFAMILIALE",
+   "url": "https://famille.gouv.ci/uploads/publications/176919874844.pdf"
+  },
+  {
+   "texte": "CONVENTION SUR LA PROTECTION DES ENFANTS ET LA COOPÉRATION EN ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176936701697.pdf"
+  },
+  {
+   "texte": "DECRET No 2020-907 DU 18 NOVEMBRE 2020 PORTANT ATTRIBUTIONS, ORGANISATION ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176936873529.pdf"
+  },
+  {
+   "texte": "Loi n°2019-572 du 26 Juin 2019 relative à la minorité",
+   "url": "https://famille.gouv.ci/uploads/publications/17693691723.pdf"
+  },
+  {
+   "texte": "LOI No 2015-539 du 20 juillet 2015 portant Statut de ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176936945850.pdf"
+  },
+  {
+   "texte": "Loi n°2018-863 du 19 novembre 2018 instituant une procédure spéciale ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176936984489.pdf"
+  },
+  {
+   "texte": "LOI RELATIVE A L’ADOPTION",
+   "url": "https://famille.gouv.ci/uploads/publications/176936997346.pdf"
+  },
+  {
+   "texte": "Loi n°2018-862 du 19 novembre 2018 relative à l’état civil.",
+   "url": "https://famille.gouv.ci/uploads/publications/176937063397.pdf"
+  },
+  {
+   "texte": "Procédures légales pour une adoption en république de Côte d’Ivoire.",
+   "url": "https://famille.gouv.ci/uploads/publications/176937110875.pdf"
+  },
+  {
+   "texte": "LOI n° 2019-571 du 26 juin 2019 relative à la ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937124389.pdf"
+  },
+  {
+   "texte": "DÉCRET No 2019-779 portant création, attributions, organisation et fonctionnement du ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937240619.pdf"
+  },
+  {
+   "texte": "ARRETE No 0071/MFFE/CAB DU 01 OCTOBRE 2025 PORTANT AGREMENT DES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937340213.pdf"
+  },
+  {
+   "texte": "ARRETE No 0123 MFFE/CAB DU 09 OCTOBRE 2019 DETERMINANT LES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937463949.pdf"
+  },
+  {
+   "texte": "Décret Portant Règlementation des Familles d'Accueil, 2023 (Décret 90 de ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937552921.pdf"
+  },
+  {
+   "texte": "DECRET No 2023-89 DU 15 FEVRIER 2023 FIXANT LES NORMES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937624358.pdf"
+  },
+  {
+   "texte": "DECRET No 2023-90 DU 15 FEVRIER 2023 PORTANT REGLEMENTATION DES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937670169.pdf"
+  },
+  {
+   "texte": "COMPTE-RENDU DE LA REUNION RESTREINTE DE L’ANNEE 2025 DU DIRECTEURS ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937866789.pdf"
+  },
+  {
+   "texte": "Compte-Rendu de la 1ère réunion de Cabinet 2025 (Lundi 06 ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176937875495.pdf"
+  },
+  {
+   "texte": "DECRET No 2021-873 DU 15 DECEMBRE 2021 PORTANT ATTRIBUTIONS, COMPOSITION ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176944387541.pdf"
+  },
+  {
+   "texte": "PLAN D’ACTIONS 2026 CELLULE MEDICO-SOCIALE",
+   "url": "https://famille.gouv.ci/uploads/publications/176944527798.pdf"
+  },
+  {
+   "texte": "BUDGET 2020 DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176944868270.pdf"
+  },
+  {
+   "texte": "BUDGET 2021 DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176944892494.pdf"
+  },
+  {
+   "texte": "BUDGET 2021 DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176944910263.pdf"
+  },
+  {
+   "texte": "BUDGET 2021 DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176944919644.pdf"
+  },
+  {
+   "texte": "BUDGET 2021 DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945002699.pdf"
+  },
+  {
+   "texte": "BUDGET 2021 DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945009223.pdf"
+  },
+  {
+   "texte": "RAPPORT D’EXECUTION DU BUDGET (ANALYSE FINANCIERE) A FIN JUIN 2021",
+   "url": "https://famille.gouv.ci/uploads/publications/176945042318.pdf"
+  },
+  {
+   "texte": "Projet de budget 2022 MFFE",
+   "url": "https://famille.gouv.ci/uploads/publications/176945054128.pdf"
+  },
+  {
+   "texte": "BUDGET DEFINITIF 2022 : NOTIFICATION DE CREDITS AUTORISES 2022 ( ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945085686.pdf"
+  },
+  {
+   "texte": "BUDGET 2024 : DOCUMENT DE PROGRAMMATION PLURIANNUELLE DES DEPENSES – ...",
+   "url": "https://famille.gouv.ci/uploads/publications/17694512034.pdf"
+  },
+  {
+   "texte": "BUDGET 2025: DOCUMENT DE PROGRAMMATION PLURIANNUELLE DES DEPENSES – PROJETS ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945136998.pdf"
+  },
+  {
+   "texte": "Budget 2026 du MFFE : 31,2 milliards FCFA pour renforcer ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945151368.pdf"
+  },
+  {
+   "texte": "Elaboration du Budget 2026 : les grandes lignes du 2026",
+   "url": "https://famille.gouv.ci/uploads/publications/176945163381.pdf"
+  },
+  {
+   "texte": "SITUATION D’EXECUTION MFFE 2021: Administration Générale",
+   "url": "https://famille.gouv.ci/uploads/publications/176945197411.pdf"
+  },
+  {
+   "texte": "SITUATION D’EXECUTION MFFE 2021: Promotion de la Femme et du ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945209243.pdf"
+  },
+  {
+   "texte": "SITUATION D’EXECUTION MFFE 2021: Promotion et consolidation de la Famille",
+   "url": "https://famille.gouv.ci/uploads/publications/176945216520.pdf"
+  },
+  {
+   "texte": "SITUATION D’EXECUTION MFFE 2021: Protection des enfants et des adolescents ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945224855.pdf"
+  },
+  {
+   "texte": "Situation d’exécution 2021 : Engagements Financiers et Budgétaires du MFFE",
+   "url": "https://famille.gouv.ci/uploads/publications/176945244122.pdf"
+  },
+  {
+   "texte": "RAPPORT D’EXECUTION DU BUDGET A FIN JUIN 2021 (BILAN / ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945253629.pdf"
+  },
+  {
+   "texte": "ETAT D’EXECUTION BUDGET 2022",
+   "url": "https://famille.gouv.ci/uploads/publications/176945266431.pdf"
+  },
+  {
+   "texte": "ETAT D’EXECUTION BUDGET 2024 : Mémo sur l’exécution budgétaire 2024 ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176945277558.pdf"
+  },
+  {
+   "texte": "PRESENTATION DE LA REFORME DES INSTITUTIONS DE FORMATION ET D’EDUCATION ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176951521253.pdf"
+  },
+  {
+   "texte": "LE POINT DES MAISONS DIGITALES",
+   "url": "https://famille.gouv.ci/uploads/publications/176951525746.pdf"
+  },
+  {
+   "texte": "Répartition IFEF par région pour l'année 2025",
+   "url": "https://famille.gouv.ci/uploads/publications/176951556527.pdf"
+  },
+  {
+   "texte": "EVALUATION DE LA MISE EN ŒUVRE DE LA DECLARATION ET ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176951620099.pdf"
+  },
+  {
+   "texte": "PLAN D'ACTION NATIONAL DE MISE EN OEUVRE DE LA RESOLUTION ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176951667585.pdf"
+  },
+  {
+   "texte": "POLITIQUE NATIONALE SUR L’EGALITE, L’EQUITE ET LE GENRE EN COTE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176951693037.pdf"
+  },
+  {
+   "texte": "ARRETE No 003 MFFE/CAB DU 15 JANVIER 2025 PORTANT ATTRIBUTIONS, ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176951872240.pdf"
+  },
+  {
+   "texte": "ARRETE No 0004 MFFE/CAB DU 15 JAN 2025 DETERMINANT LES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176951904584.pdf"
+  },
+  {
+   "texte": "ARRETE No 0001/MFFE/CAB DU 05 JAN 2022 PORTANT CREATION DE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176951930168.pdf"
+  },
+  {
+   "texte": "ARRETE No 003/MFFE/CAB DU 05 JAN 2022 PORTANT CREATION DE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176951944825.pdf"
+  },
+  {
+   "texte": "STATISTIQUES SUR LA PROTECTION DE L’ENFANT DE LA CÔTE D’IVOIRE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176952804034.pdf"
+  },
+  {
+   "texte": "Statistiques sur les personnes survivantes prises en charge en 2016, ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176952815313.pdf"
+  },
+  {
+   "texte": "Statistiques sur les VBG selon le type par district/région administrative ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176952823961.pdf"
+  },
+  {
+   "texte": "Statistiques sur les VBG de la Côte d’Ivoire du 01/01/2018 ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176952841175.pdf"
+  },
+  {
+   "texte": "STATISTIQUES RELATIVES A LA SITUATION DE LA FEMME EN COTE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176952864832.pdf"
+  },
+  {
+   "texte": "ANNUAIRE STATISTIQUE SUR LA PROTECTION DE L’ENFANT ET LES VIOLENCES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176952889037.pdf"
+  },
+  {
+   "texte": "ANNUAIRE STATISTIQUE DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176952912735.pdf"
+  },
+  {
+   "texte": "ANNUAIRE STATISTIQUE DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/17695307338.pdf"
+  },
+  {
+   "texte": "ANNUAIRE STATISTIQUE DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/17695310324.pdf"
+  },
+  {
+   "texte": "ANNUAIRE STATISTIQUE DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176953127156.pdf"
+  },
+  {
+   "texte": "ANNUAIRE STATISTIQUE DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/17695315421.pdf"
+  },
+  {
+   "texte": "PROFIL GENRE PAYS RÉPUBLIQUE DE CÔTE D’IVOIRE : RAPPORT DE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176953188210.pdf"
+  },
+  {
+   "texte": "DECRET No 2012-1159 du 19 décembre 2012 portant institution d'un ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176953262167.pdf"
+  },
+  {
+   "texte": "DECRET No 2021-468 DU 08 SEPTEMBRE 2021 PORTANT ORGANISATION DU ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176953325560.pdf"
+  },
+  {
+   "texte": "Bilan de la Feuille de route MFFE 2011-2025",
+   "url": "https://famille.gouv.ci/uploads/publications/176953556020.pdf"
+  },
+  {
+   "texte": "RAPPORT D’ACTIVITES 2025 DE LA DIRECTION DE LA PROMOTION DE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176953686667.pdf"
+  },
+  {
+   "texte": "PLAN STRATEGIQUE DE DEVELLOPEMENT MFFE 2024-2026",
+   "url": "https://famille.gouv.ci/uploads/publications/176953811018.pdf"
+  },
+  {
+   "texte": "MANUEL DE PROCEDURE DE LA DIRECTION DES RESSOURCES HUMAINES DU ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176953827583.pdf"
+  },
+  {
+   "texte": "MANUEL DE PROCEDURE DE LA DIRECTION DE LA PLANIFICATION, DES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176953835195.pdf"
+  },
+  {
+   "texte": "MANUEL DE PROCEDURES DE LA DIRECTION DES SYSTEMES D’INFORMATION (DSI) ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176953842855.pdf"
+  },
+  {
+   "texte": "MANUEL DE PROCEDURES DE LA DIRECTION QUALITE (DQ) DU MFFE",
+   "url": "https://famille.gouv.ci/uploads/publications/176953851293.pdf"
+  },
+  {
+   "texte": "ARRETE INTERMINISTERIEL, No 350/MFFE/DPFFASE/ DU 24 OCT 2011 portant création ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176954056561.pdf"
+  },
+  {
+   "texte": "RAPPORT USIFEM 2025",
+   "url": "https://famille.gouv.ci/uploads/publications/176954077731.pdf"
+  },
+  {
+   "texte": "RAPPORT ANNUEL D’ACTIVITES 2025 DU PROJET DE GESTION NOVATRICE DU ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176954096954.pdf"
+  },
+  {
+   "texte": "BROCHURE : PROJET DE GESTION NOVATRICE DU FONDS NATIONAL « ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176954140657.pdf"
+  },
+  {
+   "texte": "PRESENTATION DU PROJET DE GESTION NOVATRICE DU FONDS NATIONAL FEMMES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176954204314.pdf"
+  },
+  {
+   "texte": "RAPPORT ANNUEL 2025 INSPECTION GENERALE",
+   "url": "https://famille.gouv.ci/uploads/publications/176959923169.pdf"
+  },
+  {
+   "texte": "Evaluation des mécanismes nationaux de lutte contre les violences basées ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176960292475.pdf"
+  },
+  {
+   "texte": "PLAN NATIONAL DE PROMOTION POUR L'ABANDON DES MUTILATIONS GENITALES FEMININES ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176960408635.pdf"
+  },
+  {
+   "texte": "COUTS DE L'ELIMINATION DE LA VIOLENCE BASEE SUR LE GENRE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176960457544.pdf"
+  },
+  {
+   "texte": "LOI n° 202-894 du 21 décembre 2021 relative aux mesures ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176960480223.pdf"
+  },
+  {
+   "texte": "RAPPORT D'ACTIVITES ANNUEL DU PN-OEV 2023",
+   "url": "https://famille.gouv.ci/uploads/publications/176960845319.pdf"
+  },
+  {
+   "texte": "RAPPORT D'ACTIVITES ANNUEL DU PN-OEV 2022",
+   "url": "https://famille.gouv.ci/uploads/publications/176960853669.pdf"
+  },
+  {
+   "texte": "RAPPORT ANNUEL D'ACTIVITES DU PN-OEV 2024 (vv)",
+   "url": "https://famille.gouv.ci/uploads/publications/176960869714.pdf"
+  },
+  {
+   "texte": "ETAT D'EXECUTION DU BUDGET 2025 PN-OEV",
+   "url": "https://famille.gouv.ci/uploads/publications/176960890640.pdf"
+  },
+  {
+   "texte": "MANUEL DE PROCEDURES DU PROGRAMME NATIONAL DE PRISE EN CHARGE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176960899978.pdf"
+  },
+  {
+   "texte": "STANDARDS POUR L'AMELIORATION DE LA QUALITE DES SERVICES OFFERTS AUX ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176960956126.pdf"
+  },
+  {
+   "texte": "NEWSLETTER 4e Trimestre 2025 PN-OEV",
+   "url": "https://famille.gouv.ci/uploads/publications/17696098149.pdf"
+  },
+  {
+   "texte": "Addendum sur les directives de Développement de la Petite Enfance ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176961002617.pdf"
+  },
+  {
+   "texte": "DOCUMENT DE REFERENCE : Directives Relatives aux Interventions ciblant les ...",
+   "url": "https://famille.gouv.ci/uploads/publications/176961035599.pdf"
+  },
+  {
+   "texte": "GUIDE DU SOUTIEN PSYCHOSOCIAL AUX OEV ET LEURS FAMILLES (Juillet ...",
+   "url": "https://famille.gouv.ci/uploads/publications/17696106654.pdf"
+  },
+  {
+   "texte": "ORGANIGRAMME DU MINISTERE DE LA FEMME, DE LA FAMILLE ET ...",
+   "url": "https://famille.gouv.ci/uploads/publications/17707106235.pdf"
+  },
+  {
+   "texte": "ORGANISATION ET FONCTIONNEMENT DE LA COMMISSION NATIONALE DE LA FAMILLE, ...",
+   "url": "https://famille.gouv.ci/uploads/publications/177088583685.pdf"
+  },
+  {
+   "texte": "MARCHÉS PUBLICS 2025",
+   "url": "https://famille.gouv.ci/uploads/publications/177124677085.pdf"
+  },
+  {
+   "texte": "Création et fonctionnement du projet de gestion Novatrice du fonds ...",
+   "url": "https://famille.gouv.ci/uploads/publications/177124719280.pdf"
+  },
+  {
+   "texte": "ÉTAT D'EXÉCUTION DES MARCHÉS PUBLICS 2025",
+   "url": "https://famille.gouv.ci/uploads/publications/177151636866.pdf"
+  },
+  {
+   "texte": "DECISION D'ATTENTE No 0019 MFFE/CAB DU 12 FEVRIER 2026 PORTANT ...",
+   "url": "https://famille.gouv.ci/uploads/publications/177195765828.pdf"
+  },
+  {
+   "texte": "DECISION D'ATTENTE No 0018 MFFE/CAB DU 12 FEVRIER 2026 PORTANT ...",
+   "url": "https://famille.gouv.ci/uploads/publications/177195787170.pdf"
+  },
+  {
+   "texte": "RAPPORT D’ACTIVITES 2025",
+   "url": "https://famille.gouv.ci/uploads/publications/177218651791.pdf"
+  },
+  {
+   "texte": "DECRET N° 2018-498 DU 23 MAI 2018 PORTANT CREATION, ORGANISATION ...",
+   "url": "https://famille.gouv.ci/uploads/publications/177583988940.pdf"
+  },
+  {
+   "texte": "ANNUAIRE STATISTIQUE DU MINISTERE DE LA FEMME, DE LA FAMILLE ...",
+   "url": "https://famille.gouv.ci/uploads/publications/177791082581.pdf"
+  },
+  {
+   "texte": "RECUEIL DES TEXTES JURIDIQUES : Protection des Droits des enfants, ...",
+   "url": "https://famille.gouv.ci/uploads/publications/178050192821.pdf"
+  },
+  {
+   "texte": "NEWSLETTER_2026_trim_1.pdf",
+   "url": "https://famille.gouv.ci/uploads/publications/178370096577.pdf"
+  },
+  {
+   "texte": "Recueil de texte de lois adulte final 18-02-2026",
+   "url": "https://famille.gouv.ci/uploads/publications/178370128731.pdf"
+  },
+  {
+   "texte": "DPN final.pdf",
+   "url": "https://famille.gouv.ci/uploads/publications/178370204899.pdf"
+  },
+  {
+   "texte": "Árrête nº 391 1 3 SEPT 2005 /MSSSHICAB du Attributions, ...",
+   "url": "https://famille.gouv.ci/uploads/publications/178965427515.pdf"
+  },
+  {
+   "texte": "Appel à projet pour la recherche sur la nutrition, l'alimentation ...",
+   "url": "https://famille.gouv.ci/uploads/publications/179008653779.pdf"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_famille_gouv",
+ "date_recuperation": "2026-10-19T10:46:54+00:00",
+ "duree_s": 5.6,
+ "http": 200,
+ "liens": [
+  "https://famille.gouv.ci/assets/contexte.css",
+  "https://famille.gouv.ci/uploads/publications/173012430216.pdf",
+  "https://famille.gouv.ci/uploads/publications/173012433470.pdf",
+  "https://famille.gouv.ci/uploads/publications/173159249684.pdf",
+  "https://famille.gouv.ci/uploads/publications/173159251848.pdf",
+  "https://famille.gouv.ci/uploads/publications/173159255315.pdf",
+  "https://famille.gouv.ci/uploads/publications/173159256747.pdf",
+  "https://famille.gouv.ci/uploads/publications/176366817985.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461009436.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461346437.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461350213.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461466831.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461483770.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461516067.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461523018.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461532188.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461544565.pdf",
+  "https://famille.gouv.ci/uploads/publications/17646155449.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461568218.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461577661.pdf",
+  "https://famille.gouv.ci/uploads/publications/176461586445.pdf",
+  "https://famille.gouv.ci/uploads/publications/17665080274.pdf",
+  "https://famille.gouv.ci/uploads/publications/176650839665.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697649157.pdf",
+  "https://famille.gouv.ci/uploads/publications/17669766081.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697707277.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697741526.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697791923.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697822515.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697829240.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697838130.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697845267.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697866834.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697881663.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697892427.pdf",
+  "https://famille.gouv.ci/uploads/publications/176697904782.pdf",
+  "https://famille.gouv.ci/uploads/publications/176701154792.pdf",
+  "https://famille.gouv.ci/uploads/publications/176701164666.pdf",
+  "https://famille.gouv.ci/uploads/publications/176701268746.pdf",
+  "https://famille.gouv.ci/uploads/publications/176919820584.pdf",
+  "https://famille.gouv.ci/uploads/publications/176919839724.pdf",
+  "https://famille.gouv.ci/uploads/publications/176919854650.pdf",
+  "https://famille.gouv.ci/uploads/publications/176919867150.pdf",
+  "https://famille.gouv.ci/uploads/publications/176919874844.pdf",
+  "https://famille.gouv.ci/uploads/publications/176936701697.pdf",
+  "https://famille.gouv.ci/uploads/publications/176936873529.pdf",
+  "https://famille.gouv.ci/uploads/publications/17693691723.pdf",
+  "https://famille.gouv.ci/uploads/publications/176936945850.pdf",
+  "https://famille.gouv.ci/uploads/publications/176936984489.pdf",
+  "https://famille.gouv.ci/uploads/publications/176936997346.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937063397.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937110875.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937124389.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937240619.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937340213.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937463949.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937552921.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937624358.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937670169.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937866789.pdf",
+  "https://famille.gouv.ci/uploads/publications/176937875495.pdf",
+  "https://famille.gouv.ci/uploads/publications/176944387541.pdf",
+  "https://famille.gouv.ci/uploads/publications/176944527798.pdf",
+  "https://famille.gouv.ci/uploads/publications/176944868270.pdf",
+  "https://famille.gouv.ci/uploads/publications/176944892494.pdf",
+  "https://famille.gouv.ci/uploads/publications/176944910263.pdf",
+  "https://famille.gouv.ci/uploads/publications/176944919644.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945002699.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945009223.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945042318.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945054128.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945085686.pdf",
+  "https://famille.gouv.ci/uploads/publications/17694512034.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945136998.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945151368.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945163381.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945197411.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945209243.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945216520.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945224855.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945244122.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945253629.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945266431.pdf",
+  "https://famille.gouv.ci/uploads/publications/176945277558.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951521253.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951525746.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951556527.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951620099.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951667585.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951693037.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951872240.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951904584.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951930168.pdf",
+  "https://famille.gouv.ci/uploads/publications/176951944825.pdf",
+  "https://famille.gouv.ci/uploads/publications/176952804034.pdf",
+  "https://famille.gouv.ci/uploads/publications/176952815313.pdf",
+  "https://famille.gouv.ci/uploads/publications/176952823961.pdf",
+  "https://famille.gouv.ci/uploads/publications/176952841175.pdf",
+  "https://famille.gouv.ci/uploads/publications/176952864832.pdf",
+  "https://famille.gouv.ci/uploads/publications/176952889037.pdf",
+  "https://famille.gouv.ci/uploads/publications/176952912735.pdf",
+  "https://famille.gouv.ci/uploads/publications/17695307338.pdf",
+  "https://famille.gouv.ci/uploads/publications/17695310324.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953127156.pdf",
+  "https://famille.gouv.ci/uploads/publications/17695315421.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953188210.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953262167.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953325560.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953556020.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953686667.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953811018.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953827583.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953835195.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953842855.pdf",
+  "https://famille.gouv.ci/uploads/publications/176953851293.pdf",
+  "https://famille.gouv.ci/uploads/publications/176954056561.pdf",
+  "https://famille.gouv.ci/uploads/publications/176954077731.pdf",
+  "https://famille.gouv.ci/uploads/publications/176954096954.pdf",
+  "https://famille.gouv.ci/uploads/publications/176954140657.pdf",
+  "https://famille.gouv.ci/uploads/publications/176954204314.pdf",
+  "https://famille.gouv.ci/uploads/publications/176959923169.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960292475.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960408635.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960457544.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960480223.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960845319.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960853669.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960869714.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960890640.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960899978.pdf",
+  "https://famille.gouv.ci/uploads/publications/176960956126.pdf",
+  "https://famille.gouv.ci/uploads/publications/17696098149.pdf",
+  "https://famille.gouv.ci/uploads/publications/176961002617.pdf",
+  "https://famille.gouv.ci/uploads/publications/176961035599.pdf",
+  "https://famille.gouv.ci/uploads/publications/17696106654.pdf",
+  "https://famille.gouv.ci/uploads/publications/17707106235.pdf",
+  "https://famille.gouv.ci/uploads/publications/177088583685.pdf",
+  "https://famille.gouv.ci/uploads/publications/177124677085.pdf",
+  "https://famille.gouv.ci/uploads/publications/177124719280.pdf",
+  "https://famille.gouv.ci/uploads/publications/177151636866.pdf",
+  "https://famille.gouv.ci/uploads/publications/177195765828.pdf",
+  "https://famille.gouv.ci/uploads/publications/177195787170.pdf",
+  "https://famille.gouv.ci/uploads/publications/177218651791.pdf",
+  "https://famille.gouv.ci/uploads/publications/177583988940.pdf",
+  "https://famille.gouv.ci/uploads/publications/177791082581.pdf",
+  "https://famille.gouv.ci/uploads/publications/178050192821.pdf",
+  "https://famille.gouv.ci/uploads/publications/178370096577.pdf",
+  "https://famille.gouv.ci/uploads/publications/178370128731.pdf",
+  "https://famille.gouv.ci/uploads/publications/178370204899.pdf",
+  "https://famille.gouv.ci/uploads/publications/178965427515.pdf",
+  "https://famille.gouv.ci/uploads/publications/179008653779.pdf"
+ ],
+ "octets": 290307,
+ "statut": "DECOUVERTE",
+ "titre_page": "Ministère de la Femme, de la Famille et de l'Enfant de la République de Côte d'Ivoire :: Accueil",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://famille.gouv.ci/",
+ "url_finale": "https://famille.gouv.ci/accueil"
+}

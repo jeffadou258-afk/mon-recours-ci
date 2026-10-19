@@ -1,0 +1,37 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mffe_constitution_2016",
+ "date_recuperation": "2026-10-19T11:00:08+00:00",
+ "duree_s": 158.2,
+ "extraction": {
+  "caracteres_natifs": 16,
+  "confiance_ocr_moyenne": 93.8,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_constitution_2016.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_constitution_2016.txt",
+  "pages": 16,
+  "pages_ocr": 16,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 16,
+  "sha256_ocr": "sha256:646fc97b990692569351905b754076ec357b6ccb5708eef8e04b9ccec30988a1",
+  "sha256_texte": "sha256:745e92227c3fd94c12d285bc35f1e1bf097ae2435a0b98cf9250d81db4b5607b"
+ },
+ "fichier_pdf": "mffe_constitution_2016.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 12267489,
+ "pdf": {
+  "CreationDate": "Fri Nov 11 12:26:47 2016 UTC",
+  "Creator": "Adobe Acrobat 8.0",
+  "ModDate": "Fri Nov 11 12:30:29 2016 UTC",
+  "PDF version": "1.6",
+  "Pages": "16",
+  "Producer": "Adobe Acrobat 8.0 Image Conversion Plug-in",
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:c964b772cd64f4572c04f8c83b1f5af781d2e53cde81b4cb6e805d04b03d28db",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/constitution_2016.pdf",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/constitution_2016.pdf"
+}

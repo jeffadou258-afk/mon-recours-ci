@@ -1,0 +1,38 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
+ "date_recuperation": "2026-10-19T10:48:09+00:00",
+ "duree_s": 153.8,
+ "extraction": {
+  "caracteres_natifs": 16,
+  "confiance_ocr_moyenne": 91.6,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_.txt",
+  "pages": 16,
+  "pages_ocr": 16,
+  "pages_ocr_faibles": [],
+  "pages_sans_texte": 16,
+  "sha256_ocr": "sha256:99433f94b2ec06453904e4f59b52876c2c8906cd3555e1c8b4e41a491ad95ab2",
+  "sha256_texte": "sha256:745e92227c3fd94c12d285bc35f1e1bf097ae2435a0b98cf9250d81db4b5607b"
+ },
+ "fichier_pdf": "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1694630,
+ "pdf": {
+  "CreationDate": "Fri Mar 31 16:02:06 2023 UTC",
+  "Creator": "PDF24 Creator",
+  "ModDate": "Sun Jan 25 21:19:57 2026 UTC",
+  "PDF version": "1.4",
+  "Pages": "16",
+  "Producer": "iLovePDF",
+  "Title": "",
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:e3fa70d741d8e0fd5a80a2b78085e5d09ec8d6789a4ef5a27b62c7a7e5c21473",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://famille.gouv.ci/uploads/publications/176937624358.pdf",
+ "url_finale": "https://famille.gouv.ci/uploads/publications/176937624358.pdf"
+}

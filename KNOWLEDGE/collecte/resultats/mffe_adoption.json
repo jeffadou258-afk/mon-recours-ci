@@ -1,0 +1,32 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mffe_adoption",
+ "date_recuperation": "2026-10-19T11:05:20+00:00",
+ "duree_s": 0.8,
+ "extraction": {
+  "caracteres_natifs": 4896,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_adoption.txt",
+  "pages": 3,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:4078f7b2afb07c04cdf418e2936dd88935a715c44562f4de5b40ae69ad10432e"
+ },
+ "fichier_pdf": "mffe_adoption.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 190494,
+ "pdf": {
+  "CreationDate": "Mon Jun 14 12:28:02 2021 UTC",
+  "Creator": "Microsoft® Word 2016",
+  "ModDate": "Mon Jun 14 12:28:02 2021 UTC",
+  "PDF version": "1.7",
+  "Pages": "3",
+  "Producer": "Microsoft® Word 2016",
+  "polices": 9,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:44203eb2eefa719d748c36ef54a7d6e6bdb8d07e32bfd89aaf30eaf63419340a",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/1724365129_adoption_enfant.pdf",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/1724365129_adoption_enfant.pdf"
+}

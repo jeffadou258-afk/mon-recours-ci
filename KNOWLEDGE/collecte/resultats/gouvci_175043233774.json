@@ -1,9 +1,32 @@
 {
  "categorie_source": "OFFICIEL_PORTAIL_GOUV",
  "cle": "gouvci_175043233774",
- "date_recuperation": "2026-10-19T09:33:17+00:00",
- "duree_s": 53.1,
- "erreur": "échec après 3 essais : <urlopen error [Errno -3] Temporary failure in name resolution>",
- "statut": "ECHEC_RESEAU",
- "url": "https://www.gouv.ci/uploads/publications/175043233774.pdf"
+ "date_recuperation": "2026-10-19T10:46:37+00:00",
+ "duree_s": 16.4,
+ "extraction": {
+  "caracteres_natifs": 17018,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/gouvci_175043233774.txt",
+  "pages": 11,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:1afce667dcb1975ad240f5f6f3955bcde332b411445eb06a43b33f46328fd1f7"
+ },
+ "fichier_pdf": "gouvci_175043233774.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 649372,
+ "pdf": {
+  "CreationDate": "Wed Feb 14 19:28:05 2024 UTC",
+  "ModDate": "Wed Feb 14 19:28:05 2024 UTC",
+  "PDF version": "1.7",
+  "Pages": "11",
+  "Producer": "Microsoft: Print To PDF",
+  "Title": "Microsoft Word - Communique du Conseil des Ministres du mercredi 14 fevrier 2024",
+  "polices": 5,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:1e3cf5bd855805d5a241fb255fbcef0eb52f8e4a7c9090d44ea4e4365887bc8a",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.gouv.ci/uploads/publications/175043233774.pdf",
+ "url_finale": "https://www.gouv.ci/uploads/publications/175043233774.pdf"
 }

@@ -1,0 +1,82 @@
+{
+ "ancres": [
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-17/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-18/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-19/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-25/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-26/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-28/"
+  },
+  {
+   "texte": "Français",
+   "url": "https://www.ohada.org/journal-officiel/"
+  },
+  {
+   "texte": "Page 2",
+   "url": "https://www.ohada.org/journal-officiel/2/"
+  },
+  {
+   "texte": "Communauté",
+   "url": "https://www.ohada.org/journal-officiel/3/"
+  },
+  {
+   "texte": "Skip to content",
+   "url": "https://www.ohada.org/journal-officiel/3/#main"
+  },
+  {
+   "texte": "Suivant »",
+   "url": "https://www.ohada.org/journal-officiel/4/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F&format=xml"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_jo_p3",
+ "date_recuperation": "2026-10-19T11:15:28+00:00",
+ "duree_s": 2.5,
+ "http": 200,
+ "liens": [
+  "https://www.ohada.org/journal-officiel-n-17/",
+  "https://www.ohada.org/journal-officiel-n-18/",
+  "https://www.ohada.org/journal-officiel-n-19/",
+  "https://www.ohada.org/journal-officiel-n-25/",
+  "https://www.ohada.org/journal-officiel-n-26/",
+  "https://www.ohada.org/journal-officiel-n-28/",
+  "https://www.ohada.org/journal-officiel/",
+  "https://www.ohada.org/journal-officiel/2/",
+  "https://www.ohada.org/journal-officiel/3/",
+  "https://www.ohada.org/journal-officiel/3/#main",
+  "https://www.ohada.org/journal-officiel/4/",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F&format=xml"
+ ],
+ "octets": 244718,
+ "statut": "DECOUVERTE",
+ "titre_page": "Journal Officiel – Page 3 – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/journal-officiel/3/",
+ "url_finale": "https://www.ohada.org/journal-officiel/3/"
+}

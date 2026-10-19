@@ -1,0 +1,12 @@
+{
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_mffe_textes",
+ "date_recuperation": "2026-10-19T10:46:54+00:00",
+ "duree_s": 0.9,
+ "http": 403,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html",
+ "url": "https://mffe.ci/MFFE/site_famille/document-dinteret-public/textes-juridiques/",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/document-dinteret-public/textes-juridiques/"
+}

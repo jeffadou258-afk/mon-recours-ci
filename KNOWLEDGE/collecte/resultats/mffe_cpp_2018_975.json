@@ -1,0 +1,33 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mffe_cpp_2018_975",
+ "date_recuperation": "2026-10-19T10:59:23+00:00",
+ "duree_s": 3.1,
+ "extraction": {
+  "caracteres_natifs": 796556,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mffe_cpp_2018_975.txt",
+  "pages": 64,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:3f9880a72d98919af371e30d333859fadf2545eb58920f28aa6d3262bc76819a"
+ },
+ "fichier_pdf": "mffe_cpp_2018_975.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 2938610,
+ "pdf": {
+  "CreationDate": "Wed Mar 20 12:38:16 2019 UTC",
+  "Creator": "EPSON DS-50000/60000/70000",
+  "ModDate": "Wed Mar 20 12:38:16 2019 UTC",
+  "PDF version": "1.6",
+  "Pages": "64",
+  "Producer": "Adobe Acrobat 10.0 Paper Capture Plug-in",
+  "Title": "",
+  "polices": 198,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:cd3bc6b85fff6612c0cc24c9c41e8d53fce21f8fa4901011717dd9b0f5b7b66d",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/Loi_2018-975_du_27_decembre_2018_portant_Code_de_Procedure_penale.pdf",
+ "url_finale": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/Loi_2018-975_du_27_decembre_2018_portant_Code_de_Procedure_penale.pdf"
+}

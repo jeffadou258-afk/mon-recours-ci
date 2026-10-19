@@ -1,0 +1,32 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia",
+ "date_recuperation": "2026-10-19T10:51:45+00:00",
+ "duree_s": 5.1,
+ "extraction": {
+  "caracteres_natifs": 12817,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia.txt",
+  "pages": 2,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:92b3ca2cf8008de6faca556524b25a0fb386a88e5f60bb39737f976b578d726d"
+ },
+ "fichier_pdf": "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 188922,
+ "pdf": {
+  "CreationDate": "Thu Aug  1 08:44:06 2019 UTC",
+  "Creator": "Hewlett-Packard MFP",
+  "ModDate": "Thu Aug  1 08:44:21 2019 UTC",
+  "PDF version": "1.5",
+  "Pages": "2",
+  "Producer": "ABBYY FineReader 11",
+  "polices": 17,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:4959603eba9f2a9240b1969695c400143b60a09ad9219a1e0ec9edab75cd5707",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://famille.gouv.ci/uploads/publications/176937124389.pdf",
+ "url_finale": "https://famille.gouv.ci/uploads/publications/176937124389.pdf"
+}

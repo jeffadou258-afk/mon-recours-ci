@@ -1,0 +1,62 @@
+{
+ "ancres": [
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-26/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/journal-officiel-n-28/"
+  },
+  {
+   "texte": "Français",
+   "url": "https://www.ohada.org/journal-officiel/"
+  },
+  {
+   "texte": "Page 2",
+   "url": "https://www.ohada.org/journal-officiel/2/"
+  },
+  {
+   "texte": "Page 3",
+   "url": "https://www.ohada.org/journal-officiel/3/"
+  },
+  {
+   "texte": "Communauté",
+   "url": "https://www.ohada.org/journal-officiel/4/"
+  },
+  {
+   "texte": "Skip to content",
+   "url": "https://www.ohada.org/journal-officiel/4/#main"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F&format=xml"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_jo_p4",
+ "date_recuperation": "2026-10-19T11:15:31+00:00",
+ "duree_s": 2.4,
+ "http": 200,
+ "liens": [
+  "https://www.ohada.org/journal-officiel-n-26/",
+  "https://www.ohada.org/journal-officiel-n-28/",
+  "https://www.ohada.org/journal-officiel/",
+  "https://www.ohada.org/journal-officiel/2/",
+  "https://www.ohada.org/journal-officiel/3/",
+  "https://www.ohada.org/journal-officiel/4/",
+  "https://www.ohada.org/journal-officiel/4/#main",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F",
+  "https://www.ohada.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ohada.org%2Fjournal-officiel%2F&format=xml"
+ ],
+ "octets": 239453,
+ "statut": "DECOUVERTE",
+ "titre_page": "Journal Officiel – Page 4 – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/journal-officiel/4/",
+ "url_finale": "https://www.ohada.org/journal-officiel/4/"
+}

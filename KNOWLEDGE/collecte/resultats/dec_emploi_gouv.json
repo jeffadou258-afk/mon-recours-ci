@@ -1,8 +1,8 @@
 {
  "categorie_source": "DECOUVERTE",
  "cle": "dec_emploi_gouv",
- "date_recuperation": "2026-10-19T09:34:41+00:00",
- "duree_s": 3.3,
+ "date_recuperation": "2026-10-19T10:47:00+00:00",
+ "duree_s": 3.2,
  "http": 403,
  "octets": 0,
  "statut": "ECHEC_HTTP",

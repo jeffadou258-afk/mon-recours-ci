@@ -1,0 +1,40 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
+ "date_recuperation": "2026-10-19T10:51:50+00:00",
+ "duree_s": 134.0,
+ "extraction": {
+  "caracteres_natifs": 10,
+  "confiance_ocr_moyenne": 75.3,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta.txt",
+  "pages": 10,
+  "pages_ocr": 10,
+  "pages_ocr_faibles": [
+   1,
+   2
+  ],
+  "pages_sans_texte": 10,
+  "sha256_ocr": "sha256:d528718151f325ee3595d9af8b955caadeeda93b8129a364bc379c169101b0d4",
+  "sha256_texte": "sha256:f60e1da0036e63065bdb02fa18d418a57baf3cfbaa79b4edd16f6016ecc5bbc9"
+ },
+ "fichier_pdf": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1277407,
+ "pdf": {
+  "CreationDate": "Mon Mar  4 16:12:29 2019 UTC",
+  "Creator": "Nitro PDF Professional",
+  "ModDate": "Sun Jan 25 19:45:31 2026 UTC",
+  "PDF version": "1.7",
+  "Pages": "10",
+  "Producer": "iLovePDF",
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:46e73858e41555d1d46edad183ac8c504c8c8fa449b8cd8ae2f196c4edbe0b49",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://famille.gouv.ci/uploads/publications/176937063397.pdf",
+ "url_finale": "https://famille.gouv.ci/uploads/publications/176937063397.pdf"
+}

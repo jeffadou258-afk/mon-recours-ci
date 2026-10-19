@@ -1,0 +1,40 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
+ "date_recuperation": "2026-10-19T10:55:36+00:00",
+ "duree_s": 129.1,
+ "extraction": {
+  "caracteres_natifs": 13,
+  "confiance_ocr_moyenne": 80.4,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor.ocr.txt",
+  "fichier_texte": "KNOWLEDGE/collecte/textes/officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor.txt",
+  "pages": 13,
+  "pages_ocr": 13,
+  "pages_ocr_faibles": [
+   1,
+   9
+  ],
+  "pages_sans_texte": 13,
+  "sha256_ocr": "sha256:e917b21c7050cf23ab6ab8c05b369b4bb4090a5b9550426002f23fe73ba97c30",
+  "sha256_texte": "sha256:4dadacbf7b37380f7a2f005e9e6f14a93bc608061ac46f691f8a084b8eeddf19"
+ },
+ "fichier_pdf": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1324711,
+ "pdf": {
+  "CreationDate": "Wed Dec  4 10:25:40 2019 UTC",
+  "ModDate": "Sun Jan 25 19:24:59 2026 UTC",
+  "PDF version": "1.7",
+  "Pages": "13",
+  "Producer": "iLovePDF",
+  "Title": "FichierÂ€PDF",
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:8a0cbf5e34540b964addfaa6913b57cee36b0564087f901734c71f5d91bccad1",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://famille.gouv.ci/uploads/publications/17693691723.pdf",
+ "url_finale": "https://famille.gouv.ci/uploads/publications/17693691723.pdf"
+}

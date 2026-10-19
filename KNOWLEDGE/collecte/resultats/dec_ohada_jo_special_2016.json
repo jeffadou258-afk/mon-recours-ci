@@ -1,0 +1,22 @@
+{
+ "ancres": [
+  {
+   "texte": "Download",
+   "url": "http://nwp.ohada.org/ohd1/wp-content/uploads/2016/11/old.ohada_.org_jl_attachments_article_1847_jo-ohada-se-nov2016-official-translation.pdf"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_jo_special_2016",
+ "date_recuperation": "2026-10-19T11:15:24+00:00",
+ "duree_s": 2.5,
+ "http": 200,
+ "liens": [
+  "http://nwp.ohada.org/ohd1/wp-content/uploads/2016/11/old.ohada_.org_jl_attachments_article_1847_jo-ohada-se-nov2016-official-translation.pdf"
+ ],
+ "octets": 238844,
+ "statut": "DECOUVERTE",
+ "titre_page": "Journal Officiel de l’OHADA – Edition Spéciale Nov. 2016 – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/journal-officiel-de-l-ohada-edition-speciale-nov-2016/",
+ "url_finale": "https://www.ohada.org/journal-officiel-de-l-ohada-edition-speciale-nov-2016/"
+}

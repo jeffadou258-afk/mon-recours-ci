@@ -1,0 +1,34 @@
+{
+ "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+ "cle": "ilo_textes_pertinents_rci",
+ "date_recuperation": "2026-10-19T11:15:39+00:00",
+ "duree_s": 2.1,
+ "extraction": {
+  "caracteres_natifs": 187195,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ilo_textes_pertinents_rci.txt",
+  "ocr_non_tente": "source secondaire : pas d'OCR (gain de temps) — le texte natif suffit au recoupement ou la source est écartée",
+  "pages": 96,
+  "pages_sans_texte": 8,
+  "sha256_texte": "sha256:c0f750130c8f284a7ac9388f73c6d950697f25d3d5233dea5a9d46964d3780fd"
+ },
+ "fichier_pdf": "ilo_textes_pertinents_rci.pdf",
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1125455,
+ "pdf": {
+  "CreationDate": "Thu Mar 12 12:54:24 2015 UTC",
+  "Creator": "Acrobat PDFMaker 10.0 for Word",
+  "ModDate": "Thu Mar 12 12:54:37 2015 UTC",
+  "PDF version": "1.5",
+  "Pages": "96",
+  "Producer": "Adobe PDF Library 10.0",
+  "Title": "AVANT PROJET DE LOI PORTANT INTERDICTION DE LA TRAITE",
+  "polices": 12,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:8fbae9b3b3ebe8b288733fb4bb48ff3cb9f70397bf15518ea0568ffe2809a489",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.ilo.org/sites/default/files/2025-05/01_TEXTES_Pertinents_applicables_en_RCI.pdf",
+ "url_finale": "https://www.ilo.org/sites/default/files/2025-05/01_TEXTES_Pertinents_applicables_en_RCI.pdf"
+}
