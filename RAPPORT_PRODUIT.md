@@ -23,7 +23,7 @@ test ne vaut validation juridique.
 | Web — unitaires et composants | espace de travail, et CI | 54 / 54 |
 | Web — intégration avec le moteur réel | espace de travail, et CI | 11 / 11 |
 | Web — bout en bout, Chromium mobile et bureau | espace de travail, et CI | 10 / 10 |
-| Typage, construction Next.js, audit npm, secrets | CI uniquement (dépendances complètes) | voir l'onglet Actions de la branche |
+| Typage, construction Next.js, audit npm, secrets | CI uniquement (dépendances complètes) | réussis sur `3f990d9` (un défaut de typage détecté par la CI sur `e205f97` a été corrigé) ; audit npm : 0 vulnérabilité |
 | Sur le Mac du propriétaire | **non exécuté** (pas d'accès) | à lancer : `bash scripts/demarrer-local.sh --tests` |
 
 ## 3. Matrice de conformité — parcours utilisateur (mission du 19/10)
