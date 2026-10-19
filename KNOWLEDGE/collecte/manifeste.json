@@ -861,7 +861,9 @@
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
-   "ocr_force": true
+   "ocr_force": true,
+   "dpi": 300,
+   "version_ocr": 2
   },
   {
    "cle": "mffe_mariage_2019_570",
@@ -881,7 +883,9 @@
    "segment": {
     "debut": "LO ?I n\\s*°\\s*2019-570 du",
     "fin": "LO ?I n\\s*°\\s*2019-571 du"
-   }
+   },
+   "dpi": 300,
+   "version_ocr": 2
   },
   {
    "cle": "mffe_successions_2019_573",

@@ -152,10 +152,10 @@ def texte_page(chemin, numero):
     return sortie.decode("utf-8", "replace") if code == 0 else ""
 
 
-def ocr_page(chemin, numero, dossier_tmp):
+def ocr_page(chemin, numero, dossier_tmp, dpi=None):
     """OCR d'une page : rendu 300 dpi en niveaux de gris, tesseract fra. Renvoie (texte, confiance)."""
     base = os.path.join(dossier_tmp, "p%04d" % numero)
-    code, _, _ = outil("pdftoppm", "-f", str(numero), "-l", str(numero), "-r", os.environ.get("COLLECTE_DPI_OCR", "200"), "-gray",
+    code, _, _ = outil("pdftoppm", "-f", str(numero), "-l", str(numero), "-r", str(dpi or os.environ.get("COLLECTE_DPI_OCR", "200")), "-gray",
                        "-png", "-singlefile", chemin, base)
     image = base + ".png"
     if code != 0 or not os.path.isfile(image):
@@ -191,7 +191,7 @@ def ocr_page(chemin, numero, dossier_tmp):
     return "\n".join(lignes), confiance
 
 
-def extraire(chemin, pages, cle, ocr_autorise=True, ocr_force=False):
+def extraire(chemin, pages, cle, ocr_autorise=True, ocr_force=False, dpi=None):
     """Texte natif page par page ; OCR des pages sans texte. Renvoie un dict de constats."""
     natif, a_ocr = [], []
     for numero in range(1, pages + 1):
@@ -203,6 +203,7 @@ def extraire(chemin, pages, cle, ocr_autorise=True, ocr_force=False):
                 "pages_sans_texte": len(a_ocr)}
     ocr = {}
     constats["ocr_force"] = bool(ocr_force)
+    constats["dpi_ocr"] = int(dpi or os.environ.get("COLLECTE_DPI_OCR", "200"))
     if a_ocr and not ocr_autorise:
         constats["ocr_non_tente"] = ("source secondaire : pas d'OCR (gain de temps) — "
                                      "le texte natif suffit au recoupement ou la source est écartée")
@@ -213,7 +214,7 @@ def extraire(chemin, pages, cle, ocr_autorise=True, ocr_force=False):
         dossier_tmp = os.path.join(os.environ.get("RUNNER_TEMP", "/tmp"), "ocr_" + cle)
         os.makedirs(dossier_tmp, exist_ok=True)
         with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count() or 2) as executeur:
-            futurs = {executeur.submit(ocr_page, chemin, n, dossier_tmp): n for n in a_ocr}
+            futurs = {executeur.submit(ocr_page, chemin, n, dossier_tmp, dpi): n for n in a_ocr}
             for futur in concurrent.futures.as_completed(futurs):
                 ocr[futurs[futur]] = futur.result()
         shutil.rmtree(dossier_tmp, ignore_errors=True)
@@ -333,7 +334,8 @@ def traiter(source):
     resultat["extraction"] = extraire(
         chemin, pages, cle,
         ocr_autorise=(source.get("categorie_source") or "").startswith("OFFICIEL") or source.get("ocr"),
-        ocr_force=bool(source.get("ocr_force")))
+        ocr_force=bool(source.get("ocr_force")), dpi=source.get("dpi"))
+    resultat["version_ocr"] = source.get("version_ocr", 1)
     texte_complet = open(os.path.join(RACINE, resultat["extraction"]["fichier_texte"]),
                          encoding="utf-8").read()
     if resultat["extraction"].get("fichier_ocr"):
@@ -376,7 +378,8 @@ def main(argv=None):
             precedent = json.load(open(chemin_resultat, encoding="utf-8"))
             deja_force = (precedent.get("extraction") or {}).get("ocr_force")
             if precedent.get("url") == source["url"] and precedent.get("statut") in (
-                    "TELECHARGE", "DECOUVERTE") and (deja_force or not source.get("ocr_force")):
+                    "TELECHARGE", "DECOUVERTE") and (deja_force or not source.get("ocr_force")) \
+                    and precedent.get("version_ocr", 1) >= source.get("version_ocr", 1):
                 synthese["ignores"].append(source["cle"])
                 continue
         journal("== %s  %s" % (source["cle"], source["url"]))
