@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-20T11:22:22+00:00",
+ "execution": "2026-10-20T11:55:08+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -18,24 +18,32 @@
  },
  "traites": [
   {
-   "cle": "dec_biblio_ohada_notice_1860",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_biblio_ohada_recherche_jo_2014",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_biblio_ohada_recherche_jo_2017",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_biblio_ohada_recherche_jo_23",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "senegal_auscgie_jo_2014",
+   "cle": "ohada_jo_aupc_2015_explnum_16",
    "statut": "TELECHARGE"
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_17",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_18",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_19",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "dec_biblio_ohada_notice_1881",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "refworld_etat_civil_2018_862",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "dec_faolex_notice_210897",
+   "statut": "ECHEC_HTTP"
   }
  ],
  "ignores": [
@@ -277,7 +285,12 @@
   "ohada_aua_2017_attachement",
   "senegal_audcg_2010",
   "comores_auscgie_2014",
-  "comores_aupcap_2015"
+  "comores_aupcap_2015",
+  "dec_biblio_ohada_notice_1860",
+  "dec_biblio_ohada_recherche_jo_2014",
+  "dec_biblio_ohada_recherche_jo_2017",
+  "dec_biblio_ohada_recherche_jo_23",
+  "senegal_auscgie_jo_2014"
  ],
  "reportes": []
 }

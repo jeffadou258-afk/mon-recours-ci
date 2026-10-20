@@ -1,0 +1,50 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_jo_aupc_2015_explnum_18",
+ "date_recuperation": "2026-10-20T11:55:42+00:00",
+ "duree_s": 9.2,
+ "extraction": {
+  "caracteres_natifs": 309219,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_jo_aupc_2015_explnum_18.txt",
+  "ocr_force": false,
+  "pages": 131,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:e8a732c099cac8bd48e038b7608c754802450c32ac452ba79f7d8566d8390a45"
+ },
+ "fichier_pdf": "ohada_jo_aupc_2015_explnum_18.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T11:55:42+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 20905629,
+   "sha256": "sha256:468211ac9105234d7b87b6149c670e80ef5a0c77664ec115368718f8894e1662",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=18"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 20905629,
+ "pdf": {
+  "CreationDate": "Fri Sep 18 11:45:46 2015 UTC",
+  "Creator": "Adobe Acrobat Pro 10.1.15",
+  "ModDate": "Fri Sep 18 11:51:40 2015 UTC",
+  "PDF version": "1.6",
+  "Pages": "131",
+  "Producer": "Adobe Acrobat Pro 10.1.15",
+  "Title": "",
+  "indices_ocr_editeur": [
+   "police d'OCR invisible"
+  ],
+  "polices": 456,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:468211ac9105234d7b87b6149c670e80ef5a0c77664ec115368718f8894e1662",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/doc_num.php?explnum_id=18",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=18",
+ "version_ocr": 1
+}

@@ -1,0 +1,50 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_jo_aupc_2015_explnum_19",
+ "date_recuperation": "2026-10-20T11:55:52+00:00",
+ "duree_s": 9.5,
+ "extraction": {
+  "caracteres_natifs": 307980,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_jo_aupc_2015_explnum_19.txt",
+  "ocr_force": false,
+  "pages": 132,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:a7c2d64f7a4382158f4deb85017ad239cf4f6122b7e06ffe4ac558422754d87f"
+ },
+ "fichier_pdf": "ohada_jo_aupc_2015_explnum_19.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T11:55:52+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 20807458,
+   "sha256": "sha256:feaec7fbd33a08f5bf6f6c609873a6f057eb023d80d125feac7ee9fd7aff6dfe",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=19"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 20807458,
+ "pdf": {
+  "CreationDate": "Fri Sep 25 14:37:00 2015 UTC",
+  "Creator": "QuarkXPress(R) 9.54r1",
+  "ModDate": "Tue Sep 29 10:23:51 2015 UTC",
+  "PDF version": "1.6",
+  "Pages": "132",
+  "Producer": "QuarkXPress(R) 9.54r1",
+  "Title": "Journal Officiel OHADA - AUPC révisé",
+  "indices_ocr_editeur": [
+   "police d'OCR invisible"
+  ],
+  "polices": 455,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:feaec7fbd33a08f5bf6f6c609873a6f057eb023d80d125feac7ee9fd7aff6dfe",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/doc_num.php?explnum_id=19",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=19",
+ "version_ocr": 1
+}

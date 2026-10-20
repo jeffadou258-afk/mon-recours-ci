@@ -1,0 +1,23 @@
+{
+ "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+ "cle": "refworld_etat_civil_2018_862",
+ "date_recuperation": "2026-10-20T11:56:03+00:00",
+ "duree_s": 0.2,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T11:56:03+00:00",
+   "erreur": null,
+   "http": 403,
+   "octets": 0,
+   "sha256": null,
+   "statut": "ECHEC_HTTP",
+   "url": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2018-12/5ce3ed834.pdf"
+  }
+ ],
+ "http": 403,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2018-12/5ce3ed834.pdf",
+ "url_finale": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2018-12/5ce3ed834.pdf"
+}

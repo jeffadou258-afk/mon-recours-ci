@@ -1,0 +1,88 @@
+{
+ "ancres": [
+  {
+   "texte": "Comptes-Rendus-Décisions-Règlements-Communique",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1401"
+  },
+  {
+   "texte": "Acte Uniforme relatif au Droit des Sociétés Commerciales et du Groupement d'Intérêt Economique",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1561"
+  },
+  {
+   "texte": "Acte uniforme relatif au droit comptable et à l'information financière et système comptable OHADA (SYSCOHADA) adopté à Brazzaville le 26 janvier 2017",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1668"
+  },
+  {
+   "texte": "Acte uniforme relatif à la Médiation - Acte uniforme relatif au droit de l'Arbitrage",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1696"
+  },
+  {
+   "texte": "Acte uniforme relatif au Droit des Sociétés Commerciales et du GIE et Règlement modifiant et complétant le règlement de procédure de la CCJA du 18 avril 1998 adoptés à Ouagadougou le 30 janvier 2014",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1722"
+  },
+  {
+   "texte": "Compilation of treaties and uniforms Acts - Official translation",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1723"
+  },
+  {
+   "texte": "Acte uniforme relatif au système comptable des entités à but non lucratif",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3464"
+  },
+  {
+   "texte": "Compilation of treaties and uniforms Acts - Official translation",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3539"
+  },
+  {
+   "texte": "Ato uniforme sobre a Organizaçao dos processos simplificados de cobrança e as vias de execuçao",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3540"
+  },
+  {
+   "texte": "Uniform act of 17 October 2023 organizing simplified recovery procedures and enforcement measures",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3541"
+  },
+  {
+   "texte": "Journal officiel de l'OHADA: Avis de la Cour Commune de Justice et d'arbitrage",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3595"
+  },
+  {
+   "texte": "Acte uniforme portant organisation des Procédures Collectives d'Apurement du Passif adopté à Grand-Bassam le 10 septembre 2015",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=5"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_biblio_ohada_notice_1881",
+ "date_recuperation": "2026-10-20T11:56:01+00:00",
+ "duree_s": 2.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T11:56:01+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 91220,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1881"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1401",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1561",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1668",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1696",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1722",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1723",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3464",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3539",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3540",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3541",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=3595",
+  "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=5"
+ ],
+ "octets": 91220,
+ "statut": "DECOUVERTE",
+ "titre_page": "Journal Officiel de l'OHADA Catalogue en ligne",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1881",
+ "url_finale": "https://biblio.ohada.org/index.php?lvl=notice_display&id=1881"
+}

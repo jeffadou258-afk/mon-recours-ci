@@ -1,0 +1,51 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_jo_aupc_2015_explnum_17",
+ "date_recuperation": "2026-10-20T11:55:33+00:00",
+ "duree_s": 9.1,
+ "extraction": {
+  "caracteres_natifs": 297224,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_jo_aupc_2015_explnum_17.txt",
+  "ocr_force": false,
+  "pages": 128,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:1cd80e7180777a65299a97874966cc32d9f16084100c7f8ba3b9e43a16d270db"
+ },
+ "fichier_pdf": "ohada_jo_aupc_2015_explnum_17.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T11:55:33+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 20786130,
+   "sha256": "sha256:2faf254b73c1c3a65070a113e999ec042f9b94ae411f831e1a60776f3fb9cc67",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=17"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 20786130,
+ "pdf": {
+  "CreationDate": "Fri Sep 18 10:34:34 2015 UTC",
+  "Creator": "HardCopy",
+  "ModDate": "Fri Sep 18 10:36:41 2015 UTC",
+  "PDF version": "1.6",
+  "Pages": "128",
+  "Producer": "Adobe Acrobat 10.1.15 Paper Capture Plug-in",
+  "Title": "ACTE UNIFORME PORTANT ORGANISATION DES PROCEDURES COLLECTIVES D'APUREMENT DU PASSIF",
+  "indices_ocr_editeur": [
+   "producteur : Paper Capture",
+   "police d'OCR invisible"
+  ],
+  "polices": 450,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:2faf254b73c1c3a65070a113e999ec042f9b94ae411f831e1a60776f3fb9cc67",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/doc_num.php?explnum_id=17",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=17",
+ "version_ocr": 1
+}
