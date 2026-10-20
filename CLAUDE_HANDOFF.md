@@ -24,7 +24,7 @@ Aucune application n'est « déjà construite » : tout ce qui suit est une
 ```bash
 # Runtime de l'agent : Python 3.9+ et la bibliothèque standard. RIEN d'autre.
 cd /Users/mac/mon_recours_ci
-python3 tests/run_all.py                  # 279 tests, doit finir par exit 0
+python3 tests/run_all.py                  # 515 tests (514 OK, 1 ignoré), doit finir par exit 0
 python3 bin/verifier_sources.py           # requêtes HTTP réelles sur les sources
 
 # Collecte uniquement (n'affecte pas le runtime)
@@ -162,7 +162,9 @@ est **revalidée au chargement** (référence existante, article citable, citati
 littéralement présente, énoncé non dépassant la source) ; une fiche fausse fait lever
 `CatalogueInvalide` — elle ne peut pas être servie.
 
-* Catalogue actuel : **13 fiches** sur 3 domaines (logement 10, transport 1, OHADA 2).
+* Catalogue actuel : **92 fiches** sur 5 domaines (famille 31, contrats/OHADA 26,
+  pénal 24, logement 10, transport 1). Toutes pointent vers un article réellement
+  indexé ; aucune n'est juridiquement validée par un humain.
 * Une question **sans fiche** reçoit `CONCLUSION_IMPOSSIBLE` et la liste de ce que le
   catalogue sait traiter — jamais un article au hasard.
 * Les réponses de l'utilisateur sont **persistées** dans le dossier en cours, donc
@@ -332,11 +334,24 @@ au repos des dossiers. **Le serveur local n'est pas prêt pour la production.**
 
 | Mesure | Résultat |
 |---|---|
-| Atteignabilité des textes sans fiche (auto-récupération) | **856 / 858 articles (99,8 %)** |
+| Atteignabilité des textes sans fiche (auto-récupération) | **858 / 858 articles (100 %)** |
 | … dont par la référence exacte | 571 (le reste = même texte, autre exemplaire) |
 | Rappel@5 sur 92 déclencheurs du catalogue | **20/92 (22 %)** |
 | Rappel@25 | **42/92 (46 %)** |
 | Présent quelque part dans le classement | **72/92 (78 %)** |
+| Citations exactes acceptées | **15/15** |
+| Citations altérées refusées | **15/15** |
+| Abstentions attendues prononcées | **3/4** (voir limite 2 ci-dessous) |
+
+Reproduire : `python3 bin/mesurer_recherche.py --rapport`.
+
+**Deux articles avaient été comptés « manquants » (856/858) : c'était un défaut de la
+mesure, pas du corpus.** La requête était construite avec le texte de l'exemplaire
+**OCR**, donc avec ses corruptions (`Lerropriation` pour `L'expropriation`,
+`lUrbanisme` pour `l'Urbanisme`) — introuvables par construction. Les articles 200
+et 216 existent en calque propre et sortent aux rangs 2 et 1 dès que la requête est
+propre. L'outil interroge désormais l'exemplaire `CALQUE_TEXTE` quand il existe ;
+aucun score n'a été modifié.
 
 Conclusion mesurée : le problème est le **classement**, pas la couverture. Un article
 cité par une fiche descend souvent sous le top 5. C'est pourquoi les fiches restent
@@ -355,6 +370,10 @@ localisation.
    absent du corpus (0–1 fragment), score (4,86–17,91) — **ne séparent pas** les deux
    classes. Aucun seuil n'est donc appliqué : il rejetterait une question légitime
    avant une question absurde. L'abstention n'est prononcée que sur absence de résultat.
+   **Conséquence mesurée** : « quorum cooperative » restreint au domaine logement ne
+   s'abstient pas (3/4 abstentions attendues) — les mots existent dans le texte du bail,
+   mais la question n'a pas de réponse là. Le filtre de domaine borne le périmètre,
+   il ne juge pas la pertinence.
 
 ## 6 sexies. Base SQLite et arbre de travail
 
@@ -377,8 +396,8 @@ deux valeurs** : une base qui perd des articles se lit comme un corpus complet.
 
 ```bash
 cd /Users/mac/mon_recours_ci
-python3 tests/run_all.py                    # attendu : TESTS=371 ... VERDICT=SUCCES, exit 0
-python3 bin/dialogue.py --catalogue          # les 13 fiches et leurs domaines
+python3 tests/run_all.py                    # attendu : TESTS=515 ... VERDICT=SUCCES, exit 0
+python3 bin/dialogue.py --catalogue          # les 92 fiches et leurs domaines
 python3 bin/dialogue.py --dossier D1 --demande "Mon bailleur garde ma caution."
 python3 bin/dialogue.py --dossier D1 --reponses logement=oui
 python3 bin/rapport_sources.py             # KNOWLEDGE/ETAT_DES_SOURCES.md (état des sources)

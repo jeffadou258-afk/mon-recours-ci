@@ -1,6 +1,12 @@
 # HANDOFF HERMES — Mon Recours CI (20/10/2026)
 
-## État actuel
+> **INSTANTANÉ DATÉ — PÉRIMÉ SUR LES CHIFFRES.** Ce document décrit l'état au
+> moment de sa rédaction (36 documents, 4 707 articles, 481 tests). L'état courant
+> est : **37 documents, 5 593 articles, 34 références, 92 fiches, 515 tests** —
+> voir `README.md` et `CLAUDE_HANDOFF.md`, qui font foi. Les constats de méthode
+> et l'historique des refus restent valables ; les compteurs, non.
+
+## État actuel (à la date de rédaction)
 - Moteur juridique Python (stdlib seule) + interface Next.js (`web/`). Aucun fournisseur IA payant activé (`MONRECOURS_LLM_FOURNISSEUR` non défini = mode déterministe) : le laisser ainsi.
 - Base `KNOWLEDGE/corpus_juridique.sqlite3` : integrity_check ok, 0 violation de clé étrangère, 36 documents, 4 707 articles, 33 références (29 PARTIELLEMENT_VERIFIE, 4 VERIFIE). sha256 `3deec08f…c1d707`.
   Reconstruite par `bin/reconstruire_base.py` (8 contrôles OK) ; sauvegarde locale de la précédente non versionnée (`KNOWLEDGE/.sauvegardes/`).

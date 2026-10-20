@@ -95,6 +95,32 @@ test("santé réelle : intégrité affichée telle quelle", () => {
   assert.ok(vue.domaines.some((d) => d.domaine === "travail" && d.statut === "BLOQUE_SOURCE"));
 });
 
+test("santé : le verdict d'intégrité est accompagné de son détail", () => {
+  // Un « ECART DETECTE » sans explication est un drapeau rouge muet. Le détail
+  // permet de distinguer une incohérence (alteres > 0) d'un simple PDF officiel
+  // absent du dépôt (absents > 0, mode strict).
+  const vue = assainirSante({
+    catalogue: { fiches: 92, par_domaine: {} },
+    corpus: {
+      verdict_integrite: "ECART DETECTE",
+      mode_integrite: "strict",
+      alteres: 0,
+      absents: 10,
+      pdf_non_distribues: 0,
+      documents: 37,
+      articles: 5593,
+      articles_par_origine: {},
+    },
+    domaines: [],
+    langage: { actif: false },
+    avertissement: null,
+  });
+  assert.equal(vue.corpus.modeIntegrite, "strict");
+  assert.equal(vue.corpus.alteres, 0);
+  assert.equal(vue.corpus.absents, 10);
+  assert.equal(vue.corpus.integrite, "ECART DETECTE");
+});
+
 test("réponse malformée : erreur explicite, jamais une vue inventée", () => {
   assert.throws(() => assainirOuverture({ etape: "autre" }), ReponseInattendue);
   assert.throws(() => assainirOuverture(null), ReponseInattendue);

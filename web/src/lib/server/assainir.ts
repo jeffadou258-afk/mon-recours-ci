@@ -375,6 +375,10 @@ export function assainirSante(data: unknown): VueSante {
     },
     corpus: {
       integrite: texte(corpus.verdict_integrite),
+      modeIntegrite: texte(corpus.mode_integrite),
+      alteres: nombre(corpus.alteres),
+      absents: nombre(corpus.absents),
+      pdfNonDistribues: nombre(corpus.pdf_non_distribues),
       documents: nombre(corpus.documents),
       articles: nombre(corpus.articles),
       parOrigine: Object.entries(objet(corpus.articles_par_origine)).map(([origine, n]) => ({

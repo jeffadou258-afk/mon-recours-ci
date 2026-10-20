@@ -1,0 +1,3725 @@
+{
+ "rappel_documentaire": {
+  "textes": [
+   {
+    "numero_texte": "2020-624",
+    "titre": "LOI N° 2020-624 DU 14 AOÛT 2020 INSTITUANT CODE DE L'URBANISME ET DU DOMAINE FONCIER URBAIN (exemplaire numérisé DGI)",
+    "articles": 287,
+    "retrouves_top5": 287,
+    "refs_exactes": 0,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "98-750",
+    "titre": "LOI N° 98-750 DU 23 DECEMBRE 1998 RELATIVE AU DOMAINE FONCIER RURAL (exemplaire numérisé SGG)",
+    "articles": 29,
+    "retrouves_top5": 29,
+    "refs_exactes": 29,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2020-623",
+    "titre": "LOI N° 2020-623 DU 14 AOUT 2020 PORTANT RATIFICATION DE L'ORDONNANCE N° 2020-386 DU 15 AVRIL 2020 PORTANT SUSPENSION DES PROCEDURES D'EXPULSION DES LOCATAIRES ET DE REVISION A LA HAUSSE DU LOYER DES BAUX D'HABITATION",
+    "articles": 2,
+    "retrouves_top5": 2,
+    "refs_exactes": 2,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "202-894",
+    "titre": "LOI n° 202-894 du 21 décembre 2021 relative aux mesures de protection des victimes de violences domestiques. de viol et de violences sexuelles autres que domestiques.",
+    "articles": 16,
+    "retrouves_top5": 16,
+    "refs_exactes": 16,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2023-90",
+    "titre": "DECRET No 2023-90 DU 15 FEVRIER 2023 PORTANT REGLEMENTATION DES FAMILLES D'ACCUEIL",
+    "articles": 21,
+    "retrouves_top5": 21,
+    "refs_exactes": 21,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2023-89",
+    "titre": "DECRET No 2023-89 DU 15 FEVRIER 2023 FIXANT LES NORMES ET STANDARDS APPLICABLES AUX ETABLISSEMENTS DE PROTECTION DE REMPLACEMENT DE L'ENFANT",
+    "articles": 68,
+    "retrouves_top5": 68,
+    "refs_exactes": 68,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": null,
+    "titre": "Décret Portant Règlementation des Familles d'Accueil, 2023 (Décret 90 de 2023)",
+    "articles": 22,
+    "retrouves_top5": 22,
+    "refs_exactes": 22,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2019-779",
+    "titre": "DÉCRET No 2019-779 portant création, attributions, organisation et fonctionnement du comité interministériel de protection de l’enfant.",
+    "articles": 9,
+    "retrouves_top5": 9,
+    "refs_exactes": 9,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2018-863",
+    "titre": "Loi n°2018-863 du 19 novembre 2018 instituant une procédure spéciale de déclaration de naissance, de rétablissement d’identité et de transcription d’acte de naissance.",
+    "articles": 26,
+    "retrouves_top5": 26,
+    "refs_exactes": 26,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2020-907",
+    "titre": "DECRET No 2020-907 DU 18 NOVEMBRE 2020 PORTANT ATTRIBUTIONS, ORGANISATION ET FONCTIONNEMENT DE L’AUTORITE CENTRALE POUR L’ADOPTION EN COTE D’IVOIRE : DECRET ACACI",
+    "articles": 29,
+    "retrouves_top5": 29,
+    "refs_exactes": 29,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2016-886",
+    "titre": "Loi n° 2016-886 du 8 novembre 2016 portant Constitution de la République de Côte d'Ivoire",
+    "articles": 165,
+    "retrouves_top5": 165,
+    "refs_exactes": 165,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2016-1111",
+    "titre": "Loi n° 2016-1111 du 8 décembre 2016 relative à la lutte contre la traite des personnes",
+    "articles": 27,
+    "retrouves_top5": 27,
+    "refs_exactes": 27,
+    "taux": 100.0
+   },
+   {
+    "numero_texte": "2019-572",
+    "titre": "Journal officiel, numéro spécial du 16 juillet 2019 : lois n° 2019-572 (minorité), 2019-573 (successions), 2019-575",
+    "articles": 157,
+    "retrouves_top5": 157,
+    "refs_exactes": 157,
+    "taux": 100.0
+   }
+  ],
+  "articles": 858,
+  "retrouves": 858,
+  "refs_exactes": 571,
+  "limite": 5,
+  "duree_s": 350.8
+ },
+ "questions": {
+  "rappel": 20,
+  "total": 92,
+  "mrr": 0.141,
+  "limite": 5,
+  "details": [
+   {
+    "question": "depot de garantie",
+    "attendu": [
+     {
+      "numero_texte": "2019-576",
+      "ref_id": "REF-4596B86C3154",
+      "numero": "416"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "40",
+      5.9237
+     ],
+     [
+      "2019-576",
+      "121",
+      5.9237
+     ],
+     [
+      "2019-576",
+      "123",
+      5.9237
+     ],
+     [
+      "2019-576",
+      "124",
+      5.9237
+     ],
+     [
+      "2019-576",
+      "128",
+      5.9237
+     ]
+    ]
+   },
+   {
+    "question": "avance sur loyer",
+    "attendu": [
+     {
+      "numero_texte": "2019-576",
+      "ref_id": "REF-4596B86C3154",
+      "numero": "415"
+     }
+    ],
+    "rang": 5,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "210",
+      6.7722
+     ],
+     [
+      "202-894",
+      "16",
+      6.7722
+     ],
+     [
+      "2019-576",
+      "247",
+      6.7722
+     ],
+     [
+      "2019-576",
+      "3",
+      6.7722
+     ],
+     [
+      "2019-576",
+      "415",
+      6.7722
+     ]
+    ]
+   },
+   {
+    "question": "hausse du loyer",
+    "attendu": [
+     {
+      "numero_texte": "2019-576",
+      "ref_id": "REF-4596B86C3154",
+      "numero": "423"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "2019-576",
+      "423",
+      14.5578
+     ],
+     [
+      "2020-623",
+      "1",
+      14.5578
+     ],
+     [
+      "2020-623",
+      "2",
+      14.5578
+     ],
+     [
+      "2019-576",
+      "455",
+      8.3569
+     ],
+     [
+      "2020-624",
+      "244",
+      6.2009
+     ]
+    ]
+   },
+   {
+    "question": "contrat de bail",
+    "attendu": [
+     {
+      "numero_texte": "2019-576",
+      "ref_id": "REF-4596B86C3154",
+      "numero": "414"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "39",
+      5.5086
+     ],
+     [
+      "AUPSRVE-2023",
+      "55",
+      5.5086
+     ],
+     [
+      "2019-572",
+      "93",
+      5.5086
+     ],
+     [
+      "2019-572",
+      "99",
+      5.5086
+     ],
+     [
+      "2019-570",
+      "82",
+      5.5086
+     ]
+    ]
+   },
+   {
+    "question": "me faire partir",
+    "attendu": [
+     {
+      "numero_texte": "2019-576",
+      "ref_id": "REF-4596B86C3154",
+      "numero": "440"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "100",
+      1.5917
+     ],
+     [
+      "AUSCOOP-2010",
+      "101",
+      1.5917
+     ],
+     [
+      "AUSCOOP-2010",
+      "102",
+      1.5917
+     ],
+     [
+      "AUSCOOP-2010",
+      "106",
+      1.5917
+     ],
+     [
+      "AUSCOOP-2010",
+      "108",
+      1.5917
+     ]
+    ]
+   },
+   {
+    "question": "quitter le logement",
+    "attendu": [
+     {
+      "numero_texte": "2019-576",
+      "ref_id": "REF-4596B86C3154",
+      "numero": "443"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2023-90",
+      "5",
+      4.6177
+     ],
+     [
+      "2019-570",
+      "53",
+      4.6177
+     ],
+     [
+      "202-894",
+      "11",
+      4.6177
+     ],
+     [
+      "2019-576",
+      "102",
+      4.6177
+     ],
+     [
+      "2019-576",
+      "103",
+      4.6177
+     ]
+    ]
+   },
+   {
+    "question": "me jeter dehors",
+    "attendu": [
+     {
+      "numero_texte": "2019-576",
+      "ref_id": "REF-4596B86C3154",
+      "numero": "445"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-574",
+      "179",
+      10.1042
+     ],
+     [
+      "AUSCOOP-2010",
+      "13",
+      5.3059
+     ],
+     [
+      "AUSCOOP-2010",
+      "329",
+      5.3059
+     ],
+     [
+      "AUPSRVE-2023",
+      "46",
+      5.3059
+     ],
+     [
+      "2019-572",
+      "22",
+      5.3059
+     ]
+    ]
+   },
+   {
+    "question": "bord de mer",
+    "attendu": [
+     {
+      "numero_texte": "2020-624",
+      "ref_id": "REF-A213C61AA69B",
+      "numero": "181"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2023-90",
+      "6",
+      4.5134
+     ],
+     [
+      "AUSCOOP-2010",
+      "130",
+      4.5134
+     ],
+     [
+      "AUPSRVE-2023",
+      "118",
+      4.5134
+     ],
+     [
+      "AUPSRVE-2023",
+      "39",
+      4.5134
+     ],
+     [
+      "2019-572",
+      "28",
+      4.5134
+     ]
+    ]
+   },
+   {
+    "question": "utilite publique",
+    "attendu": [
+     {
+      "numero_texte": "2020-624",
+      "ref_id": "REF-A213C61AA69B",
+      "numero": "238"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "1",
+      4.8388
+     ],
+     [
+      "AUPSRVE-2023",
+      "256",
+      4.8388
+     ],
+     [
+      "2019-572",
+      "143",
+      4.8388
+     ],
+     [
+      "2019-572",
+      "149",
+      4.8388
+     ],
+     [
+      "202-894",
+      "6",
+      4.8388
+     ]
+    ]
+   },
+   {
+    "question": "reserve fonciere",
+    "attendu": [
+     {
+      "numero_texte": "2020-624",
+      "ref_id": "REF-A213C61AA69B",
+      "numero": "69"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "253",
+      5.1219
+     ],
+     [
+      "AUPSRVE-2023",
+      "259",
+      5.1219
+     ],
+     [
+      "AUPSRVE-2023",
+      "267",
+      5.1219
+     ],
+     [
+      "AUPSRVE-2023",
+      "303",
+      5.1219
+     ],
+     [
+      "AUPSRVE-2023",
+      "304",
+      5.1219
+     ]
+    ]
+   },
+   {
+    "question": "usage du telephone",
+    "attendu": [
+     {
+      "numero_texte": "2013-711",
+      "ref_id": "REF-B6FE04121ED1",
+      "numero": "2"
+     }
+    ],
+    "rang": 2,
+    "top": [
+     [
+      "2013-711",
+      "1",
+      10.0886
+     ],
+     [
+      "2013-711",
+      "2",
+      10.0886
+     ],
+     [
+      "2020-624",
+      "131",
+      6.6521
+     ],
+     [
+      "2016-1111",
+      "14",
+      6.6521
+     ],
+     [
+      "2018-975",
+      "135",
+      6.6521
+     ]
+    ]
+   },
+   {
+    "question": "garantir une dette",
+    "attendu": [
+     {
+      "numero_texte": null,
+      "ref_id": "REF-639AB2588C3F",
+      "numero": "1"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "171",
+      6.9299
+     ],
+     [
+      "AUPSRVE-2023",
+      "18",
+      6.9299
+     ],
+     [
+      "AUPSRVE-2023",
+      "39",
+      6.9299
+     ],
+     [
+      "2019-573",
+      "107",
+      6.9299
+     ],
+     [
+      "2020-624",
+      "3",
+      6.9299
+     ]
+    ]
+   },
+   {
+    "question": "se porter caution",
+    "attendu": [
+     {
+      "numero_texte": null,
+      "ref_id": "REF-639AB2588C3F",
+      "numero": "4"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-576",
+      "3",
+      11.9132
+     ],
+     [
+      "AUPCAP-2015",
+      "27",
+      11.9132
+     ],
+     [
+      "2019-576",
+      "488",
+      10.2036
+     ],
+     [
+      "2019-576",
+      "97",
+      10.2036
+     ],
+     [
+      "AUPCAP-2015",
+      "160",
+      10.2036
+     ]
+    ]
+   },
+   {
+    "question": "lien de filiation",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "1"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2023-89",
+      "33",
+      10.0965
+     ],
+     [
+      "2023-90",
+      "9",
+      5.8915
+     ],
+     [
+      "2019-572",
+      "53",
+      5.8915
+     ],
+     [
+      "2019-572",
+      "54",
+      5.8915
+     ],
+     [
+      "2019-572",
+      "9",
+      5.8915
+     ]
+    ]
+   },
+   {
+    "question": "presomption de paternite",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "2"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-571",
+      "22",
+      13.2073
+     ],
+     [
+      "2019-571",
+      "3",
+      13.2073
+     ],
+     [
+      "AUPSRVE-2023",
+      "211",
+      6.8061
+     ],
+     [
+      "2019-574",
+      "403",
+      6.8061
+     ],
+     [
+      "2019-574",
+      "467",
+      6.8061
+     ]
+    ]
+   },
+   {
+    "question": "test de paternite",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "4"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-573",
+      "14",
+      6.4012
+     ],
+     [
+      "2019-573",
+      "15",
+      6.4012
+     ],
+     [
+      "2019-573",
+      "30",
+      6.4012
+     ],
+     [
+      "2019-573",
+      "34",
+      6.4012
+     ],
+     [
+      "2019-571",
+      "22",
+      6.4012
+     ]
+    ]
+   },
+   {
+    "question": "delai desaveu",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "6"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-576",
+      "82",
+      7.5006
+     ],
+     [
+      "2016-886",
+      "105",
+      7.5006
+     ],
+     [
+      "2019-571",
+      "8",
+      7.5006
+     ],
+     [
+      "AUSCGIE-2014",
+      "440",
+      7.5006
+     ],
+     [
+      "AUSCOOP-2010",
+      "284",
+      5.3434
+     ]
+    ]
+   },
+   {
+    "question": "preuve de filiation",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "9"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-571",
+      "12",
+      10.2812
+     ],
+     [
+      "2019-571",
+      "19",
+      10.2812
+     ],
+     [
+      "2019-571",
+      "27",
+      10.2812
+     ],
+     [
+      "2023-90",
+      "9",
+      5.8915
+     ],
+     [
+      "2019-572",
+      "53",
+      5.8915
+     ]
+    ]
+   },
+   {
+    "question": "sans etre maries",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "19"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-572",
+      "5",
+      4.05
+     ],
+     [
+      "2019-572",
+      "9",
+      4.05
+     ],
+     [
+      "2019-570",
+      "1",
+      4.05
+     ],
+     [
+      "2019-570",
+      "10",
+      4.05
+     ],
+     [
+      "2019-570",
+      "102",
+      4.05
+     ]
+    ]
+   },
+   {
+    "question": "reconnaitre mon enfant",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "20"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-572",
+      "3",
+      7.0331
+     ],
+     [
+      "2019-574",
+      "139",
+      7.0331
+     ],
+     [
+      "2019-571",
+      "10",
+      7.0331
+     ],
+     [
+      "2019-571",
+      "19",
+      7.0331
+     ],
+     [
+      "2019-571",
+      "21",
+      7.0331
+     ]
+    ]
+   },
+   {
+    "question": "reconnaitre plus tard",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "21"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPCAP-2015",
+      "197",
+      8.0919
+     ],
+     [
+      "AUPCAP-2015",
+      "228",
+      8.0919
+     ],
+     [
+      "2023-90",
+      "20",
+      4.0918
+     ],
+     [
+      "AUSCOOP-2010",
+      "14",
+      4.0918
+     ],
+     [
+      "AUSCOOP-2010",
+      "35",
+      4.0918
+     ]
+    ]
+   },
+   {
+    "question": "informer mon epouse",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "22"
+     }
+    ],
+    "rang": 2,
+    "top": [
+     [
+      "202-894",
+      "11",
+      6.9884
+     ],
+     [
+      "2019-571",
+      "22",
+      6.9884
+     ],
+     [
+      "AUSCOOP-2010",
+      "380",
+      3.9344
+     ],
+     [
+      "AUPSRVE-2023",
+      "137",
+      3.9344
+     ],
+     [
+      "AUPSRVE-2023",
+      "250",
+      3.9344
+     ]
+    ]
+   },
+   {
+    "question": "action en paternite",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "24"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-571",
+      "25",
+      8.238
+     ],
+     [
+      "2019-573",
+      "14",
+      6.4012
+     ],
+     [
+      "2019-573",
+      "15",
+      6.4012
+     ],
+     [
+      "2019-573",
+      "30",
+      6.4012
+     ],
+     [
+      "2019-573",
+      "34",
+      6.4012
+     ]
+    ]
+   },
+   {
+    "question": "refuse de reconnaitre",
+    "attendu": [
+     {
+      "numero_texte": "2019-571",
+      "ref_id": "REF-E91DA7FFA10C",
+      "numero": "26"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "168",
+      7.8815
+     ],
+     [
+      "2018-975",
+      "529",
+      7.8815
+     ],
+     [
+      "2018-975",
+      "627",
+      7.8815
+     ],
+     [
+      "AUSCOOP-2010",
+      "151",
+      4.0001
+     ],
+     [
+      "AUSCOOP-2010",
+      "6",
+      4.0001
+     ]
+    ]
+   },
+   {
+    "question": "injonction de payer",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "8"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "10",
+      8.96
+     ],
+     [
+      "AUPSRVE-2023",
+      "11",
+      8.96
+     ],
+     [
+      "AUPSRVE-2023",
+      "12",
+      8.96
+     ],
+     [
+      "AUPSRVE-2023",
+      "13",
+      8.96
+     ],
+     [
+      "AUPSRVE-2023",
+      "16",
+      8.96
+     ]
+    ]
+   },
+   {
+    "question": "faire opposition",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "10"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "10",
+      4.0001
+     ],
+     [
+      "AUPSRVE-2023",
+      "11",
+      4.0001
+     ],
+     [
+      "AUPSRVE-2023",
+      "12",
+      4.0001
+     ],
+     [
+      "AUPSRVE-2023",
+      "126",
+      4.0001
+     ],
+     [
+      "AUPSRVE-2023",
+      "130",
+      4.0001
+     ]
+    ]
+   },
+   {
+    "question": "prouver la dette",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "13"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2020-624",
+      "3",
+      7.6948
+     ],
+     [
+      "2019-576",
+      "103",
+      7.6948
+     ],
+     [
+      "AUPCAP-2015",
+      "26",
+      7.6948
+     ],
+     [
+      "AUPCAP-2015",
+      "6",
+      7.6948
+     ],
+     [
+      "AUPCAP-2015",
+      "99",
+      7.6948
+     ]
+    ]
+   },
+   {
+    "question": "pas fait opposition",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "16"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "10",
+      4.0001
+     ],
+     [
+      "AUPSRVE-2023",
+      "11",
+      4.0001
+     ],
+     [
+      "AUPSRVE-2023",
+      "12",
+      4.0001
+     ],
+     [
+      "AUPSRVE-2023",
+      "126",
+      4.0001
+     ],
+     [
+      "AUPSRVE-2023",
+      "130",
+      4.0001
+     ]
+    ]
+   },
+   {
+    "question": "pratiquer une saisie",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "28"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "100",
+      7.1441
+     ],
+     [
+      "AUPSRVE-2023",
+      "106",
+      7.1441
+     ],
+     [
+      "AUPSRVE-2023",
+      "109",
+      7.1441
+     ],
+     [
+      "AUPSRVE-2023",
+      "130",
+      7.1441
+     ],
+     [
+      "AUPSRVE-2023",
+      "133",
+      7.1441
+     ]
+    ]
+   },
+   {
+    "question": "que peut-on saisir",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "50"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2023-90",
+      "11",
+      3.9796
+     ],
+     [
+      "AUSCOOP-2010",
+      "15",
+      3.9796
+     ],
+     [
+      "AUSCOOP-2010",
+      "178",
+      3.9796
+     ],
+     [
+      "AUSCOOP-2010",
+      "191",
+      3.9796
+     ],
+     [
+      "AUSCOOP-2010",
+      "200",
+      3.9796
+     ]
+    ]
+   },
+   {
+    "question": "saisie sur compte",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "153"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2023-90",
+      "9",
+      3.905
+     ],
+     [
+      "AUSCOOP-2010",
+      "178",
+      3.905
+     ],
+     [
+      "AUSCOOP-2010",
+      "191",
+      3.905
+     ],
+     [
+      "AUSCOOP-2010",
+      "211",
+      3.905
+     ],
+     [
+      "AUSCOOP-2010",
+      "232",
+      3.905
+     ]
+    ]
+   },
+   {
+    "question": "saisie sur salaire",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "173"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "174",
+      7.2218
+     ],
+     [
+      "AUPSRVE-2023",
+      "177",
+      7.2218
+     ],
+     [
+      "AUPSRVE-2023",
+      "184",
+      7.2218
+     ],
+     [
+      "AUPSRVE-2023",
+      "187",
+      7.2218
+     ],
+     [
+      "AUPSRVE-2023",
+      "206",
+      7.2218
+     ]
+    ]
+   },
+   {
+    "question": "plafond saisie salaire",
+    "attendu": [
+     {
+      "numero_texte": "AUPSRVE-2023",
+      "ref_id": "REF-6590C8807800",
+      "numero": "177"
+     }
+    ],
+    "rang": 4,
+    "top": [
+     [
+      "2019-576",
+      "249",
+      7.904
+     ],
+     [
+      "AUSCGIE-2014",
+      "567",
+      7.904
+     ],
+     [
+      "AUPSRVE-2023",
+      "174",
+      7.2218
+     ],
+     [
+      "AUPSRVE-2023",
+      "177",
+      7.2218
+     ],
+     [
+      "AUPSRVE-2023",
+      "184",
+      7.2218
+     ]
+    ]
+   },
+   {
+    "question": "mariage d'un mineur",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "2"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-570",
+      "22",
+      6.3139
+     ],
+     [
+      "202-894",
+      "11",
+      6.3139
+     ],
+     [
+      "2019-574",
+      "154",
+      6.3139
+     ],
+     [
+      "2019-574",
+      "403",
+      6.3139
+     ],
+     [
+      "2019-574",
+      "453",
+      6.3139
+     ]
+    ]
+   },
+   {
+    "question": "consentement au mariage",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "4"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "2019-570",
+      "4",
+      7.7661
+     ],
+     [
+      "2019-570",
+      "5",
+      7.7661
+     ],
+     [
+      "2019-570",
+      "82",
+      7.7661
+     ],
+     [
+      "2019-574",
+      "403",
+      7.7661
+     ],
+     [
+      "2019-572",
+      "5",
+      4.05
+     ]
+    ]
+   },
+   {
+    "question": "celebrer le mariage",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "20"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-570",
+      "1",
+      9.2848
+     ],
+     [
+      "2019-570",
+      "10",
+      9.2848
+     ],
+     [
+      "2019-570",
+      "12",
+      9.2848
+     ],
+     [
+      "2019-570",
+      "13",
+      9.2848
+     ],
+     [
+      "2019-570",
+      "14",
+      9.2848
+     ]
+    ]
+   },
+   {
+    "question": "danger au foyer",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "46"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-570",
+      "52",
+      7.2112
+     ],
+     [
+      "202-894",
+      "1",
+      7.2112
+     ],
+     [
+      "2019-576",
+      "261",
+      7.2112
+     ],
+     [
+      "2019-574",
+      "452",
+      7.2112
+     ],
+     [
+      "2019-572",
+      "22",
+      4.6939
+     ]
+    ]
+   },
+   {
+    "question": "nourrir les enfants",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "47"
+     }
+    ],
+    "rang": 2,
+    "top": [
+     [
+      "2019-572",
+      "46",
+      10.0212
+     ],
+     [
+      "2019-570",
+      "47",
+      10.0212
+     ],
+     [
+      "2019-570",
+      "7",
+      10.0212
+     ],
+     [
+      "2019-574",
+      "138",
+      10.0212
+     ],
+     [
+      "2023-89",
+      "12",
+      10.0212
+     ]
+    ]
+   },
+   {
+    "question": "charges du menage",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "52"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "2019-570",
+      "52",
+      5.6823
+     ],
+     [
+      "2019-570",
+      "54",
+      5.6823
+     ],
+     [
+      "2019-570",
+      "67",
+      5.6823
+     ],
+     [
+      "2019-570",
+      "76",
+      5.6823
+     ],
+     [
+      "2019-570",
+      "98",
+      5.6823
+     ]
+    ]
+   },
+   {
+    "question": "domicile conjugal",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "56"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-574",
+      "452",
+      11.5045
+     ],
+     [
+      "202-894",
+      "11",
+      7.904
+     ],
+     [
+      "2023-90",
+      "4",
+      3.6006
+     ],
+     [
+      "AUSCOOP-2010",
+      "357",
+      3.6006
+     ],
+     [
+      "AUSCOOP-2010",
+      "75",
+      3.6006
+     ]
+    ]
+   },
+   {
+    "question": "biens du couple",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "59"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-574",
+      "377",
+      6.4698
+     ],
+     [
+      "AUPCAP-2015",
+      "229",
+      6.4698
+     ],
+     [
+      "AUPCAP-2015",
+      "41",
+      6.4698
+     ],
+     [
+      "2023-90",
+      "3",
+      3.9809
+     ],
+     [
+      "2023-90",
+      "4",
+      3.9809
+     ]
+    ]
+   },
+   {
+    "question": "biens propres",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "73"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "296",
+      4.7249
+     ],
+     [
+      "AUSCOOP-2010",
+      "39",
+      4.7249
+     ],
+     [
+      "AUPSRVE-2023",
+      "1",
+      4.7249
+     ],
+     [
+      "AUPSRVE-2023",
+      "118",
+      4.7249
+     ],
+     [
+      "AUPSRVE-2023",
+      "121",
+      4.7249
+     ]
+    ]
+   },
+   {
+    "question": "dissolution du mariage",
+    "attendu": [
+     {
+      "numero_texte": "2019-570",
+      "ref_id": "REF-952FF6F2D9B4",
+      "numero": "103"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-570",
+      "102",
+      8.343
+     ],
+     [
+      "2019-570",
+      "3",
+      8.343
+     ],
+     [
+      "2019-570",
+      "35",
+      8.343
+     ],
+     [
+      "2019-570",
+      "6",
+      8.343
+     ],
+     [
+      "2019-570",
+      "82",
+      8.343
+     ]
+    ]
+   },
+   {
+    "question": "succession dernier domicile",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "5"
+     }
+    ],
+    "rang": 2,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "1",
+      10.873
+     ],
+     [
+      "2019-573",
+      "5",
+      10.873
+     ],
+     [
+      "2019-576",
+      "86",
+      10.873
+     ],
+     [
+      "AUSCGIE-2014",
+      "538",
+      7.4734
+     ],
+     [
+      "2019-573",
+      "103",
+      7.2724
+     ]
+    ]
+   },
+   {
+    "question": "acte d'heredite",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "12"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-573",
+      "102",
+      7.2112
+     ],
+     [
+      "2019-573",
+      "121",
+      7.2112
+     ],
+     [
+      "2019-573",
+      "127",
+      7.2112
+     ],
+     [
+      "2019-573",
+      "5",
+      7.2112
+     ],
+     [
+      "2023-90",
+      "9",
+      1.7689
+     ]
+    ]
+   },
+   {
+    "question": "part du veuf",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "26"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-574",
+      "103",
+      10.1886
+     ],
+     [
+      "AUSCOOP-2010",
+      "100",
+      1.5917
+     ],
+     [
+      "AUSCOOP-2010",
+      "101",
+      1.5917
+     ],
+     [
+      "AUSCOOP-2010",
+      "102",
+      1.5917
+     ],
+     [
+      "AUSCOOP-2010",
+      "106",
+      1.5917
+     ]
+    ]
+   },
+   {
+    "question": "mort sans enfant",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "27"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-572",
+      "56",
+      7.563
+     ],
+     [
+      "2019-573",
+      "21",
+      7.563
+     ],
+     [
+      "2019-574",
+      "139",
+      7.563
+     ],
+     [
+      "2019-574",
+      "421",
+      7.563
+     ],
+     [
+      "2018-975",
+      "638",
+      7.563
+     ]
+    ]
+   },
+   {
+    "question": "aine herite plus",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "28"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "1",
+      6.7777
+     ],
+     [
+      "AUPSRVE-2023",
+      "283",
+      6.7777
+     ],
+     [
+      "2019-573",
+      "39",
+      6.7777
+     ],
+     [
+      "2019-573",
+      "77",
+      6.7777
+     ],
+     [
+      "2019-573",
+      "81",
+      6.7777
+     ]
+    ]
+   },
+   {
+    "question": "conjoint separe herite",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "36"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-573",
+      "107",
+      12.5805
+     ],
+     [
+      "2019-573",
+      "117",
+      8.6552
+     ],
+     [
+      "2019-573",
+      "118",
+      8.6552
+     ],
+     [
+      "2019-573",
+      "119",
+      8.6552
+     ],
+     [
+      "2019-570",
+      "90",
+      8.5804
+     ]
+    ]
+   },
+   {
+    "question": "refuser l'heritage",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "42"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-572",
+      "102",
+      8.0627
+     ],
+     [
+      "2019-572",
+      "52",
+      8.0627
+     ],
+     [
+      "2019-573",
+      "44",
+      8.0627
+     ],
+     [
+      "2019-573",
+      "88",
+      8.0627
+     ],
+     [
+      "AUSCGIE-2014",
+      "292",
+      8.0627
+     ]
+    ]
+   },
+   {
+    "question": "heritage avec dettes",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "53"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-573",
+      "107",
+      8.1157
+     ],
+     [
+      "2019-573",
+      "108",
+      8.1157
+     ],
+     [
+      "2019-573",
+      "110",
+      8.1157
+     ],
+     [
+      "2019-573",
+      "112",
+      8.1157
+     ],
+     [
+      "2019-573",
+      "113",
+      8.1157
+     ]
+    ]
+   },
+   {
+    "question": "dettes du defunt",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "65"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-573",
+      "101",
+      5.9603
+     ],
+     [
+      "2019-573",
+      "11",
+      5.9603
+     ],
+     [
+      "2019-573",
+      "116",
+      5.9603
+     ],
+     [
+      "2019-573",
+      "117",
+      5.9603
+     ],
+     [
+      "2019-573",
+      "118",
+      5.9603
+     ]
+    ]
+   },
+   {
+    "question": "partage de l'heritage",
+    "attendu": [
+     {
+      "numero_texte": "2019-573",
+      "ref_id": "REF-1C999A88E5A6",
+      "numero": "82"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "195",
+      5.773
+     ],
+     [
+      "2019-572",
+      "102",
+      5.773
+     ],
+     [
+      "2019-570",
+      "96",
+      5.773
+     ],
+     [
+      "2019-573",
+      "101",
+      5.773
+     ],
+     [
+      "2019-573",
+      "102",
+      5.773
+     ]
+    ]
+   },
+   {
+    "question": "ou porter plainte",
+    "attendu": [
+     {
+      "numero_texte": "2018-975",
+      "ref_id": "REF-31BF17F5ED6C",
+      "numero": "29"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-574",
+      "449",
+      6.444
+     ],
+     [
+      "2019-574",
+      "452",
+      6.444
+     ],
+     [
+      "AUPCAP-2015",
+      "119",
+      6.444
+     ],
+     [
+      "AUPCAP-2015",
+      "13",
+      6.444
+     ],
+     [
+      "AUPCAP-2015",
+      "63",
+      6.444
+     ]
+    ]
+   },
+   {
+    "question": "ma plainte classee",
+    "attendu": [
+     {
+      "numero_texte": "2018-975",
+      "ref_id": "REF-31BF17F5ED6C",
+      "numero": "51"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "2018-975",
+      "51",
+      9.5778
+     ],
+     [
+      "2020-624",
+      "130",
+      4.8435
+     ],
+     [
+      "2020-624",
+      "133",
+      4.8435
+     ],
+     [
+      "2020-624",
+      "192",
+      4.8435
+     ],
+     [
+      "2020-624",
+      "193",
+      4.8435
+     ]
+    ]
+   },
+   {
+    "question": "garde a vue",
+    "attendu": [
+     {
+      "numero_texte": "2018-975",
+      "ref_id": "REF-31BF17F5ED6C",
+      "numero": "72"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2023-90",
+      "15",
+      2.9956
+     ],
+     [
+      "AUSCOOP-2010",
+      "122",
+      2.9956
+     ],
+     [
+      "AUSCOOP-2010",
+      "13",
+      2.9956
+     ],
+     [
+      "AUSCOOP-2010",
+      "136",
+      2.9956
+     ],
+     [
+      "AUSCOOP-2010",
+      "180",
+      2.9956
+     ]
+    ]
+   },
+   {
+    "question": "droits en garde a vue",
+    "attendu": [
+     {
+      "numero_texte": "2018-975",
+      "ref_id": "REF-31BF17F5ED6C",
+      "numero": "74"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "180",
+      4.775
+     ],
+     [
+      "AUSCOOP-2010",
+      "332",
+      4.775
+     ],
+     [
+      "AUSCOOP-2010",
+      "384",
+      4.775
+     ],
+     [
+      "AUPSRVE-2023",
+      "1",
+      4.775
+     ],
+     [
+      "AUPSRVE-2023",
+      "109",
+      4.775
+     ]
+    ]
+   },
+   {
+    "question": "blesse en garde a vue",
+    "attendu": [
+     {
+      "numero_texte": "2018-975",
+      "ref_id": "REF-31BF17F5ED6C",
+      "numero": "75"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "194",
+      5.088
+     ],
+     [
+      "AUSCOOP-2010",
+      "285",
+      5.088
+     ],
+     [
+      "AUSCOOP-2010",
+      "372",
+      5.088
+     ],
+     [
+      "AUSCOOP-2010",
+      "384",
+      5.088
+     ],
+     [
+      "AUPSRVE-2023",
+      "1",
+      5.088
+     ]
+    ]
+   },
+   {
+    "question": "interroge sans avocat",
+    "attendu": [
+     {
+      "numero_texte": "2018-975",
+      "ref_id": "REF-31BF17F5ED6C",
+      "numero": "90"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2018-975",
+      "355",
+      9.0828
+     ],
+     [
+      "2018-975",
+      "357",
+      9.0828
+     ],
+     [
+      "2018-975",
+      "361",
+      9.0828
+     ],
+     [
+      "2018-975",
+      "474",
+      9.0828
+     ],
+     [
+      "2018-975",
+      "637",
+      9.0828
+     ]
+    ]
+   },
+   {
+    "question": "juge d'instruction plainte",
+    "attendu": [
+     {
+      "numero_texte": "2018-975",
+      "ref_id": "REF-31BF17F5ED6C",
+      "numero": "106"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "2018-975",
+      "106",
+      9.9093
+     ],
+     [
+      "2018-975",
+      "107",
+      9.9093
+     ],
+     [
+      "2018-975",
+      "109",
+      9.9093
+     ],
+     [
+      "2018-975",
+      "112",
+      9.9093
+     ],
+     [
+      "2018-975",
+      "58",
+      9.9093
+     ]
+    ]
+   },
+   {
+    "question": "faits anciens plainte",
+    "attendu": [
+     {
+      "numero_texte": "2018-975",
+      "ref_id": "REF-31BF17F5ED6C",
+      "numero": "12"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPCAP-2015",
+      "63",
+      9.0133
+     ],
+     [
+      "AUPCAP-2015",
+      "119",
+      7.084
+     ],
+     [
+      "AUPCAP-2015",
+      "13",
+      7.084
+     ],
+     [
+      "202-894",
+      "11",
+      6.6637
+     ],
+     [
+      "2019-573",
+      "38",
+      6.6637
+     ]
+    ]
+   },
+   {
+    "question": "vole ma moto",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "457"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-574",
+      "154",
+      7.904
+     ],
+     [
+      "2019-574",
+      "477",
+      7.904
+     ]
+    ]
+   },
+   {
+    "question": "peine pour un voleur",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "458"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-574",
+      "477",
+      10.3545
+     ],
+     [
+      "2019-574",
+      "154",
+      7.904
+     ],
+     [
+      "AUSCOOP-2010",
+      "201",
+      2.4506
+     ],
+     [
+      "AUSCOOP-2010",
+      "215",
+      2.4506
+     ],
+     [
+      "AUSCOOP-2010",
+      "233",
+      2.4506
+     ]
+    ]
+   },
+   {
+    "question": "on m'a frappe",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "381"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "161",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "187",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "189",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "271",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "300",
+      5.3434
+     ]
+    ]
+   },
+   {
+    "question": "mon mari me frappe",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "383"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "161",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "187",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "189",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "271",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "300",
+      5.3434
+     ]
+    ]
+   },
+   {
+    "question": "voie de fait",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "382"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "114",
+      3.1358
+     ],
+     [
+      "AUSCOOP-2010",
+      "15",
+      3.1358
+     ],
+     [
+      "AUSCOOP-2010",
+      "155",
+      3.1358
+     ],
+     [
+      "AUSCOOP-2010",
+      "190",
+      3.1358
+     ],
+     [
+      "AUSCOOP-2010",
+      "209",
+      3.1358
+     ]
+    ]
+   },
+   {
+    "question": "relation sexuelle forcee",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "403"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "202-894",
+      "10",
+      11.4088
+     ],
+     [
+      "2019-574",
+      "137",
+      11.4088
+     ],
+     [
+      "2016-1111",
+      "4",
+      11.4088
+     ],
+     [
+      "2019-574",
+      "139",
+      8.9847
+     ],
+     [
+      "2019-574",
+      "442",
+      8.9847
+     ]
+    ]
+   },
+   {
+    "question": "harcelement sexuel",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "418"
+     }
+    ],
+    "rang": 3,
+    "top": [
+     [
+      "2019-576",
+      "42",
+      12.7209
+     ],
+     [
+      "2019-574",
+      "417",
+      12.7209
+     ],
+     [
+      "2019-574",
+      "418",
+      12.7209
+     ],
+     [
+      "2019-574",
+      "419",
+      12.7209
+     ],
+     [
+      "202-894",
+      "1",
+      5.5098
+     ]
+    ]
+   },
+   {
+    "question": "mutilation genitale",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "394"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "2019-574",
+      "394",
+      13.5072
+     ],
+     [
+      "2019-574",
+      "397",
+      13.5072
+     ],
+     [
+      "2016-886",
+      "5",
+      13.5072
+     ],
+     [
+      "2019-573",
+      "28",
+      7.2112
+     ],
+     [
+      "2019-574",
+      "139",
+      6.296
+     ]
+    ]
+   },
+   {
+    "question": "frapper un enfant",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "421"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-574",
+      "139",
+      8.3764
+     ],
+     [
+      "2018-975",
+      "754",
+      8.3764
+     ],
+     [
+      "AUPSRVE-2023",
+      "161",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "187",
+      5.3434
+     ],
+     [
+      "AUPSRVE-2023",
+      "189",
+      5.3434
+     ]
+    ]
+   },
+   {
+    "question": "abandon du foyer",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "452"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "2019-574",
+      "452",
+      12.867
+     ],
+     [
+      "2019-570",
+      "52",
+      7.2112
+     ],
+     [
+      "202-894",
+      "1",
+      7.2112
+     ],
+     [
+      "2019-576",
+      "261",
+      7.2112
+     ],
+     [
+      "2019-572",
+      "53",
+      5.6558
+     ]
+    ]
+   },
+   {
+    "question": "pension impayee",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "453"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-576",
+      "340",
+      8.0032
+     ],
+     [
+      "2019-576",
+      "369",
+      8.0032
+     ],
+     [
+      "2019-576",
+      "416",
+      8.0032
+     ],
+     [
+      "2019-574",
+      "139",
+      8.0032
+     ],
+     [
+      "AUPCAP-2015",
+      "109",
+      8.0032
+     ]
+    ]
+   },
+   {
+    "question": "abus de confiance",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "467"
+     }
+    ],
+    "rang": 3,
+    "top": [
+     [
+      "2019-576",
+      "534",
+      11.0268
+     ],
+     [
+      "2019-574",
+      "123",
+      11.0268
+     ],
+     [
+      "2019-574",
+      "467",
+      11.0268
+     ],
+     [
+      "2019-574",
+      "468",
+      11.0268
+     ],
+     [
+      "2023-89",
+      "1",
+      11.0268
+     ]
+    ]
+   },
+   {
+    "question": "on m'a escroque",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "471"
+     }
+    ],
+    "rang": 3,
+    "top": [
+     [
+      "2019-576",
+      "534",
+      7.4987
+     ],
+     [
+      "2019-574",
+      "123",
+      7.4987
+     ],
+     [
+      "2019-574",
+      "471",
+      7.4987
+     ]
+    ]
+   },
+   {
+    "question": "menace de publier",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "475"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2020-624",
+      "128",
+      5.1931
+     ],
+     [
+      "2020-624",
+      "147",
+      5.1931
+     ],
+     [
+      "2020-624",
+      "227",
+      5.1931
+     ],
+     [
+      "2020-624",
+      "228",
+      5.1931
+     ],
+     [
+      "2020-624",
+      "231",
+      5.1931
+     ]
+    ]
+   },
+   {
+    "question": "accuse a tort",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "446"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-573",
+      "107",
+      6.0342
+     ],
+     [
+      "2019-574",
+      "137",
+      6.0342
+     ],
+     [
+      "2019-574",
+      "138",
+      6.0342
+     ],
+     [
+      "2019-574",
+      "139",
+      6.0342
+     ],
+     [
+      "2019-574",
+      "380",
+      6.0342
+     ]
+    ]
+   },
+   {
+    "question": "legitime defense",
+    "attendu": [
+     {
+      "numero_texte": "2019-574",
+      "ref_id": "REF-69BB5D7A2CEE",
+      "numero": "98"
+     }
+    ],
+    "rang": 4,
+    "top": [
+     [
+      "2019-572",
+      "56",
+      8.1184
+     ],
+     [
+      "2019-574",
+      "554",
+      8.1184
+     ],
+     [
+      "2019-574",
+      "96",
+      8.1184
+     ],
+     [
+      "2019-574",
+      "98",
+      8.1184
+     ],
+     [
+      "AUPSRVE-2023",
+      "106",
+      4.4652
+     ]
+    ]
+   },
+   {
+    "question": "societe en difficulte",
+    "attendu": [
+     {
+      "numero_texte": "AUPCAP-2015",
+      "ref_id": "REF-3E1A0DA0A38F",
+      "numero": "1"
+     }
+    ],
+    "rang": 4,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "181",
+      7.1445
+     ],
+     [
+      "AUPSRVE-2023",
+      "224",
+      7.1445
+     ],
+     [
+      "202-894",
+      "16",
+      7.1445
+     ],
+     [
+      "AUPCAP-2015",
+      "1",
+      7.1445
+     ],
+     [
+      "2018-975",
+      "157",
+      7.1445
+     ]
+    ]
+   },
+   {
+    "question": "privilège des salaires",
+    "attendu": [
+     {
+      "numero_texte": "AUPCAP-2015",
+      "ref_id": "REF-3E1A0DA0A38F",
+      "numero": "95"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "213",
+      9.5908
+     ],
+     [
+      "AUPCAP-2015",
+      "1",
+      9.5908
+     ],
+     [
+      "AUPCAP-2015",
+      "166",
+      9.5908
+     ],
+     [
+      "AUPCAP-2015",
+      "167",
+      9.5908
+     ],
+     [
+      "AUPCAP-2015",
+      "26",
+      9.5908
+     ]
+    ]
+   },
+   {
+    "question": "creer une cooperative",
+    "attendu": [
+     {
+      "numero_texte": "AUSCOOP-2010",
+      "ref_id": "REF-54976178DD2F",
+      "numero": "4"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "118",
+      7.4764
+     ],
+     [
+      "AUSCOOP-2010",
+      "144",
+      7.4764
+     ],
+     [
+      "AUSCOOP-2010",
+      "318",
+      7.4764
+     ],
+     [
+      "AUSCOOP-2010",
+      "8",
+      7.4764
+     ],
+     [
+      "2016-886",
+      "123",
+      7.4764
+     ]
+    ]
+   },
+   {
+    "question": "part de cooperative",
+    "attendu": [
+     {
+      "numero_texte": "AUSCOOP-2010",
+      "ref_id": "REF-54976178DD2F",
+      "numero": "208"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "100",
+      4.4864
+     ],
+     [
+      "AUSCOOP-2010",
+      "102",
+      4.4864
+     ],
+     [
+      "AUSCOOP-2010",
+      "106",
+      4.4864
+     ],
+     [
+      "AUSCOOP-2010",
+      "108",
+      4.4864
+     ],
+     [
+      "AUSCOOP-2010",
+      "116",
+      4.4864
+     ]
+    ]
+   },
+   {
+    "question": "augmentation des engagements",
+    "attendu": [
+     {
+      "numero_texte": "AUSCOOP-2010",
+      "ref_id": "REF-54976178DD2F",
+      "numero": "62"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-576",
+      "423",
+      10.4552
+     ],
+     [
+      "2020-623",
+      "1",
+      10.4552
+     ],
+     [
+      "2020-623",
+      "2",
+      10.4552
+     ],
+     [
+      "AUSCGIE-2014",
+      "86",
+      9.565
+     ],
+     [
+      "2019-576",
+      "455",
+      8.3043
+     ]
+    ]
+   },
+   {
+    "question": "affectation des excedents",
+    "attendu": [
+     {
+      "numero_texte": "AUSCOOP-2010",
+      "ref_id": "REF-54976178DD2F",
+      "numero": "114"
+     }
+    ],
+    "rang": 1,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "114",
+      7.9907
+     ],
+     [
+      "AUSCOOP-2010",
+      "115",
+      7.9907
+     ],
+     [
+      "2019-576",
+      "82",
+      7.9907
+     ],
+     [
+      "AUSCOOP-2010",
+      "209",
+      4.0099
+     ],
+     [
+      "AUSCOOP-2010",
+      "210",
+      4.0099
+     ]
+    ]
+   },
+   {
+    "question": "siege social ohada",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "1"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPCAP-2015",
+      "1",
+      11.3439
+     ],
+     [
+      "2019-576",
+      "218",
+      8.1225
+     ],
+     [
+      "2019-576",
+      "90",
+      8.1225
+     ],
+     [
+      "2019-576",
+      "98",
+      8.1225
+     ],
+     [
+      "2019-576",
+      "109",
+      6.4012
+     ]
+    ]
+   },
+   {
+    "question": "contrat de societe",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "4"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2023-90",
+      "1",
+      3.268
+     ],
+     [
+      "2023-90",
+      "13",
+      3.268
+     ],
+     [
+      "2023-90",
+      "16",
+      3.268
+     ],
+     [
+      "2023-90",
+      "19",
+      3.268
+     ],
+     [
+      "2023-90",
+      "9",
+      3.268
+     ]
+    ]
+   },
+   {
+    "question": "modifier les statuts",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "10"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "169",
+      5.3596
+     ],
+     [
+      "AUSCOOP-2010",
+      "177",
+      5.3596
+     ],
+     [
+      "AUSCOOP-2010",
+      "19",
+      5.3596
+     ],
+     [
+      "AUSCOOP-2010",
+      "190",
+      5.3596
+     ],
+     [
+      "AUSCOOP-2010",
+      "20",
+      5.3596
+     ]
+    ]
+   },
+   {
+    "question": "nom de la societe",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "14"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2023-90",
+      "1",
+      1.7213
+     ],
+     [
+      "2023-90",
+      "10",
+      1.7213
+     ],
+     [
+      "2023-90",
+      "11",
+      1.7213
+     ],
+     [
+      "2023-90",
+      "13",
+      1.7213
+     ],
+     [
+      "2023-90",
+      "16",
+      1.7213
+     ]
+    ]
+   },
+   {
+    "question": "entete de facture",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "17"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "2019-576",
+      "3",
+      7.5433
+     ],
+     [
+      "AUSCOOP-2010",
+      "19",
+      5.9603
+     ],
+     [
+      "2019-576",
+      "198",
+      5.9603
+     ],
+     [
+      "2019-576",
+      "282",
+      5.9603
+     ],
+     [
+      "2019-576",
+      "293",
+      5.9603
+     ]
+    ]
+   },
+   {
+    "question": "capital de depart",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "65"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPCAP-2015",
+      "48",
+      7.6505
+     ],
+     [
+      "AUSCOOP-2010",
+      "115",
+      4.53
+     ],
+     [
+      "AUSCOOP-2010",
+      "26",
+      4.53
+     ],
+     [
+      "AUSCOOP-2010",
+      "293",
+      4.53
+     ],
+     [
+      "AUSCOOP-2010",
+      "309",
+      4.53
+     ]
+    ]
+   },
+   {
+    "question": "vendre ma part",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "274"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUPSRVE-2023",
+      "1",
+      5.3077
+     ],
+     [
+      "AUPSRVE-2023",
+      "246",
+      5.3077
+     ],
+     [
+      "AUPSRVE-2023",
+      "267",
+      5.3077
+     ],
+     [
+      "AUPSRVE-2023",
+      "308",
+      5.3077
+     ],
+     [
+      "2019-572",
+      "101",
+      5.3077
+     ]
+    ]
+   },
+   {
+    "question": "avant la creation",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "108"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "29",
+      7.7174
+     ],
+     [
+      "2019-576",
+      "259",
+      7.7174
+     ],
+     [
+      "2016-886",
+      "106",
+      7.7174
+     ],
+     [
+      "AUSCOOP-2010",
+      "176",
+      5.0478
+     ],
+     [
+      "AUSCOOP-2010",
+      "87",
+      5.0478
+     ]
+    ]
+   },
+   {
+    "question": "arrivee du terme",
+    "attendu": [
+     {
+      "numero_texte": "AUSCGIE-2014",
+      "ref_id": "REF-8755A872A179",
+      "numero": "30"
+     }
+    ],
+    "rang": null,
+    "top": [
+     [
+      "AUSCOOP-2010",
+      "165",
+      8.1612
+     ],
+     [
+      "AUSCOOP-2010",
+      "27",
+      8.1612
+     ],
+     [
+      "2019-576",
+      "3",
+      8.1612
+     ],
+     [
+      "2019-574",
+      "378",
+      8.1612
+     ],
+     [
+      "2019-574",
+      "506",
+      8.1612
+     ]
+    ]
+   }
+  ]
+ },
+ "abstentions": {
+  "correctes": 3,
+  "total": 4,
+  "details": [
+   {
+    "question": "de la",
+    "domaine": "logement_baux_foncier",
+    "motif": "aucun mot significatif",
+    "abstention": true,
+    "resultats": 0
+   },
+   {
+    "question": "le les des",
+    "domaine": null,
+    "motif": "aucun mot significatif",
+    "abstention": true,
+    "resultats": 0
+   },
+   {
+    "question": "xyzabc",
+    "domaine": null,
+    "motif": "vocabulaire absent du corpus",
+    "abstention": true,
+    "resultats": 0
+   },
+   {
+    "question": "quorum cooperative",
+    "domaine": "logement_baux_foncier",
+    "motif": "hors du périmètre demandé",
+    "abstention": false,
+    "resultats": 5
+   }
+  ]
+ },
+ "citations": {
+  "testees": 15,
+  "citations_valides": 15,
+  "citations_alterees_refusees": 15,
+  "details": [
+   {
+    "article": "AUPSRVE-2023 art.40",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "AUPSRVE-2023 art.210",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "2019-576 art.423",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "AUSCOOP-2010 art.39",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "AUSCOOP-2010 art.100",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "2023-90 art.5",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "2019-574 art.179",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "2023-90 art.6",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "AUPSRVE-2023 art.1",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "AUPSRVE-2023 art.253",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "2013-711 art.1",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "AUPSRVE-2023 art.171",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "2019-576 art.3",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "2023-89 art.33",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   },
+   {
+    "article": "2019-571 art.22",
+    "acceptee": true,
+    "alteree_refusee": true,
+    "motif": "CITATION_ABSENTE"
+   }
+  ]
+ }
+}

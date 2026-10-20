@@ -76,7 +76,7 @@ bin/                      verifier_sources, collecter_corpus, collecter_domaine,
                           ocr_collecter, demonstration, demonstration_corpus,
                           rapport_couverture
 tools/ocr_pdf.swift       OCR macOS Vision + PDFKit
-tests/                    14 fichiers, 279 tests
+tests/                    29 fichiers, 515 tests
 ```
 
 **Aucun modèle de langage n'est intégré.** Il n'y a ni fournisseur, ni `mock` :

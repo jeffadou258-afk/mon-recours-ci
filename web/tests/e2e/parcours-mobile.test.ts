@@ -217,16 +217,34 @@ test("moteur indisponible : message clair et bouton Réessayer, saisie conservé
   await ctx.close();
 });
 
-test("violences hors catalogue : l'urgence critique est affichée malgré l'absence de texte", async () => {
+test("violences : l'urgence critique passe AVANT toute analyse juridique", async () => {
+  // Le catalogue contient désormais une fiche pénale sur les violences conjugales :
+  // le moteur ne s'abstient plus, il clarifie. Ce qui doit rester vrai — et que ce
+  // test protège — c'est que l'orientation de sécurité s'affiche sans attendre et
+  // qu'aucune conclusion juridique n'est présentée à la place.
   const ctx = await contexteMobile();
   const page = await ctx.newPage();
   await page.goto(base + "/consultation");
   await page.getByLabel("Expliquez avec vos mots ce qui vous arrive").fill("Mon mari me frappe et menace de me tuer.");
   await page.getByRole("button", { name: "Analyser ma situation" }).tap();
-  await page.getByRole("heading", { name: "Aucune conclusion possible avec les textes disponibles" }).waitFor();
   const alerte = page.getByRole("alert").first();
   await alerte.waitFor();
   assert.ok(await page.locator('a[href^="tel:"]').count() > 0, "numéros d'urgence cliquables");
+  assert.equal(
+    await page.getByRole("heading", { name: "Des textes du corpus correspondent à votre situation" }).count(),
+    0,
+    "aucune conclusion juridique ne doit précéder l'orientation de sécurité",
+  );
+  await ctx.close();
+});
+
+test("question hors catalogue : aucune conclusion, et le moteur le dit", async () => {
+  const ctx = await contexteMobile();
+  const page = await ctx.newPage();
+  await page.goto(base + "/consultation");
+  await page.getByLabel("Expliquez avec vos mots ce qui vous arrive").fill("Quelle est la recette du gâteau au chocolat ?");
+  await page.getByRole("button", { name: "Analyser ma situation" }).tap();
+  await page.getByRole("heading", { name: "Aucune conclusion possible avec les textes disponibles" }).waitFor();
   await ctx.close();
 });
 

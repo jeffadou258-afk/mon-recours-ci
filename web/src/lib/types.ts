@@ -207,6 +207,11 @@ export interface VueSante {
   catalogue: { fiches: number; parDomaine: { domaine: string; fiches: string[] }[] };
   corpus: {
     integrite: string | null;
+    /** « strict » ou « pdf_non_distribues_toleres » : le verdict se lit avec lui. */
+    modeIntegrite?: string | null;
+    alteres?: number | null;
+    absents?: number | null;
+    pdfNonDistribues?: number | null;
     documents: number | null;
     articles: number | null;
     parOrigine: { origine: string; articles: number }[];

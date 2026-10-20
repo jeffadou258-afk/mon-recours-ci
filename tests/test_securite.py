@@ -328,5 +328,32 @@ class TestAucuneFuiteDansLeJournal(unittest.TestCase):
             shutil.rmtree(str(config.dossier_utilisateur(identifiant)), ignore_errors=True)
 
 
+class TestSanteExplicite(unittest.TestCase):
+    """Un verdict d'intégrité doit venir avec son détail, pas seul."""
+
+    def test_le_verdict_est_accompagne_de_son_detail(self):
+        reponse = service.sante()
+        self.assertTrue(reponse["ok"])
+        corpus = reponse["data"]["corpus"]
+        for cle in ("verdict_integrite", "mode_integrite", "alteres", "absents",
+                    "pdf_non_distribues"):
+            self.assertIn(cle, corpus, "champ %r absent de /sante" % cle)
+        self.assertIn(corpus["mode_integrite"], ("strict", "pdf_non_distribues_toleres"))
+        # Le détail doit être cohérent avec le verdict : pas de verdict vert avec
+        # des altérations, pas de verdict rouge sans cause nommée.
+        if corpus["verdict_integrite"] == "INTEGRE":
+            self.assertEqual(corpus["alteres"], 0)
+            self.assertEqual(corpus["absents"], 0)
+        else:
+            self.assertTrue(corpus["alteres"] or corpus["absents"],
+                            "verdict ECART DETECTE sans cause identifiée")
+
+    def test_le_detail_ne_divulgue_aucun_chemin(self):
+        reponse = service.sante()
+        texte = json.dumps(reponse, ensure_ascii=False)
+        self.assertNotIn("/Users/", texte)
+        self.assertNotIn(".pdf", texte)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

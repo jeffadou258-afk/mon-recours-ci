@@ -16,15 +16,15 @@ ne représente personne et ne garantit aucun résultat.
 
 | Élément | Statut |
 |---|---|
-| Suite de tests | **371 tests, 371 OK, exit 0** (`python3 tests/run_all.py`) |
-| Corpus toutes matières | **26 documents**, **1 777 articles**, intégrité `INTEGRE` |
+| Suite de tests | **515 tests, 514 OK, 1 ignoré, exit 0** (`python3 bin/enregistrer_tests.py`) |
+| Corpus toutes matières | **37 documents**, **5 593 articles** — intégrité `INTEGRE` en mode `pdf_non_distribues_toleres`, `ECART DETECTE` en mode strict (10 PDF officiels non distribués dans le dépôt) |
 | Domaines couverts | **3** `TERMINE_TECHNIQUEMENT` (logement · entreprises/OHADA · transport) · **2** `CORPUS_PARTIEL` (famille · numérique) · **6** `BLOQUE_SOURCE` |
-| Provenance du texte | **1 111 `CALQUE_TEXTE`** · **666 `OCR_AUTO`** · **0 `VERIFIE_MANUELLEMENT`** |
-| Références en état `VERIFIE` | **4** (Code Construction/Habitat · Code Urbanisme/Foncier · Acte uniforme OHADA sûretés · décret 2013-711) |
+| Provenance du texte | **1 111 `CALQUE_TEXTE`** · **4 482 `OCR_AUTO`** · **0 `VERIFIE_MANUELLEMENT`** |
+| Références en état `VERIFIE` | **4** sur 34 (30 `PARTIELLEMENT_VERIFIE`) — Code Construction/Habitat · Code Urbanisme/Foncier · Acte uniforme OHADA sûretés · décret 2013-711 |
 | Couverture par domaine | tableau **calculé** : `KNOWLEDGE/INVENTAIRE_COUVERTURE.md` |
 | Validation juridique | **aucune** — `TERMINE_ET_VERIFIE` est refusé tant qu'aucun article n'a été relu par un humain |
 | Envoi de courrier | **impossible** : aucune fonction d'envoi dans le code (vérifié par lecture de l'AST) |
-| Interface conversationnelle | **opérationnelle et déterministe** — `core/conversation.py`, 13 fiches validées contre le corpus, CLI `bin/dialogue.py` |
+| Interface conversationnelle | **opérationnelle et déterministe** — `core/conversation.py`, **92 fiches** validées contre le corpus (5 domaines), CLI `bin/dialogue.py` |
 | Serveur HTTP | **local et testé** — `bin/serveur_api.py` (127.0.0.1, clé obligatoire, débit, journal sans données personnelles) ; **non exposé, non déployé** |
 | Mode LLM | **interface et adaptateur écrits, NON opérationnels** — `llm.statut()["operationnel"] == False`, aucun appel réel, aucune clé dans le code |
 | Modèle de langage | **aucun en service** : le cœur et la conversation sont déterministes |
@@ -105,6 +105,11 @@ dans 78 % des cas, dans le top 25 dans 46 %, dans le top 5 dans 22 %**. C'est un
 problème de **classement**, pas de couverture : les fiches restent le seul chemin
 qui conclut. La recherche ne remplace pas la conversation et ne la contourne pas.
 
+Mesures reproductibles (`python3 bin/mesurer_recherche.py --rapport`) : atteignabilité
+**858/858**, citations exactes acceptées **15/15**, citations altérées refusées **15/15**,
+abstentions attendues **3/4** — la quatrième est une limite assumée : le filtre de domaine
+borne le périmètre, il ne juge pas la pertinence.
+
 ## Documents de référence
 
 | Document | Contenu |
@@ -117,6 +122,8 @@ qui conclut. La recherche ne remplace pas la conversation et ne la contourne pas
 | `EVALUATION_TESTS.md` | les 14 épreuves exigées, les défauts trouvés, ce qu'un test vert ne prouve pas |
 | `CLAUDE_HANDOFF.md` | reprise technique : contrats d'entrée/sortie, modèle de données, interface, LLM |
 | `KNOWLEDGE/INVENTAIRE_COUVERTURE.md` | **fiches par domaine** : statut, périmètre, sources, lacunes |
+| `KNOWLEDGE/registre_validation_humaine.md` | **ce qu'un juriste doit trancher**, par ordre de priorité — généré par `bin/registre_validation.py` |
+| `KNOWLEDGE/qualite/rapport_qualite_recherche.json` | mesures de recherche : rappel, pertinence, abstentions, citations |
 
 ---
 
@@ -154,7 +161,7 @@ mon_recours_ci/
 ├── tools/ocr_pdf.swift        outil OCR (Vision + PDFKit), compilé par le collecteur
 ├── bin/                       verifier_sources.py, demonstration.py, collecter_corpus.py,
 │                              ocr_collecter.py, demonstration_corpus.py
-└── tests/                     13 fichiers, 232 tests
+└── tests/                     29 fichiers, 515 tests
 ```
 
 ---

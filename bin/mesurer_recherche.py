@@ -58,6 +58,35 @@ def references_couvertes(fiches):
     return couvertes
 
 
+def _origine(conn, doc_id):
+    ligne = conn.execute("SELECT origine_texte, COUNT(*) n FROM articles_corpus"
+                         " WHERE doc_id = ? GROUP BY origine_texte"
+                         " ORDER BY n DESC LIMIT 1", (doc_id,)).fetchone()
+    return ligne["origine_texte"] if ligne else None
+
+
+def _texte_pour_requete(conn, document, numero, texte):
+    """Texte servant à construire la requête : le CALQUE s'il existe.
+
+    Un article peut être indexé deux fois — calque propre et OCR imparfait.
+    Interroger avec le texte OCR fabrique une requête contenant ses corruptions
+    (« Lerropriation » pour « L'expropriation »), introuvable par construction.
+    Ce n'est pas un défaut du corpus mais de la mesure : on interroge donc avec
+    l'exemplaire propre quand il existe. Aucun score n'est modifié.
+    """
+    if (document.get("origine") or "") == "CALQUE_TEXTE":
+        return texte
+    numero_texte = document.get("numero_texte")
+    if numero_texte:
+        ligne = conn.execute(
+            "SELECT a.texte FROM articles_corpus a JOIN documents d ON d.doc_id = a.doc_id"
+            " WHERE d.numero_texte = ? AND a.numero = ? AND a.origine_texte = 'CALQUE_TEXTE'"
+            " LIMIT 1", (numero_texte, str(numero))).fetchone()
+        if ligne and ligne["texte"]:
+            return ligne["texte"]
+    return texte
+
+
 def textes_sans_fiche(conn, fiches):
     """Documents citables, indexés, dont AUCUNE fiche ne couvre la référence."""
     couvertes = references_couvertes(fiches)
@@ -65,7 +94,8 @@ def textes_sans_fiche(conn, fiches):
         "SELECT d.doc_id, d.ref_id, d.numero_texte, d.titre, d.domaine,"
         " (SELECT COUNT(*) FROM articles_corpus a WHERE a.doc_id = d.doc_id) AS articles"
         " FROM documents d WHERE d.articles_fiables = 1").fetchall()
-    return [dict(l) for l in lignes if l["articles"] and l["ref_id"] not in couvertes]
+    return [dict(l, origine=_origine(conn, l["doc_id"])) for l in lignes
+            if l["articles"] and l["ref_id"] not in couvertes]
 
 
 def requete_auto(texte, nombre=6):
@@ -93,7 +123,8 @@ def mesurer_atteignabilite(limite=5, bavard=True):
         trouves = 0
         trouves_ref = 0
         for ligne in lignes:
-            requete = requete_auto(ligne["texte"])
+            requete = requete_auto(_texte_pour_requete(conn, document, ligne["numero"],
+                                                       ligne["texte"]))
             if not requete:
                 continue
             atteints = corpus.chercher_articles(requete, limite=limite)
@@ -160,13 +191,106 @@ def mesurer_questions(chemin, limite=5):
             "limite": limite, "details": details}
 
 
+ABSTENTIONS_ATTENDUES = [
+    ("de la", "logement_baux_foncier", "aucun mot significatif"),
+    ("le les des", None, "aucun mot significatif"),
+    ("xyzabc", None, "vocabulaire absent du corpus"),
+    ("quorum cooperative", "logement_baux_foncier", "hors du périmètre demandé"),
+]
+
+
+def mesurer_abstentions():
+    """L'abstention est-elle prononcée quand elle doit l'être ?"""
+    from core import service
+    correctes, details = 0, []
+    for question, domaine, motif in ABSTENTIONS_ATTENDUES:
+        reponse = service.rechercher(question, domaine=domaine)
+        abstenu = bool(reponse.get("ok") and reponse["data"]["abstention"])
+        correctes += 1 if abstenu else 0
+        details.append({"question": question, "domaine": domaine, "motif": motif,
+                        "abstention": abstenu,
+                        "resultats": len(reponse["data"]["resultats"]) if reponse.get("ok") else None})
+    return {"correctes": correctes, "total": len(ABSTENTIONS_ATTENDUES), "details": details}
+
+
+def mesurer_citations(questions, maximum=15):
+    """Une citation exacte est acceptée ; la même citation altérée est refusée."""
+    testees = valides = refusees = 0
+    details = []
+    for cas in questions[:maximum]:
+        resultats = corpus.chercher_articles(cas["question"], limite=1)
+        if not resultats:
+            continue
+        article = resultats[0]
+        corps = corpus.obtenir_article_par_reference(article["ref_id"], article["numero"])
+        if not corps:
+            continue
+        citation = " ".join((corps["texte"] or "").split())[:60]
+        if len(citation) < 20:
+            continue
+        testees += 1
+        acceptee, _ = corpus.verifier_citation_article(article["ref_id"], article["numero"],
+                                                       citation)
+        valides += 1 if acceptee else 0
+        refusee, motif = corpus.verifier_citation_article(
+            article["ref_id"], article["numero"], citation + " et le ciel est vert")
+        refusees += 1 if not refusee else 0
+        details.append({"article": "%s art.%s" % (article.get("numero_texte"),
+                                                  article.get("numero")),
+                        "acceptee": bool(acceptee), "alteree_refusee": bool(not refusee),
+                        "motif": motif.get("raison") if motif else None})
+    return {"testees": testees, "citations_valides": valides,
+            "citations_alterees_refusees": refusees, "details": details}
+
+
+def rapport_complet(limite=5, chemin_questions=None):
+    """Les quatre mesures de qualité, dans un seul run reproductible."""
+    rapport = {}
+    print("=== 1. RAPPEL DOCUMENTAIRE (textes sans fiche) ===")
+    rapport["rappel_documentaire"] = mesurer_atteignabilite(limite, bavard=False)
+    d = rapport["rappel_documentaire"]
+    print("  %d / %d articles retrouvés (%.1f %%), dont %d par référence exacte"
+          % (d["retrouves"], d["articles"], 100.0 * d["retrouves"] / max(1, d["articles"]),
+             d.get("refs_exactes", 0)))
+    if chemin_questions and os.path.isfile(chemin_questions):
+        print("\n=== 2. PERTINENCE SUR QUESTIONS (déclencheurs du catalogue) ===")
+        rapport["questions"] = mesurer_questions(chemin_questions, limite)
+        q = rapport["questions"]
+        print("  rappel@%d : %d/%d | rang 1 : %d | MRR %.2f"
+              % (limite, q["rappel"], q["total"],
+                 sum(1 for x in q["details"] if x["rang"] == 1), q["mrr"]))
+    print("\n=== 3. ABSTENTIONS ===")
+    rapport["abstentions"] = mesurer_abstentions()
+    a = rapport["abstentions"]
+    for ligne in a["details"]:
+        print("  %-24s %-24s abstention=%-5s (%s)"
+              % (ligne["question"][:24], str(ligne["domaine"])[:24],
+                 ligne["abstention"], ligne["motif"]))
+    print("  correctes : %d/%d" % (a["correctes"], a["total"]))
+    if chemin_questions and os.path.isfile(chemin_questions):
+        print("\n=== 4. CITATIONS ===")
+        with open(chemin_questions, encoding="utf-8") as flux:
+            questions = json.load(flux)["questions"]
+        rapport["citations"] = mesurer_citations(questions)
+        c = rapport["citations"]
+        print("  %d testées | %d exactes acceptées | %d altérées refusées"
+              % (c["testees"], c["citations_valides"], c["citations_alterees_refusees"]))
+    return rapport
+
+
 def main(argv=None):
     analyseur = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     analyseur.add_argument("--limite", type=int, default=5)
     analyseur.add_argument("--questions", help="fichier JSON de questions attendues")
+    analyseur.add_argument("--rapport", action="store_true",
+                           help="les quatre mesures de qualité dans un seul run")
     analyseur.add_argument("--json", help="écrit le résultat dans ce fichier")
     arguments = analyseur.parse_args(argv)
-    if arguments.questions:
+    if arguments.rapport:
+        chemin = arguments.questions or os.path.join(RACINE, "KNOWLEDGE", "qualite",
+                                                     "questions_recherche.json")
+        resultat = rapport_complet(arguments.limite, chemin)
+    elif arguments.questions:
         resultat = mesurer_questions(arguments.questions, arguments.limite)
     else:
         resultat = mesurer_atteignabilite(arguments.limite)
