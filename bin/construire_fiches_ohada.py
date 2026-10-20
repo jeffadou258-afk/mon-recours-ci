@@ -172,6 +172,82 @@ AUSCOOP = {
 }
 
 
+AUSCGIE = {
+    "domaine": "contrats_dettes_commerce",
+    "numero_texte": "AUSCGIE-2014",
+    "fiches": [
+        {
+            "id": "AUSCGIE_CHAMP",
+            "article": "1",
+            "titre": "Quelles sociétés relèvent de l'Acte uniforme (sociétés commerciales)",
+            "declencheurs": ["societe commerciale", "acte uniforme societes", "societe ohada",
+                             "creer une societe commerciale", "siege social ohada"],
+            "debut": "Toute société commerciale, y compris",
+            "fin": "est soumise aux dispositions du présent Acte uniforme",
+            "lecture": ("L'Acte uniforme s'applique à toute société commerciale — y compris celles où un "
+                        "État ou une personne morale de droit public est associé — dont le siège social "
+                        "est dans un État partie, ainsi qu'à tout groupement d'intérêt économique. Le "
+                        "texte ne dit pas ici quelles formes sociales existent ni leurs règles : ces "
+                        "points sont dans les livres suivants. Interprétation à valider par un juriste ; "
+                        "source OCR non recoupée."),
+            "faits_requis": [["societe", "S'agit-il d'une société commerciale ou d'un GIE dont le siège "
+                                        "est en Côte d'Ivoire ?"]],
+            "etape_plan": "Vérifier la forme sociale et le siège avant toute démarche",
+        },
+        {
+            "id": "AUSCGIE_CONSTITUTION",
+            "article": "4",
+            "titre": "Création d'une société commerciale : ce que le contrat doit prévoir",
+            "declencheurs": ["constitution societe", "deux associes minimum",
+                             "apport en numeraire", "partage des benefices",
+                             "contrat de societe", "affecter des biens a une activite"],
+            "debut": "La société commerciale est créée par deux",
+            "fin": "de profiter de l’économie qui peut en résulter",
+            "lecture": ("La société commerciale est créée par deux personnes au moins qui conviennent, "
+                        "par un contrat, d'affecter des biens, du numéraire ou de l'industrie à une "
+                        "activité afin de partager le bénéfice ou de profiter de l'économie qui en "
+                        "résulte ; les associés s'engagent à contribuer aux pertes. Le texte ne fixe "
+                        "ici ni capital minimum ni formalités d'immatriculation. Interprétation à "
+                        "valider par un juriste ; source OCR non recoupée."),
+            "faits_requis": [["associes", "Combien d'associés sont prévus au projet ?"]],
+            "etape_plan": "Rédiger le projet de statuts avec les apports de chaque associé",
+        },
+        {
+            "id": "AUSCGIE_STATUTS",
+            "article": "10",
+            "titre": "Forme des statuts d'une société commerciale",
+            "declencheurs": ["statuts", "acte notarie", "statuts sous seing prive",
+                             "modifier les statuts", "authenticite des statuts"],
+            "debut": "Sauf dispositions nationales contraires, les statuts sont établis",
+            "fin": "au rang des minutes d’un notaire",
+            "lecture": ("Sauf dispositions nationales contraires, les statuts sont établis par acte "
+                        "notarié ou par tout acte offrant des garanties d'authenticité dans l'État du "
+                        "siège, déposé avec reconnaissance d'écritures et de signatures au rang des "
+                        "minutes d'un notaire. Le texte réserve les dispositions nationales contraires : "
+                        "vérifier le droit ivoirien applicable. Interprétation à valider par un juriste ; "
+                        "source OCR non recoupée."),
+            "faits_requis": [],
+            "etape_plan": "S'adresser à un notaire pour l'établissement ou le dépôt des statuts",
+        },
+        {
+            "id": "AUSCGIE_DENOMINATION",
+            "article": "14",
+            "titre": "Dénomination sociale d'une société",
+            "declencheurs": ["denomination sociale", "nom de la societe",
+                             "appellation de la societe"],
+            "debut": "Toute société est désignée par une dénomination sociale",
+            "fin": "qui est mentionnée dans ses statuts",
+            "lecture": ("Toute société est désignée par une dénomination sociale, mentionnée dans ses "
+                        "statuts. Le texte ne traite ici ni de la disponibilité du nom ni des conflits "
+                        "avec une marque : ces vérifications restent à faire. Interprétation à valider "
+                        "par un juriste ; source OCR non recoupée."),
+            "faits_requis": [],
+            "etape_plan": "Insérer la dénomination retenue dans les statuts",
+        },
+    ],
+}
+
+
 def construire(conn, definition):
     resultat = {"domaine": definition["domaine"],
                 "numero_texte": definition["numero_texte"], "fiches": []}
@@ -194,7 +270,8 @@ def main():
     os.makedirs(SORTIE, exist_ok=True)
     conn = sqlite3.connect(config.CHEMIN_DB)
     for nom, definition in (("ohada_procedures_collectives", AUPCAP),
-                            ("ohada_cooperatives", AUSCOOP)):
+                            ("ohada_cooperatives", AUSCOOP),
+                            ("ohada_societes_commerciales", AUSCGIE)):
         print("== %s (%s) ==" % (nom, definition["numero_texte"]))
         contenu = construire(conn, definition)
         chemin = os.path.join(SORTIE, nom + ".json")

@@ -1,6 +1,6 @@
 {
  "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
- "genere_le": "2026-10-20T12:18:24+00:00",
+ "genere_le": "2026-10-20T14:42:14+00:00",
  "outils_collecte": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -19,13 +19,13 @@
  },
  "totaux": {
   "entrees_manifeste": 256,
-  "documents_telecharges": 75,
+  "documents_telecharges": 76,
   "pages_de_decouverte_lues": 91,
-  "echecs": 0,
-  "non_encore_collectes": 2,
+  "echecs": 1,
+  "non_encore_collectes": 0,
   "entrees_desactivees": 88,
   "par_statut_controle": {
-   "EXPLOITABLE_OFFICIEL": 21,
+   "EXPLOITABLE_OFFICIEL": 22,
    "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 12,
    "QUARANTAINE": 38,
    "VERSION_ABROGEE": 4
@@ -33,7 +33,7 @@
   "par_categorie": {
    "CANDIDAT_OFFICIEL": 12,
    "OFFICIEL_INSTITUTION": 4,
-   "OFFICIEL_ORGANISATION": 13,
+   "OFFICIEL_ORGANISATION": 14,
    "OFFICIEL_PORTAIL_GOUV": 24,
    "SECONDAIRE_AUTRE": 6,
    "SECONDAIRE_BASE_INTERNATIONALE": 3,
@@ -41,12 +41,13 @@
    "SECONDAIRE_FAC_SIMILE": 4
   },
   "par_methode_extraction": {
-   "CALQUE_TEXTE": 28,
+   "CALQUE_TEXTE": 26,
    "OCR_EDITEUR": 17,
+   "OCR_REQUIS": 3,
    "OCR_TESSERACT": 27,
    "OCR_TESSERACT_PARTIEL": 3
   },
-  "pdf_rapatries_et_verifies": 75
+  "pdf_rapatries_et_verifies": 76
  },
  "documents": [
   {
@@ -851,7 +852,7 @@
    "pages": 76,
    "polices": 1,
    "integrite_pdf": "OK",
-   "methode_extraction": "CALQUE_TEXTE",
+   "methode_extraction": "OCR_REQUIS",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
    "en_tetes_ocr_corriges": 0,
@@ -868,7 +869,9 @@
     "aucun article détecté",
     "le numéro 2023-1000 n'apparaît pas dans le texte extrait"
    ],
-   "avertissements": [],
+   "avertissements": [
+    "calque texte dégradé (0.00 % de caractères accentués, seuil 1.0 %) : OCR requis, ce texte ne peut pas soutenir une citation"
+   ],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Mesures fiscales de l'année : ne remplace pas le Code général des impôts.",
    "version_abrogee": null,
    "doublon_de": []
@@ -2818,6 +2821,48 @@
    "doublon_de": []
   },
   {
+   "cle": "ohada_jo_bulletin_1722_explnum_3974",
+   "titre": "Journal officiel de l'OHADA — Sociétés commerciales et GIE, CCJA (bulletin 1722, fichier 3974)",
+   "numero_texte": "AUSCGIE-2014",
+   "date_texte": "2014-01-30",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (collection « Journal Officiel », notice 1881)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=3974",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=3974",
+   "date_recuperation": "2026-10-20T12:20:16+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 6288638,
+   "sha256": "sha256:143aab11d2fe189d30eb49f125e6457662d0d010f4a3acca48a6c0f695f8b613",
+   "pages": 240,
+   "polices": 26,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_REQUIS",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2512,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 906,
+   "article_max": 920,
+   "couverture_articles": 0.9848,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [
+    "calque texte dégradé (0.22 % de caractères accentués, seuil 1.0 %) : OCR requis, ce texte ne peut pas soutenir une citation"
+   ],
+   "notes": "Fichier relevé au run 39419713478 ; identité, date et version à contrôler à la lecture. Le bulletin contient DEUX actes : l'AUSCGIE (p. 8-227) et le Règlement de procédure CCJA 001/2014/CM (p. 228+). Le segment isole l'AUSCGIE ; sans lui, les articles du Règlement écrasaient ceux de l'Acte uniforme à numéro égal (art. 3, mesuré le 20/10/2026).",
+   "version_abrogee": null,
+   "doublon_de": []
+  },
+  {
    "cle": "ohada_jo_special_aupsrve_2023",
    "titre": "Journal officiel de l'OHADA, numéro spécial du 15 novembre 2023 — Acte uniforme du 17 octobre 2023 portant organisation des procédures simplifiées de recouvrement et des voies d'exécution",
    "numero_texte": "AUPSRVE-2023",
@@ -3064,7 +3109,7 @@
    "pages": 240,
    "polices": 26,
    "integrite_pdf": "OK",
-   "methode_extraction": "CALQUE_TEXTE",
+   "methode_extraction": "OCR_REQUIS",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
    "en_tetes_ocr_corriges": 0,
@@ -3078,7 +3123,8 @@
    "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
    "motifs_quarantaine": [],
    "avertissements": [
-    "qpdf signale des avertissements de structure"
+    "qpdf signale des avertissements de structure",
+    "calque texte dégradé (0.22 % de caractères accentués, seuil 1.0 %) : OCR requis, ce texte ne peut pas soutenir une citation"
    ],
    "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
    "version_abrogee": null,
@@ -3305,7 +3351,18 @@
    "doublon_de": []
   }
  ],
- "echecs": [],
+ "echecs": [
+  {
+   "cle": "ohada_jo_bulletin_1696_explnum_2799",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=2799",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "statut": "TROP_VOLUMINEUX",
+   "http": 200,
+   "erreur": null,
+   "debut": "",
+   "date_recuperation": "2026-10-20T12:20:10+00:00"
+  }
+ ],
  "decouvertes": [
   {
    "cle": "dec_ohada_journal_officiel_en",
@@ -3854,16 +3911,7 @@
    "liens": 1
   }
  ],
- "non_encore_collectes": [
-  {
-   "cle": "ohada_jo_bulletin_1696_explnum_2799",
-   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=2799"
-  },
-  {
-   "cle": "ohada_jo_bulletin_1722_explnum_3974",
-   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=3974"
-  }
- ],
+ "non_encore_collectes": [],
  "desactivees": [
   {
    "cle": "code_penal_2019_574_mffe",

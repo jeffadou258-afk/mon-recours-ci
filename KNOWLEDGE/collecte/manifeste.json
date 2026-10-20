@@ -4547,8 +4547,8 @@
   {
    "cle": "ohada_jo_bulletin_1722_explnum_3974",
    "titre": "Journal officiel de l'OHADA — Sociétés commerciales et GIE, CCJA (bulletin 1722, fichier 3974)",
-   "numero_texte": null,
-   "date_texte": null,
+   "numero_texte": "AUSCGIE-2014",
+   "date_texte": "2014-01-30",
    "type_texte": "acte_uniforme",
    "autorite": "OHADA — bibliothèque numérique (collection « Journal Officiel », notice 1881)",
    "domaines": [
@@ -4558,8 +4558,12 @@
    "url": "https://biblio.ohada.org/doc_num.php?explnum_id=3974",
    "categorie_source": "OFFICIEL_ORGANISATION",
    "mode": "fichier",
-   "notes": "Fichier relevé au run 39419713478 ; identité, date et version à contrôler à la lecture.",
-   "ajoutee_le": "2026-10-20"
+   "notes": "Fichier relevé au run 39419713478 ; identité, date et version à contrôler à la lecture. Le bulletin contient DEUX actes : l'AUSCGIE (p. 8-227) et le Règlement de procédure CCJA 001/2014/CM (p. 228+). Le segment isole l'AUSCGIE ; sans lui, les articles du Règlement écrasaient ceux de l'Acte uniforme à numéro égal (art. 3, mesuré le 20/10/2026).",
+   "ajoutee_le": "2026-10-20",
+   "segment": {
+    "debut": "Le\\s+Conseil\\s+des\\s+Ministres\\s+de\\s+l[’']Organisation",
+    "fin": "CONSEIL\\s+DES\\s+MINISTRES\\s+REGLEMENT\\s+DE\\s+PROCEDURE"
+   }
   }
  ]
 }

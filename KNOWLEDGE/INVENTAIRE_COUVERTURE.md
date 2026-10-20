@@ -1,6 +1,6 @@
 # Inventaire de couverture juridique — Mon Recours CI
 
-Généré le 2026-10-20T13:26:26+00:00 par `bin/rapport_couverture.py`.
+Généré le 2026-10-20T14:47:21+00:00 par `bin/rapport_couverture.py`.
 
 **La réussite des tests ne vaut pas validation juridique par un professionnel.** Un domaine `TERMINE_TECHNIQUEMENT` reste `INCOMPLET` au plan juridique : les deux colonnes sont séparées exprès.
 
@@ -9,7 +9,7 @@ Généré le 2026-10-20T13:26:26+00:00 par `bin/rapport_couverture.py`.
 | A | Logement, baux et foncier | `TERMINE_TECHNIQUEMENT` | INCOMPLET | 6 | 2 | 1173 |
 | C | Travail, emploi et relations professionnelles | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
 | B | Famille, couple et enfants | `CORPUS_PARTIEL` | INCOMPLET | 19 | 0 | 640 |
-| D | Entreprises, commerce et activites economiques | `TERMINE_TECHNIQUEMENT` | INCOMPLET | 4 | 1 | 1146 |
+| D | Entreprises, commerce et activites economiques | `TERMINE_TECHNIQUEMENT` | INCOMPLET | 5 | 1 | 2032 |
 | G | Penal, plaintes et procedures judiciaires | `CORPUS_PARTIEL` | INCOMPLET | 2 | 0 | 1398 |
 | E | Dettes, argent et consommation | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
 | H | Religion, communautes et associations | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
@@ -18,7 +18,7 @@ Généré le 2026-10-20T13:26:26+00:00 par `bin/rapport_couverture.py`.
 | J | Transport, accidents et responsabilite civile | `TERMINE_TECHNIQUEMENT` | INCOMPLET | 1 | 1 | 6 |
 | K | Sante et droits des usagers | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
 
-**Total** : 36 documents, 4707 articles. Provenance : CALQUE_TEXTE = 1111, OCR_AUTO = 3596
+**Total** : 37 documents, 5593 articles. Provenance : CALQUE_TEXTE = 1111, OCR_AUTO = 4482
 
 ## Méthode de comptage
 
@@ -188,7 +188,7 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 
 ## D — Entreprises, commerce et activites economiques (`contrats_dettes_commerce`)
 
-* **Statut technique** : `TERMINE_TECHNIQUEMENT` — 4 document(s), 1146 article(s), 1 reference(s) verifiee(s)
+* **Statut technique** : `TERMINE_TECHNIQUEMENT` — 5 document(s), 2032 article(s), 1 reference(s) verifiee(s)
 * **Validation juridique** : `RECOMMANDEE` · complétude : `INCOMPLET`
 * **Risque** : MOYEN
 * **Intervention humaine** : recommandée selon les faits
@@ -228,6 +228,7 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 |---|---|---|---|
 | `DOC-2564CCED2D56` | AUPSRVE-2023 | `OCR_TESSERACT_PARTIEL` | 304 |
 | `DOC-A10C894B4C38` | AUPCAP-2015 | `OCR_EDITEUR` | 249 |
+| `DOC-FA3AA7C17BA9` | AUSCGIE-2014 | `OCR_REQUIS` | 886 |
 | `DOC-AB97B11FA7AE` | — | `CALQUE_TEXTE` | 228 |
 | `DOC-23DA52003C6C` | AUSCOOP-2010 | `OCR_TESSERACT` | 365 |
 

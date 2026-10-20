@@ -1,5 +1,5 @@
 {
- "horodatage": "2026-10-20T13:26:26+00:00",
+ "horodatage": "2026-10-20T14:47:21+00:00",
  "domaines": [
   {
    "domaine": "logement_baux_foncier",
@@ -190,7 +190,7 @@
    "code_domaine": "D",
    "libelle": "Entreprises, commerce et activites economiques",
    "statut": "TERMINE_TECHNIQUEMENT",
-   "motif": "4 document(s), 1146 article(s), 1 reference(s) verifiee(s)",
+   "motif": "5 document(s), 2032 article(s), 1 reference(s) verifiee(s)",
    "validation_juridique": "RECOMMANDEE",
    "completude_juridique": "INCOMPLET",
    "validation_humaine_obligatoire": false,
@@ -234,15 +234,15 @@
    "mesures": {
     "code": "D",
     "libelle": "Entreprises, commerce et activites economiques",
-    "documents": 4,
-    "references": 4,
+    "documents": 5,
+    "references": 5,
     "references_verifiees": 1,
-    "articles": 1146,
+    "articles": 2032,
     "par_origine": {
-     "OCR_AUTO": 918,
+     "OCR_AUTO": 1804,
      "CALQUE_TEXTE": 228
     },
-    "documents_illisibles": 3
+    "documents_illisibles": 4
    }
   },
   {
@@ -591,11 +591,11 @@
    }
   }
  ],
- "total_documents": 36,
- "total_articles": 4707,
+ "total_documents": 37,
+ "total_articles": 5593,
  "articles_par_origine": {
   "CALQUE_TEXTE": 1111,
-  "OCR_AUTO": 3596
+  "OCR_AUTO": 4482
  },
  "methode_de_comptage": "documents = lignes de la table documents pour le domaine ; articles = lignes de articles_corpus rattachees a ces documents (comptees une par une, pas estimees) ; references = lignes de references_juridiques pour le domaine.",
  "avertissement": "La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHNIQUEMENT reste juridiquement incomplet."

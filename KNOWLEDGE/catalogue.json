@@ -1627,6 +1627,87 @@
    "lecture": "Les statuts doivent prévoir, avant toute autre affectation, la constitution d'une réserve générale par prélèvements annuels sur les excédents nets d'exploitation. Le taux et les autres affectations (dont l'éventuelle ristourne) ne sont pas fixés par cet article. Interprétation à valider par un juriste ; source OCR non recoupée.",
    "faits_requis": [],
    "etape_plan": "Demander les statuts et le rapport financier de l'exercice"
+  },
+  {
+   "id": "AUSCGIE_CHAMP",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "1",
+   "titre": "Quelles sociétés relèvent de l'Acte uniforme (sociétés commerciales)",
+   "declencheurs": [
+    "societe commerciale",
+    "acte uniforme societes",
+    "societe ohada",
+    "creer une societe commerciale",
+    "siege social ohada"
+   ],
+   "citation": "Toute société commerciale, y compris celle dans laquelle un État ou une personne morale de droit public est associé, dont le siège social est situé sur le territoire de l’un des États parties au Traité relatif à l'harmonisation du droit des affaires en Afrique (ci-après désignés « les États parties ») est soumise aux dispositions du présent Acte uniforme",
+   "lecture": "L'Acte uniforme s'applique à toute société commerciale — y compris celles où un État ou une personne morale de droit public est associé — dont le siège social est dans un État partie, ainsi qu'à tout groupement d'intérêt économique. Le texte ne dit pas ici quelles formes sociales existent ni leurs règles : ces points sont dans les livres suivants. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [
+    [
+     "societe",
+     "S'agit-il d'une société commerciale ou d'un GIE dont le siège est en Côte d'Ivoire ?"
+    ]
+   ],
+   "etape_plan": "Vérifier la forme sociale et le siège avant toute démarche"
+  },
+  {
+   "id": "AUSCGIE_CONSTITUTION",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "4",
+   "titre": "Création d'une société commerciale : ce que le contrat doit prévoir",
+   "declencheurs": [
+    "constitution societe",
+    "deux associes minimum",
+    "apport en numeraire",
+    "partage des benefices",
+    "contrat de societe",
+    "affecter des biens a une activite"
+   ],
+   "citation": "La société commerciale est créée par deux (2) ou plusieurs personnes qui conviennent, par un contrat, d’affecter à une activité des biens en numéraire ou en nature, ou de l’industrie, dans le but de partager le bénéfice ou de profiter de l’économie qui peut en résulter",
+   "lecture": "La société commerciale est créée par deux personnes au moins qui conviennent, par un contrat, d'affecter des biens, du numéraire ou de l'industrie à une activité afin de partager le bénéfice ou de profiter de l'économie qui en résulte ; les associés s'engagent à contribuer aux pertes. Le texte ne fixe ici ni capital minimum ni formalités d'immatriculation. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [
+    [
+     "associes",
+     "Combien d'associés sont prévus au projet ?"
+    ]
+   ],
+   "etape_plan": "Rédiger le projet de statuts avec les apports de chaque associé"
+  },
+  {
+   "id": "AUSCGIE_STATUTS",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "10",
+   "titre": "Forme des statuts d'une société commerciale",
+   "declencheurs": [
+    "statuts",
+    "acte notarie",
+    "statuts sous seing prive",
+    "modifier les statuts",
+    "authenticite des statuts"
+   ],
+   "citation": "Sauf dispositions nationales contraires, les statuts sont établis par acte notarié ou par tout acte offrant des garanties d’authenticité dans l’Etat du siège de la société déposé avec reconnaissance d’écritures et de signatures par toutes les parties au rang des minutes d’un notaire",
+   "lecture": "Sauf dispositions nationales contraires, les statuts sont établis par acte notarié ou par tout acte offrant des garanties d'authenticité dans l'État du siège, déposé avec reconnaissance d'écritures et de signatures au rang des minutes d'un notaire. Le texte réserve les dispositions nationales contraires : vérifier le droit ivoirien applicable. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [],
+   "etape_plan": "S'adresser à un notaire pour l'établissement ou le dépôt des statuts"
+  },
+  {
+   "id": "AUSCGIE_DENOMINATION",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "14",
+   "titre": "Dénomination sociale d'une société",
+   "declencheurs": [
+    "denomination sociale",
+    "nom de la societe",
+    "appellation de la societe"
+   ],
+   "citation": "Toute société est désignée par une dénomination sociale qui est mentionnée dans ses statuts",
+   "lecture": "Toute société est désignée par une dénomination sociale, mentionnée dans ses statuts. Le texte ne traite ici ni de la disponibilité du nom ni des conflits avec une marque : ces vérifications restent à faire. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [],
+   "etape_plan": "Insérer la dénomination retenue dans les statuts"
   }
  ],
  "rejets": []
