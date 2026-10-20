@@ -1,0 +1,33 @@
+{
+ "ancres": [
+  {
+   "texte": "",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=3974"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_biblio_ohada_bulletin_1722",
+ "date_recuperation": "2026-10-20T12:06:23+00:00",
+ "duree_s": 2.1,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T12:06:23+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 64278,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1722"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://biblio.ohada.org/doc_num.php?explnum_id=3974"
+ ],
+ "octets": 64278,
+ "statut": "DECOUVERTE",
+ "titre_page": "Acte uniforme relatif au Droit des Sociétés Comm... Catalogue en ligne",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1722",
+ "url_finale": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1722"
+}

@@ -1,0 +1,33 @@
+{
+ "ancres": [
+  {
+   "texte": "",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=2799"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_biblio_ohada_bulletin_1696",
+ "date_recuperation": "2026-10-20T12:06:22+00:00",
+ "duree_s": 1.4,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T12:06:22+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 67748,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1696"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://biblio.ohada.org/doc_num.php?explnum_id=2799"
+ ],
+ "octets": 67748,
+ "statut": "DECOUVERTE",
+ "titre_page": "Acte uniforme relatif à la Médiation - Acte unif... Catalogue en ligne",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1696",
+ "url_finale": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1696"
+}

@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-20T11:55:08+00:00",
+ "execution": "2026-10-20T12:06:20+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -18,32 +18,16 @@
  },
  "traites": [
   {
-   "cle": "ohada_jo_aupc_2015_explnum_16",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_jo_aupc_2015_explnum_17",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_jo_aupc_2015_explnum_18",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_jo_aupc_2015_explnum_19",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "dec_biblio_ohada_notice_1881",
+   "cle": "dec_biblio_ohada_bulletin_1561",
    "statut": "DECOUVERTE"
   },
   {
-   "cle": "refworld_etat_civil_2018_862",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_biblio_ohada_bulletin_1696",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "dec_faolex_notice_210897",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_biblio_ohada_bulletin_1722",
+   "statut": "DECOUVERTE"
   }
  ],
  "ignores": [
@@ -290,7 +274,14 @@
   "dec_biblio_ohada_recherche_jo_2014",
   "dec_biblio_ohada_recherche_jo_2017",
   "dec_biblio_ohada_recherche_jo_23",
-  "senegal_auscgie_jo_2014"
+  "senegal_auscgie_jo_2014",
+  "ohada_jo_aupc_2015_explnum_16",
+  "ohada_jo_aupc_2015_explnum_17",
+  "ohada_jo_aupc_2015_explnum_18",
+  "ohada_jo_aupc_2015_explnum_19",
+  "dec_biblio_ohada_notice_1881",
+  "refworld_etat_civil_2018_862",
+  "dec_faolex_notice_210897"
  ],
  "reportes": []
 }
