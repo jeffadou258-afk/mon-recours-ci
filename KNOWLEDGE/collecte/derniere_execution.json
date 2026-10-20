@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-20T10:25:41+00:00",
+ "execution": "2026-10-20T11:19:54+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -16,100 +16,7 @@
    "osd"
   ]
  },
- "traites": [
-  {
-   "cle": "etat_civil_2018_862_civlii_source",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "etat_civil_2018_862_civlii_jo",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "violences_2021_894_civlii_source",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "violences_2021_894_civlii_jo",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "prevoyance_sociale_1999_477_civlii_source",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "prevoyance_sociale_1999_477_civlii_jo",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "cci_1977_civlii_source",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "arbitrage_1993_671_civlii_jo",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "juridictions_2016_1110_civlii_jo",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "petits_litiges_2015_904_civlii_jo",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "mediation_2014_389_civlii_jo",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "corruption_2013_660_civlii_jo",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "ohada_audcg_2010",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_auscgie_2014",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_aupcap_2015",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_aua_2017",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_aus_2010",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_aucoop_2010",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_audtmr_2003",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "ohada_aua_2017_attachement",
-   "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "senegal_audcg_2010",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "comores_auscgie_2014",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "comores_aupcap_2015",
-   "statut": "TELECHARGE"
-  }
- ],
+ "traites": [],
  "ignores": [
   "code_penal_2019_574_mffe",
   "code_penal_2019_574_civlii",
@@ -308,15 +215,27 @@
   "mef_echanges_electroniques_2017_500",
   "oapi_accord_bangui_fr",
   "who_code_prevoyance_sociale_99_477",
+  "etat_civil_2018_862_civlii_source",
+  "etat_civil_2018_862_civlii_jo",
+  "violences_2021_894_civlii_source",
+  "violences_2021_894_civlii_jo",
+  "prevoyance_sociale_1999_477_civlii_source",
+  "prevoyance_sociale_1999_477_civlii_jo",
+  "cci_1977_civlii_source",
   "arbitrage_1993_671_civlii_source",
+  "arbitrage_1993_671_civlii_jo",
   "juridictions_2016_1110_civlii_source",
+  "juridictions_2016_1110_civlii_jo",
   "petits_litiges_2015_904_civlii_source",
+  "petits_litiges_2015_904_civlii_jo",
   "mediation_2014_389_civlii_source",
+  "mediation_2014_389_civlii_jo",
   "commissaires_justice_2018_974_civlii_source",
   "commissaires_justice_2018_974_civlii_jo",
   "code_investissements_2018_646_civlii_source",
   "code_investissements_2018_646_civlii_jo",
   "corruption_2013_660_civlii_source",
+  "corruption_2013_660_civlii_jo",
   "dec_ohada_au_droit-commercial-general",
   "dec_ohada_au_droit-des-societes-commerciales-et-du-gie",
   "dec_ohada_au_procedures-collectives-dapurement-du-passif",
@@ -326,7 +245,18 @@
   "dec_ohada_au_contrats-de-transport-de-marchandises-par-route",
   "dec_ohada_au_acte-uniforme-relatif-au-droit-comptable-et-a-linf",
   "dec_ohada_au_organisation-des-suretes",
-  "dec_ohada_au_traite-portant-revision-du-traite-relatif-a-lharmo"
+  "dec_ohada_au_traite-portant-revision-du-traite-relatif-a-lharmo",
+  "ohada_audcg_2010",
+  "ohada_auscgie_2014",
+  "ohada_aupcap_2015",
+  "ohada_aua_2017",
+  "ohada_aus_2010",
+  "ohada_aucoop_2010",
+  "ohada_audtmr_2003",
+  "ohada_aua_2017_attachement",
+  "senegal_audcg_2010",
+  "comores_auscgie_2014",
+  "comores_aupcap_2015"
  ],
  "reportes": []
 }
