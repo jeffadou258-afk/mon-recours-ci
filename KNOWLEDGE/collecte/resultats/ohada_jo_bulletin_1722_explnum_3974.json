@@ -1,0 +1,49 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_jo_bulletin_1722_explnum_3974",
+ "date_recuperation": "2026-10-20T12:20:16+00:00",
+ "duree_s": 6.9,
+ "extraction": {
+  "caracteres_natifs": 602209,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_jo_bulletin_1722_explnum_3974.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 240,
+  "pages_sans_texte": 12,
+  "sha256_texte": "sha256:a5696486052f82889ada5444635e0cee5e671b628edaae925f5f373b34c4f79c"
+ },
+ "fichier_pdf": "ohada_jo_bulletin_1722_explnum_3974.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T12:20:16+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 6288638,
+   "sha256": "sha256:143aab11d2fe189d30eb49f125e6457662d0d010f4a3acca48a6c0f695f8b613",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=3974"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 6288638,
+ "pdf": {
+  "CreationDate": "Fri Feb 14 10:11:03 2014 UTC",
+  "Creator": "Adobe InDesign CS6 (Windows)",
+  "ModDate": "Thu May 22 08:38:28 2014 UTC",
+  "PDF version": "1.4",
+  "Pages": "240",
+  "Producer": "Adobe PDF Library 10.0.1",
+  "Title": "Journal Officiel OHADA n° spécial du 04 Février 2014",
+  "indices_ocr_editeur": [],
+  "polices": 26,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:143aab11d2fe189d30eb49f125e6457662d0d010f4a3acca48a6c0f695f8b613",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/doc_num.php?explnum_id=3974",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=3974",
+ "version_ocr": 1
+}

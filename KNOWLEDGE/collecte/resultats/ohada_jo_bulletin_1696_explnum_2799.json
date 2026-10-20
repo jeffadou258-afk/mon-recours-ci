@@ -1,0 +1,23 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_jo_bulletin_1696_explnum_2799",
+ "date_recuperation": "2026-10-20T12:20:10+00:00",
+ "duree_s": 5.9,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T12:20:10+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 99614721,
+   "sha256": null,
+   "statut": "TROP_VOLUMINEUX",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=2799"
+  }
+ ],
+ "http": 200,
+ "octets": 99614721,
+ "statut": "TROP_VOLUMINEUX",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/doc_num.php?explnum_id=2799",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=2799"
+}

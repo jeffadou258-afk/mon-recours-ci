@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-20T12:06:20+00:00",
+ "execution": "2026-10-20T12:20:10+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -18,16 +18,12 @@
  },
  "traites": [
   {
-   "cle": "dec_biblio_ohada_bulletin_1561",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_jo_bulletin_1696_explnum_2799",
+   "statut": "TROP_VOLUMINEUX"
   },
   {
-   "cle": "dec_biblio_ohada_bulletin_1696",
-   "statut": "DECOUVERTE"
-  },
-  {
-   "cle": "dec_biblio_ohada_bulletin_1722",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_jo_bulletin_1722_explnum_3974",
+   "statut": "TELECHARGE"
   }
  ],
  "ignores": [
@@ -281,7 +277,10 @@
   "ohada_jo_aupc_2015_explnum_19",
   "dec_biblio_ohada_notice_1881",
   "refworld_etat_civil_2018_862",
-  "dec_faolex_notice_210897"
+  "dec_faolex_notice_210897",
+  "dec_biblio_ohada_bulletin_1561",
+  "dec_biblio_ohada_bulletin_1696",
+  "dec_biblio_ohada_bulletin_1722"
  ],
  "reportes": []
 }
