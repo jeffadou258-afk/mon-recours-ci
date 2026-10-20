@@ -48,6 +48,19 @@ BRANCHE_ARCHIVE = "corpus/archives-pdf"
 
 CONFIANCE_OCR_MINIMALE = 75.0
 DENSITE_MINIMALE = 300      # caractères par page, en moyenne, pour un texte de loi
+# Part minimale de caractères accentués dans un « calque texte » français.
+# Mesures : calque sain 2019-576 = 3,28 % ; JO OHADA 2014 (AUSCGIE) = 0,21 %,
+# avec « Ie » pour « le » et « Btat » pour « État ». Un calque sous ce seuil n'est
+# pas une lecture : il doit passer par l'OCR, jamais alimenter une citation.
+ACCENTS_MINIMAUX = 0.01
+MOTIF_ACCENTS = re.compile(r"[éèêëàâäçîïôöùûüÿœæÉÈÊËÀÂÄÇÎÏÔÖÙÛÜŒÆ]")
+
+
+def taux_accentue(texte):
+    """Part de caractères accentués — santé d'un calque texte français."""
+    if not texte:
+        return 0.0
+    return len(MOTIF_ACCENTS.findall(texte)) / float(len(texte))
 
 
 def lire_json(chemin, defaut=None):
@@ -196,6 +209,18 @@ def controler_document(source, resultat):
     else:
         texte, methode = natif, "CALQUE_TEXTE"
     confiance = extraction.get("confiance_ocr_moyenne")
+    # Un calque DENSE mais ILLISIBLE n'est pas une lecture. Sans ce contrôle, un PDF
+    # dont la couche texte a été produite par un mauvais encodeur était classé
+    # CALQUE_TEXTE, indexé, et promu VERIFIE sur la seule couverture des numéros
+    # (cas mesuré : JO OHADA 2014, 0,21 % de caractères accentués).
+    if methode == "CALQUE_TEXTE" and pages >= 3:
+        qualite = taux_accentue(natif)
+        if qualite < ACCENTS_MINIMAUX:
+            avertissements.append(
+                "calque texte dégradé (%.2f %% de caractères accentués, seuil %.1f %%) : "
+                "OCR requis, ce texte ne peut pas soutenir une citation"
+                % (100 * qualite, 100 * ACCENTS_MINIMAUX))
+            methode = "OCR_REQUIS"
     if methode.startswith("OCR_TESSERACT"):
         if confiance is None:
             motifs.append("OCR sans mesure de confiance")

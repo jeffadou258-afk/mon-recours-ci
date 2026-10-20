@@ -303,13 +303,23 @@ class TestRobustesseDesFormulations(BaseConversation):
         _, donnees = self.parcours(
             "MULTI", "Je me suis porté caution pour la dette d'une société commerciale.")
         reponse = donnees["reponse"]
-        textes = {s["numero_texte"] for s in reponse["sections"]["6_sources"]}
+        sources = reponse["sections"]["6_sources"]
+        textes = {s["numero_texte"] for s in sources}
         # Comportement CORRIGÉ le 19/10/2026 : ce test exigeait aussi le dépôt de
         # garantie locatif (art. 416), servi à tort à cause du mot « caution ».
         # Un cautionnement donné pour la dette d'une société relève des sûretés
         # OHADA ; le domaine le mieux classé l'emporte (catalogue.pour_demande).
-        self.assertEqual(textes, {None}, "seul l'acte uniforme OHADA (sans numéro de loi)")
         self.assertNotIn("2019-576", textes, "le dépôt de garantie locatif ne doit pas être servi")
+        # Les actes uniformes OHADA ne portent pas de numéro de loi ivoirienne. Le
+        # moteur les identifie par un symbole interne (AUSCGIE-2014, AUSCOOP-2010,
+        # AUPCAP-2015, AUPSRVE-2023) ou par None pour les actes non symbolisés.
+        # Depuis l'intégration de l'AUSCGIE (20/10/2026), l'ensemble n'est plus {None}.
+        self.assertTrue(textes, "une question sur un cautionnement doit citer au moins un texte")
+        for texte in textes:
+            if texte is None:
+                continue
+            self.assertRegex(texte, r"^AU[A-Z]*-?\d{4}$",
+                             "identifiant d'acte uniforme attendu, obtenu %r" % (texte,))
 
 
 class TestAucuneAffirmationSansSource(BaseConversation):
