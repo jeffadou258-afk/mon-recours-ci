@@ -1,0 +1,48 @@
+{
+ "categorie_source": "SECONDAIRE_AUTRE",
+ "cle": "senegal_audcg_2010",
+ "date_recuperation": "2026-10-20T10:26:32+00:00",
+ "duree_s": 3.4,
+ "extraction": {
+  "caracteres_natifs": 186560,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/senegal_audcg_2010.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "source secondaire : pas d'OCR (gain de temps) — le texte natif suffit au recoupement ou la source est écartée",
+  "pages": 78,
+  "pages_sans_texte": 1,
+  "sha256_texte": "sha256:477fe10a9dc092e265e123ec01ff3e5e6b0e3ed45110c9b5a66047c842d20517"
+ },
+ "fichier_pdf": "senegal_audcg_2010.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:32+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 210778,
+   "sha256": "sha256:9c5648a34994140a8487dfd3257733d1799bd44384fccbb315a8d332aed0f092",
+   "statut": "TELECHARGE",
+   "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-portant-sur-le-droit-commercial-general-lome-15102010.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 210778,
+ "pdf": {
+  "CreationDate": "Tue Mar  8 17:21:30 2011 UTC",
+  "Creator": "QuarkXPress(tm) 6.1",
+  "ModDate": "Sat Sep  1 09:40:05 2012 UTC",
+  "PDF version": "1.6",
+  "Pages": "78",
+  "Producer": "QuarkXPress(tm) 6.1",
+  "indices_ocr_editeur": [],
+  "polices": 13,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:9c5648a34994140a8487dfd3257733d1799bd44384fccbb315a8d332aed0f092",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-portant-sur-le-droit-commercial-general-lome-15102010.pdf",
+ "url_finale": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-portant-sur-le-droit-commercial-general-lome-15102010.pdf",
+ "version_ocr": 1
+}

@@ -1,0 +1,48 @@
+{
+ "categorie_source": "SECONDAIRE_AUTRE",
+ "cle": "comores_auscgie_2014",
+ "date_recuperation": "2026-10-20T10:26:35+00:00",
+ "duree_s": 5.7,
+ "extraction": {
+  "caracteres_natifs": 573473,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/comores_auscgie_2014.txt",
+  "ocr_force": false,
+  "pages": 219,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:312f165620435a689453dcb6eeab997f921946168360f0494c925766dddf99b0"
+ },
+ "fichier_pdf": "comores_auscgie_2014.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:35+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 1106374,
+   "sha256": "sha256:c6fa3c5ecbd54041d70b98713bdb84f045259ba6e025378943acad5ef2b1c216",
+   "statut": "TELECHARGE",
+   "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2014-droit-societes-commerciales-gie.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1106374,
+ "pdf": {
+  "CreationDate": "Mon Jul 12 13:33:13 2021 UTC",
+  "Creator": "PScript5.dll Version 5.2.2",
+  "ModDate": "Mon Jul 12 13:34:49 2021 UTC",
+  "PDF version": "1.5",
+  "Pages": "219",
+  "Producer": "Acrobat Distiller 10.1.1 (Windows)",
+  "Title": "OHADA - Acte uniforme relatif au droit des societes commerciales et du groupement d’interet economique du 17 avril 1997, revise le 30 janvier 2014 (www.droit-afrique.com)",
+  "indices_ocr_editeur": [],
+  "polices": 9,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:c6fa3c5ecbd54041d70b98713bdb84f045259ba6e025378943acad5ef2b1c216",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2014-droit-societes-commerciales-gie.pdf",
+ "url_finale": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2014-droit-societes-commerciales-gie.pdf",
+ "version_ocr": 1
+}

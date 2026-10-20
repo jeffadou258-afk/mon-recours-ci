@@ -1,0 +1,51 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_aus_2010",
+ "date_recuperation": "2026-10-20T10:26:19+00:00",
+ "duree_s": 3.8,
+ "extraction": {
+  "caracteres_natifs": 58,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_aus_2010.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 58,
+  "pages_sans_texte": 58,
+  "sha256_texte": "sha256:700ee08145cf333b7cbf03af242da5a4c44e2054b5b544afead73c487f41321a"
+ },
+ "fichier_pdf": "ohada_aus_2010.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:19+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 798674,
+   "sha256": "sha256:e0006cdcc6d61447613fd7c2330116c97d66d8ef0655a240828cc70c90be342c",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=483"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 798674,
+ "pdf": {
+  "CreationDate": "Thu Jan 19 08:45:24 2012 UTC",
+  "Creator": "EPSON GT-S80",
+  "ModDate": "Thu Jan 19 08:50:49 2012 UTC",
+  "PDF version": "1.4",
+  "Pages": "58",
+  "Producer": "PDFScanLib v1.2.2 d'Adobe Acrobat 10.1.1",
+  "Title": "Acte uniforme portant organisation des sûretés",
+  "indices_ocr_editeur": [
+   "producteur : EPSON"
+  ],
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:e0006cdcc6d61447613fd7c2330116c97d66d8ef0655a240828cc70c90be342c",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=483",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=483",
+ "version_ocr": 1
+}

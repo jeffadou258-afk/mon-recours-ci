@@ -1,0 +1,51 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_aua_2017",
+ "date_recuperation": "2026-10-20T10:26:16+00:00",
+ "duree_s": 3.2,
+ "extraction": {
+  "caracteres_natifs": 27,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_aua_2017.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 27,
+  "pages_sans_texte": 27,
+  "sha256_texte": "sha256:f9310f12de2021bb0b84786e61334a1d1f4d786b01ece77919e4d18eaee5bfda"
+ },
+ "fichier_pdf": "ohada_aua_2017.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:16+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 714150,
+   "sha256": "sha256:e718cc8d8a7cbeac3559e62fa35898e005be58a8aca219f4b8ad2c26532ca8a4",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=480"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 714150,
+ "pdf": {
+  "CreationDate": "Thu Jan 19 09:43:04 2012 UTC",
+  "Creator": "EPSON GT-S80",
+  "ModDate": "Thu Jan 19 10:15:17 2012 UTC",
+  "PDF version": "1.4",
+  "Pages": "27",
+  "Producer": "PDFScanLib v1.2.2 d'Adobe Acrobat 10.1.1",
+  "Title": "Acte uniforme relatif au Droit de l'arbitrage - Règlement d'arbitrage de la Cour Commune de Justice et d'Arbitrage de l'OHADA",
+  "indices_ocr_editeur": [
+   "producteur : EPSON"
+  ],
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:e718cc8d8a7cbeac3559e62fa35898e005be58a8aca219f4b8ad2c26532ca8a4",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=480",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=480",
+ "version_ocr": 1
+}

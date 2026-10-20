@@ -1,0 +1,51 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_aucoop_2010",
+ "date_recuperation": "2026-10-20T10:26:23+00:00",
+ "duree_s": 3.7,
+ "extraction": {
+  "caracteres_natifs": 94,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_aucoop_2010.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 94,
+  "pages_sans_texte": 94,
+  "sha256_texte": "sha256:fea64d282600c823395d130e79d3a4ee04145a5beb87c4c9bec5d0c23489284d"
+ },
+ "fichier_pdf": "ohada_aucoop_2010.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:23+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 1392392,
+   "sha256": "sha256:d62677df23010b0b5f45c439ded5d1ab7a55f2c1d044b979264cd9718853e4c3",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=487"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1392392,
+ "pdf": {
+  "CreationDate": "Thu Jan 19 08:53:07 2012 UTC",
+  "Creator": "EPSON GT-S80",
+  "ModDate": "Thu Jan 19 08:58:13 2012 UTC",
+  "PDF version": "1.4",
+  "Pages": "94",
+  "Producer": "PDFScanLib v1.2.2 d'Adobe Acrobat 10.1.1",
+  "Title": "Acte uniforme relatif au Droit des sociétés coopératives",
+  "indices_ocr_editeur": [
+   "producteur : EPSON"
+  ],
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:d62677df23010b0b5f45c439ded5d1ab7a55f2c1d044b979264cd9718853e4c3",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=487",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=487",
+ "version_ocr": 1
+}

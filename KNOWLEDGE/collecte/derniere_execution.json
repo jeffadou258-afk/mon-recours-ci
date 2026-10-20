@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-20T10:17:06+00:00",
+ "execution": "2026-10-20T10:25:41+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -17,58 +17,6 @@
   ]
  },
  "traites": [
-  {
-   "cle": "mef_code_travail_2015_532",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_ord_2021_902_travail",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_jo_code_environnement_2023",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_jo_code_eau_2023",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_code_hygiene_salubrite",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_loti_2014_812",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_foncier_rural_2019_868",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_loi_finances_2024",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_annexe_fiscale_2024",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_code_maritime_2017_442",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "mef_echanges_electroniques_2017_500",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "oapi_accord_bangui_fr",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "who_code_prevoyance_sociale_99_477",
-   "statut": "TELECHARGE"
-  },
   {
    "cle": "etat_civil_2018_862_civlii_source",
    "statut": "ECHEC_HTTP"
@@ -98,100 +46,68 @@
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "arbitrage_1993_671_civlii_source",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "arbitrage_1993_671_civlii_jo",
    "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "juridictions_2016_1110_civlii_source",
-   "statut": "TELECHARGE"
   },
   {
    "cle": "juridictions_2016_1110_civlii_jo",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "petits_litiges_2015_904_civlii_source",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "petits_litiges_2015_904_civlii_jo",
    "statut": "ECHEC_HTTP"
-  },
-  {
-   "cle": "mediation_2014_389_civlii_source",
-   "statut": "TELECHARGE"
   },
   {
    "cle": "mediation_2014_389_civlii_jo",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "commissaires_justice_2018_974_civlii_source",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "commissaires_justice_2018_974_civlii_jo",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "code_investissements_2018_646_civlii_source",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "code_investissements_2018_646_civlii_jo",
-   "statut": "TELECHARGE"
-  },
-  {
-   "cle": "corruption_2013_660_civlii_source",
-   "statut": "TELECHARGE"
-  },
-  {
    "cle": "corruption_2013_660_civlii_jo",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_ohada_au_droit-commercial-general",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_audcg_2010",
+   "statut": "TELECHARGE"
   },
   {
-   "cle": "dec_ohada_au_droit-des-societes-commerciales-et-du-gie",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_auscgie_2014",
+   "statut": "TELECHARGE"
   },
   {
-   "cle": "dec_ohada_au_procedures-collectives-dapurement-du-passif",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_aupcap_2015",
+   "statut": "TELECHARGE"
   },
   {
-   "cle": "dec_ohada_au_droit-de-larbitrage",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_aua_2017",
+   "statut": "TELECHARGE"
   },
   {
-   "cle": "dec_ohada_au_acte-uniforme-relatif-a-la-mediation",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_aus_2010",
+   "statut": "TELECHARGE"
   },
   {
-   "cle": "dec_ohada_au_droit-des-societes-cooperatives",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_aucoop_2010",
+   "statut": "TELECHARGE"
   },
   {
-   "cle": "dec_ohada_au_contrats-de-transport-de-marchandises-par-route",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_audtmr_2003",
+   "statut": "TELECHARGE"
   },
   {
-   "cle": "dec_ohada_au_acte-uniforme-relatif-au-droit-comptable-et-a-linf",
-   "statut": "DECOUVERTE"
+   "cle": "ohada_aua_2017_attachement",
+   "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_ohada_au_organisation-des-suretes",
-   "statut": "DECOUVERTE"
+   "cle": "senegal_audcg_2010",
+   "statut": "TELECHARGE"
   },
   {
-   "cle": "dec_ohada_au_traite-portant-revision-du-traite-relatif-a-lharmo",
-   "statut": "DECOUVERTE"
+   "cle": "comores_auscgie_2014",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "comores_aupcap_2015",
+   "statut": "TELECHARGE"
   }
  ],
  "ignores": [
@@ -378,7 +294,39 @@
   "dec_economie_codes_sectoriels",
   "dec_cndj_biblio_travail",
   "dec_oapi_bangui",
-  "dec_cima_textes"
+  "dec_cima_textes",
+  "mef_code_travail_2015_532",
+  "mef_ord_2021_902_travail",
+  "mef_jo_code_environnement_2023",
+  "mef_jo_code_eau_2023",
+  "mef_code_hygiene_salubrite",
+  "mef_loti_2014_812",
+  "mef_foncier_rural_2019_868",
+  "mef_loi_finances_2024",
+  "mef_annexe_fiscale_2024",
+  "mef_code_maritime_2017_442",
+  "mef_echanges_electroniques_2017_500",
+  "oapi_accord_bangui_fr",
+  "who_code_prevoyance_sociale_99_477",
+  "arbitrage_1993_671_civlii_source",
+  "juridictions_2016_1110_civlii_source",
+  "petits_litiges_2015_904_civlii_source",
+  "mediation_2014_389_civlii_source",
+  "commissaires_justice_2018_974_civlii_source",
+  "commissaires_justice_2018_974_civlii_jo",
+  "code_investissements_2018_646_civlii_source",
+  "code_investissements_2018_646_civlii_jo",
+  "corruption_2013_660_civlii_source",
+  "dec_ohada_au_droit-commercial-general",
+  "dec_ohada_au_droit-des-societes-commerciales-et-du-gie",
+  "dec_ohada_au_procedures-collectives-dapurement-du-passif",
+  "dec_ohada_au_droit-de-larbitrage",
+  "dec_ohada_au_acte-uniforme-relatif-a-la-mediation",
+  "dec_ohada_au_droit-des-societes-cooperatives",
+  "dec_ohada_au_contrats-de-transport-de-marchandises-par-route",
+  "dec_ohada_au_acte-uniforme-relatif-au-droit-comptable-et-a-linf",
+  "dec_ohada_au_organisation-des-suretes",
+  "dec_ohada_au_traite-portant-revision-du-traite-relatif-a-lharmo"
  ],
  "reportes": []
 }

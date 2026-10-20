@@ -1,0 +1,48 @@
+{
+ "categorie_source": "SECONDAIRE_AUTRE",
+ "cle": "comores_aupcap_2015",
+ "date_recuperation": "2026-10-20T10:26:41+00:00",
+ "duree_s": 3.0,
+ "extraction": {
+  "caracteres_natifs": 304063,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/comores_aupcap_2015.txt",
+  "ocr_force": false,
+  "pages": 110,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:8566d5d7a1190e5ff01875c1025a56e555883bb198955e95fa3b3970be1a3f19"
+ },
+ "fichier_pdf": "comores_aupcap_2015.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:41+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 642027,
+   "sha256": "sha256:b513227ce72cd15f7aac0b2f0aae34f75146daa0c9eb34a6f6b745604b05c46c",
+   "statut": "TELECHARGE",
+   "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2015-procedures-collectives.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 642027,
+ "pdf": {
+  "CreationDate": "Fri Sep  9 09:43:12 2016 UTC",
+  "Creator": "PScript5.dll Version 5.2.2",
+  "ModDate": "Fri Sep  9 09:44:56 2016 UTC",
+  "PDF version": "1.5",
+  "Pages": "110",
+  "Producer": "Acrobat Distiller 10.1.1 (Windows)",
+  "Title": "OHADA - Acte uniforme 2015 portant organisation des procedures collectives d'apurement du passif (www.droit-afrique.com)",
+  "indices_ocr_editeur": [],
+  "polices": 8,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:b513227ce72cd15f7aac0b2f0aae34f75146daa0c9eb34a6f6b745604b05c46c",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2015-procedures-collectives.pdf",
+ "url_finale": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2015-procedures-collectives.pdf",
+ "version_ocr": 1
+}

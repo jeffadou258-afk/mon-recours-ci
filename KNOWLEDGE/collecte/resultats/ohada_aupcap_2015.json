@@ -1,0 +1,51 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_aupcap_2015",
+ "date_recuperation": "2026-10-20T10:26:12+00:00",
+ "duree_s": 3.8,
+ "extraction": {
+  "caracteres_natifs": 41,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_aupcap_2015.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 41,
+  "pages_sans_texte": 41,
+  "sha256_texte": "sha256:67b60c5791f3c52e4042c166b98fced0d2eac3a8ee55310f1ee330cce1dccb27"
+ },
+ "fichier_pdf": "ohada_aupcap_2015.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:12+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 1627342,
+   "sha256": "sha256:b6daa9eae1f9f8632bd71cbde2290fc5f5a9ec1f91ed39f4268ffad00e032fa5",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=484"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1627342,
+ "pdf": {
+  "CreationDate": "Thu Jan 19 09:32:21 2012 UTC",
+  "Creator": "EPSON GT-S80",
+  "ModDate": "Thu Jan 19 09:41:21 2012 UTC",
+  "PDF version": "1.4",
+  "Pages": "41",
+  "Producer": "PDFScanLib v1.2.2 d'Adobe Acrobat 10.1.1",
+  "Title": "Acte uniforme portant organisation des procédures collectives d'apurement du passif",
+  "indices_ocr_editeur": [
+   "producteur : EPSON"
+  ],
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:b6daa9eae1f9f8632bd71cbde2290fc5f5a9ec1f91ed39f4268ffad00e032fa5",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=484",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=484",
+ "version_ocr": 1
+}

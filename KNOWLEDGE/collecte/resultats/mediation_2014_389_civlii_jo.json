@@ -1,11 +1,20 @@
 {
  "categorie_source": "SECONDAIRE_FAC_SIMILE",
  "cle": "mediation_2014_389_civlii_jo",
- "date_recuperation": "2026-10-20T10:18:50+00:00",
- "duree_s": 0.6,
+ "date_recuperation": "2026-10-20T10:26:00+00:00",
+ "duree_s": 2.0,
  "historique": [
   {
    "date_recuperation": "2026-10-20T10:18:50+00:00",
+   "erreur": null,
+   "http": 404,
+   "octets": 0,
+   "sha256": null,
+   "statut": "ECHEC_HTTP",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27/publication"
+  },
+  {
+   "date_recuperation": "2026-10-20T10:26:00+00:00",
    "erreur": null,
    "http": 404,
    "octets": 0,

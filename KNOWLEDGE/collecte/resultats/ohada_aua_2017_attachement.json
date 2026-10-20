@@ -1,0 +1,23 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_aua_2017_attachement",
+ "date_recuperation": "2026-10-20T10:26:30+00:00",
+ "duree_s": 2.5,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:30+00:00",
+   "erreur": null,
+   "http": 404,
+   "octets": 0,
+   "sha256": null,
+   "statut": "ECHEC_HTTP",
+   "url": "https://www.ohada.org/attachments/article/2290/Acte-Uniforme-relatif-au-droit-d-arbitrage-2017.pdf"
+  }
+ ],
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/attachments/article/2290/Acte-Uniforme-relatif-au-droit-d-arbitrage-2017.pdf",
+ "url_finale": "https://www.ohada.org/attachments/article/2290/Acte-Uniforme-relatif-au-droit-d-arbitrage-2017.pdf"
+}

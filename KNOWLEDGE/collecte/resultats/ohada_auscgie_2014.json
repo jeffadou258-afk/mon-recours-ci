@@ -1,0 +1,51 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "ohada_auscgie_2014",
+ "date_recuperation": "2026-10-20T10:26:08+00:00",
+ "duree_s": 4.6,
+ "extraction": {
+  "caracteres_natifs": 93,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/ohada_auscgie_2014.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 93,
+  "pages_sans_texte": 93,
+  "sha256_texte": "sha256:abf1531c454780c33bf909016661fbc0c26b65f01929c85ca0414c72b7d5ef87"
+ },
+ "fichier_pdf": "ohada_auscgie_2014.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:26:08+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 2969905,
+   "sha256": "sha256:f64658b73e89f54e9504002369af74b02607c8e67028d0e91e1a937b19086344",
+   "statut": "TELECHARGE",
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=486"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 2969905,
+ "pdf": {
+  "CreationDate": "Thu Jan 19 08:26:01 2012 UTC",
+  "Creator": "EPSON GT-S80",
+  "ModDate": "Thu Jan 19 08:36:51 2012 UTC",
+  "PDF version": "1.4",
+  "Pages": "93",
+  "Producer": "PDFScanLib v1.2.2 d'Adobe Acrobat 10.1.1",
+  "Title": "Acte uniforme relatif au droit des sociétés commerciales et du regroupement d'intérêt économique",
+  "indices_ocr_editeur": [
+   "producteur : EPSON"
+  ],
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:f64658b73e89f54e9504002369af74b02607c8e67028d0e91e1a937b19086344",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=486",
+ "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=486",
+ "version_ocr": 1
+}

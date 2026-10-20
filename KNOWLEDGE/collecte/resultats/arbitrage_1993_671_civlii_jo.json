@@ -1,11 +1,20 @@
 {
  "categorie_source": "SECONDAIRE_FAC_SIMILE",
  "cle": "arbitrage_1993_671_civlii_jo",
- "date_recuperation": "2026-10-20T10:18:38+00:00",
- "duree_s": 0.5,
+ "date_recuperation": "2026-10-20T10:25:54+00:00",
+ "duree_s": 2.0,
  "historique": [
   {
    "date_recuperation": "2026-10-20T10:18:38+00:00",
+   "erreur": null,
+   "http": 404,
+   "octets": 0,
+   "sha256": null,
+   "statut": "ECHEC_HTTP",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27/publication"
+  },
+  {
+   "date_recuperation": "2026-10-20T10:25:54+00:00",
    "erreur": null,
    "http": 404,
    "octets": 0,
