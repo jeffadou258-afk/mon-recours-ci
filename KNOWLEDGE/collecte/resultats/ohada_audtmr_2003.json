@@ -56,6 +56,49 @@
   "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
   "sha256_ocr": "sha256:fc908889cecd9b651fb8e822eb42c0d6eddb733c1db77e2ce6033849f0d281bc"
  },
+ "extraction_locale_fast": {
+  "confiance_ocr_moyenne": 72.8,
+  "confiance_par_page": {
+   "1": 81.6,
+   "10": 71.1,
+   "11": 61.3,
+   "12": 83.0,
+   "13": 84.2,
+   "14": 75.9,
+   "15": 77.4,
+   "16": 81.4,
+   "17": 70.8,
+   "18": 74.5,
+   "19": 35.0,
+   "2": 77.9,
+   "20": 60.3,
+   "21": 32.2,
+   "3": 81.4,
+   "4": 90.0,
+   "5": 84.4,
+   "6": 77.1,
+   "7": 75.9,
+   "8": 79.7,
+   "9": 74.5
+  },
+  "date": "2026-10-20T11:24:36+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/ohada_audtmr_2003.ocr_fast.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_fast fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 21,
+  "pages_ocr_faibles": [
+   11,
+   19,
+   20,
+   21
+  ],
+  "pdf_verifie": "sha256:be42dc8a0e85a969668dcfc80039f6ab717c857a6331cb47763fda581673f161",
+  "psm": 3,
+  "sha256_modele": "sha256:ced037562e8c80c13122dece28dd477d399af80911a28791a66a63ac1e3445ca",
+  "sha256_ocr": "sha256:630cd2bdcc12c47fa1e78bfa06116f75d6950e8eb891b00171befc125530e0c3"
+ },
  "fichier_pdf": "ohada_audtmr_2003.pdf",
  "historique": [
   {

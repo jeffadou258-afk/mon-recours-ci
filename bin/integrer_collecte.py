@@ -537,6 +537,61 @@ def officialiser(cles=None):
 
 _NOMBRE = re.compile(r"\d+")
 
+# ---------------------------------------------------------------------------
+# Lisibilité d'un article OCR (20/10/2026)
+# ---------------------------------------------------------------------------
+# Deux lectures tesseract d'une page très dégradée peuvent CONCORDER dans
+# l'erreur (cas réel : page 2 de l'exemplaire mffe.ci de la loi 2018-862,
+# « [Les aotes sont imeonits aur Les nepistnes »). Un modèle de trigrammes de
+# caractères, appris sur les textes NATIFS du corpus (aucun OCR), mesure la
+# vraisemblance du texte : seuils réglés sur des cas vérifiés à l'image.
+SEUIL_LISIBILITE = -2.35
+SEUIL_LISIBILITE_DOUTEUSE = -2.2
+SEUIL_VOCABULAIRE = 0.75
+_MODELE_LISIBILITE = None
+
+
+def _modele_lisibilite():
+    global _MODELE_LISIBILITE
+    if _MODELE_LISIBILITE is None:
+        import glob
+        import math  # noqa: F401
+        textes = []
+        inventaire = lire_json(INVENTAIRE, {"documents": []})
+        for d in inventaire["documents"]:
+            if not d.get("indices_ocr_editeur") and (d.get("densite_native_car_par_page") or 0) > 800:
+                chemin = os.path.join(DOSSIER, "textes", d["cle"] + ".txt")
+                if os.path.isfile(chemin):
+                    textes.append(open(chemin, encoding="utf-8").read())
+        for chemin in glob.glob(os.path.join(RACINE, "KNOWLEDGE", "CORPUS", "*", "*.txt")):
+            if ".ocr" not in chemin:
+                textes.append(open(chemin, encoding="utf-8").read())
+        tout = re.sub(r"\s+", " ", " ".join(textes).lower())
+        tri = collections.Counter(tout[i:i + 3] for i in range(len(tout) - 2))
+        bi = collections.Counter(tout[i:i + 2] for i in range(len(tout) - 1))
+        mots = collections.Counter(re.findall(r"[a-zàâäçéèêëîïôöùûüÿœæ]{4,}", tout))
+        _MODELE_LISIBILITE = (tri, bi, len(set(tout)), {m for m, c in mots.items() if c >= 2})
+    return _MODELE_LISIBILITE
+
+
+def lisibilite(texte):
+    """(score trigrammes, part de mots connus) d'un texte ; plus haut = plus lisible."""
+    import math
+    tri, bi, alphabet, vocabulaire = _modele_lisibilite()
+    t = re.sub(r"\s+", " ", (texte or "").lower())
+    if len(t) < 10:
+        return 0.0, 1.0
+    score = sum(math.log((tri[t[i:i + 3]] + 0.1) / (bi[t[i:i + 2]] + 0.1 * alphabet))
+                for i in range(len(t) - 2)) / (len(t) - 2)
+    mots = re.findall(r"[a-zàâäçéèêëîïôöùûüÿœæ]{4,}", t)
+    part = (sum(1 for m in mots if m in vocabulaire) / len(mots)) if mots else 1.0
+    return round(score, 3), round(part, 3)
+
+
+def illisible(texte):
+    score, part = lisibilite(texte)
+    return score < SEUIL_LISIBILITE or (score < SEUIL_LISIBILITE_DOUTEUSE and part < SEUIL_VOCABULAIRE)
+
 
 def _nombres(texte):
     """Suite des nombres d'un article (délais, montants, renvois)."""
@@ -659,7 +714,7 @@ def preparer_ocr(d, inventaire, manifeste):
     comparateur = "+".join(nom for nom, _ in etalons if nom != nom_principal) or None
     second = bool(comparateur)
     articles = dict(candidats)
-    nombres_divergents, nombres_contestes = [], {}
+    nombres_divergents, nombres_contestes, illisibles = [], {}, []
     if second:
         confiance, retenus = {}, {}
         lectures_scan = [(nom, arts) for nom, _, arts, _, _ in lectures]
@@ -684,6 +739,10 @@ def preparer_ocr(d, inventaire, manifeste):
                         continue
                     if meilleur is None or valeur > meilleur[0]:
                         meilleur = (valeur, texte, nom_l)
+            if meilleur and illisible(meilleur[1]):
+                illisibles.append(numero)
+                ecartes.append((numero, None))
+                continue
             if meilleur:
                 retenus[numero], confiance[numero] = meilleur[1], round(meilleur[0], 4)
                 provenance[numero] = meilleur[2]
@@ -711,6 +770,7 @@ def preparer_ocr(d, inventaire, manifeste):
             "corrections_en_tetes": corrections_en_tetes, "retraits": retraits,
             "hors_principale": sum(1 for n in articles if provenance.get(n) != nom_principal),
             "nombres_divergents": nombres_divergents, "nombres_contestes": nombres_contestes,
+            "illisibles": illisibles,
             "provenance": provenance}
 
 
@@ -759,6 +819,14 @@ def officialiser_ocr(cles=None, lecture_unique=False):
             bilan.append((d["cle"], "IGNORE", "une seule lecture du scan : seconde lecture requise"))
             continue
         articles, confiance, ecartes = prep["articles"], prep["confiance"], prep["ecartes"]
+        # Couverture vérifiée AVANT toute écriture : un refus d'indexation après coup
+        # laissait une référence munie d'un extrait jamais indexé, contre lequel une
+        # citation aurait pu être « vérifiée » (constaté le 20/10/2026).
+        taux, maximum = corpus.taux_couverture(articles)
+        if taux < corpus.COUVERTURE_MINIMALE:
+            bilan.append((d["cle"], "REFUSE", "couverture %.0f %% des articles 1..%s (minimum %.0f %%) : rien n'est écrit"
+                          % (100 * taux, maximum, 100 * corpus.COUVERTURE_MINIMALE)))
+            continue
         principal, nom_principal, comparateur = prep["principal"], prep["nom_principal"], prep["comparateur"]
         copies, second = prep["copies"], prep["second"]
         corrections_en_tetes, retraits = prep["corrections_en_tetes"], prep["retraits"]
@@ -842,6 +910,7 @@ def officialiser_ocr(cles=None, lecture_unique=False):
             "couverture": indexation["couverture"], "accord_moyen": moyenne,
             "articles_ecartes": [{"numero": n, "similarite": v} for n, v in ecartes],
             "nombres_divergents_ecartes": prep["nombres_divergents"],
+            "illisibles_ecartes": prep["illisibles"],
             "nombres_contestes_a_verifier": prep["nombres_contestes"],
             "lecture_par_article": {n: prep["provenance"].get(n) for n in sorted(articles, key=ocr._tri_numero)}}
         ecrire_json(JOURNAL_OCR, journal)
@@ -877,10 +946,11 @@ def mesurer(cles=None):
                         "couverture": round(taux, 4), "ecartes": len(prep["ecartes"]), "accord_moyen": moyenne,
                         "nombres_divergents": prep["nombres_divergents"],
                         "nombres_contestes": prep["nombres_contestes"],
+                        "illisibles": prep["illisibles"],
                         "integrable": taux >= corpus.COUVERTURE_MINIMALE})
-        print("%-44s %-24s ret=%-4d couv=%.2f max=%-4s ec=%-3d nb≠=%-3d contestés=%-3d accord=%s | %s" % (
+        print("%-44s %-24s ret=%-4d couv=%.2f max=%-4s ec=%-3d nb≠=%-3d illis=%-3d contestés=%-3d accord=%s | %s" % (
             d["cle"][:44], prep["nom_principal"][:24], len(prep["articles"]), taux, maximum, len(prep["ecartes"]),
-            len(prep["nombres_divergents"]), len(prep["nombres_contestes"]), moyenne, (prep["comparateur"] or "AUCUN ÉTALON")[:90]))
+            len(prep["nombres_divergents"]), len(prep["illisibles"]), len(prep["nombres_contestes"]), moyenne, (prep["comparateur"] or "AUCUN ÉTALON")[:90]))
     return mesures
 
 

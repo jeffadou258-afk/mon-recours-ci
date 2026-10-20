@@ -1,6 +1,6 @@
 {
  "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
- "genere_le": "2026-10-20T11:01:26+00:00",
+ "genere_le": "2026-10-20T11:21:20+00:00",
  "outils_collecte": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -18,11 +18,11 @@
   ]
  },
  "totaux": {
-  "entrees_manifeste": 239,
+  "entrees_manifeste": 244,
   "documents_telecharges": 70,
   "pages_de_decouverte_lues": 83,
   "echecs": 0,
-  "non_encore_collectes": 0,
+  "non_encore_collectes": 5,
   "entrees_desactivees": 86,
   "par_statut_controle": {
    "EXPLOITABLE_OFFICIEL": 18,
@@ -87,6 +87,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -127,6 +128,7 @@
    ],
    "avertissements": [],
    "notes": "Texte voté : possiblement non promulgué, à recouper. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -169,6 +171,7 @@
     "même fichier que : ohada_jo_special_aupsrve_2023"
    ],
    "notes": "Fac-similé du JO OHADA sur un site associatif ; l'exemplaire de ohada.org est recherché par découverte.",
+   "version_abrogee": null,
    "doublon_de": [
     "ohada_jo_special_aupsrve_2023"
    ]
@@ -212,6 +215,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": null,
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -254,6 +258,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Édition 2019 : modifications postérieures (règlements du Conseil des ministres) à rechercher. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -299,6 +304,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -342,6 +348,7 @@
    ],
    "avertissements": [],
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -388,6 +395,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -430,6 +438,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -471,6 +480,7 @@
    ],
    "avertissements": [],
    "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -511,6 +521,7 @@
    ],
    "avertissements": [],
    "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -555,6 +566,7 @@
    ],
    "avertissements": [],
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -599,6 +611,7 @@
    ],
    "avertissements": [],
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée). Identité de l'œuvre CIVLII 1972/833 à confirmer à la lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -637,6 +650,7 @@
    ],
    "avertissements": [],
    "notes": "Contenu inconnu : à identifier avant tout usage.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -680,6 +694,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Compilation : aucune disposition n'en sera tirée ; sert à identifier les textes et leurs numéros.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -722,6 +737,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -766,6 +782,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": null,
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -808,6 +825,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -850,6 +868,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Mesures fiscales de l'année : ne remplace pas le Code général des impôts.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -892,6 +911,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -936,6 +956,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -979,6 +1000,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Version d'origine probable : l'ordonnance n° 2021-902 la modifie (entrée suivante).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1022,6 +1044,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1064,6 +1087,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1105,6 +1129,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1147,6 +1172,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Numéro 2023-900 tiré de LEAP (PNUE) : à confirmer à la lecture du JO.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1188,6 +1214,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1226,6 +1253,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1268,6 +1296,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1309,6 +1338,7 @@
    ],
    "avertissements": [],
    "notes": "Numéro et date à lire dans le document.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1352,6 +1382,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1390,6 +1421,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Version de 2016 : la révision constitutionnelle de 2020 n'y figure pas.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1435,6 +1467,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1475,6 +1508,7 @@
     "1 page(s) OCR de confiance < 70 : [2]"
    ],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1519,6 +1553,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1562,6 +1597,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1605,6 +1641,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1650,6 +1687,7 @@
     "même fichier que : successions_2019_573_bice"
    ],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "version_abrogee": null,
    "doublon_de": [
     "successions_2019_573_bice"
    ]
@@ -1691,6 +1729,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1729,6 +1768,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Lien relevé sur la page officielle de l'OAPI (découverte du run 39405665599).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1769,6 +1809,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1807,6 +1848,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1850,6 +1892,7 @@
    ],
    "avertissements": [],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1890,6 +1933,7 @@
    ],
    "avertissements": [],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1930,6 +1974,7 @@
    ],
    "avertissements": [],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -1968,6 +2013,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2012,6 +2058,7 @@
     "2 page(s) OCR de confiance < 70 : [1, 2]"
    ],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2052,6 +2099,7 @@
    ],
    "avertissements": [],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2096,6 +2144,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2137,6 +2186,7 @@
     "2 page(s) OCR de confiance < 70 : [1, 9]"
    ],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2184,6 +2234,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2231,6 +2282,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2271,6 +2323,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2315,6 +2368,11 @@
    ],
    "avertissements": [],
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "version_abrogee": {
+    "le": "2026-10-20",
+    "constat": "Le fichier est l'Acte uniforme arbitrage du 11 mars 1999, remplacé le 23 novembre 2017.",
+    "consequence": "jamais intégré au corpus de référence"
+   },
    "doublon_de": []
   },
   {
@@ -2358,6 +2416,7 @@
    ],
    "avertissements": [],
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2401,6 +2460,11 @@
    ],
    "avertissements": [],
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "version_abrogee": {
+    "le": "2026-10-20",
+    "constat": "Le fichier est l'AUDCG du 17 avril 1997 (JO OHADA n° 1 du 1er octobre 1997), révisé le 15 décembre 2010.",
+    "consequence": "jamais intégré au corpus de référence"
+   },
    "doublon_de": []
   },
   {
@@ -2445,6 +2509,7 @@
    ],
    "avertissements": [],
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2489,6 +2554,11 @@
    ],
    "avertissements": [],
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "version_abrogee": {
+    "le": "2026-10-20",
+    "constat": "Le fichier est l'Acte uniforme procédures collectives du 10 avril 1998 (JO du 1er juillet 1998), remplacé le 10 septembre 2015.",
+    "consequence": "jamais intégré au corpus de référence"
+   },
    "doublon_de": []
   },
   {
@@ -2532,6 +2602,7 @@
    ],
    "avertissements": [],
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2575,6 +2646,11 @@
    ],
    "avertissements": [],
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "version_abrogee": {
+    "le": "2026-10-20",
+    "constat": "Le fichier est l'Acte uniforme sociétés commerciales du 17 avril 1997 (JO du 1er octobre 1997), révisé le 30 janvier 2014.",
+    "consequence": "jamais intégré au corpus de référence"
+   },
    "doublon_de": []
   },
   {
@@ -2616,6 +2692,7 @@
     "même fichier que : aupsrve_2023_jo_ohadacom"
    ],
    "notes": "Version « compressée » publiée par ohada.org.",
+   "version_abrogee": null,
    "doublon_de": [
     "aupsrve_2023_jo_ohadacom"
    ]
@@ -2665,6 +2742,7 @@
     "même fichier que : oneci_jo_special_2019_573"
    ],
    "notes": "JO à plusieurs actes : segment 2019-572 déclaré ; la loi 2019-573 est déclarée dans l'entrée suivante (même fichier). URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": [
     "oneci_jo_special_2019_573"
    ]
@@ -2714,6 +2792,7 @@
     "même fichier que : oneci_jo_special_2019_572_573_575"
    ],
    "notes": "Même fichier que oneci_jo_special_2019_572_573_575, autre segment (doublon d'empreinte attendu). URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": [
     "oneci_jo_special_2019_572_573_575"
    ]
@@ -2758,6 +2837,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2796,6 +2876,7 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Administration d'un autre État partie : étalon de recoupement, jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2836,6 +2917,7 @@
    ],
    "avertissements": [],
    "notes": "Texte parlementaire : peut différer du texte promulgué publié au Journal officiel.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2883,6 +2965,7 @@
     "même fichier que : mffe_successions_2019_573"
    ],
    "notes": null,
+   "version_abrogee": null,
    "doublon_de": [
     "mffe_successions_2019_573"
    ]
@@ -2925,6 +3008,7 @@
    ],
    "avertissements": [],
    "notes": "Lien relevé sur la page LEAP (PNUE) découverte au run 39229656741 ; remplace ivc207091.pdf (404).",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -2969,6 +3053,7 @@
     "1 page(s) OCR de confiance < 70 : [202]"
    ],
    "notes": "Compilation de provenance non indiquée : recoupement seulement.",
+   "version_abrogee": null,
    "doublon_de": []
   },
   {
@@ -3011,6 +3096,7 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "version_abrogee": null,
    "doublon_de": []
   }
  ],
@@ -3515,7 +3601,28 @@
    "liens": 0
   }
  ],
- "non_encore_collectes": [],
+ "non_encore_collectes": [
+  {
+   "cle": "dec_biblio_ohada_notice_1860",
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1860"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_2014",
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+2014"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_2017",
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+2017"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_23",
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+23"
+  },
+  {
+   "cle": "senegal_auscgie_jo_2014",
+   "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-relatif-droit-societes-commerciales-gie-auscgie-jo-fevrier-2014.pdf"
+  }
+ ],
  "desactivees": [
   {
    "cle": "code_penal_2019_574_mffe",
