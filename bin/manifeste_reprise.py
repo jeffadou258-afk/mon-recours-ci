@@ -325,16 +325,100 @@ for n in range(2, 17):
 DESACTIVER_2["famille_minorite_2019_wm"] = "oneci_jo_special_2019_572_573_575"
 
 
+# Segments des Journaux officiels à plusieurs actes (début = en-tête de l'acte,
+# en majuscules et suivi de « du », pour ne pas s'arrêter au sommaire).
+def _acte(numero):
+    annee, rang = numero.split("-")
+    return r"L\s?O\s?I\s?n\s*[°o]\s*%s\s*[-–]\s*%s\s+du" % (annee, rang)
+
+
+SEGMENTS = {
+    "oneci_jo_special_2019_572_573_575": {"debut": _acte("2019-572"), "fin": _acte("2019-573")},
+    "oneci_jo_special_2019_573": {"debut": _acte("2019-573"), "fin": _acte("2019-575")},
+    "mffe_successions_2019_573": {"debut": _acte("2019-573"), "fin": _acte("2019-575")},
+    "mffe_pupille_2015_539": {"debut": _acte("2015-539"), "fin": _acte("2015-540")},
+    "officiel_famille_loi_no_2015_539_du_20_juillet_2015_portant_statu": {"debut": _acte("2015-539"),
+                                                                         "fin": _acte("2015-540")},
+    "mariage_2019_570_faolex": {"debut": _acte("2019-570"), "fin": _acte("2019-571")},
+    "officiel_famille_loi_n_2019_571_du_26_juin_2019_relative_la_filia": {
+        "debut": _acte("2019-571"), "fin": r"D\s?[EÉ]\s?C\s?R\s?E\s?T\s+n\s*[°o]\s*2019\s*[-–]\s*590"},
+}
+# Lectures OCR d'un numéro d'acte démenties par le document lui-même.
+ACTES_OCR_IGNORES = {
+    "mffe_cpp_2018_975": {"2018-9735": "titre lu « 2018-9735 » par l'OCR ; le sommaire du même Journal "
+                                       "officiel porte « Loi n° 2018-975 » et le document ne contient qu'un acte"},
+}
+
+
+# ======================================================================
+# Troisième lot : Actes uniformes OHADA (bibliothèque numérique officielle)
+# ======================================================================
+# Les pages ohada.org/en/<acte>/ renvoient la « version signée » de chaque Acte
+# uniforme vers biblio.ohada.org (bibliothèque numérique de l'OHADA) ; identifiants
+# relevés sur ces pages le 20/10/2026.
+BIBLIO = "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=%d"
+OHADA = "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)"
+AJOUTS_3 = []
+for cle, ident, titre, numero, date, domaines in (
+        ("ohada_audcg_2010", 481, "Acte uniforme portant sur le droit commercial général (Lomé, 15 décembre 2010)",
+         "AUDCG-2010", "2010-12-15", [6]),
+        ("ohada_auscgie_2014", 486, "Acte uniforme révisé relatif au droit des sociétés commerciales et du GIE (Ouagadougou, 30 janvier 2014)",
+         "AUSCGIE-2014", "2014-01-30", [6]),
+        ("ohada_aupcap_2015", 484, "Acte uniforme portant organisation des procédures collectives d'apurement du passif (Grand-Bassam, 10 septembre 2015)",
+         "AUPCAP-2015", "2015-09-10", [6, 23]),
+        ("ohada_aua_2017", 480, "Acte uniforme relatif au droit de l'arbitrage (Conakry, 23 novembre 2017)",
+         "AUA-2017", "2017-11-23", [6, 24]),
+        ("ohada_aus_2010", 483, "Acte uniforme portant organisation des sûretés (Lomé, 15 décembre 2010)",
+         "AUS-2010", "2010-12-15", [23]),
+        ("ohada_aucoop_2010", 487, "Acte uniforme relatif au droit des sociétés coopératives (Lomé, 15 décembre 2010)",
+         "AUSCOOP-2010", "2010-12-15", [6]),
+        ("ohada_audtmr_2003", 479, "Acte uniforme relatif aux contrats de transport de marchandises par route (Yaoundé, 22 mars 2003)",
+         "AUCTMR-2003", "2003-03-22", [13, 6])):
+    AJOUTS_3.append({"cle": cle, "titre": titre, "numero_texte": numero, "date_texte": date, "type_texte": "acte_uniforme",
+                     "autorite": OHADA, "domaines": domaines, "url": BIBLIO % ident,
+                     "categorie_source": "OFFICIEL_ORGANISATION", "mode": "fichier",
+                     "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026)."})
+AJOUTS_3 += [
+    {"cle": "ohada_aua_2017_attachement", "titre": "Acte uniforme relatif au droit de l'arbitrage (2017) — fichier joint ohada.org",
+     "numero_texte": "AUA-2017", "date_texte": "2017-11-23", "type_texte": "acte_uniforme",
+     "autorite": "OHADA — site ohada.org (pièce jointe)", "domaines": [6, 24],
+     "url": "https://www.ohada.org/attachments/article/2290/Acte-Uniforme-relatif-au-droit-d-arbitrage-2017.pdf",
+     "categorie_source": "OFFICIEL_ORGANISATION", "mode": "fichier", "notes": "Relevé sur ohada.org/en/arbitration-law/."},
+    {"cle": "senegal_audcg_2010", "titre": "Acte uniforme portant sur le droit commercial général (republication du ministère de la Justice du Sénégal)",
+     "numero_texte": "AUDCG-2010", "date_texte": "2010-12-15", "type_texte": "acte_uniforme",
+     "autorite": "Ministère de la Justice du Sénégal (État partie OHADA) — republication",
+     "domaines": [6], "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-portant-sur-le-droit-commercial-general-lome-15102010.pdf",
+     "categorie_source": "SECONDAIRE_AUTRE", "mode": "fichier",
+     "notes": "Administration d'un autre État partie : étalon de recoupement, jamais source de référence. " + TROUVE},
+    {"cle": "comores_auscgie_2014", "titre": "Acte uniforme révisé sociétés commerciales et GIE (republication du ministère de la Justice des Comores)",
+     "numero_texte": "AUSCGIE-2014", "date_texte": "2014-01-30", "type_texte": "acte_uniforme",
+     "autorite": "Ministère de la Justice de l'Union des Comores (État partie OHADA) — republication",
+     "domaines": [6], "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2014-droit-societes-commerciales-gie.pdf",
+     "categorie_source": "SECONDAIRE_AUTRE", "mode": "fichier", "notes": "Étalon de recoupement. " + TROUVE},
+    {"cle": "comores_aupcap_2015", "titre": "Acte uniforme procédures collectives d'apurement du passif (republication du ministère de la Justice des Comores)",
+     "numero_texte": "AUPCAP-2015", "date_texte": "2015-09-10", "type_texte": "acte_uniforme",
+     "autorite": "Ministère de la Justice de l'Union des Comores (État partie OHADA) — republication",
+     "domaines": [6, 23], "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2015-procedures-collectives.pdf",
+     "categorie_source": "SECONDAIRE_AUTRE", "mode": "fichier", "notes": "Étalon de recoupement. " + TROUVE},
+]
+
+
 def main():
     manifeste = json.load(open(MANIFESTE, encoding="utf-8"))
     existantes = {s["cle"]: s for s in manifeste["sources"]}
     ajoutees = 0
-    for entree in AJOUTS + AJOUTS_2:
+    for entree in AJOUTS + AJOUTS_2 + AJOUTS_3:
         if entree["cle"] not in existantes:
             entree["ajoutee_le"] = DATE
             manifeste["sources"].append(entree)
             existantes[entree["cle"]] = entree
             ajoutees += 1
+    for cle, segment in SEGMENTS.items():
+        if cle in existantes and existantes[cle].get("segment") != segment:
+            existantes[cle]["segment"] = segment
+    for cle, ignores in ACTES_OCR_IGNORES.items():
+        if cle in existantes:
+            existantes[cle]["actes_ocr_ignores"] = ignores
     desactivees = 0
     for cle, remplacante in list(DESACTIVER.items()) + list(DESACTIVER_2.items()):
         source = existantes.get(cle)

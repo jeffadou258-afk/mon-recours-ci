@@ -151,7 +151,11 @@
    ],
    "url": "https://faolex.fao.org/docs/pdf/ivc208186.pdf",
    "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
-   "mode": "fichier"
+   "mode": "fichier",
+   "segment": {
+    "debut": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*570\\s+du",
+    "fin": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*571\\s+du"
+   }
   },
   {
    "cle": "mariage_2019_570_civlii",
@@ -876,7 +880,11 @@
    "url": "https://famille.gouv.ci/uploads/publications/176937124389.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "segment": {
+    "debut": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*571\\s+du",
+    "fin": "D\\s?[EÉ]\\s?C\\s?R\\s?E\\s?T\\s+n\\s*[°o]\\s*2019\\s*[-–]\\s*590"
+   }
   },
   {
    "cle": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta",
@@ -937,7 +945,11 @@
    "url": "https://famille.gouv.ci/uploads/publications/176936945850.pdf",
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
-   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture."
+   "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture.",
+   "segment": {
+    "debut": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2015\\s*[-–]\\s*539\\s+du",
+    "fin": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2015\\s*[-–]\\s*540\\s+du"
+   }
   },
   {
    "cle": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
@@ -1000,7 +1012,10 @@
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
-   "ocr_force": true
+   "ocr_force": true,
+   "actes_ocr_ignores": {
+    "2018-9735": "titre lu « 2018-9735 » par l'OCR ; le sommaire du même Journal officiel porte « Loi n° 2018-975 » et le document ne contient qu'un acte"
+   }
   },
   {
    "cle": "mffe_code_penal_2019_574",
@@ -1058,7 +1073,11 @@
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
-   "ocr_force": true
+   "ocr_force": true,
+   "segment": {
+    "debut": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*573\\s+du",
+    "fin": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*575\\s+du"
+   }
   },
   {
    "cle": "mffe_traite_2016_1111",
@@ -1140,7 +1159,11 @@
    "categorie_source": "OFFICIEL_PORTAIL_GOUV",
    "mode": "fichier",
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
-   "ocr_force": true
+   "ocr_force": true,
+   "segment": {
+    "debut": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2015\\s*[-–]\\s*539\\s+du",
+    "fin": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2015\\s*[-–]\\s*540\\s+du"
+   }
   },
   {
    "cle": "mffe_adoption",
@@ -1680,8 +1703,8 @@
    "categorie_source": "OFFICIEL_INSTITUTION",
    "mode": "fichier",
    "segment": {
-    "debut": "(?i)LOI\\s+n\\s*[°o]\\s*2019\\s*[-–]\\s*572",
-    "fin": "(?i)LOI\\s+n\\s*[°o]\\s*2019\\s*[-–]\\s*573"
+    "debut": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*572\\s+du",
+    "fin": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*573\\s+du"
    },
    "notes": "JO à plusieurs actes : segment 2019-572 déclaré ; la loi 2019-573 est déclarée dans l'entrée suivante (même fichier). URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
    "ajoutee_le": "2026-10-20"
@@ -1700,8 +1723,8 @@
    "categorie_source": "OFFICIEL_INSTITUTION",
    "mode": "fichier",
    "segment": {
-    "debut": "(?i)LOI\\s+n\\s*[°o]\\s*2019\\s*[-–]\\s*573",
-    "fin": "(?i)LOI\\s+n\\s*[°o]\\s*2019\\s*[-–]\\s*575"
+    "debut": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*573\\s+du",
+    "fin": "L\\s?O\\s?I\\s?n\\s*[°o]\\s*2019\\s*[-–]\\s*575\\s+du"
    },
    "notes": "Même fichier que oneci_jo_special_2019_572_573_575, autre segment (doublon d'empreinte attendu). URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
    "ajoutee_le": "2026-10-20"
@@ -3910,6 +3933,187 @@
    "mode": "decouverte",
    "filtre_liens": "wp-content/uploads/.+\\.pdf",
    "notes": "Page de l'Acte uniforme sur ohada.org : relève le PDF officiel.",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_audcg_2010",
+   "titre": "Acte uniforme portant sur le droit commercial général (Lomé, 15 décembre 2010)",
+   "numero_texte": "AUDCG-2010",
+   "date_texte": "2010-12-15",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=481",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_auscgie_2014",
+   "titre": "Acte uniforme révisé relatif au droit des sociétés commerciales et du GIE (Ouagadougou, 30 janvier 2014)",
+   "numero_texte": "AUSCGIE-2014",
+   "date_texte": "2014-01-30",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=486",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_aupcap_2015",
+   "titre": "Acte uniforme portant organisation des procédures collectives d'apurement du passif (Grand-Bassam, 10 septembre 2015)",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=484",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_aua_2017",
+   "titre": "Acte uniforme relatif au droit de l'arbitrage (Conakry, 23 novembre 2017)",
+   "numero_texte": "AUA-2017",
+   "date_texte": "2017-11-23",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6,
+    24
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=480",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_aus_2010",
+   "titre": "Acte uniforme portant organisation des sûretés (Lomé, 15 décembre 2010)",
+   "numero_texte": "AUS-2010",
+   "date_texte": "2010-12-15",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    23
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=483",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_aucoop_2010",
+   "titre": "Acte uniforme relatif au droit des sociétés coopératives (Lomé, 15 décembre 2010)",
+   "numero_texte": "AUSCOOP-2010",
+   "date_texte": "2010-12-15",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=487",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_audtmr_2003",
+   "titre": "Acte uniforme relatif aux contrats de transport de marchandises par route (Yaoundé, 22 mars 2003)",
+   "numero_texte": "AUCTMR-2003",
+   "date_texte": "2003-03-22",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    13,
+    6
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=479",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_aua_2017_attachement",
+   "titre": "Acte uniforme relatif au droit de l'arbitrage (2017) — fichier joint ohada.org",
+   "numero_texte": "AUA-2017",
+   "date_texte": "2017-11-23",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — site ohada.org (pièce jointe)",
+   "domaines": [
+    6,
+    24
+   ],
+   "url": "https://www.ohada.org/attachments/article/2290/Acte-Uniforme-relatif-au-droit-d-arbitrage-2017.pdf",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Relevé sur ohada.org/en/arbitration-law/.",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "senegal_audcg_2010",
+   "titre": "Acte uniforme portant sur le droit commercial général (republication du ministère de la Justice du Sénégal)",
+   "numero_texte": "AUDCG-2010",
+   "date_texte": "2010-12-15",
+   "type_texte": "acte_uniforme",
+   "autorite": "Ministère de la Justice du Sénégal (État partie OHADA) — republication",
+   "domaines": [
+    6
+   ],
+   "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-portant-sur-le-droit-commercial-general-lome-15102010.pdf",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "mode": "fichier",
+   "notes": "Administration d'un autre État partie : étalon de recoupement, jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "comores_auscgie_2014",
+   "titre": "Acte uniforme révisé sociétés commerciales et GIE (republication du ministère de la Justice des Comores)",
+   "numero_texte": "AUSCGIE-2014",
+   "date_texte": "2014-01-30",
+   "type_texte": "acte_uniforme",
+   "autorite": "Ministère de la Justice de l'Union des Comores (État partie OHADA) — republication",
+   "domaines": [
+    6
+   ],
+   "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2014-droit-societes-commerciales-gie.pdf",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "mode": "fichier",
+   "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "comores_aupcap_2015",
+   "titre": "Acte uniforme procédures collectives d'apurement du passif (republication du ministère de la Justice des Comores)",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "Ministère de la Justice de l'Union des Comores (État partie OHADA) — republication",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2015-procedures-collectives.pdf",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "mode": "fichier",
+   "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
    "ajoutee_le": "2026-10-20"
   }
  ]
