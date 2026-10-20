@@ -38,3 +38,68 @@ Pour `reconstruire_base.py`, reprendre la liste des `--cle` du dernier rapport :
 
 ## Prochaine action recommandée
 Lancer `MONRECOURS_PDF_NON_DISTRIBUES=1 python3 tests/run_all.py` sur `corpus/collecte-autonome` et corriger tout échec avant d'entreprendre autre chose.
+
+---
+
+# Journal de la session Hermes du 20/10/2026 (soir)
+
+## Tests — mesurés, pas repris
+`MONRECOURS_PDF_NON_DISTRIBUES=1 python3 tests/run_all.py` → **485 tests, FAIL=0, ERR=0,
+SKIP=1, SUCCES=484, exit 0** (336 s). Aucun test à corriger après l'intégration d'AUCOOP
+et d'AUPCAP : les 481 annoncés sont devenus 485, tous verts. Le seul test ignoré ne
+teste quelque chose que si le PDF est absent.
+
+## `bin/rapport_couverture.py` — trois défauts corrigés
+1. Il calculait l'inventaire **avant** de lancer la suite : les deux processus se
+   disputaient la base SQLite et le rapport enregistrait des échecs qui n'existaient
+   pas (`FAIL=2 ERR=2` constatés, `0` en exécution isolée). Les tests sont désormais
+   lancés **en premier**.
+2. `MONRECOURS_PDF_NON_DISTRIBUES` n'atteignait ni la suite ni `verifier_integrite()` :
+   le rapport annonçait `ECHEC` et `ECART DETECTE` alors que tout était sain. Le mode
+   est maintenant transmis aux deux, avec `MONRECOURS_PDF_NON_DISTRIBUES=0` pour
+   rétablir le mode strict sur un poste qui possède les PDF.
+3. Il ne conservait que `TESTS=`/`VERDICT=`, jamais **quel** test avait échoué. Le
+   journal complet est écrit dans `KNOWLEDGE/collecte/derniers_tests.log` et chaque
+   échec (nature, test, module, trace) est enregistré dans `RAPPORT_FINAL_MISSION.json`.
+
+## Fiches OHADA — 6 ajoutées (77 → 83)
+`bin/construire_fiches_ohada.py` génère les définitions ; `bin/ajouter_fiches.py` les
+revalide contre la base avant écriture. Les bornes de citation sont **extraites** du
+texte indexé (recherche tolérante aux apostrophes typographiques), jamais retapées.
+
+| Fiche | Article | Situation |
+|---|---|---|
+| `OHADA_AUPCAP_CESSATION` | AUPCAP 1 | entreprise qui ne peut plus payer ses dettes |
+| `OHADA_AUPCAP_SALAIRES` | AUPCAP 95 | salaires impayés en procédure collective |
+| `OHADA_AUSCOOP_DEFINITION` | AUSCOOP 4 | ce qu'est une coopérative |
+| `OHADA_AUSCOOP_PARTS` | AUSCOOP 208 | parts sociales, valeur fixée par les statuts |
+| `OHADA_AUSCOOP_ENGAGEMENTS` | AUSCOOP 62 | augmentation des engagements sans consentement |
+| `OHADA_AUSCOOP_RESERVE` | AUSCOOP 114 | réserve générale sur les excédents |
+
+Toutes sont `PARTIELLEMENT_VERIFIE`, `origine_texte = OCR_AUTO`, `recoupe = False`, et
+leur citation porte l'avertissement de césure OCR (`réu- nies`, `géné- rale`). Aucune
+n'est validée juridiquement. **Il reste 365 articles AUSCOOP et 249 AUPCAP sans fiche** :
+ces six fiches couvrent des situations courantes, pas le texte entier.
+
+## AUSCGIE 2014 — identifié, toujours NON intégré
+`KNOWLEDGE/collecte/textes/ohada_jo_bulletin_1722_explnum_3974.txt` (602 209 caractères
+natifs, pas un scan) est le **JO OHADA spécial du 4 février 2014** contenant l'**AUSCGIE**
+(sociétés commerciales et GIE) et le règlement n°001/2014/CM. Blocage : l'intégration
+exige le PDF local (`integrer_collecte.py` vérifie `integrite_pdf == "OK"` avant toute
+écriture) et `git fetch` de `corpus/archives-pdf` ne se termine pas sur ce poste
+(archive volumineuse). **Ne pas contourner ce garde-fou** : le texte ne doit pas entrer
+en base sans son PDF vérifié.
+
+## Doublon `2019-572` — proposition, aucune suppression
+| | `DOC-A443F2E78D1D` | `DOC-25C3088D557C` |
+|---|---|---|
+| Source | famille.gouv.ci | oneci.ci (republication du JO) |
+| OCR | **refusé, couverture 58 %** | `OCR_EDITEUR`, 157 articles |
+| Rôle | exemplaire mort | **exemplaire utilisable** |
+
+Les deux doivent rester : l'un porte la trace du refus, l'autre le texte. Résolution
+proposée — conserver les deux documents et leurs deux références, et annoter la
+référence du scan refusé pour qu'elle renvoie explicitement à l'exemplaire indexé. Une
+correction par `UPDATE` direct ne survivrait pas à `reconstruire_base.py` : il faut
+passer par le manifeste/journal d'intégration. **Décision à valider par le propriétaire.**
+

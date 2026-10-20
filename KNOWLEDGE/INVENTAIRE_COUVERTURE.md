@@ -1,6 +1,6 @@
 # Inventaire de couverture juridique — Mon Recours CI
 
-Généré le 2026-10-17T02:23:13+00:00 par `bin/rapport_couverture.py`.
+Généré le 2026-10-20T13:26:26+00:00 par `bin/rapport_couverture.py`.
 
 **La réussite des tests ne vaut pas validation juridique par un professionnel.** Un domaine `TERMINE_TECHNIQUEMENT` reste `INCOMPLET` au plan juridique : les deux colonnes sont séparées exprès.
 
@@ -8,17 +8,17 @@ Généré le 2026-10-17T02:23:13+00:00 par `bin/rapport_couverture.py`.
 |---|---|---|---|---|---|---|
 | A | Logement, baux et foncier | `TERMINE_TECHNIQUEMENT` | INCOMPLET | 6 | 2 | 1173 |
 | C | Travail, emploi et relations professionnelles | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
-| B | Famille, couple et enfants | `CORPUS_PARTIEL` | INCOMPLET | 15 | 0 | 191 |
-| D | Entreprises, commerce et activites economiques | `TERMINE_TECHNIQUEMENT` | INCOMPLET | 1 | 1 | 228 |
-| G | Penal, plaintes et procedures judiciaires | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
+| B | Famille, couple et enfants | `CORPUS_PARTIEL` | INCOMPLET | 19 | 0 | 640 |
+| D | Entreprises, commerce et activites economiques | `TERMINE_TECHNIQUEMENT` | INCOMPLET | 4 | 1 | 1146 |
+| G | Penal, plaintes et procedures judiciaires | `CORPUS_PARTIEL` | INCOMPLET | 2 | 0 | 1398 |
 | E | Dettes, argent et consommation | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
 | H | Religion, communautes et associations | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
 | I | Numerique, internet et donnees personnelles | `CORPUS_PARTIEL` | INCOMPLET | 3 | 0 | 179 |
-| F | Administration et documents officiels | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
+| F | Administration et documents officiels | `CORPUS_PARTIEL` | INCOMPLET | 1 | 0 | 165 |
 | J | Transport, accidents et responsabilite civile | `TERMINE_TECHNIQUEMENT` | INCOMPLET | 1 | 1 | 6 |
 | K | Sante et droits des usagers | `BLOQUE_SOURCE` | INCONNU | 0 | 0 | 0 |
 
-**Total** : 26 documents, 1777 articles. Provenance : CALQUE_TEXTE = 1111, OCR_AUTO = 666
+**Total** : 36 documents, 4707 articles. Provenance : CALQUE_TEXTE = 1111, OCR_AUTO = 3596
 
 ## Méthode de comptage
 
@@ -122,7 +122,7 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 
 ## B — Famille, couple et enfants (`famille_mariage_filiation`)
 
-* **Statut technique** : `CORPUS_PARTIEL` — 15 document(s) collecte(s) mais aucun texte integral verifie
+* **Statut technique** : `CORPUS_PARTIEL` — 19 document(s) collecte(s) mais aucun texte integral verifie
 * **Validation juridique** : `REQUISE` · complétude : `INCOMPLET`
 * **Risque** : CRITIQUE quand des enfants ou des personnes vulnerables sont concernes
 * **Intervention humaine** : OBLIGATOIRE
@@ -168,10 +168,14 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 | `DOC-DAFFEFDC4B7D` | 2023-89 | `AUCUNE` | 68 |
 | `DOC-3C674637A31E` | 202-894 | `AUCUNE` | 16 |
 | `DOC-F9B2C53EB909` | 2020-907 | `AUCUNE` | 29 |
-| `DOC-B722D1F51881` | 2019-571 | `CALQUE_TEXTE` | 0 |
+| `DOC-B722D1F51881` | 2019-571 | `OCR_EDITEUR` | 30 |
 | `DOC-A443F2E78D1D` | 2019-572 | `AUCUNE` | 0 |
+| `DOC-340AA7DE365C` | 2019-570 | `OCR_TESSERACT` | 105 |
+| `DOC-3D87C465CA1F` | 2019-573 | `OCR_TESSERACT` | 130 |
+| `DOC-25C3088D557C` | 2019-572 | `OCR_EDITEUR` | 157 |
 | `DOC-6A33514AB7DF` | 2018-862 | `AUCUNE` | 0 |
 | `DOC-AC714CEB4E83` | 2018-863 | `AUCUNE` | 26 |
+| `DOC-9213FE7D7C3F` | 2016-1111 | `OCR_TESSERACT` | 27 |
 | `DOC-30FD07C1A483` | 2015-539 | `AUCUNE` | 0 |
 | `DOC-2CD0D346F0EE` | — | `AUCUNE` | 0 |
 | `DOC-CC2B6457296C` | — | `TEXTE_DE_COMPILATION` | 0 |
@@ -184,7 +188,7 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 
 ## D — Entreprises, commerce et activites economiques (`contrats_dettes_commerce`)
 
-* **Statut technique** : `TERMINE_TECHNIQUEMENT` — 1 document(s), 228 article(s), 1 reference(s) verifiee(s)
+* **Statut technique** : `TERMINE_TECHNIQUEMENT` — 4 document(s), 1146 article(s), 1 reference(s) verifiee(s)
 * **Validation juridique** : `RECOMMANDEE` · complétude : `INCOMPLET`
 * **Risque** : MOYEN
 * **Intervention humaine** : recommandée selon les faits
@@ -222,14 +226,17 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 
 | Document | Référence | Lecture | Articles |
 |---|---|---|---|
+| `DOC-2564CCED2D56` | AUPSRVE-2023 | `OCR_TESSERACT_PARTIEL` | 304 |
+| `DOC-A10C894B4C38` | AUPCAP-2015 | `OCR_EDITEUR` | 249 |
 | `DOC-AB97B11FA7AE` | — | `CALQUE_TEXTE` | 228 |
+| `DOC-23DA52003C6C` | AUSCOOP-2010 | `OCR_TESSERACT` | 365 |
 
 ---
 
 ## G — Penal, plaintes et procedures judiciaires (`penal_procedure_penale`)
 
-* **Statut technique** : `BLOQUE_SOURCE` — aucun texte collecte : 2 source(s) identifiee(s), aucune exploitable
-* **Validation juridique** : `REQUISE` · complétude : `INCONNU`
+* **Statut technique** : `CORPUS_PARTIEL` — 2 document(s) collecte(s) mais aucun texte integral verifie
+* **Validation juridique** : `REQUISE` · complétude : `INCOMPLET`
 * **Risque** : CRITIQUE — liberte individuelle en jeu
 * **Intervention humaine** : OBLIGATOIRE
 
@@ -263,6 +270,13 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 - Code de procedure penale (loi n° 2018-975) : AUCUN exemplaire officiel
 - delais de prescription, de recours et d'appel : non documentes par un texte
 - DOMAINE A RISQUE ELEVE : ne jamais conclure sans avocat
+
+**Documents indexés**
+
+| Document | Référence | Lecture | Articles |
+|---|---|---|---|
+| `DOC-8B8422F272EB` | 2019-574 | `OCR_TESSERACT` | 557 |
+| `DOC-BA9F53E63263` | 2018-975 | `OCR_TESSERACT` | 841 |
 
 ---
 
@@ -376,8 +390,8 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 
 ## F — Administration et documents officiels (`administratif_voies_de_recours`)
 
-* **Statut technique** : `BLOQUE_SOURCE` — aucun texte collecte : 2 source(s) identifiee(s), aucune exploitable
-* **Validation juridique** : `REQUISE` · complétude : `INCONNU`
+* **Statut technique** : `CORPUS_PARTIEL` — 1 document(s) collecte(s) mais aucun texte integral verifie
+* **Validation juridique** : `REQUISE` · complétude : `INCOMPLET`
 * **Risque** : MOYEN — delais de recours pouvant expirer
 * **Intervention humaine** : OBLIGATOIRE
 
@@ -403,6 +417,12 @@ La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHN
 
 - code des procedures administratives : non identifie
 - textes fiscaux : aucun exemplaire collecte (la DGI publie des loi_finances, non collectees)
+
+**Documents indexés**
+
+| Document | Référence | Lecture | Articles |
+|---|---|---|---|
+| `DOC-B1897A009D35` | 2016-886 | `OCR_TESSERACT` | 165 |
 
 ---
 

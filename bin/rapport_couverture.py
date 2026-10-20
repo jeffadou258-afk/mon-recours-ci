@@ -16,6 +16,7 @@ Tous les chiffres viennent de la base et du dossier de tests : rien n'est saisi
 import datetime
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -28,20 +29,81 @@ from core import corpus, couverture  # noqa: E402
 KNOWLEDGE = os.path.join(RACINE, "KNOWLEDGE")
 
 
+JOURNAL_TESTS = os.path.join(KNOWLEDGE, "collecte", "derniers_tests.log")
+_BLOC_ECHEC = re.compile(r"^(FAIL|ERROR): (\S+)[^\n]*\n-+\n(.*?)(?=\n(?:={70}|-{70})|\Z)",
+                         re.S | re.M)
+
+
+def mode_pdf_non_distribues():
+    """Le dépôt ne distribue pas les PDF officiels (redistribution non établie).
+
+    Par défaut on TOLÈRE leur absence, sinon l'intégrité signale un « écart » qui
+    n'en est pas un et le rapport accuse le corpus à tort. Sur un poste qui
+    possède les fichiers, `MONRECOURS_PDF_NON_DISTRIBUES=0` rétablit le mode
+    strict et l'absence devient alors une vraie anomalie.
+    """
+    return os.environ.get("MONRECOURS_PDF_NON_DISTRIBUES", "1") != "0"
+
+
+def _detail_echecs(sortie):
+    """Noms ET détails des tests en échec.
+
+    Le résumé `TESTS=… VERDICT=…` ne dit pas QUEL test a échoué : un rapport qui
+    n'enregistre que le verdict oblige à relancer la suite pour savoir. On
+    conserve donc le journal complet et, pour chaque échec, le nom, le module et
+    les dernières lignes de la trace.
+    """
+    echecs = []
+    for bloc in _BLOC_ECHEC.finditer(sortie):
+        nature, test, corps = bloc.group(1), bloc.group(2), bloc.group(3)
+        lignes = [ligne.strip() for ligne in corps.splitlines() if ligne.strip()]
+        module = ""
+        if "(" in test and test.endswith(")"):
+            module = test[test.index("(") + 1:-1]
+            test = test[:test.index("(")]
+        echecs.append({"nature": nature, "test": test, "module": module,
+                       "detail": " | ".join(lignes[-4:])[:900]})
+    return echecs
+
+
 def executer_tests():
-    """Lance la suite et lit son verdict réel. Ne devine jamais le résultat."""
+    """Lance la suite et lit son verdict réel. Ne devine jamais le résultat.
+
+    Deux précautions apprises à la dure (20/10/2026) :
+
+    * la suite écrit dans la MÊME base SQLite que ce script ; elle est donc
+      lancée AVANT toute ouverture de la base, sinon les deux processus se
+      disputent le verrou et le rapport enregistre des échecs qui n'existent
+      pas en exécution isolée ;
+    * `MONRECOURS_PDF_NON_DISTRIBUES` est transmis explicitement. Sans lui, les
+      tests qui ouvrent un PDF non distribué avec le dépôt échouent, et le
+      rapport conclut à un échec du moteur.
+    """
+    env = dict(os.environ)
+    env["MONRECOURS_PDF_NON_DISTRIBUES"] = "1" if mode_pdf_non_distribues() else "0"
     try:
         resultat = subprocess.run([sys.executable, "tests/run_all.py"], cwd=RACINE,
-                                  capture_output=True, text=True, timeout=900)
+                                  capture_output=True, text=True, timeout=1800, env=env)
     except Exception as erreur:  # noqa: BLE001
         return {"disponible": False, "raison": str(erreur)}
+    sortie = (resultat.stdout or "") + (resultat.stderr or "")
+    try:
+        os.makedirs(os.path.dirname(JOURNAL_TESTS), exist_ok=True)
+        with open(JOURNAL_TESTS, "w", encoding="utf-8") as flux:
+            flux.write(sortie)
+    except OSError:
+        pass
     lignes = {}
-    for ligne in (resultat.stdout or "").splitlines():
+    for ligne in sortie.splitlines():
         if "=" in ligne and ligne.split("=")[0] in ("TESTS", "VERDICT"):
             cle, _, valeur = ligne.partition("=")
             lignes[cle.strip()] = valeur.strip()
+    echecs = _detail_echecs(sortie)
     return {"disponible": True, "exit_code": resultat.returncode,
-            "resume": lignes.get("TESTS"), "verdict": lignes.get("VERDICT")}
+            "resume": lignes.get("TESTS"), "verdict": lignes.get("VERDICT"),
+            "mode_pdf_non_distribues": env["MONRECOURS_PDF_NON_DISTRIBUES"] == "1",
+            "echecs": echecs,
+            "journal": os.path.relpath(JOURNAL_TESTS, RACINE)}
 
 
 def inventaire_markdown(inventaire_courant):
@@ -108,8 +170,13 @@ def inventaire_markdown(inventaire_courant):
 
 
 def main():
-    inventaire_courant = couverture.inventaire()
+    # Les tests d'abord : la suite écrit dans la même base que ce script. Ouvrir la
+    # base avant de la lancer provoquait des échecs par verrou (20/10/2026).
+    # Le mode « PDF non distribués » doit aussi s'appliquer à CE processus : sinon
+    # `verifier_integrite()` repasse en strict et annonce un écart inexistant.
+    os.environ["MONRECOURS_PDF_NON_DISTRIBUES"] = "1" if mode_pdf_non_distribues() else "0"
     tests = executer_tests()
+    inventaire_courant = couverture.inventaire()
     integrite = corpus.verifier_integrite()
 
     with open(os.path.join(KNOWLEDGE, "INVENTAIRE_COUVERTURE.json"), "w",
@@ -146,6 +213,10 @@ def main():
 
     print("Tests            : %s" % (tests.get("resume") or "INDISPONIBLE"))
     print("Verdict          : %s" % (tests.get("verdict") or "INDISPONIBLE"))
+    for echec in tests.get("echecs") or []:
+        print("  %-5s %s :: %s" % (echec["nature"], echec["test"], echec["detail"][:160]))
+    if tests.get("journal"):
+        print("Journal des tests: %s" % tests["journal"])
     print("Intégrité        : %s (%d documents)" % (integrite["verdict"], integrite["nb_documents"]))
     print("Documents        : %d" % inventaire_courant["total_documents"])
     print("Articles         : %d" % inventaire_courant["total_articles"])

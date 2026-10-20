@@ -1,19 +1,22 @@
 {
- "genere_le": "2026-10-17T02:23:13+00:00",
+ "genere_le": "2026-10-20T13:26:26+00:00",
  "tests": {
   "disponible": true,
   "exit_code": 0,
-  "resume": "310 FAIL=0 ERR=0 SKIP=0 SUCCES=310",
-  "verdict": "SUCCES"
+  "resume": "485 FAIL=0 ERR=0 SKIP=1 SUCCES=484",
+  "verdict": "SUCCES",
+  "mode_pdf_non_distribues": true,
+  "echecs": [],
+  "journal": "KNOWLEDGE/collecte/derniers_tests.log"
  },
  "integrite_corpus": {
   "verdict": "INTEGRE",
-  "documents": 26,
+  "documents": 36,
   "absents": 0,
   "alteres": 0
  },
  "couverture": {
-  "horodatage": "2026-10-17T02:23:13+00:00",
+  "horodatage": "2026-10-20T13:26:26+00:00",
   "domaines": [
    {
     "domaine": "logement_baux_foncier",
@@ -140,7 +143,7 @@
     "code_domaine": "B",
     "libelle": "Famille, couple et enfants",
     "statut": "CORPUS_PARTIEL",
-    "motif": "15 document(s) collecte(s) mais aucun texte integral verifie",
+    "motif": "19 document(s) collecte(s) mais aucun texte integral verifie",
     "validation_juridique": "REQUISE",
     "completude_juridique": "INCOMPLET",
     "validation_humaine_obligatoire": true,
@@ -188,15 +191,15 @@
     "mesures": {
      "code": "B",
      "libelle": "Famille, couple et enfants",
-     "documents": 15,
-     "references": 13,
+     "documents": 19,
+     "references": 17,
      "references_verifiees": 0,
-     "articles": 191,
+     "articles": 640,
      "par_origine": {
-      "OCR_AUTO": 169,
+      "OCR_AUTO": 618,
       "CALQUE_TEXTE": 22
      },
-     "documents_illisibles": 11
+     "documents_illisibles": 15
     }
    },
    {
@@ -204,7 +207,7 @@
     "code_domaine": "D",
     "libelle": "Entreprises, commerce et activites economiques",
     "statut": "TERMINE_TECHNIQUEMENT",
-    "motif": "1 document(s), 228 article(s), 1 reference(s) verifiee(s)",
+    "motif": "4 document(s), 1146 article(s), 1 reference(s) verifiee(s)",
     "validation_juridique": "RECOMMANDEE",
     "completude_juridique": "INCOMPLET",
     "validation_humaine_obligatoire": false,
@@ -248,24 +251,25 @@
     "mesures": {
      "code": "D",
      "libelle": "Entreprises, commerce et activites economiques",
-     "documents": 1,
-     "references": 1,
+     "documents": 4,
+     "references": 4,
      "references_verifiees": 1,
-     "articles": 228,
+     "articles": 1146,
      "par_origine": {
+      "OCR_AUTO": 918,
       "CALQUE_TEXTE": 228
      },
-     "documents_illisibles": 0
+     "documents_illisibles": 3
     }
    },
    {
     "domaine": "penal_procedure_penale",
     "code_domaine": "G",
     "libelle": "Penal, plaintes et procedures judiciaires",
-    "statut": "BLOQUE_SOURCE",
-    "motif": "aucun texte collecte : 2 source(s) identifiee(s), aucune exploitable",
+    "statut": "CORPUS_PARTIEL",
+    "motif": "2 document(s) collecte(s) mais aucun texte integral verifie",
     "validation_juridique": "REQUISE",
-    "completude_juridique": "INCONNU",
+    "completude_juridique": "INCOMPLET",
     "validation_humaine_obligatoire": true,
     "perimetre": [
      "vol",
@@ -305,12 +309,14 @@
     "mesures": {
      "code": "G",
      "libelle": "Penal, plaintes et procedures judiciaires",
-     "documents": 0,
-     "references": 0,
+     "documents": 2,
+     "references": 2,
      "references_verifiees": 0,
-     "articles": 0,
-     "par_origine": {},
-     "documents_illisibles": 0
+     "articles": 1398,
+     "par_origine": {
+      "OCR_AUTO": 1398
+     },
+     "documents_illisibles": 2
     }
    },
    {
@@ -464,10 +470,10 @@
     "domaine": "administratif_voies_de_recours",
     "code_domaine": "F",
     "libelle": "Administration et documents officiels",
-    "statut": "BLOQUE_SOURCE",
-    "motif": "aucun texte collecte : 2 source(s) identifiee(s), aucune exploitable",
+    "statut": "CORPUS_PARTIEL",
+    "motif": "1 document(s) collecte(s) mais aucun texte integral verifie",
     "validation_juridique": "REQUISE",
-    "completude_juridique": "INCONNU",
+    "completude_juridique": "INCOMPLET",
     "validation_humaine_obligatoire": true,
     "perimetre": [
      "actes d'etat civil",
@@ -499,12 +505,14 @@
     "mesures": {
      "code": "F",
      "libelle": "Administration et documents officiels",
-     "documents": 0,
-     "references": 0,
+     "documents": 1,
+     "references": 1,
      "references_verifiees": 0,
-     "articles": 0,
-     "par_origine": {},
-     "documents_illisibles": 0
+     "articles": 165,
+     "par_origine": {
+      "OCR_AUTO": 165
+     },
+     "documents_illisibles": 1
     }
    },
    {
@@ -600,11 +608,11 @@
     }
    }
   ],
-  "total_documents": 26,
-  "total_articles": 1777,
+  "total_documents": 36,
+  "total_articles": 4707,
   "articles_par_origine": {
    "CALQUE_TEXTE": 1111,
-   "OCR_AUTO": 666
+   "OCR_AUTO": 3596
   },
   "methode_de_comptage": "documents = lignes de la table documents pour le domaine ; articles = lignes de articles_corpus rattachees a ces documents (comptees une par une, pas estimees) ; references = lignes de references_juridiques pour le domaine.",
   "avertissement": "La reussite des tests ne vaut PAS validation juridique. Un domaine TERMINE_TECHNIQUEMENT reste juridiquement incomplet."
