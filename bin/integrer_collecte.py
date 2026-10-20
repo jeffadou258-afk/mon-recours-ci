@@ -180,6 +180,13 @@ def controler_document(source, resultat):
     # Texte : calque si dense, sinon texte mixte avec OCR.
     natif = _texte(resultat, "fichier_texte") or ""
     mixte = _texte(resultat, "fichier_ocr")
+    locale = resultat.get("extraction_locale") or {}
+    if not mixte and locale.get("fichier_ocr") and os.path.isfile(os.path.join(RACINE, locale["fichier_ocr"])) \
+            and len(natif) / float(max(1, pages)) < DENSITE_MINIMALE:
+        # Scan sans OCR distant (COLLECTE_OCR=0) : la lecture locale tessdata_best fait foi pour le contrôle.
+        mixte = open(os.path.join(RACINE, locale["fichier_ocr"]), encoding="utf-8").read()
+        extraction = dict(extraction, pages_sans_texte=pages, confiance_ocr_moyenne=locale.get("confiance_ocr_moyenne"),
+                          pages_ocr_faibles=locale.get("pages_ocr_faibles"))
     densite_native = len(natif) / float(max(1, pages))
     if mixte and extraction.get("pages_sans_texte", 0) > 0:
         texte, methode = mixte, ("OCR_TESSERACT_PARTIEL" if extraction.get("pages_sans_texte") < pages
@@ -248,7 +255,9 @@ def controler_document(source, resultat):
                       % ", ".join(contaminants))
 
     officiel = categorie.startswith("OFFICIEL")
-    if motifs:
+    if source.get("version_abrogee"):
+        statut = "VERSION_ABROGEE"
+    elif motifs:
         statut = "QUARANTAINE"
     elif officiel:
         statut = "EXPLOITABLE_OFFICIEL"

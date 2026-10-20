@@ -1,0 +1,22 @@
+{
+ "objet": "Lecture partielle d'un exemplaire officiel REFUSÉ à l'intégration : aucun article n'est indexé ni citable. Sert à documenter les passages dégradés et à préparer une nouvelle lecture.",
+ "cle": "ohada_audtmr_2003",
+ "numero_texte": "AUCTMR-2003",
+ "titre": "Acte uniforme relatif aux contrats de transport de marchandises par route (Yaoundé, 22 mars 2003)",
+ "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=479",
+ "sha256_pdf": "sha256:be42dc8a0e85a969668dcfc80039f6ab717c857a6331cb47763fda581673f161",
+ "date": "2026-10-20",
+ "lecture_principale": "TESSERACT_LOCAL_FAST:300 dpi",
+ "etalons": "TESSERACT_LOCAL_BEST:300 dpi",
+ "couverture_fiable": 0.0,
+ "seuil_integration": 0.85,
+ "decision": "NON_INTEGRE : couverture fiable inférieure au seuil",
+ "comptes": {},
+ "pages_degradees": [],
+ "textes_sources": [
+  "KNOWLEDGE/collecte/textes/ohada_audtmr_2003.ocr_best.txt",
+  "KNOWLEDGE/collecte/textes/ohada_audtmr_2003.ocr_fast.txt",
+  "KNOWLEDGE/collecte/textes/ohada_audtmr_2003.txt"
+ ],
+ "articles": {}
+}
