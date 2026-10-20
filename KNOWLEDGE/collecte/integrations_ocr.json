@@ -1,0 +1,2755 @@
+{
+ "objet": "Journal des intégrations OCR : lecture de chaque article, articles écartés et nombres contestés à vérifier.",
+ "integrations": {
+  "mffe_code_penal_2019_574": {
+   "date": "2026-10-20",
+   "ref_id": "REF-69BB5D7A2CEE",
+   "doc_id": "DOC-8B8422F272EB",
+   "numero_texte": "2019-574",
+   "lecture_principale": "TESSERACT_LOCAL_BEST:300 dpi",
+   "etalons": "TESSERACT_DISTANT:300 dpi+CALQUE_EDITEUR:producteur : Paper Capture,police d'OCR invisible",
+   "copies_ecartees": [],
+   "articles_indexes": 557,
+   "couverture": 0.9876,
+   "accord_moyen": 0.9986,
+   "articles_ecartes": [
+    {
+     "numero": "105",
+     "similarite": null
+    },
+    {
+     "numero": "110",
+     "similarite": null
+    },
+    {
+     "numero": "186",
+     "similarite": null
+    },
+    {
+     "numero": "221",
+     "similarite": null
+    },
+    {
+     "numero": "283",
+     "similarite": null
+    },
+    {
+     "numero": "284",
+     "similarite": null
+    },
+    {
+     "numero": "5339",
+     "similarite": null
+    },
+    {
+     "numero": "565",
+     "similarite": null
+    }
+   ],
+   "nombres_divergents_ecartes": [
+    "186",
+    "565"
+   ],
+   "nombres_contestes_a_verifier": {
+    "73": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "1",
+        "0"
+       ]
+      ]
+     }
+    ],
+    "98": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "2",
+        "1"
+       ]
+      ]
+     }
+    ],
+    "106": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "210",
+        "7"
+       ]
+      ]
+     }
+    ],
+    "136": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "213",
+        "10 2019"
+       ]
+      ]
+     }
+    ],
+    "137": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "9",
+        "99"
+       ]
+      ]
+     }
+    ],
+    "148": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "145 2",
+        "145 29"
+       ]
+      ]
+     }
+    ],
+    "162": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "4",
+        "4 1"
+       ]
+      ]
+     }
+    ],
+    "188": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "1",
+        "0"
+       ]
+      ]
+     }
+    ],
+    "216": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "500 000",
+        "500 009"
+       ]
+      ]
+     }
+    ],
+    "225": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "1",
+        "0"
+       ]
+      ]
+     }
+    ],
+    "234": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "1",
+        "0"
+       ]
+      ]
+     }
+    ],
+    "247": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "2",
+        "29"
+       ]
+      ]
+     }
+    ],
+    "305": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "100 000",
+        "100 600"
+       ]
+      ]
+     }
+    ],
+    "313": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "100 000",
+        "100 006"
+       ]
+      ]
+     }
+    ],
+    "323": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "500 000",
+        "500 009"
+       ]
+      ]
+     }
+    ],
+    "340": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "4",
+        "49"
+       ]
+      ]
+     }
+    ],
+    "369": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "1 000 000",
+        "000 000"
+       ]
+      ]
+     }
+    ],
+    "381": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "1 000 000",
+        "1 600 000"
+       ]
+      ]
+     }
+    ],
+    "390": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "2",
+        "1 381 1"
+       ]
+      ]
+     }
+    ],
+    "423": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "1",
+        "0"
+       ]
+      ]
+     }
+    ],
+    "451": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "10",
+        "0"
+       ]
+      ]
+     }
+    ],
+    "452": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "100 000",
+        "00 000"
+       ]
+      ]
+     }
+    ],
+    "463": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "1",
+        "0"
+       ]
+      ]
+     }
+    ],
+    "467": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "3 000 000",
+        "3 600 000"
+       ]
+      ]
+     }
+    ],
+    "525": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "3",
+        "4"
+       ]
+      ]
+     }
+    ],
+    "527": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "4",
+        "1"
+       ]
+      ]
+     }
+    ],
+    "540": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "2",
+        "6"
+       ]
+      ]
+     }
+    ],
+    "559": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "252",
+        "10 20 9"
+       ]
+      ]
+     }
+    ],
+    "562": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "2",
+        "29"
+       ]
+      ]
+     }
+    ],
+    "564": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "81 640",
+        "8 640"
+       ]
+      ]
+     }
+    ]
+   },
+   "lecture_par_article": {
+    "1": "TESSERACT_LOCAL_BEST:300 dpi",
+    "2": "TESSERACT_LOCAL_BEST:300 dpi",
+    "3": "TESSERACT_LOCAL_BEST:300 dpi",
+    "4": "TESSERACT_LOCAL_BEST:300 dpi",
+    "5": "TESSERACT_LOCAL_BEST:300 dpi",
+    "6": "TESSERACT_LOCAL_BEST:300 dpi",
+    "7": "TESSERACT_LOCAL_BEST:300 dpi",
+    "8": "TESSERACT_LOCAL_BEST:300 dpi",
+    "9": "TESSERACT_LOCAL_BEST:300 dpi",
+    "10": "TESSERACT_LOCAL_BEST:300 dpi",
+    "11": "TESSERACT_LOCAL_BEST:300 dpi",
+    "12": "TESSERACT_LOCAL_BEST:300 dpi",
+    "14": "TESSERACT_LOCAL_BEST:300 dpi",
+    "15": "TESSERACT_LOCAL_BEST:300 dpi",
+    "16": "TESSERACT_LOCAL_BEST:300 dpi",
+    "17": "TESSERACT_LOCAL_BEST:300 dpi",
+    "18": "TESSERACT_LOCAL_BEST:300 dpi",
+    "19": "TESSERACT_LOCAL_BEST:300 dpi",
+    "20": "TESSERACT_LOCAL_BEST:300 dpi",
+    "21": "TESSERACT_LOCAL_BEST:300 dpi",
+    "22": "TESSERACT_LOCAL_BEST:300 dpi",
+    "23": "TESSERACT_LOCAL_BEST:300 dpi",
+    "24": "TESSERACT_LOCAL_BEST:300 dpi",
+    "25": "TESSERACT_LOCAL_BEST:300 dpi",
+    "26": "TESSERACT_LOCAL_BEST:300 dpi",
+    "27": "TESSERACT_LOCAL_BEST:300 dpi",
+    "28": "TESSERACT_LOCAL_BEST:300 dpi",
+    "29": "TESSERACT_LOCAL_BEST:300 dpi",
+    "30": "TESSERACT_LOCAL_BEST:300 dpi",
+    "31": "TESSERACT_LOCAL_BEST:300 dpi",
+    "32": "TESSERACT_LOCAL_BEST:300 dpi",
+    "33": "TESSERACT_LOCAL_BEST:300 dpi",
+    "34": "TESSERACT_LOCAL_BEST:300 dpi",
+    "35": "TESSERACT_LOCAL_BEST:300 dpi",
+    "36": "TESSERACT_LOCAL_BEST:300 dpi",
+    "37": "TESSERACT_LOCAL_BEST:300 dpi",
+    "38": "TESSERACT_LOCAL_BEST:300 dpi",
+    "39": "TESSERACT_LOCAL_BEST:300 dpi",
+    "40": "TESSERACT_LOCAL_BEST:300 dpi",
+    "41": "TESSERACT_LOCAL_BEST:300 dpi",
+    "42": "TESSERACT_LOCAL_BEST:300 dpi",
+    "43": "TESSERACT_LOCAL_BEST:300 dpi",
+    "44": "TESSERACT_LOCAL_BEST:300 dpi",
+    "45": "TESSERACT_LOCAL_BEST:300 dpi",
+    "46": "TESSERACT_LOCAL_BEST:300 dpi",
+    "47": "TESSERACT_LOCAL_BEST:300 dpi",
+    "48": "TESSERACT_LOCAL_BEST:300 dpi",
+    "49": "TESSERACT_LOCAL_BEST:300 dpi",
+    "50": "TESSERACT_LOCAL_BEST:300 dpi",
+    "51": "TESSERACT_DISTANT:300 dpi",
+    "52": "TESSERACT_LOCAL_BEST:300 dpi",
+    "53": "TESSERACT_LOCAL_BEST:300 dpi",
+    "54": "TESSERACT_LOCAL_BEST:300 dpi",
+    "55": "TESSERACT_LOCAL_BEST:300 dpi",
+    "56": "TESSERACT_LOCAL_BEST:300 dpi",
+    "57": "TESSERACT_LOCAL_BEST:300 dpi",
+    "58": "TESSERACT_LOCAL_BEST:300 dpi",
+    "59": "TESSERACT_LOCAL_BEST:300 dpi",
+    "60": "TESSERACT_DISTANT:300 dpi",
+    "61": "TESSERACT_LOCAL_BEST:300 dpi",
+    "62": "TESSERACT_LOCAL_BEST:300 dpi",
+    "63": "TESSERACT_LOCAL_BEST:300 dpi",
+    "64": "TESSERACT_LOCAL_BEST:300 dpi",
+    "65": "TESSERACT_LOCAL_BEST:300 dpi",
+    "66": "TESSERACT_LOCAL_BEST:300 dpi",
+    "67": "TESSERACT_LOCAL_BEST:300 dpi",
+    "68": "TESSERACT_LOCAL_BEST:300 dpi",
+    "69": "TESSERACT_DISTANT:300 dpi",
+    "70": "TESSERACT_LOCAL_BEST:300 dpi",
+    "71": "TESSERACT_LOCAL_BEST:300 dpi",
+    "72": "TESSERACT_LOCAL_BEST:300 dpi",
+    "73": "TESSERACT_LOCAL_BEST:300 dpi",
+    "74": "TESSERACT_LOCAL_BEST:300 dpi",
+    "75": "TESSERACT_LOCAL_BEST:300 dpi",
+    "76": "TESSERACT_LOCAL_BEST:300 dpi",
+    "77": "TESSERACT_LOCAL_BEST:300 dpi",
+    "78": "TESSERACT_LOCAL_BEST:300 dpi",
+    "79": "TESSERACT_LOCAL_BEST:300 dpi",
+    "80": "TESSERACT_LOCAL_BEST:300 dpi",
+    "81": "TESSERACT_LOCAL_BEST:300 dpi",
+    "82": "TESSERACT_LOCAL_BEST:300 dpi",
+    "83": "TESSERACT_LOCAL_BEST:300 dpi",
+    "84": "TESSERACT_LOCAL_BEST:300 dpi",
+    "85": "TESSERACT_LOCAL_BEST:300 dpi",
+    "86": "TESSERACT_LOCAL_BEST:300 dpi",
+    "87": "TESSERACT_LOCAL_BEST:300 dpi",
+    "88": "TESSERACT_LOCAL_BEST:300 dpi",
+    "89": "TESSERACT_LOCAL_BEST:300 dpi",
+    "90": "TESSERACT_LOCAL_BEST:300 dpi",
+    "91": "TESSERACT_LOCAL_BEST:300 dpi",
+    "92": "TESSERACT_LOCAL_BEST:300 dpi",
+    "93": "TESSERACT_LOCAL_BEST:300 dpi",
+    "94": "TESSERACT_LOCAL_BEST:300 dpi",
+    "95": "TESSERACT_LOCAL_BEST:300 dpi",
+    "96": "TESSERACT_LOCAL_BEST:300 dpi",
+    "97": "TESSERACT_LOCAL_BEST:300 dpi",
+    "98": "TESSERACT_LOCAL_BEST:300 dpi",
+    "99": "TESSERACT_LOCAL_BEST:300 dpi",
+    "100": "TESSERACT_LOCAL_BEST:300 dpi",
+    "101": "TESSERACT_LOCAL_BEST:300 dpi",
+    "102": "TESSERACT_LOCAL_BEST:300 dpi",
+    "103": "TESSERACT_DISTANT:300 dpi",
+    "104": "TESSERACT_LOCAL_BEST:300 dpi",
+    "106": "TESSERACT_LOCAL_BEST:300 dpi",
+    "107": "TESSERACT_LOCAL_BEST:300 dpi",
+    "108": "TESSERACT_LOCAL_BEST:300 dpi",
+    "109": "TESSERACT_LOCAL_BEST:300 dpi",
+    "111": "TESSERACT_LOCAL_BEST:300 dpi",
+    "112": "TESSERACT_LOCAL_BEST:300 dpi",
+    "113": "TESSERACT_LOCAL_BEST:300 dpi",
+    "114": "TESSERACT_LOCAL_BEST:300 dpi",
+    "115": "TESSERACT_LOCAL_BEST:300 dpi",
+    "116": "TESSERACT_LOCAL_BEST:300 dpi",
+    "117": "TESSERACT_LOCAL_BEST:300 dpi",
+    "118": "TESSERACT_LOCAL_BEST:300 dpi",
+    "119": "TESSERACT_LOCAL_BEST:300 dpi",
+    "120": "TESSERACT_LOCAL_BEST:300 dpi",
+    "121": "TESSERACT_LOCAL_BEST:300 dpi",
+    "122": "TESSERACT_LOCAL_BEST:300 dpi",
+    "123": "TESSERACT_LOCAL_BEST:300 dpi",
+    "124": "TESSERACT_LOCAL_BEST:300 dpi",
+    "125": "TESSERACT_LOCAL_BEST:300 dpi",
+    "126": "TESSERACT_LOCAL_BEST:300 dpi",
+    "127": "TESSERACT_LOCAL_BEST:300 dpi",
+    "128": "TESSERACT_LOCAL_BEST:300 dpi",
+    "129": "TESSERACT_LOCAL_BEST:300 dpi",
+    "130": "TESSERACT_LOCAL_BEST:300 dpi",
+    "131": "TESSERACT_LOCAL_BEST:300 dpi",
+    "132": "TESSERACT_LOCAL_BEST:300 dpi",
+    "133": "TESSERACT_LOCAL_BEST:300 dpi",
+    "134": "TESSERACT_LOCAL_BEST:300 dpi",
+    "135": "TESSERACT_LOCAL_BEST:300 dpi",
+    "136": "TESSERACT_LOCAL_BEST:300 dpi",
+    "137": "TESSERACT_LOCAL_BEST:300 dpi",
+    "138": "TESSERACT_LOCAL_BEST:300 dpi",
+    "139": "TESSERACT_LOCAL_BEST:300 dpi",
+    "140": "TESSERACT_LOCAL_BEST:300 dpi",
+    "141": "TESSERACT_LOCAL_BEST:300 dpi",
+    "142": "TESSERACT_LOCAL_BEST:300 dpi",
+    "143": "TESSERACT_LOCAL_BEST:300 dpi",
+    "144": "TESSERACT_LOCAL_BEST:300 dpi",
+    "145": "TESSERACT_LOCAL_BEST:300 dpi",
+    "146": "TESSERACT_LOCAL_BEST:300 dpi",
+    "147": "TESSERACT_LOCAL_BEST:300 dpi",
+    "148": "TESSERACT_LOCAL_BEST:300 dpi",
+    "149": "TESSERACT_DISTANT:300 dpi",
+    "150": "TESSERACT_LOCAL_BEST:300 dpi",
+    "151": "TESSERACT_LOCAL_BEST:300 dpi",
+    "152": "TESSERACT_LOCAL_BEST:300 dpi",
+    "153": "TESSERACT_LOCAL_BEST:300 dpi",
+    "154": "TESSERACT_LOCAL_BEST:300 dpi",
+    "155": "TESSERACT_LOCAL_BEST:300 dpi",
+    "156": "TESSERACT_LOCAL_BEST:300 dpi",
+    "157": "TESSERACT_LOCAL_BEST:300 dpi",
+    "158": "TESSERACT_LOCAL_BEST:300 dpi",
+    "159": "TESSERACT_LOCAL_BEST:300 dpi",
+    "160": "TESSERACT_LOCAL_BEST:300 dpi",
+    "161": "TESSERACT_LOCAL_BEST:300 dpi",
+    "162": "TESSERACT_LOCAL_BEST:300 dpi",
+    "163": "TESSERACT_LOCAL_BEST:300 dpi",
+    "164": "TESSERACT_LOCAL_BEST:300 dpi",
+    "165": "TESSERACT_LOCAL_BEST:300 dpi",
+    "166": "TESSERACT_LOCAL_BEST:300 dpi",
+    "167": "TESSERACT_LOCAL_BEST:300 dpi",
+    "168": "TESSERACT_LOCAL_BEST:300 dpi",
+    "169": "TESSERACT_LOCAL_BEST:300 dpi",
+    "170": "TESSERACT_LOCAL_BEST:300 dpi",
+    "171": "TESSERACT_LOCAL_BEST:300 dpi",
+    "172": "TESSERACT_DISTANT:300 dpi",
+    "173": "TESSERACT_LOCAL_BEST:300 dpi",
+    "174": "TESSERACT_LOCAL_BEST:300 dpi",
+    "175": "TESSERACT_LOCAL_BEST:300 dpi",
+    "176": "TESSERACT_LOCAL_BEST:300 dpi",
+    "177": "TESSERACT_LOCAL_BEST:300 dpi",
+    "178": "TESSERACT_LOCAL_BEST:300 dpi",
+    "179": "TESSERACT_LOCAL_BEST:300 dpi",
+    "180": "TESSERACT_LOCAL_BEST:300 dpi",
+    "181": "TESSERACT_LOCAL_BEST:300 dpi",
+    "182": "TESSERACT_LOCAL_BEST:300 dpi",
+    "183": "TESSERACT_LOCAL_BEST:300 dpi",
+    "184": "TESSERACT_LOCAL_BEST:300 dpi",
+    "185": "TESSERACT_LOCAL_BEST:300 dpi",
+    "187": "TESSERACT_LOCAL_BEST:300 dpi",
+    "188": "TESSERACT_LOCAL_BEST:300 dpi",
+    "189": "TESSERACT_LOCAL_BEST:300 dpi",
+    "190": "TESSERACT_LOCAL_BEST:300 dpi",
+    "191": "TESSERACT_LOCAL_BEST:300 dpi",
+    "192": "TESSERACT_LOCAL_BEST:300 dpi",
+    "193": "TESSERACT_LOCAL_BEST:300 dpi",
+    "194": "TESSERACT_LOCAL_BEST:300 dpi",
+    "195": "TESSERACT_LOCAL_BEST:300 dpi",
+    "196": "TESSERACT_LOCAL_BEST:300 dpi",
+    "197": "TESSERACT_LOCAL_BEST:300 dpi",
+    "198": "TESSERACT_LOCAL_BEST:300 dpi",
+    "199": "TESSERACT_LOCAL_BEST:300 dpi",
+    "200": "TESSERACT_LOCAL_BEST:300 dpi",
+    "201": "TESSERACT_LOCAL_BEST:300 dpi",
+    "202": "TESSERACT_LOCAL_BEST:300 dpi",
+    "203": "TESSERACT_LOCAL_BEST:300 dpi",
+    "204": "TESSERACT_LOCAL_BEST:300 dpi",
+    "205": "TESSERACT_LOCAL_BEST:300 dpi",
+    "206": "TESSERACT_LOCAL_BEST:300 dpi",
+    "207": "TESSERACT_LOCAL_BEST:300 dpi",
+    "208": "TESSERACT_LOCAL_BEST:300 dpi",
+    "209": "TESSERACT_LOCAL_BEST:300 dpi",
+    "210": "TESSERACT_LOCAL_BEST:300 dpi",
+    "211": "TESSERACT_LOCAL_BEST:300 dpi",
+    "212": "TESSERACT_LOCAL_BEST:300 dpi",
+    "213": "TESSERACT_LOCAL_BEST:300 dpi",
+    "214": "TESSERACT_LOCAL_BEST:300 dpi",
+    "215": "TESSERACT_LOCAL_BEST:300 dpi",
+    "216": "TESSERACT_LOCAL_BEST:300 dpi",
+    "217": "TESSERACT_LOCAL_BEST:300 dpi",
+    "218": "TESSERACT_LOCAL_BEST:300 dpi",
+    "219": "TESSERACT_LOCAL_BEST:300 dpi",
+    "220": "TESSERACT_LOCAL_BEST:300 dpi",
+    "222": "TESSERACT_LOCAL_BEST:300 dpi",
+    "223": "TESSERACT_LOCAL_BEST:300 dpi",
+    "224": "TESSERACT_LOCAL_BEST:300 dpi",
+    "225": "TESSERACT_LOCAL_BEST:300 dpi",
+    "226": "TESSERACT_LOCAL_BEST:300 dpi",
+    "227": "TESSERACT_LOCAL_BEST:300 dpi",
+    "228": "TESSERACT_LOCAL_BEST:300 dpi",
+    "229": "TESSERACT_LOCAL_BEST:300 dpi",
+    "230": "TESSERACT_LOCAL_BEST:300 dpi",
+    "231": "TESSERACT_LOCAL_BEST:300 dpi",
+    "232": "TESSERACT_LOCAL_BEST:300 dpi",
+    "233": "TESSERACT_LOCAL_BEST:300 dpi",
+    "234": "TESSERACT_LOCAL_BEST:300 dpi",
+    "235": "TESSERACT_LOCAL_BEST:300 dpi",
+    "236": "TESSERACT_LOCAL_BEST:300 dpi",
+    "237": "TESSERACT_LOCAL_BEST:300 dpi",
+    "238": "TESSERACT_LOCAL_BEST:300 dpi",
+    "239": "TESSERACT_LOCAL_BEST:300 dpi",
+    "240": "TESSERACT_LOCAL_BEST:300 dpi",
+    "241": "TESSERACT_LOCAL_BEST:300 dpi",
+    "242": "TESSERACT_LOCAL_BEST:300 dpi",
+    "243": "TESSERACT_LOCAL_BEST:300 dpi",
+    "244": "TESSERACT_LOCAL_BEST:300 dpi",
+    "245": "TESSERACT_LOCAL_BEST:300 dpi",
+    "246": "TESSERACT_LOCAL_BEST:300 dpi",
+    "247": "TESSERACT_LOCAL_BEST:300 dpi",
+    "248": "TESSERACT_LOCAL_BEST:300 dpi",
+    "249": "TESSERACT_LOCAL_BEST:300 dpi",
+    "250": "TESSERACT_LOCAL_BEST:300 dpi",
+    "251": "TESSERACT_LOCAL_BEST:300 dpi",
+    "252": "TESSERACT_LOCAL_BEST:300 dpi",
+    "253": "TESSERACT_LOCAL_BEST:300 dpi",
+    "254": "TESSERACT_LOCAL_BEST:300 dpi",
+    "255": "TESSERACT_LOCAL_BEST:300 dpi",
+    "256": "TESSERACT_LOCAL_BEST:300 dpi",
+    "257": "TESSERACT_LOCAL_BEST:300 dpi",
+    "258": "TESSERACT_LOCAL_BEST:300 dpi",
+    "259": "TESSERACT_LOCAL_BEST:300 dpi",
+    "260": "TESSERACT_LOCAL_BEST:300 dpi",
+    "261": "TESSERACT_LOCAL_BEST:300 dpi",
+    "262": "TESSERACT_LOCAL_BEST:300 dpi",
+    "263": "TESSERACT_LOCAL_BEST:300 dpi",
+    "264": "TESSERACT_LOCAL_BEST:300 dpi",
+    "265": "TESSERACT_LOCAL_BEST:300 dpi",
+    "266": "TESSERACT_LOCAL_BEST:300 dpi",
+    "267": "TESSERACT_LOCAL_BEST:300 dpi",
+    "268": "TESSERACT_LOCAL_BEST:300 dpi",
+    "269": "TESSERACT_LOCAL_BEST:300 dpi",
+    "270": "TESSERACT_LOCAL_BEST:300 dpi",
+    "271": "TESSERACT_LOCAL_BEST:300 dpi",
+    "272": "TESSERACT_LOCAL_BEST:300 dpi",
+    "273": "TESSERACT_LOCAL_BEST:300 dpi",
+    "274": "TESSERACT_LOCAL_BEST:300 dpi",
+    "275": "TESSERACT_LOCAL_BEST:300 dpi",
+    "276": "TESSERACT_LOCAL_BEST:300 dpi",
+    "277": "TESSERACT_LOCAL_BEST:300 dpi",
+    "278": "TESSERACT_LOCAL_BEST:300 dpi",
+    "279": "TESSERACT_LOCAL_BEST:300 dpi",
+    "280": "TESSERACT_LOCAL_BEST:300 dpi",
+    "281": "TESSERACT_LOCAL_BEST:300 dpi",
+    "282": "TESSERACT_LOCAL_BEST:300 dpi",
+    "285": "TESSERACT_LOCAL_BEST:300 dpi",
+    "286": "TESSERACT_LOCAL_BEST:300 dpi",
+    "287": "TESSERACT_LOCAL_BEST:300 dpi",
+    "288": "TESSERACT_LOCAL_BEST:300 dpi",
+    "289": "TESSERACT_LOCAL_BEST:300 dpi",
+    "290": "TESSERACT_LOCAL_BEST:300 dpi",
+    "291": "TESSERACT_LOCAL_BEST:300 dpi",
+    "292": "TESSERACT_LOCAL_BEST:300 dpi",
+    "293": "TESSERACT_LOCAL_BEST:300 dpi",
+    "294": "TESSERACT_LOCAL_BEST:300 dpi",
+    "295": "TESSERACT_LOCAL_BEST:300 dpi",
+    "296": "TESSERACT_LOCAL_BEST:300 dpi",
+    "297": "TESSERACT_LOCAL_BEST:300 dpi",
+    "298": "TESSERACT_LOCAL_BEST:300 dpi",
+    "299": "TESSERACT_LOCAL_BEST:300 dpi",
+    "300": "TESSERACT_LOCAL_BEST:300 dpi",
+    "301": "TESSERACT_LOCAL_BEST:300 dpi",
+    "302": "TESSERACT_LOCAL_BEST:300 dpi",
+    "303": "TESSERACT_LOCAL_BEST:300 dpi",
+    "304": "TESSERACT_LOCAL_BEST:300 dpi",
+    "305": "TESSERACT_LOCAL_BEST:300 dpi",
+    "306": "TESSERACT_LOCAL_BEST:300 dpi",
+    "307": "TESSERACT_LOCAL_BEST:300 dpi",
+    "308": "TESSERACT_LOCAL_BEST:300 dpi",
+    "309": "TESSERACT_LOCAL_BEST:300 dpi",
+    "310": "TESSERACT_LOCAL_BEST:300 dpi",
+    "311": "TESSERACT_LOCAL_BEST:300 dpi",
+    "312": "TESSERACT_LOCAL_BEST:300 dpi",
+    "313": "TESSERACT_LOCAL_BEST:300 dpi",
+    "314": "TESSERACT_LOCAL_BEST:300 dpi",
+    "315": "TESSERACT_LOCAL_BEST:300 dpi",
+    "316": "TESSERACT_LOCAL_BEST:300 dpi",
+    "317": "TESSERACT_LOCAL_BEST:300 dpi",
+    "318": "TESSERACT_LOCAL_BEST:300 dpi",
+    "319": "TESSERACT_DISTANT:300 dpi",
+    "320": "TESSERACT_LOCAL_BEST:300 dpi",
+    "321": "TESSERACT_LOCAL_BEST:300 dpi",
+    "322": "TESSERACT_LOCAL_BEST:300 dpi",
+    "323": "TESSERACT_LOCAL_BEST:300 dpi",
+    "324": "TESSERACT_LOCAL_BEST:300 dpi",
+    "325": "TESSERACT_LOCAL_BEST:300 dpi",
+    "326": "TESSERACT_LOCAL_BEST:300 dpi",
+    "327": "TESSERACT_LOCAL_BEST:300 dpi",
+    "328": "TESSERACT_LOCAL_BEST:300 dpi",
+    "329": "TESSERACT_LOCAL_BEST:300 dpi",
+    "330": "TESSERACT_LOCAL_BEST:300 dpi",
+    "331": "TESSERACT_LOCAL_BEST:300 dpi",
+    "332": "TESSERACT_LOCAL_BEST:300 dpi",
+    "333": "TESSERACT_LOCAL_BEST:300 dpi",
+    "334": "TESSERACT_LOCAL_BEST:300 dpi",
+    "335": "TESSERACT_LOCAL_BEST:300 dpi",
+    "336": "TESSERACT_LOCAL_BEST:300 dpi",
+    "337": "TESSERACT_LOCAL_BEST:300 dpi",
+    "338": "TESSERACT_LOCAL_BEST:300 dpi",
+    "339": "TESSERACT_LOCAL_BEST:300 dpi",
+    "340": "TESSERACT_LOCAL_BEST:300 dpi",
+    "341": "TESSERACT_LOCAL_BEST:300 dpi",
+    "342": "TESSERACT_LOCAL_BEST:300 dpi",
+    "343": "TESSERACT_LOCAL_BEST:300 dpi",
+    "344": "TESSERACT_LOCAL_BEST:300 dpi",
+    "345": "TESSERACT_LOCAL_BEST:300 dpi",
+    "346": "TESSERACT_LOCAL_BEST:300 dpi",
+    "347": "TESSERACT_LOCAL_BEST:300 dpi",
+    "348": "TESSERACT_LOCAL_BEST:300 dpi",
+    "349": "TESSERACT_LOCAL_BEST:300 dpi",
+    "350": "TESSERACT_LOCAL_BEST:300 dpi",
+    "351": "TESSERACT_LOCAL_BEST:300 dpi",
+    "352": "TESSERACT_LOCAL_BEST:300 dpi",
+    "353": "TESSERACT_LOCAL_BEST:300 dpi",
+    "354": "TESSERACT_LOCAL_BEST:300 dpi",
+    "355": "TESSERACT_LOCAL_BEST:300 dpi",
+    "356": "TESSERACT_LOCAL_BEST:300 dpi",
+    "357": "TESSERACT_LOCAL_BEST:300 dpi",
+    "358": "TESSERACT_LOCAL_BEST:300 dpi",
+    "359": "TESSERACT_LOCAL_BEST:300 dpi",
+    "360": "TESSERACT_LOCAL_BEST:300 dpi",
+    "361": "TESSERACT_LOCAL_BEST:300 dpi",
+    "362": "TESSERACT_LOCAL_BEST:300 dpi",
+    "363": "TESSERACT_LOCAL_BEST:300 dpi",
+    "364": "TESSERACT_LOCAL_BEST:300 dpi",
+    "365": "TESSERACT_LOCAL_BEST:300 dpi",
+    "366": "TESSERACT_LOCAL_BEST:300 dpi",
+    "367": "TESSERACT_LOCAL_BEST:300 dpi",
+    "368": "TESSERACT_LOCAL_BEST:300 dpi",
+    "369": "TESSERACT_LOCAL_BEST:300 dpi",
+    "370": "TESSERACT_LOCAL_BEST:300 dpi",
+    "371": "TESSERACT_LOCAL_BEST:300 dpi",
+    "372": "TESSERACT_DISTANT:300 dpi",
+    "373": "TESSERACT_LOCAL_BEST:300 dpi",
+    "374": "TESSERACT_LOCAL_BEST:300 dpi",
+    "375": "TESSERACT_LOCAL_BEST:300 dpi",
+    "376": "TESSERACT_LOCAL_BEST:300 dpi",
+    "377": "TESSERACT_LOCAL_BEST:300 dpi",
+    "378": "TESSERACT_LOCAL_BEST:300 dpi",
+    "379": "TESSERACT_LOCAL_BEST:300 dpi",
+    "380": "TESSERACT_LOCAL_BEST:300 dpi",
+    "381": "TESSERACT_LOCAL_BEST:300 dpi",
+    "382": "TESSERACT_LOCAL_BEST:300 dpi",
+    "383": "TESSERACT_LOCAL_BEST:300 dpi",
+    "384": "TESSERACT_LOCAL_BEST:300 dpi",
+    "385": "TESSERACT_LOCAL_BEST:300 dpi",
+    "386": "TESSERACT_LOCAL_BEST:300 dpi",
+    "387": "TESSERACT_LOCAL_BEST:300 dpi",
+    "388": "TESSERACT_LOCAL_BEST:300 dpi",
+    "389": "TESSERACT_LOCAL_BEST:300 dpi",
+    "390": "TESSERACT_LOCAL_BEST:300 dpi",
+    "391": "TESSERACT_LOCAL_BEST:300 dpi",
+    "392": "TESSERACT_LOCAL_BEST:300 dpi",
+    "393": "TESSERACT_LOCAL_BEST:300 dpi",
+    "394": "TESSERACT_LOCAL_BEST:300 dpi",
+    "395": "TESSERACT_LOCAL_BEST:300 dpi",
+    "396": "TESSERACT_LOCAL_BEST:300 dpi",
+    "397": "TESSERACT_LOCAL_BEST:300 dpi",
+    "398": "TESSERACT_LOCAL_BEST:300 dpi",
+    "399": "TESSERACT_LOCAL_BEST:300 dpi",
+    "400": "TESSERACT_LOCAL_BEST:300 dpi",
+    "401": "TESSERACT_LOCAL_BEST:300 dpi",
+    "402": "TESSERACT_LOCAL_BEST:300 dpi",
+    "403": "TESSERACT_LOCAL_BEST:300 dpi",
+    "404": "TESSERACT_LOCAL_BEST:300 dpi",
+    "405": "TESSERACT_LOCAL_BEST:300 dpi",
+    "406": "TESSERACT_LOCAL_BEST:300 dpi",
+    "407": "TESSERACT_LOCAL_BEST:300 dpi",
+    "408": "TESSERACT_LOCAL_BEST:300 dpi",
+    "409": "TESSERACT_LOCAL_BEST:300 dpi",
+    "410": "TESSERACT_LOCAL_BEST:300 dpi",
+    "411": "TESSERACT_LOCAL_BEST:300 dpi",
+    "412": "TESSERACT_LOCAL_BEST:300 dpi",
+    "413": "TESSERACT_LOCAL_BEST:300 dpi",
+    "414": "TESSERACT_LOCAL_BEST:300 dpi",
+    "415": "TESSERACT_LOCAL_BEST:300 dpi",
+    "416": "TESSERACT_LOCAL_BEST:300 dpi",
+    "417": "TESSERACT_LOCAL_BEST:300 dpi",
+    "418": "TESSERACT_LOCAL_BEST:300 dpi",
+    "419": "TESSERACT_LOCAL_BEST:300 dpi",
+    "420": "TESSERACT_LOCAL_BEST:300 dpi",
+    "421": "TESSERACT_LOCAL_BEST:300 dpi",
+    "422": "TESSERACT_LOCAL_BEST:300 dpi",
+    "423": "TESSERACT_LOCAL_BEST:300 dpi",
+    "424": "TESSERACT_LOCAL_BEST:300 dpi",
+    "425": "TESSERACT_LOCAL_BEST:300 dpi",
+    "426": "TESSERACT_LOCAL_BEST:300 dpi",
+    "427": "TESSERACT_LOCAL_BEST:300 dpi",
+    "428": "TESSERACT_LOCAL_BEST:300 dpi",
+    "429": "TESSERACT_LOCAL_BEST:300 dpi",
+    "430": "TESSERACT_DISTANT:300 dpi",
+    "431": "TESSERACT_LOCAL_BEST:300 dpi",
+    "432": "TESSERACT_LOCAL_BEST:300 dpi",
+    "433": "TESSERACT_LOCAL_BEST:300 dpi",
+    "434": "TESSERACT_LOCAL_BEST:300 dpi",
+    "435": "TESSERACT_LOCAL_BEST:300 dpi",
+    "436": "TESSERACT_LOCAL_BEST:300 dpi",
+    "437": "TESSERACT_LOCAL_BEST:300 dpi",
+    "438": "TESSERACT_LOCAL_BEST:300 dpi",
+    "439": "TESSERACT_LOCAL_BEST:300 dpi",
+    "440": "TESSERACT_LOCAL_BEST:300 dpi",
+    "441": "TESSERACT_LOCAL_BEST:300 dpi",
+    "442": "TESSERACT_LOCAL_BEST:300 dpi",
+    "443": "TESSERACT_LOCAL_BEST:300 dpi",
+    "444": "TESSERACT_LOCAL_BEST:300 dpi",
+    "445": "TESSERACT_LOCAL_BEST:300 dpi",
+    "446": "TESSERACT_LOCAL_BEST:300 dpi",
+    "447": "TESSERACT_LOCAL_BEST:300 dpi",
+    "448": "TESSERACT_LOCAL_BEST:300 dpi",
+    "449": "TESSERACT_LOCAL_BEST:300 dpi",
+    "450": "TESSERACT_LOCAL_BEST:300 dpi",
+    "451": "TESSERACT_LOCAL_BEST:300 dpi",
+    "452": "TESSERACT_LOCAL_BEST:300 dpi",
+    "453": "TESSERACT_LOCAL_BEST:300 dpi",
+    "454": "TESSERACT_LOCAL_BEST:300 dpi",
+    "455": "TESSERACT_LOCAL_BEST:300 dpi",
+    "456": "TESSERACT_LOCAL_BEST:300 dpi",
+    "457": "TESSERACT_LOCAL_BEST:300 dpi",
+    "458": "TESSERACT_LOCAL_BEST:300 dpi",
+    "459": "TESSERACT_LOCAL_BEST:300 dpi",
+    "460": "TESSERACT_LOCAL_BEST:300 dpi",
+    "461": "TESSERACT_LOCAL_BEST:300 dpi",
+    "462": "TESSERACT_LOCAL_BEST:300 dpi",
+    "463": "TESSERACT_LOCAL_BEST:300 dpi",
+    "464": "TESSERACT_LOCAL_BEST:300 dpi",
+    "465": "TESSERACT_LOCAL_BEST:300 dpi",
+    "466": "TESSERACT_LOCAL_BEST:300 dpi",
+    "467": "TESSERACT_LOCAL_BEST:300 dpi",
+    "468": "TESSERACT_LOCAL_BEST:300 dpi",
+    "469": "TESSERACT_LOCAL_BEST:300 dpi",
+    "470": "TESSERACT_LOCAL_BEST:300 dpi",
+    "471": "TESSERACT_LOCAL_BEST:300 dpi",
+    "472": "TESSERACT_LOCAL_BEST:300 dpi",
+    "473": "TESSERACT_LOCAL_BEST:300 dpi",
+    "474": "TESSERACT_LOCAL_BEST:300 dpi",
+    "475": "TESSERACT_LOCAL_BEST:300 dpi",
+    "476": "TESSERACT_LOCAL_BEST:300 dpi",
+    "477": "TESSERACT_LOCAL_BEST:300 dpi",
+    "478": "TESSERACT_LOCAL_BEST:300 dpi",
+    "479": "TESSERACT_LOCAL_BEST:300 dpi",
+    "480": "TESSERACT_LOCAL_BEST:300 dpi",
+    "481": "TESSERACT_LOCAL_BEST:300 dpi",
+    "482": "TESSERACT_LOCAL_BEST:300 dpi",
+    "483": "TESSERACT_LOCAL_BEST:300 dpi",
+    "484": "TESSERACT_LOCAL_BEST:300 dpi",
+    "485": "TESSERACT_LOCAL_BEST:300 dpi",
+    "486": "TESSERACT_LOCAL_BEST:300 dpi",
+    "487": "TESSERACT_LOCAL_BEST:300 dpi",
+    "488": "TESSERACT_LOCAL_BEST:300 dpi",
+    "489": "TESSERACT_LOCAL_BEST:300 dpi",
+    "490": "TESSERACT_LOCAL_BEST:300 dpi",
+    "491": "TESSERACT_LOCAL_BEST:300 dpi",
+    "492": "TESSERACT_LOCAL_BEST:300 dpi",
+    "493": "TESSERACT_LOCAL_BEST:300 dpi",
+    "494": "TESSERACT_LOCAL_BEST:300 dpi",
+    "495": "TESSERACT_LOCAL_BEST:300 dpi",
+    "496": "TESSERACT_LOCAL_BEST:300 dpi",
+    "497": "TESSERACT_DISTANT:300 dpi",
+    "498": "TESSERACT_LOCAL_BEST:300 dpi",
+    "499": "TESSERACT_LOCAL_BEST:300 dpi",
+    "500": "TESSERACT_LOCAL_BEST:300 dpi",
+    "501": "TESSERACT_LOCAL_BEST:300 dpi",
+    "502": "TESSERACT_LOCAL_BEST:300 dpi",
+    "503": "TESSERACT_LOCAL_BEST:300 dpi",
+    "504": "TESSERACT_LOCAL_BEST:300 dpi",
+    "505": "TESSERACT_LOCAL_BEST:300 dpi",
+    "506": "TESSERACT_LOCAL_BEST:300 dpi",
+    "507": "TESSERACT_LOCAL_BEST:300 dpi",
+    "508": "TESSERACT_LOCAL_BEST:300 dpi",
+    "509": "TESSERACT_LOCAL_BEST:300 dpi",
+    "510": "TESSERACT_LOCAL_BEST:300 dpi",
+    "511": "TESSERACT_DISTANT:300 dpi",
+    "512": "TESSERACT_LOCAL_BEST:300 dpi",
+    "513": "TESSERACT_LOCAL_BEST:300 dpi",
+    "514": "TESSERACT_LOCAL_BEST:300 dpi",
+    "515": "TESSERACT_LOCAL_BEST:300 dpi",
+    "516": "TESSERACT_LOCAL_BEST:300 dpi",
+    "517": "TESSERACT_LOCAL_BEST:300 dpi",
+    "518": "TESSERACT_LOCAL_BEST:300 dpi",
+    "519": "TESSERACT_LOCAL_BEST:300 dpi",
+    "520": "TESSERACT_LOCAL_BEST:300 dpi",
+    "521": "TESSERACT_LOCAL_BEST:300 dpi",
+    "522": "TESSERACT_LOCAL_BEST:300 dpi",
+    "523": "TESSERACT_LOCAL_BEST:300 dpi",
+    "524": "TESSERACT_LOCAL_BEST:300 dpi",
+    "525": "TESSERACT_LOCAL_BEST:300 dpi",
+    "526": "TESSERACT_LOCAL_BEST:300 dpi",
+    "527": "TESSERACT_LOCAL_BEST:300 dpi",
+    "528": "TESSERACT_LOCAL_BEST:300 dpi",
+    "529": "TESSERACT_LOCAL_BEST:300 dpi",
+    "530": "TESSERACT_LOCAL_BEST:300 dpi",
+    "531": "TESSERACT_LOCAL_BEST:300 dpi",
+    "532": "TESSERACT_LOCAL_BEST:300 dpi",
+    "533": "TESSERACT_LOCAL_BEST:300 dpi",
+    "534": "TESSERACT_LOCAL_BEST:300 dpi",
+    "535": "TESSERACT_LOCAL_BEST:300 dpi",
+    "536": "TESSERACT_LOCAL_BEST:300 dpi",
+    "537": "TESSERACT_LOCAL_BEST:300 dpi",
+    "538": "TESSERACT_LOCAL_BEST:300 dpi",
+    "539": "TESSERACT_DISTANT:300 dpi",
+    "540": "TESSERACT_LOCAL_BEST:300 dpi",
+    "541": "TESSERACT_LOCAL_BEST:300 dpi",
+    "542": "TESSERACT_LOCAL_BEST:300 dpi",
+    "543": "TESSERACT_LOCAL_BEST:300 dpi",
+    "544": "TESSERACT_LOCAL_BEST:300 dpi",
+    "545": "TESSERACT_LOCAL_BEST:300 dpi",
+    "546": "TESSERACT_LOCAL_BEST:300 dpi",
+    "547": "TESSERACT_LOCAL_BEST:300 dpi",
+    "548": "TESSERACT_LOCAL_BEST:300 dpi",
+    "549": "TESSERACT_LOCAL_BEST:300 dpi",
+    "550": "TESSERACT_LOCAL_BEST:300 dpi",
+    "551": "TESSERACT_LOCAL_BEST:300 dpi",
+    "552": "TESSERACT_LOCAL_BEST:300 dpi",
+    "553": "TESSERACT_LOCAL_BEST:300 dpi",
+    "554": "TESSERACT_LOCAL_BEST:300 dpi",
+    "555": "TESSERACT_LOCAL_BEST:300 dpi",
+    "556": "TESSERACT_LOCAL_BEST:300 dpi",
+    "557": "TESSERACT_LOCAL_BEST:300 dpi",
+    "558": "TESSERACT_LOCAL_BEST:300 dpi",
+    "559": "TESSERACT_LOCAL_BEST:300 dpi",
+    "560": "TESSERACT_LOCAL_BEST:300 dpi",
+    "561": "TESSERACT_LOCAL_BEST:300 dpi",
+    "562": "TESSERACT_LOCAL_BEST:300 dpi",
+    "563": "TESSERACT_LOCAL_BEST:300 dpi",
+    "564": "TESSERACT_LOCAL_BEST:300 dpi"
+   }
+  },
+  "mffe_mariage_2019_570": {
+   "date": "2026-10-20",
+   "ref_id": "REF-952FF6F2D9B4",
+   "doc_id": "DOC-340AA7DE365C",
+   "numero_texte": "2019-570",
+   "lecture_principale": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+   "etalons": "TESSERACT_LOCAL_BEST:300 dpi+TESSERACT_DISTANT:300 dpi+OFFICIEL:assnat_mariage_2019_570",
+   "copies_ecartees": [
+    "SECONDAIRE:mariage_2019_570_faolex"
+   ],
+   "articles_indexes": 105,
+   "couverture": 1.0,
+   "accord_moyen": 0.9989,
+   "articles_ecartes": [],
+   "nombres_divergents_ecartes": [],
+   "nombres_contestes_a_verifier": {
+    "16": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "3",
+        "1 3"
+       ]
+      ]
+     }
+    ],
+    "23": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "45",
+        "43"
+       ]
+      ]
+     }
+    ]
+   },
+   "lecture_par_article": {
+    "1": "TESSERACT_LOCAL_BEST:300 dpi",
+    "2": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "3": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "4": "TESSERACT_LOCAL_BEST:300 dpi",
+    "5": "TESSERACT_LOCAL_BEST:300 dpi",
+    "6": "TESSERACT_LOCAL_BEST:300 dpi",
+    "7": "TESSERACT_LOCAL_BEST:300 dpi",
+    "8": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "9": "TESSERACT_LOCAL_BEST:300 dpi",
+    "10": "TESSERACT_LOCAL_BEST:300 dpi",
+    "11": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "12": "TESSERACT_LOCAL_BEST:300 dpi",
+    "13": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "14": "TESSERACT_LOCAL_BEST:300 dpi",
+    "15": "TESSERACT_LOCAL_BEST:300 dpi",
+    "16": "TESSERACT_LOCAL_BEST:300 dpi",
+    "17": "TESSERACT_LOCAL_BEST:300 dpi",
+    "18": "TESSERACT_LOCAL_BEST:300 dpi",
+    "19": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "20": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "21": "TESSERACT_DISTANT:300 dpi",
+    "22": "TESSERACT_LOCAL_BEST:300 dpi",
+    "23": "TESSERACT_LOCAL_BEST:300 dpi",
+    "24": "TESSERACT_LOCAL_BEST:300 dpi",
+    "25": "TESSERACT_LOCAL_BEST:300 dpi",
+    "26": "TESSERACT_LOCAL_BEST:300 dpi",
+    "27": "TESSERACT_DISTANT:300 dpi",
+    "28": "TESSERACT_LOCAL_BEST:300 dpi",
+    "29": "TESSERACT_LOCAL_BEST:300 dpi",
+    "30": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "31": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "32": "TESSERACT_LOCAL_BEST:300 dpi",
+    "33": "TESSERACT_DISTANT:300 dpi",
+    "34": "TESSERACT_DISTANT:300 dpi",
+    "35": "TESSERACT_LOCAL_BEST:300 dpi",
+    "36": "TESSERACT_LOCAL_BEST:300 dpi",
+    "37": "TESSERACT_LOCAL_BEST:300 dpi",
+    "38": "TESSERACT_LOCAL_BEST:300 dpi",
+    "39": "TESSERACT_LOCAL_BEST:300 dpi",
+    "40": "TESSERACT_LOCAL_BEST:300 dpi",
+    "41": "TESSERACT_LOCAL_BEST:300 dpi",
+    "42": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "43": "TESSERACT_LOCAL_BEST:300 dpi",
+    "44": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "45": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "46": "TESSERACT_LOCAL_BEST:300 dpi",
+    "47": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "48": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "49": "TESSERACT_LOCAL_BEST:300 dpi",
+    "50": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "51": "TESSERACT_LOCAL_BEST:300 dpi",
+    "52": "TESSERACT_LOCAL_BEST:300 dpi",
+    "53": "TESSERACT_LOCAL_BEST:300 dpi",
+    "54": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "55": "TESSERACT_LOCAL_BEST:300 dpi",
+    "56": "TESSERACT_LOCAL_BEST:300 dpi",
+    "57": "TESSERACT_LOCAL_BEST:300 dpi",
+    "58": "TESSERACT_LOCAL_BEST:300 dpi",
+    "59": "TESSERACT_LOCAL_BEST:300 dpi",
+    "60": "TESSERACT_LOCAL_BEST:300 dpi",
+    "61": "TESSERACT_LOCAL_BEST:300 dpi",
+    "62": "TESSERACT_DISTANT:300 dpi",
+    "63": "TESSERACT_LOCAL_BEST:300 dpi",
+    "64": "TESSERACT_LOCAL_BEST:300 dpi",
+    "65": "TESSERACT_LOCAL_BEST:300 dpi",
+    "66": "TESSERACT_LOCAL_BEST:300 dpi",
+    "67": "TESSERACT_LOCAL_BEST:300 dpi",
+    "68": "TESSERACT_LOCAL_BEST:300 dpi",
+    "69": "TESSERACT_LOCAL_BEST:300 dpi",
+    "70": "TESSERACT_LOCAL_BEST:300 dpi",
+    "71": "TESSERACT_LOCAL_BEST:300 dpi",
+    "72": "TESSERACT_LOCAL_BEST:300 dpi",
+    "73": "TESSERACT_LOCAL_BEST:300 dpi",
+    "74": "TESSERACT_LOCAL_BEST:300 dpi",
+    "75": "TESSERACT_LOCAL_BEST:300 dpi",
+    "76": "TESSERACT_LOCAL_BEST:300 dpi",
+    "77": "TESSERACT_LOCAL_BEST:300 dpi",
+    "78": "TESSERACT_LOCAL_BEST:300 dpi",
+    "79": "TESSERACT_LOCAL_BEST:300 dpi",
+    "80": "TESSERACT_LOCAL_BEST:300 dpi",
+    "81": "TESSERACT_DISTANT:300 dpi",
+    "82": "TESSERACT_LOCAL_BEST:300 dpi",
+    "83": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "84": "TESSERACT_LOCAL_BEST:300 dpi",
+    "85": "TESSERACT_LOCAL_BEST:300 dpi",
+    "86": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "87": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "88": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "89": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "90": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "91": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "92": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "93": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "94": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "95": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "96": "TESSERACT_LOCAL_BEST:300 dpi",
+    "97": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "98": "TESSERACT_LOCAL_BEST:300 dpi",
+    "99": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "100": "TESSERACT_LOCAL_BEST:300 dpi",
+    "101": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "102": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "103": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "104": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "105": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP"
+   }
+  },
+  "mffe_successions_2019_573": {
+   "date": "2026-10-20",
+   "ref_id": "REF-1C999A88E5A6",
+   "doc_id": "DOC-3D87C465CA1F",
+   "numero_texte": "2019-573",
+   "lecture_principale": "TESSERACT_DISTANT:200 dpi",
+   "etalons": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP+TESSERACT_LOCAL_BEST:300 dpi+OFFICIEL:successions_2019_573_assnat",
+   "copies_ecartees": [
+    "SECONDAIRE:successions_2019_573_bice"
+   ],
+   "articles_indexes": 130,
+   "couverture": 0.9559,
+   "accord_moyen": 0.9946,
+   "articles_ecartes": [
+    {
+     "numero": "50",
+     "similarite": null
+    },
+    {
+     "numero": "130",
+     "similarite": null
+    },
+    {
+     "numero": "155",
+     "similarite": null
+    },
+    {
+     "numero": "156",
+     "similarite": null
+    },
+    {
+     "numero": "9",
+     "similarite": null
+    },
+    {
+     "numero": "99",
+     "similarite": null
+    },
+    {
+     "numero": "131",
+     "similarite": null
+    }
+   ],
+   "nombres_divergents_ecartes": [
+    "50"
+   ],
+   "nombres_contestes_a_verifier": {},
+   "lecture_par_article": {
+    "1": "TESSERACT_DISTANT:200 dpi",
+    "2": "TESSERACT_DISTANT:200 dpi",
+    "3": "TESSERACT_DISTANT:200 dpi",
+    "4": "TESSERACT_DISTANT:200 dpi",
+    "5": "TESSERACT_DISTANT:200 dpi",
+    "6": "TESSERACT_DISTANT:200 dpi",
+    "7": "TESSERACT_DISTANT:200 dpi",
+    "8": "TESSERACT_DISTANT:200 dpi",
+    "10": "TESSERACT_DISTANT:200 dpi",
+    "11": "TESSERACT_DISTANT:200 dpi",
+    "12": "TESSERACT_DISTANT:200 dpi",
+    "13": "TESSERACT_DISTANT:200 dpi",
+    "14": "TESSERACT_DISTANT:200 dpi",
+    "15": "TESSERACT_DISTANT:200 dpi",
+    "16": "TESSERACT_DISTANT:200 dpi",
+    "17": "TESSERACT_DISTANT:200 dpi",
+    "18": "TESSERACT_DISTANT:200 dpi",
+    "19": "TESSERACT_DISTANT:200 dpi",
+    "20": "TESSERACT_DISTANT:200 dpi",
+    "21": "TESSERACT_DISTANT:200 dpi",
+    "22": "TESSERACT_DISTANT:200 dpi",
+    "23": "TESSERACT_DISTANT:200 dpi",
+    "24": "TESSERACT_DISTANT:200 dpi",
+    "25": "TESSERACT_DISTANT:200 dpi",
+    "26": "TESSERACT_DISTANT:200 dpi",
+    "27": "TESSERACT_DISTANT:200 dpi",
+    "28": "TESSERACT_DISTANT:200 dpi",
+    "29": "TESSERACT_DISTANT:200 dpi",
+    "30": "TESSERACT_DISTANT:200 dpi",
+    "31": "TESSERACT_DISTANT:200 dpi",
+    "32": "TESSERACT_DISTANT:200 dpi",
+    "33": "TESSERACT_DISTANT:200 dpi",
+    "34": "TESSERACT_DISTANT:200 dpi",
+    "35": "TESSERACT_DISTANT:200 dpi",
+    "36": "TESSERACT_DISTANT:200 dpi",
+    "37": "TESSERACT_DISTANT:200 dpi",
+    "38": "TESSERACT_DISTANT:200 dpi",
+    "39": "TESSERACT_DISTANT:200 dpi",
+    "40": "TESSERACT_DISTANT:200 dpi",
+    "41": "TESSERACT_DISTANT:200 dpi",
+    "42": "TESSERACT_DISTANT:200 dpi",
+    "43": "TESSERACT_DISTANT:200 dpi",
+    "44": "TESSERACT_DISTANT:200 dpi",
+    "45": "TESSERACT_DISTANT:200 dpi",
+    "46": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "47": "TESSERACT_DISTANT:200 dpi",
+    "48": "TESSERACT_DISTANT:200 dpi",
+    "49": "TESSERACT_DISTANT:200 dpi",
+    "51": "TESSERACT_DISTANT:200 dpi",
+    "52": "TESSERACT_DISTANT:200 dpi",
+    "53": "TESSERACT_DISTANT:200 dpi",
+    "54": "TESSERACT_DISTANT:200 dpi",
+    "55": "TESSERACT_DISTANT:200 dpi",
+    "56": "TESSERACT_DISTANT:200 dpi",
+    "57": "TESSERACT_DISTANT:200 dpi",
+    "58": "TESSERACT_DISTANT:200 dpi",
+    "59": "TESSERACT_DISTANT:200 dpi",
+    "60": "TESSERACT_DISTANT:200 dpi",
+    "61": "TESSERACT_DISTANT:200 dpi",
+    "62": "TESSERACT_DISTANT:200 dpi",
+    "63": "TESSERACT_DISTANT:200 dpi",
+    "64": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "65": "TESSERACT_DISTANT:200 dpi",
+    "66": "TESSERACT_DISTANT:200 dpi",
+    "67": "TESSERACT_DISTANT:200 dpi",
+    "68": "TESSERACT_LOCAL_BEST:300 dpi",
+    "69": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "70": "TESSERACT_DISTANT:200 dpi",
+    "71": "TESSERACT_DISTANT:200 dpi",
+    "72": "TESSERACT_DISTANT:200 dpi",
+    "73": "TESSERACT_DISTANT:200 dpi",
+    "74": "TESSERACT_DISTANT:200 dpi",
+    "75": "TESSERACT_DISTANT:200 dpi",
+    "76": "TESSERACT_DISTANT:200 dpi",
+    "77": "TESSERACT_LOCAL_BEST:300 dpi",
+    "78": "TESSERACT_DISTANT:200 dpi",
+    "79": "TESSERACT_DISTANT:200 dpi",
+    "80": "TESSERACT_DISTANT:200 dpi",
+    "81": "TESSERACT_DISTANT:200 dpi",
+    "82": "TESSERACT_DISTANT:200 dpi",
+    "83": "TESSERACT_DISTANT:200 dpi",
+    "84": "TESSERACT_DISTANT:200 dpi",
+    "85": "TESSERACT_DISTANT:200 dpi",
+    "86": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "87": "TESSERACT_DISTANT:200 dpi",
+    "88": "TESSERACT_DISTANT:200 dpi",
+    "89": "TESSERACT_DISTANT:200 dpi",
+    "90": "TESSERACT_DISTANT:200 dpi",
+    "91": "TESSERACT_DISTANT:200 dpi",
+    "92": "TESSERACT_DISTANT:200 dpi",
+    "93": "TESSERACT_DISTANT:200 dpi",
+    "94": "TESSERACT_DISTANT:200 dpi",
+    "95": "TESSERACT_DISTANT:200 dpi",
+    "96": "TESSERACT_DISTANT:200 dpi",
+    "97": "TESSERACT_DISTANT:200 dpi",
+    "98": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "101": "TESSERACT_DISTANT:200 dpi",
+    "102": "TESSERACT_DISTANT:200 dpi",
+    "103": "TESSERACT_DISTANT:200 dpi",
+    "104": "TESSERACT_DISTANT:200 dpi",
+    "105": "TESSERACT_DISTANT:200 dpi",
+    "106": "TESSERACT_DISTANT:200 dpi",
+    "107": "TESSERACT_DISTANT:200 dpi",
+    "108": "TESSERACT_DISTANT:200 dpi",
+    "109": "TESSERACT_DISTANT:200 dpi",
+    "110": "TESSERACT_DISTANT:200 dpi",
+    "111": "TESSERACT_DISTANT:200 dpi",
+    "112": "TESSERACT_DISTANT:200 dpi",
+    "113": "TESSERACT_DISTANT:200 dpi",
+    "114": "TESSERACT_DISTANT:200 dpi",
+    "115": "TESSERACT_DISTANT:200 dpi",
+    "116": "TESSERACT_DISTANT:200 dpi",
+    "117": "TESSERACT_DISTANT:200 dpi",
+    "118": "TESSERACT_DISTANT:200 dpi",
+    "119": "TESSERACT_DISTANT:200 dpi",
+    "120": "TESSERACT_DISTANT:200 dpi",
+    "121": "TESSERACT_DISTANT:200 dpi",
+    "122": "TESSERACT_LOCAL_BEST:300 dpi",
+    "123": "TESSERACT_LOCAL_BEST:300 dpi",
+    "124": "TESSERACT_DISTANT:200 dpi",
+    "125": "TESSERACT_DISTANT:200 dpi",
+    "126": "TESSERACT_DISTANT:200 dpi",
+    "127": "TESSERACT_DISTANT:200 dpi",
+    "128": "TESSERACT_DISTANT:200 dpi",
+    "129": "TESSERACT_DISTANT:200 dpi",
+    "132": "TESSERACT_DISTANT:200 dpi",
+    "133": "TESSERACT_DISTANT:200 dpi",
+    "134": "TESSERACT_DISTANT:200 dpi",
+    "135": "TESSERACT_DISTANT:200 dpi",
+    "136": "TESSERACT_DISTANT:200 dpi"
+   }
+  },
+  "mffe_cpp_2018_975": {
+   "date": "2026-10-20",
+   "ref_id": "REF-31BF17F5ED6C",
+   "doc_id": "DOC-BA9F53E63263",
+   "numero_texte": "2018-975",
+   "lecture_principale": "TESSERACT_LOCAL_BEST:300 dpi",
+   "etalons": "TESSERACT_DISTANT:200 dpi+CALQUE_EDITEUR:producteur : Paper Capture,producteur : EPSON,police d'OCR invisible",
+   "copies_ecartees": [],
+   "articles_indexes": 841,
+   "couverture": 0.9859,
+   "accord_moyen": 0.9981,
+   "articles_ecartes": [
+    {
+     "numero": "854",
+     "similarite": null
+    },
+    {
+     "numero": "2",
+     "similarite": null
+    },
+    {
+     "numero": "9",
+     "similarite": null
+    },
+    {
+     "numero": "42",
+     "similarite": null
+    },
+    {
+     "numero": "43",
+     "similarite": null
+    },
+    {
+     "numero": "756",
+     "similarite": null
+    },
+    {
+     "numero": "97",
+     "similarite": null
+    },
+    {
+     "numero": "98",
+     "similarite": null
+    },
+    {
+     "numero": "153",
+     "similarite": null
+    },
+    {
+     "numero": "168",
+     "similarite": null
+    },
+    {
+     "numero": "309",
+     "similarite": null
+    }
+   ],
+   "nombres_divergents_ecartes": [
+    "854",
+    "42",
+    "153",
+    "168",
+    "309"
+   ],
+   "nombres_contestes_a_verifier": {
+    "803": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "106",
+        "13 2019"
+       ]
+      ]
+     }
+    ],
+    "121": [
+     {
+      "lecture": "TESSERACT_DISTANT:200 dpi",
+      "ecarts": [
+       [
+        "120",
+        "126"
+       ]
+      ]
+     }
+    ],
+    "681": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "63",
+        "8 13 2019"
+       ]
+      ]
+     }
+    ],
+    "667": [
+     {
+      "lecture": "TESSERACT_DISTANT:200 dpi",
+      "ecarts": [
+       [
+        "96",
+        "936"
+       ]
+      ]
+     }
+    ],
+    "182": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "183",
+        "83"
+       ]
+      ]
+     }
+    ],
+    "643": [
+     {
+      "lecture": "TESSERACT_DISTANT:200 dpi",
+      "ecarts": [
+       [
+        "96",
+        "936"
+       ]
+      ]
+     }
+    ],
+    "324": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "87",
+        "13 2019"
+       ]
+      ]
+     }
+    ],
+    "339": [
+     {
+      "lecture": "TESSERACT_DISTANT:200 dpi",
+      "ecarts": [
+       [
+        "74",
+        "714"
+       ]
+      ]
+     }
+    ],
+    "355": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "310",
+        "31"
+       ]
+      ]
+     }
+    ],
+    "489": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "174",
+        "74"
+       ]
+      ]
+     }
+    ]
+   },
+   "lecture_par_article": {
+    "1": "TESSERACT_LOCAL_BEST:300 dpi",
+    "3": "TESSERACT_LOCAL_BEST:300 dpi",
+    "4": "TESSERACT_LOCAL_BEST:300 dpi",
+    "5": "TESSERACT_LOCAL_BEST:300 dpi",
+    "6": "TESSERACT_LOCAL_BEST:300 dpi",
+    "7": "TESSERACT_LOCAL_BEST:300 dpi",
+    "8": "TESSERACT_LOCAL_BEST:300 dpi",
+    "10": "TESSERACT_LOCAL_BEST:300 dpi",
+    "11": "TESSERACT_LOCAL_BEST:300 dpi",
+    "12": "TESSERACT_LOCAL_BEST:300 dpi",
+    "13": "TESSERACT_LOCAL_BEST:300 dpi",
+    "14": "TESSERACT_LOCAL_BEST:300 dpi",
+    "15": "TESSERACT_LOCAL_BEST:300 dpi",
+    "16": "TESSERACT_LOCAL_BEST:300 dpi",
+    "17": "TESSERACT_LOCAL_BEST:300 dpi",
+    "18": "TESSERACT_LOCAL_BEST:300 dpi",
+    "19": "TESSERACT_DISTANT:200 dpi",
+    "20": "TESSERACT_LOCAL_BEST:300 dpi",
+    "21": "TESSERACT_LOCAL_BEST:300 dpi",
+    "22": "TESSERACT_LOCAL_BEST:300 dpi",
+    "23": "TESSERACT_LOCAL_BEST:300 dpi",
+    "24": "TESSERACT_LOCAL_BEST:300 dpi",
+    "25": "TESSERACT_LOCAL_BEST:300 dpi",
+    "26": "TESSERACT_LOCAL_BEST:300 dpi",
+    "27": "TESSERACT_LOCAL_BEST:300 dpi",
+    "28": "TESSERACT_LOCAL_BEST:300 dpi",
+    "29": "TESSERACT_DISTANT:200 dpi",
+    "30": "TESSERACT_LOCAL_BEST:300 dpi",
+    "31": "TESSERACT_LOCAL_BEST:300 dpi",
+    "32": "TESSERACT_LOCAL_BEST:300 dpi",
+    "33": "TESSERACT_LOCAL_BEST:300 dpi",
+    "34": "TESSERACT_LOCAL_BEST:300 dpi",
+    "35": "TESSERACT_LOCAL_BEST:300 dpi",
+    "36": "TESSERACT_LOCAL_BEST:300 dpi",
+    "37": "TESSERACT_DISTANT:200 dpi",
+    "38": "TESSERACT_LOCAL_BEST:300 dpi",
+    "39": "TESSERACT_LOCAL_BEST:300 dpi",
+    "40": "TESSERACT_LOCAL_BEST:300 dpi",
+    "41": "TESSERACT_LOCAL_BEST:300 dpi",
+    "44": "TESSERACT_LOCAL_BEST:300 dpi",
+    "45": "TESSERACT_LOCAL_BEST:300 dpi",
+    "46": "TESSERACT_LOCAL_BEST:300 dpi",
+    "47": "TESSERACT_LOCAL_BEST:300 dpi",
+    "48": "TESSERACT_LOCAL_BEST:300 dpi",
+    "49": "TESSERACT_LOCAL_BEST:300 dpi",
+    "50": "TESSERACT_LOCAL_BEST:300 dpi",
+    "51": "TESSERACT_LOCAL_BEST:300 dpi",
+    "52": "TESSERACT_LOCAL_BEST:300 dpi",
+    "53": "TESSERACT_LOCAL_BEST:300 dpi",
+    "54": "TESSERACT_DISTANT:200 dpi",
+    "55": "TESSERACT_LOCAL_BEST:300 dpi",
+    "56": "TESSERACT_LOCAL_BEST:300 dpi",
+    "57": "TESSERACT_LOCAL_BEST:300 dpi",
+    "58": "TESSERACT_LOCAL_BEST:300 dpi",
+    "59": "TESSERACT_LOCAL_BEST:300 dpi",
+    "60": "TESSERACT_LOCAL_BEST:300 dpi",
+    "61": "TESSERACT_LOCAL_BEST:300 dpi",
+    "62": "TESSERACT_LOCAL_BEST:300 dpi",
+    "63": "TESSERACT_LOCAL_BEST:300 dpi",
+    "64": "TESSERACT_LOCAL_BEST:300 dpi",
+    "65": "TESSERACT_LOCAL_BEST:300 dpi",
+    "66": "TESSERACT_LOCAL_BEST:300 dpi",
+    "67": "TESSERACT_LOCAL_BEST:300 dpi",
+    "68": "TESSERACT_LOCAL_BEST:300 dpi",
+    "69": "TESSERACT_LOCAL_BEST:300 dpi",
+    "70": "TESSERACT_LOCAL_BEST:300 dpi",
+    "71": "TESSERACT_LOCAL_BEST:300 dpi",
+    "72": "TESSERACT_LOCAL_BEST:300 dpi",
+    "73": "TESSERACT_LOCAL_BEST:300 dpi",
+    "74": "TESSERACT_LOCAL_BEST:300 dpi",
+    "75": "TESSERACT_LOCAL_BEST:300 dpi",
+    "76": "TESSERACT_LOCAL_BEST:300 dpi",
+    "77": "TESSERACT_LOCAL_BEST:300 dpi",
+    "78": "TESSERACT_DISTANT:200 dpi",
+    "79": "TESSERACT_LOCAL_BEST:300 dpi",
+    "80": "TESSERACT_LOCAL_BEST:300 dpi",
+    "81": "TESSERACT_LOCAL_BEST:300 dpi",
+    "82": "TESSERACT_LOCAL_BEST:300 dpi",
+    "83": "TESSERACT_LOCAL_BEST:300 dpi",
+    "84": "TESSERACT_LOCAL_BEST:300 dpi",
+    "85": "TESSERACT_LOCAL_BEST:300 dpi",
+    "86": "TESSERACT_LOCAL_BEST:300 dpi",
+    "87": "TESSERACT_LOCAL_BEST:300 dpi",
+    "88": "TESSERACT_LOCAL_BEST:300 dpi",
+    "89": "TESSERACT_LOCAL_BEST:300 dpi",
+    "90": "TESSERACT_LOCAL_BEST:300 dpi",
+    "91": "TESSERACT_LOCAL_BEST:300 dpi",
+    "92": "TESSERACT_LOCAL_BEST:300 dpi",
+    "93": "TESSERACT_LOCAL_BEST:300 dpi",
+    "94": "TESSERACT_LOCAL_BEST:300 dpi",
+    "95": "TESSERACT_LOCAL_BEST:300 dpi",
+    "96": "TESSERACT_LOCAL_BEST:300 dpi",
+    "99": "TESSERACT_LOCAL_BEST:300 dpi",
+    "100": "TESSERACT_LOCAL_BEST:300 dpi",
+    "101": "TESSERACT_LOCAL_BEST:300 dpi",
+    "102": "TESSERACT_LOCAL_BEST:300 dpi",
+    "103": "TESSERACT_LOCAL_BEST:300 dpi",
+    "104": "TESSERACT_LOCAL_BEST:300 dpi",
+    "105": "TESSERACT_LOCAL_BEST:300 dpi",
+    "106": "TESSERACT_DISTANT:200 dpi",
+    "107": "TESSERACT_LOCAL_BEST:300 dpi",
+    "108": "TESSERACT_LOCAL_BEST:300 dpi",
+    "109": "TESSERACT_LOCAL_BEST:300 dpi",
+    "110": "TESSERACT_LOCAL_BEST:300 dpi",
+    "111": "TESSERACT_LOCAL_BEST:300 dpi",
+    "112": "TESSERACT_LOCAL_BEST:300 dpi",
+    "113": "TESSERACT_LOCAL_BEST:300 dpi",
+    "114": "TESSERACT_LOCAL_BEST:300 dpi",
+    "115": "TESSERACT_LOCAL_BEST:300 dpi",
+    "116": "TESSERACT_LOCAL_BEST:300 dpi",
+    "117": "TESSERACT_LOCAL_BEST:300 dpi",
+    "118": "TESSERACT_LOCAL_BEST:300 dpi",
+    "119": "TESSERACT_DISTANT:200 dpi",
+    "120": "TESSERACT_LOCAL_BEST:300 dpi",
+    "121": "TESSERACT_LOCAL_BEST:300 dpi",
+    "122": "TESSERACT_LOCAL_BEST:300 dpi",
+    "123": "TESSERACT_LOCAL_BEST:300 dpi",
+    "124": "TESSERACT_LOCAL_BEST:300 dpi",
+    "125": "TESSERACT_LOCAL_BEST:300 dpi",
+    "126": "TESSERACT_LOCAL_BEST:300 dpi",
+    "127": "TESSERACT_LOCAL_BEST:300 dpi",
+    "128": "TESSERACT_LOCAL_BEST:300 dpi",
+    "129": "TESSERACT_LOCAL_BEST:300 dpi",
+    "130": "TESSERACT_LOCAL_BEST:300 dpi",
+    "131": "TESSERACT_LOCAL_BEST:300 dpi",
+    "132": "TESSERACT_LOCAL_BEST:300 dpi",
+    "133": "TESSERACT_LOCAL_BEST:300 dpi",
+    "134": "TESSERACT_LOCAL_BEST:300 dpi",
+    "135": "TESSERACT_LOCAL_BEST:300 dpi",
+    "136": "TESSERACT_LOCAL_BEST:300 dpi",
+    "137": "TESSERACT_LOCAL_BEST:300 dpi",
+    "138": "TESSERACT_LOCAL_BEST:300 dpi",
+    "139": "TESSERACT_LOCAL_BEST:300 dpi",
+    "140": "TESSERACT_LOCAL_BEST:300 dpi",
+    "141": "TESSERACT_LOCAL_BEST:300 dpi",
+    "142": "TESSERACT_LOCAL_BEST:300 dpi",
+    "143": "TESSERACT_LOCAL_BEST:300 dpi",
+    "144": "TESSERACT_LOCAL_BEST:300 dpi",
+    "145": "TESSERACT_LOCAL_BEST:300 dpi",
+    "146": "TESSERACT_LOCAL_BEST:300 dpi",
+    "147": "TESSERACT_LOCAL_BEST:300 dpi",
+    "148": "TESSERACT_LOCAL_BEST:300 dpi",
+    "149": "TESSERACT_LOCAL_BEST:300 dpi",
+    "150": "TESSERACT_LOCAL_BEST:300 dpi",
+    "151": "TESSERACT_LOCAL_BEST:300 dpi",
+    "152": "TESSERACT_LOCAL_BEST:300 dpi",
+    "154": "TESSERACT_LOCAL_BEST:300 dpi",
+    "155": "TESSERACT_LOCAL_BEST:300 dpi",
+    "156": "TESSERACT_LOCAL_BEST:300 dpi",
+    "157": "TESSERACT_LOCAL_BEST:300 dpi",
+    "158": "TESSERACT_LOCAL_BEST:300 dpi",
+    "159": "TESSERACT_LOCAL_BEST:300 dpi",
+    "160": "TESSERACT_LOCAL_BEST:300 dpi",
+    "161": "TESSERACT_LOCAL_BEST:300 dpi",
+    "162": "TESSERACT_LOCAL_BEST:300 dpi",
+    "163": "TESSERACT_LOCAL_BEST:300 dpi",
+    "164": "TESSERACT_LOCAL_BEST:300 dpi",
+    "165": "TESSERACT_LOCAL_BEST:300 dpi",
+    "166": "TESSERACT_LOCAL_BEST:300 dpi",
+    "167": "TESSERACT_LOCAL_BEST:300 dpi",
+    "169": "TESSERACT_LOCAL_BEST:300 dpi",
+    "170": "TESSERACT_DISTANT:200 dpi",
+    "171": "TESSERACT_LOCAL_BEST:300 dpi",
+    "172": "TESSERACT_LOCAL_BEST:300 dpi",
+    "173": "TESSERACT_LOCAL_BEST:300 dpi",
+    "174": "TESSERACT_LOCAL_BEST:300 dpi",
+    "175": "TESSERACT_LOCAL_BEST:300 dpi",
+    "176": "TESSERACT_LOCAL_BEST:300 dpi",
+    "177": "TESSERACT_LOCAL_BEST:300 dpi",
+    "178": "TESSERACT_LOCAL_BEST:300 dpi",
+    "179": "TESSERACT_LOCAL_BEST:300 dpi",
+    "180": "TESSERACT_LOCAL_BEST:300 dpi",
+    "181": "TESSERACT_DISTANT:200 dpi",
+    "182": "TESSERACT_LOCAL_BEST:300 dpi",
+    "184": "TESSERACT_LOCAL_BEST:300 dpi",
+    "185": "TESSERACT_LOCAL_BEST:300 dpi",
+    "186": "TESSERACT_LOCAL_BEST:300 dpi",
+    "187": "TESSERACT_DISTANT:200 dpi",
+    "188": "TESSERACT_LOCAL_BEST:300 dpi",
+    "189": "TESSERACT_LOCAL_BEST:300 dpi",
+    "190": "TESSERACT_LOCAL_BEST:300 dpi",
+    "191": "TESSERACT_LOCAL_BEST:300 dpi",
+    "192": "TESSERACT_LOCAL_BEST:300 dpi",
+    "193": "TESSERACT_LOCAL_BEST:300 dpi",
+    "194": "TESSERACT_LOCAL_BEST:300 dpi",
+    "195": "TESSERACT_LOCAL_BEST:300 dpi",
+    "196": "TESSERACT_LOCAL_BEST:300 dpi",
+    "197": "TESSERACT_LOCAL_BEST:300 dpi",
+    "198": "TESSERACT_LOCAL_BEST:300 dpi",
+    "199": "TESSERACT_LOCAL_BEST:300 dpi",
+    "200": "TESSERACT_LOCAL_BEST:300 dpi",
+    "201": "TESSERACT_LOCAL_BEST:300 dpi",
+    "202": "TESSERACT_LOCAL_BEST:300 dpi",
+    "203": "TESSERACT_LOCAL_BEST:300 dpi",
+    "204": "TESSERACT_LOCAL_BEST:300 dpi",
+    "205": "TESSERACT_DISTANT:200 dpi",
+    "206": "TESSERACT_LOCAL_BEST:300 dpi",
+    "207": "TESSERACT_LOCAL_BEST:300 dpi",
+    "208": "TESSERACT_LOCAL_BEST:300 dpi",
+    "209": "TESSERACT_LOCAL_BEST:300 dpi",
+    "210": "TESSERACT_LOCAL_BEST:300 dpi",
+    "211": "TESSERACT_LOCAL_BEST:300 dpi",
+    "212": "TESSERACT_LOCAL_BEST:300 dpi",
+    "213": "TESSERACT_LOCAL_BEST:300 dpi",
+    "214": "TESSERACT_LOCAL_BEST:300 dpi",
+    "215": "TESSERACT_LOCAL_BEST:300 dpi",
+    "216": "TESSERACT_LOCAL_BEST:300 dpi",
+    "217": "TESSERACT_LOCAL_BEST:300 dpi",
+    "218": "TESSERACT_LOCAL_BEST:300 dpi",
+    "219": "TESSERACT_LOCAL_BEST:300 dpi",
+    "220": "TESSERACT_LOCAL_BEST:300 dpi",
+    "221": "TESSERACT_LOCAL_BEST:300 dpi",
+    "222": "TESSERACT_LOCAL_BEST:300 dpi",
+    "223": "TESSERACT_LOCAL_BEST:300 dpi",
+    "224": "TESSERACT_LOCAL_BEST:300 dpi",
+    "225": "TESSERACT_LOCAL_BEST:300 dpi",
+    "226": "TESSERACT_LOCAL_BEST:300 dpi",
+    "227": "TESSERACT_LOCAL_BEST:300 dpi",
+    "228": "TESSERACT_LOCAL_BEST:300 dpi",
+    "229": "TESSERACT_DISTANT:200 dpi",
+    "230": "TESSERACT_LOCAL_BEST:300 dpi",
+    "231": "TESSERACT_LOCAL_BEST:300 dpi",
+    "232": "TESSERACT_LOCAL_BEST:300 dpi",
+    "233": "TESSERACT_LOCAL_BEST:300 dpi",
+    "234": "TESSERACT_LOCAL_BEST:300 dpi",
+    "235": "TESSERACT_LOCAL_BEST:300 dpi",
+    "236": "TESSERACT_LOCAL_BEST:300 dpi",
+    "237": "TESSERACT_LOCAL_BEST:300 dpi",
+    "238": "TESSERACT_LOCAL_BEST:300 dpi",
+    "239": "TESSERACT_LOCAL_BEST:300 dpi",
+    "240": "TESSERACT_LOCAL_BEST:300 dpi",
+    "241": "TESSERACT_LOCAL_BEST:300 dpi",
+    "242": "TESSERACT_LOCAL_BEST:300 dpi",
+    "243": "TESSERACT_LOCAL_BEST:300 dpi",
+    "244": "TESSERACT_LOCAL_BEST:300 dpi",
+    "245": "TESSERACT_LOCAL_BEST:300 dpi",
+    "246": "TESSERACT_LOCAL_BEST:300 dpi",
+    "247": "TESSERACT_LOCAL_BEST:300 dpi",
+    "248": "TESSERACT_LOCAL_BEST:300 dpi",
+    "249": "TESSERACT_LOCAL_BEST:300 dpi",
+    "250": "TESSERACT_LOCAL_BEST:300 dpi",
+    "251": "TESSERACT_LOCAL_BEST:300 dpi",
+    "252": "TESSERACT_LOCAL_BEST:300 dpi",
+    "253": "TESSERACT_LOCAL_BEST:300 dpi",
+    "254": "TESSERACT_LOCAL_BEST:300 dpi",
+    "255": "TESSERACT_LOCAL_BEST:300 dpi",
+    "256": "TESSERACT_LOCAL_BEST:300 dpi",
+    "257": "TESSERACT_LOCAL_BEST:300 dpi",
+    "258": "TESSERACT_LOCAL_BEST:300 dpi",
+    "259": "TESSERACT_LOCAL_BEST:300 dpi",
+    "260": "TESSERACT_LOCAL_BEST:300 dpi",
+    "261": "TESSERACT_LOCAL_BEST:300 dpi",
+    "262": "TESSERACT_LOCAL_BEST:300 dpi",
+    "263": "TESSERACT_LOCAL_BEST:300 dpi",
+    "264": "TESSERACT_LOCAL_BEST:300 dpi",
+    "265": "TESSERACT_LOCAL_BEST:300 dpi",
+    "266": "TESSERACT_LOCAL_BEST:300 dpi",
+    "267": "TESSERACT_LOCAL_BEST:300 dpi",
+    "268": "TESSERACT_LOCAL_BEST:300 dpi",
+    "269": "TESSERACT_LOCAL_BEST:300 dpi",
+    "270": "TESSERACT_LOCAL_BEST:300 dpi",
+    "271": "TESSERACT_LOCAL_BEST:300 dpi",
+    "272": "TESSERACT_LOCAL_BEST:300 dpi",
+    "273": "TESSERACT_LOCAL_BEST:300 dpi",
+    "274": "TESSERACT_LOCAL_BEST:300 dpi",
+    "275": "TESSERACT_LOCAL_BEST:300 dpi",
+    "276": "TESSERACT_LOCAL_BEST:300 dpi",
+    "277": "TESSERACT_LOCAL_BEST:300 dpi",
+    "278": "TESSERACT_LOCAL_BEST:300 dpi",
+    "279": "TESSERACT_LOCAL_BEST:300 dpi",
+    "280": "TESSERACT_LOCAL_BEST:300 dpi",
+    "281": "TESSERACT_LOCAL_BEST:300 dpi",
+    "282": "TESSERACT_LOCAL_BEST:300 dpi",
+    "283": "TESSERACT_LOCAL_BEST:300 dpi",
+    "284": "TESSERACT_LOCAL_BEST:300 dpi",
+    "285": "TESSERACT_LOCAL_BEST:300 dpi",
+    "286": "TESSERACT_LOCAL_BEST:300 dpi",
+    "287": "TESSERACT_LOCAL_BEST:300 dpi",
+    "288": "TESSERACT_LOCAL_BEST:300 dpi",
+    "289": "TESSERACT_LOCAL_BEST:300 dpi",
+    "290": "TESSERACT_LOCAL_BEST:300 dpi",
+    "291": "TESSERACT_LOCAL_BEST:300 dpi",
+    "292": "TESSERACT_LOCAL_BEST:300 dpi",
+    "293": "TESSERACT_LOCAL_BEST:300 dpi",
+    "294": "TESSERACT_LOCAL_BEST:300 dpi",
+    "295": "TESSERACT_LOCAL_BEST:300 dpi",
+    "296": "TESSERACT_LOCAL_BEST:300 dpi",
+    "297": "TESSERACT_LOCAL_BEST:300 dpi",
+    "298": "TESSERACT_LOCAL_BEST:300 dpi",
+    "299": "TESSERACT_LOCAL_BEST:300 dpi",
+    "300": "TESSERACT_LOCAL_BEST:300 dpi",
+    "301": "TESSERACT_LOCAL_BEST:300 dpi",
+    "302": "TESSERACT_LOCAL_BEST:300 dpi",
+    "303": "TESSERACT_LOCAL_BEST:300 dpi",
+    "304": "TESSERACT_LOCAL_BEST:300 dpi",
+    "305": "TESSERACT_LOCAL_BEST:300 dpi",
+    "306": "TESSERACT_DISTANT:200 dpi",
+    "307": "TESSERACT_LOCAL_BEST:300 dpi",
+    "308": "TESSERACT_LOCAL_BEST:300 dpi",
+    "310": "TESSERACT_LOCAL_BEST:300 dpi",
+    "311": "TESSERACT_LOCAL_BEST:300 dpi",
+    "312": "TESSERACT_DISTANT:200 dpi",
+    "313": "TESSERACT_LOCAL_BEST:300 dpi",
+    "314": "TESSERACT_LOCAL_BEST:300 dpi",
+    "315": "TESSERACT_LOCAL_BEST:300 dpi",
+    "316": "TESSERACT_LOCAL_BEST:300 dpi",
+    "317": "TESSERACT_LOCAL_BEST:300 dpi",
+    "318": "TESSERACT_LOCAL_BEST:300 dpi",
+    "319": "TESSERACT_LOCAL_BEST:300 dpi",
+    "320": "TESSERACT_LOCAL_BEST:300 dpi",
+    "321": "TESSERACT_LOCAL_BEST:300 dpi",
+    "322": "TESSERACT_LOCAL_BEST:300 dpi",
+    "323": "TESSERACT_LOCAL_BEST:300 dpi",
+    "324": "TESSERACT_LOCAL_BEST:300 dpi",
+    "325": "TESSERACT_LOCAL_BEST:300 dpi",
+    "326": "TESSERACT_LOCAL_BEST:300 dpi",
+    "327": "TESSERACT_LOCAL_BEST:300 dpi",
+    "328": "TESSERACT_LOCAL_BEST:300 dpi",
+    "329": "TESSERACT_LOCAL_BEST:300 dpi",
+    "330": "TESSERACT_LOCAL_BEST:300 dpi",
+    "331": "TESSERACT_LOCAL_BEST:300 dpi",
+    "332": "TESSERACT_LOCAL_BEST:300 dpi",
+    "333": "TESSERACT_LOCAL_BEST:300 dpi",
+    "334": "TESSERACT_LOCAL_BEST:300 dpi",
+    "335": "TESSERACT_LOCAL_BEST:300 dpi",
+    "336": "TESSERACT_LOCAL_BEST:300 dpi",
+    "337": "TESSERACT_LOCAL_BEST:300 dpi",
+    "339": "TESSERACT_LOCAL_BEST:300 dpi",
+    "340": "TESSERACT_LOCAL_BEST:300 dpi",
+    "341": "TESSERACT_LOCAL_BEST:300 dpi",
+    "342": "TESSERACT_LOCAL_BEST:300 dpi",
+    "343": "TESSERACT_LOCAL_BEST:300 dpi",
+    "344": "TESSERACT_LOCAL_BEST:300 dpi",
+    "345": "TESSERACT_LOCAL_BEST:300 dpi",
+    "346": "TESSERACT_LOCAL_BEST:300 dpi",
+    "347": "TESSERACT_LOCAL_BEST:300 dpi",
+    "348": "TESSERACT_LOCAL_BEST:300 dpi",
+    "349": "TESSERACT_LOCAL_BEST:300 dpi",
+    "350": "TESSERACT_LOCAL_BEST:300 dpi",
+    "351": "TESSERACT_LOCAL_BEST:300 dpi",
+    "352": "TESSERACT_LOCAL_BEST:300 dpi",
+    "353": "TESSERACT_LOCAL_BEST:300 dpi",
+    "354": "TESSERACT_LOCAL_BEST:300 dpi",
+    "355": "TESSERACT_LOCAL_BEST:300 dpi",
+    "356": "TESSERACT_LOCAL_BEST:300 dpi",
+    "357": "TESSERACT_LOCAL_BEST:300 dpi",
+    "358": "TESSERACT_LOCAL_BEST:300 dpi",
+    "359": "TESSERACT_DISTANT:200 dpi",
+    "360": "TESSERACT_LOCAL_BEST:300 dpi",
+    "361": "TESSERACT_LOCAL_BEST:300 dpi",
+    "362": "TESSERACT_LOCAL_BEST:300 dpi",
+    "363": "TESSERACT_LOCAL_BEST:300 dpi",
+    "364": "TESSERACT_DISTANT:200 dpi",
+    "365": "TESSERACT_LOCAL_BEST:300 dpi",
+    "366": "TESSERACT_LOCAL_BEST:300 dpi",
+    "367": "TESSERACT_LOCAL_BEST:300 dpi",
+    "368": "TESSERACT_LOCAL_BEST:300 dpi",
+    "369": "TESSERACT_LOCAL_BEST:300 dpi",
+    "370": "TESSERACT_LOCAL_BEST:300 dpi",
+    "371": "TESSERACT_LOCAL_BEST:300 dpi",
+    "372": "TESSERACT_LOCAL_BEST:300 dpi",
+    "373": "TESSERACT_LOCAL_BEST:300 dpi",
+    "374": "TESSERACT_LOCAL_BEST:300 dpi",
+    "375": "TESSERACT_LOCAL_BEST:300 dpi",
+    "376": "TESSERACT_LOCAL_BEST:300 dpi",
+    "377": "TESSERACT_LOCAL_BEST:300 dpi",
+    "378": "TESSERACT_LOCAL_BEST:300 dpi",
+    "379": "TESSERACT_LOCAL_BEST:300 dpi",
+    "380": "TESSERACT_LOCAL_BEST:300 dpi",
+    "381": "TESSERACT_DISTANT:200 dpi",
+    "382": "TESSERACT_LOCAL_BEST:300 dpi",
+    "383": "TESSERACT_LOCAL_BEST:300 dpi",
+    "384": "TESSERACT_LOCAL_BEST:300 dpi",
+    "385": "TESSERACT_LOCAL_BEST:300 dpi",
+    "386": "TESSERACT_LOCAL_BEST:300 dpi",
+    "387": "TESSERACT_LOCAL_BEST:300 dpi",
+    "388": "TESSERACT_LOCAL_BEST:300 dpi",
+    "389": "TESSERACT_LOCAL_BEST:300 dpi",
+    "390": "TESSERACT_LOCAL_BEST:300 dpi",
+    "391": "TESSERACT_LOCAL_BEST:300 dpi",
+    "392": "TESSERACT_LOCAL_BEST:300 dpi",
+    "393": "TESSERACT_LOCAL_BEST:300 dpi",
+    "394": "TESSERACT_LOCAL_BEST:300 dpi",
+    "395": "TESSERACT_LOCAL_BEST:300 dpi",
+    "396": "TESSERACT_LOCAL_BEST:300 dpi",
+    "397": "TESSERACT_LOCAL_BEST:300 dpi",
+    "398": "TESSERACT_LOCAL_BEST:300 dpi",
+    "399": "TESSERACT_LOCAL_BEST:300 dpi",
+    "400": "TESSERACT_LOCAL_BEST:300 dpi",
+    "401": "TESSERACT_LOCAL_BEST:300 dpi",
+    "402": "TESSERACT_LOCAL_BEST:300 dpi",
+    "403": "TESSERACT_LOCAL_BEST:300 dpi",
+    "404": "TESSERACT_LOCAL_BEST:300 dpi",
+    "405": "TESSERACT_LOCAL_BEST:300 dpi",
+    "406": "TESSERACT_LOCAL_BEST:300 dpi",
+    "407": "TESSERACT_LOCAL_BEST:300 dpi",
+    "408": "TESSERACT_LOCAL_BEST:300 dpi",
+    "409": "TESSERACT_LOCAL_BEST:300 dpi",
+    "410": "TESSERACT_LOCAL_BEST:300 dpi",
+    "411": "TESSERACT_LOCAL_BEST:300 dpi",
+    "412": "TESSERACT_LOCAL_BEST:300 dpi",
+    "413": "TESSERACT_LOCAL_BEST:300 dpi",
+    "414": "TESSERACT_LOCAL_BEST:300 dpi",
+    "415": "TESSERACT_LOCAL_BEST:300 dpi",
+    "416": "TESSERACT_DISTANT:200 dpi",
+    "417": "TESSERACT_LOCAL_BEST:300 dpi",
+    "418": "TESSERACT_LOCAL_BEST:300 dpi",
+    "419": "TESSERACT_LOCAL_BEST:300 dpi",
+    "420": "TESSERACT_LOCAL_BEST:300 dpi",
+    "421": "TESSERACT_LOCAL_BEST:300 dpi",
+    "422": "TESSERACT_LOCAL_BEST:300 dpi",
+    "423": "TESSERACT_LOCAL_BEST:300 dpi",
+    "424": "TESSERACT_LOCAL_BEST:300 dpi",
+    "425": "TESSERACT_LOCAL_BEST:300 dpi",
+    "426": "TESSERACT_LOCAL_BEST:300 dpi",
+    "427": "TESSERACT_LOCAL_BEST:300 dpi",
+    "428": "TESSERACT_LOCAL_BEST:300 dpi",
+    "429": "TESSERACT_LOCAL_BEST:300 dpi",
+    "430": "TESSERACT_LOCAL_BEST:300 dpi",
+    "431": "TESSERACT_LOCAL_BEST:300 dpi",
+    "432": "TESSERACT_LOCAL_BEST:300 dpi",
+    "433": "TESSERACT_LOCAL_BEST:300 dpi",
+    "434": "TESSERACT_LOCAL_BEST:300 dpi",
+    "435": "TESSERACT_LOCAL_BEST:300 dpi",
+    "436": "TESSERACT_LOCAL_BEST:300 dpi",
+    "437": "TESSERACT_LOCAL_BEST:300 dpi",
+    "438": "TESSERACT_LOCAL_BEST:300 dpi",
+    "439": "TESSERACT_LOCAL_BEST:300 dpi",
+    "440": "TESSERACT_LOCAL_BEST:300 dpi",
+    "441": "TESSERACT_LOCAL_BEST:300 dpi",
+    "442": "TESSERACT_LOCAL_BEST:300 dpi",
+    "443": "TESSERACT_LOCAL_BEST:300 dpi",
+    "444": "TESSERACT_LOCAL_BEST:300 dpi",
+    "445": "TESSERACT_LOCAL_BEST:300 dpi",
+    "446": "TESSERACT_LOCAL_BEST:300 dpi",
+    "447": "TESSERACT_LOCAL_BEST:300 dpi",
+    "448": "TESSERACT_LOCAL_BEST:300 dpi",
+    "449": "TESSERACT_LOCAL_BEST:300 dpi",
+    "450": "TESSERACT_LOCAL_BEST:300 dpi",
+    "451": "TESSERACT_LOCAL_BEST:300 dpi",
+    "452": "TESSERACT_LOCAL_BEST:300 dpi",
+    "453": "TESSERACT_LOCAL_BEST:300 dpi",
+    "454": "TESSERACT_LOCAL_BEST:300 dpi",
+    "455": "TESSERACT_LOCAL_BEST:300 dpi",
+    "456": "TESSERACT_DISTANT:200 dpi",
+    "457": "TESSERACT_LOCAL_BEST:300 dpi",
+    "458": "TESSERACT_LOCAL_BEST:300 dpi",
+    "459": "TESSERACT_LOCAL_BEST:300 dpi",
+    "460": "TESSERACT_LOCAL_BEST:300 dpi",
+    "461": "TESSERACT_LOCAL_BEST:300 dpi",
+    "462": "TESSERACT_LOCAL_BEST:300 dpi",
+    "463": "TESSERACT_LOCAL_BEST:300 dpi",
+    "464": "TESSERACT_LOCAL_BEST:300 dpi",
+    "465": "TESSERACT_LOCAL_BEST:300 dpi",
+    "466": "TESSERACT_LOCAL_BEST:300 dpi",
+    "467": "TESSERACT_LOCAL_BEST:300 dpi",
+    "468": "TESSERACT_LOCAL_BEST:300 dpi",
+    "469": "TESSERACT_LOCAL_BEST:300 dpi",
+    "470": "TESSERACT_LOCAL_BEST:300 dpi",
+    "471": "TESSERACT_LOCAL_BEST:300 dpi",
+    "472": "TESSERACT_LOCAL_BEST:300 dpi",
+    "473": "TESSERACT_LOCAL_BEST:300 dpi",
+    "474": "TESSERACT_LOCAL_BEST:300 dpi",
+    "475": "TESSERACT_LOCAL_BEST:300 dpi",
+    "476": "TESSERACT_LOCAL_BEST:300 dpi",
+    "477": "TESSERACT_LOCAL_BEST:300 dpi",
+    "478": "TESSERACT_LOCAL_BEST:300 dpi",
+    "479": "TESSERACT_LOCAL_BEST:300 dpi",
+    "480": "TESSERACT_LOCAL_BEST:300 dpi",
+    "481": "TESSERACT_LOCAL_BEST:300 dpi",
+    "482": "TESSERACT_LOCAL_BEST:300 dpi",
+    "483": "TESSERACT_LOCAL_BEST:300 dpi",
+    "484": "TESSERACT_LOCAL_BEST:300 dpi",
+    "485": "TESSERACT_LOCAL_BEST:300 dpi",
+    "486": "TESSERACT_LOCAL_BEST:300 dpi",
+    "487": "TESSERACT_LOCAL_BEST:300 dpi",
+    "488": "TESSERACT_LOCAL_BEST:300 dpi",
+    "489": "TESSERACT_DISTANT:200 dpi",
+    "490": "TESSERACT_LOCAL_BEST:300 dpi",
+    "491": "TESSERACT_LOCAL_BEST:300 dpi",
+    "492": "TESSERACT_LOCAL_BEST:300 dpi",
+    "493": "TESSERACT_LOCAL_BEST:300 dpi",
+    "494": "TESSERACT_LOCAL_BEST:300 dpi",
+    "495": "TESSERACT_DISTANT:200 dpi",
+    "496": "TESSERACT_DISTANT:200 dpi",
+    "497": "TESSERACT_LOCAL_BEST:300 dpi",
+    "498": "TESSERACT_LOCAL_BEST:300 dpi",
+    "499": "TESSERACT_DISTANT:200 dpi",
+    "500": "TESSERACT_LOCAL_BEST:300 dpi",
+    "501": "TESSERACT_LOCAL_BEST:300 dpi",
+    "502": "TESSERACT_LOCAL_BEST:300 dpi",
+    "503": "TESSERACT_LOCAL_BEST:300 dpi",
+    "504": "TESSERACT_LOCAL_BEST:300 dpi",
+    "505": "TESSERACT_LOCAL_BEST:300 dpi",
+    "506": "TESSERACT_LOCAL_BEST:300 dpi",
+    "507": "TESSERACT_LOCAL_BEST:300 dpi",
+    "508": "TESSERACT_LOCAL_BEST:300 dpi",
+    "509": "TESSERACT_LOCAL_BEST:300 dpi",
+    "510": "TESSERACT_LOCAL_BEST:300 dpi",
+    "511": "TESSERACT_LOCAL_BEST:300 dpi",
+    "512": "TESSERACT_LOCAL_BEST:300 dpi",
+    "513": "TESSERACT_LOCAL_BEST:300 dpi",
+    "514": "TESSERACT_LOCAL_BEST:300 dpi",
+    "515": "TESSERACT_LOCAL_BEST:300 dpi",
+    "516": "TESSERACT_LOCAL_BEST:300 dpi",
+    "517": "TESSERACT_LOCAL_BEST:300 dpi",
+    "518": "TESSERACT_LOCAL_BEST:300 dpi",
+    "519": "TESSERACT_LOCAL_BEST:300 dpi",
+    "520": "TESSERACT_LOCAL_BEST:300 dpi",
+    "521": "TESSERACT_LOCAL_BEST:300 dpi",
+    "522": "TESSERACT_LOCAL_BEST:300 dpi",
+    "523": "TESSERACT_LOCAL_BEST:300 dpi",
+    "524": "TESSERACT_LOCAL_BEST:300 dpi",
+    "525": "TESSERACT_LOCAL_BEST:300 dpi",
+    "526": "TESSERACT_LOCAL_BEST:300 dpi",
+    "527": "TESSERACT_LOCAL_BEST:300 dpi",
+    "528": "TESSERACT_LOCAL_BEST:300 dpi",
+    "529": "TESSERACT_LOCAL_BEST:300 dpi",
+    "530": "TESSERACT_LOCAL_BEST:300 dpi",
+    "531": "TESSERACT_LOCAL_BEST:300 dpi",
+    "532": "TESSERACT_LOCAL_BEST:300 dpi",
+    "533": "TESSERACT_LOCAL_BEST:300 dpi",
+    "534": "TESSERACT_LOCAL_BEST:300 dpi",
+    "535": "TESSERACT_LOCAL_BEST:300 dpi",
+    "536": "TESSERACT_LOCAL_BEST:300 dpi",
+    "537": "TESSERACT_DISTANT:200 dpi",
+    "538": "TESSERACT_LOCAL_BEST:300 dpi",
+    "539": "TESSERACT_LOCAL_BEST:300 dpi",
+    "540": "TESSERACT_LOCAL_BEST:300 dpi",
+    "541": "TESSERACT_LOCAL_BEST:300 dpi",
+    "542": "TESSERACT_LOCAL_BEST:300 dpi",
+    "543": "TESSERACT_LOCAL_BEST:300 dpi",
+    "544": "TESSERACT_LOCAL_BEST:300 dpi",
+    "545": "TESSERACT_LOCAL_BEST:300 dpi",
+    "546": "TESSERACT_LOCAL_BEST:300 dpi",
+    "547": "TESSERACT_LOCAL_BEST:300 dpi",
+    "548": "TESSERACT_LOCAL_BEST:300 dpi",
+    "549": "TESSERACT_LOCAL_BEST:300 dpi",
+    "550": "TESSERACT_LOCAL_BEST:300 dpi",
+    "551": "TESSERACT_LOCAL_BEST:300 dpi",
+    "552": "TESSERACT_LOCAL_BEST:300 dpi",
+    "553": "TESSERACT_LOCAL_BEST:300 dpi",
+    "554": "TESSERACT_LOCAL_BEST:300 dpi",
+    "555": "TESSERACT_LOCAL_BEST:300 dpi",
+    "556": "TESSERACT_LOCAL_BEST:300 dpi",
+    "557": "TESSERACT_LOCAL_BEST:300 dpi",
+    "558": "TESSERACT_LOCAL_BEST:300 dpi",
+    "559": "TESSERACT_LOCAL_BEST:300 dpi",
+    "560": "TESSERACT_LOCAL_BEST:300 dpi",
+    "561": "TESSERACT_LOCAL_BEST:300 dpi",
+    "562": "TESSERACT_LOCAL_BEST:300 dpi",
+    "563": "TESSERACT_LOCAL_BEST:300 dpi",
+    "564": "TESSERACT_LOCAL_BEST:300 dpi",
+    "565": "TESSERACT_LOCAL_BEST:300 dpi",
+    "566": "TESSERACT_LOCAL_BEST:300 dpi",
+    "567": "TESSERACT_LOCAL_BEST:300 dpi",
+    "568": "TESSERACT_LOCAL_BEST:300 dpi",
+    "569": "TESSERACT_DISTANT:200 dpi",
+    "570": "TESSERACT_LOCAL_BEST:300 dpi",
+    "571": "TESSERACT_LOCAL_BEST:300 dpi",
+    "572": "TESSERACT_LOCAL_BEST:300 dpi",
+    "573": "TESSERACT_LOCAL_BEST:300 dpi",
+    "574": "TESSERACT_LOCAL_BEST:300 dpi",
+    "575": "TESSERACT_LOCAL_BEST:300 dpi",
+    "576": "TESSERACT_LOCAL_BEST:300 dpi",
+    "577": "TESSERACT_LOCAL_BEST:300 dpi",
+    "578": "TESSERACT_LOCAL_BEST:300 dpi",
+    "579": "TESSERACT_DISTANT:200 dpi",
+    "580": "TESSERACT_LOCAL_BEST:300 dpi",
+    "581": "TESSERACT_LOCAL_BEST:300 dpi",
+    "582": "TESSERACT_LOCAL_BEST:300 dpi",
+    "583": "TESSERACT_LOCAL_BEST:300 dpi",
+    "584": "TESSERACT_LOCAL_BEST:300 dpi",
+    "585": "TESSERACT_LOCAL_BEST:300 dpi",
+    "586": "TESSERACT_LOCAL_BEST:300 dpi",
+    "587": "TESSERACT_LOCAL_BEST:300 dpi",
+    "588": "TESSERACT_LOCAL_BEST:300 dpi",
+    "589": "TESSERACT_LOCAL_BEST:300 dpi",
+    "590": "TESSERACT_LOCAL_BEST:300 dpi",
+    "591": "TESSERACT_LOCAL_BEST:300 dpi",
+    "592": "TESSERACT_LOCAL_BEST:300 dpi",
+    "593": "TESSERACT_LOCAL_BEST:300 dpi",
+    "594": "TESSERACT_LOCAL_BEST:300 dpi",
+    "595": "TESSERACT_LOCAL_BEST:300 dpi",
+    "596": "TESSERACT_LOCAL_BEST:300 dpi",
+    "597": "TESSERACT_LOCAL_BEST:300 dpi",
+    "598": "TESSERACT_LOCAL_BEST:300 dpi",
+    "599": "TESSERACT_LOCAL_BEST:300 dpi",
+    "600": "TESSERACT_DISTANT:200 dpi",
+    "601": "TESSERACT_LOCAL_BEST:300 dpi",
+    "602": "TESSERACT_LOCAL_BEST:300 dpi",
+    "603": "TESSERACT_DISTANT:200 dpi",
+    "604": "TESSERACT_LOCAL_BEST:300 dpi",
+    "605": "TESSERACT_DISTANT:200 dpi",
+    "606": "TESSERACT_LOCAL_BEST:300 dpi",
+    "607": "TESSERACT_LOCAL_BEST:300 dpi",
+    "608": "TESSERACT_LOCAL_BEST:300 dpi",
+    "609": "TESSERACT_LOCAL_BEST:300 dpi",
+    "610": "TESSERACT_LOCAL_BEST:300 dpi",
+    "611": "TESSERACT_DISTANT:200 dpi",
+    "612": "TESSERACT_LOCAL_BEST:300 dpi",
+    "613": "TESSERACT_LOCAL_BEST:300 dpi",
+    "614": "TESSERACT_LOCAL_BEST:300 dpi",
+    "615": "TESSERACT_LOCAL_BEST:300 dpi",
+    "616": "TESSERACT_LOCAL_BEST:300 dpi",
+    "617": "TESSERACT_LOCAL_BEST:300 dpi",
+    "618": "TESSERACT_LOCAL_BEST:300 dpi",
+    "619": "TESSERACT_LOCAL_BEST:300 dpi",
+    "620": "TESSERACT_LOCAL_BEST:300 dpi",
+    "621": "TESSERACT_LOCAL_BEST:300 dpi",
+    "622": "TESSERACT_LOCAL_BEST:300 dpi",
+    "623": "TESSERACT_LOCAL_BEST:300 dpi",
+    "624": "TESSERACT_LOCAL_BEST:300 dpi",
+    "625": "TESSERACT_LOCAL_BEST:300 dpi",
+    "626": "TESSERACT_LOCAL_BEST:300 dpi",
+    "627": "TESSERACT_LOCAL_BEST:300 dpi",
+    "628": "TESSERACT_LOCAL_BEST:300 dpi",
+    "629": "TESSERACT_LOCAL_BEST:300 dpi",
+    "630": "TESSERACT_LOCAL_BEST:300 dpi",
+    "631": "TESSERACT_LOCAL_BEST:300 dpi",
+    "632": "TESSERACT_LOCAL_BEST:300 dpi",
+    "633": "TESSERACT_LOCAL_BEST:300 dpi",
+    "634": "TESSERACT_LOCAL_BEST:300 dpi",
+    "635": "TESSERACT_LOCAL_BEST:300 dpi",
+    "636": "TESSERACT_LOCAL_BEST:300 dpi",
+    "637": "TESSERACT_LOCAL_BEST:300 dpi",
+    "638": "TESSERACT_LOCAL_BEST:300 dpi",
+    "639": "TESSERACT_LOCAL_BEST:300 dpi",
+    "640": "TESSERACT_LOCAL_BEST:300 dpi",
+    "641": "TESSERACT_LOCAL_BEST:300 dpi",
+    "642": "TESSERACT_LOCAL_BEST:300 dpi",
+    "643": "TESSERACT_LOCAL_BEST:300 dpi",
+    "644": "TESSERACT_LOCAL_BEST:300 dpi",
+    "645": "TESSERACT_LOCAL_BEST:300 dpi",
+    "646": "TESSERACT_LOCAL_BEST:300 dpi",
+    "647": "TESSERACT_LOCAL_BEST:300 dpi",
+    "648": "TESSERACT_LOCAL_BEST:300 dpi",
+    "649": "TESSERACT_LOCAL_BEST:300 dpi",
+    "650": "TESSERACT_LOCAL_BEST:300 dpi",
+    "651": "TESSERACT_LOCAL_BEST:300 dpi",
+    "652": "TESSERACT_LOCAL_BEST:300 dpi",
+    "653": "TESSERACT_LOCAL_BEST:300 dpi",
+    "654": "TESSERACT_LOCAL_BEST:300 dpi",
+    "655": "TESSERACT_LOCAL_BEST:300 dpi",
+    "656": "TESSERACT_DISTANT:200 dpi",
+    "657": "TESSERACT_LOCAL_BEST:300 dpi",
+    "658": "TESSERACT_LOCAL_BEST:300 dpi",
+    "659": "TESSERACT_LOCAL_BEST:300 dpi",
+    "660": "TESSERACT_LOCAL_BEST:300 dpi",
+    "661": "TESSERACT_LOCAL_BEST:300 dpi",
+    "662": "TESSERACT_LOCAL_BEST:300 dpi",
+    "663": "TESSERACT_LOCAL_BEST:300 dpi",
+    "664": "TESSERACT_LOCAL_BEST:300 dpi",
+    "665": "TESSERACT_LOCAL_BEST:300 dpi",
+    "666": "TESSERACT_LOCAL_BEST:300 dpi",
+    "667": "TESSERACT_LOCAL_BEST:300 dpi",
+    "668": "TESSERACT_DISTANT:200 dpi",
+    "669": "TESSERACT_LOCAL_BEST:300 dpi",
+    "670": "TESSERACT_LOCAL_BEST:300 dpi",
+    "671": "TESSERACT_LOCAL_BEST:300 dpi",
+    "672": "TESSERACT_LOCAL_BEST:300 dpi",
+    "673": "TESSERACT_LOCAL_BEST:300 dpi",
+    "674": "TESSERACT_LOCAL_BEST:300 dpi",
+    "675": "TESSERACT_LOCAL_BEST:300 dpi",
+    "676": "TESSERACT_LOCAL_BEST:300 dpi",
+    "677": "TESSERACT_LOCAL_BEST:300 dpi",
+    "678": "TESSERACT_LOCAL_BEST:300 dpi",
+    "679": "TESSERACT_LOCAL_BEST:300 dpi",
+    "680": "TESSERACT_LOCAL_BEST:300 dpi",
+    "681": "TESSERACT_LOCAL_BEST:300 dpi",
+    "682": "TESSERACT_LOCAL_BEST:300 dpi",
+    "683": "TESSERACT_LOCAL_BEST:300 dpi",
+    "684": "TESSERACT_LOCAL_BEST:300 dpi",
+    "685": "TESSERACT_LOCAL_BEST:300 dpi",
+    "686": "TESSERACT_LOCAL_BEST:300 dpi",
+    "687": "TESSERACT_LOCAL_BEST:300 dpi",
+    "688": "TESSERACT_LOCAL_BEST:300 dpi",
+    "689": "TESSERACT_LOCAL_BEST:300 dpi",
+    "690": "TESSERACT_LOCAL_BEST:300 dpi",
+    "691": "TESSERACT_LOCAL_BEST:300 dpi",
+    "692": "TESSERACT_LOCAL_BEST:300 dpi",
+    "693": "TESSERACT_LOCAL_BEST:300 dpi",
+    "694": "TESSERACT_LOCAL_BEST:300 dpi",
+    "695": "TESSERACT_LOCAL_BEST:300 dpi",
+    "696": "TESSERACT_LOCAL_BEST:300 dpi",
+    "697": "TESSERACT_LOCAL_BEST:300 dpi",
+    "698": "TESSERACT_LOCAL_BEST:300 dpi",
+    "699": "TESSERACT_LOCAL_BEST:300 dpi",
+    "700": "TESSERACT_LOCAL_BEST:300 dpi",
+    "701": "TESSERACT_LOCAL_BEST:300 dpi",
+    "702": "TESSERACT_LOCAL_BEST:300 dpi",
+    "703": "TESSERACT_LOCAL_BEST:300 dpi",
+    "704": "TESSERACT_LOCAL_BEST:300 dpi",
+    "705": "TESSERACT_LOCAL_BEST:300 dpi",
+    "706": "TESSERACT_LOCAL_BEST:300 dpi",
+    "707": "TESSERACT_LOCAL_BEST:300 dpi",
+    "708": "TESSERACT_LOCAL_BEST:300 dpi",
+    "709": "TESSERACT_LOCAL_BEST:300 dpi",
+    "710": "TESSERACT_LOCAL_BEST:300 dpi",
+    "711": "TESSERACT_LOCAL_BEST:300 dpi",
+    "712": "TESSERACT_LOCAL_BEST:300 dpi",
+    "713": "TESSERACT_DISTANT:200 dpi",
+    "714": "TESSERACT_LOCAL_BEST:300 dpi",
+    "715": "TESSERACT_LOCAL_BEST:300 dpi",
+    "716": "TESSERACT_LOCAL_BEST:300 dpi",
+    "717": "TESSERACT_LOCAL_BEST:300 dpi",
+    "718": "TESSERACT_LOCAL_BEST:300 dpi",
+    "719": "TESSERACT_LOCAL_BEST:300 dpi",
+    "720": "TESSERACT_LOCAL_BEST:300 dpi",
+    "721": "TESSERACT_LOCAL_BEST:300 dpi",
+    "722": "TESSERACT_LOCAL_BEST:300 dpi",
+    "723": "TESSERACT_LOCAL_BEST:300 dpi",
+    "724": "TESSERACT_LOCAL_BEST:300 dpi",
+    "725": "TESSERACT_LOCAL_BEST:300 dpi",
+    "726": "TESSERACT_LOCAL_BEST:300 dpi",
+    "727": "TESSERACT_LOCAL_BEST:300 dpi",
+    "728": "TESSERACT_LOCAL_BEST:300 dpi",
+    "729": "TESSERACT_LOCAL_BEST:300 dpi",
+    "730": "TESSERACT_LOCAL_BEST:300 dpi",
+    "731": "TESSERACT_LOCAL_BEST:300 dpi",
+    "732": "TESSERACT_LOCAL_BEST:300 dpi",
+    "733": "TESSERACT_LOCAL_BEST:300 dpi",
+    "734": "TESSERACT_LOCAL_BEST:300 dpi",
+    "735": "TESSERACT_LOCAL_BEST:300 dpi",
+    "736": "TESSERACT_LOCAL_BEST:300 dpi",
+    "737": "TESSERACT_LOCAL_BEST:300 dpi",
+    "738": "TESSERACT_LOCAL_BEST:300 dpi",
+    "739": "TESSERACT_LOCAL_BEST:300 dpi",
+    "740": "TESSERACT_LOCAL_BEST:300 dpi",
+    "741": "TESSERACT_LOCAL_BEST:300 dpi",
+    "742": "TESSERACT_LOCAL_BEST:300 dpi",
+    "743": "TESSERACT_LOCAL_BEST:300 dpi",
+    "744": "TESSERACT_LOCAL_BEST:300 dpi",
+    "745": "TESSERACT_LOCAL_BEST:300 dpi",
+    "746": "TESSERACT_LOCAL_BEST:300 dpi",
+    "747": "TESSERACT_LOCAL_BEST:300 dpi",
+    "748": "TESSERACT_LOCAL_BEST:300 dpi",
+    "749": "TESSERACT_LOCAL_BEST:300 dpi",
+    "750": "TESSERACT_LOCAL_BEST:300 dpi",
+    "751": "TESSERACT_LOCAL_BEST:300 dpi",
+    "752": "TESSERACT_LOCAL_BEST:300 dpi",
+    "753": "TESSERACT_LOCAL_BEST:300 dpi",
+    "754": "TESSERACT_LOCAL_BEST:300 dpi",
+    "755": "TESSERACT_LOCAL_BEST:300 dpi",
+    "757": "TESSERACT_LOCAL_BEST:300 dpi",
+    "758": "TESSERACT_LOCAL_BEST:300 dpi",
+    "759": "TESSERACT_LOCAL_BEST:300 dpi",
+    "760": "TESSERACT_LOCAL_BEST:300 dpi",
+    "761": "TESSERACT_LOCAL_BEST:300 dpi",
+    "762": "TESSERACT_LOCAL_BEST:300 dpi",
+    "763": "TESSERACT_DISTANT:200 dpi",
+    "764": "TESSERACT_LOCAL_BEST:300 dpi",
+    "765": "TESSERACT_LOCAL_BEST:300 dpi",
+    "766": "TESSERACT_DISTANT:200 dpi",
+    "767": "TESSERACT_LOCAL_BEST:300 dpi",
+    "768": "TESSERACT_LOCAL_BEST:300 dpi",
+    "769": "TESSERACT_LOCAL_BEST:300 dpi",
+    "770": "TESSERACT_LOCAL_BEST:300 dpi",
+    "771": "TESSERACT_LOCAL_BEST:300 dpi",
+    "772": "TESSERACT_LOCAL_BEST:300 dpi",
+    "773": "TESSERACT_LOCAL_BEST:300 dpi",
+    "774": "TESSERACT_DISTANT:200 dpi",
+    "775": "TESSERACT_LOCAL_BEST:300 dpi",
+    "776": "TESSERACT_LOCAL_BEST:300 dpi",
+    "777": "TESSERACT_DISTANT:200 dpi",
+    "778": "TESSERACT_LOCAL_BEST:300 dpi",
+    "779": "TESSERACT_LOCAL_BEST:300 dpi",
+    "780": "TESSERACT_LOCAL_BEST:300 dpi",
+    "781": "TESSERACT_LOCAL_BEST:300 dpi",
+    "782": "TESSERACT_LOCAL_BEST:300 dpi",
+    "783": "TESSERACT_DISTANT:200 dpi",
+    "784": "TESSERACT_LOCAL_BEST:300 dpi",
+    "785": "TESSERACT_LOCAL_BEST:300 dpi",
+    "786": "TESSERACT_LOCAL_BEST:300 dpi",
+    "787": "TESSERACT_LOCAL_BEST:300 dpi",
+    "788": "TESSERACT_LOCAL_BEST:300 dpi",
+    "789": "TESSERACT_LOCAL_BEST:300 dpi",
+    "790": "TESSERACT_LOCAL_BEST:300 dpi",
+    "791": "TESSERACT_LOCAL_BEST:300 dpi",
+    "792": "TESSERACT_LOCAL_BEST:300 dpi",
+    "793": "TESSERACT_LOCAL_BEST:300 dpi",
+    "794": "TESSERACT_LOCAL_BEST:300 dpi",
+    "795": "TESSERACT_DISTANT:200 dpi",
+    "796": "TESSERACT_LOCAL_BEST:300 dpi",
+    "797": "TESSERACT_LOCAL_BEST:300 dpi",
+    "798": "TESSERACT_LOCAL_BEST:300 dpi",
+    "799": "TESSERACT_LOCAL_BEST:300 dpi",
+    "800": "TESSERACT_LOCAL_BEST:300 dpi",
+    "801": "TESSERACT_DISTANT:200 dpi",
+    "802": "TESSERACT_LOCAL_BEST:300 dpi",
+    "803": "TESSERACT_LOCAL_BEST:300 dpi",
+    "804": "TESSERACT_LOCAL_BEST:300 dpi",
+    "805": "TESSERACT_LOCAL_BEST:300 dpi",
+    "806": "TESSERACT_LOCAL_BEST:300 dpi",
+    "807": "TESSERACT_LOCAL_BEST:300 dpi",
+    "808": "TESSERACT_LOCAL_BEST:300 dpi",
+    "809": "TESSERACT_LOCAL_BEST:300 dpi",
+    "810": "TESSERACT_LOCAL_BEST:300 dpi",
+    "811": "TESSERACT_DISTANT:200 dpi",
+    "812": "TESSERACT_LOCAL_BEST:300 dpi",
+    "813": "TESSERACT_LOCAL_BEST:300 dpi",
+    "814": "TESSERACT_LOCAL_BEST:300 dpi",
+    "815": "TESSERACT_LOCAL_BEST:300 dpi",
+    "816": "TESSERACT_LOCAL_BEST:300 dpi",
+    "817": "TESSERACT_LOCAL_BEST:300 dpi",
+    "818": "TESSERACT_LOCAL_BEST:300 dpi",
+    "819": "TESSERACT_LOCAL_BEST:300 dpi",
+    "820": "TESSERACT_LOCAL_BEST:300 dpi",
+    "821": "TESSERACT_LOCAL_BEST:300 dpi",
+    "822": "TESSERACT_LOCAL_BEST:300 dpi",
+    "823": "TESSERACT_LOCAL_BEST:300 dpi",
+    "824": "TESSERACT_LOCAL_BEST:300 dpi",
+    "825": "TESSERACT_LOCAL_BEST:300 dpi",
+    "826": "TESSERACT_LOCAL_BEST:300 dpi",
+    "827": "TESSERACT_LOCAL_BEST:300 dpi",
+    "828": "TESSERACT_LOCAL_BEST:300 dpi",
+    "829": "TESSERACT_LOCAL_BEST:300 dpi",
+    "830": "TESSERACT_LOCAL_BEST:300 dpi",
+    "831": "TESSERACT_LOCAL_BEST:300 dpi",
+    "832": "TESSERACT_LOCAL_BEST:300 dpi",
+    "833": "TESSERACT_LOCAL_BEST:300 dpi",
+    "834": "TESSERACT_DISTANT:200 dpi",
+    "835": "TESSERACT_LOCAL_BEST:300 dpi",
+    "836": "TESSERACT_LOCAL_BEST:300 dpi",
+    "837": "TESSERACT_LOCAL_BEST:300 dpi",
+    "838": "TESSERACT_LOCAL_BEST:300 dpi",
+    "839": "TESSERACT_LOCAL_BEST:300 dpi",
+    "840": "TESSERACT_LOCAL_BEST:300 dpi",
+    "841": "TESSERACT_LOCAL_BEST:300 dpi",
+    "842": "TESSERACT_LOCAL_BEST:300 dpi",
+    "843": "TESSERACT_LOCAL_BEST:300 dpi",
+    "844": "TESSERACT_LOCAL_BEST:300 dpi",
+    "845": "TESSERACT_LOCAL_BEST:300 dpi",
+    "846": "TESSERACT_LOCAL_BEST:300 dpi",
+    "847": "TESSERACT_LOCAL_BEST:300 dpi",
+    "848": "TESSERACT_LOCAL_BEST:300 dpi",
+    "849": "TESSERACT_LOCAL_BEST:300 dpi",
+    "850": "TESSERACT_LOCAL_BEST:300 dpi",
+    "851": "TESSERACT_LOCAL_BEST:300 dpi",
+    "852": "TESSERACT_LOCAL_BEST:300 dpi",
+    "853": "TESSERACT_LOCAL_BEST:300 dpi"
+   }
+  },
+  "mffe_etat_civil_2018_862": {
+   "date": "2026-10-20",
+   "ref_id": "REF-DD563B5E3C76",
+   "doc_id": "DOC-3C3B17B73AE9",
+   "numero_texte": "2018-862",
+   "lecture_principale": "TESSERACT_DISTANT:200 dpi",
+   "etalons": "TESSERACT_LOCAL_FAST:300 dpi+TESSERACT_LOCAL_BEST:300 dpi",
+   "copies_ecartees": [],
+   "articles_indexes": 100,
+   "couverture": 0.885,
+   "accord_moyen": 0.9892,
+   "articles_ecartes": [
+    {
+     "numero": "1",
+     "similarite": null
+    },
+    {
+     "numero": "5",
+     "similarite": null
+    },
+    {
+     "numero": "7",
+     "similarite": null
+    },
+    {
+     "numero": "8",
+     "similarite": null
+    },
+    {
+     "numero": "9",
+     "similarite": null
+    },
+    {
+     "numero": "104",
+     "similarite": null
+    },
+    {
+     "numero": "19",
+     "similarite": null
+    },
+    {
+     "numero": "105",
+     "similarite": null
+    }
+   ],
+   "nombres_divergents_ecartes": [
+    "104"
+   ],
+   "nombres_contestes_a_verifier": {
+    "84": [
+     {
+      "lecture": "TESSERACT_DISTANT:200 dpi",
+      "ecarts": [
+       [
+        "2",
+        "3"
+       ]
+      ]
+     }
+    ],
+    "98": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "11",
+        "1"
+       ]
+      ]
+     }
+    ],
+    "102": [
+     {
+      "lecture": "TESSERACT_LOCAL_FAST:300 dpi",
+      "ecarts": [
+       [
+        "11",
+        "1"
+       ]
+      ]
+     }
+    ],
+    "110": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "15",
+        "5"
+       ]
+      ]
+     }
+    ]
+   },
+   "lecture_par_article": {
+    "2": "TESSERACT_DISTANT:200 dpi",
+    "3": "TESSERACT_LOCAL_FAST:300 dpi",
+    "4": "TESSERACT_DISTANT:200 dpi",
+    "6": "TESSERACT_DISTANT:200 dpi",
+    "10": "TESSERACT_DISTANT:200 dpi",
+    "12": "TESSERACT_LOCAL_FAST:300 dpi",
+    "13": "TESSERACT_LOCAL_BEST:300 dpi",
+    "14": "TESSERACT_DISTANT:200 dpi",
+    "17": "TESSERACT_DISTANT:200 dpi",
+    "20": "TESSERACT_DISTANT:200 dpi",
+    "21": "TESSERACT_DISTANT:200 dpi",
+    "22": "TESSERACT_DISTANT:200 dpi",
+    "23": "TESSERACT_LOCAL_FAST:300 dpi",
+    "24": "TESSERACT_DISTANT:200 dpi",
+    "25": "TESSERACT_DISTANT:200 dpi",
+    "26": "TESSERACT_DISTANT:200 dpi",
+    "27": "TESSERACT_DISTANT:200 dpi",
+    "28": "TESSERACT_DISTANT:200 dpi",
+    "29": "TESSERACT_DISTANT:200 dpi",
+    "30": "TESSERACT_DISTANT:200 dpi",
+    "31": "TESSERACT_DISTANT:200 dpi",
+    "32": "TESSERACT_LOCAL_FAST:300 dpi",
+    "33": "TESSERACT_DISTANT:200 dpi",
+    "34": "TESSERACT_DISTANT:200 dpi",
+    "35": "TESSERACT_DISTANT:200 dpi",
+    "36": "TESSERACT_DISTANT:200 dpi",
+    "37": "TESSERACT_DISTANT:200 dpi",
+    "38": "TESSERACT_DISTANT:200 dpi",
+    "39": "TESSERACT_DISTANT:200 dpi",
+    "40": "TESSERACT_DISTANT:200 dpi",
+    "41": "TESSERACT_DISTANT:200 dpi",
+    "42": "TESSERACT_DISTANT:200 dpi",
+    "43": "TESSERACT_DISTANT:200 dpi",
+    "44": "TESSERACT_DISTANT:200 dpi",
+    "45": "TESSERACT_LOCAL_FAST:300 dpi",
+    "46": "TESSERACT_DISTANT:200 dpi",
+    "47": "TESSERACT_DISTANT:200 dpi",
+    "48": "TESSERACT_LOCAL_FAST:300 dpi",
+    "49": "TESSERACT_DISTANT:200 dpi",
+    "50": "TESSERACT_DISTANT:200 dpi",
+    "51": "TESSERACT_DISTANT:200 dpi",
+    "52": "TESSERACT_DISTANT:200 dpi",
+    "53": "TESSERACT_DISTANT:200 dpi",
+    "54": "TESSERACT_DISTANT:200 dpi",
+    "55": "TESSERACT_DISTANT:200 dpi",
+    "56": "TESSERACT_DISTANT:200 dpi",
+    "57": "TESSERACT_DISTANT:200 dpi",
+    "58": "TESSERACT_LOCAL_FAST:300 dpi",
+    "59": "TESSERACT_LOCAL_FAST:300 dpi",
+    "60": "TESSERACT_DISTANT:200 dpi",
+    "61": "TESSERACT_DISTANT:200 dpi",
+    "62": "TESSERACT_DISTANT:200 dpi",
+    "63": "TESSERACT_DISTANT:200 dpi",
+    "64": "TESSERACT_LOCAL_FAST:300 dpi",
+    "65": "TESSERACT_DISTANT:200 dpi",
+    "66": "TESSERACT_LOCAL_FAST:300 dpi",
+    "67": "TESSERACT_DISTANT:200 dpi",
+    "68": "TESSERACT_LOCAL_FAST:300 dpi",
+    "69": "TESSERACT_DISTANT:200 dpi",
+    "70": "TESSERACT_LOCAL_FAST:300 dpi",
+    "71": "TESSERACT_DISTANT:200 dpi",
+    "72": "TESSERACT_LOCAL_FAST:300 dpi",
+    "73": "TESSERACT_DISTANT:200 dpi",
+    "74": "TESSERACT_DISTANT:200 dpi",
+    "75": "TESSERACT_LOCAL_FAST:300 dpi",
+    "76": "TESSERACT_DISTANT:200 dpi",
+    "77": "TESSERACT_LOCAL_FAST:300 dpi",
+    "78": "TESSERACT_DISTANT:200 dpi",
+    "79": "TESSERACT_DISTANT:200 dpi",
+    "80": "TESSERACT_DISTANT:200 dpi",
+    "81": "TESSERACT_DISTANT:200 dpi",
+    "82": "TESSERACT_DISTANT:200 dpi",
+    "83": "TESSERACT_LOCAL_FAST:300 dpi",
+    "84": "TESSERACT_LOCAL_FAST:300 dpi",
+    "86": "TESSERACT_DISTANT:200 dpi",
+    "87": "TESSERACT_LOCAL_FAST:300 dpi",
+    "88": "TESSERACT_DISTANT:200 dpi",
+    "89": "TESSERACT_DISTANT:200 dpi",
+    "90": "TESSERACT_DISTANT:200 dpi",
+    "91": "TESSERACT_DISTANT:200 dpi",
+    "92": "TESSERACT_LOCAL_FAST:300 dpi",
+    "93": "TESSERACT_LOCAL_FAST:300 dpi",
+    "94": "TESSERACT_LOCAL_FAST:300 dpi",
+    "95": "TESSERACT_LOCAL_FAST:300 dpi",
+    "96": "TESSERACT_DISTANT:200 dpi",
+    "97": "TESSERACT_DISTANT:200 dpi",
+    "98": "TESSERACT_DISTANT:200 dpi",
+    "99": "TESSERACT_LOCAL_FAST:300 dpi",
+    "100": "TESSERACT_LOCAL_FAST:300 dpi",
+    "101": "TESSERACT_DISTANT:200 dpi",
+    "102": "TESSERACT_DISTANT:200 dpi",
+    "103": "TESSERACT_DISTANT:200 dpi",
+    "106": "TESSERACT_DISTANT:200 dpi",
+    "107": "TESSERACT_DISTANT:200 dpi",
+    "108": "TESSERACT_LOCAL_FAST:300 dpi",
+    "109": "TESSERACT_DISTANT:200 dpi",
+    "110": "TESSERACT_DISTANT:200 dpi",
+    "111": "TESSERACT_DISTANT:200 dpi",
+    "112": "TESSERACT_LOCAL_FAST:300 dpi",
+    "113": "TESSERACT_DISTANT:200 dpi"
+   }
+  },
+  "oneci_jo_special_2019_572_573_575": {
+   "date": "2026-10-20",
+   "ref_id": "REF-3834FEF05920",
+   "doc_id": "DOC-25C3088D557C",
+   "numero_texte": "2019-572",
+   "lecture_principale": "TESSERACT_LOCAL_BEST:300 dpi",
+   "etalons": "TESSERACT_LOCAL_FAST:300 dpi+CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP+OFFICIEL:officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor",
+   "copies_ecartees": [],
+   "articles_indexes": 157,
+   "couverture": 0.9752,
+   "accord_moyen": 0.9973,
+   "articles_ecartes": [
+    {
+     "numero": "1",
+     "similarite": null
+    },
+    {
+     "numero": "57",
+     "similarite": null
+    },
+    {
+     "numero": "148",
+     "similarite": null
+    }
+   ],
+   "nombres_divergents_ecartes": [],
+   "nombres_contestes_a_verifier": {
+    "44": [
+     {
+      "lecture": "OFFICIEL:officiel_famille_loi_n_2019_572_du_26_ju",
+      "ecarts": [
+       [
+        "269 1",
+        "16 2019"
+       ]
+      ]
+     }
+    ],
+    "48": [
+     {
+      "lecture": "OFFICIEL:officiel_famille_loi_n_2019_572_du_26_ju",
+      "ecarts": [
+       [
+        "115",
+        "11"
+       ]
+      ]
+     }
+    ],
+    "80": [
+     {
+      "lecture": "OFFICIEL:officiel_famille_loi_n_2019_572_du_26_ju",
+      "ecarts": [
+       [
+        "5",
+        "3"
+       ]
+      ]
+     }
+    ],
+    "87": [
+     {
+      "lecture": "OFFICIEL:officiel_famille_loi_n_2019_572_du_26_ju",
+      "ecarts": [
+       [
+        "84",
+        "4"
+       ]
+      ]
+     }
+    ],
+    "99": [
+     {
+      "lecture": "OFFICIEL:officiel_famille_loi_n_2019_572_du_26_ju",
+      "ecarts": [
+       [
+        "273",
+        "275"
+       ]
+      ]
+     }
+    ],
+    "104": [
+     {
+      "lecture": "OFFICIEL:officiel_famille_loi_n_2019_572_du_26_ju",
+      "ecarts": [
+       [
+        "94",
+        "44"
+       ]
+      ]
+     }
+    ],
+    "159": [
+     {
+      "lecture": "OFFICIEL:officiel_famille_loi_n_2019_572_du_26_ju",
+      "ecarts": [
+       [
+        "1",
+        "2"
+       ]
+      ]
+     }
+    ]
+   },
+   "lecture_par_article": {
+    "2": "TESSERACT_LOCAL_BEST:300 dpi",
+    "3": "TESSERACT_LOCAL_BEST:300 dpi",
+    "4": "TESSERACT_LOCAL_BEST:300 dpi",
+    "5": "TESSERACT_LOCAL_BEST:300 dpi",
+    "6": "TESSERACT_LOCAL_BEST:300 dpi",
+    "7": "TESSERACT_LOCAL_BEST:300 dpi",
+    "8": "TESSERACT_LOCAL_BEST:300 dpi",
+    "9": "TESSERACT_LOCAL_BEST:300 dpi",
+    "10": "TESSERACT_LOCAL_BEST:300 dpi",
+    "11": "TESSERACT_LOCAL_BEST:300 dpi",
+    "12": "TESSERACT_LOCAL_BEST:300 dpi",
+    "13": "TESSERACT_LOCAL_BEST:300 dpi",
+    "14": "TESSERACT_LOCAL_BEST:300 dpi",
+    "15": "TESSERACT_LOCAL_BEST:300 dpi",
+    "17": "TESSERACT_LOCAL_BEST:300 dpi",
+    "18": "TESSERACT_LOCAL_BEST:300 dpi",
+    "19": "TESSERACT_LOCAL_BEST:300 dpi",
+    "20": "TESSERACT_LOCAL_BEST:300 dpi",
+    "21": "TESSERACT_LOCAL_BEST:300 dpi",
+    "22": "TESSERACT_LOCAL_BEST:300 dpi",
+    "23": "TESSERACT_LOCAL_BEST:300 dpi",
+    "24": "TESSERACT_LOCAL_BEST:300 dpi",
+    "25": "TESSERACT_LOCAL_BEST:300 dpi",
+    "26": "TESSERACT_LOCAL_BEST:300 dpi",
+    "27": "TESSERACT_LOCAL_BEST:300 dpi",
+    "28": "TESSERACT_LOCAL_BEST:300 dpi",
+    "29": "TESSERACT_LOCAL_BEST:300 dpi",
+    "30": "TESSERACT_LOCAL_BEST:300 dpi",
+    "31": "TESSERACT_LOCAL_BEST:300 dpi",
+    "32": "TESSERACT_LOCAL_BEST:300 dpi",
+    "33": "TESSERACT_LOCAL_BEST:300 dpi",
+    "34": "TESSERACT_LOCAL_BEST:300 dpi",
+    "35": "TESSERACT_LOCAL_BEST:300 dpi",
+    "36": "TESSERACT_LOCAL_BEST:300 dpi",
+    "37": "TESSERACT_LOCAL_BEST:300 dpi",
+    "38": "TESSERACT_LOCAL_BEST:300 dpi",
+    "39": "TESSERACT_LOCAL_BEST:300 dpi",
+    "40": "TESSERACT_LOCAL_BEST:300 dpi",
+    "41": "TESSERACT_LOCAL_BEST:300 dpi",
+    "42": "TESSERACT_LOCAL_BEST:300 dpi",
+    "43": "TESSERACT_LOCAL_BEST:300 dpi",
+    "44": "TESSERACT_LOCAL_BEST:300 dpi",
+    "45": "TESSERACT_LOCAL_BEST:300 dpi",
+    "46": "TESSERACT_LOCAL_BEST:300 dpi",
+    "47": "TESSERACT_LOCAL_BEST:300 dpi",
+    "48": "TESSERACT_LOCAL_BEST:300 dpi",
+    "49": "TESSERACT_LOCAL_BEST:300 dpi",
+    "50": "TESSERACT_LOCAL_BEST:300 dpi",
+    "51": "TESSERACT_LOCAL_BEST:300 dpi",
+    "52": "TESSERACT_LOCAL_BEST:300 dpi",
+    "53": "TESSERACT_LOCAL_BEST:300 dpi",
+    "54": "TESSERACT_LOCAL_BEST:300 dpi",
+    "55": "TESSERACT_LOCAL_BEST:300 dpi",
+    "56": "TESSERACT_LOCAL_FAST:300 dpi",
+    "58": "TESSERACT_LOCAL_BEST:300 dpi",
+    "59": "TESSERACT_LOCAL_BEST:300 dpi",
+    "60": "TESSERACT_LOCAL_BEST:300 dpi",
+    "61": "TESSERACT_LOCAL_BEST:300 dpi",
+    "62": "TESSERACT_LOCAL_BEST:300 dpi",
+    "63": "TESSERACT_LOCAL_BEST:300 dpi",
+    "64": "TESSERACT_LOCAL_BEST:300 dpi",
+    "65": "TESSERACT_LOCAL_BEST:300 dpi",
+    "66": "TESSERACT_LOCAL_BEST:300 dpi",
+    "67": "TESSERACT_LOCAL_BEST:300 dpi",
+    "68": "TESSERACT_LOCAL_BEST:300 dpi",
+    "69": "TESSERACT_LOCAL_BEST:300 dpi",
+    "70": "TESSERACT_LOCAL_BEST:300 dpi",
+    "71": "TESSERACT_LOCAL_BEST:300 dpi",
+    "72": "TESSERACT_LOCAL_BEST:300 dpi",
+    "73": "TESSERACT_LOCAL_BEST:300 dpi",
+    "74": "TESSERACT_LOCAL_BEST:300 dpi",
+    "75": "TESSERACT_LOCAL_BEST:300 dpi",
+    "76": "TESSERACT_LOCAL_BEST:300 dpi",
+    "77": "TESSERACT_LOCAL_BEST:300 dpi",
+    "78": "TESSERACT_LOCAL_BEST:300 dpi",
+    "79": "TESSERACT_LOCAL_BEST:300 dpi",
+    "80": "TESSERACT_LOCAL_BEST:300 dpi",
+    "81": "TESSERACT_LOCAL_BEST:300 dpi",
+    "82": "TESSERACT_LOCAL_BEST:300 dpi",
+    "83": "TESSERACT_LOCAL_BEST:300 dpi",
+    "84": "TESSERACT_LOCAL_BEST:300 dpi",
+    "85": "TESSERACT_LOCAL_BEST:300 dpi",
+    "86": "TESSERACT_LOCAL_BEST:300 dpi",
+    "87": "TESSERACT_LOCAL_BEST:300 dpi",
+    "88": "TESSERACT_LOCAL_BEST:300 dpi",
+    "89": "TESSERACT_LOCAL_BEST:300 dpi",
+    "90": "TESSERACT_LOCAL_BEST:300 dpi",
+    "91": "TESSERACT_LOCAL_BEST:300 dpi",
+    "92": "TESSERACT_LOCAL_BEST:300 dpi",
+    "93": "TESSERACT_LOCAL_BEST:300 dpi",
+    "94": "TESSERACT_LOCAL_BEST:300 dpi",
+    "95": "TESSERACT_LOCAL_BEST:300 dpi",
+    "96": "TESSERACT_LOCAL_BEST:300 dpi",
+    "97": "TESSERACT_LOCAL_BEST:300 dpi",
+    "98": "TESSERACT_LOCAL_BEST:300 dpi",
+    "99": "TESSERACT_LOCAL_BEST:300 dpi",
+    "100": "TESSERACT_LOCAL_BEST:300 dpi",
+    "101": "TESSERACT_LOCAL_BEST:300 dpi",
+    "102": "TESSERACT_LOCAL_BEST:300 dpi",
+    "103": "TESSERACT_LOCAL_BEST:300 dpi",
+    "104": "TESSERACT_LOCAL_BEST:300 dpi",
+    "105": "TESSERACT_LOCAL_BEST:300 dpi",
+    "106": "TESSERACT_LOCAL_BEST:300 dpi",
+    "107": "TESSERACT_LOCAL_BEST:300 dpi",
+    "108": "TESSERACT_LOCAL_BEST:300 dpi",
+    "109": "TESSERACT_LOCAL_BEST:300 dpi",
+    "110": "TESSERACT_LOCAL_BEST:300 dpi",
+    "111": "TESSERACT_LOCAL_BEST:300 dpi",
+    "112": "TESSERACT_LOCAL_BEST:300 dpi",
+    "113": "TESSERACT_LOCAL_BEST:300 dpi",
+    "114": "TESSERACT_LOCAL_BEST:300 dpi",
+    "115": "TESSERACT_LOCAL_BEST:300 dpi",
+    "116": "TESSERACT_LOCAL_BEST:300 dpi",
+    "117": "TESSERACT_LOCAL_BEST:300 dpi",
+    "118": "TESSERACT_LOCAL_BEST:300 dpi",
+    "119": "TESSERACT_LOCAL_FAST:300 dpi",
+    "120": "TESSERACT_LOCAL_BEST:300 dpi",
+    "121": "TESSERACT_LOCAL_BEST:300 dpi",
+    "122": "TESSERACT_LOCAL_BEST:300 dpi",
+    "123": "TESSERACT_LOCAL_BEST:300 dpi",
+    "124": "TESSERACT_LOCAL_BEST:300 dpi",
+    "125": "TESSERACT_LOCAL_BEST:300 dpi",
+    "126": "TESSERACT_LOCAL_BEST:300 dpi",
+    "127": "TESSERACT_LOCAL_BEST:300 dpi",
+    "128": "TESSERACT_LOCAL_BEST:300 dpi",
+    "129": "TESSERACT_LOCAL_BEST:300 dpi",
+    "130": "TESSERACT_LOCAL_BEST:300 dpi",
+    "131": "TESSERACT_LOCAL_BEST:300 dpi",
+    "132": "TESSERACT_LOCAL_BEST:300 dpi",
+    "133": "TESSERACT_LOCAL_BEST:300 dpi",
+    "134": "TESSERACT_LOCAL_BEST:300 dpi",
+    "135": "TESSERACT_LOCAL_BEST:300 dpi",
+    "136": "TESSERACT_LOCAL_BEST:300 dpi",
+    "137": "TESSERACT_LOCAL_BEST:300 dpi",
+    "138": "TESSERACT_LOCAL_BEST:300 dpi",
+    "139": "TESSERACT_LOCAL_BEST:300 dpi",
+    "140": "TESSERACT_LOCAL_BEST:300 dpi",
+    "141": "TESSERACT_LOCAL_BEST:300 dpi",
+    "142": "TESSERACT_LOCAL_BEST:300 dpi",
+    "143": "TESSERACT_LOCAL_BEST:300 dpi",
+    "144": "TESSERACT_LOCAL_BEST:300 dpi",
+    "145": "TESSERACT_LOCAL_BEST:300 dpi",
+    "146": "TESSERACT_LOCAL_BEST:300 dpi",
+    "147": "TESSERACT_LOCAL_BEST:300 dpi",
+    "149": "TESSERACT_LOCAL_BEST:300 dpi",
+    "150": "TESSERACT_LOCAL_BEST:300 dpi",
+    "151": "TESSERACT_LOCAL_BEST:300 dpi",
+    "152": "TESSERACT_LOCAL_BEST:300 dpi",
+    "153": "TESSERACT_LOCAL_BEST:300 dpi",
+    "154": "TESSERACT_LOCAL_BEST:300 dpi",
+    "155": "TESSERACT_LOCAL_BEST:300 dpi",
+    "156": "TESSERACT_LOCAL_BEST:300 dpi",
+    "157": "TESSERACT_LOCAL_BEST:300 dpi",
+    "158": "TESSERACT_LOCAL_BEST:300 dpi",
+    "159": "TESSERACT_LOCAL_BEST:300 dpi",
+    "160": "TESSERACT_LOCAL_BEST:300 dpi",
+    "161": "TESSERACT_LOCAL_BEST:300 dpi"
+   }
+  }
+ }
+}

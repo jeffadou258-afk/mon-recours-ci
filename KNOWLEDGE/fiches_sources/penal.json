@@ -1,0 +1,303 @@
+{
+ "_description": "Fiches du domaine pénal. Texte : loi n° 2019-574 du 26 juin 2019 portant Code pénal, Journal officiel (numéro spécial du 10 juillet 2019) republié par mffe.ci. Exemplaire officiel numérisé, lu par OCR (trois lectures du même scan : tesseract tessdata_best 300 dpi, tesseract distant, calque Adobe Paper Capture) ; chaque article indexé concorde à 0,80 au moins avec une autre lecture et sans nombre remplacé ; les nombres contestés par une autre lecture sont listés dans KNOWLEDGE/collecte/integrations_ocr.json. Référence PARTIELLEMENT_VERIFIE. Les modifications postérieures à 2019 (lois de 2021 et suivantes) ne sont PAS vérifiées : une peine citée ici peut avoir changé. AUCUNE relecture par un juriste : statut A_RELIRE_PAR_UN_JURISTE. Les fiches décrivent l'infraction et la peine prévue ; la procédure (plainte, garde à vue) relève du Code de procédure pénale.",
+ "domaine": "penal_procedure_penale",
+ "numero_texte": "2019-574",
+ "statut_relecture": "A_RELIRE_PAR_UN_JURISTE",
+ "fiches": [
+  {
+   "id": "PENAL_457",
+   "article": "457",
+   "titre": "Ce qu'est un vol",
+   "declencheurs": [
+    "vol",
+    "voleur",
+    "vole mon telephone",
+    "vole mon telefone",
+    "vole mon portable",
+    "vole mon argent",
+    "vole ma moto",
+    "vole ma voiture",
+    "vole mes affaires",
+    "cambriolage",
+    "cambriole",
+    "soustraction frauduleuse",
+    "vole mon ordinateur"
+   ],
+   "citation_debut": "Quiconque soustrait frauduleusement",
+   "citation_fin": "commet un vol.",
+   "lecture": "Commet un vol celui qui prend frauduleusement une chose qui ne lui appartient pas.",
+   "faits_requis": [],
+   "etape_plan": "Lister les objets pris, leur valeur et les preuves (factures, photos, témoins), et noter la date et le lieu"
+  },
+  {
+   "id": "PENAL_458",
+   "article": "458",
+   "titre": "Peine prévue pour le vol",
+   "declencheurs": [
+    "peine pour un voleur",
+    "prison pour un voleur",
+    "sanction pour un voleur",
+    "peine encourue pour vol"
+   ],
+   "citation_debut": "Le vol est puni",
+   "citation_fin": "de 300.000 à 3.000.000 de francs.",
+   "lecture": "Le vol est puni d'un emprisonnement de cinq à dix ans et d'une amende de 300.000 à 3.000.000 de francs (peine de base, avant circonstances aggravantes ou atténuantes).",
+   "faits_requis": [],
+   "etape_plan": "Conserver la preuve du vol et du préjudice"
+  },
+  {
+   "id": "PENAL_381",
+   "article": "381",
+   "titre": "Coups et blessures volontaires",
+   "declencheurs": [
+    "coups et blessures",
+    "on m'a frappe",
+    "il m'a frappe",
+    "elle m'a frappe",
+    "agression physique",
+    "bagarre",
+    "blesse volontairement",
+    "itt",
+    "m'a frappe",
+    "m'a frappee",
+    "m'a blesse"
+   ],
+   "citation_debut": "Quiconque, volontairement, porte des coups",
+   "citation_fin": "pendant plus de dix jours ;",
+   "lecture": "Porter volontairement des coups ou faire des blessures est puni ; la peine dépend des conséquences pour la victime (décès, infirmité permanente, incapacité totale de travail de plus de dix jours ou non). L'article 381 donne l'échelle des peines.",
+   "faits_requis": [],
+   "etape_plan": "Faire constater les blessures par un médecin (certificat médical indiquant la durée d'incapacité) et conserver photos et témoignages"
+  },
+  {
+   "id": "PENAL_383",
+   "article": "383",
+   "titre": "Coups portés au conjoint, au concubin ou à un parent",
+   "declencheurs": [
+    "mon mari me frappe",
+    "ma femme me frappe",
+    "mon concubin me frappe",
+    "violence conjugale",
+    "frappe par mon conjoint",
+    "enfant frappe ses parents"
+   ],
+   "citation_debut": "Lorsque les coups ont été portés",
+   "citation_fin": "du conjoint ou du concubin de l’auteur, les peines sont :",
+   "lecture": "Les peines des coups et blessures sont plus lourdes lorsque la victime est le père, la mère, un parent adoptif, un ascendant, le conjoint ou le concubin de l'auteur (échelle à l'article 383).",
+   "faits_requis": [],
+   "etape_plan": "Se mettre en sécurité, faire établir un certificat médical et garder la trace des violences (photos, messages, témoins)"
+  },
+  {
+   "id": "PENAL_382",
+   "article": "382",
+   "titre": "Violence sans blessure (voie de fait)",
+   "declencheurs": [
+    "bousculade",
+    "il m'a bouscule",
+    "voie de fait",
+    "violence sans blessure",
+    "crache dessus"
+   ],
+   "citation_debut": "Constitue une voie de fait",
+   "citation_fin": "quiconque commet une voie de fait.",
+   "lecture": "Exercer volontairement sur une personne une violence qui ne cause ni coup ni blessure, mais qui est de nature à l'impressionner ou à la troubler, est une voie de fait, punie d'un emprisonnement de quinze jours à six mois et d'une amende de 100.000 à 1.000.000 de francs.",
+   "faits_requis": [],
+   "etape_plan": "Noter les faits, la date, le lieu et les témoins"
+  },
+  {
+   "id": "PENAL_403",
+   "article": "403",
+   "titre": "Ce qu'est un viol",
+   "declencheurs": [
+    "viol",
+    "agression sexuelle",
+    "agressee sexuellement",
+    "relation sexuelle forcee",
+    "relations sexuelles forcees",
+    "abuse sexuellement",
+    "violences sexuelles"
+   ],
+   "citation_debut": "Constitue un viol, tout acte de pénétration",
+   "citation_fin": "même avec son consentement.",
+   "lecture": "Constitue un viol tout acte de pénétration à but sexuel imposé sans consentement par violence, menace, contrainte ou surprise ; c'est aussi un viol sur un mineur de quinze ans, même avec son consentement. L'article précise que le viol existe quelle que soit la relation entre l'auteur et la victime.",
+   "faits_requis": [],
+   "etape_plan": "Se rendre au plus vite dans un centre de santé (soins et certificat médical), ne pas se laver ni jeter les vêtements si possible, et demander de l'aide (numéros d'urgence)"
+  },
+  {
+   "id": "PENAL_418",
+   "article": "418",
+   "titre": "Harcèlement sexuel",
+   "declencheurs": [
+    "harcelement sexuel",
+    "harcele sexuellement",
+    "chantage sexuel au travail",
+    "promotion contre faveurs sexuelles",
+    "mon patron me harcele"
+   ],
+   "citation_debut": "Commet un harcèlement sexuel",
+   "citation_fin": "à lui consentir des faveurs de nature sexuelle,",
+   "lecture": "Commet un harcèlement sexuel, puni d'un emprisonnement d'un à trois ans et d'une amende de 360.000 à 1.000.000 de francs, notamment celui qui conditionne un service à l'obtention de faveurs sexuelles, ou qui use de menaces de sanctions pour obtenir de telles faveurs d'une personne placée sous son autorité.",
+   "faits_requis": [],
+   "etape_plan": "Conserver messages, courriels et noms de témoins, et noter chaque fait avec sa date"
+  },
+  {
+   "id": "PENAL_394",
+   "article": "394",
+   "titre": "Mutilations génitales féminines (excision)",
+   "declencheurs": [
+    "excision",
+    "exciser",
+    "mutilation genitale",
+    "mutilations genitales",
+    "excisee"
+   ],
+   "citation_debut": "Constitue une mutilation génitale",
+   "citation_fin": "de 200.000 à 2.000.000 de francs.",
+   "lecture": "La mutilation génitale (ablation totale ou partielle, infibulation ou tout autre procédé) est punie d'un emprisonnement d'un à cinq ans et d'une amende de 200.000 à 2.000.000 de francs ; la peine est plus lourde dans les cas prévus à l'article 394.",
+   "faits_requis": [],
+   "etape_plan": "Si une enfant est menacée, alerter sans attendre les services de protection de l'enfance ou les forces de l'ordre"
+  },
+  {
+   "id": "PENAL_421",
+   "article": "421",
+   "titre": "Violences sur un enfant ou privation de nourriture et de soins",
+   "declencheurs": [
+    "enfant maltraite",
+    "maltraitance d'enfant",
+    "frapper un enfant",
+    "enfant prive de nourriture",
+    "enfant prive de soins",
+    "violence sur un mineur"
+   ],
+   "citation_debut": "quiconque exerce des violences ou voies de fait sur la personne d'un mineur",
+   "citation_fin": "au point de compromettre sa santé.",
+   "lecture": "Exercer des violences sur un mineur ou sur une personne incapable de se protéger, ou la priver volontairement d'aliments ou de soins au point de compromettre sa santé, est puni d'un emprisonnement d'un à cinq ans et d'une amende de 100.000 à 1.000.000 de francs ; la peine augmente selon les conséquences.",
+   "faits_requis": [],
+   "etape_plan": "Mettre l'enfant en sécurité, le faire examiner par un médecin et alerter les services de protection de l'enfance"
+  },
+  {
+   "id": "PENAL_452",
+   "article": "452",
+   "titre": "Abandon de famille par le père ou la mère",
+   "declencheurs": [
+    "abandon de famille",
+    "le pere a abandonne la famille",
+    "la mere a abandonne la famille",
+    "parti de la maison sans revenir",
+    "abandon du foyer",
+    "abandon de la residence familiale"
+   ],
+   "citation_debut": "1° le père ou la mère de famille qui abandonne",
+   "citation_fin": "résultant de l'exercice de l’autorité parentale ;",
+   "lecture": "Est puni d'un emprisonnement de trois mois à un an et d'une amende de 100.000 à 1.000.000 de francs le père ou la mère qui abandonne sans motif légitime, pendant plus de deux mois, la résidence familiale en se soustrayant à ses obligations envers les enfants.",
+   "faits_requis": [],
+   "etape_plan": "Noter la date du départ et réunir les preuves de l'absence de contribution"
+  },
+  {
+   "id": "PENAL_453",
+   "article": "453",
+   "titre": "Pension alimentaire fixée par le juge et non payée",
+   "declencheurs": [
+    "pension alimentaire non payee",
+    "il ne paie pas la pension",
+    "elle ne paie pas la pension",
+    "pension impayee",
+    "ne verse pas la pension",
+    "abandon pecuniaire"
+   ],
+   "citation_debut": "quiconque, au mépris d'une décision rendue contre lui",
+   "citation_fin": "ni acquitter le montant intégral de la pension.",
+   "lecture": "Celui qui, malgré une décision du juge le condamnant à verser une pension alimentaire à son conjoint, à ses ascendants ou à ses descendants, reste volontairement plus de deux mois sans la payer entièrement, est puni d'un emprisonnement de trois mois à un an et d'une amende de 100.000 à 1.000.000 de francs ; le défaut de paiement est présumé volontaire.",
+   "faits_requis": [],
+   "etape_plan": "Conserver la décision du juge fixant la pension et la liste des mois impayés"
+  },
+  {
+   "id": "PENAL_467",
+   "article": "467",
+   "titre": "Abus de confiance",
+   "declencheurs": [
+    "abus de confiance",
+    "il a garde mon argent",
+    "argent confie non rendu",
+    "bien confie non rendu",
+    "detournement d'argent",
+    "il refuse de rendre ce que je lui ai confie"
+   ],
+   "citation_debut": "Constitue un abus de confiance",
+   "citation_fin": "de 300.000 à 3.000.000 de francs.",
+   "lecture": "Détourner, dissiper ou détruire des fonds ou un bien remis à charge de le rendre ou d'en faire un usage déterminé est un abus de confiance, puni d'un emprisonnement d'un à cinq ans et d'une amende de 300.000 à 3.000.000 de francs.",
+   "faits_requis": [],
+   "etape_plan": "Réunir la preuve de la remise (reçu, message, témoin) et de la demande de restitution"
+  },
+  {
+   "id": "PENAL_471",
+   "article": "471",
+   "titre": "Escroquerie",
+   "declencheurs": [
+    "escroquerie",
+    "escroc",
+    "arnaque",
+    "arnaque",
+    "brouteur",
+    "on m'a escroque",
+    "faux investissement",
+    "faux recrutement"
+   ],
+   "citation_debut": "Est puni d'un emprisonnement d’un à cing ans",
+   "citation_fin": "escroqué la totalité ou partie de la fortune d'autrui.",
+   "lecture": "Se faire remettre des fonds ou des biens en utilisant un faux nom, une fausse qualité ou des manœuvres frauduleuses (fausses entreprises, crédit imaginaire, faux espoirs) est une escroquerie, punie d'emprisonnement et d'une amende de 300.000 à 3.000.000 de francs. La durée de l'emprisonnement n'est pas reprise ici : le texte indexé porte une erreur de lecture OCR sur ce nombre (« cing »), à vérifier sur l'exemplaire officiel.",
+   "faits_requis": [],
+   "etape_plan": "Garder toutes les traces (messages, numéros, reçus de transfert d'argent) et ne plus rien verser"
+  },
+  {
+   "id": "PENAL_475",
+   "article": "475",
+   "titre": "Chantage",
+   "declencheurs": [
+    "chantage",
+    "il me fait du chantage",
+    "menace de publier",
+    "menace de reveler",
+    "sextorsion",
+    "chantage a la video"
+   ],
+   "citation_debut": "quiconque, à l'aide de menace écrite ou orale",
+   "citation_fin": "exige de celle-ci l'exécution de l'une des obligations",
+   "lecture": "Exiger de quelqu'un une remise de fonds ou un acte touchant son patrimoine en le menaçant de révélations ou d'imputations diffamatoires sur lui ou un proche est puni d'un emprisonnement d'un à cinq ans et d'une amende de 300.000 à 3.000.000 de francs.",
+   "faits_requis": [],
+   "etape_plan": "Ne pas payer, conserver les messages de menace (captures d'écran avec la date) et le numéro ou le compte de l'auteur"
+  },
+  {
+   "id": "PENAL_446",
+   "article": "446",
+   "titre": "Dénonciation calomnieuse",
+   "declencheurs": [
+    "fausse accusation",
+    "accuse a tort",
+    "denonciation calomnieuse",
+    "plainte mensongere contre moi",
+    "on m'accuse faussement"
+   ],
+   "citation_debut": "Est calomnieuse la dénonciation",
+   "citation_fin": "quiconque fait une dénonciation calomnieuse.",
+   "lecture": "Dénoncer intentionnellement un fait faux, de nature à exposer la personne visée à une sanction ou à des poursuites, est une dénonciation calomnieuse, punie d'un emprisonnement d'un an à cinq ans et d'une amende de 100.000 à 1.000.000 de francs.",
+   "faits_requis": [],
+   "etape_plan": "Conserver la copie de la dénonciation et les preuves de sa fausseté"
+  },
+  {
+   "id": "PENAL_98",
+   "article": "98",
+   "titre": "Légitime défense présumée (nuit, effraction, vol avec violence)",
+   "declencheurs": [
+    "legitime defense",
+    "je me suis defendu",
+    "voleur la nuit chez moi",
+    "cambrioleur blesse"
+   ],
+   "citation_debut": "Est présumé agir en état de légitime défense",
+   "citation_fin": "exécutés avec violence.",
+   "lecture": "Est présumé agir en légitime défense celui qui, la nuit, repousse l'escalade ou l'effraction de sa maison, ou se défend contre les auteurs de vols ou de pillages commis avec violence. Une présomption peut être combattue : l'appréciation revient au juge.",
+   "faits_requis": [],
+   "etape_plan": "Signaler immédiatement les faits aux forces de l'ordre et préserver les traces (effraction, témoins)"
+  }
+ ]
+}

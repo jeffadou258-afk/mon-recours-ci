@@ -12,6 +12,26 @@
   "pages_sans_texte": 0,
   "sha256_texte": "sha256:dc85d3b1f365c15c0d1ec918d8f1e4b66fc210a6cef5892c5b666abd13fdedc4"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 92.8,
+  "confiance_par_page": {
+   "1": 91.2,
+   "2": 93.7,
+   "3": 93.6
+  },
+  "date": "2026-10-20T10:23:24+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mef_ord_2021_902_travail.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 3,
+  "pages_ocr_faibles": [],
+  "pdf_verifie": "sha256:9340c40364cdeebcfbced245201c10d12772b25633f625424689f9c4359077e2",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:4322ca1baf2f9ad6ba52341541e61ab96619cfa501c690812cbc224b07ad42ce"
+ },
  "fichier_pdf": "mef_ord_2021_902_travail.pdf",
  "historique": [
   {

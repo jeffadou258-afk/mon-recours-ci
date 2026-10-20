@@ -1,0 +1,415 @@
+--- PAGE 1 --- [OCR conf=90.9]
+PRESIDENCE DE LA REPUBLIQUE REPUBLIQUE DE COTE D'IVOIRE
+Union - Discipline - Travail
+ORDONNANCE N° 2017-500 DU 02 AOÛT 2017
+RELATIVE AUX ECHANGES ELECTRONIQUES ENTRE LES
+USAGERS ET LES AUTORITES ADMINISTRATIVES ET ENTRE
+LES AUTORITES ADMINISTRATIVES
+LE PRESIDENT DE LA REPUBLIQUE,
+Sur rapport conjoint du Ministre de la Communication, de l’Economie Numérique et
+de la Poste et du Ministre de la Fonction Publique et de la Modernisation de
+l’Administration,
+Vu la Constitution ;
+Vu la loi n°63-524 du 26 décembre 1963 portant Code des Impôts et les textes
+subséquents ;
+Vu laloin°92-570 du 11 Septembre 1992 portant Statut Général de la Fonction Publique :
+Vu  laloin°97-244 du 25 avril 1997 portant Livre de Procédures Fiscales ;
+Vu la loi n°2012-1128 du 13 décembre 2012 portant organisation des Collectivités
+Territoriales ;
+Vu la loi n°2013-450 du 19 juin 2013 relative à la protection des données à caractère
+personnel :
+Vu la loi n°2013-451 du 19 juin 2013 relative à la lutte contre la cybercriminalité :
+Vu laloin°2013-546 du 30 juillet 2013 relative aux transactions électroniques :
+Vu la loi n° 2013-867 du 23 décembre 2013 relative à l'accès à l'information d'intérêt
+public ;
+Vu la loi n° 2016-1116 du 08 décembre 2016 portant Budget de l'Etat pour l'année
+2017, en son article 12:
+Vu l'ordonnance n°2011-262 du 28 septembre 2011 portant orientation de l'organisation
+générale de l'Administration Territoriale de l'Etat
+’
+Vu l'ordonnance n°2012-293 du 21 mars 2012 relative aux Télécommunications et aux
+Technologies de l'Information et de la Communication :
+Vu l'ordonnance n°2012-303 du 04 avril 2012 portant organisation des régimes de
+pensions gérés par la Caisse Générale de Retraite des Agents de l'Etat, en abrégé
+CGRAE ;
+N° 1700541
+--- PAGE 2 --- [OCR conf=93.0]
+Vu _ l'ordonnance n°2012-487 du 07 juin 2012 portant Code des Investissements :
+Vu l'ordonnance n°2013-481 du 2 juillet 2013 fixant les règles d'acquisition de la
+propriété des terrains urbains ;
+LE CONSEIL DES MINISTRES ENTENDU,
+ORDONNE :
+CHAPITRE | : DISPOSITIONS GENERALES
+Article 1 :
+Article 2 :
+Article 3 :
+La présente ordonnance a pour objet de définir le cadre de création et de mise
+en œuvre, par les autorités administratives, des e-Services en vue de permettre
+aux usagers d'accomplir certaines formalités administratives et de bénéficier de
+services délivrés par voie électronique.
+Elle a également pour objet de simplifier les formalités auxquelles les usagers
+sont assujettis et de définir les référentiels des systèmes d’information des
+autorités administratives
+Les systèmes d'information traitant d'informations relevant du secret de la
+défense nationale n'entrent pas dans le champ d'application de la présente
+ordonnance.
+Au sens de la présente ordonnance, on entend par :
+accessibilité : la mise à la disposition ou l'accès de tous les individus aux
+ressources numériques/e-Services, quels que soient leur matériel ou logiciel,
+leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation
+géographique, ou leur aptitude physique ou mentale
+autorité administrative : les administrations publiques, les collectivités
+territoriales, les établissements publics, les autorités administratives
+indépendantes, les organismes publics ou parapublics chargés d’une mission
+de service public ou de la gestion d’un service public ;
+autorité de certification électronique : l'Autorité de Régulation des
+Télécommunications/TIC de Côte d'Ivoire (ARTCI) :
+cadre commun d’architecture de référentiel de données : il porte sur la
+construction, l'entretien et l'évolution de dispositifs appelés « référentiels de
+données » assurant la collecte, la gestion, l'archivage et la mise à disposition
+de « données de référence » à l'ensemble du système d’information de l'État
+en général et plus particulièrement aux e-Services ;
+cadre commun d’urbanisation : le cadre commun d'urbanisation du système
+d'information de l'État définit le vocabulaire, les principes applicables, et
+globalement la démarche d'urbanisation à conduire visant à simplifier, à
+--- PAGE 3 --- [OCR conf=93.7]
+optimiser, et à rendre durablement plus flexible et agile le système
+d'information de l'Etat en général et plus particulièrement les e-Services ;
+certificat électronique : document sous forme électronique attestant du lien
+entre les données de vérification de signature électronique et un signataire/
+document électronique délivré par un prestataire de services de certification
+électronique pour assurer la sécurité des données échangées par voie
+électronique ;
+e-service : tout système d'information ou logiciel permettant aux usagers de
+procéder par voie électronique à des démarches ou formalités ; il comprend
+les traitements automatisés permettant aux usagers d'effectuer, à leur initiative
+et quelle que soit leur situation géographique, des démarches administratives
+dématérialisées de toutes natures, d'y joindre, le cas échéant, des pièces
+justificatives et, au choix des services et des établissements concernés, d'en
+obtenir une réponse par voie électronique ;
+interopérabilité : la capacité que possède un produit ou un système, dont les
+interfaces sont connues, de fonctionner avec d'autres produits ou systèmes
+existants ou futurs, et ce, sans restriction d'accès ou de mise en œuvre.
+prestataire d’audit de sécurité des systèmes d’information : toute
+personne morale agréée par l'ARTCI, qui fournit des prestations d’'audits de
+sécurité des systèmes d’information conformes aux exigences règlementaires
+U
+prestataires de services de confiance : il s'agit des prestataires de services
+de certification électronique de services de cryptologie de services
+d'archivage électronique ou de conservation et d'audit de sécurité des
+systèmes d'information agréés par l'ARTCI ;
+prestataire d’audit de sécurité des systèmes d’information : toute
+personne morale agréée par l'ARTCI, qui fournit des prestations d'audits de
+sécurité des systèmes d'information conformes aux exigences
+règlementaires ;
+prestataire de services de certification électronique : toute personne
+agréée par une autorité de certification reconnue par l'ARTCI, qui délivre des
+certificats électroniques ou fournit d'autres services en matière de signature
+électronique ;
+prestataire de service d'archivage électronique ou de conservation : tout
+prestataire de service de numérisation ou de conservation agréé par l'ARTCI,
+qui exerce, à titre principal ou accessoire, des activités d'archivage ou de
+conservation ;
+prestataire de service de cryptologie : toute personne physique ou morale
+agréée par l'ARTCI, qui fournit des prestations portant sur la cryptologie ;
+--- PAGE 4 --- [OCR conf=93.3]
+prestataire de services d'archivage électronique ou de conservation :
+tout prestataire de service de numérisation ou de conservation agréé par
+l'ARTCI, qui exerce, à titre principal ou accessoire, des activités d'archivage
+ou de conservation ;
+produit de sécurité : tout dispositif, matériel ou logiciel, mettant en œuvre des
+fonctions qui contribuent à la sécurité des données échangées par voie
+électronique ;
+référentiel : ensemble structuré d'informations, utilisé pour l'exécution d'un
+logiciel ou d’un processus, et constituant un cadre commun à plusieurs
+applications.
+référentiel général d’interopérabilité : référentiel contenant une liste des
+standards de référence à utiliser dans le cadre du développement des services
+d'e-administration ;
+référentiel général de gestion des archivages publics : référentiel destiné
+à définir les méthodes et procédures de l'archivage électronique ;
+référentiel général de sécurité des systèmes d’information : ensemble de
+règles et d'exigences de sécurité, élaboré par l'ARTCI et auxquelles les
+systèmes d’information doivent être conformes ;
+système d’information ou système informatique : tout dispositif isolé ou
+non, tout ensemble de dispositifs interconnectés assurant en tout ou partie, un
+traitement automatisé de données en exécution d'un programme. I! comprend
+également l'ensemble des moyens électroniques destinés à élaborer. à traiter,
+à stocker ou à transmettre des données ;
+usager : personne qui utilise un service public ;
+urbanisation : mode de production et de développement maîtrisé, normé et
+organisé.
+CHAPITRE Il : DISPOSITIONS RELATIVES A LA CREATION DES E-SERVICES
+Article 4 :
+Il peut être créé, sous la responsabilité d’une ou plusieurs autorités
+administratives, un ou plusieurs e-services publics.
+Les e-services sont créés par :
+- décret pris en Conseil des Ministres, lorsque leur mise en œuvre implique
+le traitement de données à caractère personnel ou déroge à une exigence
+fixée par décret ;
+- par arrêté interministériel des ministères concernés, dans tous les autres
+cas.
+--- PAGE 5 --- [OCR conf=94.3]
+Article 5 :
+Article 6 :
+Article 7 :
+Article 8 :
+Les traitements de données à caractère personnel opérés dans le cadre de la
+mise en œuvre d'un e-service se font conformément à la loi n° 2013-450 du 19
+juin 2013 relative à la protection des données à caractère personnel.
+L'ensemble des e-services est accessible à partir d'un portail électronique mis
+en place par l'Etat, dont les modalités de mise en œuvre sont fixées par décret
+pris en Conseil des Ministres.
+Dans le cadre des e-services, il peut être mis à la disposition de l'usager un
+espace numérique de stockage accessible en ligne. Cet espace, placé sous le
+contrôle de l'usager, ouvert et clos à sa demande, permet à celui-ci de
+conserver et de communiquer aux autorités administratives des informations et
+documents utiles à l'accomplissement de formalités administratives ou pour un
+simple renseignement.
+Les autorités administratives peuvent, avec l'autorisation de l’usager de
+l'espace de stockage, y déposer des documents.
+Lorsqu'une formalité est exigée par la législation ou la règlementation en
+vigueur, l'autorité administrative concernée met en œuvre les moyens
+techniques sécurisés permettant aux usagers d'accomplir lesdites formalités
+par voie électronique.
+Lorsqu'en application d'une disposition législative ou réglementaire, une
+autorité administrative demande à un usager la communication d'une
+information, ce dernier peut en autoriser la transmission depuis cet espace à
+cette autorité. Les autorités administratives ne peuvent se voir communiquer
+par le biais de cet espace que les informations et documents dont elles ont à
+connaître.
+CHAPITRE III : DISPOSITIONS RELATIVES AU CADRE COMMUN
+Article 9 :
+Article 10 :
+Article 11 :
+D'URBANISATION DES SYSTEMES D'INFORMATION DE L'ETAT
+Un cadre commun d'urbanisation des systèmes d'information des autorités
+administratives fixant les règles communes de création des e-Services est
+adopté par décret pris en Conseil des Ministres. || définit les termes, concepts
+et nomenclatures adoptés dans le cadre des e-Services, les principes généraux
+applicables, et les procédures permettant de simplifier et d'optimiser les e-
+Services.
+Un cadre commun d'architecture de référentiel de données complète le cadre
+d'urbanisation et fixe les règles de construction, d'entretien et d'évolution de
+dispositifs appelés « référentiels de données » qui assurent la collecte, la
+gestion, l'archivage et la mise à disposition de « données de référence » des e-
+Services.
+Les autorités administratives mentionnées à l'article 3 doivent respecter les
+règles prescrites dans le cadre commun d'urbanisation du système
+d'information de l'Etat.
+--- PAGE 6 --- [OCR conf=95.4]
+Article 12 :
+Les systèmes d'information existant à la date d'entrée en vigueur du cadre
+commun d'urbanisation des systèmes d’information de l'Etat sont mis en
+conformité avec celui-ci dans un délai de deux ans à compter de cette date.
+Les applications créées dans les six mois suivant la date de publication dudit
+cadre commun d'urbanisation sont mises en conformité avec celui-ci au plus
+tard douze mois après cette date.
+CHAPITRE IV : DISPOSITIONS RELATIVES A LA SECURITE DES DONNEES
+Article 13 :
+Article 14 :
+Article 15 :
+Article 16 :
+Article 17 :
+Article 18 :
+ECHANGEES PAR VOIE ELECTRONIQUE DANS LE CADRE DES E-
+SERVICES
+Un référentiel général de sécurité fixe les règles auxquelles sont soumises les
+fonctions des systèmes d'information contribuant à la sécurité des données
+échangées par voie électronique telles que les fonctions d'identification, de
+signature électronique, de confidentialité et d'horodatage.
+Lorsqu'une autorité administrative met en place un système d'information, elle
+détermine les fonctions de sécurité nécessaires pour protéger ce système. Pour
+les fonctions de sécurité traitées par le référentiel général de sécurité, elle fixe
+le niveau de sécurité requis parmi les niveaux prévus et respecte les règles
+correspondantes.
+Les produits de sécurité et les prestataires de services de certification peuvent
+obtenir une qualification qui atteste de leur conformité à un niveau de sécurité
+du référentiel général de sécurité.
+Les certificats électroniques délivrés aux autorités administratives et à leurs
+agents, en vue d'assurer leur identification dans le cadre d'un système
+d'information, font l'objet d'une validation.
+: Les autorités administratives mentionnées à l’article 3 sont tenues de respecter
+les règles de sécurité prescrites dans le référentiel général de sécurité des
+systèmes d'informations.
+Les autorités administratives mentionnées à l'article 3 doivent recourir aux
+produits de sécurité des prestataires de services de confiance qualifiés par
+l’'ARTCI.
+Les systèmes d'information existant à la date d'entrée en vigueur du référentiel
+général de sécurité sont mis en conformité avec celui-ci dans un délai de deux
+ans à compter de cette date.
+Les applications créées dans les six mois suivant la date de publication dudit
+référentiel sont mises en conformité avec celui-ci au plus tard douze mois après
+cette date.
+--- PAGE 7 --- [OCR conf=94.6]
+CHAPITRE V
+Article 19 :
+Article 20 :
+Article 21 :
+Article 22 :
+CHAPITRE
+V : DISPOSITIONS RELATIVES A L’INTEROPERABILITE DES SERVICES
+OFFERTS PAR VOIE ELECTRONIQUE
+Un référentiel général d'interopérabilité fixe les règles techniques permettant
+d'assurer l'interopérabilité des systèmes d'information. || détermine notamment
+les répertoires de données, les normes et les standards qui doivent être utilisés
+par les autorités administratives.
+L'Etat met en place une plateforme d’interopérabilité des e-services à laquelle
+toutes les autorités administratives sont tenues de se connecter.
+Les autorités administratives mentionnées à l’article 3 doivent respecter les
+règles d'interopérabilité prescrites dans le référentiel général d’interopérabilité,
+en vue de la conformité des e-services concernés.
+Les systèmes d'information existant à la date de publication du référentiel
+général d'interopérabilité sont mis en conformité avec celui-ci dans un délai de
+deux ans à compter de cette date.
+Les applications créées dans les six mois suivant la date d'entrée en vigueur
+dudit référentiel sont mises en conformité avec celui-ci au plus tard douze mois
+après cette date.
+VI: DISPOSITIONS RELATIVES A LA SAISINE PAR VOIE
+Article 23 :
+Article 24 :
+Article 25 :
+ELECTRONIQUE
+Tout usager, dès lors qu'il s'est identifié auprès d'une autorité administrative qui
+a mis en place un e-service, peut adresser par voie électronique à celle-ci une
+demande, une déclaration, un document ou une information, ou lui répondre
+par la voie électronique.
+De même, toute personne intéressée peut soumettre par voie électronique et
+recevoir par le même procédé des demandes de communication d'informations
+personnelles ou d'ordre public à une autorité administrative qui détient cette
+information ou ce document.
+Toute autorité administrative régulièrement saisie d'une requête, en assure le
+traitement, sans demander à l'usager la confirmation ou la répétition de son
+envoi sous une autre forme.
+Une personne présentant une demande ou effectuant une déclaration auprès
+d'une autorité administrative ne peut être tenue de produire des informations
+ou données qu'elle a déjà produites auprès de la même autorité administrative
+ou d'une autre autorité administrative utilisant un système d'information
+respectant le référentiel général d'interopérabilité…
+--- PAGE 8 --- [OCR conf=94.7]
+Article 26 :
+Article 27 :
+Article 28 :
+Article 29 :
+Lorsque les informations ou données nécessaires pour traiter la demande
+présentée par un usager ou la déclaration d'un usager peuvent être obtenues
+directement auprès de l’autorité administrative saisie ou auprès d'une autre
+utilisant un système d'information respectant le référentiel général
+d'interopérabilité, l'usager n’est pas tenu de les fournir. Dans ce cas, la non-
+fourniture par l'usager des informations ou données ne peut être un motif
+valable de rejet de sa demande ou de sa déclaration.
+Lorsqu'elles mettent en place un ou plusieurs e-services, les autorités
+administratives rendent accessibles les modalités e leur utilisation, notamment
+les modes de communication possibles sur la page d'accueil de ces e-services.
+Ces modalités s'imposent aux usagers.
+Lorsqu'elle a mis en place un e-service dédié à l'accomplissement de certaines
+démarches administratives, une autorité administrative ne peut être saisie par
+voie électronique que par l'usage de cet e-service.
+Toutefois, l'usager justifiant d'un motif légitime peut saisir régulièrement une
+autorité administrative par une autre voie que la voie électronique.
+Ta
+En l'absence d'e-service, les autorités administratives peuvent être saisies par
+un envoi électronique qui leur est adressé par un usager.
+Le décret créant un e-service peut, pour certaines démarches administratives,
+écarter la voie électronique, notamment pour des motifs d'ordre public, de
+défense et de sécurité nationale, de nécessité de comparution personnelle de
+l'usager ou de bonne administration, notamment pour prévenir les demandes
+abusives.
+En cas d'abus d'envoi de messages électroniques par un usager, notamment
+par leur nombre, leur caractère répétitif ou systématique, ou les envois
+susceptibles de porter atteinte à la sécurité de son système d'information,
+l'autorité administrative victime, peut refuser de répondre à la demande de
+l'usager concerné.
+Après en avoir, si possible, informé l'usager auteur des envois abusifs, une
+autorité administrative peut configurer son système d’information pour bloquer
+la réception des envois provenant de sources identifiées comme ayant émis un
+nombre significatif d'envois abusifs ou émis des envois susceptibles de porter
+atteinte à la sécurité du système d'information.
+Une autorité administrative peut répondre par voie électronique à toute
+demande d'information qui lui a été adressée par cette voie par un usager ou
+par une autre autorité administrative.
+Sauf refus exprès de l'Usager, une autorité administrative peut répondre par
+voie électronique aux envois qui lui sont adressés par cette voie.
+Lorsqu'il est requis que l'envoi d'un document par un usager à une autorité
+administrative se fasse par lettre recommandée, cette formalité peut être
+satisfaite par l'utilisation d'un e-service ou d'un procédé électronique accepté
+8
+--- PAGE 9 --- [OCR conf=95.4]
+Article 30 :
+par ladite autorité administrative, permettant de désigner l'expéditeur et d'établir
+si le document a été remis ou non à cette autorité.
+Lorsqu'il est requis qu'un document administratif soit notifié à l'usager par lettre
+recommandée et après avoir recueilli l'accord exprès de l'usager, cette formalité
+peut être satisfaite par l'utilisation d'un procédé électronique permettant de
+désigner l'expéditeur, de garantir l'identité du destinataire et d'établir si le
+document a été remis ou non au destinataire.
+L'autorité administrative qui met en œuvre un e-service, atteste formellement
+auprès des utilisateurs de son système d'information que celui-ci est protégé
+conformément au référentiel de sécurité prévu par la présente ordonnance.
+Dans le cas d'un e-service, cette attestation est rendue accessible aux usagers
+sur la page d'accueil de l'e-service concerné.
+CHAPITRE VII : DELAIS DE TRAITEMENT ET DE REPONSE
+Article 31 :
+Article 32 :
+Tout envoi à une autorité administrative par voie électronique ainsi que tout
+paiement dans le cadre d’un e-service fait l’objet d’un accusé de réception ou
+d'enregistrement électronique de façon instantanée ou au plus tard dans un
+délai de 24 heures.
+L'accusé de réception ou d'enregistrement électronique est émis selon un
+procédé conforme aux règles fixées par le référentiel général de sécurité
+mentionné au chapitre 4.
+Lorsqu'une demande adressée à une autorité administrative est incomplète,
+celle-ci indique au demandeur les pièces et informations manquantes exigées
+par les textes législatifs et règlementaires en vigueur. Elle fixe un délai pour la
+réception de ces pièces et informations.
+CHAPITRE VIII : ECHANGES DE DONNEES ENTRE AUTORITES ADMINISTRATIVES
+Article 33 :
+Les autorités administratives échangent entre elles toutes les informations ou
+données strictement nécessaires pour traiter une demande présentée par le
+public ou une déclaration transmise par celui-ci en application d’un texte
+législatif ou règlementaire.
+Les autorités administratives destinataires de ces informations ou données ne
+peuvent, pour ce qui concerne les entreprises, se voir opposer le secret
+professionnel dès lors qu'elles sont dans le cadre de leurs missions légales,
+habilitées à connaître des informations ou données ainsi échangées.
+Une administration chargée de traiter une demande ou une déclaration
+mentionnée à l'alinéa précédent fait connaître à la personne concernée les
+informations ou données qui sont nécessaires à cette fin et celles qu'elle se
+procure directement auprès d'autres autorités administratives ivoiriennes, qui
+sont à l'origine ou qui les détiennent en vertu de leur mission.
+--- PAGE 10 --- [OCR conf=93.0]
+Le public est informé du droit d'accès et de rectification dont dispose chaque
+personne intéressée sur les informations et données mentionnées au présent
+article.
+CHAPITRE IX : LE PAIEMENT PAR VOIE ELECTRONIQUE
+Article 34 :
+Les autorités administratives peuvent mettre en place des e-services
+permettant à l’usager de payer, par voie électronique, les sommes dues à l'Etat
+et aux autorités administratives.
+CHAPITRE X : RÈGLEMENT DES LITIGES RELATIFS AUX ECHANGES VOIE
+Article 35 : es Ou
+-  — administrations et usagers ou entre autorités administratives sont résolus par
+ELECTRONIQUE
+Les litiges ou contestations résultant des échanges par voie électronique entre
+le biais dé médiateurs. |
+A cet effet, chaque autorité administrative est tenue de désigner au moins un
+médiateur pour le règlement des litiges nés de l’utilisation de son ou de ses e-
+services.
+CHAPITRE XI : DISPOSITIONS DIVERSE ET FINALE
+Article 36 :
+Article 37 :
+Les modalités de mise en œuvre des dispositions relatives au cadre commun
+d'urbanisation des systèmes d'information de l'Etat, à la sécurité des données
+échangées par voie électronique dans le cadre des e-services et à
+l'interopérabilité des services offerts par voie électronique sont fixées par décret
+pris en Conseil des Ministres.
+La présente ordonnance sera publiée au Journal Officiel de la République de
+Côte d'Ivoire.
+Fait à Abidjan, le 02 août 2017
+copie certifiée conforme à l'originai
+Le Secrétaire Général du Gouvernement
+Alassane OUATTARA
+AÂtte Eliane BIMANAGBO
+Préfet
+10
+N°2 1700544

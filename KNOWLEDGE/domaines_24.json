@@ -43,13 +43,35 @@
     "FAMILL_21",
     "FAMILL_22",
     "FAMILL_24",
-    "FAMILL_26"
+    "FAMILL_26",
+    "MARIAGE_2",
+    "MARIAGE_4",
+    "MARIAGE_20",
+    "MARIAGE_46",
+    "MARIAGE_47",
+    "MARIAGE_52",
+    "MARIAGE_56",
+    "MARIAGE_59",
+    "MARIAGE_73",
+    "MARIAGE_103",
+    "SUCC_5",
+    "SUCC_12",
+    "SUCC_26",
+    "SUCC_27",
+    "SUCC_28",
+    "SUCC_36",
+    "SUCC_42",
+    "SUCC_53",
+    "SUCC_65",
+    "SUCC_82"
    ],
    "textes": [
-    "2019-571",
     "2018-862",
     "2018-863",
-    "2019-572"
+    "2019-570",
+    "2019-571",
+    "2019-572",
+    "2019-573"
    ],
    "reconnaissance": [
     "mariage",
@@ -68,10 +90,12 @@
     "adoption"
    ],
    "lacunes": [
-    "Seule la filiation (loi 2019-571) a des fiches.",
-    "Mariage, divorce, pension alimentaire, successions : aucun texte au corpus.",
-    "État civil (2018-862), minorité (2019-572), adoption, pupilles : textes présents mais 0 article indexé.",
-    "Loi « 202-894 » du 21 décembre 2021 : numéro tel qu'il figure dans la base, à vérifier sur l'exemplaire officiel."
+    "Filiation (2019-571), mariage (2019-570) et successions (2019-573) ont des fiches ; aucune n'est relue par un juriste.",
+    "Divorce et séparation de corps : la loi 2019-570 ne les régit pas (art. 103) et le texte applicable n'est pas au corpus.",
+    "Pension alimentaire : seule l'infraction de non-paiement (Code pénal, art. 453) est couverte, pas la fixation par le juge.",
+    "État civil (2018-862), minorité (2019-572), adoption, pupilles : exemplaires officiels collectés ; intégration bloquée sous le seuil de couverture de 85 % (lectures OCR insuffisamment concordantes).",
+    "Libéralités (testaments, donations) et réserve héréditaire : non couvertes.",
+    "La loi notée « 202-894 » dans la base est la loi n° 2021-894 (erreur de numéro de la source, constatée sur CIVLII)."
    ]
   },
   {
@@ -138,7 +162,9 @@
     "indemnite de licenciement"
    ],
    "lacunes": [
-    "Aucun texte du droit du travail (Code du travail, conventions collectives, CNPS)."
+    "Code du travail 2015-532 : aucun exemplaire sur un hôte officiel accessible (emploi.gouv.ci refuse l'accès, CIVLII réservé aux abonnés) ; le portail du MEF republie une compilation privée (ivoire-juriste).",
+    "Fac-similé du JO n° 74 du 14/09/2015 disponible via FAOLEX (hôte tiers) : son usage comme référence est une décision du propriétaire.",
+    "Ordonnance 2021-902 (modification) collectée (portail du MEF) ; Code de prévoyance sociale : reproduction OMS seulement."
    ]
   },
   {
@@ -147,24 +173,49 @@
    "cles_moteur": [
     "penal_procedure_penale"
    ],
-   "fiches": [],
-   "textes": [],
+   "fiches": [
+    "PENAL_457",
+    "PENAL_458",
+    "PENAL_381",
+    "PENAL_383",
+    "PENAL_382",
+    "PENAL_403",
+    "PENAL_418",
+    "PENAL_394",
+    "PENAL_421",
+    "PENAL_452",
+    "PENAL_453",
+    "PENAL_467",
+    "PENAL_471",
+    "PENAL_475",
+    "PENAL_446",
+    "PENAL_98"
+   ],
+   "textes": [
+    "2019-574"
+   ],
    "reconnaissance": [
+    "agression",
+    "arnaque",
+    "cour d'assises",
+    "escroquerie",
+    "faire appel d'un jugement",
+    "frappe",
+    "garde a vue",
+    "gendarmerie",
+    "jugement correctionnel",
     "plainte",
     "police",
-    "gendarmerie",
-    "vol",
-    "escroquerie",
-    "agression",
-    "garde a vue",
     "prison",
     "procureur",
-    "frappe",
+    "tribunal correctionnel",
     "viol",
-    "arnaque"
+    "vol"
    ],
    "lacunes": [
-    "Aucun texte pénal (Code pénal, Code de procédure pénale)."
+    "Code pénal 2019-574 (version d'origine, JO du 10/07/2019) : les modifications postérieures ne sont pas vérifiées.",
+    "Code de procédure pénale 2018-975 : exemplaire officiel collecté, intégration en cours (plainte, garde à vue, délais non couverts).",
+    "Fiches limitées à 16 infractions courantes ; aucune relecture par un juriste."
    ]
   },
   {
@@ -187,7 +238,8 @@
     "facture impayee"
    ],
    "lacunes": [
-    "Aucun Acte uniforme de droit commercial ou des sociétés."
+    "AUDCG 2010, AUSCGIE 2014, AUPCAP 2015, arbitrage 2017, coopératives 2010 : versions signées officielles collectées (biblio.ohada.org) ; OCR en cours, aucune fiche.",
+    "Code des investissements (2018-646), juridictions de commerce (2016-1110), médiation (2014-389) : reproductions CIVLII seulement."
    ]
   },
   {
@@ -317,7 +369,7 @@
     "prime d'assurance"
    ],
    "lacunes": [
-    "Code CIMA absent."
+    "Code CIMA (édition 2019) collecté sur cima-afrique.org (608 pages) ; non intégré : le domaine n'a pas de rattachement au moteur, et les modifications postérieures à 2019 ne sont pas recherchées."
    ]
   },
   {
@@ -502,7 +554,8 @@
    ],
    "lacunes": [
     "Trois fiches de définition (domaine public, expropriation, réserves foncières) sans question de clarification.",
-    "Code de l'environnement absent ; procédure et indemnisation d'expropriation non détaillées dans les fiches."
+    "Code de l'environnement absent ; procédure et indemnisation d'expropriation non détaillées dans les fiches.",
+    "Code de l'environnement (loi 2023-900) et Code de l'eau : JO officiels collectés (portail du MEF), lus par OCR local, non intégrés."
    ]
   },
   {
@@ -522,7 +575,7 @@
     "logo copie"
    ],
    "lacunes": [
-    "Accord de Bangui (OAPI) et textes de propriété intellectuelle absents."
+    "Accord de Bangui révisé (OAPI, texte natif) collecté ; non intégré : le domaine n'a pas de rattachement au moteur (décision de périmètre)."
    ]
   },
   {
@@ -551,13 +604,19 @@
    "cles_moteur": [
     "famille_mariage_filiation"
    ],
-   "fiches": [],
+   "fiches": [
+    "MARIAGE_2",
+    "PENAL_394",
+    "PENAL_403",
+    "PENAL_421"
+   ],
    "textes": [
-    "2023-89",
-    "2023-90",
-    "202-894",
+    "2019-574",
     "2019-779",
-    "2020-907"
+    "202-894",
+    "2020-907",
+    "2023-89",
+    "2023-90"
    ],
    "reconnaissance": [
     "enfant maltraite",
@@ -571,8 +630,10 @@
     "mineur abandonne"
    ],
    "lacunes": [
-    "Décrets 2023-89, 2023-90, 2019-779, 2020-907 et loi « 202-894 » indexés, mais aucune fiche.",
-    "Loi 2019-572 (minorité) et loi 2015-539 (pupilles) : 0 article indexé."
+    "Protection pénale de l'enfant couverte par 4 fiches (violences, privation de soins, excision, viol sur mineur de quinze ans, âge du mariage).",
+    "Décrets 2023-89, 2023-90, 2019-779, 2020-907 et loi 2021-894 (notée « 202-894 ») indexés, mais aucune fiche.",
+    "Loi 2019-572 (minorité) et loi 2015-539 (pupilles) : exemplaires officiels collectés, sous le seuil d'intégration.",
+    "Travail des enfants (loi 2010-272) : texte réservé aux abonnés sur CIVLII, aucun exemplaire officiel accessible trouvé."
    ]
   },
   {
@@ -583,10 +644,20 @@
    ],
    "fiches": [
     "CONTRA_1",
-    "CONTRA_4"
+    "CONTRA_4",
+    "OHADA_8",
+    "OHADA_10",
+    "OHADA_13",
+    "OHADA_16",
+    "OHADA_28",
+    "OHADA_50",
+    "OHADA_153",
+    "OHADA_173",
+    "OHADA_177"
    ],
    "textes": [
-    "AU-SURETES"
+    "AU-SURETES",
+    "AUPSRVE-2023"
    ],
    "reconnaissance": [
     "ohada",
@@ -601,9 +672,8 @@
     "recouvrement"
    ],
    "lacunes": [
-    "Seul l'Acte uniforme portant organisation des sûretés est présent (2 fiches de définition).",
-    "Acte uniforme sur le recouvrement et les voies d'exécution absent : saisies non couvertes.",
-    "Aucune question de clarification."
+    "Sûretés (AUS) et voies d'exécution (AUPSRVE 2023) couverts ; quotités saisissables du salaire : droit national, absentes.",
+    "Procédures collectives (AUPCAP 2015) : version signée officielle collectée (biblio.ohada.org), OCR en cours, pas encore intégrée."
    ]
   },
   {
@@ -620,7 +690,10 @@
     "exequatur",
     "import export",
     "transfert d'argent a l'etranger",
-    "adoption internationale"
+    "adoption internationale",
+    "divorcer a l'etranger",
+    "marie avec une etrangere",
+    "marie avec un etranger"
    ],
    "lacunes": [
     "Aucune règle de conflit de lois ; Convention de La Haye 1993 (adoption internationale) présente mais 0 article indexé."

@@ -1,0 +1,180 @@
+{
+ "_description": "Fiches du domaine famille — successions. Texte : loi n° 2019-573 du 26 juin 2019 relative aux successions, Journal officiel (numéro spécial du 16 juillet 2019) republié par mffe.ci. Exemplaire officiel numérisé, lu par OCR : chaque article indexé concorde (>= 0,80, nombres identiques) avec une autre lecture du même scan ou avec le texte publié par l'Assemblée nationale ; référence PARTIELLEMENT_VERIFIE. Citations extraites mot pour mot par bin/ajouter_fiches.py. AUCUNE relecture par un juriste : statut A_RELIRE_PAR_UN_JURISTE. Les libéralités (testaments, donations) et la réserve héréditaire ne sont pas couvertes ici.",
+ "domaine": "famille_mariage_filiation",
+ "numero_texte": "2019-573",
+ "statut_relecture": "A_RELIRE_PAR_UN_JURISTE",
+ "fiches": [
+  {
+   "id": "SUCC_5",
+   "article": "5",
+   "titre": "Où s'ouvre la succession",
+   "declencheurs": [
+    "ouverture de la succession",
+    "ou s'ouvre la succession",
+    "tribunal competent succession",
+    "succession dernier domicile"
+   ],
+   "citation_debut": "La succession s'ouvre au dernier domicile du défunt",
+   "citation_fin": "la succession s’ouvre à la dernière résidence.",
+   "lecture": "La succession s'ouvre au dernier domicile du défunt, pour l'ensemble de ses biens ; si ce domicile n'est pas connu, à sa dernière résidence. Le juge de ce lieu est compétent pour le partage.",
+   "faits_requis": [],
+   "etape_plan": "Établir le dernier domicile du défunt (certificat de résidence, factures, témoignages)"
+  },
+  {
+   "id": "SUCC_12",
+   "article": "12",
+   "titre": "Prouver qu'on est héritier",
+   "declencheurs": [
+    "jugement d'heredite",
+    "prouver que je suis heritier",
+    "qualite d'heritier",
+    "acte d'heredite",
+    "certificat d'heritier"
+   ],
+   "citation_debut": "La qualité d’héritier est constatée",
+   "citation_fin": "du lieu d'ouverture de la succession.",
+   "lecture": "La qualité d'héritier est constatée par un jugement du tribunal du lieu où la succession s'est ouverte.",
+   "faits_requis": [],
+   "etape_plan": "Réunir l'acte de décès et les actes d'état civil qui prouvent le lien avec le défunt, pour la demande au tribunal"
+  },
+  {
+   "id": "SUCC_26",
+   "article": "26",
+   "titre": "Parts des enfants et du conjoint survivant",
+   "declencheurs": [
+    "part du conjoint survivant",
+    "part de la veuve",
+    "part du veuf",
+    "part des enfants dans l'heritage",
+    "heritage entre enfants et veuve",
+    "combien herite la femme du defunt",
+    "heritage de mon pere",
+    "heritage de ma mere",
+    "succession de mon pere",
+    "succession de ma mere",
+    "laisse une veuve",
+    "partager l'heritage entre"
+   ],
+   "citation_debut": "Les enfants ou leurs descendants et le conjoint",
+   "citation_fin": "succèdent seuls au défunt.",
+   "lecture": "Quand le défunt laisse des enfants (ou leurs descendants) et un conjoint survivant, les trois quarts de la succession vont aux enfants et un quart au conjoint. Sans conjoint survivant, les enfants héritent seuls.",
+   "faits_requis": [],
+   "etape_plan": "Dresser la liste des héritiers (enfants, conjoint) avec leurs actes d'état civil"
+  },
+  {
+   "id": "SUCC_27",
+   "article": "27",
+   "titre": "Défunt sans enfant",
+   "declencheurs": [
+    "defunt sans enfant",
+    "mort sans enfant",
+    "pas d'enfant heritage",
+    "heritage des parents du defunt",
+    "heritage des freres et soeurs"
+   ],
+   "citation_debut": "A défaut d’enfants et de descendants d’eux",
+   "citation_fin": "moitié au conjoint survivant.",
+   "lecture": "Sans enfant ni descendant, la moitié de la succession va aux père et mère du défunt et l'autre moitié au conjoint survivant. L'article 27 règle aussi les cas où manquent le conjoint, les parents ou les frères et sœurs.",
+   "faits_requis": [],
+   "etape_plan": "Identifier les parents, frères et sœurs et le conjoint survivant du défunt"
+  },
+  {
+   "id": "SUCC_28",
+   "article": "28",
+   "titre": "Égalité des enfants dans la succession",
+   "declencheurs": [
+    "enfant ne hors mariage heritage",
+    "enfant d'un autre mariage herite",
+    "fille herite-t-elle",
+    "aine herite plus",
+    "egalite des enfants heritage"
+   ],
+   "citation_debut": "Les enfants ou leurs descendants succèdent",
+   "citation_fin": "ou nés hors mariage.",
+   "lecture": "Les enfants héritent de leurs parents sans distinction de sexe ni de rang de naissance, même s'ils sont nés de mariages différents ou hors mariage.",
+   "faits_requis": [],
+   "etape_plan": "Réunir l'acte de naissance de chaque enfant établissant sa filiation avec le défunt"
+  },
+  {
+   "id": "SUCC_36",
+   "article": "36",
+   "titre": "Conjoint survivant séparé de corps",
+   "declencheurs": [
+    "separation de corps heritage",
+    "conjoint separe herite",
+    "veuve separee"
+   ],
+   "citation_debut": "Seul le conjoint survivant contre lequel",
+   "citation_fin": "prend part à la succession.",
+   "lecture": "Le conjoint survivant hérite comme le prévoient les articles 26 et 27, sauf s'il existe contre lui un jugement de séparation de corps passé en force de chose jugée.",
+   "faits_requis": [],
+   "etape_plan": "Vérifier s'il existe un jugement de séparation de corps et sa date"
+  },
+  {
+   "id": "SUCC_42",
+   "article": "42",
+   "titre": "Délai pour accepter ou refuser une succession",
+   "declencheurs": [
+    "delai pour accepter la succession",
+    "refuser l'heritage",
+    "accepter l'heritage",
+    "combien de temps pour l'heritage",
+    "prescription succession"
+   ],
+   "citation_debut": "La faculté d'accepter ou de répudier une succession",
+   "citation_fin": "est réputé avoir accepté.",
+   "lecture": "L'héritier dispose de cinq ans à compter de l'ouverture de la succession pour l'accepter ou y renoncer ; s'il ne prend pas parti dans ce délai, il est réputé l'avoir acceptée. Le délai ne court pas tant qu'il a des motifs légitimes d'ignorer ses droits.",
+   "faits_requis": [],
+   "etape_plan": "Noter la date du décès et la date à laquelle vous l'avez appris"
+  },
+  {
+   "id": "SUCC_53",
+   "article": "53",
+   "titre": "Renoncer à une succession",
+   "declencheurs": [
+    "renoncer a la succession",
+    "renoncer a l'heritage",
+    "refuser une succession avec des dettes",
+    "heritage avec dettes"
+   ],
+   "citation_debut": "La renonciation à une succession ne se présume pas.",
+   "citation_fin": "contre remise au déclarant d’une attestation de renonciation.",
+   "lecture": "La renonciation ne se présume pas : elle se fait au greffe du tribunal du lieu d'ouverture de la succession, sur un registre, contre remise d'une attestation. L'héritier qui renonce est censé n'avoir jamais été héritier (article 54).",
+   "faits_requis": [],
+   "etape_plan": "Se présenter au greffe du tribunal du lieu d'ouverture avec l'acte de décès et une pièce d'identité"
+  },
+  {
+   "id": "SUCC_65",
+   "article": "65",
+   "titre": "Accepter sans payer les dettes au-delà des biens reçus",
+   "declencheurs": [
+    "benefice d'inventaire",
+    "dettes du defunt",
+    "payer les dettes du defunt",
+    "heriter sans les dettes"
+   ],
+   "citation_debut": "L'effet du bénéfice d'inventaire est de donner",
+   "citation_fin": "de la valeur des biens qu'il a recueillis,",
+   "lecture": "L'héritier qui accepte sous bénéfice d'inventaire (déclaration au greffe, article 61) n'est tenu des dettes de la succession que jusqu'à la valeur des biens qu'il a recueillis ; l'inventaire doit être dressé dans le délai fixé par l'article 63.",
+   "faits_requis": [],
+   "etape_plan": "Faire la déclaration au greffe puis faire dresser l'inventaire des biens et des dettes"
+  },
+  {
+   "id": "SUCC_82",
+   "article": "82",
+   "titre": "Sortir de l'indivision : demander le partage",
+   "declencheurs": [
+    "partage de l'heritage",
+    "partager la maison familiale",
+    "indivision",
+    "un heritier refuse le partage",
+    "la famille refuse de partager"
+   ],
+   "citation_debut": "Nul ne peut être contraint à demeurer",
+   "citation_fin": "nonobstant prohi- bitions et conventions contraires.",
+   "lecture": "Aucun héritier ne peut être obligé de rester dans l'indivision : le partage peut toujours être demandé, même si une convention ou une interdiction s'y oppose ; on peut seulement convenir de suspendre le partage pour un temps limité.",
+   "faits_requis": [],
+   "etape_plan": "Lister les biens de la succession et les héritiers, puis tenter un accord avant de saisir le tribunal du lieu d'ouverture"
+  }
+ ]
+}

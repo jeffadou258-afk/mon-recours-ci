@@ -17,6 +17,30 @@
   "sha256_ocr": "sha256:60b6f999c2b21e04d999f3512a07835a5f30b78a6c3a795a26764f38eb2e2756",
   "sha256_texte": "sha256:3ed99cd54fdcb8d8b12202ef7e866e39cf0eba6aad58aa979acd707a84949fcf"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 93.9,
+  "confiance_par_page": {
+   "1": 89.1,
+   "2": 94.8,
+   "3": 94.6,
+   "4": 95.0,
+   "5": 94.7,
+   "6": 95.0,
+   "7": 94.2
+  },
+  "date": "2026-10-20T10:28:01+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_mariage_2019_570.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 7,
+  "pages_ocr_faibles": [],
+  "pdf_verifie": "sha256:9c93ce80693df78c93842b9ac34b551848404e97ba00dc5c83aff187700d40e9",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:927d45028082bb11e5404ad2b02d5124de82b957829232a1556c4ceede03f2b0"
+ },
  "fichier_pdf": "mffe_mariage_2019_570.pdf",
  "http": 200,
  "marques_tierces_observees": [],

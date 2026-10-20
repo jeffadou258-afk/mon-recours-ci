@@ -13,6 +13,41 @@
   "pages_sans_texte": 18,
   "sha256_texte": "sha256:eb6662918444270071ef2b95e4442f42e311fe71c7f087f03ef91946bff085be"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 87.8,
+  "confiance_par_page": {
+   "1": 87.0,
+   "10": 90.5,
+   "11": 90.4,
+   "12": 88.4,
+   "13": 87.7,
+   "14": 86.4,
+   "15": 89.2,
+   "16": 88.3,
+   "17": 87.1,
+   "18": 91.7,
+   "2": 89.0,
+   "3": 83.6,
+   "4": 88.0,
+   "5": 88.0,
+   "6": 85.8,
+   "7": 85.5,
+   "8": 87.9,
+   "9": 86.1
+  },
+  "date": "2026-10-20T10:25:15+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mef_code_hygiene_salubrite.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 18,
+  "pages_ocr_faibles": [],
+  "pdf_verifie": "sha256:2f2aad9118936a9014b46ad853a813e8de1edce44a0a65bc271ea39c8647c5f4",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:7827bd0f65d7a45ae358fb88e2f6ff2ec0d9d8c80c6ddaa709084d7490413806"
+ },
  "fichier_pdf": "mef_code_hygiene_salubrite.pdf",
  "historique": [
   {

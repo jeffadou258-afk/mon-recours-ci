@@ -231,6 +231,34 @@ def annoter_reference(ref_id, note, source_url, chemin=None):
     return nouvelles
 
 
+def completer_extrait_ocr(ref_id, extrait_texte, articles, source_url, note, chemin=None):
+    """Remplit l'extrait d'une référence existante à partir des articles OCR retenus.
+
+    Cas visé : une référence créée sans texte (calque vide d'un scan) dont le MÊME
+    document est désormais lu. Garde-fous :
+      * jamais sur une référence VERIFIE (son extrait fait foi) ;
+      * seulement si `source_url` est celle de la référence (même document) ;
+      * la note est ajoutée aux limites d'interprétation (rien n'est effacé).
+    Renvoie True si l'extrait a été écrit.
+    """
+    existante = obtenir_reference(ref_id, chemin)
+    if existante is None:
+        raise ValueError("référence inconnue : %s" % ref_id)
+    if existante["etat_verification"] == "VERIFIE":
+        raise ValueError("%s est VERIFIE : son extrait n'est jamais remplacé" % ref_id)
+    if existante["source_url"] != source_url:
+        raise ValueError("%s : le document lu (%s) n'est pas celui de la référence (%s)"
+                         % (ref_id, source_url, existante["source_url"]))
+    if not extrait_texte:
+        return False
+    with connexion(chemin) as conn:
+        conn.execute("UPDATE references_juridiques SET extrait_texte = ?, texte_complet_present = 1, "
+                     "articles = ?, empreinte_contenu = ?, maj_le = ? WHERE ref_id = ?",
+                     (extrait_texte, articles, empreinte_texte(extrait_texte), horodatage(), ref_id))
+    annoter_reference(ref_id, note, source_url, chemin)
+    return True
+
+
 def lister_references(etat=None, domaine=None, chemin=None):
     requete = "SELECT * FROM references_juridiques"
     conditions, params = [], []

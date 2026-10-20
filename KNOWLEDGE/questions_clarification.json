@@ -453,6 +453,212 @@
     "oui": "L'acte uniforme exige un titre exécutoire constatant une créance liquide et exigible : il reste à vérifier que celui qui est présenté remplit ces conditions.",
     "non": "L'acte uniforme réserve ces saisies au créancier muni d'un titre exécutoire : en son absence, la base de la saisie est à vérifier."
    }
+  },
+  {
+   "cle": "pension_fixee_par_le_juge",
+   "fiches": [
+    "PENAL_453"
+   ],
+   "question": "La pension alimentaire a-t-elle été fixée par une décision du juge (jugement ou ordonnance) ?",
+   "pourquoi": "L'article 453 ne punit que le non-paiement d'une pension fixée par une décision de justice.",
+   "indices_oui": [
+    "decision du juge",
+    "le juge a fixe",
+    "jugement",
+    "ordonnance du juge",
+    "fixee par le tribunal",
+    "condamne a payer"
+   ],
+   "indices_non": [
+    "pas de jugement",
+    "sans jugement",
+    "aucune decision",
+    "pas encore de decision",
+    "pas passe devant le juge"
+   ],
+   "effets": {
+    "oui": "Selon l'article 453, le non-paiement volontaire, pendant plus de deux mois, d'une pension fixée par le juge est puni ; le défaut de paiement est présumé volontaire.",
+    "non": "Sans décision du juge fixant la pension, l'article 453 ne s'applique pas : la fixation de la pension par le juge n'est pas couverte ici."
+   }
+  },
+  {
+   "cle": "pension_impayee_plus_deux_mois",
+   "fiches": [
+    "PENAL_453"
+   ],
+   "si": {
+    "pension_fixee_par_le_juge": "oui"
+   },
+   "question": "La pension n'est-elle plus payée entièrement depuis plus de deux mois ?",
+   "pourquoi": "L'article 453 vise un défaut de paiement de plus de deux mois.",
+   "indices_oui": [
+    "depuis trois mois",
+    "depuis six mois",
+    "depuis des mois",
+    "depuis un an",
+    "plus de deux mois"
+   ],
+   "indices_non": [
+    "depuis un mois",
+    "ce mois-ci",
+    "seulement ce mois"
+   ],
+   "effets": {
+    "oui": "La durée de non-paiement que vous décrivez dépasse les deux mois visés par l'article 453.",
+    "non": "Le non-paiement que vous décrivez ne dépasse pas encore les deux mois visés par l'article 453."
+   }
+  },
+  {
+   "cle": "incapacite_plus_dix_jours",
+   "fiches": [
+    "PENAL_381"
+   ],
+   "question": "Un médecin a-t-il constaté une incapacité totale de travail de plus de dix jours ?",
+   "pourquoi": "L'article 381 fixe la peine selon les conséquences des coups, notamment une incapacité de plus de dix jours.",
+   "indices_oui": [
+    "itt de quinze jours",
+    "itt de 15 jours",
+    "itt de 21 jours",
+    "plus de dix jours d'itt",
+    "incapacite de plus de dix jours"
+   ],
+   "indices_non": [
+    "pas de certificat",
+    "itt de trois jours",
+    "itt de 3 jours",
+    "itt de cinq jours",
+    "pas d'itt"
+   ],
+   "effets": {
+    "oui": "Selon l'article 381, une incapacité totale de travail de plus de dix jours relève de la peine d'un à cinq ans d'emprisonnement et d'une amende de 50.000 à 500.000 francs.",
+    "non": "Sans incapacité de plus de dix jours (ni infirmité ni décès), l'article 381 prévoit la peine la plus basse de son échelle : un mois à un an d'emprisonnement et une amende de 100.000 à 1.000.000 de francs."
+   }
+  },
+  {
+   "cle": "victime_moins_quinze_ans",
+   "fiches": [
+    "PENAL_403"
+   ],
+   "question": "La victime avait-elle moins de quinze ans au moment des faits ?",
+   "pourquoi": "L'article 403 qualifie de viol tout acte de pénétration sexuelle sur un mineur de quinze ans, même consenti.",
+   "indices_oui": [
+    "ma fille de 12 ans",
+    "enfant de 10 ans",
+    "fillette",
+    "ma fille de treize ans",
+    "mineure de 14 ans"
+   ],
+   "indices_non": [
+    "j'ai 25 ans",
+    "adulte",
+    "majeure"
+   ],
+   "alerte_si": "oui",
+   "effets": {
+    "oui": "Selon l'article 403, tout acte de pénétration à but sexuel sur un mineur de quinze ans est un viol, même avec son consentement.",
+    "non": "Selon l'article 403, il faut un acte de pénétration à but sexuel imposé sans consentement, par violence, menace, contrainte ou surprise."
+   }
+  },
+  {
+   "cle": "conjoint_survivant",
+   "fiches": [
+    "SUCC_26"
+   ],
+   "question": "Le défunt laisse-t-il un conjoint survivant (époux ou épouse) ?",
+   "pourquoi": "L'article 26 répartit la succession entre les enfants et le conjoint survivant.",
+   "indices_oui": [
+    "sa femme",
+    "son epouse",
+    "sa veuve",
+    "son mari",
+    "la veuve",
+    "le veuf"
+   ],
+   "indices_non": [
+    "il n'etait pas marie",
+    "celibataire",
+    "pas d'epouse",
+    "sa femme est deja decedee"
+   ],
+   "effets": {
+    "oui": "Selon l'article 26, les trois quarts de la succession vont aux enfants ou à leurs descendants, et un quart au conjoint survivant.",
+    "non": "Selon l'article 26, sans conjoint survivant, les enfants ou leurs descendants héritent seuls."
+   }
+  },
+  {
+   "cle": "deces_plus_cinq_ans",
+   "fiches": [
+    "SUCC_42"
+   ],
+   "question": "Le décès remonte-t-il à plus de cinq ans ?",
+   "pourquoi": "L'article 42 fixe un délai de cinq ans, à compter de l'ouverture de la succession, pour accepter ou renoncer.",
+   "indices_oui": [
+    "il y a dix ans",
+    "il y a six ans",
+    "il y a 10 ans",
+    "depuis 2015",
+    "depuis plus de cinq ans"
+   ],
+   "indices_non": [
+    "l'an dernier",
+    "il y a deux ans",
+    "le mois dernier",
+    "recemment",
+    "cette annee"
+   ],
+   "effets": {
+    "oui": "Selon l'article 42, après cinq ans sans prendre parti, l'héritier est réputé avoir accepté, sauf s'il avait des motifs légitimes d'ignorer ses droits.",
+    "non": "Selon l'article 42, le délai de cinq ans pour accepter ou renoncer n'est pas encore écoulé."
+   }
+  },
+  {
+   "cle": "futur_epoux_moins_18_ans",
+   "fiches": [
+    "MARIAGE_2"
+   ],
+   "question": "L'un des futurs époux a-t-il moins de dix-huit ans ?",
+   "pourquoi": "L'article 2 interdit le mariage avant dix-huit ans révolus.",
+   "indices_oui": [
+    "ma fille de 15 ans",
+    "elle a 16 ans",
+    "il a 17 ans",
+    "mineure",
+    "mineur"
+   ],
+   "indices_non": [
+    "nous sommes majeurs",
+    "elle a 25 ans",
+    "il a 30 ans"
+   ],
+   "alerte_si": "oui",
+   "effets": {
+    "oui": "Selon l'article 2, ni l'homme ni la femme ne peuvent se marier avant dix-huit ans révolus.",
+    "non": "La condition d'âge de l'article 2 (dix-huit ans révolus) est remplie pour chacun des futurs époux."
+   }
+  },
+  {
+   "cle": "danger_cohabitation",
+   "fiches": [
+    "MARIAGE_46"
+   ],
+   "question": "La vie commune avec votre conjoint présente-t-elle un danger physique ou moral pour vous ?",
+   "pourquoi": "L'article 46 permet de demander à résider séparément quand la cohabitation présente un danger.",
+   "indices_oui": [
+    "il me frappe",
+    "elle me frappe",
+    "il me menace",
+    "peur pour ma vie",
+    "danger"
+   ],
+   "indices_non": [
+    "pas de danger",
+    "aucune violence"
+   ],
+   "alerte_si": "oui",
+   "effets": {
+    "oui": "Selon l'article 46, vous pouvez demander au président du tribunal l'autorisation de résider séparément pour une durée déterminée ; il statue dans la huitaine de sa saisine.",
+    "non": "L'article 46 vise le cas où la cohabitation présente un danger : sans danger, il ne s'applique pas."
+   }
   }
  ]
 }

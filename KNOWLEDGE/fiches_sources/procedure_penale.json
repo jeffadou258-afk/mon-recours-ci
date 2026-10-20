@@ -1,0 +1,143 @@
+{
+ "_description": "Fiches du domaine pénal — procédure. Texte : loi n° 2018-975 du 27 décembre 2018 portant Code de procédure pénale, Journal officiel (numéro spécial du 4 janvier 2019) republié par mffe.ci. Exemplaire officiel numérisé, lu par OCR (tesseract tessdata_best 300 dpi, tesseract distant, calque Adobe Paper Capture) ; chaque article indexé concorde à 0,80 au moins avec une autre lecture et sans nombre remplacé. ATTENTION : des passages d'une autre colonne du Journal officiel se mêlent parfois au texte d'un article (deux lectures tesseract partagent la même erreur de mise en page) ; les citations sont bornées aux passages propres. Les modifications postérieures (notamment 2022) ne sont PAS vérifiées. AUCUNE relecture par un juriste : statut A_RELIRE_PAR_UN_JURISTE.",
+ "domaine": "penal_procedure_penale",
+ "numero_texte": "2018-975",
+ "statut_relecture": "A_RELIRE_PAR_UN_JURISTE",
+ "fiches": [
+  {
+   "id": "CPP_29",
+   "article": "29",
+   "titre": "Où porter plainte : la police judiciaire",
+   "declencheurs": [
+    "porter plainte",
+    "deposer plainte",
+    "ou porter plainte",
+    "commissariat plainte",
+    "gendarmerie plainte",
+    "je veux porter plainte"
+   ],
+   "citation_debut": "Les officiers de police judiciaire exercent",
+   "citation_fin": "Ils reçoivent les plaintes et dénonciations ;",
+   "lecture": "Les officiers de police judiciaire (commissariat, brigade de gendarmerie) reçoivent les plaintes et les dénonciations.",
+   "faits_requis": [],
+   "etape_plan": "Rédiger un récit daté des faits, avec les preuves et les témoins, avant de se présenter"
+  },
+  {
+   "id": "CPP_51",
+   "article": "51",
+   "titre": "Plainte au procureur et classement de l'affaire",
+   "declencheurs": [
+    "plainte au procureur",
+    "procureur de la republique plainte",
+    "classement sans suite",
+    "ma plainte classee",
+    "plainte classee"
+   ],
+   "citation_debut": "Le procureur de la République reçoit les plaintes",
+   "citation_fin": "avise le plaignant et la victime du classement de l’affaire.",
+   "lecture": "Le procureur de la République reçoit les plaintes et décide de la suite à leur donner ; s'il décide de ne pas y donner suite, il en avise le plaignant et la victime.",
+   "faits_requis": [],
+   "etape_plan": "Conserver la preuve du dépôt de la plainte (récépissé ou copie) et en demander régulièrement la suite"
+  },
+  {
+   "id": "CPP_72",
+   "article": "72",
+   "titre": "Durée de la garde à vue",
+   "declencheurs": [
+    "garde a vue",
+    "duree de la garde a vue",
+    "prolongation de la garde a vue",
+    "retenu au commissariat",
+    "garde a vue depuis"
+   ],
+   "citation_debut": "L’officier de police judiciaire ne peut retenir",
+   "citation_fin": "soit déférées devant le procureur de la République, soit remises en liberté.",
+   "lecture": "L'officier de police judiciaire ne peut retenir une personne en garde à vue plus de quarante-huit heures ; le procureur de la République peut autoriser une prolongation d'un nouveau délai de quarante-huit heures. Ensuite, la personne est présentée au procureur ou remise en liberté.",
+   "faits_requis": [],
+   "etape_plan": "Noter l'heure exacte du début de la garde à vue (arrestation ou arrivée au commissariat, article 73)"
+  },
+  {
+   "id": "CPP_74",
+   "article": "74",
+   "titre": "Droits de la personne gardée à vue : être informée, prévenir un proche",
+   "declencheurs": [
+    "droits en garde a vue",
+    "prevenir la famille garde a vue",
+    "garde a vue sans prevenir",
+    "on ne m'a pas dit pourquoi je suis arrete"
+   ],
+   "citation_debut": "La personne placée en garde à vue est immédiate",
+   "citation_fin": "de la mesure dont elle est l’objet.",
+   "lecture": "La personne placée en garde à vue doit être informée immédiatement de cette mesure, de sa durée et de ce qu'on lui reproche ; elle a le droit de faire prévenir sans délai un proche, un parent, un ami ou son employeur.",
+   "faits_requis": [],
+   "etape_plan": "Demander à faire prévenir un proche et noter l'heure de la demande"
+  },
+  {
+   "id": "CPP_75",
+   "article": "75",
+   "titre": "Examen médical pendant la garde à vue",
+   "declencheurs": [
+    "medecin en garde a vue",
+    "examen medical garde a vue",
+    "blesse en garde a vue",
+    "malade en garde a vue"
+   ],
+   "citation_debut": "L'examen médical est de droit",
+   "citation_fin": "ou un membre de sa famille, le demande.",
+   "lecture": "L'examen médical de la personne gardée à vue est de droit si elle-même ou un membre de sa famille le demande.",
+   "faits_requis": [],
+   "etape_plan": "Demander l'examen médical, par la personne ou par sa famille, et noter l'heure de la demande"
+  },
+  {
+   "id": "CPP_90",
+   "article": "90",
+   "titre": "Droit à l'assistance d'un avocat pendant l'enquête",
+   "declencheurs": [
+    "avocat garde a vue",
+    "droit a un avocat",
+    "sans avocat",
+    "assistance d'un avocat",
+    "interroge sans avocat"
+   ],
+   "citation_debut": "Toute personne contre qui il existe des indices graves",
+   "citation_fin": "se faire assister d'un parent ou d'un ami.",
+   "lecture": "Pendant l'enquête, la personne soupçonnée, la victime ou le témoin peuvent se faire assister d'un avocat ; là où il n'y a pas d'avocat, à titre exceptionnel, d'un parent ou d'un ami. Les magistrats et fonctionnaires doivent l'informer de ce droit.",
+   "faits_requis": [],
+   "etape_plan": "Indiquer clairement que l'on veut un avocat et donner son nom ; faire noter la demande au procès-verbal (article 91)"
+  },
+  {
+   "id": "CPP_106",
+   "article": "106",
+   "titre": "Plainte avec constitution de partie civile",
+   "declencheurs": [
+    "partie civile",
+    "constitution de partie civile",
+    "plainte devant le juge d'instruction",
+    "juge d'instruction plainte",
+    "se constituer partie civile"
+   ],
+   "citation_debut": "Toute personne qui se prétend lésée",
+   "citation_fin": "devant le juge d'instruction compétent.",
+   "lecture": "Toute personne qui se dit lésée par un crime ou un délit peut, en portant plainte, se constituer partie civile devant le juge d'instruction compétent.",
+   "faits_requis": [],
+   "etape_plan": "Consulter un avocat ou le greffe du juge d'instruction pour les conditions de la plainte avec constitution de partie civile"
+  },
+  {
+   "id": "CPP_12",
+   "article": "12",
+   "titre": "Délai pour poursuivre (prescription de l'action publique)",
+   "declencheurs": [
+    "prescription",
+    "trop tard pour porter plainte",
+    "faits anciens plainte",
+    "delai pour porter plainte",
+    "prescription de l'action publique"
+   ],
+   "citation_debut": "En matière de crime, l’action publique se prescrit",
+   "citation_fin": "de l’action publique est de trois années révolues.",
+   "lecture": "Les poursuites se prescrivent, en principe, par dix ans pour un crime et trois ans pour un délit, à compter des faits ou du dernier acte d'instruction ou de poursuite (une année pour une contravention). Les crimes contre l'humanité, le génocide et les crimes de guerre sont imprescriptibles.",
+   "faits_requis": [],
+   "etape_plan": "Noter la date des faits et celle de tout acte de poursuite déjà fait (plainte, convocation)"
+  }
+ ]
+}

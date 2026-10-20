@@ -135,7 +135,9 @@ class TestFichesFamille(unittest.TestCase):
 
     def test_les_fiches_famille_sont_chargees_et_validees(self):
         from core import catalogue
-        fiches = [f for f in catalogue.charger() if f["domaine"] == FAMILLE]
+        # Les fiches de la filiation ; le mariage et les successions (20/10/2026) ont
+        # leurs propres fiches, testées dans test_collecte_autonome.
+        fiches = [f for f in catalogue.charger() if f["domaine"] == FAMILLE and f["id"].startswith("FAMILL_")]
         self.assertEqual(len(fiches), 11)
         for fiche in fiches:
             self.assertEqual(fiche["numero_texte"], "2019-571")
@@ -156,7 +158,9 @@ class TestFichesFamille(unittest.TestCase):
             self.assertTrue(source["url_source"].startswith("https://famille.gouv.ci/"))
 
     def test_pension_alimentaire_et_divorce_restent_sans_conclusion(self):
-        for demande in ("Le père de mon enfant refuse de payer la pension alimentaire.",
+        # La pension : depuis le 20/10/2026, la fiche pénale PENAL_453 est servie, mais
+        # SOUS CONDITION (décision du juge) : voir test_collecte_autonome.
+        for demande in ("Comment faire fixer une pension alimentaire par le juge ?",
                         "Mon mari veut divorcer, quels sont mes droits ?"):
             _, data = self._parcours(demande)
             self.assertEqual(data["etape"], "hors_catalogue", demande)

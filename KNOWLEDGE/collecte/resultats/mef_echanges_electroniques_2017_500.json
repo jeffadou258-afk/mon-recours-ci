@@ -13,6 +13,33 @@
   "pages_sans_texte": 10,
   "sha256_texte": "sha256:f60e1da0036e63065bdb02fa18d418a57baf3cfbaa79b4edd16f6016ecc5bbc9"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 93.8,
+  "confiance_par_page": {
+   "1": 90.9,
+   "10": 93.0,
+   "2": 93.0,
+   "3": 93.7,
+   "4": 93.3,
+   "5": 94.3,
+   "6": 95.4,
+   "7": 94.6,
+   "8": 94.7,
+   "9": 95.4
+  },
+  "date": "2026-10-20T10:25:43+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mef_echanges_electroniques_2017_500.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 10,
+  "pages_ocr_faibles": [],
+  "pdf_verifie": "sha256:b71c2bebdf4555cb7341902a1ceb571cee2594299b53630ce27f8c6dc0b7d9a9",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:1f1c5d11d604b711e4b81bb42a163d05518210c44905f4cb0d7e40744bd8e894"
+ },
  "fichier_pdf": "mef_echanges_electroniques_2017_500.pdf",
  "historique": [
   {

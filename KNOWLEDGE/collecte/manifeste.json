@@ -3447,7 +3447,13 @@
    "categorie_source": "SECONDAIRE_CONSOLIDE",
    "mode": "fichier",
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "etat_civil_2018_862_civlii_jo",
@@ -3463,7 +3469,13 @@
    "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "violences_2021_894_civlii_source",
@@ -3481,7 +3493,13 @@
    "categorie_source": "SECONDAIRE_CONSOLIDE",
    "mode": "fichier",
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée). Le corpus porte ce texte sous le numéro « 202-894 » (faute de la source) : même loi.",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "violences_2021_894_civlii_jo",
@@ -3499,7 +3517,13 @@
    "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "prevoyance_sociale_1999_477_civlii_source",
@@ -3515,7 +3539,13 @@
    "categorie_source": "SECONDAIRE_CONSOLIDE",
    "mode": "fichier",
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "prevoyance_sociale_1999_477_civlii_jo",
@@ -3531,7 +3561,13 @@
    "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "cci_1977_civlii_source",
@@ -3547,7 +3583,13 @@
    "categorie_source": "SECONDAIRE_CONSOLIDE",
    "mode": "fichier",
    "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "arbitrage_1993_671_civlii_source",
@@ -3581,7 +3623,13 @@
    "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "juridictions_2016_1110_civlii_source",
@@ -3615,7 +3663,13 @@
    "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "petits_litiges_2015_904_civlii_source",
@@ -3649,7 +3703,13 @@
    "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "mediation_2014_389_civlii_source",
@@ -3683,7 +3743,13 @@
    "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "commissaires_justice_2018_974_civlii_source",
@@ -3783,7 +3849,13 @@
    "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "dec_ohada_au_droit-commercial-general",
@@ -4065,7 +4137,13 @@
    "categorie_source": "OFFICIEL_ORGANISATION",
    "mode": "fichier",
    "notes": "Relevé sur ohada.org/en/arbitration-law/.",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 404,
+    "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+    "remplacee_par": "ohada_aua_2017"
+   }
   },
   {
    "cle": "senegal_audcg_2010",

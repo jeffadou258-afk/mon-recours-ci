@@ -16,6 +16,25 @@
   "sha256_ocr": "sha256:5a720b17c8daf7206fd5d2d407be6e346ab681e2ae44a95dcc93c9d9e0f93f19",
   "sha256_texte": "sha256:b57a43e4d99912220ecebe5ada1c0089ea3b8c87849e42450787bb2513c9b301"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 94.8,
+  "confiance_par_page": {
+   "1": 95.0,
+   "2": 94.7
+  },
+  "date": "2026-10-20T10:44:15+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_pupille_2015_539.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 2,
+  "pages_ocr_faibles": [],
+  "pdf_verifie": "sha256:41a7422ddf02fb70923542c0001569440ebdf80d305fe8a71b9941ebd4a454d5",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:e1f2717b5b41646d3e6d0ac1188114dafdd5fa26969b72377b3bf21cb95b31f7"
+ },
  "fichier_pdf": "mffe_pupille_2015_539.pdf",
  "http": 200,
  "marques_tierces_observees": [],

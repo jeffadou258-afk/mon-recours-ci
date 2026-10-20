@@ -50,22 +50,34 @@ def _charge_brut(chemin=None):
         return json.load(flux)
 
 
+def reference_citable(domaine, numero_texte, article, chemin_db=None):
+    """Première référence du domaine portant ce numéro OÙ L'ARTICLE EST CITABLE.
+
+    Un même texte peut avoir deux références (deux exemplaires officiels, dont un
+    scan resté sans texte) : la première dans l'ordre de la base est conservée si
+    l'article y est citable — comportement historique —, sinon la suivante.
+    Renvoie (référence, article) ou (référence_sans_article | None, None)."""
+    premiere = None
+    for candidat in base.lister_references(domaine=domaine, chemin=chemin_db):
+        if (candidat.get("numero_texte") or None) != (numero_texte or None):
+            continue
+        premiere = premiere or candidat
+        trouve = corpus.obtenir_article_par_reference(candidat["ref_id"], article, chemin=chemin_db)
+        if trouve is not None:
+            return candidat, trouve
+    return premiere, None
+
+
 def charger(chemin=None, chemin_db=None):
     """Charge et REVALIDE chaque fiche. Lève si une fiche ne tient pas."""
     donnees = _charge_brut(chemin)
     fiches, rejets = [], []
     for brute in donnees.get("fiches", []):
         domaine = brute["domaine"]
-        reference = None
-        for candidat in base.lister_references(domaine=domaine, chemin=chemin_db):
-            if (candidat.get("numero_texte") or None) == (brute.get("numero_texte") or None):
-                reference = candidat
-                break
+        reference, article = reference_citable(domaine, brute.get("numero_texte"), brute["article"], chemin_db)
         if reference is None:
             rejets.append((brute.get("id"), "référence absente du corpus"))
             continue
-        article = corpus.obtenir_article_par_reference(
-            reference["ref_id"], brute["article"], chemin=chemin_db)
         if article is None:
             rejets.append((brute.get("id"), "article absent ou non citable"))
             continue
@@ -165,7 +177,14 @@ def _correspond(declencheur, texte_normalise):
         return True
     mots_du_texte = set(re.findall(r"[a-z0-9']+", texte_normalise))
     mots_du_texte |= {m.split("'", 1)[1] for m in mots_du_texte if "'" in m}
-    mots = [mot for mot in re.findall(r"[a-z0-9']+", declencheur) if len(mot) >= 4]
+    tous = re.findall(r"[a-z0-9']+", declencheur)
+    mots = [mot for mot in tous if len(mot) >= 4]
+    # Correctif du 20/10/2026 : une expression de plusieurs mots dont UN SEUL compte
+    # 4 lettres ou plus (« garde a vue », « mon mari me bat ») se réduisait à ce mot :
+    # « garde » servait la garde à vue à « la garde des enfants ». Une telle expression
+    # doit figurer telle quelle ; un déclencheur d'un seul mot garde sa tolérance.
+    if len(tous) > 1 and len(mots) < 2:
+        return False
     return bool(mots) and all(_mot_present(mot, mots_du_texte) for mot in mots)
 
 

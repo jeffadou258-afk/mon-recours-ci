@@ -1,0 +1,49 @@
+{
+ "objet": "Contrôles visuels de nombres contestés entre lectures OCR : la zone de l'article est rendue à 300 dpi depuis le PDF officiel (empreinte vérifiée) et lue à l'œil par l'agent. Ce contrôle porte sur la FIDÉLITÉ DE LA LECTURE au scan, jamais sur la validité juridique du texte.",
+ "controles": [
+  {
+   "document": "mffe_code_penal_2019_574",
+   "numero_texte": "2019-574",
+   "article": "381",
+   "page_pdf": 36,
+   "lecture_indexee": "100.000 à 1.000.000 (2° et 4°)",
+   "lecture_divergente": "1.600.000 (tesseract distant)",
+   "verdict": "lecture indexée conforme à l'image",
+   "date": "2026-10-20",
+   "par": "agent (Claude), contrôle visuel"
+  },
+  {
+   "document": "mffe_code_penal_2019_574",
+   "numero_texte": "2019-574",
+   "article": "467",
+   "page_pdf": 44,
+   "lecture_indexee": "300.000 à 3.000.000",
+   "lecture_divergente": "3.600.000 (tesseract distant)",
+   "verdict": "lecture indexée conforme à l'image",
+   "date": "2026-10-20",
+   "par": "agent (Claude), contrôle visuel"
+  },
+  {
+   "document": "mffe_code_penal_2019_574",
+   "numero_texte": "2019-574",
+   "article": "452",
+   "page_pdf": 42,
+   "lecture_indexee": "100.000 à 1.000.000",
+   "lecture_divergente": "00.000 (calque Paper Capture)",
+   "verdict": "lecture indexée conforme à l'image",
+   "date": "2026-10-20",
+   "par": "agent (Claude), contrôle visuel"
+  },
+  {
+   "document": "mffe_code_penal_2019_574",
+   "numero_texte": "2019-574",
+   "article": "98",
+   "page_pdf": 9,
+   "lecture_indexee": "aucun nombre dans l'article",
+   "lecture_divergente": "« 2 » / « 1 » : intertitre « Section 2 » voisin",
+   "verdict": "écart hors de l'article, lecture conforme",
+   "date": "2026-10-20",
+   "par": "agent (Claude), contrôle visuel"
+  }
+ ]
+}

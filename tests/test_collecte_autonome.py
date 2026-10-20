@@ -156,3 +156,107 @@ class TestHistoriqueDesTentatives(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+# ---------------------------------------------------------------------------
+# Intégration OCR : règles de sûreté
+# ---------------------------------------------------------------------------
+class TestReglesIntegrationOCR(unittest.TestCase):
+    def setUp(self):
+        import integrer_collecte
+        self.ic = integrer_collecte
+
+    def test_nombre_remplace_detecte(self):
+        self.assertEqual(self.ic.nombres_substitues("ainsi que des articles 43, 51 et 56.",
+                                                    "ainsi que des articles 45, 51 et 56."), [("43", "45")])
+
+    def test_numero_de_page_incruste_n_est_pas_une_substitution(self):
+        self.assertEqual(self.ic.nombres_substitues("dans un délai de 3 202 mois", "dans un délai de 3 mois"), [])
+
+    def test_journal_des_integrations_present_et_coherent(self):
+        chemin = os.path.join(RACINE, "KNOWLEDGE", "collecte", "integrations_ocr.json")
+        journal = json.load(open(chemin, encoding="utf-8"))["integrations"]
+        for cle in ("mffe_code_penal_2019_574", "mffe_mariage_2019_570", "mffe_successions_2019_573"):
+            self.assertIn(cle, journal)
+            entree = journal[cle]
+            self.assertGreaterEqual(entree["couverture"], corpus.COUVERTURE_MINIMALE, cle)
+            # la copie FAOLEX du calque ABBYY du mariage ne doit jamais servir d'étalon
+            self.assertNotIn("mariage_2019_570_faolex", entree["etalons"] or "")
+        self.assertIn("SECONDAIRE:mariage_2019_570_faolex", journal["mffe_mariage_2019_570"]["copies_ecartees"])
+
+    def test_articles_indexes_viennent_du_scan_officiel(self):
+        journal = json.load(open(os.path.join(RACINE, "KNOWLEDGE", "collecte", "integrations_ocr.json"),
+                                 encoding="utf-8"))["integrations"]
+        for cle, entree in journal.items():
+            for numero, lecture in entree["lecture_par_article"].items():
+                self.assertTrue(lecture.startswith(("CALQUE_EDITEUR", "TESSERACT_")), (cle, numero, lecture))
+
+
+class TestNouvellesFiches(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        from core import catalogue
+        cls.fiches = {f["id"]: f for f in catalogue.charger()}
+
+    def test_fiches_chargees_et_traçables(self):
+        for prefixe, numero in (("MARIAGE_", "2019-570"), ("SUCC_", "2019-573"), ("PENAL_", "2019-574")):
+            lot = [f for i, f in self.fiches.items() if i.startswith(prefixe)]
+            self.assertGreaterEqual(len(lot), 10, prefixe)
+            for f in lot:
+                self.assertEqual(f["numero_texte"], numero)
+                self.assertEqual(f["origine_texte"], "OCR_AUTO")      # provenance déclarée
+                self.assertNotEqual(f["etat_verification"], "VERIFIE")  # jamais relu par un juriste
+                self.assertTrue(f["sha256_article"])
+
+    def test_aucune_lecture_n_ajoute_un_nombre_absent_de_l_article(self):
+        from core import clarification
+        from core.base import normaliser
+        for fid, f in self.fiches.items():
+            if not fid.startswith(("PENAL_", "MARIAGE_", "SUCC_")):
+                continue
+            article = corpus.obtenir_article_par_reference(f["ref_id"], f["article"])
+            ajoutes = clarification._nombres(normaliser(f["lecture"])) - clarification._nombres(normaliser(article["texte"]))
+            self.assertEqual(ajoutes, set(), fid)
+
+    def test_declencheurs_discriminants(self):
+        """Un déclencheur se réduit à ses mots de 4 lettres ou plus : « mon mari me bat »
+        devenait « mari » et servait la fiche au premier « souci avec mon mari »."""
+        import re
+        from core.base import normaliser
+        generiques = {"pour", "peine", "mari", "femme", "mariage", "enfant", "enfants", "vole", "maison"}
+        for fid, f in self.fiches.items():
+            if not fid.startswith(("PENAL_", "MARIAGE_", "SUCC_")):
+                continue
+            for t in f["declencheurs"]:
+                mots = {m for m in re.findall(r"[a-z0-9']+", normaliser(t)) if len(m) >= 4}
+                self.assertFalse(mots and mots <= generiques, (fid, t))
+
+    def test_faux_positifs_connus(self):
+        from core import catalogue
+        from core.base import normaliser
+        for recit, interdite in (("j'ai un souci avec mon mari", "MARIAGE_46"),
+                                 ("Quelle est la peine pour piratage informatique ?", "PENAL_458"),
+                                 ("on m'a volé mon idée", "PENAL_457"),
+                                 ("le bailleur a violé le contrat", "PENAL_403"),
+                                 ("Après combien d'années de mariage obtient-on la nationalité ?", "MARIAGE_103")):
+            n = normaliser(recit)
+            servies = {f["id"] for f in self.fiches.values() for m in f["declencheurs"] if catalogue._correspond(m, n)}
+            self.assertNotIn(interdite, servies, recit)
+
+
+class TestUrgencesAjoutees(unittest.TestCase):
+    def test_violences_sexuelles_et_mutilations(self):
+        from core import urgence
+        for recit in ("j'ai été violée hier", "Un voisin a abusé sexuellement de ma fille",
+                      "elle a été victime d'attouchements", "ils veulent exciser ma fille"):
+            self.assertEqual(urgence.detecter(recit)["niveau"], "CRITIQUE", recit)
+
+    def test_sens_juridique_de_violer_sans_alerte(self):
+        from core import urgence
+        for recit in ("le bailleur a violé le contrat de bail", "ils ont violé les règles", "il a violé la loi"):
+            self.assertEqual(urgence.detecter(recit)["niveau"], "NORMALE", recit)
+
+    def test_mariage_force_et_menaces_d_un_proche(self):
+        from core import urgence
+        self.assertNotEqual(urgence.detecter("on veut la marier de force")["niveau"], "NORMALE")
+        self.assertNotEqual(urgence.detecter("mon mari me menace")["niveau"], "NORMALE")

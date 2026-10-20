@@ -1,6 +1,6 @@
 {
  "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
- "genere_le": "2026-10-20T10:04:39+00:00",
+ "genere_le": "2026-10-20T11:01:26+00:00",
  "outils_collecte": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -18,35 +18,117 @@
   ]
  },
  "totaux": {
-  "entrees_manifeste": 184,
-  "documents_telecharges": 32,
-  "pages_de_decouverte_lues": 21,
+  "entrees_manifeste": 239,
+  "documents_telecharges": 70,
+  "pages_de_decouverte_lues": 83,
   "echecs": 0,
-  "non_encore_collectes": 96,
-  "entrees_desactivees": 35,
+  "non_encore_collectes": 0,
+  "entrees_desactivees": 86,
   "par_statut_controle": {
-   "EXPLOITABLE_OFFICIEL": 8,
-   "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 2,
-   "QUARANTAINE": 22
+   "EXPLOITABLE_OFFICIEL": 18,
+   "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 9,
+   "QUARANTAINE": 43
   },
   "par_categorie": {
-   "OFFICIEL_INSTITUTION": 1,
-   "OFFICIEL_ORGANISATION": 1,
-   "OFFICIEL_PORTAIL_GOUV": 24,
-   "SECONDAIRE_AUTRE": 2,
-   "SECONDAIRE_BASE_INTERNATIONALE": 2,
-   "SECONDAIRE_CONSOLIDE": 1,
-   "SECONDAIRE_FAC_SIMILE": 1
+   "OFFICIEL_INSTITUTION": 4,
+   "OFFICIEL_ORGANISATION": 10,
+   "OFFICIEL_PORTAIL_GOUV": 35,
+   "SECONDAIRE_AUTRE": 5,
+   "SECONDAIRE_BASE_INTERNATIONALE": 4,
+   "SECONDAIRE_CONSOLIDE": 9,
+   "SECONDAIRE_FAC_SIMILE": 3
   },
   "par_methode_extraction": {
-   "CALQUE_TEXTE": 7,
-   "OCR_EDITEUR": 5,
+   "CALQUE_TEXTE": 31,
+   "OCR_EDITEUR": 19,
    "OCR_TESSERACT": 17,
    "OCR_TESSERACT_PARTIEL": 3
   },
-  "pdf_rapatries_et_verifies": 32
+  "pdf_rapatries_et_verifies": 70
  },
  "documents": [
+  {
+   "cle": "arbitrage_1993_671_civlii_source",
+   "titre": "Loi n° 93-671 du 9 août 1993 relative à l'arbitrage — reproduction Laws.Africa / CIVLII",
+   "numero_texte": "1993-671",
+   "date_texte": "1993-08-09",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction, CC BY 4.0)",
+   "domaines": [
+    6,
+    24
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27/source",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27/source.pdf",
+   "date_recuperation": "2026-10-20T10:18:34+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 246564,
+   "sha256": "sha256:bce1f9dd1c1766c0a723e929a84399a28fac4bd55774ae3018ba97f8cd06e3c6",
+   "pages": 14,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2721,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 66,
+   "article_max": 66,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "assnat_mariage_2019_570",
+   "titre": "Loi relative au mariage (Assemblée nationale)",
+   "numero_texte": "2019-570",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Assemblée nationale de Côte d'Ivoire",
+   "domaines": [
+    2
+   ],
+   "url": "https://www.assnat.ci/IMG/pdf/loi_relative_au_mariage.pdf",
+   "url_finale": "https://www.assnat.ci/IMG/pdf/loi_relative_au_mariage.pdf",
+   "date_recuperation": "2026-10-20T10:08:03+00:00",
+   "categorie_source": "OFFICIEL_INSTITUTION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 631016,
+   "sha256": "sha256:ebef20d4a796804e1939d8ce48eabd84ecfba595a64fa86c9c47e921b80b089e",
+   "pages": 16,
+   "polices": 9,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2227,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 104,
+   "article_max": 104,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le numéro 2019-570 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [],
+   "notes": "Texte voté : possiblement non promulgué, à recouper. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
   {
    "cle": "aupsrve_2023_jo_ohadacom",
    "titre": "Acte uniforme du 17 octobre 2023 portant organisation des procédures simplifiées de recouvrement et des voies d'exécution — Journal officiel de l'OHADA, numéro spécial du 15 novembre 2023",
@@ -71,6 +153,7 @@
    "methode_extraction": "OCR_TESSERACT_PARTIEL",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 166,
    "confiance_ocr_moyenne": 91.5,
    "articles_detectes": 332,
@@ -114,6 +197,7 @@
    "methode_extraction": "CALQUE_TEXTE",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 2986,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 338,
@@ -128,6 +212,393 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "cima_code_2019",
+   "titre": "Code des assurances des États membres de la CIMA (édition 2019)",
+   "numero_texte": "CIMA-2019",
+   "date_texte": "2019-01-01",
+   "type_texte": "code",
+   "autorite": "Conférence Interafricaine des Marchés d'Assurances (CIMA)",
+   "domaines": [
+    12
+   ],
+   "url": "https://cima-afrique.org/wp-content/uploads/2023/06/CODE-CIMA-2019.pdf",
+   "url_finale": "https://cima-afrique.org/wp-content/uploads/2023/06/CODE-CIMA-2019.pdf",
+   "date_recuperation": "2026-10-20T10:08:43+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 21545092,
+   "sha256": "sha256:9761e5f0502035295895b6c3e5153af6a9fd4da385c2a20ab03b05a92bf4b93d",
+   "pages": 608,
+   "polices": 39,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2300,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 417,
+   "article_max": 843,
+   "couverture_articles": 0.4935,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 49% des articles 1..843"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Édition 2019 : modifications postérieures (règlements du Conseil des ministres) à rechercher. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "code_investissements_2018_646_civlii_jo",
+   "titre": "Ordonnance n° 2018-646 du 1er août 2018 portant Code des investissements — Journal officiel (scan hébergé par CIVLII)",
+   "numero_texte": "2018-646",
+   "date_texte": "2018-08-01",
+   "type_texte": "loi",
+   "autorite": "Journal officiel de la République de Côte d'Ivoire — image hébergée par CIVLII",
+   "domaines": [
+    6
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2018/646/fra@2024-12-27/publication",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/ord/2018/646/fra@2024-12-27/publication",
+   "date_recuperation": "2026-10-20T10:18:59+00:00",
+   "categorie_source": "SECONDAIRE_FAC_SIMILE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.5",
+   "octets": 1153963,
+   "sha256": "sha256:d533a1f3344ec7b1205ccd1afe1b3045302eb0778479d556cad5ebbc3e660451",
+   "pages": 16,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 5934,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 53,
+   "article_max": 53,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le document contient d'autres actes (2018-571, 2002-156) : segmentation requise"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "code_investissements_2018_646_civlii_source",
+   "titre": "Ordonnance n° 2018-646 du 1er août 2018 portant Code des investissements — reproduction Laws.Africa / CIVLII",
+   "numero_texte": "2018-646",
+   "date_texte": "2018-08-01",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction, CC BY 4.0)",
+   "domaines": [
+    6
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2018/646/fra@2024-12-27/source",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/ord/2018/646/fra@2024-12-27/source.pdf",
+   "date_recuperation": "2026-10-20T10:18:57+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 350410,
+   "sha256": "sha256:87c301d99da244b04a37a54ded70767024acfbb8f62032a6e7c2b0dbcecc1ff2",
+   "pages": 27,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2766,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 39,
+   "article_max": 53,
+   "couverture_articles": 0.6604,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 66% des articles 1..53"
+   ],
+   "avertissements": [],
+   "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "commissaires_justice_2018_974_civlii_jo",
+   "titre": "Loi n° 2018-974 du 27 décembre 2018 portant statut des commissaires de justice — Journal officiel (scan hébergé par CIVLII)",
+   "numero_texte": "2018-974",
+   "date_texte": "2018-12-27",
+   "type_texte": "loi",
+   "autorite": "Journal officiel de la République de Côte d'Ivoire — image hébergée par CIVLII",
+   "domaines": [
+    23,
+    9
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/publication",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/publication",
+   "date_recuperation": "2026-10-20T10:18:54+00:00",
+   "categorie_source": "SECONDAIRE_FAC_SIMILE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.5",
+   "octets": 2222641,
+   "sha256": "sha256:45988b4b100194cb1a1735ccd7713d581b3b12474bbc92aa1556396c544ff321",
+   "pages": 12,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 6109,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 45,
+   "article_max": 46,
+   "couverture_articles": 0.9783,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le document contient d'autres actes (2019-62, 2019-79, 2018-1012, 2018-921, 2018-1022) : segmentation requise"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Image du Journal officiel : seconde lecture indépendante du même texte. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "commissaires_justice_2018_974_civlii_source",
+   "titre": "Loi n° 2018-974 du 27 décembre 2018 portant statut des commissaires de justice — reproduction Laws.Africa / CIVLII",
+   "numero_texte": "2018-974",
+   "date_texte": "2018-12-27",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction, CC BY 4.0)",
+   "domaines": [
+    23,
+    9
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/source",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/source.pdf",
+   "date_recuperation": "2026-10-20T10:18:51+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 235018,
+   "sha256": "sha256:d72aec9bae9d7eee87bf940ebbf89db1d8da0b972dc63e77ae714fb61ccb2f5a",
+   "pages": 12,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2849,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 44,
+   "article_max": 46,
+   "couverture_articles": 0.9565,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "comores_aupcap_2015",
+   "titre": "Acte uniforme procédures collectives d'apurement du passif (republication du ministère de la Justice des Comores)",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "Ministère de la Justice de l'Union des Comores (État partie OHADA) — republication",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2015-procedures-collectives.pdf",
+   "url_finale": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2015-procedures-collectives.pdf",
+   "date_recuperation": "2026-10-20T10:26:41+00:00",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.5",
+   "octets": 642027,
+   "sha256": "sha256:b513227ce72cd15f7aac0b2f0aae34f75146daa0c9eb34a6f6b745604b05c46c",
+   "pages": 110,
+   "polices": 8,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2767,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "comores_auscgie_2014",
+   "titre": "Acte uniforme révisé sociétés commerciales et GIE (republication du ministère de la Justice des Comores)",
+   "numero_texte": "AUSCGIE-2014",
+   "date_texte": "2014-01-30",
+   "type_texte": "acte_uniforme",
+   "autorite": "Ministère de la Justice de l'Union des Comores (État partie OHADA) — republication",
+   "domaines": [
+    6
+   ],
+   "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2014-droit-societes-commerciales-gie.pdf",
+   "url_finale": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2014-droit-societes-commerciales-gie.pdf",
+   "date_recuperation": "2026-10-20T10:26:35+00:00",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.5",
+   "octets": 1106374,
+   "sha256": "sha256:c6fa3c5ecbd54041d70b98713bdb84f045259ba6e025378943acad5ef2b1c216",
+   "pages": 219,
+   "polices": 9,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2622,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "corruption_2013_660_civlii_source",
+   "titre": "Ordonnance n° 2013-660 du 20 septembre 2013 relative à la prévention et à la lutte contre la corruption — reproduction Laws.Africa / CIVLII",
+   "numero_texte": "2013-660",
+   "date_texte": "2013-09-20",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction, CC BY 4.0)",
+   "domaines": [
+    5,
+    9
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2013/660/fra@2024-01-17/source",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/ord/2013/660/fra@2024-01-17/source.pdf",
+   "date_recuperation": "2026-10-20T10:19:00+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 398346,
+   "sha256": "sha256:ea6a8e0f5ab27c21c3b723fea551c7e90eb64c769694c528d4debf376a6df62f",
+   "pages": 27,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 3109,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 94,
+   "article_max": 100,
+   "couverture_articles": 0.94,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le document contient d'autres actes (2018-477) : segmentation requise"
+   ],
+   "avertissements": [],
+   "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "cpcca_1972_833_civlii_source",
+   "titre": "Loi n° 72-833 du 21 décembre 1972 portant Code de procédure civile, commerciale et administrative — reproduction Laws.Africa / CIVLII",
+   "numero_texte": "1972-833",
+   "date_texte": "1972-12-21",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction, CC BY 4.0)",
+   "domaines": [
+    9,
+    1
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27/source",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27/source.pdf",
+   "date_recuperation": "2026-10-20T10:08:35+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 1005122,
+   "sha256": "sha256:749e302c929e00e3732249da47d644d124d02e735f0f1fe2a2067bad2bdc05a6",
+   "pages": 102,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 3289,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 383,
+   "article_max": 432,
+   "couverture_articles": 0.8866,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le document contient d'autres actes (2018-435) : segmentation requise"
+   ],
+   "avertissements": [],
+   "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée). Identité de l'œuvre CIVLII 1972/833 à confirmer à la lecture.",
    "doublon_de": []
   },
   {
@@ -152,6 +623,7 @@
    "methode_extraction": "CALQUE_TEXTE",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 1550,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 0,
@@ -192,6 +664,7 @@
    "methode_extraction": "CALQUE_TEXTE",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 1953,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 54,
@@ -207,6 +680,48 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Compilation : aucune disposition n'en sera tirée ; sert à identifier les textes et leurs numéros.",
+   "doublon_de": []
+  },
+  {
+   "cle": "juridictions_2016_1110_civlii_source",
+   "titre": "Loi n° 2016-1110 du 8 décembre 2016 portant création, organisation et fonctionnement des juridictions de commerce — reproduction Laws.Africa / CIVLII",
+   "numero_texte": "2016-1110",
+   "date_texte": "2016-12-08",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction, CC BY 4.0)",
+   "domaines": [
+    6,
+    9
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06/source",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06/source.pdf",
+   "date_recuperation": "2026-10-20T10:18:38+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 280207,
+   "sha256": "sha256:386b1e1afae6addef1f41f2e917c0a2f3ba196929a5d1d68011a46a029d8c026",
+   "pages": 18,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2689,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 62,
+   "article_max": 62,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
    "doublon_de": []
   },
   {
@@ -237,21 +752,522 @@
     "producteur : Hewlett-Packard MFP"
    ],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 6360,
    "confiance_ocr_moyenne": null,
-   "articles_detectes": 105,
+   "articles_detectes": 104,
    "article_max": 105,
-   "couverture_articles": 1.0,
+   "couverture_articles": 0.9905,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "QUARANTAINE",
-   "motifs_quarantaine": [
-    "le document contient d'autres actes (2019-571, 2019-590) : segmentation requise"
-   ],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
    "avertissements": [
     "qpdf signale des avertissements de structure"
    ],
    "notes": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "mediation_2014_389_civlii_source",
+   "titre": "Loi n° 2014-389 du 20 juin 2014 relative à la médiation judiciaire et conventionnelle — reproduction Laws.Africa / CIVLII",
+   "numero_texte": "2014-389",
+   "date_texte": "2014-06-20",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction, CC BY 4.0)",
+   "domaines": [
+    9,
+    6
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27/source",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27/source.pdf",
+   "date_recuperation": "2026-10-20T10:18:47+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 195444,
+   "sha256": "sha256:9231dda6a22ebd5b79c79294d23d00a79dd838b071a0bc44eed586244b606260",
+   "pages": 8,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2598,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 31,
+   "article_max": 31,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_annexe_fiscale_2024",
+   "titre": "Annexe fiscale à la loi de finances n° 2023-1000 du 18 décembre 2023",
+   "numero_texte": "2023-1000",
+   "date_texte": "2023-12-18",
+   "type_texte": "loi",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    11
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Annexe%20fiscale%20%C3%A0%20la%20Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Annexe%20fiscale%20%C3%A0%20la%20Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023.pdf",
+   "date_recuperation": "2026-10-20T10:17:42+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 17575953,
+   "sha256": "sha256:f45616da7809ed255c0df951e0934a1ff65576127cc6cd53157de20dc5600af8",
+   "pages": 76,
+   "polices": 1,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 105,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (105 car./page)",
+    "aucun article détecté",
+    "le numéro 2023-1000 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Mesures fiscales de l'année : ne remplace pas le Code général des impôts.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_code_hygiene_salubrite",
+   "titre": "Code de l'hygiène et de la salubrité",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "code",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    15,
+    19
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/CODE%20HYGIENE%20ET%20DE%20LA%20SALUBRITE_compressed.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/CODE%20HYGIENE%20ET%20DE%20LA%20SALUBRITE_compressed.pdf",
+   "date_recuperation": "2026-10-20T10:17:23+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 2319468,
+   "sha256": "sha256:2f2aad9118936a9014b46ad853a813e8de1edce44a0a65bc271ea39c8647c5f4",
+   "pages": 18,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_code_maritime_2017_442",
+   "titre": "Loi n° 2017-442 du 30 juin 2017 portant Code maritime",
+   "numero_texte": "2017-442",
+   "date_texte": "2017-06-30",
+   "type_texte": "loi",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    13
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202017-442%20du%2030%20juin%202017%20portant%20Code%20maritime.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202017-442%20du%2030%20juin%202017%20portant%20Code%20maritime.pdf",
+   "date_recuperation": "2026-10-20T10:17:51+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 17969387,
+   "sha256": "sha256:e5bca0fb379bc80c2e6c8e34edec27734dcf215e1b1740cc8bc803e818c62db7",
+   "pages": 134,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : OmniPage"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté",
+    "le numéro 2017-442 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_code_travail_2015_532",
+   "titre": "Loi n° 2015-532 du 20 juillet 2015 portant Code du travail",
+   "numero_texte": "2015-532",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    4
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202015-532%20du%2020%20juillet%202015%20portant%20code%20du%20Travail.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202015-532%20du%2020%20juillet%202015%20portant%20code%20du%20Travail.pdf",
+   "date_recuperation": "2026-10-20T10:17:06+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 1689360,
+   "sha256": "sha256:548417ee40285c8bcb2aae57dba1c5d51c4e53aa1a1d987f558fbb7cbd71dcdd",
+   "pages": 519,
+   "polices": 17,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 1174,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 462,
+   "article_max": 110,
+   "couverture_articles": 0.9591,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "ivoire-juriste"
+   ],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le document contient d'autres actes (2010-272, 2013-554, 2013-555, 2013-791, 2014-370, 2017-210) : segmentation requise",
+    "déclaré officiel mais porte des marques d'éditeur tiers : ivoire-juriste"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Version d'origine probable : l'ordonnance n° 2021-902 la modifie (entrée suivante).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_echanges_electroniques_2017_500",
+   "titre": "Ordonnance n° 2017-500 du 2 août 2017 relative aux échanges électroniques entre les usagers et les autorités administratives",
+   "numero_texte": "2017-500",
+   "date_texte": "2017-08-02",
+   "type_texte": "ordonnance",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    9,
+    14
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02017-500%20du%202%20ao%C3%BBt%202017%20relative%20aux%20%C3%A9changes%20%C3%A9lectroniques%20entre%20les%20usagers%20et%20les%20autorit%C3%A9s.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02017-500%20du%202%20ao%C3%BBt%202017%20relative%20aux%20%C3%A9changes%20%C3%A9lectroniques%20entre%20les%20usagers%20et%20les%20autorit%C3%A9s.pdf",
+   "date_recuperation": "2026-10-20T10:18:10+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 2725090,
+   "sha256": "sha256:b71c2bebdf4555cb7341902a1ceb571cee2594299b53630ce27f8c6dc0b7d9a9",
+   "pages": 10,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté",
+    "le numéro 2017-500 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_foncier_rural_2019_868",
+   "titre": "Loi n° 2019-868 du 14 octobre 2019 modifiant la loi n° 98-750 relative au domaine foncier rural",
+   "numero_texte": "2019-868",
+   "date_texte": "2019-10-14",
+   "type_texte": "loi",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    18
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/2019-10-14%20L2019-868%20modifiant%20L98-750%20Foncier%20rural_compressed.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/2019-10-14%20L2019-868%20modifiant%20L98-750%20Foncier%20rural_compressed.pdf",
+   "date_recuperation": "2026-10-20T10:17:26+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 388486,
+   "sha256": "sha256:9a8f8c777c9444bb670598992d428671383a53b484118bcca3dc28919f2fab5e",
+   "pages": 4,
+   "polices": 4,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 1681,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 11,
+   "article_max": 26,
+   "couverture_articles": 0.3462,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 35% des articles 1..26"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_jo_code_eau_2023",
+   "titre": "Loi portant Code de l'eau (Journal officiel, février 2024)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "loi",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    19
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Eau%20%20f%C3%A9v%202024.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Eau%20%20f%C3%A9v%202024.pdf",
+   "date_recuperation": "2026-10-20T10:17:19+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 1130373,
+   "sha256": "sha256:638bb9bddcbf83a1bc2160411d7aaaecd1d301448eaa950ee54edafe2824be04",
+   "pages": 32,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_jo_code_environnement_2023",
+   "titre": "Loi portant Code de l'environnement (Journal officiel, février 2024)",
+   "numero_texte": "2023-900",
+   "date_texte": "2023-11-23",
+   "type_texte": "loi",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    19
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Environnement%20%20f%C3%A9v%202024.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Environnement%20%20f%C3%A9v%202024.pdf",
+   "date_recuperation": "2026-10-20T10:17:19+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 1052421,
+   "sha256": "sha256:9b5fcce0998782d1f0ff9d57a119bb14dcb071492e50fbb8dc5655307fa729f3",
+   "pages": 28,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté",
+    "le numéro 2023-900 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Numéro 2023-900 tiré de LEAP (PNUE) : à confirmer à la lecture du JO.",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_loi_finances_2024",
+   "titre": "Loi de finances n° 2023-1000 du 18 décembre 2023 portant budget de l'État pour l'année 2024",
+   "numero_texte": "2023-1000",
+   "date_texte": "2023-12-18",
+   "type_texte": "loi",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    11
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023%20portant%20budget%20de%20l%E2%80%99Etat%20pour%20l%E2%80%99ann%C3%A9e%202024.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023%20portant%20budget%20de%20l%E2%80%99Etat%20pour%20l%E2%80%99ann%C3%A9e%202024.pdf",
+   "date_recuperation": "2026-10-20T10:17:28+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 4105857,
+   "sha256": "sha256:3c3e4f3affb0b3ae9e012b254aa2e93f9a1e1e5cd0d3a5f8f031d7e0f720e9e7",
+   "pages": 520,
+   "polices": 49,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 3354,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 24,
+   "article_max": 24,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_loti_2014_812",
+   "titre": "Loi n° 2014-812 du 16 décembre 2014 d'orientation du transport intérieur",
+   "numero_texte": "2014-812",
+   "date_texte": "2014-12-16",
+   "type_texte": "loi",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    13
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/LOI-N%C2%B02014-812-du-16-decembre-2014-dOrientation-du-Transport-InterieurLOTI.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/LOI-N%C2%B02014-812-du-16-decembre-2014-dOrientation-du-Transport-InterieurLOTI.pdf",
+   "date_recuperation": "2026-10-20T10:17:25+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 251391,
+   "sha256": "sha256:a7694771caeecb46b242eb8aa5286931e1026d16d2a925fed43e6408c85d166a",
+   "pages": 12,
+   "polices": 11,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2602,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 39,
+   "article_max": 45,
+   "couverture_articles": 0.8667,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
+   "doublon_de": []
+  },
+  {
+   "cle": "mef_ord_2021_902_travail",
+   "titre": "Ordonnance n° 2021-902 du 22 décembre 2021 modifiant la loi n° 2015-532 portant Code du travail",
+   "numero_texte": "2021-902",
+   "date_texte": "2021-12-22",
+   "type_texte": "ordonnance",
+   "autorite": "Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci (republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)",
+   "domaines": [
+    4
+   ],
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02021-902%20du%2022%20d%C3%A9cembre%202021%20modifiant%20la%20loi%20n%C2%B02015-532%20du%2020%20juillet%202015%20portant%20Code%20du%20travail.pdf",
+   "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02021-902%20du%2022%20d%C3%A9cembre%202021%20modifiant%20la%20loi%20n%C2%B02015-532%20du%2020%20juillet%202015%20portant%20Code%20du%20travail.pdf",
+   "date_recuperation": "2026-10-20T10:17:16+00:00",
+   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 2135002,
+   "sha256": "sha256:9340c40364cdeebcfbced245201c10d12772b25633f625424689f9c4359077e2",
+   "pages": 3,
+   "polices": 16,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 5231,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 13,
+   "article_max": 73,
+   "couverture_articles": 0.11,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 11% des articles 1..73"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
    "doublon_de": []
   },
   {
@@ -279,6 +1295,7 @@
    "methode_extraction": "CALQUE_TEXTE",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 1634,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 0,
@@ -323,11 +1340,12 @@
     "police d'OCR invisible"
    ],
    "seconde_lecture_tesseract": true,
+   "en_tetes_ocr_corriges": 13,
    "densite_native_car_par_page": 5852,
    "confiance_ocr_moyenne": 94.7,
-   "articles_detectes": 546,
+   "articles_detectes": 559,
    "article_max": 565,
-   "couverture_articles": 0.9664,
+   "couverture_articles": 0.9894,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
    "statut_controle": "EXPLOITABLE_OFFICIEL",
@@ -360,6 +1378,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 93.8,
    "articles_detectes": 165,
@@ -402,17 +1421,16 @@
     "police d'OCR invisible"
    ],
    "seconde_lecture_tesseract": true,
+   "en_tetes_ocr_corriges": 108,
    "densite_native_car_par_page": 12449,
    "confiance_ocr_moyenne": 94.1,
-   "articles_detectes": 784,
+   "articles_detectes": 838,
    "article_max": 854,
-   "couverture_articles": 0.918,
+   "couverture_articles": 0.9813,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "QUARANTAINE",
-   "motifs_quarantaine": [
-    "le document contient d'autres actes (2018-9735) : segmentation requise"
-   ],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
    "avertissements": [
     "qpdf signale des avertissements de structure"
    ],
@@ -443,17 +1461,16 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 15,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 88.3,
-   "articles_detectes": 90,
+   "articles_detectes": 104,
    "article_max": 113,
-   "couverture_articles": 0.7965,
+   "couverture_articles": 0.9204,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "QUARANTAINE",
-   "motifs_quarantaine": [
-    "découpage en articles incomplet : 80% des articles 1..113"
-   ],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
    "avertissements": [
     "1 page(s) OCR de confiance < 70 : [2]"
    ],
@@ -488,17 +1505,16 @@
     "producteur : Hewlett-Packard MFP"
    ],
    "seconde_lecture_tesseract": true,
+   "en_tetes_ocr_corriges": 30,
    "densite_native_car_par_page": 6360,
    "confiance_ocr_moyenne": 92.7,
-   "articles_detectes": 75,
+   "articles_detectes": 101,
    "article_max": 105,
-   "couverture_articles": 0.7143,
+   "couverture_articles": 0.9619,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "QUARANTAINE",
-   "motifs_quarantaine": [
-    "découpage en articles incomplet : 71% des articles 1..105"
-   ],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
    "avertissements": [
     "qpdf signale des avertissements de structure"
    ],
@@ -530,6 +1546,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 3,
    "confiance_ocr_moyenne": 93.2,
    "articles_detectes": 7,
@@ -574,18 +1591,16 @@
     "police d'OCR invisible"
    ],
    "seconde_lecture_tesseract": true,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 6556,
    "confiance_ocr_moyenne": 94.8,
-   "articles_detectes": 28,
-   "article_max": 54,
-   "couverture_articles": 0.5185,
+   "articles_detectes": 12,
+   "article_max": 12,
+   "couverture_articles": 1.0,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "QUARANTAINE",
-   "motifs_quarantaine": [
-    "découpage en articles incomplet : 52% des articles 1..54",
-    "le document contient d'autres actes (2015-540) : segmentation requise"
-   ],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
    "avertissements": [
     "qpdf signale des avertissements de structure"
    ],
@@ -620,18 +1635,16 @@
     "producteur : Hewlett-Packard MFP"
    ],
    "seconde_lecture_tesseract": true,
+   "en_tetes_ocr_corriges": 20,
    "densite_native_car_par_page": 5290,
    "confiance_ocr_moyenne": 94.5,
-   "articles_detectes": 122,
-   "article_max": 158,
-   "couverture_articles": 0.7722,
+   "articles_detectes": 130,
+   "article_max": 136,
+   "couverture_articles": 0.9559,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "QUARANTAINE",
-   "motifs_quarantaine": [
-    "découpage en articles incomplet : 77% des articles 1..158",
-    "le document contient d'autres actes (2019-575) : segmentation requise"
-   ],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
    "avertissements": [
     "qpdf signale des avertissements de structure",
     "même fichier que : successions_2019_573_bice"
@@ -666,6 +1679,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 113,
    "confiance_ocr_moyenne": 93.6,
    "articles_detectes": 27,
@@ -677,6 +1691,44 @@
    "motifs_quarantaine": [],
    "avertissements": [],
    "notes": "Republication ministérielle d'un texte : version d'origine probable ; les modifications postérieures ne sont pas reflétées.",
+   "doublon_de": []
+  },
+  {
+   "cle": "oapi_accord_bangui_fr",
+   "titre": "Accord de Bangui révisé (Bamako, 14 décembre 2015) — version française",
+   "numero_texte": "BANGUI-2015",
+   "date_texte": "2015-12-14",
+   "type_texte": "traite",
+   "autorite": "Organisation Africaine de la Propriété Intellectuelle (OAPI)",
+   "domaines": [
+    20
+   ],
+   "url": "https://www.oapi.int/wp-content/uploads/2023/11/francais.pdf",
+   "url_finale": "https://www.oapi.int/wp-content/uploads/2023/11/francais.pdf",
+   "date_recuperation": "2026-10-20T10:18:13+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.7",
+   "octets": 1255837,
+   "sha256": "sha256:f37c2e85dcf238e35c651b37921b1309ec768b34ab0a35287292472c1025ca73",
+   "pages": 272,
+   "polices": 11,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 1967,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 86,
+   "article_max": 86,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page officielle de l'OAPI (découverte du run 39405665599).",
    "doublon_de": []
   },
   {
@@ -703,6 +1755,7 @@
    "methode_extraction": "CALQUE_TEXTE",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 2698,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 48,
@@ -742,6 +1795,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 3,
    "confiance_ocr_moyenne": 93.7,
    "articles_detectes": 9,
@@ -779,6 +1833,7 @@
    "methode_extraction": "CALQUE_TEXTE",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 2507,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 22,
@@ -821,6 +1876,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 92.8,
    "articles_detectes": 15,
@@ -860,6 +1916,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 91.6,
    "articles_detectes": 60,
@@ -899,6 +1956,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 3,
    "confiance_ocr_moyenne": 90.6,
    "articles_detectes": 22,
@@ -936,16 +1994,17 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 65,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 75.3,
-   "articles_detectes": 23,
-   "article_max": 108,
-   "couverture_articles": 0.213,
+   "articles_detectes": 83,
+   "article_max": 113,
+   "couverture_articles": 0.7345,
    "numero_present_dans_le_texte": false,
    "marques_tierces": [],
    "statut_controle": "QUARANTAINE",
    "motifs_quarantaine": [
-    "découpage en articles incomplet : 21% des articles 1..108",
+    "découpage en articles incomplet : 73% des articles 1..113",
     "le numéro 2018-862 n'apparaît pas dans le texte extrait",
     "le document contient d'autres actes (2018-8462) : segmentation requise"
    ],
@@ -979,6 +2038,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 3,
    "confiance_ocr_moyenne": 93.2,
    "articles_detectes": 12,
@@ -1022,18 +2082,16 @@
     "producteur : Hewlett-Packard MFP"
    ],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 6410,
    "confiance_ocr_moyenne": null,
-   "articles_detectes": 33,
-   "article_max": 105,
-   "couverture_articles": 0.3143,
+   "articles_detectes": 30,
+   "article_max": 30,
+   "couverture_articles": 1.0,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "QUARANTAINE",
-   "motifs_quarantaine": [
-    "découpage en articles incomplet : 31% des articles 1..105",
-    "le document contient d'autres actes (2019-590) : segmentation requise"
-   ],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
    "avertissements": [
     "qpdf signale des avertissements de structure"
    ],
@@ -1065,17 +2123,16 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 120,
    "densite_native_car_par_page": 4,
    "confiance_ocr_moyenne": 80.4,
-   "articles_detectes": 32,
-   "article_max": 150,
-   "couverture_articles": 0.2133,
+   "articles_detectes": 141,
+   "article_max": 164,
+   "couverture_articles": 0.8598,
    "numero_present_dans_le_texte": true,
    "marques_tierces": [],
-   "statut_controle": "QUARANTAINE",
-   "motifs_quarantaine": [
-    "découpage en articles incomplet : 21% des articles 1..150"
-   ],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
    "avertissements": [
     "2 page(s) OCR de confiance < 70 : [1, 9]"
    ],
@@ -1109,6 +2166,7 @@
     "police d'OCR invisible"
    ],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 5591,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 17,
@@ -1155,16 +2213,18 @@
     "police d'OCR invisible"
    ],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 5,
    "densite_native_car_par_page": 6556,
    "confiance_ocr_moyenne": null,
-   "articles_detectes": 21,
+   "articles_detectes": 26,
    "article_max": 54,
-   "couverture_articles": 0.3889,
+   "couverture_articles": 0.4815,
    "numero_present_dans_le_texte": false,
    "marques_tierces": [],
    "statut_controle": "QUARANTAINE",
    "motifs_quarantaine": [
-    "découpage en articles incomplet : 39% des articles 1..54",
+    "début de segment introuvable : 'L\\\\s?O\\\\s?I\\\\s?n\\\\s*[°o]\\\\s*2015\\\\s*[-–]\\\\s*539\\\\s+du'",
+    "découpage en articles incomplet : 48% des articles 1..54",
     "le numéro 2015-539 n'apparaît pas dans le texte extrait"
    ],
    "avertissements": [
@@ -1197,6 +2257,7 @@
    "methode_extraction": "OCR_TESSERACT",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": true,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 1829,
    "confiance_ocr_moyenne": 92.7,
    "articles_detectes": 37,
@@ -1210,6 +2271,310 @@
     "qpdf signale des avertissements de structure"
    ],
    "notes": "Exemplaire déjà déclaré dans KNOWLEDGE/CORPUS/FAMILLE_ENFANTS/_sources.json ; nouvelle collecte pour un second OCR (tesseract fra) indépendant de la première lecture. Second OCR indépendant (tesseract) demandé : le calque texte du PDF est lui-même un OCR.",
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_aua_2017",
+   "titre": "Acte uniforme relatif au droit de l'arbitrage (Conakry, 23 novembre 2017)",
+   "numero_texte": "AUA-2017",
+   "date_texte": "2017-11-23",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6,
+    24
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=480",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=480",
+   "date_recuperation": "2026-10-20T10:26:16+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 714150,
+   "sha256": "sha256:e718cc8d8a7cbeac3559e62fa35898e005be58a8aca219f4b8ad2c26532ca8a4",
+   "pages": 27,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : EPSON"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_aucoop_2010",
+   "titre": "Acte uniforme relatif au droit des sociétés coopératives (Lomé, 15 décembre 2010)",
+   "numero_texte": "AUSCOOP-2010",
+   "date_texte": "2010-12-15",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=487",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=487",
+   "date_recuperation": "2026-10-20T10:26:23+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 1392392,
+   "sha256": "sha256:d62677df23010b0b5f45c439ded5d1ab7a55f2c1d044b979264cd9718853e4c3",
+   "pages": 94,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : EPSON"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_audcg_2010",
+   "titre": "Acte uniforme portant sur le droit commercial général (Lomé, 15 décembre 2010)",
+   "numero_texte": "AUDCG-2010",
+   "date_texte": "2010-12-15",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=481",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=481",
+   "date_recuperation": "2026-10-20T10:26:04+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 978022,
+   "sha256": "sha256:ae858d8a5eee1a6f5ce83ea5dd9e4eb4c9ee02009934c80b64fdd6e2bc83b257",
+   "pages": 35,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : EPSON"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_audtmr_2003",
+   "titre": "Acte uniforme relatif aux contrats de transport de marchandises par route (Yaoundé, 22 mars 2003)",
+   "numero_texte": "AUCTMR-2003",
+   "date_texte": "2003-03-22",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    13,
+    6
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=479",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=479",
+   "date_recuperation": "2026-10-20T10:26:27+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 813439,
+   "sha256": "sha256:be42dc8a0e85a969668dcfc80039f6ab717c857a6331cb47763fda581673f161",
+   "pages": 21,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : EPSON"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_aupcap_2015",
+   "titre": "Acte uniforme portant organisation des procédures collectives d'apurement du passif (Grand-Bassam, 10 septembre 2015)",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=484",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=484",
+   "date_recuperation": "2026-10-20T10:26:12+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 1627342,
+   "sha256": "sha256:b6daa9eae1f9f8632bd71cbde2290fc5f5a9ec1f91ed39f4268ffad00e032fa5",
+   "pages": 41,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : EPSON"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_aus_2010",
+   "titre": "Acte uniforme portant organisation des sûretés (Lomé, 15 décembre 2010)",
+   "numero_texte": "AUS-2010",
+   "date_texte": "2010-12-15",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    23
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=483",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=483",
+   "date_recuperation": "2026-10-20T10:26:19+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 798674,
+   "sha256": "sha256:e0006cdcc6d61447613fd7c2330116c97d66d8ef0655a240828cc70c90be342c",
+   "pages": 58,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : EPSON"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_auscgie_2014",
+   "titre": "Acte uniforme révisé relatif au droit des sociétés commerciales et du GIE (Ouagadougou, 30 janvier 2014)",
+   "numero_texte": "AUSCGIE-2014",
+   "date_texte": "2014-01-30",
+   "type_texte": "acte_uniforme",
+   "autorite": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — bibliothèque numérique (version signée)",
+   "domaines": [
+    6
+   ],
+   "url": "https://biblio.ohada.org/pmb/opac_css/doc_num.php?explnum_id=486",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=486",
+   "date_recuperation": "2026-10-20T10:26:08+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.4",
+   "octets": 2969905,
+   "sha256": "sha256:f64658b73e89f54e9504002369af74b02607c8e67028d0e91e1a937b19086344",
+   "pages": 93,
+   "polices": 0,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : EPSON"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 4,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 0,
+   "article_max": 0,
+   "couverture_articles": 0.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (4 car./page)",
+    "aucun article détecté"
+   ],
+   "avertissements": [],
+   "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
    "doublon_de": []
   },
   {
@@ -1236,6 +2601,7 @@
    "methode_extraction": "OCR_TESSERACT_PARTIEL",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 166,
    "confiance_ocr_moyenne": 92.0,
    "articles_detectes": 331,
@@ -1253,6 +2619,184 @@
    "doublon_de": [
     "aupsrve_2023_jo_ohadacom"
    ]
+  },
+  {
+   "cle": "oneci_jo_special_2019_572_573_575",
+   "titre": "Journal officiel, numéro spécial du 16 juillet 2019 : lois n° 2019-572 (minorité), 2019-573 (successions), 2019-575",
+   "numero_texte": "2019-572",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Office National de l'État Civil et de l'Identification (ONECI) — republication du Journal officiel",
+   "domaines": [
+    2,
+    22
+   ],
+   "url": "https://oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf",
+   "url_finale": "https://www.oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf",
+   "date_recuperation": "2026-10-20T10:07:57+00:00",
+   "categorie_source": "OFFICIEL_INSTITUTION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 905069,
+   "sha256": "sha256:04a2b0ee3e73c42e7b8065d27f225b77bb478eb3ed779d102ec92f117a014a89",
+   "pages": 13,
+   "polices": 17,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader",
+    "producteur : Hewlett-Packard MFP"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 5297,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 72,
+   "article_max": 160,
+   "couverture_articles": 0.45,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 45% des articles 1..160"
+   ],
+   "avertissements": [
+    "même fichier que : oneci_jo_special_2019_573"
+   ],
+   "notes": "JO à plusieurs actes : segment 2019-572 déclaré ; la loi 2019-573 est déclarée dans l'entrée suivante (même fichier). URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": [
+    "oneci_jo_special_2019_573"
+   ]
+  },
+  {
+   "cle": "oneci_jo_special_2019_573",
+   "titre": "Loi n° 2019-573 du 26 juin 2019 relative aux successions (Journal officiel, numéro spécial du 16 juillet 2019, via ONECI)",
+   "numero_texte": "2019-573",
+   "date_texte": "2019-06-26",
+   "type_texte": "loi",
+   "autorite": "Office National de l'État Civil et de l'Identification (ONECI) — republication du Journal officiel",
+   "domaines": [
+    2
+   ],
+   "url": "https://oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf",
+   "url_finale": "https://www.oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf",
+   "date_recuperation": "2026-10-20T10:08:01+00:00",
+   "categorie_source": "OFFICIEL_INSTITUTION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.5",
+   "octets": 905069,
+   "sha256": "sha256:04a2b0ee3e73c42e7b8065d27f225b77bb478eb3ed779d102ec92f117a014a89",
+   "pages": 13,
+   "polices": 17,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : ABBYY",
+    "producteur : FineReader",
+    "producteur : Hewlett-Packard MFP"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 5297,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 3,
+   "article_max": 156,
+   "couverture_articles": 0.0192,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "texte trop peu dense (259 car./page)",
+    "découpage en articles incomplet : 2% des articles 1..156"
+   ],
+   "avertissements": [
+    "même fichier que : oneci_jo_special_2019_572_573_575"
+   ],
+   "notes": "Même fichier que oneci_jo_special_2019_572_573_575, autre segment (doublon d'empreinte attendu). URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": [
+    "oneci_jo_special_2019_572_573_575"
+   ]
+  },
+  {
+   "cle": "petits_litiges_2015_904_civlii_source",
+   "titre": "Loi n° 2015-904 du 30 décembre 2015 relative aux procédures spéciales pour le règlement des petits litiges — reproduction Laws.Africa / CIVLII",
+   "numero_texte": "2015-904",
+   "date_texte": "2015-12-30",
+   "type_texte": "loi",
+   "autorite": "Laws.Africa / CIVLII (reproduction, CC BY 4.0)",
+   "domaines": [
+    9,
+    7
+   ],
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/904/fra@2022-05-27/source",
+   "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2015/904/fra@2022-05-27/source.pdf",
+   "date_recuperation": "2026-10-20T10:18:42+00:00",
+   "categorie_source": "SECONDAIRE_CONSOLIDE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.4",
+   "octets": 177997,
+   "sha256": "sha256:38ba199ed970ee545ce9d40a88e57656d5a16e984adcd3ba336b9cd2d0d40a9e",
+   "pages": 5,
+   "polices": 5,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2278,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 15,
+   "article_max": 16,
+   "couverture_articles": 0.9375,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [
+    "creative commons",
+    "laws.africa"
+   ],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Version consolidée : sert d'étalon pour mesurer l'OCR des exemplaires officiels et à repérer les modifications. Jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
+  },
+  {
+   "cle": "senegal_audcg_2010",
+   "titre": "Acte uniforme portant sur le droit commercial général (republication du ministère de la Justice du Sénégal)",
+   "numero_texte": "AUDCG-2010",
+   "date_texte": "2010-12-15",
+   "type_texte": "acte_uniforme",
+   "autorite": "Ministère de la Justice du Sénégal (État partie OHADA) — republication",
+   "domaines": [
+    6
+   ],
+   "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-portant-sur-le-droit-commercial-general-lome-15102010.pdf",
+   "url_finale": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-portant-sur-le-droit-commercial-general-lome-15102010.pdf",
+   "date_recuperation": "2026-10-20T10:26:32+00:00",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.6",
+   "octets": 210778,
+   "sha256": "sha256:9c5648a34994140a8487dfd3257733d1799bd44384fccbb315a8d332aed0f092",
+   "pages": 78,
+   "polices": 13,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2395,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 307,
+   "article_max": 307,
+   "couverture_articles": 1.0,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_RECOUPEMENT_SEULEMENT",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Administration d'un autre État partie : étalon de recoupement, jamais source de référence. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "doublon_de": []
   },
   {
    "cle": "successions_2019_573_assnat",
@@ -1278,6 +2822,7 @@
    "methode_extraction": "CALQUE_TEXTE",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 2020,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 135,
@@ -1321,6 +2866,7 @@
     "producteur : Hewlett-Packard MFP"
    ],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 5290,
    "confiance_ocr_moyenne": null,
    "articles_detectes": 120,
@@ -1340,6 +2886,46 @@
    "doublon_de": [
     "mffe_successions_2019_573"
    ]
+  },
+  {
+   "cle": "travail_2015_532_faolex_210897",
+   "titre": "Loi n° 2015-532 du 20 juillet 2015 portant Code du travail (FAOLEX)",
+   "numero_texte": "2015-532",
+   "date_texte": "2015-07-20",
+   "type_texte": "loi",
+   "autorite": "FAO — base FAOLEX (reproduction)",
+   "domaines": [
+    4
+   ],
+   "url": "https://faolex.fao.org/docs/pdf/ivc210897.pdf",
+   "url_finale": "https://faolex.fao.org/docs/pdf/ivc210897.pdf",
+   "date_recuperation": "2026-10-20T10:08:16+00:00",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.7",
+   "octets": 6875176,
+   "sha256": "sha256:0b8ea7c676689f23824141fce5f779ef03b974955a94013ffa49931d0476d059",
+   "pages": 37,
+   "polices": 11,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 5459,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 163,
+   "article_max": 110,
+   "couverture_articles": 0.3864,
+   "numero_present_dans_le_texte": true,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "découpage en articles incomplet : 39% des articles 1..110"
+   ],
+   "avertissements": [],
+   "notes": "Lien relevé sur la page LEAP (PNUE) découverte au run 39229656741 ; remplace ivc207091.pdf (404).",
+   "doublon_de": []
   },
   {
    "cle": "travail_2015_532_uvci",
@@ -1365,6 +2951,7 @@
    "methode_extraction": "OCR_TESSERACT_PARTIEL",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
    "densite_native_car_par_page": 1143,
    "confiance_ocr_moyenne": 89.3,
    "articles_detectes": 463,
@@ -1382,6 +2969,48 @@
     "1 page(s) OCR de confiance < 70 : [202]"
    ],
    "notes": "Compilation de provenance non indiquée : recoupement seulement.",
+   "doublon_de": []
+  },
+  {
+   "cle": "who_code_prevoyance_sociale_99_477",
+   "titre": "Loi n° 99-477 du 2 août 1999 portant modification du Code de prévoyance sociale (OMS)",
+   "numero_texte": "1999-477",
+   "date_texte": "1999-08-02",
+   "type_texte": "loi",
+   "autorite": "Organisation mondiale de la santé — répertoire de législation (reproduction)",
+   "domaines": [
+    4
+   ],
+   "url": "https://extranet.who.int/cpcd/sites/default/files/public_file_repository/CIV_Cote-d-Ivoire_Law-99-477_Social-Insurance-Code_1999.pdf",
+   "url_finale": "https://extranet.who.int/cpcd/sites/default/files/public_file_repository/CIV_Cote-d-Ivoire_Law-99-477_Social-Insurance-Code_1999.pdf",
+   "date_recuperation": "2026-10-20T10:18:18+00:00",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "authenticite": "reproduction secondaire — jamais source de référence",
+   "format": "PDF 1.3",
+   "octets": 335299,
+   "sha256": "sha256:6a624717d0b961c780d33de0fa4e1d810604a45a181e51a97a319be3b631347a",
+   "pages": 58,
+   "polices": 231,
+   "integrite_pdf": "OK",
+   "methode_extraction": "CALQUE_TEXTE",
+   "indices_ocr_editeur": [],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 1420,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 174,
+   "article_max": 176,
+   "couverture_articles": 0.9886,
+   "numero_present_dans_le_texte": false,
+   "marques_tierces": [],
+   "statut_controle": "QUARANTAINE",
+   "motifs_quarantaine": [
+    "le numéro 1999-477 n'apparaît pas dans le texte extrait"
+   ],
+   "avertissements": [
+    "qpdf signale des avertissements de structure"
+   ],
+   "notes": "URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
    "doublon_de": []
   }
  ],
@@ -1512,394 +3141,381 @@
    "url": "https://leap.unep.org/en/countries/ci/national-legislation/loi-n-2015-532-du-20-juillet-1015-portant-code-du-travail",
    "titre_page": "Loi n. 2015-532 du 20 juillet 2015 portant Code du travail. | UNEP Law and Environment Assistance Platform",
    "liens": 3
-  }
- ],
- "non_encore_collectes": [
-  {
-   "cle": "mariage_2019_570_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/570/eng@2023-10-13/source"
-  },
-  {
-   "cle": "mariage_2019_570_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/570/eng@2023-10-13/publication"
-  },
-  {
-   "cle": "filiation_2019_571_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/571/fra@2023-10-13/source"
-  },
-  {
-   "cle": "filiation_2019_571_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/571/fra@2023-10-13/publication"
-  },
-  {
-   "cle": "minorite_2019_572_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/572/fra@2023-10-13/source"
-  },
-  {
-   "cle": "minorite_2019_572_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/572/fra@2023-10-13/publication"
-  },
-  {
-   "cle": "successions_2019_573_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/573/fra@2023-10-13/source"
-  },
-  {
-   "cle": "successions_2019_573_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/573/fra@2023-10-13/publication"
-  },
-  {
-   "cle": "oneci_jo_special_2019_572_573_575",
-   "url": "https://oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf"
-  },
-  {
-   "cle": "oneci_jo_special_2019_573",
-   "url": "https://oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf"
-  },
-  {
-   "cle": "famille_minorite_2019_wm",
-   "url": "https://famille.gouv.ci/Tmffe/Loi-relative-a-la-minorite-2019WM.pdf"
-  },
-  {
-   "cle": "assnat_mariage_2019_570",
-   "url": "https://www.assnat.ci/IMG/pdf/loi_relative_au_mariage.pdf"
-  },
-  {
-   "cle": "travail_2015_532_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/532/fra@2023-08-10/source"
-  },
-  {
-   "cle": "travail_2015_532_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/532/fra@2023-08-10/publication"
-  },
-  {
-   "cle": "travail_enfants_2010_272_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2010/272/fra@2023-08-10/source"
-  },
-  {
-   "cle": "travail_enfants_2010_272_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2010/272/fra@2023-08-10/publication"
-  },
-  {
-   "cle": "travail_2015_532_faolex_210897",
-   "url": "https://faolex.fao.org/docs/pdf/ivc210897.pdf"
-  },
-  {
-   "cle": "code_penal_2019_574_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source"
-  },
-  {
-   "cle": "code_penal_2019_574_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/publication"
-  },
-  {
-   "cle": "cpp_2018_975_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/975/fra@2024-06-23/source"
-  },
-  {
-   "cle": "cpp_2018_975_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/975/fra@2024-06-23/publication"
-  },
-  {
-   "cle": "consommation_2016_412_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/412/fra@2023-06-21/source"
-  },
-  {
-   "cle": "consommation_2016_412_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/412/fra@2023-06-21/publication"
-  },
-  {
-   "cle": "nationalite_1961_415_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/1961/415/fra@2005-08-29/source"
-  },
-  {
-   "cle": "nationalite_1961_415_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/1961/415/fra@2005-08-29/publication"
-  },
-  {
-   "cle": "cpcca_1972_833_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27/source"
-  },
-  {
-   "cle": "cpcca_1972_833_civlii_jo",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27/publication"
-  },
-  {
-   "cle": "code_civil_droits_civils_civlii_source",
-   "url": "https://civlii.laws.africa/en/akn/ci/act/1804/jouissance-et-privation-des-droits-civils-code-civil-napol%C3%A9onien/fra@2023-12-31/source"
-  },
-  {
-   "cle": "cima_code_2019",
-   "url": "https://cima-afrique.org/wp-content/uploads/2023/06/CODE-CIMA-2019.pdf"
   },
   {
    "cle": "dec_civlii_taxo_code-civile-code-des-biens-et-obligations",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-civile-code-des-biens-et-obligations"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-civile-code-des-biens-et-obligations",
+   "titre_page": "Code Civile: Code des Biens et Obligations\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_recueil-de-textes-personnes-familles",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-personnes-familles"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-personnes-familles",
+   "titre_page": "Recueil de Textes Personnes & Familles\n        – JuriCIV",
+   "liens": 1
   },
   {
    "cle": "dec_civlii_taxo_les-droits-de-lenfant",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-les-droits-de-lenfant"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-les-droits-de-lenfant",
+   "titre_page": "Les Droits de l'Enfant\n        – JuriCIV",
+   "liens": 9
   },
   {
    "cle": "dec_civlii_taxo_code-du-travail-et-autres-textes-relatifs-aux-droit-du-trava",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-du-travail-et-autres-textes-relatifs-aux-droit-du-travail"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-du-travail-et-autres-textes-relatifs-aux-droit-du-travail",
+   "titre_page": "Code du Travail et Autres Textes Relatifs aux Droit du Travail\n        – JuriCIV",
+   "liens": 7
   },
   {
    "cle": "dec_civlii_taxo_code-de-prevoyance-sociale",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-prevoyance-sociale"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-prevoyance-sociale",
+   "titre_page": "Code de Prévoyance Sociale\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_convention-collective-interprofessionnelle",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-convention-collective-interprofessionnelle"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-convention-collective-interprofessionnelle",
+   "titre_page": "Convention Collective Interprofessionnelle\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_code-penal",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-penal"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-penal",
+   "titre_page": "Code Pénal\n        – JuriCIV",
+   "liens": 2
   },
   {
    "cle": "dec_civlii_taxo_code-de-procedure-penale",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-penale"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-penale",
+   "titre_page": "Code de Procédure Pénale\n        – JuriCIV",
+   "liens": 1
   },
   {
    "cle": "dec_civlii_taxo_acte-uniforme-relatif-au-droit-commercial-general",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-relatif-au-droit-commercial-general"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-relatif-au-droit-commercial-general",
+   "titre_page": "Acte Uniforme Relatif au Droit Commercial Général\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_acte-uniforme-revise-relatif-au-droit-des-societes-commercia",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-revise-relatif-au-droit-des-societes-commerciales-et-du-groupement-dinteret-economique"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-revise-relatif-au-droit-des-societes-commerciales-et-du-groupement-dinteret-economique",
+   "titre_page": "Acte Uniforme Révisé Relatif au Droit des Sociétés Commerciales et du Groupement d'Intérêt Economique\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_acte-uniforme-portant-organisation-des-procedures-collective",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-portant-organisation-des-procedures-collectives-dapurement-du-passif"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-portant-organisation-des-procedures-collectives-dapurement-du-passif",
+   "titre_page": "Acte Uniforme Portant Organisation des Procédures Collectives d'Apurement du Passif\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_acte-uniforme-relatif-au-droit-de-larbitrage",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-relatif-au-droit-de-larbitrage"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-relatif-au-droit-de-larbitrage",
+   "titre_page": "Acte Uniforme Relatif au Droit de l'Arbitrage\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_acte-uniforme-relatif-a-la-mediation",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-relatif-a-la-mediation"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-relatif-a-la-mediation",
+   "titre_page": "Acte Uniforme Relatif a la Médiation\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_recueil-de-textes-relatifs-a-la-consommation",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-relatifs-a-la-consommation"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-relatifs-a-la-consommation",
+   "titre_page": "Recueil de Textes Relatifs à la Consommation\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_code-de-procedure-civile-commerciale-et-administrative",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-civile-commerciale-et-administrative"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-civile-commerciale-et-administrative",
+   "titre_page": "Code de Procédure Civile, Commerciale et Administrative\n        – JuriCIV",
+   "liens": 19
   },
   {
    "cle": "dec_civlii_taxo_juridiction",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-juridiction"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-juridiction",
+   "titre_page": "Juridiction\n        – JuriCIV",
+   "liens": 4
   },
   {
    "cle": "dec_civlii_taxo_recueil-de-textes-fonction-publique",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-fonction-publique"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-fonction-publique",
+   "titre_page": "Recueil de Textes Fonction Publique\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_constitution",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-constitution"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-constitution",
+   "titre_page": "Constitution\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_code-des-douanes",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-des-douanes"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-des-douanes",
+   "titre_page": "Code des Douanes\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_traite-cima",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-traite-cima"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-traite-cima",
+   "titre_page": "Traité CIMA\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_recueil-de-textes-relatifs-aux-transports",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-relatifs-aux-transports"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-relatifs-aux-transports",
+   "titre_page": "Recueil de Textes Relatifs aux Transports\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_regulation-du-secteur-pharmaceutique",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-regulation-du-secteur-pharmaceutique"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-regulation-du-secteur-pharmaceutique",
+   "titre_page": "Régulation du Secteur Pharmaceutique\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_code-de-lhygiene-et-de-la-salubrite",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-lhygiene-et-de-la-salubrite"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-lhygiene-et-de-la-salubrite",
+   "titre_page": "Code de l'hygiène et de la salubrité\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_recueil-de-textes-domaine-foncier-rural",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-domaine-foncier-rural"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-domaine-foncier-rural",
+   "titre_page": "Recueil de Textes Domaine Foncier Rural\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_code-de-lenvironnement",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-lenvironnement"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-lenvironnement",
+   "titre_page": "Code de l'Environnement\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_code-de-la-protection-des-oeuvres-de-lesprit",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-la-protection-des-oeuvres-de-lesprit"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-la-protection-des-oeuvres-de-lesprit",
+   "titre_page": "Code de la Protection des Oeuvres de l'Esprit\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_code-de-la-nationalite-et-loi-sur-lidentification-des-person",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-la-nationalite-et-loi-sur-lidentification-des-personnes"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-la-nationalite-et-loi-sur-lidentification-des-personnes",
+   "titre_page": "Code de la Nationalité et Loi sur l'Identification des Personnes\n        – JuriCIV",
+   "liens": 2
   },
   {
    "cle": "dec_civlii_taxo_recueil-de-textes-bail-a-usage-dhabitation-bail-a-usage-prof",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-bail-a-usage-dhabitation-bail-a-usage-professionnel"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-bail-a-usage-dhabitation-bail-a-usage-professionnel",
+   "titre_page": "Recueil de Textes Bail a Usage d'Habitation, Bail a Usage Professionnel\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_acte-uniforme-portant-organisation-des-procedures-simplifiee",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-portant-organisation-des-procedures-simplifiees-de-recouvrement-et-des-voies-dexecution"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-portant-organisation-des-procedures-simplifiees-de-recouvrement-et-des-voies-dexecution",
+   "titre_page": "Acte Uniforme portant Organisation des Procédures Simplifiées de Recouvrement et des Voies d'Exécution\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_taxo_acte-uniforme-portant-organisation-des-suretes",
-   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-portant-organisation-des-suretes"
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-acte-uniforme-portant-organisation-des-suretes",
+   "titre_page": "Acte Uniforme portant Organisation des Sûretés\n        – JuriCIV",
+   "liens": 0
   },
   {
    "cle": "dec_civlii_en_legislation_p1",
-   "url": "https://civlii.laws.africa/en/legislation/?page=1"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p2",
-   "url": "https://civlii.laws.africa/en/legislation/?page=2"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p3",
-   "url": "https://civlii.laws.africa/en/legislation/?page=3"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p4",
-   "url": "https://civlii.laws.africa/en/legislation/?page=4"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p5",
-   "url": "https://civlii.laws.africa/en/legislation/?page=5"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p6",
-   "url": "https://civlii.laws.africa/en/legislation/?page=6"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p7",
-   "url": "https://civlii.laws.africa/en/legislation/?page=7"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p8",
-   "url": "https://civlii.laws.africa/en/legislation/?page=8"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p9",
-   "url": "https://civlii.laws.africa/en/legislation/?page=9"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p10",
-   "url": "https://civlii.laws.africa/en/legislation/?page=10"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p11",
-   "url": "https://civlii.laws.africa/en/legislation/?page=11"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p12",
-   "url": "https://civlii.laws.africa/en/legislation/?page=12"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p13",
-   "url": "https://civlii.laws.africa/en/legislation/?page=13"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p14",
-   "url": "https://civlii.laws.africa/en/legislation/?page=14"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p15",
-   "url": "https://civlii.laws.africa/en/legislation/?page=15"
-  },
-  {
-   "cle": "dec_civlii_en_legislation_p16",
-   "url": "https://civlii.laws.africa/en/legislation/?page=16"
+   "url": "https://civlii.laws.africa/en/legislation/?page=1",
+   "titre_page": "Legislation\n\n        – JuriCIV",
+   "liens": 48
   },
   {
    "cle": "dec_ohada_jo_n_01_large",
-   "url": "https://www.ohada.org/journal-officiel-n-01/"
+   "url": "https://www.ohada.org/journal-officiel-n-01/",
+   "titre_page": "Journal Officiel N° 01 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_02_large",
-   "url": "https://www.ohada.org/journal-officiel-n-02/"
+   "url": "https://www.ohada.org/journal-officiel-n-02/",
+   "titre_page": "Journal Officiel N° 02 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_03_large",
-   "url": "https://www.ohada.org/journal-officiel-n-03/"
+   "url": "https://www.ohada.org/journal-officiel-n-03/",
+   "titre_page": "Journal Officiel N° 03 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_06_large",
-   "url": "https://www.ohada.org/journal-officiel-n-06/"
+   "url": "https://www.ohada.org/journal-officiel-n-06/",
+   "titre_page": "Journal Officiel N° 06 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_07_large",
-   "url": "https://www.ohada.org/journal-officiel-n-07/"
+   "url": "https://www.ohada.org/journal-officiel-n-07/",
+   "titre_page": "Journal Officiel N° 07 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_08_large",
-   "url": "https://www.ohada.org/journal-officiel-n-08/"
+   "url": "https://www.ohada.org/journal-officiel-n-08/",
+   "titre_page": "Journal Officiel N° 08 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_17_large",
-   "url": "https://www.ohada.org/journal-officiel-n-17/"
+   "url": "https://www.ohada.org/journal-officiel-n-17/",
+   "titre_page": "Journal Officiel N° 17 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_18_large",
-   "url": "https://www.ohada.org/journal-officiel-n-18/"
+   "url": "https://www.ohada.org/journal-officiel-n-18/",
+   "titre_page": "Journal Officiel N° 18 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_19_large",
-   "url": "https://www.ohada.org/journal-officiel-n-19/"
+   "url": "https://www.ohada.org/journal-officiel-n-19/",
+   "titre_page": "Journal Officiel N° 19 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_20-pt_large",
-   "url": "https://www.ohada.org/journal-officiel-n-20-pt/"
+   "url": "https://www.ohada.org/journal-officiel-n-20-pt/",
+   "titre_page": "Journal Officiel N °  20 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_22-pt_large",
-   "url": "https://www.ohada.org/journal-officiel-n-22-pt/"
+   "url": "https://www.ohada.org/journal-officiel-n-22-pt/",
+   "titre_page": "Journal Officiel N ° 22 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_23_large",
-   "url": "https://www.ohada.org/journal-officiel-n-23/"
+   "url": "https://www.ohada.org/journal-officiel-n-23/",
+   "titre_page": "Journal Officiel N° 23 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_24_large",
-   "url": "https://www.ohada.org/journal-officiel-n-24/"
+   "url": "https://www.ohada.org/journal-officiel-n-24/",
+   "titre_page": "Journal Officiel N° 24 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_25_large",
-   "url": "https://www.ohada.org/journal-officiel-n-25/"
+   "url": "https://www.ohada.org/journal-officiel-n-25/",
+   "titre_page": "Journal Officiel N° 25 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_26_large",
-   "url": "https://www.ohada.org/journal-officiel-n-26/"
+   "url": "https://www.ohada.org/journal-officiel-n-26/",
+   "titre_page": "Journal Officiel N° 26 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_jo_n_28_large",
-   "url": "https://www.ohada.org/journal-officiel-n-28/"
+   "url": "https://www.ohada.org/journal-officiel-n-28/",
+   "titre_page": "Journal Officiel N° 28 – OHADA",
+   "liens": 26
   },
   {
    "cle": "dec_ohada_actes_uniformes_large",
-   "url": "https://www.ohada.org/actes-uniformes/"
+   "url": "https://www.ohada.org/actes-uniformes/",
+   "titre_page": "Actes Uniformes – OHADA",
+   "liens": 97
   },
   {
    "cle": "dec_economie_codes_sectoriels",
-   "url": "https://economie-ivoirienne.ci/investissements/codes-sectoriels.html"
+   "url": "https://economie-ivoirienne.ci/investissements/codes-sectoriels.html",
+   "titre_page": "Codes sectoriels | Portail d'Informations et de Promotion l'Economie de Côte d'Ivoire",
+   "liens": 30
   },
   {
    "cle": "dec_cndj_biblio_travail",
-   "url": "https://biblio.cndj.ci/search/codes/274"
+   "url": "https://biblio.cndj.ci/search/codes/274",
+   "titre_page": "Connexion · Bibliothèque numérique du CNDJ",
+   "liens": 0
   },
   {
    "cle": "dec_oapi_bangui",
-   "url": "https://oapi.int/en/legal-framework/bangui-agreement/"
+   "url": "https://oapi.int/en/legal-framework/bangui-agreement/",
+   "titre_page": "Bangui Agreement - OAPI",
+   "liens": 13
   },
   {
    "cle": "dec_cima_textes",
-   "url": "https://cima-afrique.org/"
+   "url": "https://cima-afrique.org/",
+   "titre_page": "CIMA – Conférence Interafricaine des Marchés d’Assurance",
+   "liens": 3
+  },
+  {
+   "cle": "dec_ohada_au_droit-commercial-general",
+   "url": "https://www.ohada.org/droit-commercial-general/",
+   "titre_page": "Droit Commercial Général – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_droit-des-societes-commerciales-et-du-gie",
+   "url": "https://www.ohada.org/droit-des-societes-commerciales-et-du-gie/",
+   "titre_page": "Droit des sociétés commerciales et du GIE – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_procedures-collectives-dapurement-du-passif",
+   "url": "https://www.ohada.org/procedures-collectives-dapurement-du-passif/",
+   "titre_page": "Procédures collectives d’apurement du passif – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_droit-de-larbitrage",
+   "url": "https://www.ohada.org/droit-de-larbitrage/",
+   "titre_page": "Droit de l’arbitrage – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_acte-uniforme-relatif-a-la-mediation",
+   "url": "https://www.ohada.org/acte-uniforme-relatif-a-la-mediation/",
+   "titre_page": "Acte Uniforme relatif à la médiation – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_droit-des-societes-cooperatives",
+   "url": "https://www.ohada.org/droit-des-societes-cooperatives/",
+   "titre_page": "Droit des sociétés coopératives – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_contrats-de-transport-de-marchandises-par-route",
+   "url": "https://www.ohada.org/contrats-de-transport-de-marchandises-par-route/",
+   "titre_page": "Contrats de transport de marchandises par route – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_acte-uniforme-relatif-au-droit-comptable-et-a-linf",
+   "url": "https://www.ohada.org/acte-uniforme-relatif-au-droit-comptable-et-a-linformation-financiere-audcif/",
+   "titre_page": "Acte uniforme relatif au droit comptable et à l’information financière (AUDCIF) – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_organisation-des-suretes",
+   "url": "https://www.ohada.org/organisation-des-suretes/",
+   "titre_page": "Organisation des sûretés – OHADA",
+   "liens": 0
+  },
+  {
+   "cle": "dec_ohada_au_traite-portant-revision-du-traite-relatif-a-lharmo",
+   "url": "https://www.ohada.org/traite-portant-revision-du-traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique/",
+   "titre_page": "Traité portant révision du Traité relatif à l’harmonisation du droit des affaires en Afrique – OHADA",
+   "liens": 0
   }
  ],
+ "non_encore_collectes": [],
  "desactivees": [
   {
    "cle": "code_penal_2019_574_mffe",
@@ -2214,6 +3830,465 @@
    "http": 404,
    "motif": "HTTP 404 définitif (2026-10-19) : URL incorrecte ou document retiré ; non temporaire.",
    "remplacee_par": "travail_2015_532_civlii_source",
+   "tentatives": 1
+  },
+  {
+   "cle": "mariage_2019_570_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/570/eng@2023-10-13/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "mariage_2019_570_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/570/eng@2023-10-13/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "filiation_2019_571_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/571/fra@2023-10-13/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "filiation_2019_571_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/571/fra@2023-10-13/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "minorite_2019_572_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/572/fra@2023-10-13/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "minorite_2019_572_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/572/fra@2023-10-13/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "successions_2019_573_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/573/fra@2023-10-13/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "successions_2019_573_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/573/fra@2023-10-13/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "famille_minorite_2019_wm",
+   "url": "https://famille.gouv.ci/Tmffe/Loi-relative-a-la-minorite-2019WM.pdf",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": "oneci_jo_special_2019_572_573_575",
+   "tentatives": 1
+  },
+  {
+   "cle": "travail_2015_532_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/532/fra@2023-08-10/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "travail_2015_532_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/532/fra@2023-08-10/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "travail_enfants_2010_272_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2010/272/fra@2023-08-10/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "travail_enfants_2010_272_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2010/272/fra@2023-08-10/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "code_penal_2019_574_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "code_penal_2019_574_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "cpp_2018_975_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/975/fra@2024-06-23/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "cpp_2018_975_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/975/fra@2024-06-23/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "consommation_2016_412_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/412/fra@2023-06-21/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "consommation_2016_412_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/412/fra@2023-06-21/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "nationalite_1961_415_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1961/415/fra@2005-08-29/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "nationalite_1961_415_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1961/415/fra@2005-08-29/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "cpcca_1972_833_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "code_civil_droits_civils_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1804/jouissance-et-privation-des-droits-civils-code-civil-napol%C3%A9onien/fra@2023-12-31/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p2",
+   "url": "https://civlii.laws.africa/en/legislation/?page=2",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p3",
+   "url": "https://civlii.laws.africa/en/legislation/?page=3",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p4",
+   "url": "https://civlii.laws.africa/en/legislation/?page=4",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p5",
+   "url": "https://civlii.laws.africa/en/legislation/?page=5",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p6",
+   "url": "https://civlii.laws.africa/en/legislation/?page=6",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p7",
+   "url": "https://civlii.laws.africa/en/legislation/?page=7",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p8",
+   "url": "https://civlii.laws.africa/en/legislation/?page=8",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p9",
+   "url": "https://civlii.laws.africa/en/legislation/?page=9",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p10",
+   "url": "https://civlii.laws.africa/en/legislation/?page=10",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p11",
+   "url": "https://civlii.laws.africa/en/legislation/?page=11",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p12",
+   "url": "https://civlii.laws.africa/en/legislation/?page=12",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p13",
+   "url": "https://civlii.laws.africa/en/legislation/?page=13",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p14",
+   "url": "https://civlii.laws.africa/en/legislation/?page=14",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p15",
+   "url": "https://civlii.laws.africa/en/legislation/?page=15",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p16",
+   "url": "https://civlii.laws.africa/en/legislation/?page=16",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "etat_civil_2018_862_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/862/fra@2023-10-13/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "etat_civil_2018_862_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/862/fra@2023-10-13/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "violences_2021_894_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2021/894/fra@2023-10-11/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "violences_2021_894_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2021/894/fra@2023-10-11/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "prevoyance_sociale_1999_477_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1999/477/fra@2023-11-23/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "prevoyance_sociale_1999_477_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1999/477/fra@2023-11-23/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "cci_1977_civlii_source",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/convention/1977/convention-collective-interprofessionnelle/fra@2024-02-16/source",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "arbitrage_1993_671_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "juridictions_2016_1110_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "petits_litiges_2015_904_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/904/fra@2022-05-27/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "mediation_2014_389_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "corruption_2013_660_civlii_jo",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2013/660/fra@2024-01-17/publication",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.",
+   "remplacee_par": null,
+   "tentatives": 2
+  },
+  {
+   "cle": "ohada_aua_2017_attachement",
+   "url": "https://www.ohada.org/attachments/article/2290/Acte-Uniforme-relatif-au-droit-d-arbitrage-2017.pdf",
+   "le": "2026-10-20",
+   "http": 404,
+   "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
+   "remplacee_par": "ohada_aua_2017",
    "tentatives": 1
   }
  ]

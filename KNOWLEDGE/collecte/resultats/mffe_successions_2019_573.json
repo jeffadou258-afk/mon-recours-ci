@@ -16,6 +16,33 @@
   "sha256_ocr": "sha256:e16c4a3a88f3ed020d2064df6ce2ff997f8299d678c698f129394ee3712728a3",
   "sha256_texte": "sha256:dbd90cd2597f1ec6406756c3c2882e671ee590d50f67b66e38f8801a2f086a6e"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 94.7,
+  "confiance_par_page": {
+   "1": 95.4,
+   "10": 94.7,
+   "2": 94.9,
+   "3": 94.7,
+   "4": 94.5,
+   "5": 94.8,
+   "6": 94.1,
+   "7": 94.8,
+   "8": 94.9,
+   "9": 94.6
+  },
+  "date": "2026-10-20T10:29:10+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_successions_2019_573.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 10,
+  "pages_ocr_faibles": [],
+  "pdf_verifie": "sha256:0d7d1595d4c15a3b46624584e2f25c84023505e856eb9d72e1f20525bcacacdb",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:f7b14f0eb18a910d528ac261e10b83f8a1cbe21bfca8079dc434c6034583512f"
+ },
  "fichier_pdf": "mffe_successions_2019_573.pdf",
  "http": 200,
  "marques_tierces_observees": [],

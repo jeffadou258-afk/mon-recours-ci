@@ -44,8 +44,23 @@ SCENARIOS = [
     ("Un policier m'a arrêté parce que je téléphonais en conduisant", "clarification",
      {"TRANSP_2"}, set(), None, False),
     ("L'État veut exproprier mon terrain pour une route", "clarification", {"LOGEME_238"}, set(), None, False),
+    # Violences conjugales : depuis l'intégration du Code pénal et de la loi sur le
+    # mariage (20/10/2026), des fiches répondent — et l'urgence reste CRITIQUE.
+    # (MARIAGE_46 n'est pas servie ici : seules les fiches du domaine le mieux classé le sont.)
+    ("Mon mari me frappe et menace de me tuer", "clarification", {"PENAL_383"}, set(), "CRITIQUE", True),
+    ("Mon mari me menace, la vie commune est devenue dangereuse, je veux résider séparément",
+     "clarification", {"MARIAGE_46"}, set(), "ELEVEE", False),
     # Hors catalogue : aucune fiche, conclusion impossible — mais l'urgence reste.
-    ("Mon mari me frappe et menace de me tuer", "hors_catalogue", set(), set(), "CRITIQUE", True),
+    ("mon frere est en garde a vue depuis 3 jours sans avocat", "clarification", {"CPP_72", "CPP_90"}, set(),
+     "CRITIQUE", True),
+    ("Comment faire appel d'un jugement du tribunal correctionnel ?", "hors_catalogue", set(), set(), None, False),
+    # Pénal : une infraction courante est servie ; une fausse piste ne l'est pas.
+    ("Je veux porter plainte pour vol de mon téléphone", "clarification", {"PENAL_457"}, set(), None, False),
+    ("on m'a volé mon idée", "hors_catalogue", set(), {"PENAL_457"}, None, False),
+    ("le bailleur a violé le contrat de bail", "clarification", set(), {"PENAL_403"}, None, False),
+    # Succession : parts du conjoint et des enfants.
+    ("Mon père est décédé, il laisse ma mère et quatre enfants : comment partager l'héritage ?",
+     "clarification", {"SUCC_26"}, set(), None, False),
     ("Mon employeur ne me paie plus mon salaire depuis trois mois.", "hors_catalogue",
      set(), set(), None, False),
     ("Je veux divorcer de mon mari", "hors_catalogue", set(), set(), None, False),

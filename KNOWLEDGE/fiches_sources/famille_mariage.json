@@ -1,0 +1,185 @@
+{
+ "_description": "Fiches du domaine famille — mariage. Texte : loi n° 2019-570 du 26 juin 2019 relative au mariage, Journal officiel (numéro spécial du 12 juillet 2019) republié par mffe.ci. Exemplaire officiel numérisé, lu par OCR : chaque article indexé concorde (>= 0,80, nombres identiques) avec une autre lecture du même scan ou avec le texte voté publié par l'Assemblée nationale ; référence PARTIELLEMENT_VERIFIE. Citations extraites mot pour mot par bin/ajouter_fiches.py. AUCUNE relecture par un juriste : statut A_RELIRE_PAR_UN_JURISTE. Le divorce n'est PAS régi par ce texte (article 103 : il dissout le mariage) : aucune fiche n'en décrit la procédure.",
+ "domaine": "famille_mariage_filiation",
+ "numero_texte": "2019-570",
+ "statut_relecture": "A_RELIRE_PAR_UN_JURISTE",
+ "fiches": [
+  {
+   "id": "MARIAGE_2",
+   "article": "2",
+   "titre": "Âge minimum pour se marier",
+   "declencheurs": [
+    "age pour se marier",
+    "age minimum du mariage",
+    "mariage d'une mineure",
+    "mariage d'un mineur",
+    "mariage precoce",
+    "mariage force d'une fille"
+   ],
+   "citation_debut": "L’homme et la femme avant dix-huit ans",
+   "citation_fin": "ne peuvent contracter mariage.",
+   "lecture": "Ni l'homme ni la femme ne peuvent se marier avant d'avoir dix-huit ans révolus.",
+   "faits_requis": [],
+   "etape_plan": "Vérifier la date de naissance de chacun des futurs époux (acte de naissance)"
+  },
+  {
+   "id": "MARIAGE_4",
+   "article": "4",
+   "titre": "Consentement libre de chaque époux",
+   "declencheurs": [
+    "consentement au mariage",
+    "mariage force",
+    "forcee a se marier",
+    "force a se marier",
+    "marier contre sa volonte",
+    "mariage sous la contrainte"
+   ],
+   "citation_debut": "Le consentement n’est pas valable s’il a été extorqué",
+   "citation_fin": "sur l’identité physique ou civile de la personne.",
+   "lecture": "Chaque futur époux doit consentir lui-même au mariage. Un consentement obtenu par la violence, ou donné à la suite d'une erreur sur l'identité de la personne, n'est pas valable.",
+   "faits_requis": [],
+   "etape_plan": "Décrire par écrit comment le consentement a été obtenu (pressions, menaces, personnes présentes)"
+  },
+  {
+   "id": "MARIAGE_20",
+   "article": "20",
+   "titre": "Où le mariage est célébré",
+   "declencheurs": [
+    "celebration du mariage",
+    "lieu de celebration du mariage",
+    "mairie pour le mariage",
+    "centre d'etat civil mariage",
+    "celebrer le mariage"
+   ],
+   "citation_debut": "Le mariage est célébré publiquement",
+   "citation_fin": "à la date de la célébration.",
+   "lecture": "Le mariage est célébré publiquement par l'officier de l'état civil du domicile ou de la résidence de l'un des futurs époux ; la résidence suppose au moins un mois d'habitation continue à la date de la célébration.",
+   "faits_requis": [],
+   "etape_plan": "Se renseigner auprès du centre d'état civil du domicile ou de la résidence de l'un des futurs époux"
+  },
+  {
+   "id": "MARIAGE_46",
+   "article": "46",
+   "titre": "Danger au foyer : demander à résider séparément",
+   "declencheurs": [
+    "battue par mon mari",
+    "battu par ma femme",
+    "frappee par mon mari",
+    "violence conjugale",
+    "violences conjugales",
+    "cohabitation dangereuse",
+    "danger au foyer",
+    "quitter le domicile conjugal",
+    "resider separement",
+    "vivre separement",
+    "residence separee"
+   ],
+   "citation_debut": "Dans le cas où la cohabitation présente un danger",
+   "citation_fin": "suivant la procédure de référé.",
+   "lecture": "Si la vie commune présente un danger physique ou moral pour l'un des époux, celui-ci peut demander au président du tribunal (ou au juge qu'il délègue) l'autorisation de résider séparément pour une durée déterminée ; le juge statue dans la huitaine de sa saisine, selon la procédure de référé.",
+   "faits_requis": [],
+   "etape_plan": "En cas de danger immédiat, se mettre en sécurité et appeler les secours ; réunir les preuves du danger (certificat médical, témoins) pour la demande au tribunal"
+  },
+  {
+   "id": "MARIAGE_47",
+   "article": "47",
+   "titre": "Obligation des époux envers les enfants",
+   "declencheurs": [
+    "nourrir les enfants",
+    "entretien des enfants",
+    "eduquer les enfants",
+    "le pere ne s'occupe pas des enfants",
+    "la mere ne s'occupe pas des enfants"
+   ],
+   "citation_debut": "Les époux contractent ensemble",
+   "citation_fin": "nourrir, entretenir et éduquer leurs enfants.",
+   "lecture": "Par le seul fait du mariage, les époux s'obligent ensemble à nourrir, entretenir et éduquer leurs enfants.",
+   "faits_requis": [],
+   "etape_plan": "Lister les dépenses de l'enfant (nourriture, école, santé) et ce que chacun des parents verse"
+  },
+  {
+   "id": "MARIAGE_52",
+   "article": "52",
+   "titre": "Époux qui ne contribue pas aux charges du ménage",
+   "declencheurs": [
+    "ne participe pas aux depenses",
+    "ne contribue pas aux charges",
+    "charges du menage",
+    "mon mari ne donne pas d'argent",
+    "ma femme ne donne pas d'argent",
+    "saisie du salaire du conjoint",
+    "depenses de la maison"
+   ],
+   "citation_debut": "Si l’un des époux ne s’acquitte pas de sa contribution",
+   "citation_fin": "ou des revenus de son conjoint.",
+   "lecture": "Les époux contribuent aux charges du ménage selon leurs moyens. Si l'un d'eux ne paie pas sa part, l'autre peut obtenir du président du tribunal du lieu de résidence l'autorisation de faire saisir et de percevoir, selon les besoins du ménage, une partie du salaire ou des revenus du conjoint.",
+   "faits_requis": [],
+   "etape_plan": "Rassembler la preuve des besoins du ménage et des revenus du conjoint (bulletins de salaire, relevés)"
+  },
+  {
+   "id": "MARIAGE_56",
+   "article": "56",
+   "titre": "Choix du domicile de la famille",
+   "declencheurs": [
+    "domicile conjugal",
+    "domicile de la famille",
+    "ou habiter apres le mariage",
+    "desaccord sur le lieu de vie"
+   ],
+   "citation_debut": "Le domicile de la famille est choisi",
+   "citation_fin": "en tenant compte de l’intérêt de la famille.",
+   "lecture": "Le domicile de la famille est choisi d'un commun accord par les époux ; en cas de désaccord, il est fixé par le tribunal, dans l'intérêt de la famille.",
+   "faits_requis": [],
+   "etape_plan": "Noter les raisons du désaccord et l'intérêt de la famille (école des enfants, travail)"
+  },
+  {
+   "id": "MARIAGE_59",
+   "article": "59",
+   "titre": "Régime matrimonial sans contrat",
+   "declencheurs": [
+    "regime matrimonial",
+    "communaute de biens",
+    "separation de biens",
+    "contrat de mariage",
+    "biens du couple"
+   ],
+   "citation_debut": "Le mariage crée entre les époux",
+   "citation_fin": "par convention.",
+   "lecture": "Si les époux n'ont pas réglé par convention les effets de leur mariage sur leurs biens, le mariage crée entre eux soit le régime de la communauté de biens, soit celui de la séparation de biens. Lequel s'applique dépend du choix fait au mariage : point à vérifier sur l'acte de mariage.",
+   "faits_requis": [],
+   "etape_plan": "Vérifier sur l'acte de mariage le régime matrimonial choisi"
+  },
+  {
+   "id": "MARIAGE_73",
+   "article": "73",
+   "titre": "Biens qui restent propres à chaque époux",
+   "declencheurs": [
+    "biens propres",
+    "bien recu en heritage pendant le mariage",
+    "maison avant le mariage",
+    "bien a moi avant le mariage",
+    "partage des biens du couple"
+   ],
+   "citation_debut": "Sont propres : 1° les biens que les époux possèdent",
+   "citation_fin": "par succession ou donation ;",
+   "lecture": "Sous le régime de la communauté, restent propres à chaque époux notamment les biens qu'il possédait à la date du mariage et ceux qu'il reçoit ensuite par succession ou donation (liste complète à l'article 73).",
+   "faits_requis": [],
+   "etape_plan": "Réunir les preuves de la date et de l'origine du bien (titre, acte de donation, jugement d'hérédité)"
+  },
+  {
+   "id": "MARIAGE_103",
+   "article": "103",
+   "titre": "Comment le mariage prend fin",
+   "declencheurs": [
+    "dissolution du mariage",
+    "le mariage prend fin",
+    "quand le mariage est dissous"
+   ],
+   "citation_debut": "Le mariage se dissout par :",
+   "citation_fin": "5° l’annulation du mariage.",
+   "lecture": "Le mariage prend fin par le décès de l'un des époux, le divorce, l'absence ou le décès judiciairement déclarés, ou l'annulation du mariage. La procédure de divorce n'est pas décrite par ce texte.",
+   "faits_requis": [],
+   "etape_plan": "Pour un divorce, consulter un avocat ou le greffe du tribunal : la procédure relève d'un autre texte, absent du corpus"
+  }
+ ]
+}

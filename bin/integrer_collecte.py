@@ -43,6 +43,7 @@ DOSSIER_RESULTATS = os.path.join(DOSSIER, "resultats")
 DOSSIER_PDF = os.path.join(DOSSIER, "pdf")              # ignoré par git (*.pdf)
 INVENTAIRE = os.path.join(DOSSIER, "inventaire_ressources.json")
 RECOUPEMENTS = os.path.join(DOSSIER, "recoupements.json")
+JOURNAL_OCR = os.path.join(DOSSIER, "integrations_ocr.json")
 BRANCHE_ARCHIVE = "corpus/archives-pdf"
 
 CONFIANCE_OCR_MINIMALE = 75.0
@@ -533,6 +534,35 @@ def officialiser(cles=None):
                                                   doc.get("articles_indexes"), doc.get("motif_non_indexe") or ""))
 
 
+_NOMBRE = re.compile(r"\d+")
+
+
+def _nombres(texte):
+    """Suite des nombres d'un article (délais, montants, renvois)."""
+    return _NOMBRE.findall(texte or "")
+
+
+def nombres_substitues(a, b):
+    """Nombres de `a` remplacés par un AUTRE nombre au même endroit de `b`.
+
+    Alignement mot à mot : un nombre seulement inséré ou omis (numéro de page du
+    Journal officiel incrusté dans une colonne, « 1 » parasite) est du bruit de
+    mise en page ; un nombre REMPLACÉ (« 43 » lu pour « 45 », « 11 » pour « 1 »)
+    change le droit (délai, montant, renvoi) : l'article est alors écarté."""
+    import difflib
+    a_mots, mots_b = (a or "").split(), (b or "").split()
+    paires = []
+    comparateur = difflib.SequenceMatcher(None, a_mots, mots_b, autojunk=False)
+    for operation, i1, i2, j1, j2 in comparateur.get_opcodes():
+        if operation != "replace":
+            continue
+        gauche = [n for m in a_mots[i1:i2] for n in _NOMBRE.findall(m)]
+        droite = [n for m in mots_b[j1:j2] for n in _NOMBRE.findall(m)]
+        if gauche and droite and gauche != droite:
+            paires.append((" ".join(gauche), " ".join(droite)))
+    return paires
+
+
 def _lecture(texte, segment):
     texte, corrections = ocr.normaliser_en_tetes_jo(texte or "")
     texte, retraits = nettoyer_lecture(segmenter(texte, segment) if segment else texte)
@@ -549,10 +579,11 @@ def lectures_du_scan(d, resultat, source):
         candidates.append(("CALQUE_EDITEUR:" + ",".join(d["indices_ocr_editeur"]), _texte(resultat, "fichier_texte")))
     if extraction.get("fichier_ocr"):
         candidates.append(("TESSERACT_DISTANT:%s dpi" % extraction.get("dpi_ocr", 200), _texte(resultat, "fichier_ocr")))
-    locale = resultat.get("extraction_locale") or {}
-    if locale.get("fichier_ocr") and os.path.isfile(os.path.join(RACINE, locale["fichier_ocr"])):
-        candidates.append(("TESSERACT_LOCAL_BEST:%s dpi" % locale.get("dpi"),
-                           open(os.path.join(RACINE, locale["fichier_ocr"]), encoding="utf-8").read()))
+    for cle_locale, nom in (("extraction_locale", "TESSERACT_LOCAL_BEST"), ("extraction_locale_fast", "TESSERACT_LOCAL_FAST")):
+        locale = resultat.get(cle_locale) or {}
+        if locale.get("fichier_ocr") and os.path.isfile(os.path.join(RACINE, locale["fichier_ocr"])):
+            candidates.append(("%s:%s dpi" % (nom, locale.get("dpi")),
+                               open(os.path.join(RACINE, locale["fichier_ocr"]), encoding="utf-8").read()))
     lectures = []
     for nom, texte in candidates:
         try:
@@ -561,6 +592,125 @@ def lectures_du_scan(d, resultat, source):
             continue   # segment introuvable dans cette lecture : elle n'est pas utilisée
         lectures.append((nom,) + lecture)
     return lectures
+
+
+def preparer_ocr(d, inventaire, manifeste):
+    """Calcule, SANS RIEN ÉCRIRE, les articles qu'une intégration OCR retiendrait.
+
+    Renvoie None (aucune lecture) ou un dict : articles, confiance, ecartes, principal,
+    nom_principal, comparateur, copies, corrections_en_tetes, retraits."""
+    resultat = lire_json(os.path.join(DOSSIER_RESULTATS, d["cle"] + ".json"))
+    source_m = manifeste[d["cle"]]
+    extraction = resultat["extraction"]
+    # Lectures disponibles du MÊME scan (indépendantes par le moteur ou le modèle) :
+    # la principale est celle qui découpe le plus d'articles ; chaque article
+    # retenu doit concorder (>= 0,80) avec au moins une AUTRE lecture.
+    lectures = lectures_du_scan(d, resultat, source_m)
+    if not lectures:
+        return None
+    lectures = sorted(lectures, key=lambda l: (-len(l[2]), l[0]))
+    nom_principal, principal, articles, corrections_en_tetes, retraits = lectures[0]
+    # Candidats : chaque numéro d'article pris dans la PREMIÈRE lecture du scan qui le
+    # contient (la principale d'abord). Le texte indexé vient donc toujours d'une
+    # lecture de CE scan officiel ; il doit concorder avec une autre lecture.
+    candidats, provenance = {}, {}
+    for nom, _, arts, _, _ in lectures:
+        for numero, texte in arts.items():
+            if numero not in candidats:
+                candidats[numero], provenance[numero] = texte, nom
+    etalons = [(nom, arts) for nom, _, arts, _, _ in lectures]
+    # Une reproduction secondaire du MÊME texte peut servir d'étalon pour MESURER
+    # l'OCR. Elle ne fournit aucun mot du texte indexé, et `recoupe` reste à 0.
+    # Autres exemplaires du même texte (autre scan officiel, texte voté, reproduction) :
+    # étalons de MESURE seulement. Un document en quarantaine pour une seule raison
+    # d'identité ou de découpage peut mesurer : la concordance article par article
+    # (>= 0,80) établit elle-même qu'il s'agit du même texte.
+    for autre in inventaire["documents"]:
+        if autre["cle"] == d["cle"] or not autre["numero_texte"] or autre["numero_texte"] != d["numero_texte"]:
+            continue
+        motifs = [m for m in autre["motifs_quarantaine"]
+                  if not m.startswith(("découpage en articles", "le numéro"))]
+        if motifs or autre["integrite_pdf"] != "OK":
+            continue
+        genre = "OFFICIEL" if autre["categorie_source"].startswith("OFFICIEL") else "SECONDAIRE"
+        arts = articles_de(autre["cle"], manifeste.get(autre["cle"]))
+        if arts:
+            etalons.append(("%s:%s" % (genre, autre["cle"]), arts))
+    # Un étalon dont le texte est IDENTIQUE à la lecture principale n'est pas une
+    # lecture indépendante : c'est le même calque OCR recopié (cas réel : le PDF
+    # FAOLEX de la loi 2019-570 porte le calque ABBYY du PDF de mffe.ci). Écarté.
+    lectures_du_meme_scan = {nom for nom, _, _, _, _ in lectures}
+    independants, copies = [], []
+    for nom, arts in etalons:
+        if nom in lectures_du_meme_scan:
+            independants.append((nom, arts))
+            continue
+        copie = False
+        for _, _, arts_scan, _, _ in lectures:   # copie de N'IMPORTE QUELLE lecture du scan ?
+            communs = [n for n in arts_scan if n in arts]
+            identiques = sum(1 for n in communs if " ".join(arts_scan[n].split()) == " ".join(arts[n].split()))
+            if communs and identiques >= 0.5 * len(communs):
+                copie = True
+                break
+        (copies if copie else independants).append((nom, arts))
+    etalons = independants
+    confiance, ecartes = None, []
+    comparateur = "+".join(nom for nom, _ in etalons if nom != nom_principal) or None
+    second = bool(comparateur)
+    articles = dict(candidats)
+    nombres_divergents, nombres_contestes = [], {}
+    if second:
+        confiance, retenus = {}, {}
+        lectures_scan = [(nom, arts) for nom, _, arts, _, _ in lectures]
+        for numero in candidats:
+            # Pour chaque article : la lecture DE CE SCAN la mieux confirmée par une
+            # autre lecture (jamais par elle-même), à condition que les nombres
+            # (délais, montants, renvois) soient identiques dans la lecture qui confirme.
+            meilleur = None   # (similarité, texte, lecture)
+            divergence = False
+            for nom_l, arts_l in lectures_scan:
+                if numero not in arts_l:
+                    continue
+                texte = arts_l[numero]
+                for nom_e, arts_e in etalons:
+                    if nom_e == nom_l or numero not in arts_e:
+                        continue
+                    valeur = ocr.similarite(texte, arts_e[numero])
+                    if valeur < ocr.QUALITE_MINIMALE:
+                        continue
+                    if nombres_substitues(texte, arts_e[numero]):
+                        divergence = True
+                        continue
+                    if meilleur is None or valeur > meilleur[0]:
+                        meilleur = (valeur, texte, nom_l)
+            if meilleur:
+                retenus[numero], confiance[numero] = meilleur[1], round(meilleur[0], 4)
+                provenance[numero] = meilleur[2]
+                # Nombres contestés : une AUTRE lecture concordante (>= 0,80) lit un nombre
+                # différent au même endroit. L'article reste indexé (une lecture le
+                # confirme) mais il est listé pour vérification humaine ciblée.
+                for nom_e, arts_e in etalons:
+                    if nom_e == meilleur[2] or numero not in arts_e:
+                        continue
+                    if ocr.similarite(meilleur[1], arts_e[numero]) >= ocr.QUALITE_MINIMALE:
+                        paires = nombres_substitues(meilleur[1], arts_e[numero])
+                        if paires:
+                            nombres_contestes.setdefault(numero, []).append(
+                                {"lecture": nom_e.split(":")[0] + ":" + nom_e.split(":")[1][:40] if ":" in nom_e else nom_e,
+                                 "ecarts": paires[:6]})
+            else:
+                ecartes.append((numero, None))
+                if divergence:
+                    nombres_divergents.append(numero)
+        articles = retenus
+    else:
+        articles = dict(lectures[0][2])   # une seule lecture : pas de complément non vérifié
+    return {"articles": articles, "confiance": confiance, "ecartes": ecartes, "principal": principal,
+            "nom_principal": nom_principal, "comparateur": comparateur, "copies": copies, "second": second,
+            "corrections_en_tetes": corrections_en_tetes, "retraits": retraits,
+            "hors_principale": sum(1 for n in articles if provenance.get(n) != nom_principal),
+            "nombres_divergents": nombres_divergents, "nombres_contestes": nombres_contestes,
+            "provenance": provenance}
 
 
 def officialiser_ocr(cles=None):
@@ -595,58 +745,14 @@ def officialiser_ocr(cles=None):
         if not domaine:
             bilan.append((d["cle"], "IGNORE", "aucun domaine du moteur"))
             continue
-        resultat = lire_json(os.path.join(DOSSIER_RESULTATS, d["cle"] + ".json"))
-        source_m = manifeste[d["cle"]]
-        extraction = resultat["extraction"]
-        # Lectures disponibles du MÊME scan (indépendantes par le moteur ou le modèle) :
-        # la principale est celle qui découpe le plus d'articles ; chaque article
-        # retenu doit concorder (>= 0,80) avec au moins une AUTRE lecture.
-        lectures = lectures_du_scan(d, resultat, source_m)
-        if not lectures:
+        prep = preparer_ocr(d, inventaire, manifeste)
+        if prep is None:
             bilan.append((d["cle"], "IGNORE", "aucune lecture OCR exploitable"))
             continue
-        nom_principal, principal, articles, corrections_en_tetes, retraits = max(
-            lectures, key=lambda l: (len(l[2]), l[0]))
-        etalons = [(nom, arts) for nom, _, arts, _, _ in lectures if nom != nom_principal and arts]
-        # Une reproduction secondaire du MÊME texte peut servir d'étalon pour MESURER
-        # l'OCR. Elle ne fournit aucun mot du texte indexé, et `recoupe` reste à 0.
-        # Autres exemplaires du même texte (autre scan officiel, texte voté, reproduction) :
-        # étalons de MESURE seulement. Un document en quarantaine pour une seule raison
-        # d'identité ou de découpage peut mesurer : la concordance article par article
-        # (>= 0,80) établit elle-même qu'il s'agit du même texte.
-        for autre in inventaire["documents"]:
-            if autre["cle"] == d["cle"] or not autre["numero_texte"] or autre["numero_texte"] != d["numero_texte"]:
-                continue
-            motifs = [m for m in autre["motifs_quarantaine"]
-                      if not m.startswith(("découpage en articles", "le numéro"))]
-            if motifs or autre["integrite_pdf"] != "OK":
-                continue
-            genre = "OFFICIEL" if autre["categorie_source"].startswith("OFFICIEL") else "SECONDAIRE"
-            arts = articles_de(autre["cle"], manifeste.get(autre["cle"]))
-            if arts:
-                etalons.append(("%s:%s" % (genre, autre["cle"]), arts))
-        # Un étalon dont le texte est IDENTIQUE à la lecture principale n'est pas une
-        # lecture indépendante : c'est le même calque OCR recopié (cas réel : le PDF
-        # FAOLEX de la loi 2019-570 porte le calque ABBYY du PDF de mffe.ci). Écarté.
-        independants, copies = [], []
-        for nom, arts in etalons:
-            communs = [n for n in articles if n in arts]
-            identiques = sum(1 for n in communs if " ".join(articles[n].split()) == " ".join(arts[n].split()))
-            (copies if communs and identiques >= 0.5 * len(communs) else independants).append((nom, arts))
-        etalons = independants
-        confiance, ecartes = None, []
-        comparateur = "+".join(nom for nom, _ in etalons) or None
-        second = bool(etalons)
-        if etalons:
-            confiance, retenus = {}, {}
-            for numero, texte in articles.items():
-                valeurs = [ocr.similarite(texte, arts[numero]) for _, arts in etalons if numero in arts]
-                valeur = round(max(valeurs), 4) if valeurs else None
-                if valeur is not None and valeur >= ocr.QUALITE_MINIMALE:
-                    retenus[numero], confiance[numero] = texte, valeur
-                else:
-                    ecartes.append((numero, valeur))
-            articles = retenus
+        articles, confiance, ecartes = prep["articles"], prep["confiance"], prep["ecartes"]
+        principal, nom_principal, comparateur = prep["principal"], prep["nom_principal"], prep["comparateur"]
+        copies, second = prep["copies"], prep["second"]
+        corrections_en_tetes, retraits = prep["corrections_en_tetes"], prep["retraits"]
         dossier, _ = collecter_domaine.chemin_manifeste(domaine)
         os.makedirs(dossier, exist_ok=True)
         chemin_pdf = os.path.join(dossier, d["cle"] + ".pdf")
@@ -717,6 +823,19 @@ def officialiser_ocr(cles=None):
             note=("%s ; %s ; %d article(s) écarté(s) faute d'accord entre les deux lectures"
                   % (lecture, "accord moyen avec %s : %s" % (comparateur, moyenne) if second
                      else "une seule lecture : qualité contrôlée structurellement seulement", len(ecartes))))
+        journal = lire_json(JOURNAL_OCR, {"objet": ("Journal des intégrations OCR : lecture de chaque article, "
+                                                       "articles écartés et nombres contestés à vérifier."),
+                                             "integrations": {}})
+        journal["integrations"][d["cle"]] = {
+            "date": aujourd_hui, "ref_id": ref_id, "doc_id": doc_id, "numero_texte": d["numero_texte"],
+            "lecture_principale": nom_principal, "etalons": comparateur,
+            "copies_ecartees": [n for n, _ in copies], "articles_indexes": indexation["articles_indexes"],
+            "couverture": indexation["couverture"], "accord_moyen": moyenne,
+            "articles_ecartes": [{"numero": n, "similarite": v} for n, v in ecartes],
+            "nombres_divergents_ecartes": prep["nombres_divergents"],
+            "nombres_contestes_a_verifier": prep["nombres_contestes"],
+            "lecture_par_article": {n: prep["provenance"].get(n) for n in sorted(articles, key=ocr._tri_numero)}}
+        ecrire_json(JOURNAL_OCR, journal)
         bilan.append((d["cle"], "INTEGRE", "%d articles (couverture %.0f %%), %d écartés%s" % (
             indexation["articles_indexes"], 100 * indexation["couverture"], len(ecartes),
             ", accord moyen %s" % moyenne if moyenne else "")))
@@ -725,15 +844,45 @@ def officialiser_ocr(cles=None):
     return bilan
 
 
+def mesurer(cles=None):
+    """Ce qu'une intégration OCR retiendrait, document par document — rien n'est écrit."""
+    inventaire = lire_json(INVENTAIRE)
+    manifeste = {s["cle"]: s for s in lire_json(MANIFESTE)["sources"]}
+    mesures = []
+    for d in inventaire["documents"]:
+        if (cles and d["cle"] not in cles) or not d["methode_extraction"].startswith("OCR"):
+            continue
+        prep = preparer_ocr(d, inventaire, manifeste)
+        if prep is None:
+            continue
+        taux, maximum = corpus.taux_couverture(prep["articles"])
+        moyenne = (round(sum(prep["confiance"].values()) / len(prep["confiance"]), 4)
+                   if prep["confiance"] else None)
+        mesures.append({"cle": d["cle"], "numero_texte": d["numero_texte"], "statut_controle": d["statut_controle"],
+                        "lecture_principale": prep["nom_principal"], "etalons": prep["comparateur"],
+                        "copies_ecartees": [n for n, _ in prep["copies"]],
+                        "articles_retenus": len(prep["articles"]), "article_max": maximum,
+                        "couverture": round(taux, 4), "ecartes": len(prep["ecartes"]), "accord_moyen": moyenne,
+                        "nombres_divergents": prep["nombres_divergents"],
+                        "nombres_contestes": prep["nombres_contestes"],
+                        "integrable": taux >= corpus.COUVERTURE_MINIMALE})
+        print("%-44s %-24s ret=%-4d couv=%.2f max=%-4s ec=%-3d nb≠=%-3d contestés=%-3d accord=%s | %s" % (
+            d["cle"][:44], prep["nom_principal"][:24], len(prep["articles"]), taux, maximum, len(prep["ecartes"]),
+            len(prep["nombres_divergents"]), len(prep["nombres_contestes"]), moyenne, (prep["comparateur"] or "AUCUN ÉTALON")[:90]))
+    return mesures
+
+
 def main(argv=None):
     analyseur = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    analyseur.add_argument("etape", choices=("pdf", "controler", "recouper", "officialiser", "officialiser_ocr"))
+    analyseur.add_argument("etape", choices=("pdf", "controler", "recouper", "officialiser", "officialiser_ocr", "mesurer"))
     analyseur.add_argument("--cle", action="append")
     arguments = analyseur.parse_args(argv)
     if arguments.etape == "officialiser":
         officialiser(arguments.cle)
     elif arguments.etape == "officialiser_ocr":
         officialiser_ocr(arguments.cle)
+    elif arguments.etape == "mesurer":
+        mesurer(arguments.cle)
     else:
         {"pdf": rapatrier_pdf, "controler": controler, "recouper": recouper}[arguments.etape]()
     return 0

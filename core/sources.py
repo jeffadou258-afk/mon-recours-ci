@@ -263,6 +263,9 @@ def est_hote_officiel(url):
         return True
     for source in SOURCES_OFFICIELLES:
         hote_registre = (urllib.parse.urlparse(source["url"]).hostname or "").lower()
+        # « www.oneci.ci » au registre et « oneci.ci » dans l'URL : même institution.
+        if hote_registre.startswith("www."):
+            hote_registre = hote_registre[4:]
         if hote_registre and (hote == hote_registre or hote.endswith("." + hote_registre)):
             return True
     return False

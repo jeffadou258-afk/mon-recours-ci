@@ -304,6 +304,12 @@ class TestAucuneFuiteDansLeJournal(unittest.TestCase):
                 headers={"Content-Type": "application/json", "X-API-Key": CLE})
             with urllib.request.urlopen(requete, timeout=15) as reponse:
                 self.assertEqual(reponse.status, 200)
+            # Le serveur journalise APRÈS avoir envoyé la réponse : on lui laisse
+            # jusqu'à 2 s (course constatée le 20/10/2026, test instable).
+            import time
+            limite = time.time() + 2
+            while not journal and time.time() < limite:
+                time.sleep(0.02)
             self.assertTrue(journal, "le serveur doit journaliser la requête")
             contenu = json.dumps(journal, ensure_ascii=False)
             self.assertNotIn(jeton, contenu, "la demande ne doit jamais être journalisée")

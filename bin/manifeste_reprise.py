@@ -316,13 +316,19 @@ RESTREINTES = (
     "code_penal_2019_574_civlii_source", "code_penal_2019_574_civlii_jo", "cpp_2018_975_civlii_source",
     "cpp_2018_975_civlii_jo", "consommation_2016_412_civlii_source", "consommation_2016_412_civlii_jo",
     "nationalite_1961_415_civlii_source", "nationalite_1961_415_civlii_jo", "code_civil_droits_civils_civlii_source",
-    "cpcca_1972_833_civlii_jo")
+    "cpcca_1972_833_civlii_jo",
+    # 404 au run 39407799324 (second lot) : même restriction
+    "etat_civil_2018_862_civlii_source", "etat_civil_2018_862_civlii_jo", "violences_2021_894_civlii_source",
+    "violences_2021_894_civlii_jo", "prevoyance_sociale_1999_477_civlii_source", "prevoyance_sociale_1999_477_civlii_jo",
+    "cci_1977_civlii_source", "arbitrage_1993_671_civlii_jo", "juridictions_2016_1110_civlii_jo",
+    "petits_litiges_2015_904_civlii_jo", "mediation_2014_389_civlii_jo", "corruption_2013_660_civlii_jo")
 MOTIF_RESTREINT = ("Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion "
                    "requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.")
 DESACTIVER_2 = {cle: None for cle in RESTREINTES}
 for n in range(2, 17):
     DESACTIVER_2["dec_civlii_en_legislation_p%d" % n] = None   # la liste ne pagine pas par ?page=N
 DESACTIVER_2["famille_minorite_2019_wm"] = "oneci_jo_special_2019_572_573_575"
+DESACTIVER_2["ohada_aua_2017_attachement"] = "ohada_aua_2017"
 
 
 # Segments des Journaux officiels à plusieurs actes (début = en-tête de l'acte,

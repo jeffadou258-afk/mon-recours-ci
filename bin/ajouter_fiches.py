@@ -50,10 +50,11 @@ def extraire_citation(texte_article, debut, fin):
 
 
 def construire(definitions, chemin_db=None):
-    ref = reference(definitions["domaine"], definitions.get("numero_texte"), chemin_db)
+    reference(definitions["domaine"], definitions.get("numero_texte"), chemin_db)   # lève si absente
     fiches = []
     for d in definitions["fiches"]:
-        article = corpus.obtenir_article_par_reference(ref["ref_id"], d["article"], chemin=chemin_db)
+        _, article = catalogue.reference_citable(definitions["domaine"], definitions.get("numero_texte"),
+                                                 d["article"], chemin_db)
         if article is None:
             raise FicheRefusee("%s : article %s absent ou non citable" % (d["id"], d["article"]))
         fiches.append({

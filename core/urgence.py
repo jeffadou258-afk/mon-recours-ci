@@ -27,7 +27,15 @@ _MARQUEURS_CRITIQUES = (
     (r"menac\w*[^.]{0,30}(publier|diffuser)[^.]{0,30}(photos?|videos?)[^.]{0,20}(intimes?|nue?s?)",
      "chantage a la diffusion d'images intimes"),
     (r"violences? conjugales?", "violences conjugales"),
-    (r"viol(er|e|s)?\b", "violences sexuelles"),
+    # « violé le contrat », « violer la loi » : sens juridique, pas une violence sexuelle
+    # (faux positif constaté le 20/10/2026).
+    (r"viol(?:er|ee?s?|s)?\b(?!\s+(?:le|la|les|l'|un|une|son|sa|ses|mes|ce|cette|notre|leur|nos|vos)\s*"
+     r"(?:contrat|loi|bail|accord|reglement|regles?|droits?|engagement|secret|clause|convention|procedure|"
+     r"domicile|promesse|obligations?|interdiction|decision|jugement))", "violences sexuelles"),
+    (r"abus\w*[^.]{0,15}sexuel\w*", "violences sexuelles"),
+    (r"agress\w*[^.]{0,10}sexuel\w*", "violences sexuelles"),
+    (r"attouchements?", "violences sexuelles"),
+    (r"\b(excis\w*|mutilations? genitales?)", "mutilation genitale"),
     (r"sequestr\w*", "sequestration"),
     (r"(est|sont) retenus? de force", "sequestration"),
     (r"garde a vue", "garde a vue"),
@@ -57,6 +65,7 @@ _MARQUEURS_ELEVES = (
     (r"(demolir|detruire|raser|deguerpi\w*)[^.]{0,40}(demain|aujourd'hui|cette semaine|ce matin)", "demolition imminente"),
     (r"(demain|aujourd'hui|cette semaine)[^.]{0,40}(demolir|detruire|raser|deguerpi\w*)", "demolition imminente"),
     (r"\b(il|elle|ils|elles|on) (me|nous) menac\w*", "menaces"),
+    (r"\b(mari|femme|epouse|epoux|conjoint|concubin|patron|voisin|pere|mere|oncle|frere)\w* (me|nous) menac\w*", "menaces"),
     (r"\bmenace (de|d')\w*", "menaces"),
     (r"\bhuissier\w*", "commissaire de justice"),
     (r"licenciement", "licenciement"),
@@ -68,6 +77,7 @@ _MARQUEURS_ELEVES = (
     (r"delai de (24|48) heures|expire (demain|dans) ", "delai court"),
     (r"\b(vieill|handicap|malade|vulnerab)\w*", "vulnerabilite"),
     (r"(mon|le) (enfant|bebe) (a |de )", "presence d'un enfant"),
+    (r"(mariage|marier)[^.]{0,30}(force|contre (son|sa|mon|ma) (gre|volonte))", "mariage force"),
 )
 
 
