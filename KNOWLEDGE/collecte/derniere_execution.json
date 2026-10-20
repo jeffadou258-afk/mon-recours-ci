@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-20T11:19:54+00:00",
+ "execution": "2026-10-20T11:22:22+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -16,7 +16,28 @@
    "osd"
   ]
  },
- "traites": [],
+ "traites": [
+  {
+   "cle": "dec_biblio_ohada_notice_1860",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_2014",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_2017",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_23",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "senegal_auscgie_jo_2014",
+   "statut": "TELECHARGE"
+  }
+ ],
  "ignores": [
   "code_penal_2019_574_mffe",
   "code_penal_2019_574_civlii",

@@ -1,0 +1,43 @@
+{
+ "ancres": [
+  {
+   "texte": "Revue de l'ERSUMA",
+   "url": "https://biblio.ohada.org/index.php?lvl=notice_display&id=1872"
+  },
+  {
+   "texte": "Journal Officiel",
+   "url": "https://biblio.ohada.org/index.php?lvl=notice_display&id=1881"
+  },
+  {
+   "texte": "Bulletin ERSUMA",
+   "url": "https://biblio.ohada.org/index.php?lvl=notice_display&id=5837"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_biblio_ohada_recherche_jo_2017",
+ "date_recuperation": "2026-10-20T11:22:29+00:00",
+ "duree_s": 2.8,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T11:22:29+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 74825,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+2017"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://biblio.ohada.org/index.php?lvl=notice_display&id=1872",
+  "https://biblio.ohada.org/index.php?lvl=notice_display&id=1881",
+  "https://biblio.ohada.org/index.php?lvl=notice_display&id=5837"
+ ],
+ "octets": 74825,
+ "statut": "DECOUVERTE",
+ "titre_page": "Résultats d'une recherche par tags Catalogue en ligne",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+2017",
+ "url_finale": "https://biblio.ohada.org/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+2017"
+}

@@ -1,0 +1,48 @@
+{
+ "ancres": [
+  {
+   "texte": "",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=16"
+  },
+  {
+   "texte": "",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=17"
+  },
+  {
+   "texte": "",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=18"
+  },
+  {
+   "texte": "",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=19"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_biblio_ohada_notice_1860",
+ "date_recuperation": "2026-10-20T11:22:22+00:00",
+ "duree_s": 2.9,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T11:22:22+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 74181,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1860"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://biblio.ohada.org/doc_num.php?explnum_id=16",
+  "https://biblio.ohada.org/doc_num.php?explnum_id=17",
+  "https://biblio.ohada.org/doc_num.php?explnum_id=18",
+  "https://biblio.ohada.org/doc_num.php?explnum_id=19"
+ ],
+ "octets": 74181,
+ "statut": "DECOUVERTE",
+ "titre_page": "Acte uniforme portant organisation des procédures... Catalogue en ligne",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1860",
+ "url_finale": "https://biblio.ohada.org/index.php?lvl=notice_display&id=1860"
+}

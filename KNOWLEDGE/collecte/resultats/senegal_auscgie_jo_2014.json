@@ -1,0 +1,49 @@
+{
+ "categorie_source": "SECONDAIRE_AUTRE",
+ "cle": "senegal_auscgie_jo_2014",
+ "date_recuperation": "2026-10-20T11:22:34+00:00",
+ "duree_s": 10.8,
+ "extraction": {
+  "caracteres_natifs": 602209,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/senegal_auscgie_jo_2014.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "source secondaire : pas d'OCR (gain de temps) — le texte natif suffit au recoupement ou la source est écartée",
+  "pages": 240,
+  "pages_sans_texte": 12,
+  "sha256_texte": "sha256:a5696486052f82889ada5444635e0cee5e671b628edaae925f5f373b34c4f79c"
+ },
+ "fichier_pdf": "senegal_auscgie_jo_2014.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T11:22:34+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 6227054,
+   "sha256": "sha256:e306e4f872075ae0af33d2beee5ef00b638077d8108dcff9e80ecd416f3c1829",
+   "statut": "TELECHARGE",
+   "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-relatif-droit-societes-commerciales-gie-auscgie-jo-fevrier-2014.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 6227054,
+ "pdf": {
+  "CreationDate": "Fri Feb 14 10:11:03 2014 UTC",
+  "Creator": "Adobe InDesign CS6 (Windows)",
+  "ModDate": "Wed Jun 12 12:00:04 2019 UTC",
+  "PDF version": "1.6",
+  "Pages": "240",
+  "Producer": "Adobe PDF Library 10.0.1",
+  "Title": "J.O. OHADA n° spécial du 04.02.14",
+  "indices_ocr_editeur": [],
+  "polices": 26,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:e306e4f872075ae0af33d2beee5ef00b638077d8108dcff9e80ecd416f3c1829",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-relatif-droit-societes-commerciales-gie-auscgie-jo-fevrier-2014.pdf",
+ "url_finale": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-relatif-droit-societes-commerciales-gie-auscgie-jo-fevrier-2014.pdf",
+ "version_ocr": 1
+}
