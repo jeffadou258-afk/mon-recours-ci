@@ -1708,6 +1708,118 @@
    "lecture": "Toute société est désignée par une dénomination sociale, mentionnée dans ses statuts. Le texte ne traite ici ni de la disponibilité du nom ni des conflits avec une marque : ces vérifications restent à faire. Interprétation à valider par un juriste ; source OCR non recoupée.",
    "faits_requis": [],
    "etape_plan": "Insérer la dénomination retenue dans les statuts"
+  },
+  {
+   "id": "AUSCGIE_MENTIONS",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "17",
+   "titre": "Mentions obligatoires sur les documents d'une société",
+   "declencheurs": [
+    "mentions obligatoires",
+    "que doit porter ma facture",
+    "entete de facture",
+    "mentions sur la facture",
+    "papier a en tete"
+   ],
+   "citation": "La dénomination sociale doit figurer sur tous les actes et documents émanant de la société et destinés aux tiers, notamment les lettres, les factures, les annonces et publications diverses. Elle doit être précédée ou suivie immédiatement en caractères lisibles de l’indication de la forme de la société, du montant de son capital social, de l’adresse de son siège social et de la mention de son numéro d’immatriculation au registre du commerce et du crédit mobilier",
+   "lecture": "La dénomination sociale doit figurer sur tous les actes et documents destinés aux tiers (lettres, factures, annonces), précédée ou suivie immédiatement de la forme de la société, du montant du capital social, de l'adresse du siège et du numéro d'immatriculation au RCCM. Le texte ne fixe pas d'autres mentions et ne prévoit pas ici de sanction. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [],
+   "etape_plan": "Reprendre ces cinq mentions sur les factures et documents destinés aux tiers"
+  },
+  {
+   "id": "AUSCGIE_CAPITAL",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "65",
+   "titre": "Montant du capital social : qui le fixe",
+   "declencheurs": [
+    "capital minimum",
+    "capital social",
+    "montant du capital",
+    "combien de capital",
+    "capital de depart"
+   ],
+   "citation": "Le montant du capital social est librement déterminé par les associés. Toutefois, le présent Acte uniforme peut fixer un capital social minimum en raison de la forme ou de l’objet de la société",
+   "lecture": "Le montant du capital social est librement déterminé par les associés. L'Acte uniforme réserve toutefois la possibilité de fixer un capital minimum selon la forme ou l'objet de la société. Cet article ne donne AUCUN montant : il faut chercher la règle propre à la forme choisie. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [
+    [
+     "forme_sociale",
+     "Quelle forme de société est envisagée (SARL, SA, SAS…) ?"
+    ]
+   ],
+   "etape_plan": "Vérifier le minimum éventuel prévu pour la forme choisie avant de fixer le capital"
+  },
+  {
+   "id": "AUSCGIE_CESSION_PARTS",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "274",
+   "titre": "Cession de parts sociales : accord unanime des associés",
+   "declencheurs": [
+    "ceder mes parts",
+    "vendre mes parts",
+    "cession de parts",
+    "rachat de parts",
+    "sortir de la societe",
+    "vendre ma part"
+   ],
+   "citation": "Les parts sociales ne peuvent être cédées qu’avec le consentement unanime des associés. Toute cession de parts sociales intervenue en violation du présent alinéa est nulle. A défaut d’unanimité, la cession ne peut avoir lieu, mais les statuts peuvent aménager une procédure de rachat pour permettre le retrait de l’associé cédant",
+   "lecture": "Les parts sociales ne peuvent être cédées qu'avec le consentement unanime des associés ; une cession faite sans cet accord est nulle. À défaut d'unanimité, la cession ne peut avoir lieu, mais les statuts peuvent prévoir une procédure de rachat permettant le retrait de l'associé cédant. Le texte ne distingue pas ici selon la forme sociale : vérifier l'article applicable à la vôtre. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [
+    [
+     "forme_sociale",
+     "S'agit-il de parts sociales (SARL) ou d'actions (SA) ?"
+    ]
+   ],
+   "etape_plan": "Recueillir l'accord écrit de tous les associés ou vérifier la clause de rachat"
+  },
+  {
+   "id": "AUSCGIE_SOCIETE_EN_FORMATION",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "108",
+   "titre": "Actes signés avant l'immatriculation : reprise par la société",
+   "declencheurs": [
+    "societe en formation",
+    "avant l'immatriculation",
+    "avant la creation",
+    "actes accomplis avant",
+    "reprise des actes",
+    "engagement avant immatriculation"
+   ],
+   "citation": "Les actes et engagements accomplis pour le compte de la société en formation peuvent également être repris par la société, postérieurement à sa constitution, à la condition qu'ils soient approuvés par l’assemblée générale ordinaire, dans Îles conditions prévues par le présent Acte uniforme pour chaque forme de société, sauf clause contraire des statuts",
+   "lecture": "Les actes et engagements pris pour le compte d'une société en formation peuvent être repris par la société après sa constitution, à condition d'être approuvés par l'assemblée générale ordinaire dans les conditions prévues pour chaque forme de société, sauf clause contraire des statuts ; l'assemblée doit être pleinement informée de la nature et de la portée de chaque acte. Le texte ne dit pas ici qui répond des actes NON repris. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [
+    [
+     "acte_avant",
+     "Un acte a-t-il été signé au nom de la société avant son immatriculation ?"
+    ]
+   ],
+   "etape_plan": "Faire approuver les actes antérieurs par l'assemblée et conserver les preuves"
+  },
+  {
+   "id": "AUSCGIE_DUREE_DISSOLUTION",
+   "domaine": "contrats_dettes_commerce",
+   "numero_texte": "AUSCGIE-2014",
+   "article": "30",
+   "titre": "Fin de la durée statutaire : dissolution de plein droit",
+   "declencheurs": [
+    "duree de la societe",
+    "arrivee du terme",
+    "expiration de la societe",
+    "prorogation",
+    "fin de la societe"
+   ],
+   "citation": "L’arrivée du terme entraîne dissolution de plein droit de la société, à moins que sa prorogation ait été décidée dans les conditions prévues aux articles 32 et suivants ci-après",
+   "lecture": "L'arrivée du terme fixé dans les statuts entraîne la dissolution de plein droit de la société, sauf si sa prorogation a été décidée dans les conditions des articles 32 et suivants. Le texte ne détaille pas ici ces conditions ni les effets de la dissolution : ils figurent dans les articles suivants. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [
+    [
+     "terme",
+     "Une durée statutaire est-elle fixée et approche-t-elle de son terme ?"
+    ]
+   ],
+   "etape_plan": "Vérifier la date du terme dans les statuts et décider une prorogation à temps"
   }
  ],
  "rejets": []

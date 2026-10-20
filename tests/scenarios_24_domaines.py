@@ -104,11 +104,17 @@ SCENARIOS = {
     6: {
         "simple": cas("Je veux créer une société et m'inscrire au registre du commerce", etape=HORS, vision=6),
         "courant": cas("je veu cree ma societe et avoir le rccm", etape=HORS, vision=6),
-        "clarif": sans_objet(PAS_DE_FICHE),
+        "clarif": cas("Quel capital minimum pour créer une société ?", etape=CLAR,
+                      fiches={"AUSCGIE_CAPITAL"}, questions_min=1),
         "ambigu": cas("mon associé ne veut plus travailler", etape=HORS),
         "hors": cas("Comment vendre mon fonds de commerce ?", etape=HORS, vision=6),
         "urgent": sans_objet(PAS_DE_DANGER),
-        "abstention": cas("Quel capital minimum pour créer une société ?", etape=HORS, abstention=True),
+        # L'AUSCGIE 2014 (9 fiches depuis le 20/10/2026) répond désormais à la question
+        # du capital : l'article 65 dit qu'il est librement déterminé. L'abstention est
+        # donc déplacée sur une question que ce texte ne tranche pas — les frais
+        # d'immatriculation n'y figurent pas.
+        "abstention": cas("Combien coûte l'immatriculation au registre du commerce ?", etape=HORS,
+                          abstention=True),
     },
     7: {
         "simple": cas("J'ai acheté un téléphone défectueux et le vendeur refuse de me rembourser", etape=HORS,
