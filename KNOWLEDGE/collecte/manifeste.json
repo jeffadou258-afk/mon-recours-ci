@@ -10,7 +10,8 @@
   "SECONDAIRE_BASE_INTERNATIONALE": "Base d'une organisation internationale (FAOLEX)",
   "SECONDAIRE_AUTRE": "Autre diffusion de provenance incertaine",
   "DECOUVERTE": "Page HTML lue pour y relever des liens, rien n'est intégré",
-  "DESACTIVEE": "Entrée conservée pour mémoire : échec définitif constaté, voir « desactivee »"
+  "DESACTIVEE": "Entrée conservée pour mémoire : échec définitif constaté, voir « desactivee »",
+  "CANDIDAT_OFFICIEL": "Hôte candidat : identité de l'institution non établie de façon indépendante ; jamais intégré"
  },
  "date_creation": "2026-10-19",
  "sources": [
@@ -1869,10 +1870,15 @@
     4
    ],
    "url": "https://faolex.fao.org/docs/pdf/ivc210897.pdf",
-   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "categorie_source": "SECONDAIRE_FAC_SIMILE",
    "mode": "fichier",
    "notes": "Lien relevé sur la page LEAP (PNUE) découverte au run 39229656741 ; remplace ivc207091.pdf (404).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "SECONDAIRE_BASE_INTERNATIONALE",
+    "motif": "Image du JO n° 74 du 14/09/2015 hébergée par FAOLEX (analyse : KNOWLEDGE/collecte/analyses/code_travail_2015_faolex.json)"
+   }
   },
   {
    "cle": "code_penal_2019_574_civlii_source",
@@ -2123,10 +2129,15 @@
     12
    ],
    "url": "https://cima-afrique.org/wp-content/uploads/2023/06/CODE-CIMA-2019.pdf",
-   "categorie_source": "OFFICIEL_ORGANISATION",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Édition 2019 : modifications postérieures (règlements du Conseil des ministres) à rechercher. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_ORGANISATION",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "dec_civlii_taxo_code-civile-code-des-biens-et-obligations",
@@ -3234,10 +3245,15 @@
     4
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202015-532%20du%2020%20juillet%202015%20portant%20code%20du%20Travail.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Version d'origine probable : l'ordonnance n° 2021-902 la modifie (entrée suivante).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_ord_2021_902_travail",
@@ -3250,10 +3266,15 @@
     4
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02021-902%20du%2022%20d%C3%A9cembre%202021%20modifiant%20la%20loi%20n%C2%B02015-532%20du%2020%20juillet%202015%20portant%20Code%20du%20travail.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_jo_code_environnement_2023",
@@ -3266,10 +3287,15 @@
     19
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Environnement%20%20f%C3%A9v%202024.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Numéro 2023-900 tiré de LEAP (PNUE) : à confirmer à la lecture du JO.",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_jo_code_eau_2023",
@@ -3282,10 +3308,15 @@
     19
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Eau%20%20f%C3%A9v%202024.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_code_hygiene_salubrite",
@@ -3299,10 +3330,15 @@
     19
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/CODE%20HYGIENE%20ET%20DE%20LA%20SALUBRITE_compressed.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_loti_2014_812",
@@ -3315,10 +3351,15 @@
     13
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/LOI-N%C2%B02014-812-du-16-decembre-2014-dOrientation-du-Transport-InterieurLOTI.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_foncier_rural_2019_868",
@@ -3331,10 +3372,15 @@
     18
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/2019-10-14%20L2019-868%20modifiant%20L98-750%20Foncier%20rural_compressed.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_loi_finances_2024",
@@ -3347,10 +3393,15 @@
     11
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023%20portant%20budget%20de%20l%E2%80%99Etat%20pour%20l%E2%80%99ann%C3%A9e%202024.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_annexe_fiscale_2024",
@@ -3363,10 +3414,15 @@
     11
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Annexe%20fiscale%20%C3%A0%20la%20Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). Mesures fiscales de l'année : ne remplace pas le Code général des impôts.",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_code_maritime_2017_442",
@@ -3379,10 +3435,15 @@
     13
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202017-442%20du%2030%20juin%202017%20portant%20Code%20maritime.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "mef_echanges_electroniques_2017_500",
@@ -3396,10 +3457,15 @@
     14
    ],
    "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02017-500%20du%202%20ao%C3%BBt%202017%20relative%20aux%20%C3%A9changes%20%C3%A9lectroniques%20entre%20les%20usagers%20et%20les%20autorit%C3%A9s.pdf",
-   "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+   "categorie_source": "CANDIDAT_OFFICIEL",
    "mode": "fichier",
    "notes": "Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "reclassement": {
+    "le": "2026-10-20",
+    "de": "OFFICIEL_PORTAIL_GOUV",
+    "motif": "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)"
+   }
   },
   {
    "cle": "oapi_accord_bangui_fr",
@@ -4288,6 +4354,120 @@
    "categorie_source": "SECONDAIRE_AUTRE",
    "mode": "fichier",
    "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_16",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier 16 de la notice 1860",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=16",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture.",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_17",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier 17 de la notice 1860",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=17",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture.",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_18",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier 18 de la notice 1860",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=18",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture.",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_19",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier 19 de la notice 1860",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=19",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture.",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "dec_biblio_ohada_notice_1881",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1881",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "bulletin_display|doc_num\\.php|explnum",
+   "notes": "Collection « Journal Officiel » de l'OHADA (liste des numéros).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "refworld_etat_civil_2018_862",
+   "titre": "Loi n° 2018-862 du 19 novembre 2018 relative à l'état civil (Refworld, HCR)",
+   "numero_texte": "2018-862",
+   "date_texte": "2018-11-19",
+   "type_texte": "loi",
+   "autorite": "HCR — base Refworld (reproduction ; source déclarée : autorités nationales)",
+   "domaines": [
+    2
+   ],
+   "url": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2018-12/5ce3ed834.pdf",
+   "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+   "mode": "fichier",
+   "notes": "Pour la page 2 illisible des deux exemplaires officiels (art. 5 à 20) : étalon seulement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "dec_faolex_notice_210897",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://www.fao.org/faolex/results/details/fr/c/LEX-FAOC210897/",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "\\.pdf|faolex",
+   "notes": "Notice FAOLEX du fac-similé du Code du travail (provenance).",
    "ajoutee_le": "2026-10-20"
   }
  ]

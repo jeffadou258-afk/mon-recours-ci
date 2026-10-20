@@ -162,9 +162,10 @@
     "indemnite de licenciement"
    ],
    "lacunes": [
-    "Code du travail 2015-532 : aucun exemplaire sur un hôte officiel accessible (emploi.gouv.ci refuse l'accès, CIVLII réservé aux abonnés) ; le portail du MEF republie une compilation privée (ivoire-juriste).",
-    "Fac-similé du JO n° 74 du 14/09/2015 disponible via FAOLEX (hôte tiers) : son usage comme référence est une décision du propriétaire.",
-    "Ordonnance 2021-902 (modification) collectée (portail du MEF) ; Code de prévoyance sociale : reproduction OMS seulement."
+    "Code du travail 2015-532 : aucun exemplaire sur un hôte officiel (emploi.gouv.ci refuse l'accès, CIVLII réservé aux abonnés).",
+    "Fac-similé du JO n° 74 du 14/09/2015 (FAOLEX) analysé : complet, 343 articles découpés, 309 sur 339 concordent avec la compilation ivoire-juriste ; source SECONDAIRE, 8 brouillons de fiches non chargés (KNOWLEDGE/fiches_brouillons/).",
+    "Ordonnance 2021-902 (modification) collectée sur un hôte candidat ; Code de prévoyance sociale : reproduction OMS seulement.",
+    "Aucune fiche servie : exemplaire officiel, consolidation et relecture juridique requis."
    ]
   },
   {
@@ -369,7 +370,8 @@
     "prime d'assurance"
    ],
    "lacunes": [
-    "Code CIMA (édition 2019) collecté sur cima-afrique.org (608 pages) ; non intégré : le domaine n'a pas de rattachement au moteur, et les modifications postérieures à 2019 ne sont pas recherchées."
+    "Code CIMA (édition 2019, 608 pages) collecté sur cima-afrique.org : hôte au registre des sources CANDIDATES (identité non établie de façon indépendante) ; non intégré.",
+    "Le domaine n'a pas de rattachement au moteur ; modifications postérieures à 2019 non recherchées."
    ]
   },
   {
@@ -555,7 +557,7 @@
    "lacunes": [
     "Trois fiches de définition (domaine public, expropriation, réserves foncières) sans question de clarification.",
     "Code de l'environnement absent ; procédure et indemnisation d'expropriation non détaillées dans les fiches.",
-    "Code de l'environnement (loi 2023-900) et Code de l'eau : JO officiels collectés (portail du MEF), lus par OCR local, non intégrés."
+    "Code de l'environnement et Code de l'eau : JO collectés sur economie-ivoirienne.ci (source CANDIDATE), lus par OCR local, non intégrés."
    ]
   },
   {
@@ -575,7 +577,7 @@
     "logo copie"
    ],
    "lacunes": [
-    "Accord de Bangui révisé (OAPI, texte natif) collecté ; non intégré : le domaine n'a pas de rattachement au moteur (décision de périmètre)."
+    "Accord de Bangui révisé collecté sur oapi.int (identité établie par l'annuaire de l'OMPI) ; non intégré : le domaine n'a pas de rattachement au moteur (décision de périmètre)."
    ]
   },
   {

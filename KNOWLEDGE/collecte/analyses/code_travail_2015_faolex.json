@@ -1,0 +1,143 @@
+{
+ "objet": "Analyse du fac-similé du Code du travail de 2015 hébergé par FAOLEX (décision du propriétaire du 20/10/2026 : récupérer et analyser, classer en source secondaire).",
+ "date": "2026-10-20",
+ "cle": "travail_2015_532_faolex_210897",
+ "provenance": {
+  "url": "https://faolex.fao.org/docs/pdf/ivc210897.pdf",
+  "hote": "faolex.fao.org (FAO, base FAOLEX — organisation internationale, hôte tiers)",
+  "notice": "LEX-FAOC210897, liée depuis la page LEAP du PNUE relevée au run 39229656741",
+  "sha256_pdf": "sha256:0b8ea7c676689f23824141fce5f779ef03b974955a94013ffa49931d0476d059",
+  "octets": 6875176,
+  "pdf": {
+   "CreationDate": "Wed May 18 17:05:24 2022 UTC",
+   "Creator": "PDFium",
+   "PDF version": "1.7",
+   "Pages": "37",
+   "Producer": "PDFium",
+   "indices_ocr_editeur": [],
+   "polices": 11,
+   "qpdf_check": "ok"
+  },
+  "telecharge_le": "2026-10-20T10:08:16+00:00"
+ },
+ "identite_constatee": {
+  "document": "Journal officiel de la République de Côte d'Ivoire, 57e année, n° 74, lundi 14 septembre 2015",
+  "acte": "Loi n° 2015-532 du 20 juillet 2015 portant Code du travail (sommaire et titre ; formule de promulgation)",
+  "complet": "oui : du sommaire à « Fait à Abidjan, le 20 juillet 2015 », suivi de la partie non officielle (annonces)",
+  "pages": 37,
+  "calque_texte_du_pdf": "illisible (calque dégradé sans indice d'éditeur) ; texte lu par OCR local",
+  "lecture": "tesseract tessdata_best 300 dpi, confiance moyenne 93.3"
+ },
+ "decoupage": {
+  "articles_decoupes": 343,
+  "couverture_mesuree": 0.721,
+  "en_tetes_ocr_retablis": 136,
+  "remarque": "numérotation décimale (« Art. 18.12 ») ; la couverture est mesurée par le corpus sur les numéros entiers et décimaux"
+ },
+ "concordance_avec_compilations": {
+  "travail_2015_532_uvci": {
+   "articles_compilation": 463,
+   "communs": 339,
+   "concordants_0_80": 309,
+   "divergents": [
+    "2",
+    "6",
+    "9",
+    "12",
+    "13",
+    "13.3",
+    "15.3",
+    "16.1",
+    "16.10",
+    "16.6",
+    "18",
+    "18.14",
+    "21",
+    "23",
+    "25.6",
+    "31",
+    "31.7",
+    "32",
+    "43",
+    "44.1",
+    "51",
+    "53",
+    "61",
+    "63",
+    "71",
+    "72",
+    "81",
+    "82",
+    "91",
+    "110.5"
+   ],
+   "absents_de_la_compilation": [
+    "13.17",
+    "21.14",
+    "102",
+    "110"
+   ]
+  },
+  "mef_code_travail_2015_532": {
+   "articles_compilation": 462,
+   "communs": 338,
+   "concordants_0_80": 305,
+   "divergents": [
+    "2",
+    "6",
+    "9",
+    "12",
+    "13",
+    "13.3",
+    "13.31",
+    "14.4",
+    "15.3",
+    "16.1",
+    "16.10",
+    "18",
+    "21",
+    "23",
+    "25.6",
+    "31",
+    "31.7",
+    "32",
+    "33.8",
+    "43",
+    "44.1",
+    "51",
+    "53",
+    "61",
+    "63",
+    "71",
+    "72",
+    "73.8",
+    "81",
+    "82",
+    "91",
+    "110.3",
+    "110.5"
+   ],
+   "absents_de_la_compilation": [
+    "13.17",
+    "18.14",
+    "21.14",
+    "102",
+    "110"
+   ]
+  }
+ },
+ "actualite": {
+  "texte": "version d'origine (2015)",
+  "modifications_connues": [
+   "ordonnance n° 2021-902 du 22 décembre 2021 (collectée, portail du MEF)"
+  ],
+  "consequence": "un article peut avoir été modifié depuis 2015 : la version en vigueur n'est pas établie"
+ },
+ "classement": "SECONDAIRE_FAC_SIMILE — authenticité non établie (hôte tiers), actualité non établie ; jamais source de référence citable",
+ "usage_autorise": "étalon de recoupement ; brouillons de fiches NON chargés par le moteur (KNOWLEDGE/fiches_brouillons/), statut BROUILLON_SOURCE_SECONDAIRE",
+ "validations_necessaires": [
+  "exemplaire du JO n° 74 sur un hôte officiel (SGG, Imprimerie nationale, ministère de l'Emploi) ou certifié",
+  "consolidation au regard de l'ordonnance 2021-902 et des textes postérieurs",
+  "relecture par un juriste en droit du travail"
+ ]
+}

@@ -256,10 +256,11 @@ def decision(evaluation, controle_structurel=None):
 # rapportée : c'est une lecture, déclarée comme telle dans la provenance.
 _EN_TETE_OCR = re.compile(
     r"(?m)^(?P<pre>[ \t]*)(?P<mot>Art|Ait|Aït|An|Arl|Ari|Aft|Ant|Aru|Arı|Arts|Artt|Aart|Ar|At|Avt|Atr)"
-    r"(?P<pt>[ \t]*[\.,']?[ \t]*)(?P<num>\d{1,3})(?P<apres>[ \t]*[\.,]?[ \t]*)(?P<tiret>[—–]|-{1,2}(?=[ \t]*\S))")
+    r"(?P<pt>[ \t]*[\.,']?[ \t]*)(?P<num>\d{1,3}(?:[\.,]\d{1,3}(?!\d))?)(?P<apres>[ \t]*[\.,]?[ \t]*)"
+    r"(?P<tiret>[—–‐‑]|-{1,2}(?=[ \t]*\S))")
 
 
-_EN_TETE_DEJA_LISIBLE = re.compile(r"^[ \t]*Art\.?[ \t]+\d{1,3}[ \t]*[\.,]?[ \t]*[—–-]")
+_EN_TETE_DEJA_LISIBLE = re.compile(r"^[ \t]*Art\.?[ \t]+\d{1,3}(?:\.\d{1,3})?[ \t]*[\.,]?[ \t]*[—–-]")
 
 
 def normaliser_en_tetes_jo(texte):
@@ -273,7 +274,8 @@ def normaliser_en_tetes_jo(texte):
         original = m.group(0)
         if _EN_TETE_DEJA_LISIBLE.match(original):
             return original
-        corrections.append((m.group("num"), original.strip()))
-        return "%sArt. %s. %s" % (m.group("pre"), m.group("num"), m.group("tiret"))
+        numero = m.group("num").replace(",", ".")   # « Art. 11,8— » : numérotation décimale du Code du travail
+        corrections.append((numero, original.strip()))
+        return "%sArt. %s. %s" % (m.group("pre"), numero, "—" if m.group("tiret") in "‐‑" else m.group("tiret"))
 
     return _EN_TETE_OCR.sub(remplacer, texte or ""), corrections

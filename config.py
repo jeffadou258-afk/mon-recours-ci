@@ -148,12 +148,10 @@ INSTITUTIONS_HORS_GOUV_CI = (
     "artci.ci",                 # Autorite de Regulation des Telecommunications/TIC
     "ohada.org",                # Organisation pour l'Harmonisation en Afrique du Droit des Affaires
     "courconstitutionnelle.ci", # Conseil constitutionnel
-    # Ajouts du 20/10/2026 (reprise de la collecte) : organisations supranationales
-    # dont la Côte d'Ivoire est membre et qui EDICTENT elles-memes le texte, comme
-    # l'OHADA pour les Actes uniformes. A confirmer par le proprietaire.
-    "cima-afrique.org",         # Conference Interafricaine des Marches d'Assurances (Code CIMA)
+    # Ajout du 20/10/2026, identite ETABLIE par une source independante : l'annuaire
+    # de l'OMPI donne www.oapi.int comme site de l'OAPI ; WIPO Lex liste la Cote
+    # d'Ivoire parmi ses membres. Voir SOURCES_CANDIDATES pour CIMA et le portail du MEF.
     "oapi.int",                 # Organisation Africaine de la Propriete Intellectuelle (Accord de Bangui)
-    "economie-ivoirienne.ci",   # Portail du Ministere de l'Economie et des Finances (republication de codes)
 )
 
 # --------------------------------------------------------------------------
@@ -266,26 +264,15 @@ SOURCES_OFFICIELLES = (
         "type": "organisation_supranationale",
     },
     {
-        "id": "MEF_PORTAIL_ECONOMIE",
-        "nom": "Ministere de l'Economie et des Finances — portail economie-ivoirienne.ci",
-        "url": "https://www.economie-ivoirienne.ci/",
-        "role": ("Portail lance par le ministre de l'Economie et des Finances (annonce sur finances.gouv.ci) ; "
-                 "republie des codes sectoriels et des Journaux officiels — republication, a recouper"),
-        "type": "ministere",
-    },
-    {
-        "id": "CIMA",
-        "nom": "Conference Interafricaine des Marches d'Assurances",
-        "url": "https://cima-afrique.org/",
-        "role": "Code des assurances des Etats membres (supranational, applicable en Cote d'Ivoire)",
-        "type": "organisation_supranationale",
-    },
-    {
         "id": "OAPI",
         "nom": "Organisation Africaine de la Propriete Intellectuelle",
         "url": "https://oapi.int/",
         "role": "Accord de Bangui et ses annexes (propriete industrielle, droit d'auteur)",
         "type": "organisation_supranationale",
+        "preuves_identite": (
+            "Annuaire de l'OMPI (wipo.int/fr/web/country-profiles/contact?dir_id=1) : site http://www.oapi.int, consulte le 20/10/2026",
+            "WIPO Lex (wipo.int/wipolex/fr/treaties/members/profile/OAPI) : Cote d'Ivoire membre, consulte le 20/10/2026",
+        ),
     },
     {
         "id": "CONSEIL_CONSTITUTIONNEL",
@@ -293,6 +280,38 @@ SOURCES_OFFICIELLES = (
         "url": "https://courconstitutionnelle.ci/",
         "role": "Decisions et textes constitutionnels",
         "type": "juridiction",
+    },
+)
+
+
+# --------------------------------------------------------------------------
+# Sources CANDIDATES (decision du proprietaire du 20/10/2026)
+# --------------------------------------------------------------------------
+# Hors du perimetre officiel : leurs documents sont collectes et analyses, mais
+# jamais integres au corpus de reference tant que l'identite et le role ne sont
+# pas etablis par une source independante. Chaque entree dit ce qui manque.
+SOURCES_CANDIDATES = (
+    {
+        "id": "CIMA",
+        "nom": "Conference Interafricaine des Marches d'Assurances",
+        "url": "https://cima-afrique.org/",
+        "role_presume": "Code des assurances des Etats membres (supranational)",
+        "preuves": ("Le site se presente comme celui de la CIMA (Libreville) et publie le Code CIMA 2019 et des "
+                    "Bulletins officiels ; constate le 20/10/2026",),
+        "manque": ("confirmation independante du domaine (OMPI, UEMOA, ministere ivoirien charge des assurances)",
+                   "confirmation de l'adhesion de la Cote d'Ivoire et de l'effet direct du Code"),
+    },
+    {
+        "id": "MEF_PORTAIL_ECONOMIE",
+        "nom": "Portail economie-ivoirienne.ci (Direction generale de l'Economie)",
+        "url": "https://www.economie-ivoirienne.ci/",
+        "role_presume": "Portail du ministere de l'Economie, des Finances et du Budget ; republie des codes sectoriels",
+        "preuves": ("Le portail se declare opere par la Direction generale de l'Economie (pied de page, metadonnees), "
+                    "rattachee au ministere de l'Economie, des Finances et du Budget (article du 26/07/2023)",
+                    "finances.gouv.ci publie une actualite « le ministre Adama Coulibaly lance le portail d'informations et "
+                    "de promotion de l'economie » (titre releve par recherche ; page fermee aux robots, domaine non lu)"),
+        "manque": ("lien explicite depuis un domaine *.gouv.ci vers economie-ivoirienne.ci",
+                   "fiabilite du contenu : le « Code du travail » publie est une compilation privee (ivoire-juriste)"),
     },
 )
 

@@ -1,0 +1,90 @@
+{
+ "statut": "BROUILLON_SOURCE_SECONDAIRE",
+ "avertissement": "Brouillons NON chargés par le moteur et NON validés juridiquement. Texte lu par OCR sur un fac-similé du JO n° 74 du 14/09/2015 hébergé par FAOLEX (hôte tiers : authenticité non établie) ; version de 2015, peut-être modifiée depuis (ordonnance 2021-902 notamment). Avant toute mise en service : exemplaire officiel, consolidation, relecture par un juriste.",
+ "source": "KNOWLEDGE/collecte/analyses/code_travail_2015_faolex.json",
+ "date": "2026-10-20",
+ "numero_texte": "2015-532",
+ "domaine": "travail",
+ "fiches": [
+  {
+   "id": "TRAVAIL_14.5",
+   "article": "14.5",
+   "titre": "Période d'essai : écrit obligatoire",
+   "citation": "Lorsque les parties au contrat de travail décident de soumettre leurs relations à une période d'essai ou de la renouveler, le contrat doit être passé par écrit ou constaté par une lettre d'embauche mentionnant la durée de la période d'essai.",
+   "lecture": "Une période d'essai doit être prévue par écrit (contrat ou lettre d'embauche indiquant sa durée) ; sa durée maximale est fixée par décret.",
+   "sha256_texte_article": "sha256:58f319451351d364711dceea9534139b8bd773b68f032e709f5ade47983a59d0",
+   "concordance_compilation_ivoire_juriste": 0.994,
+   "nombres_substitues_vs_compilation": []
+  },
+  {
+   "id": "TRAVAIL_18.1",
+   "article": "18.1",
+   "titre": "Rupture pendant la période d'essai",
+   "citation": "Pendant la période d'essai fixée sans fraude ni abus, le contrat de travail peut être rompu librement sans préavis et sans que l'une ou l'autre des parties puisse prétendre à indem- nités,",
+   "lecture": "Pendant une période d'essai fixée sans fraude ni abus, le contrat peut être rompu librement, sans préavis ni indemnité.",
+   "sha256_texte_article": "sha256:77e7fe57579991d9186e39d3fc1a13936b9e11acf6070d72028eb76fcd061df3",
+   "concordance_compilation_ivoire_juriste": 0.979,
+   "nombres_substitues_vs_compilation": []
+  },
+  {
+   "id": "TRAVAIL_18.7",
+   "article": "18.7",
+   "titre": "Rupture sans préavis : indemnité",
+   "citation": "Toute rupture de contrat à durée indéterminée. sans préavis ou sans que le délai dè préavis ait été intégralement observé, emporte obligation, pour la partie responsable, de verser à l'autre une indemnité dont le montant correspond à la rémuné- ration ct aux avantages de toute nature dont aurait bénéficié le travailleur durant le délai de préavis qui n'a pas été effectivement respecté.",
+   "lecture": "Rompre un contrat à durée indéterminée sans respecter le préavis oblige la partie responsable à verser une indemnité correspondant à la rémunération du préavis non effectué ; la faute lourde fait exception, sous le contrôle du juge.",
+   "sha256_texte_article": "sha256:0c0bb7cf41f00bdd8b63b4a0d58da6814ae4901b19c5fd951b8b02d017c189bb",
+   "concordance_compilation_ivoire_juriste": 0.993,
+   "nombres_substitues_vs_compilation": []
+  },
+  {
+   "id": "TRAVAIL_18.15",
+   "article": "18.15",
+   "titre": "Licenciement abusif : dommages-intérêts",
+   "citation": "Toute rupture abusive du contrat donne lieu à dommages-intérêts. Les licenciements effectués sans motif légi- timé ou en violation des dispositions de l'article 4 du présent Code ou les licenciements économiques collectifs, sans respect de la procédure requise ci-dessus ou pour faux motif, sont abu- sifs.",
+   "lecture": "Une rupture abusive du contrat donne lieu à dommages-intérêts ; sont notamment abusifs les licenciements sans motif légitime.",
+   "sha256_texte_article": "sha256:a5b0c04a1043690cd826d087bd20d062625afad41fe96284edc70360e11cbc44",
+   "concordance_compilation_ivoire_juriste": 0.996,
+   "nombres_substitues_vs_compilation": []
+  },
+  {
+   "id": "TRAVAIL_21.2",
+   "article": "21.2",
+   "titre": "Durée normale du travail",
+   "citation": "la durée nor- male du travail des personnels, quels que soient leur sexe et leur mode de rémunération, est fixée à quarante heures par semaine.",
+   "lecture": "Hors établissements agricoles, la durée normale du travail est de quarante heures par semaine ; elle peut être dépassée selon les règles des heures supplémentaires et des équivalences.",
+   "sha256_texte_article": "sha256:271fd83cbc89c9c28877f60e3acc0594f266fadd270da380d01b4d64ef3a05f5",
+   "concordance_compilation_ivoire_juriste": 0.998,
+   "nombres_substitues_vs_compilation": []
+  },
+  {
+   "id": "TRAVAIL_25.1",
+   "article": "25.1",
+   "titre": "Congés payés",
+   "citation": "Sauf disposition plus favorable des conventions collectives ou du contrat individuel, le travailleur acquiert droit au congé payé, à la charge de l'employeur, à raison de 2,2 jours ouvrables par mois de service effectif.",
+   "lecture": "Sauf disposition plus favorable, le travailleur acquiert 2,2 jours ouvrables de congé payé par mois de service effectif.",
+   "sha256_texte_article": "sha256:11810fa8774a5a10ac7ea0bda788fdd842e9005c5a9729b29cc768fa44194a78",
+   "concordance_compilation_ivoire_juriste": 1.0,
+   "nombres_substitues_vs_compilation": []
+  },
+  {
+   "id": "TRAVAIL_32.3",
+   "article": "32.3",
+   "titre": "Délai de paiement du salaire",
+   "citation": "Les paiements mensuels doivent être effectués au plus tard huit jours après la fin du mois de travail qui donne droit au salaire.",
+   "lecture": "Le salaire mensuel doit être payé au plus tard huit jours après la fin du mois de travail.",
+   "sha256_texte_article": "sha256:f378f5f0926bed994b4dc8a5aee3825d00fb60b4ed4b525208f58db6e1bca952",
+   "concordance_compilation_ivoire_juriste": 0.988,
+   "nombres_substitues_vs_compilation": []
+  },
+  {
+   "id": "TRAVAIL_33.6",
+   "article": "33.6",
+   "titre": "Interrompre la prescription d'un salaire impayé",
+   "citation": "Elle n'est interrompue que par : — une reconnaissance écrite de l'employeur mentionnant le montant du salaire dû ; — une réclamation du travailleur lésé adressée à son em- ployeur par lettre recommandée avec accusé de réception ; — une requête adressée à l'inspecteur du Travail et des Lois sociales avec accusé de réception : 0 0000 — une requête déposée au tribunal du Travail et enregistrée au greffe.",
+   "lecture": "La prescription d'une créance de salaire est interrompue notamment par une reconnaissance écrite de l'employeur, une lettre recommandée du travailleur, une requête à l'inspecteur du Travail ou une requête au tribunal du Travail.",
+   "sha256_texte_article": "sha256:40218517128b50c6d179e7d3602ae857a7f700ca7c138c14d43e903c197a5e9f",
+   "concordance_compilation_ivoire_juriste": 0.984,
+   "nombres_substitues_vs_compilation": []
+  }
+ ]
+}

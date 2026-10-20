@@ -440,11 +440,50 @@ AJOUTS_4 = [
 ]
 
 
+# Reclassements constatés à la lecture du document.
+_CANDIDAT = ("CANDIDAT_OFFICIEL", "Hôte au registre des sources CANDIDATES (config.SOURCES_CANDIDATES) : identité non "
+             "établie par une source indépendante ; collecté et analysé, jamais intégré (décision du 20/10/2026)")
+RECLASSEMENTS = {
+    **{cle: _CANDIDAT for cle in ("cima_code_2019", "mef_code_travail_2015_532", "mef_ord_2021_902_travail",
+                                  "mef_jo_code_environnement_2023", "mef_jo_code_eau_2023", "mef_code_hygiene_salubrite",
+                                  "mef_loti_2014_812", "mef_foncier_rural_2019_868", "mef_loi_finances_2024",
+                                  "mef_annexe_fiscale_2024", "mef_code_maritime_2017_442",
+                                  "mef_echanges_electroniques_2017_500")},
+    "travail_2015_532_faolex_210897": ("SECONDAIRE_FAC_SIMILE",
+        "Image du JO n° 74 du 14/09/2015 hébergée par FAOLEX (analyse : KNOWLEDGE/collecte/analyses/code_travail_2015_faolex.json)"),
+}
+
+
+# ======================================================================
+# Cinquième lot (après le run 39414429864)
+# ======================================================================
+AJOUTS_5 = [
+    {"cle": "ohada_jo_aupc_2015_explnum_%d" % n,
+     "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier %d de la notice 1860" % n,
+     "numero_texte": "AUPCAP-2015", "date_texte": "2015-09-10", "type_texte": "acte_uniforme",
+     "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)", "domaines": [6, 23],
+     "url": "https://biblio.ohada.org/doc_num.php?explnum_id=%d" % n, "categorie_source": "OFFICIEL_ORGANISATION",
+     "mode": "fichier", "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture."}
+    for n in (16, 17, 18, 19)]
+AJOUTS_5 += [
+    decouverte("dec_biblio_ohada_notice_1881", PMB + "lvl=notice_display&id=1881",
+               r"bulletin_display|doc_num\.php|explnum", "Collection « Journal Officiel » de l'OHADA (liste des numéros)."),
+    {"cle": "refworld_etat_civil_2018_862", "titre": "Loi n° 2018-862 du 19 novembre 2018 relative à l'état civil (Refworld, HCR)",
+     "numero_texte": "2018-862", "date_texte": "2018-11-19", "type_texte": "loi",
+     "autorite": "HCR — base Refworld (reproduction ; source déclarée : autorités nationales)", "domaines": [2],
+     "url": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2018-12/5ce3ed834.pdf",
+     "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE", "mode": "fichier",
+     "notes": "Pour la page 2 illisible des deux exemplaires officiels (art. 5 à 20) : étalon seulement. " + TROUVE},
+    decouverte("dec_faolex_notice_210897", "https://www.fao.org/faolex/results/details/fr/c/LEX-FAOC210897/",
+               r"\.pdf|faolex", "Notice FAOLEX du fac-similé du Code du travail (provenance)."),
+]
+
+
 def main():
     manifeste = json.load(open(MANIFESTE, encoding="utf-8"))
     existantes = {s["cle"]: s for s in manifeste["sources"]}
     ajoutees = 0
-    for entree in AJOUTS + AJOUTS_2 + AJOUTS_3 + AJOUTS_4:
+    for entree in AJOUTS + AJOUTS_2 + AJOUTS_3 + AJOUTS_4 + AJOUTS_5:
         if entree["cle"] not in existantes:
             entree["ajoutee_le"] = DATE
             manifeste["sources"].append(entree)
@@ -453,6 +492,10 @@ def main():
     for cle, segment in SEGMENTS.items():
         if cle in existantes and existantes[cle].get("segment") != segment:
             existantes[cle]["segment"] = segment
+    for cle, (categorie, motif) in RECLASSEMENTS.items():
+        if cle in existantes and existantes[cle]["categorie_source"] != categorie:
+            existantes[cle]["reclassement"] = {"le": DATE, "de": existantes[cle]["categorie_source"], "motif": motif}
+            existantes[cle]["categorie_source"] = categorie
     for cle, constat in VERSIONS_ABROGEES.items():
         if cle in existantes:
             existantes[cle]["version_abrogee"] = {"le": DATE, "constat": constat,
@@ -477,6 +520,8 @@ def main():
                       "HTTP 403 : refus d'accès du serveur ; aucune tentative de contournement."),
             "remplacee_par": remplacante}
         desactivees += 1
+    manifeste["categories"].setdefault(
+        "CANDIDAT_OFFICIEL", "Hôte candidat : identité de l'institution non établie de façon indépendante ; jamais intégré")
     manifeste["categories"].setdefault(
         "DESACTIVEE", "Entrée conservée pour mémoire : échec définitif constaté, voir « desactivee »")
     with open(MANIFESTE, "w", encoding="utf-8") as flux:

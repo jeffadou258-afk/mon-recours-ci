@@ -346,3 +346,37 @@ class TestReconstructionDeBase(unittest.TestCase):
                                "WHERE d.url_source = ?", (rapport["url"],)).fetchone()[0]
         conn.close()
         self.assertEqual(indexes, 0, "un document refusé ne doit avoir aucun article indexé")
+
+
+class TestRegistreDesCandidates(unittest.TestCase):
+    def test_candidates_hors_du_perimetre_officiel(self):
+        import config
+        from core.sources import est_hote_officiel
+        for candidate in config.SOURCES_CANDIDATES:
+            self.assertFalse(est_hote_officiel(candidate["url"]), candidate["id"])
+            self.assertTrue(candidate["manque"], candidate["id"])
+
+    def test_documents_des_candidates_jamais_officiels(self):
+        import urllib.parse
+        import config
+        hotes = {urllib.parse.urlparse(c["url"]).hostname.replace("www.", "") for c in config.SOURCES_CANDIDATES}
+        manifeste = json.load(open(MANIFESTE, encoding="utf-8"))
+        for s in manifeste["sources"]:
+            hote = (urllib.parse.urlparse(s["url"]).hostname or "").replace("www.", "")
+            if hote in hotes:
+                self.assertFalse(s["categorie_source"].startswith("OFFICIEL"), s["cle"])
+
+    def test_oapi_officielle_avec_preuves(self):
+        import config
+        oapi = config.source_par_id("OAPI")
+        self.assertIsNotNone(oapi)
+        self.assertTrue(any("OMPI" in p for p in oapi["preuves_identite"]))
+
+    def test_brouillons_travail_non_charges(self):
+        from core import catalogue
+        ids = {f["id"] for f in catalogue.charger()}
+        brouillons = json.load(open(os.path.join(RACINE, "KNOWLEDGE", "fiches_brouillons", "travail_2015_faolex.json"),
+                                    encoding="utf-8"))
+        self.assertEqual(brouillons["statut"], "BROUILLON_SOURCE_SECONDAIRE")
+        for f in brouillons["fiches"]:
+            self.assertNotIn(f["id"], ids)
