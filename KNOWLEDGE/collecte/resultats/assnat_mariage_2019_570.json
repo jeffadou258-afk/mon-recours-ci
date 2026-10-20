@@ -1,0 +1,47 @@
+{
+ "categorie_source": "OFFICIEL_INSTITUTION",
+ "cle": "assnat_mariage_2019_570",
+ "date_recuperation": "2026-10-20T10:08:03+00:00",
+ "duree_s": 6.2,
+ "extraction": {
+  "caracteres_natifs": 35586,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/assnat_mariage_2019_570.txt",
+  "ocr_force": false,
+  "pages": 16,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:90a91e533c3229cb4601b25411719f711b8e933234de28cebed26fbe377a725b"
+ },
+ "fichier_pdf": "assnat_mariage_2019_570.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:03+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 631016,
+   "sha256": "sha256:ebef20d4a796804e1939d8ce48eabd84ecfba595a64fa86c9c47e921b80b089e",
+   "statut": "TELECHARGE",
+   "url": "https://www.assnat.ci/IMG/pdf/loi_relative_au_mariage.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 631016,
+ "pdf": {
+  "CreationDate": "Sat May  9 19:19:16 2020 UTC",
+  "Creator": "Microsoft® Word 2016",
+  "ModDate": "Sat May  9 19:19:16 2020 UTC",
+  "PDF version": "1.5",
+  "Pages": "16",
+  "Producer": "Microsoft® Word 2016",
+  "indices_ocr_editeur": [],
+  "polices": 9,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:ebef20d4a796804e1939d8ce48eabd84ecfba595a64fa86c9c47e921b80b089e",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.assnat.ci/IMG/pdf/loi_relative_au_mariage.pdf",
+ "url_finale": "https://www.assnat.ci/IMG/pdf/loi_relative_au_mariage.pdf",
+ "version_ocr": 1
+}

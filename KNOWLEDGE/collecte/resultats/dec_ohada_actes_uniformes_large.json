@@ -1,0 +1,513 @@
+{
+ "ancres": [
+  {
+   "texte": "Accéder à la Jurisprudence OHADA",
+   "url": "https://www.ohada.org/acceder-a-la-jurisprudence-ohada/"
+  },
+  {
+   "texte": "Médiation",
+   "url": "https://www.ohada.org/acte-uniforme-relatif-a-la-mediation/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/acte-uniforme-relatif-au-droit-comptable-et-a-linformation-financiere-audcif/"
+  },
+  {
+   "texte": "Français",
+   "url": "https://www.ohada.org/actes-uniformes/"
+  },
+  {
+   "texte": "Actualité",
+   "url": "https://www.ohada.org/actualite-ohada/"
+  },
+  {
+   "texte": "Agenda évènementiel",
+   "url": "https://www.ohada.org/agenda-evenementiel/"
+  },
+  {
+   "texte": "Agenda",
+   "url": "https://www.ohada.org/agenda-ohada/"
+  },
+  {
+   "texte": "Bibliographie",
+   "url": "https://www.ohada.org/bibliographie/"
+  },
+  {
+   "texte": "Cour Commune de Justice et d’Arbitrage (CCJA)",
+   "url": "https://www.ohada.org/ccja-en-bref/"
+  },
+  {
+   "texte": "Arbitrage",
+   "url": "https://www.ohada.org/centre-darbitrage-de-lohada/"
+  },
+  {
+   "texte": "CNC-OHADA",
+   "url": "https://www.ohada.org/cnc-en-bref/"
+  },
+  {
+   "texte": "Contact de nos institutions",
+   "url": "https://www.ohada.org/contact-de-nos-institutions/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/contrats-de-transport-de-marchandises-par-route/"
+  },
+  {
+   "texte": "Annonces",
+   "url": "https://www.ohada.org/dernieres-annonces/"
+  },
+  {
+   "texte": "Dernières nouvelles",
+   "url": "https://www.ohada.org/dernieres-nouvelles/"
+  },
+  {
+   "texte": "Devenir membre de la communauté OHADA",
+   "url": "https://www.ohada.org/devenir-membre-de-la-communaute-ohada/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/droit-commercial-general/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/droit-de-larbitrage/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/droit-des-societes-commerciales-et-du-gie/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/droit-des-societes-cooperatives/"
+  },
+  {
+   "texte": "Ecrire à l’OHADA",
+   "url": "https://www.ohada.org/ecrire-a-lohada/"
+  },
+  {
+   "texte": "École Régionale Supérieure de Magistrature (ERSUMA)",
+   "url": "https://www.ohada.org/ersuma-en-bref/"
+  },
+  {
+   "texte": "Etats Parties",
+   "url": "https://www.ohada.org/etats-parties-benin/"
+  },
+  {
+   "texte": "Etudes",
+   "url": "https://www.ohada.org/etudes/"
+  },
+  {
+   "texte": "Exprimer un besoin",
+   "url": "https://www.ohada.org/exprimer-un-besoin/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/feed/"
+  },
+  {
+   "texte": "Formation",
+   "url": "https://www.ohada.org/formations-ersuma/"
+  },
+  {
+   "texte": "Notre histoire",
+   "url": "https://www.ohada.org/historique-de-lohada/"
+  },
+  {
+   "texte": "Journal Officiel",
+   "url": "https://www.ohada.org/journal-officiel/"
+  },
+  {
+   "texte": "Jurisprudence",
+   "url": "https://www.ohada.org/jurisprudence-ohada/"
+  },
+  {
+   "texte": "Les acteurs",
+   "url": "https://www.ohada.org/les-acteurs/"
+  },
+  {
+   "texte": "Les Etats membres de l’OHADA",
+   "url": "https://www.ohada.org/les-etats-membres-de-lohada/"
+  },
+  {
+   "texte": "Nos partenaires",
+   "url": "https://www.ohada.org/les-partenaires-de-lohada/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/lharmonisation-du-droit-du-travail/"
+  },
+  {
+   "texte": "Organisation",
+   "url": "https://www.ohada.org/lorganisation-de-lohada/"
+  },
+  {
+   "texte": "Missions et Objectifs",
+   "url": "https://www.ohada.org/missions-et-objectifs-de-lohada/"
+  },
+  {
+   "texte": "Modalités d’adhésion",
+   "url": "https://www.ohada.org/modalites-dadhesion/"
+  },
+  {
+   "texte": "Newsletter",
+   "url": "https://www.ohada.org/newsletter/"
+  },
+  {
+   "texte": "Nos réalisations",
+   "url": "https://www.ohada.org/nos-realisations/"
+  },
+  {
+   "texte": "Nouveaux champs normatifs",
+   "url": "https://www.ohada.org/nouveaux-champs-normatifs/"
+  },
+  {
+   "texte": "Obtenir de la documentation sur l’OHADA",
+   "url": "https://www.ohada.org/obtenir-de-la-documentation-sur-lohada/"
+  },
+  {
+   "texte": "Obtenir le rôle des audiences de la CCJA",
+   "url": "https://www.ohada.org/obtenir-le-role-des-audiences-de-la-ccja/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/organisation-des-procedures-simplifiees-de-recouvrement-et-des-voies-dexecution/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/organisation-des-suretes/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-bad-banque-africaine-de-developpement/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-banque-mondiale/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-cooperation-canadienne/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-cooperation-francaise/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-cooperation-suisse/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-icf-investment-climate-facility-for-africa/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-oif-organisation-internationale-de-la-francophonie/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-pnud-programme-des-nations-unies-pour-le-developpement/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/partenariat-ohada-union-europeenne/"
+  },
+  {
+   "texte": "Poser une question à nos Experts",
+   "url": "https://www.ohada.org/poser-une-question-a-nos-experts/"
+  },
+  {
+   "texte": "Pratique professionnelle",
+   "url": "https://www.ohada.org/pratique-professionnelle/"
+  },
+  {
+   "texte": "L’OHADA en bref",
+   "url": "https://www.ohada.org/presentation-generale/"
+  },
+  {
+   "texte": "Lire la suite »",
+   "url": "https://www.ohada.org/procedures-collectives-dapurement-du-passif/"
+  },
+  {
+   "texte": "Publications",
+   "url": "https://www.ohada.org/publications/"
+  },
+  {
+   "texte": "Recevoir la newsletter OHADA",
+   "url": "https://www.ohada.org/recevoir-la-newsletter-ohada/"
+  },
+  {
+   "texte": "Jurisprudence",
+   "url": "https://www.ohada.org/recueil-de-jurisprudence/"
+  },
+  {
+   "texte": "Règlements & décisions",
+   "url": "https://www.ohada.org/reglements-decisions/"
+  },
+  {
+   "texte": "Saisir le Centre d'Arbitrage",
+   "url": "https://www.ohada.org/saisir-la-ccja-dune-demande-darbitrage/"
+  },
+  {
+   "texte": "S’inscrire à une formation à l’ERSUMA",
+   "url": "https://www.ohada.org/sinscrire-a-une-formation-a-lersuma/"
+  },
+  {
+   "texte": "Soumettre une demande de stage",
+   "url": "https://www.ohada.org/soumettre-une-demande-de-stage/"
+  },
+  {
+   "texte": "Secrétariat Permanent",
+   "url": "https://www.ohada.org/spo-en-bref/"
+  },
+  {
+   "texte": "Suivre l’OHADA sur les Réseaux Sociaux",
+   "url": "https://www.ohada.org/suivre-lohada-sur-les-reseaux-sociaux/"
+  },
+  {
+   "texte": "Traité OHADA revisé",
+   "url": "https://www.ohada.org/traite-portant-revision-du-traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique/"
+  },
+  {
+   "texte": "Traité OHADA initial",
+   "url": "https://www.ohada.org/traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique/"
+  },
+  {
+   "texte": "Vous rendre dans une Institution de l’OHADA",
+   "url": "https://www.ohada.org/vous-rendre-dans-une-institution-de-lohada/"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-180x180.png"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-192x192.png"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-32x32.png"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-10751.css?ver=1792471956"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-2.css?ver=1792472337"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-23564.css?ver=1616687032"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25015.css?ver=1792471930"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25029.css?ver=1792471930"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25209.css?ver=1604066073"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25211.css?ver=1604066030"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25213.css?ver=1604066048"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25973.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-26201.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-26223.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-31016.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-31135.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-32233.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33437.css?ver=1663106998"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33564.css?ver=1664185623"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33568.css?ver=1664185729"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33569.css?ver=1664185581"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33570.css?ver=1664185377"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-34182.css?ver=1663585595"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-34629.css?ver=1663592830"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-34643.css?ver=1663592796"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-34682.css?ver=1663592898"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-6.css?ver=1792471929"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-json/"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_actes_uniformes_large",
+ "date_recuperation": "2026-10-20T10:11:17+00:00",
+ "duree_s": 3.5,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:11:17+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 250536,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/actes-uniformes/"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://www.ohada.org/acceder-a-la-jurisprudence-ohada/",
+  "https://www.ohada.org/acte-uniforme-relatif-a-la-mediation/",
+  "https://www.ohada.org/acte-uniforme-relatif-au-droit-comptable-et-a-linformation-financiere-audcif/",
+  "https://www.ohada.org/actes-uniformes/",
+  "https://www.ohada.org/actualite-ohada/",
+  "https://www.ohada.org/agenda-evenementiel/",
+  "https://www.ohada.org/agenda-ohada/",
+  "https://www.ohada.org/bibliographie/",
+  "https://www.ohada.org/ccja-en-bref/",
+  "https://www.ohada.org/centre-darbitrage-de-lohada/",
+  "https://www.ohada.org/cnc-en-bref/",
+  "https://www.ohada.org/contact-de-nos-institutions/",
+  "https://www.ohada.org/contrats-de-transport-de-marchandises-par-route/",
+  "https://www.ohada.org/dernieres-annonces/",
+  "https://www.ohada.org/dernieres-nouvelles/",
+  "https://www.ohada.org/devenir-membre-de-la-communaute-ohada/",
+  "https://www.ohada.org/droit-commercial-general/",
+  "https://www.ohada.org/droit-de-larbitrage/",
+  "https://www.ohada.org/droit-des-societes-commerciales-et-du-gie/",
+  "https://www.ohada.org/droit-des-societes-cooperatives/",
+  "https://www.ohada.org/ecrire-a-lohada/",
+  "https://www.ohada.org/ersuma-en-bref/",
+  "https://www.ohada.org/etats-parties-benin/",
+  "https://www.ohada.org/etudes/",
+  "https://www.ohada.org/exprimer-un-besoin/",
+  "https://www.ohada.org/feed/",
+  "https://www.ohada.org/formations-ersuma/",
+  "https://www.ohada.org/historique-de-lohada/",
+  "https://www.ohada.org/journal-officiel/",
+  "https://www.ohada.org/jurisprudence-ohada/",
+  "https://www.ohada.org/les-acteurs/",
+  "https://www.ohada.org/les-etats-membres-de-lohada/",
+  "https://www.ohada.org/les-partenaires-de-lohada/",
+  "https://www.ohada.org/lharmonisation-du-droit-du-travail/",
+  "https://www.ohada.org/lorganisation-de-lohada/",
+  "https://www.ohada.org/missions-et-objectifs-de-lohada/",
+  "https://www.ohada.org/modalites-dadhesion/",
+  "https://www.ohada.org/newsletter/",
+  "https://www.ohada.org/nos-realisations/",
+  "https://www.ohada.org/nouveaux-champs-normatifs/",
+  "https://www.ohada.org/obtenir-de-la-documentation-sur-lohada/",
+  "https://www.ohada.org/obtenir-le-role-des-audiences-de-la-ccja/",
+  "https://www.ohada.org/organisation-des-procedures-simplifiees-de-recouvrement-et-des-voies-dexecution/",
+  "https://www.ohada.org/organisation-des-suretes/",
+  "https://www.ohada.org/partenariat-ohada-bad-banque-africaine-de-developpement/",
+  "https://www.ohada.org/partenariat-ohada-banque-mondiale/",
+  "https://www.ohada.org/partenariat-ohada-cooperation-canadienne/",
+  "https://www.ohada.org/partenariat-ohada-cooperation-francaise/",
+  "https://www.ohada.org/partenariat-ohada-cooperation-suisse/",
+  "https://www.ohada.org/partenariat-ohada-icf-investment-climate-facility-for-africa/",
+  "https://www.ohada.org/partenariat-ohada-oif-organisation-internationale-de-la-francophonie/",
+  "https://www.ohada.org/partenariat-ohada-pnud-programme-des-nations-unies-pour-le-developpement/",
+  "https://www.ohada.org/partenariat-ohada-union-europeenne/",
+  "https://www.ohada.org/poser-une-question-a-nos-experts/",
+  "https://www.ohada.org/pratique-professionnelle/",
+  "https://www.ohada.org/presentation-generale/",
+  "https://www.ohada.org/procedures-collectives-dapurement-du-passif/",
+  "https://www.ohada.org/publications/",
+  "https://www.ohada.org/recevoir-la-newsletter-ohada/",
+  "https://www.ohada.org/recueil-de-jurisprudence/",
+  "https://www.ohada.org/reglements-decisions/",
+  "https://www.ohada.org/saisir-la-ccja-dune-demande-darbitrage/",
+  "https://www.ohada.org/sinscrire-a-une-formation-a-lersuma/",
+  "https://www.ohada.org/soumettre-une-demande-de-stage/",
+  "https://www.ohada.org/spo-en-bref/",
+  "https://www.ohada.org/suivre-lohada-sur-les-reseaux-sociaux/",
+  "https://www.ohada.org/traite-portant-revision-du-traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique/",
+  "https://www.ohada.org/traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique/",
+  "https://www.ohada.org/vous-rendre-dans-une-institution-de-lohada/",
+  "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-180x180.png",
+  "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-192x192.png",
+  "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-32x32.png",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-10751.css?ver=1792471956",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-2.css?ver=1792472337",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-23564.css?ver=1616687032",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25015.css?ver=1792471930",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25029.css?ver=1792471930",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25209.css?ver=1604066073",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25211.css?ver=1604066030",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25213.css?ver=1604066048",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25973.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-26201.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-26223.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-31016.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-31135.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-32233.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33437.css?ver=1663106998",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33564.css?ver=1664185623",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33568.css?ver=1664185729",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33569.css?ver=1664185581",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33570.css?ver=1664185377",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-34182.css?ver=1663585595",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-34629.css?ver=1663592830",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-34643.css?ver=1663592796",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-34682.css?ver=1663592898",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-6.css?ver=1792471929",
+  "https://www.ohada.org/wp-json/"
+ ],
+ "octets": 250536,
+ "statut": "DECOUVERTE",
+ "titre_page": "Actes Uniformes – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/actes-uniformes/",
+ "url_finale": "https://www.ohada.org/actes-uniformes/"
+}

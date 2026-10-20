@@ -1,0 +1,46 @@
+{
+ "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+ "cle": "travail_2015_532_faolex_210897",
+ "date_recuperation": "2026-10-20T10:08:16+00:00",
+ "duree_s": 4.4,
+ "extraction": {
+  "caracteres_natifs": 201864,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/travail_2015_532_faolex_210897.txt",
+  "ocr_force": false,
+  "pages": 37,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:55f256671a32e2eaf8902a1816d3211fc8a6aea2e0040bbb0605fd4f1b000c58"
+ },
+ "fichier_pdf": "travail_2015_532_faolex_210897.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:16+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 6875176,
+   "sha256": "sha256:0b8ea7c676689f23824141fce5f779ef03b974955a94013ffa49931d0476d059",
+   "statut": "TELECHARGE",
+   "url": "https://faolex.fao.org/docs/pdf/ivc210897.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 6875176,
+ "pdf": {
+  "CreationDate": "Wed May 18 17:05:24 2022 UTC",
+  "Creator": "PDFium",
+  "PDF version": "1.7",
+  "Pages": "37",
+  "Producer": "PDFium",
+  "indices_ocr_editeur": [],
+  "polices": 11,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:0b8ea7c676689f23824141fce5f779ef03b974955a94013ffa49931d0476d059",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://faolex.fao.org/docs/pdf/ivc210897.pdf",
+ "url_finale": "https://faolex.fao.org/docs/pdf/ivc210897.pdf",
+ "version_ocr": 1
+}

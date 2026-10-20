@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_convention-collective-interprofessionnelle",
+ "date_recuperation": "2026-10-20T10:09:08+00:00",
+ "duree_s": 2.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:08+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 57052,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-convention-collective-interprofessionnelle"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 57052,
+ "statut": "DECOUVERTE",
+ "titre_page": "Convention Collective Interprofessionnelle\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-convention-collective-interprofessionnelle",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-convention-collective-interprofessionnelle"
+}

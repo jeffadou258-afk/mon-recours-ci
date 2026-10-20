@@ -1,0 +1,48 @@
+{
+ "ancres": [
+  {
+   "texte": "Loi Portant Création, Organisation et Fonctionnement des Juridictions de Commerce, 2016",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06"
+  },
+  {
+   "texte": "Décret Portant Création de la Cour d'Appel de Commerce d'Abidjan et Fixant son Siège, son Ressort Territorial et sa Composition, 2017",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2017/501/fra@2022-05-27"
+  },
+  {
+   "texte": "Décret Définissant les Costumes d’Audience des Conseillers et Juges Consulaires des Juridictions de Commerce, 2018",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2018/226/fra@2023-07-06"
+  },
+  {
+   "texte": "Décret Déterminant les Conditions d’Attribution et le Montant des Indemnités des Conseillers et Juges Consulaires et des Membres du Conseil de Surveillance des Juridictions de Commerce, 2020",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2020/33/fra@2023-07-06"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_juridiction",
+ "date_recuperation": "2026-10-20T10:09:28+00:00",
+ "duree_s": 2.1,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:28+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 66723,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-juridiction"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2017/501/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2018/226/fra@2023-07-06",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2020/33/fra@2023-07-06"
+ ],
+ "octets": 66723,
+ "statut": "DECOUVERTE",
+ "titre_page": "Juridiction\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-juridiction",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-juridiction"
+}

@@ -1,0 +1,33 @@
+{
+ "ancres": [
+  {
+   "texte": "Loi Portant Suspension des Délais de Saisine, de Prescription, de Péremption d'Instance, d'Exercice des Voies de Recours et d'Exécution dans Toutes les Procédures Judiciaires, Contentieuses ou Non Contentieuses, 1996",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1996/670/fra@2023-07-18"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_code-de-procedure-penale",
+ "date_recuperation": "2026-10-20T10:09:12+00:00",
+ "duree_s": 2.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:12+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 65132,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-penale"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://civlii.laws.africa/en/akn/ci/act/1996/670/fra@2023-07-18"
+ ],
+ "octets": 65132,
+ "statut": "DECOUVERTE",
+ "titre_page": "Code de Procédure Pénale\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-penale",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-penale"
+}

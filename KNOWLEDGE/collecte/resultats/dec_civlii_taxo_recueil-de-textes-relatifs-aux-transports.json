@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_recueil-de-textes-relatifs-aux-transports",
+ "date_recuperation": "2026-10-20T10:09:38+00:00",
+ "duree_s": 2.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:38+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 56888,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-relatifs-aux-transports"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 56888,
+ "statut": "DECOUVERTE",
+ "titre_page": "Recueil de Textes Relatifs aux Transports\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-relatifs-aux-transports",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-relatifs-aux-transports"
+}

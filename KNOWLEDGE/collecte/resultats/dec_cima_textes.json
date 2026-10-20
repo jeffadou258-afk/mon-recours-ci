@@ -1,0 +1,43 @@
+{
+ "ancres": [
+  {
+   "texte": "",
+   "url": "https://cima-afrique.org/wp-content/uploads/2018/01/cropped-cima121-180x180.png"
+  },
+  {
+   "texte": "",
+   "url": "https://cima-afrique.org/wp-content/uploads/2018/01/cropped-cima121-192x192.png"
+  },
+  {
+   "texte": "",
+   "url": "https://cima-afrique.org/wp-content/uploads/2018/01/cropped-cima121-32x32.png"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_cima_textes",
+ "date_recuperation": "2026-10-20T10:11:27+00:00",
+ "duree_s": 5.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:11:27+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 184305,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://cima-afrique.org/"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://cima-afrique.org/wp-content/uploads/2018/01/cropped-cima121-180x180.png",
+  "https://cima-afrique.org/wp-content/uploads/2018/01/cropped-cima121-192x192.png",
+  "https://cima-afrique.org/wp-content/uploads/2018/01/cropped-cima121-32x32.png"
+ ],
+ "octets": 184305,
+ "statut": "DECOUVERTE",
+ "titre_page": "CIMA – Conférence Interafricaine des Marchés d’Assurance",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://cima-afrique.org/",
+ "url_finale": "https://cima-afrique.org/"
+}

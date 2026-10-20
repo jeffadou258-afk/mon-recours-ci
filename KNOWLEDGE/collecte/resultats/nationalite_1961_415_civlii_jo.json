@@ -1,0 +1,23 @@
+{
+ "categorie_source": "SECONDAIRE_FAC_SIMILE",
+ "cle": "nationalite_1961_415_civlii_jo",
+ "date_recuperation": "2026-10-20T10:08:33+00:00",
+ "duree_s": 2.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:33+00:00",
+   "erreur": null,
+   "http": 404,
+   "octets": 0,
+   "sha256": null,
+   "statut": "ECHEC_HTTP",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1961/415/fra@2005-08-29/publication"
+  }
+ ],
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/1961/415/fra@2005-08-29/publication",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/1961/415/fra@2005-08-29/publication"
+}

@@ -1,0 +1,33 @@
+{
+ "ancres": [
+  {
+   "texte": "Convention sur le Consentement au Mariage, l'Âge Minimum du Mariage et l'Enregistrement des Mariages",
+   "url": "https://civlii.laws.africa/en/akn/un/act/convention/1962/consentement-%C3%A2ge-minimum-enregistrement-des-mariages/fra@2023-10-13"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_recueil-de-textes-personnes-familles",
+ "date_recuperation": "2026-10-20T10:09:00+00:00",
+ "duree_s": 2.1,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:00+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 62759,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-personnes-familles"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://civlii.laws.africa/en/akn/un/act/convention/1962/consentement-%C3%A2ge-minimum-enregistrement-des-mariages/fra@2023-10-13"
+ ],
+ "octets": 62759,
+ "statut": "DECOUVERTE",
+ "titre_page": "Recueil de Textes Personnes & Familles\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-personnes-familles",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-recueil-de-textes-personnes-familles"
+}

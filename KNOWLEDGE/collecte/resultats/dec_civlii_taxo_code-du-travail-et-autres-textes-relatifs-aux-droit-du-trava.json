@@ -1,0 +1,63 @@
+{
+ "ancres": [
+  {
+   "texte": "Loi Portant Suspension des Délais de Saisine, de Prescription, de Péremption d'Instance, d'Exercice des Voies de Recours et d'Exécution dans Toutes les Procédures Judiciaires, Contentieuses ou Non Contentieuses, 1996",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1996/670/fra@2023-07-18"
+  },
+  {
+   "texte": "Convention sur l’Administration du Travail: Rôle, Fonctions et Organisation, 1978",
+   "url": "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1978/c150/fra@2023-07-18"
+  },
+  {
+   "texte": "Convention sur la Sécurité et la Santé des Travailleurs, 1981",
+   "url": "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1981/c155/fra@2023-07-18"
+  },
+  {
+   "texte": "Convention sur les Statistiques du Travail, 1985",
+   "url": "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1985/c160/fra@2023-07-18"
+  },
+  {
+   "texte": "Convention sur les Services de Santé au Travail, 1985",
+   "url": "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1985/c161/fra@2023-07-18"
+  },
+  {
+   "texte": "Convention sur le Travail de Nuit, 1990",
+   "url": "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1990/c171/fra@2023-07-18"
+  },
+  {
+   "texte": "Convention sur le Cadre Promotionnel pour la Sécurité et la Santé au Travail, 2006",
+   "url": "https://civlii.laws.africa/en/akn/un-ilo/act/convention/2006/c187/fra@2023-07-18"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_code-du-travail-et-autres-textes-relatifs-aux-droit-du-trava",
+ "date_recuperation": "2026-10-20T10:09:04+00:00",
+ "duree_s": 1.9,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:04+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 83140,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-du-travail-et-autres-textes-relatifs-aux-droit-du-travail"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://civlii.laws.africa/en/akn/ci/act/1996/670/fra@2023-07-18",
+  "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1978/c150/fra@2023-07-18",
+  "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1981/c155/fra@2023-07-18",
+  "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1985/c160/fra@2023-07-18",
+  "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1985/c161/fra@2023-07-18",
+  "https://civlii.laws.africa/en/akn/un-ilo/act/convention/1990/c171/fra@2023-07-18",
+  "https://civlii.laws.africa/en/akn/un-ilo/act/convention/2006/c187/fra@2023-07-18"
+ ],
+ "octets": 83140,
+ "statut": "DECOUVERTE",
+ "titre_page": "Code du Travail et Autres Textes Relatifs aux Droit du Travail\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-du-travail-et-autres-textes-relatifs-aux-droit-du-travail",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-du-travail-et-autres-textes-relatifs-aux-droit-du-travail"
+}

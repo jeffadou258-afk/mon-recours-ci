@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_cndj_biblio_travail",
+ "date_recuperation": "2026-10-20T10:11:22+00:00",
+ "duree_s": 1.7,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:11:22+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 14582,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://biblio.cndj.ci/search/codes/274"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 14582,
+ "statut": "DECOUVERTE",
+ "titre_page": "Connexion · Bibliothèque numérique du CNDJ",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://biblio.cndj.ci/search/codes/274",
+ "url_finale": "https://biblio.cndj.ci/login"
+}

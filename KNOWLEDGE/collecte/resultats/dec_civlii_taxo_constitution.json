@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_constitution",
+ "date_recuperation": "2026-10-20T10:09:32+00:00",
+ "duree_s": 1.9,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:32+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 52132,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-constitution"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 52132,
+ "statut": "DECOUVERTE",
+ "titre_page": "Constitution\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-constitution",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-constitution"
+}

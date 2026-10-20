@@ -1,0 +1,23 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "code_penal_2019_574_civlii_source",
+ "date_recuperation": "2026-10-20T10:08:20+00:00",
+ "duree_s": 0.5,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:20+00:00",
+   "erreur": null,
+   "http": 404,
+   "octets": 0,
+   "sha256": null,
+   "statut": "ECHEC_HTTP",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source"
+  }
+ ],
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2019/574/fra@2024-06-23/source"
+}

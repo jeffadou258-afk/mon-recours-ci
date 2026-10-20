@@ -1,0 +1,38 @@
+{
+ "ancres": [
+  {
+   "texte": "Convention Relative au Statut des Apatrides, 1954",
+   "url": "https://civlii.laws.africa/en/akn/un/act/convention/1954/statut-des-apatrides/eng@2021-03-21"
+  },
+  {
+   "texte": "Convention sur la Réduction des Cas d’Apatridie, 1961",
+   "url": "https://civlii.laws.africa/en/akn/un/act/convention/1961/r%C3%A9duction-cas-d-apatridie/eng@2021-03-21"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_code-de-la-nationalite-et-loi-sur-lidentification-des-person",
+ "date_recuperation": "2026-10-20T10:09:50+00:00",
+ "duree_s": 2.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:50+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 68316,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-la-nationalite-et-loi-sur-lidentification-des-personnes"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://civlii.laws.africa/en/akn/un/act/convention/1954/statut-des-apatrides/eng@2021-03-21",
+  "https://civlii.laws.africa/en/akn/un/act/convention/1961/r%C3%A9duction-cas-d-apatridie/eng@2021-03-21"
+ ],
+ "octets": 68316,
+ "statut": "DECOUVERTE",
+ "titre_page": "Code de la Nationalité et Loi sur l'Identification des Personnes\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-la-nationalite-et-loi-sur-lidentification-des-personnes",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-la-nationalite-et-loi-sur-lidentification-des-personnes"
+}

@@ -1,0 +1,158 @@
+{
+ "ancres": [
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-180x180.png"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-192x192.png"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-32x32.png"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-23129.css?ver=1792472887"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-23564.css?ver=1616687032"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25015.css?ver=1792471930"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25029.css?ver=1792471930"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25209.css?ver=1604066073"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25211.css?ver=1604066030"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25213.css?ver=1604066048"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-25973.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-26201.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-26223.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-31016.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-31135.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-32233.css?ver=1792471931"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33437.css?ver=1663106998"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33564.css?ver=1664185623"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33568.css?ver=1664185729"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33569.css?ver=1664185581"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-33570.css?ver=1664185377"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-34182.css?ver=1663585595"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-34629.css?ver=1663592830"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-34643.css?ver=1663592796"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-34682.css?ver=1663592898"
+  },
+  {
+   "texte": "",
+   "url": "https://www.ohada.org/wp-content/uploads/elementor/css/post-6.css?ver=1792471929"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_jo_n_08_large",
+ "date_recuperation": "2026-10-20T10:10:45+00:00",
+ "duree_s": 3.1,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:10:45+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 235029,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/journal-officiel-n-08/"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-180x180.png",
+  "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-192x192.png",
+  "https://www.ohada.org/wp-content/uploads/2020/10/cropped-logo-ohada-2-32x32.png",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-23129.css?ver=1792472887",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-23564.css?ver=1616687032",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25015.css?ver=1792471930",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25029.css?ver=1792471930",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25209.css?ver=1604066073",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25211.css?ver=1604066030",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25213.css?ver=1604066048",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-25973.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-26201.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-26223.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-31016.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-31135.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-32233.css?ver=1792471931",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33437.css?ver=1663106998",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33564.css?ver=1664185623",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33568.css?ver=1664185729",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33569.css?ver=1664185581",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-33570.css?ver=1664185377",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-34182.css?ver=1663585595",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-34629.css?ver=1663592830",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-34643.css?ver=1663592796",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-34682.css?ver=1663592898",
+  "https://www.ohada.org/wp-content/uploads/elementor/css/post-6.css?ver=1792471929"
+ ],
+ "octets": 235029,
+ "statut": "DECOUVERTE",
+ "titre_page": "Journal Officiel N° 08 – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/journal-officiel-n-08/",
+ "url_finale": "https://www.ohada.org/journal-officiel-n-08/"
+}

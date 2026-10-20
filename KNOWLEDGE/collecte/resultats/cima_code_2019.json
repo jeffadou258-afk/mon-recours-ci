@@ -1,0 +1,49 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "cima_code_2019",
+ "date_recuperation": "2026-10-20T10:08:43+00:00",
+ "duree_s": 16.2,
+ "extraction": {
+  "caracteres_natifs": 1396391,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/cima_code_2019.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 608,
+  "pages_sans_texte": 60,
+  "sha256_texte": "sha256:19de4c424406aacbcf06826397afbcd27ad3a0d937980ffe508682ba280e51e8"
+ },
+ "fichier_pdf": "cima_code_2019.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:43+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 21545092,
+   "sha256": "sha256:9761e5f0502035295895b6c3e5153af6a9fd4da385c2a20ab03b05a92bf4b93d",
+   "statut": "TELECHARGE",
+   "url": "https://cima-afrique.org/wp-content/uploads/2023/06/CODE-CIMA-2019.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 21545092,
+ "pdf": {
+  "CreationDate": "Fri Dec 21 11:32:43 2018 UTC",
+  "Creator": "QuarkXPress(R) 9.3",
+  "ModDate": "Sun Jul 14 09:54:24 2019 UTC",
+  "PDF version": "1.4",
+  "Pages": "608",
+  "Producer": "QuarkXPress(R) 9.3",
+  "Title": "Mise en page 1",
+  "indices_ocr_editeur": [],
+  "polices": 39,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:9761e5f0502035295895b6c3e5153af6a9fd4da385c2a20ab03b05a92bf4b93d",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://cima-afrique.org/wp-content/uploads/2023/06/CODE-CIMA-2019.pdf",
+ "url_finale": "https://cima-afrique.org/wp-content/uploads/2023/06/CODE-CIMA-2019.pdf",
+ "version_ocr": 1
+}

@@ -1,5 +1,5 @@
 {
- "execution": "2026-10-19T12:28:39+00:00",
+ "execution": "2026-10-20T10:07:42+00:00",
  "outils": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -18,163 +18,404 @@
  },
  "traites": [
   {
-   "cle": "code_penal_2019_574_mffe",
+   "cle": "mariage_2019_570_civlii_source",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "code_penal_2019_574_civlii",
+   "cle": "mariage_2019_570_civlii_jo",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "cpp_2018_975_civlii",
+   "cle": "filiation_2019_571_civlii_source",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "travail_2015_532_faolex",
+   "cle": "filiation_2019_571_civlii_jo",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "travail_2015_532_civlii",
+   "cle": "minorite_2019_572_civlii_source",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "mariage_2019_570_civlii",
+   "cle": "minorite_2019_572_civlii_jo",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "successions_2019_573_civlii",
+   "cle": "successions_2019_573_civlii_source",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "minorite_2019_572_civlii",
+   "cle": "successions_2019_573_civlii_jo",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "filiation_2019_571_civlii",
+   "cle": "oneci_jo_special_2019_572_573_575",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "oneci_jo_special_2019_573",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "famille_minorite_2019_wm",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_mffe_textes",
+   "cle": "assnat_mariage_2019_570",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "travail_2015_532_civlii_source",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "travail_2015_532_civlii_jo",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "travail_enfants_2010_272_civlii_source",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "travail_enfants_2010_272_civlii_jo",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "travail_2015_532_faolex_210897",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "code_penal_2019_574_civlii_source",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "code_penal_2019_574_civlii_jo",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "cpp_2018_975_civlii_source",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "cpp_2018_975_civlii_jo",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "consommation_2016_412_civlii_source",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "consommation_2016_412_civlii_jo",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "nationalite_1961_415_civlii_source",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "nationalite_1961_415_civlii_jo",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "cpcca_1972_833_civlii_source",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "cpcca_1972_833_civlii_jo",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "code_civil_droits_civils_civlii_source",
+   "statut": "ECHEC_HTTP"
+  },
+  {
+   "cle": "cima_code_2019",
+   "statut": "TELECHARGE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-civile-code-des-biens-et-obligations",
    "statut": "DECOUVERTE"
   },
   {
-   "cle": "dec_emploi_gouv",
+   "cle": "dec_civlii_taxo_recueil-de-textes-personnes-familles",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_les-droits-de-lenfant",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-du-travail-et-autres-textes-relatifs-aux-droit-du-trava",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-de-prevoyance-sociale",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_convention-collective-interprofessionnelle",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-penal",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-de-procedure-penale",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_acte-uniforme-relatif-au-droit-commercial-general",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_acte-uniforme-revise-relatif-au-droit-des-societes-commercia",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_acte-uniforme-portant-organisation-des-procedures-collective",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_acte-uniforme-relatif-au-droit-de-larbitrage",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_acte-uniforme-relatif-a-la-mediation",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_recueil-de-textes-relatifs-a-la-consommation",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-de-procedure-civile-commerciale-et-administrative",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_juridiction",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_recueil-de-textes-fonction-publique",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_constitution",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-des-douanes",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_traite-cima",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_recueil-de-textes-relatifs-aux-transports",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_regulation-du-secteur-pharmaceutique",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-de-lhygiene-et-de-la-salubrite",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_recueil-de-textes-domaine-foncier-rural",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-de-lenvironnement",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-de-la-protection-des-oeuvres-de-lesprit",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_code-de-la-nationalite-et-loi-sur-lidentification-des-person",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_recueil-de-textes-bail-a-usage-dhabitation-bail-a-usage-prof",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_acte-uniforme-portant-organisation-des-procedures-simplifiee",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_taxo_acte-uniforme-portant-organisation-des-suretes",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p1",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_civlii_en_legislation_p2",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_publication_2019_570_eng@2023-10-13",
+   "cle": "dec_civlii_en_legislation_p3",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_publication_2019_571_fra@2023-10-13",
+   "cle": "dec_civlii_en_legislation_p4",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_publication_2019_572_fra@2023-10-13",
+   "cle": "dec_civlii_en_legislation_p5",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_publication_2019_573_fra@2023-10-13",
+   "cle": "dec_civlii_en_legislation_p6",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_publication_2019_574_fra@2024-06-23",
+   "cle": "dec_civlii_en_legislation_p7",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_publication_2018_975_fra@2024-06-23",
+   "cle": "dec_civlii_en_legislation_p8",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_publication_2015_532_fra@2023-08-10",
+   "cle": "dec_civlii_en_legislation_p9",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_legislation_p2",
+   "cle": "dec_civlii_en_legislation_p10",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_legislation_p3",
+   "cle": "dec_civlii_en_legislation_p11",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_legislation_p4",
+   "cle": "dec_civlii_en_legislation_p12",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_legislation_p5",
+   "cle": "dec_civlii_en_legislation_p13",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_legislation_p6",
+   "cle": "dec_civlii_en_legislation_p14",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_legislation_p7",
+   "cle": "dec_civlii_en_legislation_p15",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_legislation_p8",
+   "cle": "dec_civlii_en_legislation_p16",
    "statut": "ECHEC_HTTP"
   },
   {
-   "cle": "dec_civlii_legislation_p9",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_01_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "dec_civlii_legislation_p10",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_02_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "mffe_code_penal_2019_574",
-   "statut": "TELECHARGE"
+   "cle": "dec_ohada_jo_n_03_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "mffe_mariage_2019_570",
-   "statut": "TELECHARGE"
+   "cle": "dec_ohada_jo_n_06_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "assnat_constitution",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_07_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "civlii_code_penal_source_pdf",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_08_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "civlii_cpp_source_pdf",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_17_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "dec_civlii_oeuvre_cpp",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_18_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "dec_civlii_oeuvre_penal",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_19_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "dec_civlii_oeuvre_travail",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_20-pt_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "dec_famille_gouv_publications",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_22-pt_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "civlii_travail_enfants_2010_272",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_23_large",
+   "statut": "DECOUVERTE"
   },
   {
-   "cle": "civlii_travail_source_pdf",
-   "statut": "ECHEC_HTTP"
+   "cle": "dec_ohada_jo_n_24_large",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_jo_n_25_large",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_jo_n_26_large",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_jo_n_28_large",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_ohada_actes_uniformes_large",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_economie_codes_sectoriels",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_cndj_biblio_travail",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_oapi_bangui",
+   "statut": "DECOUVERTE"
+  },
+  {
+   "cle": "dec_cima_textes",
+   "statut": "DECOUVERTE"
   }
  ],
  "ignores": [
+  "code_penal_2019_574_mffe",
+  "code_penal_2019_574_civlii",
+  "cpp_2018_975_civlii",
+  "travail_2015_532_faolex",
+  "travail_2015_532_civlii",
   "travail_2015_532_uvci",
   "mariage_2019_570_faolex",
+  "mariage_2019_570_civlii",
   "successions_2019_573_assnat",
+  "successions_2019_573_civlii",
   "successions_2019_573_bice",
+  "minorite_2019_572_civlii",
+  "filiation_2019_571_civlii",
   "aupsrve_2023_jo_ohadacom",
   "aupsrve_2023_senlii",
   "gouvci_175043233774",
@@ -183,12 +424,30 @@
   "dec_ohada_aupsrve_en",
   "dec_ohada_aupsrve_publication",
   "dec_ohada_actes_uniformes_fr",
+  "dec_mffe_textes",
   "dec_famille_gouv",
   "dec_sgg",
   "dec_cndj_codes",
+  "dec_emploi_gouv",
   "dec_justice_gouv",
   "dec_assnat_lois",
+  "dec_civlii_publication_2019_570_eng@2023-10-13",
+  "dec_civlii_publication_2019_571_fra@2023-10-13",
+  "dec_civlii_publication_2019_572_fra@2023-10-13",
+  "dec_civlii_publication_2019_573_fra@2023-10-13",
+  "dec_civlii_publication_2019_574_fra@2024-06-23",
+  "dec_civlii_publication_2018_975_fra@2024-06-23",
+  "dec_civlii_publication_2015_532_fra@2023-08-10",
   "dec_civlii_legislation_p1",
+  "dec_civlii_legislation_p2",
+  "dec_civlii_legislation_p3",
+  "dec_civlii_legislation_p4",
+  "dec_civlii_legislation_p5",
+  "dec_civlii_legislation_p6",
+  "dec_civlii_legislation_p7",
+  "dec_civlii_legislation_p8",
+  "dec_civlii_legislation_p9",
+  "dec_civlii_legislation_p10",
   "officiel_famille_loi_n_202_894_du_21_d_cembre_2021_relative_aux_m",
   "officiel_famille_decret_no_2023_90_du_15_fevrier_2023_portant_reg",
   "officiel_famille_decret_no_2023_89_du_15_fevrier_2023_fixant_les_",
@@ -203,6 +462,8 @@
   "officiel_famille_decret_no_2020_907_du_18_novembre_2020_portant_a",
   "officiel_famille_convention_sur_la_protection_des_enfants_et_la_c",
   "mffe_cpp_2018_975",
+  "mffe_code_penal_2019_574",
+  "mffe_mariage_2019_570",
   "mffe_successions_2019_573",
   "mffe_traite_2016_1111",
   "mffe_constitution_2016",
@@ -211,14 +472,23 @@
   "mffe_pupille_2015_539",
   "mffe_adoption",
   "ohada_jo_special_aupsrve_2023",
+  "assnat_constitution",
+  "civlii_code_penal_source_pdf",
+  "civlii_cpp_source_pdf",
+  "dec_civlii_oeuvre_cpp",
+  "dec_civlii_oeuvre_penal",
+  "dec_civlii_oeuvre_travail",
   "dec_ohada_jo_n23",
   "dec_ohada_jo_n24",
   "dec_ohada_jo_special_2016",
   "dec_ohada_jo_p2",
   "dec_ohada_jo_p3",
   "dec_ohada_jo_p4",
+  "dec_famille_gouv_publications",
   "dec_cndj_biblio_codes",
   "ilo_textes_pertinents_rci",
+  "civlii_travail_enfants_2010_272",
+  "civlii_travail_source_pdf",
   "dec_leap_travail_1",
   "dec_leap_travail_2"
  ],

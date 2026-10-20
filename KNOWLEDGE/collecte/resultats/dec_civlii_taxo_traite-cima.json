@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_traite-cima",
+ "date_recuperation": "2026-10-20T10:09:36+00:00",
+ "duree_s": 2.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:36+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 52000,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-traite-cima"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 52000,
+ "statut": "DECOUVERTE",
+ "titre_page": "Traité CIMA\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-traite-cima",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-traite-cima"
+}

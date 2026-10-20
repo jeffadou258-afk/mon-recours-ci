@@ -1,0 +1,49 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "cpcca_1972_833_civlii_source",
+ "date_recuperation": "2026-10-20T10:08:35+00:00",
+ "duree_s": 5.4,
+ "extraction": {
+  "caracteres_natifs": 335200,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/cpcca_1972_833_civlii_source.txt",
+  "ocr_force": false,
+  "pages": 102,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:008b69d4f538d039cf0a176d1e6f51390e9da4d3ac7605d8cbc3b2bc81678c1d"
+ },
+ "fichier_pdf": "cpcca_1972_833_civlii_source.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:35+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 1005122,
+   "sha256": "sha256:749e302c929e00e3732249da47d644d124d02e735f0f1fe2a2067bad2bdc05a6",
+   "statut": "TELECHARGE",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27/source"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [
+  "creative commons",
+  "laws.africa"
+ ],
+ "octets": 1005122,
+ "pdf": {
+  "CreationDate": "Fri Sep 25 13:32:39 2026 UTC",
+  "Creator": "Apache FOP Version 2.4",
+  "PDF version": "1.4",
+  "Pages": "102",
+  "Producer": "Apache FOP Version 2.4",
+  "indices_ocr_editeur": [],
+  "polices": 5,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:749e302c929e00e3732249da47d644d124d02e735f0f1fe2a2067bad2bdc05a6",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27/source",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27/source.pdf",
+ "version_ocr": 1
+}

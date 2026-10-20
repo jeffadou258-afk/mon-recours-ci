@@ -1,0 +1,123 @@
+{
+ "ancres": [
+  {
+   "texte": "Loi Portant Code de Procédure Civile, Commerciale et Administrative, 1972",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27"
+  },
+  {
+   "texte": "Loi Relative à l’Arbitrage, 1993",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27"
+  },
+  {
+   "texte": "Loi Portant Suspension des Délais de Saisine, de Prescription, de Péremption d'Instance, d'Exercice des Voies de Recours et d'Exécution dans Toutes les Procédures Judiciaires, Contentieuses ou Non Contentieuses, 1996",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1996/670/fra@2023-07-18"
+  },
+  {
+   "texte": "Loi Relative à la Médiation Judiciaire et Conventionnelle, 2014",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27"
+  },
+  {
+   "texte": "Loi Relative aux Procédures Spéciales pour le Règlement des Petits Litiges, 2015",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/904/fra@2022-05-27"
+  },
+  {
+   "texte": "Loi Portant Création, Organisation et Fonctionnement des Juridictions de Commerce, 2016",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06"
+  },
+  {
+   "texte": "Loi Portant Statut des Commissaires de Justice, 2018",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23"
+  },
+  {
+   "texte": "Décret Fixant les Modalités d'Application du Code de Procédure Civile, Commerciale et Administrative en ce qui Concerne l'Expertise, 1975",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/1975/310/fra@2022-05-27"
+  },
+  {
+   "texte": "Décret Règlementant l’Emploi par les Officiers Publics et Ministériels des Procédés de Reproduction des Actes, 1975",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/1975/318/fra@2022-05-27"
+  },
+  {
+   "texte": "Décret Fixant les Modalités d'Application du Code de Procédure Civile, Commerciale et Administrative en ce qui Concerne les Notifications et Convocations, 1975",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/1975/320/fra@2022-05-27"
+  },
+  {
+   "texte": "Décret Portant Tarification des Émoluments et Frais de Justice en Matière Civile, Commerciale, Administrative et Sociale, 2013",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2013/279/fra@2025-03-10"
+  },
+  {
+   "texte": "Décret Portant Modalités d'Application de l’Article 32-1 du Code de Procédure Civile, Commerciale et Administrative, 2015",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2015/365/fra@2022-05-27"
+  },
+  {
+   "texte": "Décret Fixant les Modalités d'Application de la Loi N° 72-833 du 21 Décembre 1972 Portant Code De Procédure Civile, Commerciale et Administrative Relativement à l'Assistance Judiciaire, 2016",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2016/781/fra@2022-05-27"
+  },
+  {
+   "texte": "Décret Portant Création de la Cour d'Appel de Commerce d'Abidjan et Fixant son Siège, son Ressort Territorial et sa Composition, 2017",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2017/501/fra@2022-05-27"
+  },
+  {
+   "texte": "Décret Définissant les Costumes d’Audience des Conseillers et Juges Consulaires des Juridictions de Commerce, 2018",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2018/226/fra@2023-07-06"
+  },
+  {
+   "texte": "Décret Portant Institution de la Commission Paritaire des Commissaires de Justice, 2019",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2019/496/fra@2023-11-23"
+  },
+  {
+   "texte": "Décret Fixant les Modalités d’Application de la Loi Portant Statut des Commissaires de Justice, 2019",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2019/567/fra@2023-11-23"
+  },
+  {
+   "texte": "Décret Déterminant les Conditions d’Attribution et le Montant des Indemnités des Conseillers et Juges Consulaires et des Membres du Conseil de Surveillance des Juridictions de Commerce, 2020",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/decree/2020/33/fra@2023-07-06"
+  },
+  {
+   "texte": "Ordonnance Portant Suspension des Délais en Matière de Procédure Judiciaire et Administrative, 2011",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2011/259/fra@2022-05-27"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_code-de-procedure-civile-commerciale-et-administrative",
+ "date_recuperation": "2026-10-20T10:09:26+00:00",
+ "duree_s": 2.1,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:26+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 97299,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-civile-commerciale-et-administrative"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://civlii.laws.africa/en/akn/ci/act/1972/833/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/1996/670/fra@2023-07-18",
+  "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/2015/904/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06",
+  "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/1975/310/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/1975/318/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/1975/320/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2013/279/fra@2025-03-10",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2015/365/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2016/781/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2017/501/fra@2022-05-27",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2018/226/fra@2023-07-06",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2019/496/fra@2023-11-23",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2019/567/fra@2023-11-23",
+  "https://civlii.laws.africa/en/akn/ci/act/decree/2020/33/fra@2023-07-06",
+  "https://civlii.laws.africa/en/akn/ci/act/ord/2011/259/fra@2022-05-27"
+ ],
+ "octets": 97299,
+ "statut": "DECOUVERTE",
+ "titre_page": "Code de Procédure Civile, Commerciale et Administrative\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-civile-commerciale-et-administrative",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-de-procedure-civile-commerciale-et-administrative"
+}

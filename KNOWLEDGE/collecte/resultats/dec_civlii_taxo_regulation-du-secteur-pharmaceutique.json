@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_regulation-du-secteur-pharmaceutique",
+ "date_recuperation": "2026-10-20T10:09:40+00:00",
+ "duree_s": 2.1,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:09:40+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 56100,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-regulation-du-secteur-pharmaceutique"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 56100,
+ "statut": "DECOUVERTE",
+ "titre_page": "Régulation du Secteur Pharmaceutique\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-regulation-du-secteur-pharmaceutique",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-regulation-du-secteur-pharmaceutique"
+}

@@ -1,0 +1,93 @@
+{
+ "ancres": [
+  {
+   "texte": "",
+   "url": "https://oapi.int/wp-content/uploads/2023/07/logo_OAPI.jpg"
+  },
+  {
+   "texte": "",
+   "url": "https://oapi.int/wp-content/uploads/2025/07/logo_OAPI-150x100.jpg"
+  },
+  {
+   "texte": "",
+   "url": "https://oapi.int/wp-content/uploads/2025/07/logo_OAPI.jpg"
+  },
+  {
+   "texte": "",
+   "url": "https://oapi.int/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1792275856"
+  },
+  {
+   "texte": "",
+   "url": "https://oapi.int/wp-content/uploads/elementor/css/custom-widget-icon-list.min.css?ver=1792275856"
+  },
+  {
+   "texte": "",
+   "url": "https://oapi.int/wp-content/uploads/elementor/css/post-20.css?ver=1792275855"
+  },
+  {
+   "texte": "",
+   "url": "https://oapi.int/wp-content/uploads/elementor/css/post-4540.css?ver=1792275856"
+  },
+  {
+   "texte": "",
+   "url": "https://oapi.int/wp-content/uploads/elementor/css/post-7099.css?ver=1792275888"
+  },
+  {
+   "texte": "English version",
+   "url": "https://www.oapi.int/wp-content/uploads/2023/11/anglais.pdf"
+  },
+  {
+   "texte": "Arabic Version",
+   "url": "https://www.oapi.int/wp-content/uploads/2023/11/arabe.pdf"
+  },
+  {
+   "texte": "Spanish version",
+   "url": "https://www.oapi.int/wp-content/uploads/2023/11/espagnol.pdf"
+  },
+  {
+   "texte": "French version",
+   "url": "https://www.oapi.int/wp-content/uploads/2023/11/francais.pdf"
+  },
+  {
+   "texte": "Portuguese version",
+   "url": "https://www.oapi.int/wp-content/uploads/2023/11/portugais.pdf"
+  }
+ ],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_oapi_bangui",
+ "date_recuperation": "2026-10-20T10:11:24+00:00",
+ "duree_s": 2.5,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:11:24+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 139365,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://oapi.int/en/legal-framework/bangui-agreement/"
+  }
+ ],
+ "http": 200,
+ "liens": [
+  "https://oapi.int/wp-content/uploads/2023/07/logo_OAPI.jpg",
+  "https://oapi.int/wp-content/uploads/2025/07/logo_OAPI-150x100.jpg",
+  "https://oapi.int/wp-content/uploads/2025/07/logo_OAPI.jpg",
+  "https://oapi.int/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1792275856",
+  "https://oapi.int/wp-content/uploads/elementor/css/custom-widget-icon-list.min.css?ver=1792275856",
+  "https://oapi.int/wp-content/uploads/elementor/css/post-20.css?ver=1792275855",
+  "https://oapi.int/wp-content/uploads/elementor/css/post-4540.css?ver=1792275856",
+  "https://oapi.int/wp-content/uploads/elementor/css/post-7099.css?ver=1792275888",
+  "https://www.oapi.int/wp-content/uploads/2023/11/anglais.pdf",
+  "https://www.oapi.int/wp-content/uploads/2023/11/arabe.pdf",
+  "https://www.oapi.int/wp-content/uploads/2023/11/espagnol.pdf",
+  "https://www.oapi.int/wp-content/uploads/2023/11/francais.pdf",
+  "https://www.oapi.int/wp-content/uploads/2023/11/portugais.pdf"
+ ],
+ "octets": 139365,
+ "statut": "DECOUVERTE",
+ "titre_page": "Bangui Agreement - OAPI",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://oapi.int/en/legal-framework/bangui-agreement/",
+ "url_finale": "https://oapi.int/en/legal-framework/bangui-agreement/"
+}

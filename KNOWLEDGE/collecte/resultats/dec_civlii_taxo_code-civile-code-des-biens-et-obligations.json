@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_civlii_taxo_code-civile-code-des-biens-et-obligations",
+ "date_recuperation": "2026-10-20T10:08:59+00:00",
+ "duree_s": 0.8,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:59+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 56896,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-civile-code-des-biens-et-obligations"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 56896,
+ "statut": "DECOUVERTE",
+ "titre_page": "Code Civile: Code des Biens et Obligations\n        – JuriCIV",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-civile-code-des-biens-et-obligations",
+ "url_finale": "https://civlii.laws.africa/en/taxonomy/cote-divoire-codes/cote-divoire-codes-code-civile-code-des-biens-et-obligations"
+}

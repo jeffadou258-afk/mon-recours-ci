@@ -1,0 +1,23 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "consommation_2016_412_civlii_source",
+ "date_recuperation": "2026-10-20T10:08:27+00:00",
+ "duree_s": 2.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:27+00:00",
+   "erreur": null,
+   "http": 404,
+   "octets": 0,
+   "sha256": null,
+   "statut": "ECHEC_HTTP",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/412/fra@2023-06-21/source"
+  }
+ ],
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/2016/412/fra@2023-06-21/source",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2016/412/fra@2023-06-21/source"
+}

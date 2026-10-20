@@ -1,0 +1,51 @@
+{
+ "categorie_source": "OFFICIEL_INSTITUTION",
+ "cle": "oneci_jo_special_2019_573",
+ "date_recuperation": "2026-10-20T10:08:01+00:00",
+ "duree_s": 0.3,
+ "extraction": {
+  "caracteres_natifs": 68821,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/oneci_jo_special_2019_573.txt",
+  "ocr_force": false,
+  "pages": 13,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:e52a6028545db97788e89c86b1eb51bdc361f2a05993b8983631e457116bce35"
+ },
+ "fichier_pdf": "oneci_jo_special_2019_573.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:08:01+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 905069,
+   "sha256": "sha256:04a2b0ee3e73c42e7b8065d27f225b77bb478eb3ed779d102ec92f117a014a89",
+   "statut": "TELECHARGE",
+   "url": "https://oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 905069,
+ "pdf": {
+  "CreationDate": "Thu Aug  1 08:53:54 2019 UTC",
+  "Creator": "Hewlett-Packard MFP",
+  "ModDate": "Mon Sep  7 14:31:52 2020 UTC",
+  "PDF version": "1.5",
+  "Pages": "13",
+  "Producer": "ABBYY FineReader 11",
+  "indices_ocr_editeur": [
+   "producteur : ABBYY",
+   "producteur : FineReader",
+   "producteur : Hewlett-Packard MFP"
+  ],
+  "polices": 17,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:04a2b0ee3e73c42e7b8065d27f225b77bb478eb3ed779d102ec92f117a014a89",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf",
+ "url_finale": "https://www.oneci.ci/uploads/files/articles/1638789741-loi-n2019-572-573-575-du-26-juin-2019.pdf",
+ "version_ocr": 1
+}
