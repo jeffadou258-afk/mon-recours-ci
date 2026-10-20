@@ -322,6 +322,26 @@ class MonRecoursCI(object):
         self._ecrire_en_cours(dossier_id, en_cours)
         return en_cours["faits"]
 
+    def enregistrer_courrier(self, dossier_id, informations):
+        """Persiste les informations de courrier (expéditeur, destinataire, pièces).
+
+        Ce ne sont PAS des faits juridiques : elles ne prouvent rien et ne
+        modifient aucune analyse. Elles servent uniquement à rédiger un document
+        que la personne relira et enverra elle-même. Les clés inconnues sont
+        écartées par l'appelant, pas ici.
+        """
+        en_cours = self.lire_en_cours(dossier_id)
+        if en_cours is None:
+            raise ValueError("aucun dossier ouvert pour %r" % (dossier_id,))
+        courrier = dict(en_cours.get("courrier") or {})
+        for cle, valeur in (informations or {}).items():
+            if valeur is None:
+                continue
+            courrier[cle] = str(valeur).strip()
+        en_cours["courrier"] = courrier
+        self._ecrire_en_cours(dossier_id, en_cours)
+        return courrier
+
     def dossier(self, dossier_id):
         """Relit la traçabilité d'un dossier précis. Jamais celle d'un autre.
 

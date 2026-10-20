@@ -18,7 +18,9 @@ import type {
   VueArticleSansFiche,
   VueContradiction,
   VueBrouillon,
+  VueChampCourrier,
   VueClarification,
+  VueCourrier,
   VueFicheIdentifiee,
   VueHorsCatalogue,
   VueOuverture,
@@ -259,6 +261,18 @@ function regle(r: Objet): VueRegleDroit {
   };
 }
 
+function champsCourrier(v: unknown): VueChampCourrier[] {
+  return liste(v)
+    .filter(estObjet)
+    .map((c) => ({
+      champ: texteRequis(c.champ, "?"),
+      libelle: texteRequis(c.libelle, "Information à compléter"),
+      question: texteRequis(c.question, ""),
+      exemple: texte(c.exemple),
+    }))
+    .filter((c) => c.champ !== "?");
+}
+
 function brouillon(v: unknown): VueBrouillon | null {
   if (!estObjet(v)) return null;
   // `genere` contient des chemins de fichiers serveur : il n'est jamais transmis.
@@ -269,6 +283,23 @@ function brouillon(v: unknown): VueBrouillon | null {
     note: texte(v.note),
     raison: texte(v.raison),
     texte: contenu ? contenu.slice(0, 12000) : null,
+    fondement: texte(v.fondement),
+    champsACompleter: champsCourrier(v.champs_a_completer),
+  };
+}
+
+/** /api/courrier : le courrier régénéré, sans aucun chemin de fichier serveur. */
+export function assainirCourrier(data: unknown): VueCourrier {
+  const d = objet(data);
+  const contenu = texte(d.texte);
+  const genere = objet(d.genere);
+  const pdf = objet(genere.pdf);
+  return {
+    texte: contenu ? contenu.slice(0, 12000) : null,
+    fondement: texte(d.fondement),
+    champsACompleter: champsCourrier(d.champs_a_completer),
+    note: texte(d.note),
+    pdfDisponible: pdf.ok === true,
   };
 }
 

@@ -375,6 +375,49 @@ localisation.
    mais la question n'a pas de réponse là. Le filtre de domaine borne le périmètre,
    il ne juge pas la pertinence.
 
+## 6 quinquies ter. Courriers — générés, complétables, jamais envoyés
+
+`core/service.rediger_courrier(dossier_id, informations=None)`
+→ `POST /courrier` (moteur) → `POST /api/courrier` (interface)
+
+**Ce qui a changé.** Le brouillon existait mais restait inutilisable : le PDF ne se
+produisait **jamais** (`multi_cell` laissait le curseur au bord droit, fpdf2 levait
+« Not enough horizontal space to render a single character »), et l'adresse de
+l'expéditeur comme les pièces jointes étaient des trous permanents que personne ne
+pouvait remplir.
+
+**Contrat.**
+
+```
+{"dossier_id": str,
+ "informations": {"expediteur"?, "destinataire"?, "pieces"?}}   # chaînes, jamais devinées
+→ {"texte": str, "fondement": str|null, "champs_a_completer": [...],
+   "genere": {"fichier_txt", "fichier_pdf", "pdf": {"ok", "erreur"}}, "note": str}
+```
+
+**Règles tenues, chacune couverte par un test.**
+
+* **Rien n'est inventé** : nom, adresse, destinataire et pièces viennent de la personne.
+  Ce qui manque est listé dans `champs_a_completer` avec la question à poser, et le
+  remplissage `[À COMPLÉTER : …]` reste visible dans le texte.
+* **Le fondement n'est cité que s'il est vérifié** : `article 416 de la loi n° 2019-576`
+  n'apparaît que si la fiche repose sur une référence `VERIFIE`. Une fiche `OCR_AUTO`
+  ou `PARTIELLEMENT_VERIFIE` produit un courrier **générique**, sans citation.
+* **Un dossier sans analyse aboutie est refusé** (`ANALYSE_INCOMPLETE`) : on ne rédige
+  pas un courrier avant d'avoir identifié le droit applicable.
+* **Aucun envoi** : `genere.envoi` vaut `AUCUN — l'agent ne dispose d'aucune fonction d'envoi`.
+* **Aucune écriture juridique** : les informations de courrier sont stockées dans
+  `CONVERSATION.json` sous `courrier`, séparées des faits. Elles ne prouvent rien et
+  ne modifient aucune analyse.
+
+**Effet de bord corrigé au passage** : une fiche sans question de clarification
+(`PENAL_457`, `TRANSP_2`…) produisait une étape de clarification **vide**, sans champ
+à remplir ni bouton pour avancer. `ouvrir` conclut désormais directement quand
+`questions` est vide.
+
+**Tests** : `tests/test_courriers.py` (17), `web/tests/composants/affichage.test.tsx`,
+`web/tests/integration/moteur.test.ts` (2 tests contre le moteur réel).
+
 ## 6 sexies. Base SQLite et arbre de travail
 
 `KNOWLEDGE/corpus_juridique.sqlite3` est versionnée : les tests en dépendent. Après une

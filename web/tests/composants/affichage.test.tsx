@@ -177,11 +177,24 @@ test("erreurs : réseau, service indisponible, session expirée", () => {
 test("brouillon : texte affiché dans une zone lisible, avec bouton de copie", () => {
   const vue: VueReponse = {
     ...reponseCaution(),
-    brouillon: { disponible: true, note: "BROUILLON — NON ENVOYÉ.", raison: null, texte: "BROUILLON — NON ENVOYÉ\nObjet : Réclamation\n[À COMPLÉTER : vos nom, prénom et adresse]" },
+    brouillon: {
+      disponible: true,
+      note: "BROUILLON — NON ENVOYÉ.",
+      raison: null,
+      texte: "BROUILLON — NON ENVOYÉ\nObjet : Réclamation\n[À COMPLÉTER : vos nom, prénom et adresse]",
+      fondement: "article 416 de la loi n° 2019-576",
+      champsACompleter: [
+        { champ: "expediteur", libelle: "Vos nom, prénom et adresse", question: "Où répondre ?", exemple: "Awa KONÉ, Abidjan" },
+      ],
+    },
   };
   const html = renderToStaticMarkup(<VueResultat vue={vue} urgence={null} />);
   assert.match(html, /<pre id="texte-brouillon"/);
   assert.match(texteVisible(html), /Copier le brouillon/);
   assert.match(texteVisible(html), /À COMPLÉTER : vos nom, prénom et adresse/);
   assert.match(texteVisible(html), /Rien n'est jamais envoyé à votre place/);
+  // Le champ manquant est demandé, pas deviné.
+  assert.match(texteVisible(html), /Compléter le courrier/);
+  assert.match(texteVisible(html), /Vos nom, prénom et adresse/);
+  assert.match(html, /name="expediteur"/);
 });

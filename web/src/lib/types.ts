@@ -156,12 +156,32 @@ export interface VueSource {
   noteLecture: string | null;
 }
 
+export interface VueChampCourrier {
+  champ: string;
+  libelle: string;
+  question: string;
+  exemple: string | null;
+}
+
 export interface VueBrouillon {
   disponible: boolean;
   note: string | null;
   raison: string | null;
   /** Texte du brouillon préparé par le moteur, à relire et compléter. Jamais envoyé. */
   texte: string | null;
+  /** Article d'une référence VÉRIFIÉE seulement — jamais un texte OCR. */
+  fondement: string | null;
+  /** Informations que seul l'utilisateur peut fournir, encore manquantes. */
+  champsACompleter: VueChampCourrier[];
+}
+
+/** Réponse de /api/courrier : le courrier régénéré avec les informations fournies. */
+export interface VueCourrier {
+  texte: string | null;
+  fondement: string | null;
+  champsACompleter: VueChampCourrier[];
+  note: string | null;
+  pdfDisponible: boolean;
 }
 
 export interface VueLectureFait {

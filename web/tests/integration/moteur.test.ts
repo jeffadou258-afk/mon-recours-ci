@@ -5,7 +5,7 @@
 
 import { after, before, test } from "node:test";
 import assert from "node:assert/strict";
-import { gererOuvrir, gererRepondre, gererSante, gererSupprimer } from "../../src/lib/server/handlers";
+import { gererCourrier, gererOuvrir, gererRepondre, gererSante, gererSupprimer } from "../../src/lib/server/handlers";
 import type { ConfigServeur } from "../../src/lib/server/config";
 import { journalMuet, requeteJson } from "../aides";
 import { lancerMoteur, type MoteurLance } from "../moteur-reel";
@@ -198,4 +198,69 @@ test("suppression réelle : le dossier disparaît du moteur, l'autre reste", asy
   assert.notEqual(apres.status, 200);
   const autre = await gererRepondre(requeteJson("/api/repondre", { reponses: { logement: "oui" } }, { Cookie: cookieDe(b) }), { config });
   assert.equal(autre.status, 200);
+});
+
+test("courrier : régénéré avec les informations fournies, jamais inventées", async () => {
+  const ouverture = await gererOuvrir(
+    requeteJson("/api/ouvrir", { demande: "Mon bailleur garde ma caution depuis deux mois." }),
+    { config },
+  );
+  assert.equal(ouverture.status, 200);
+  const cookie = cookieDe(ouverture);
+  let charge = await ouverture.json();
+  let etape: string = charge.data.etape;
+  let garde = 0;
+  while (etape === "clarification" && garde < 5) {
+    garde += 1;
+    const cles: string[] = charge.data.questions.map((q: { cle: string }) => q.cle);
+    const rep = await gererRepondre(
+      requeteJson(
+        "/api/repondre",
+        { reponses: Object.fromEntries(cles.map((c) => [c, "oui"])) },
+        { Cookie: cookie },
+      ),
+      { config },
+    );
+    assert.equal(rep.status, 200);
+    charge = await rep.json();
+    etape = charge.data.etape;
+  }
+  assert.equal(etape, "reponse");
+
+  // Première génération : les informations manquantes sont DEMANDÉES, pas devinées.
+  const brouillon = charge.data.brouillon;
+  assert.equal(brouillon.disponible, true);
+  const champs = brouillon.champsACompleter.map((c: { champ: string }) => c.champ);
+  assert.deepEqual(champs, ["expediteur", "destinataire", "pieces"]);
+  assert.ok(brouillon.fondement, "le fondement vérifié est cité");
+  assert.match(brouillon.texte, /COMPLÉTER/);
+
+  // Régénération avec une seule information : elle apparaît, les autres restent demandées.
+  const courrier = await gererCourrier(
+    requeteJson(
+      "/api/courrier",
+      { informations: { expediteur: "Awa KONE, 12 rue des Jardins, Abidjan" } },
+      { Cookie: cookie },
+    ),
+    { config },
+  );
+  assert.equal(courrier.status, 200);
+  const donnees = (await courrier.json()).data;
+  assert.match(donnees.texte, /Awa KONE, 12 rue des Jardins/);
+  assert.ok(!donnees.champsACompleter.some((c: { champ: string }) => c.champ === "expediteur"));
+  assert.ok(donnees.champsACompleter.some((c: { champ: string }) => c.champ === "destinataire"));
+  assert.match(donnees.texte, /Fondement : article 416/);
+});
+
+test("courrier : un champ inconnu est refusé avant d'atteindre le moteur", async () => {
+  const ouverture = await gererOuvrir(
+    requeteJson("/api/ouvrir", { demande: "Mon bailleur garde ma caution depuis deux mois." }),
+    { config },
+  );
+  const rep = await gererCourrier(
+    requeteJson("/api/courrier", { informations: { numero_de_compte: "123" } }, { Cookie: cookieDe(ouverture) }),
+    { config },
+  );
+  assert.equal(rep.status, 400);
+  assert.equal((await rep.json()).erreur.code, "ENTREE_INVALIDE");
 });

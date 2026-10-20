@@ -12,6 +12,35 @@ export const NOMBRE_MAX_REPONSES = 20;
 /** Les clés de questions du catalogue sont de simples identifiants (ex. « logement »). */
 const MOTIF_CLE = /^[a-z0-9_]{1,40}$/;
 
+/** Champs de courrier qu'un utilisateur peut fournir. Liste fermée : le moteur
+ *  refuse tout le reste, l'interface aussi (deux verrous, pas un). */
+export const CHAMPS_COURRIER = ["expediteur", "destinataire", "pieces"] as const;
+
+export function validerInformationsCourrier(
+  entree: unknown,
+): Validation<Record<string, string>> {
+  if (typeof entree !== "object" || entree === null || Array.isArray(entree)) {
+    return { ok: false, message: "Les informations du courrier doivent être envoyées sous forme de champs." };
+  }
+  const propre: Record<string, string> = {};
+  for (const [cle, valeur] of Object.entries(entree as Record<string, unknown>)) {
+    if (!(CHAMPS_COURRIER as readonly string[]).includes(cle)) {
+      return { ok: false, message: "Une information de courrier porte un nom inconnu." };
+    }
+    if (valeur === null || valeur === undefined) continue;
+    if (typeof valeur !== "string") {
+      return { ok: false, message: "Chaque information du courrier doit être un texte." };
+    }
+    const texte = sansCaracteresDeControle(valeur).trim();
+    if (texte.length === 0) continue;
+    if (texte.length > LONGUEUR_MAX_REPONSE) {
+      return { ok: false, message: `Une information du courrier dépasse ${LONGUEUR_MAX_REPONSE} caractères.` };
+    }
+    propre[cle] = texte;
+  }
+  return { ok: true, valeur: propre };
+}
+
 export type Validation<T> = { ok: true; valeur: T } | { ok: false; message: string };
 
 function sansCaracteresDeControle(texte: string): string {

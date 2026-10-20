@@ -3,6 +3,7 @@ import { libelleDomaine, presentationStatut } from "@/lib/libelles";
 import { BandeauUrgence, EncadreVerrous, OrientationHumaine } from "./Alertes";
 import { BadgeVerification } from "./Badges";
 import { BoutonCopier } from "./BoutonCopier";
+import { FormulaireCourrier } from "./FormulaireCourrier";
 import { CarteCitation, trouverSource } from "./CarteCitation";
 
 function EnteteStatut({ statut, idTitre }: { statut: string; idTitre: string }) {
@@ -155,13 +156,10 @@ export function VueResultat({ vue, urgence }: { vue: VueReponse; urgence: VueUrg
           {vue.brouillon.disponible && vue.brouillon.texte ? (
             <>
               <p>
-                Un modèle de lettre de réclamation, préparé à partir de votre situation. Complétez les passages
-                marqués « À COMPLÉTER », relisez-le, puis envoyez-le vous-même si vous le jugez utile.
+                Un modèle de lettre de réclamation, préparé à partir de votre situation. Relisez-le, complétez
+                les informations qui vous sont demandées, puis envoyez-le vous-même si vous le jugez utile.
               </p>
-              <pre id="texte-brouillon" className="brouillon" tabIndex={0}>
-                {vue.brouillon.texte}
-              </pre>
-              <BoutonCopier texte={vue.brouillon.texte} cible="texte-brouillon" />
+              <FormulaireCourrier brouillon={vue.brouillon} />
             </>
           ) : vue.brouillon.disponible ? (
             <p>

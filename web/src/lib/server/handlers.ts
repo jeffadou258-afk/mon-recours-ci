@@ -10,8 +10,9 @@
  */
 
 import type { CodeErreur, ErreurApi, ResultatApi } from "../types";
-import { validerDemande, validerReponses } from "../validation";
+import { validerDemande, validerInformationsCourrier, validerReponses } from "../validation";
 import {
+  assainirCourrier,
   assainirOuverture,
   assainirSuite,
   assainirSante,
@@ -322,6 +323,41 @@ export async function gererRepondre(requete: Request, dep: Dependances = {}): Pr
 
   try {
     return succes(assainirSuite((reponse.corps as { data?: unknown }).data));
+  } catch (e) {
+    if (e instanceof ReponseInattendue) return erreur("REPONSE_INVALIDE");
+    throw e;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// POST /api/courrier   { informations }   — régénère le courrier du dossier
+// ---------------------------------------------------------------------------
+
+export async function gererCourrier(requete: Request, dep: Dependances = {}): Promise<Response> {
+  if (!origineAutorisee(requete)) return erreur("ORIGINE_REFUSEE");
+  const config = obtenirConfig(dep);
+  if (config instanceof Response) return config;
+
+  const dossierId = deballer(lireCookie(requete.headers.get("cookie")), config.secretSession);
+  if (!dossierId) return erreur("SESSION_ABSENTE");
+  const trop = verifierDebitVisiteur(requete, config, dep);
+  if (trop) return trop;
+
+  const lu = await lireCorpsJson(requete);
+  if (lu instanceof Response) return lu;
+  const informations = validerInformationsCourrier(lu.corps.informations);
+  if (!informations.ok) return erreur("ENTREE_INVALIDE", { message: informations.message });
+
+  const reponse = await appelerMoteur(
+    config,
+    "/courrier",
+    { dossier_id: dossierId, informations: informations.valeur },
+    dep.recuperer,
+  );
+  if (!estSucces(reponse)) return traduireEchec(reponse, dep, "/courrier");
+
+  try {
+    return succes(assainirCourrier((reponse.corps as { data?: unknown }).data));
   } catch (e) {
     if (e instanceof ReponseInattendue) return erreur("REPONSE_INVALIDE");
     throw e;

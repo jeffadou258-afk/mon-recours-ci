@@ -4,7 +4,7 @@
  * dossier (cookie HttpOnly).
  */
 
-import type { ResultatApi, VueOuverture, VueSuite } from "../types";
+import type { ResultatApi, VueCourrier, VueOuverture, VueSuite } from "../types";
 
 async function appeler<T>(chemin: string, corps: unknown): Promise<ResultatApi<T>> {
   let reponse: Response;
@@ -55,4 +55,9 @@ export function envoyerReponses(reponses: Record<string, string | null>): Promis
 
 export function supprimerConsultation(): Promise<ResultatApi<{ supprime: boolean; dejaAbsent: boolean }>> {
   return appeler<{ supprime: boolean; dejaAbsent: boolean }>("/api/supprimer", {});
+}
+
+/** Régénère le courrier du dossier avec les informations fournies par la personne. */
+export function redigerCourrier(informations: Record<string, string>): Promise<ResultatApi<VueCourrier>> {
+  return appeler<VueCourrier>("/api/courrier", { informations });
 }

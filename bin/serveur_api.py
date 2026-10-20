@@ -9,7 +9,8 @@
          http://127.0.0.1:8765/ouvrir
 
 CE QUE CE SERVEUR EST : une couche de transport locale, testée, qui n'expose que
-trois routes et réutilise intégralement `core/service.py`.
+cinq routes (`/sante`, `/ouvrir`, `/repondre`, `/courrier`, `/supprimer`) et
+réutilise intégralement `core/service.py`.
 
 CE QU'IL N'EST PAS : un service public. Il n'y a **aucune** protection contre une
 attaque distribuée, aucune terminaison TLS, aucune gestion d'utilisateurs. Il
@@ -49,7 +50,7 @@ from core import service  # noqa: E402
 TAILLE_MAX_CORPS = 64 * 1024
 NOM_VARIABLE_CLE = "MONRECOURS_API_KEY"
 ROUTES_POST = {"/ouvrir": service.ouvrir, "/repondre": service.repondre,
-               "/supprimer": service.supprimer}
+               "/supprimer": service.supprimer, "/courrier": service.rediger_courrier}
 ROUTES_GET = {"/sante": lambda: service.sante()}
 
 
@@ -203,6 +204,9 @@ def _fabrique(cle_api, limiteur, journal=None):
                     resultat = service.ouvrir(charge.get("dossier_id"), charge.get("demande"))
                 elif route == "/supprimer":
                     resultat = service.supprimer(charge.get("dossier_id"))
+                elif route == "/courrier":
+                    resultat = service.rediger_courrier(charge.get("dossier_id"),
+                                                        charge.get("informations"))
                 else:
                     resultat = service.repondre(charge.get("dossier_id"),
                                                 charge.get("reponses"))

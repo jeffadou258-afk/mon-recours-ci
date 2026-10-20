@@ -24,6 +24,7 @@ ne représente personne et ne garantit aucun résultat.
 | Couverture par domaine | tableau **calculé** : `KNOWLEDGE/INVENTAIRE_COUVERTURE.md` |
 | Validation juridique | **aucune** — `TERMINE_ET_VERIFIE` est refusé tant qu'aucun article n'a été relu par un humain |
 | Envoi de courrier | **impossible** : aucune fonction d'envoi dans le code (vérifié par lecture de l'AST) |
+| Génération de courriers | **opérationnelle** — PDF produit, informations demandées à la personne (jamais inventées), fondement cité seulement si la référence est `VERIFIE` ; `POST /api/courrier` |
 | Interface conversationnelle | **opérationnelle et déterministe** — `core/conversation.py`, **92 fiches** validées contre le corpus (5 domaines), CLI `bin/dialogue.py` |
 | Serveur HTTP | **local et testé** — `bin/serveur_api.py` (127.0.0.1, clé obligatoire, débit, journal sans données personnelles) ; **non exposé, non déployé** |
 | Mode LLM | **interface et adaptateur écrits, NON opérationnels** — `llm.statut()["operationnel"] == False`, aucun appel réel, aucune clé dans le code |

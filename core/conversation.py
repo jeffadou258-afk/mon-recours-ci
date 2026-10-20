@@ -382,17 +382,9 @@ class Conversation(object):
         dossier_id = cloture.get("dossier_id")
         en_cours = self.agent.lire_en_cours(dossier_id) or {}
         faits = mod_faits.Faits.depuis_dict(en_cours.get("faits") or {})
-        champs = {
-            "objet": (fiches[0]["titre"] if fiches else "Demande"),
-            "demande": (etat or {}).get("demande") or "",
-            "faits": [f.get("libelle") for f in faits.tous() if f.get("libelle")],
-            "references": ["Article %s (%s)" % (f["article"], f.get("numero_texte") or "")
-                           for f in fiches],
-            # Champ laissé explicitement à compléter : on n'invente pas l'identité
-            # ni l'adresse de l'utilisateur.
-            "adresse_retour": "[À COMPLÉTER : vos nom, prénom et adresse]",
-            "pieces": "[À COMPLÉTER : liste des documents joints, par exemple le contrat et les reçus]",
-        }
+        courrier = en_cours.get("courrier") or {}
+        champs, fondement = self._champs_brouillon(fiches, (etat or {}).get("demande"),
+                                                   faits, courrier)
         try:
             genere = fabricant(dossier_id, "reclamation", champs)
             texte = None
@@ -400,14 +392,79 @@ class Conversation(object):
             if chemin_txt and os.path.isfile(chemin_txt):
                 with open(chemin_txt, encoding="utf-8") as flux:
                     texte = flux.read()
-            # `texte` : le contenu du brouillon, pour l'afficher à l'utilisateur
-            # (les chemins de fichiers restent dans `genere`, côté serveur).
             return {"disponible": True,
                     "note": "BROUILLON — NON ENVOYÉ. À relire et compléter avant tout usage.",
+                    "fondement": fondement,
+                    "champs_a_completer": mod_documents.champs_manquants(champs),
                     "texte": texte,
                     "genere": genere}
         except Exception as erreur:  # noqa: BLE001 — on déclare l'échec, on ne le masque pas
             return {"disponible": False, "raison": "génération impossible : %s" % (erreur,)}
+
+    @staticmethod
+    def _champs_brouillon(fiches, demande, faits, courrier):
+        """Champs du courrier, et fondement SI — et seulement si — il est vérifié.
+
+        Fonction partagée par la première génération (fin de conversation) et
+        par la régénération (`rediger_courrier`) : sans elle, les deux chemins
+        divergeraient et l'un finirait par citer un texte non vérifié.
+        """
+        verifiees = [f for f in fiches if f.get("etat_verification") == "VERIFIE"]
+        fondement = None
+        if verifiees:
+            premiere = verifiees[0]
+            fondement = ("article %s de la loi n° %s"
+                         % (premiere["article"], premiere.get("numero_texte") or "")).strip()
+        champs = {
+            "objet": (fiches[0]["titre"] if fiches else "Demande"),
+            "demande": demande or "",
+            "faits": [f.get("libelle") for f in faits.tous() if f.get("libelle")],
+            "references": ["Article %s (%s)" % (f["article"], f.get("numero_texte") or "")
+                           for f in fiches],
+            # On n'invente ni l'identité ni l'adresse : tant qu'elles manquent,
+            # le trou reste visible et la question est posée (`champs_a_completer`).
+            "adresse_retour": courrier.get("expediteur")
+                              or "[À COMPLÉTER : vos nom, prénom et adresse]",
+            "destinataire": courrier.get("destinataire") or "",
+            "pieces": courrier.get("pieces")
+                      or "[À COMPLÉTER : liste des documents joints, par exemple le contrat et les reçus]",
+            "fondement": fondement,
+        }
+        return champs, fondement
+
+    def rediger_courrier(self, dossier_id, informations=None):
+        """Regénère le courrier d'un dossier AVEC les informations fournies.
+
+        Ne rouvre pas la conversation, ne modifie aucun fait, ne change aucun
+        statut. Un dossier sans analyse aboutie est refusé : un courrier ne se
+        rédige pas avant que le droit applicable ait été identifié.
+        """
+        en_cours = self.agent.lire_en_cours(dossier_id)
+        etat = self._lire_etat(dossier_id)
+        if not en_cours or not etat:
+            raise ValueError("aucun dossier ouvert pour %r" % (dossier_id,))
+        if etat.get("etape") != "repondu" or not etat.get("reponse"):
+            raise ValueError("analyse non terminée : répondez d'abord aux questions "
+                             "posées avant de rédiger un courrier")
+        identifiants = etat.get("fiches") or []
+        fiches = [self.catalogue[i] for i in identifiants if i in self.catalogue]
+        if not fiches:
+            raise ValueError("aucune fiche identifiée : le courrier ne peut pas être rédigé "
+                             "avant l'analyse")
+        courrier = self.agent.enregistrer_courrier(dossier_id, informations or {})
+        faits = mod_faits.Faits.depuis_dict(en_cours.get("faits") or {})
+        champs, fondement = self._champs_brouillon(fiches, en_cours.get("demande"), faits,
+                                                   courrier)
+        genere = mod_documents.generer_brouillon(dossier_id, "reclamation", champs)
+        texte = None
+        if genere.get("fichier_txt") and os.path.isfile(genere["fichier_txt"]):
+            with open(genere["fichier_txt"], encoding="utf-8") as flux:
+                texte = flux.read()
+        return {"dossier_id": dossier_id, "type_document": "reclamation",
+                "fondement": fondement,
+                "champs_a_completer": mod_documents.champs_manquants(champs),
+                "texte": texte, "genere": genere,
+                "note": "BROUILLON — NON ENVOYÉ. À relire et compléter avant tout usage."}
 
     def _restituer_refus(self, dossier):
         return {"statut_reponse": "REFUS",

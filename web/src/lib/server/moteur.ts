@@ -8,7 +8,7 @@
 
 import type { ConfigServeur } from "./config";
 
-export type RouteMoteur = "/sante" | "/ouvrir" | "/repondre" | "/supprimer";
+export type RouteMoteur = "/sante" | "/ouvrir" | "/repondre" | "/supprimer" | "/courrier";
 
 export type ReponseMoteur =
   | { joignable: true; statut: number; corps: unknown; retryAfter: string | null }

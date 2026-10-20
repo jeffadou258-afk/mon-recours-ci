@@ -41,6 +41,7 @@ if RACINE not in sys.path:
 
 import config  # noqa: E402
 from core import catalogue, corpus, couverture, llm  # noqa: E402
+from core import documents as mod_documents  # noqa: E402
 from core.conversation import Conversation  # noqa: E402
 
 LONGUEUR_MAX_DEMANDE = 4000
@@ -51,6 +52,7 @@ CODES_ERREUR = {
     "DOSSIER_INVALIDE": "L'identifiant de dossier est refusé (traversée de chemin).",
     "DOSSIER_INCONNU": "Aucune conversation n'est ouverte pour ce dossier.",
     "CATALOGUE_INVALIDE": "Le catalogue de fiches ne correspond plus au corpus.",
+    "ANALYSE_INCOMPLETE": "Le courrier ne peut être rédigé avant l'identification du droit applicable.",
     "INTERNE": "Erreur interne : l'incident est déclaré, pas masqué.",
 }
 
@@ -96,6 +98,16 @@ SCHEMAS = {
     "sante": {
         "sortie": {"catalogue": "fiches par domaine", "corpus": "documents, articles, "
                    "provenance", "domaines": "statut par domaine"},
+    },
+    "rediger_courrier": {
+        "entree": {"dossier_id": "str",
+                   "informations": "{expediteur?, destinataire?, pieces?} — chaînes "
+                                   "fournies par la personne, jamais devinées"},
+        "sortie": {"dossier_id": "str", "type_document": "str",
+                   "fondement": "str | None (article d'une référence VERIFIE seulement)",
+                   "champs_a_completer": "[{champ, libelle, question, exemple}]",
+                   "texte": "str", "genere": "{fichier_txt, fichier_pdf, pdf:{ok, erreur}}",
+                   "note": "str"},
     },
 }
 
@@ -262,6 +274,39 @@ def rechercher(question, domaine=None, limite=5, texte=None):
                 "avertissement": ("Un résultat localise un article ; il ne constitue pas "
                                   "une réponse juridique et ne vaut pas validation. "
                                   "Aucune fiche n'est créée automatiquement.")}
+    return _executer(corps)
+
+
+def rediger_courrier(dossier_id, informations=None):
+    """Rédige (ou régénère) le courrier du dossier avec les informations fournies.
+
+    Aucune information n'est déduite : `expediteur`, `destinataire` et `pieces`
+    viennent de la personne. Ce qui manque n'est pas inventé — le courrier le
+    signale et la question est renvoyée dans `champs_a_completer`.
+
+    Le fondement juridique n'est ajouté que si une fiche repose sur une référence
+    `VERIFIE` : un texte OCR n'entre pas dans un courrier.
+    """
+    def corps():
+        _valider_dossier(dossier_id)
+        if informations is not None and not isinstance(informations, dict):
+            raise _ErreurService("ENTREE_INVALIDE", "informations doit être un dictionnaire")
+        propres = {}
+        for cle, valeur in (informations or {}).items():
+            if not isinstance(cle, str) or cle not in mod_documents.CHAMPS_UTILISATEUR:
+                raise _ErreurService("ENTREE_INVALIDE",
+                                     "champ de courrier inconnu : %r" % (cle,),
+                                     detail=sorted(mod_documents.CHAMPS_UTILISATEUR))
+            if valeur is None:
+                continue
+            if not isinstance(valeur, str):
+                raise _ErreurService("ENTREE_INVALIDE",
+                                     "le champ %r doit être une chaîne" % cle)
+            propres[cle] = _valider_texte(valeur, "champ %r" % cle, LONGUEUR_MAX_REPONSE)
+        try:
+            return _conversation().rediger_courrier(dossier_id, propres)
+        except ValueError as erreur:
+            raise _ErreurService("ANALYSE_INCOMPLETE", str(erreur))
     return _executer(corps)
 
 

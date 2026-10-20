@@ -40,6 +40,7 @@ MODELES = {
             "Madame, Monsieur,\n\n"
             "Je vous adresse la présente au sujet de : {{objet}}.\n\n"
             "Les faits, tels que je peux les établir, sont les suivants :\n{{faits}}\n\n"
+            "{{bloc_fondement}}"
             "Les pièces en ma possession sont :\n{{pieces}}\n\n"
             "Ma demande est la suivante : {{demande}}.\n\n"
             "Je vous remercie de bien vouloir me faire connaître votre position, par "
@@ -53,7 +54,8 @@ MODELES = {
         "corps": (
             "Madame, Monsieur,\n\n"
             "Je porte à votre attention une réclamation concernant : {{objet}}.\n\n"
-            "Faits constatés :\n{{faits}}\n\n"
+            "Faits tels que je les déclare (à vérifier avant envoi) :\n{{faits}}\n\n"
+            "{{bloc_fondement}}"
             "Pièces jointes :\n{{pieces}}\n\n"
             "Demande : {{demande}}.\n\n"
             "Je sollicite une réponse écrite dans vos meilleurs délais, à l'adresse "
@@ -86,6 +88,34 @@ MODELES = {
 }
 
 CHAMPS_OBLIGATOIRES = ("objet", "faits", "demande", "adresse_retour")
+
+# Informations que SEUL l'utilisateur peut fournir. Elles ne sont jamais
+# déduites ni inventées : tant qu'elles manquent, le courrier reste un brouillon
+# utilisable mais incomplet, et la question est posée en clair.
+CHAMPS_UTILISATEUR = {
+    "expediteur": {
+        "libelle": "Vos nom, prénom et adresse",
+        "question": ("À quelle adresse le destinataire doit-il vous répondre ? "
+                     "Indiquez vos nom, prénom et adresse complète."),
+        "exemple": "Awa KONÉ, 12 rue des Jardins, Cocody, Abidjan",
+    },
+    "destinataire": {
+        "libelle": "Destinataire du courrier",
+        "question": ("À qui adressez-vous ce courrier ? Nom ou qualité "
+                     "(par exemple « Monsieur le Bailleur ») et adresse si vous l'avez."),
+        "exemple": "Monsieur le Bailleur, 5 rue du Marché, Yopougon",
+    },
+    "pieces": {
+        "libelle": "Pièces jointes",
+        "question": ("Quelles pièces joignez-vous à ce courrier ? "
+                     "Une par ligne (contrat, reçus, échanges écrits…)."),
+        "exemple": "Contrat de bail\nReçu du dépôt de garantie",
+    },
+}
+
+# Champs facultatifs : vides, ils DISPARAISSENT du courrier au lieu d'afficher
+# « [À COMPLÉTER] ». Un fondement juridique absent ne doit pas laisser un trou.
+CHAMPS_OPTIONNELS = ("destinataire", "bloc_fondement")
 
 
 def horodatage():
@@ -122,6 +152,13 @@ def _remplir(gabarit, champs):
     brouillon, pour que l'utilisateur le complète au lieu de l'oublier.
     """
     texte = gabarit
+    # Les champs facultatifs vides disparaissent : pas de trou « [À COMPLÉTER] »
+    # là où le courrier peut simplement ne rien dire. Pas de `.strip()` ici :
+    # `bloc_fondement` porte ses propres sauts de ligne, et les perdre collait
+    # « Fondement : … .Pièces jointes : ».
+    for cle in CHAMPS_OPTIONNELS:
+        valeur = (champs or {}).get(cle) or ""
+        texte = texte.replace("{{%s}}" % cle, str(valeur) if valeur else "")
     for cle, valeur in (champs or {}).items():
         if valeur in (None, "", [], ()):
             continue
@@ -135,24 +172,52 @@ def _remplir(gabarit, champs):
     return texte
 
 
+def champs_manquants(champs):
+    """Informations que seul l'utilisateur peut fournir et qui manquent encore.
+
+    Un champ rempli d'un texte « [À COMPLÉTER …] » compte comme MANQUANT : c'est
+    un trou déguisé, pas une information. L'ordre suit CHAMPS_UTILISATEUR, donc
+    il est stable et testable.
+    """
+    equivalences = {"expediteur": "adresse_retour"}
+    manquants = []
+    for cle, definition in CHAMPS_UTILISATEUR.items():
+        valeur = str((champs or {}).get(cle)
+                     or (champs or {}).get(equivalences.get(cle, cle))
+                     or "").strip()
+        if not valeur or valeur.startswith("[À COMPLÉTER"):
+            manquants.append({"champ": cle, "libelle": definition["libelle"],
+                              "question": definition["question"],
+                              "exemple": definition["exemple"]})
+    return manquants
+
+
 def rendre_texte(dossier_id, type_document, champs, date_document=None):
     """Construit le texte complet du brouillon. Aucune écriture ici."""
     if type_document not in MODELES:
         raise KeyError("modèle inconnu : %r. Modèles disponibles : %s"
                        % (type_document, ", ".join(sorted(MODELES))))
+    champs = dict(champs or {})
     manquants = [c for c in CHAMPS_OBLIGATOIRES if not str(champs.get(c) or "").strip()]
     if manquants:
         raise ValueError("champs obligatoires du brouillon manquants : %s"
                          % ", ".join(manquants))
 
+    # Fondement juridique : fourni UNIQUEMENT quand une référence vérifiée le
+    # porte. Absent, le bloc disparaît — un courrier générique reste honnête.
+    fondement = str(champs.get("fondement") or "").strip()
+    champs["bloc_fondement"] = ("Fondement : %s.\n\n" % fondement) if fondement else ""
+
     modele = MODELES[type_document]
     corps = _remplir(modele["corps"], champs)
     objet = _remplir(modele["objet"], champs)
+    destinataire = str(champs.get("destinataire") or "").strip()
 
     date_document = date_document or datetime.date.today().isoformat()
     entete = "%s\nGénéré le %s\n%s\n" % (MENTION_BROUILLON, date_document, "=" * 68)
     pied = "\n%s\n%s\n" % ("-" * 68, MENTION_FIN)
-    return entete + "\nObjet : %s\n\n" % objet + corps + pied
+    bloc_destinataire = ("\nDestinataire : %s\n" % destinataire) if destinataire else ""
+    return entete + "\nObjet : %s\n" % objet + bloc_destinataire + "\n" + corps + pied
 
 
 def generer_brouillon(dossier_id, type_document, champs, export_pdf=True):
@@ -198,7 +263,16 @@ def generer_brouillon(dossier_id, type_document, champs, export_pdf=True):
             pdf.add_page()
             pdf.set_font("Helvetica", size=10)
             for ligne in nettoyer_pour_pdf(texte).split("\n"):
-                pdf.multi_cell(0, 5, ligne if ligne.strip() else " ")
+                # `multi_cell` laisse le curseur au bord droit : sans remise à la
+                # marge, la ligne suivante n'a plus de largeur et fpdf2 lève
+                # « Not enough horizontal space to render a single character ».
+                # C'est ce qui faisait échouer TOUS les exports PDF.
+                pdf.set_x(pdf.l_margin)
+                try:
+                    pdf.multi_cell(pdf.epw, 5, ligne if ligne.strip() else " ",
+                                   new_x="LMARGIN", new_y="NEXT")
+                except TypeError:  # fpdf2 < 2.7.5 : paramètres absents
+                    pdf.multi_cell(pdf.epw, 5, ligne if ligne.strip() else " ")
             chemin_pdf = destination / (base + ".pdf")
             pdf.output(str(chemin_pdf))
             resultat["fichier_pdf"] = str(chemin_pdf)

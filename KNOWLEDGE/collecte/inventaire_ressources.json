@@ -1,19 +1,18 @@
 {
  "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
- "genere_le": "2026-10-20T14:42:14+00:00",
+ "genere_le": "2026-10-20T21:25:26+00:00",
  "outils_collecte": {
-  "pdftotext": "pdftotext version 24.02.0",
-  "tesseract": "tesseract 5.3.4",
-  "qpdf": "qpdf version 11.9.0",
+  "pdftotext": "pdftotext version 26.10.0",
+  "tesseract": "tesseract 5.5.3",
+  "qpdf": null,
   "tesseract_langues": [
    "of",
    "available",
    "languages",
    "in",
-   "\"/usr/share/tesseract-ocr/5/tessdata/\"",
-   "(3):",
+   "\"/opt/homebrew/share/tessdata/\"",
+   "(2):",
    "eng",
-   "fra",
    "osd"
   ]
  },
