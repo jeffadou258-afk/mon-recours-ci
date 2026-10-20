@@ -123,6 +123,7 @@ borne le périmètre, il ne juge pas la pertinence.
 | `CLAUDE_HANDOFF.md` | reprise technique : contrats d'entrée/sortie, modèle de données, interface, LLM |
 | `KNOWLEDGE/INVENTAIRE_COUVERTURE.md` | **fiches par domaine** : statut, périmètre, sources, lacunes |
 | `KNOWLEDGE/registre_validation_humaine.md` | **ce qu'un juriste doit trancher**, par ordre de priorité — généré par `bin/registre_validation.py` |
+| `KNOWLEDGE/RECHERCHE_PRIORITES.md` | **plan du Research Agent** : lot 1 (candidat repéré) et lot 2 (rien d'identifié) — généré par `bin/recherche_priorites.py` |
 | `KNOWLEDGE/qualite/rapport_qualite_recherche.json` | mesures de recherche : rappel, pertinence, abstentions, citations |
 
 ---
