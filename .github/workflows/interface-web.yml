@@ -6,7 +6,7 @@ name: Interface web — controles
 
 on:
   push:
-    branches: [feature/interface-web, feature/domaine-famille, feature/produit-fonctionnel, audit/24-domaines, corpus/collecte-24-domaines]
+    branches: [feature/interface-web, feature/domaine-famille, feature/produit-fonctionnel, audit/24-domaines, corpus/collecte-24-domaines, corpus/collecte-autonome]
     paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", ".github/workflows/interface-web.yml"]
   pull_request:
     paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", ".github/workflows/interface-web.yml"]
@@ -156,6 +156,10 @@ jobs:
 
       # Les PDF officiels ne sont pas dans le dépôt : mode explicite qui vérifie
       # les empreintes des textes extraits à la place (core/corpus.py).
+      # `bin/enregistrer_tests.py` appelle la MÊME suite (tests/run_all.py) et
+      # conserve le résultat : date, commit, chiffres, noms des échecs, durée.
+      # Son code de sortie est celui de la suite, et `pipefail` le propage : un
+      # échec de test fait échouer l'étape, il n'est jamais converti en succès.
       - name: Tests du moteur
         if: always()
         working-directory: .
@@ -163,8 +167,8 @@ jobs:
           MONRECOURS_PDF_NON_DISTRIBUES: "1"
         run: |
           set -o pipefail
-          python3 tests/run_all.py 2>&1 | tee moteur.txt | tail -5
-          echo "::notice title=Moteur::$(grep -E 'TESTS=' moteur.txt)"
+          python3 bin/enregistrer_tests.py --etiquette ci 2>&1 | tee moteur.txt
+          echo "::notice title=Moteur::$(grep -E '^Tests ' moteur.txt | head -1)"
 
       - name: Résultat final de l'audit
         if: always()
@@ -179,4 +183,6 @@ jobs:
             web/package-lock.json
             audit.json
             web/tests/e2e/captures/
+            moteur.txt
+            KNOWLEDGE/qualite/historique_tests.jsonl
           retention-days: 14
