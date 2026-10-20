@@ -43,7 +43,7 @@ DOSSIER_RESULTATS = os.path.join(DOSSIER, "resultats")
 DOSSIER_PDF = os.path.join(DOSSIER, "pdf")              # ignoré par git (*.pdf)
 INVENTAIRE = os.path.join(DOSSIER, "inventaire_ressources.json")
 RECOUPEMENTS = os.path.join(DOSSIER, "recoupements.json")
-JOURNAL_OCR = os.path.join(DOSSIER, "integrations_ocr.json")
+JOURNAL_OCR = os.environ.get("MONRECOURS_JOURNAL_OCR") or os.path.join(DOSSIER, "integrations_ocr.json")
 BRANCHE_ARCHIVE = "corpus/archives-pdf"
 
 CONFIANCE_OCR_MINIMALE = 75.0
@@ -625,6 +625,22 @@ def _lecture(texte, segment):
     return texte, corpus.extraire_articles(texte or ""), corrections, retraits
 
 
+def _textes_bruts(d, resultat):
+    """Textes bruts (avec marqueurs de page) des lectures d'un scan, par nom de lecture."""
+    extraction = resultat.get("extraction") or {}
+    sortie = []
+    if d["indices_ocr_editeur"]:
+        sortie.append(("CALQUE_EDITEUR:" + ",".join(d["indices_ocr_editeur"]), _texte(resultat, "fichier_texte")))
+    if extraction.get("fichier_ocr"):
+        sortie.append(("TESSERACT_DISTANT:%s dpi" % extraction.get("dpi_ocr", 200), _texte(resultat, "fichier_ocr")))
+    for cle_locale, nom in (("extraction_locale", "TESSERACT_LOCAL_BEST"), ("extraction_locale_fast", "TESSERACT_LOCAL_FAST")):
+        locale = resultat.get(cle_locale) or {}
+        if locale.get("fichier_ocr") and os.path.isfile(os.path.join(RACINE, locale["fichier_ocr"])):
+            sortie.append(("%s:%s dpi" % (nom, locale.get("dpi")),
+                           open(os.path.join(RACINE, locale["fichier_ocr"]), encoding="utf-8").read()))
+    return sortie
+
+
 def lectures_du_scan(d, resultat, source):
     """Toutes les lectures d'un même scan : calque d'éditeur (s'il vient d'un OCR),
     tesseract distant, tesseract local (tessdata_best). Renvoie
@@ -766,6 +782,7 @@ def preparer_ocr(d, inventaire, manifeste):
     else:
         articles = dict(lectures[0][2])   # une seule lecture : pas de complément non vérifié
     return {"articles": articles, "confiance": confiance, "ecartes": ecartes, "principal": principal,
+            "principal_brut": next((t for nom, t in _textes_bruts(d, resultat) if nom == nom_principal), None),
             "nom_principal": nom_principal, "comparateur": comparateur, "copies": copies, "second": second,
             "corrections_en_tetes": corrections_en_tetes, "retraits": retraits,
             "hors_principale": sum(1 for n in articles if provenance.get(n) != nom_principal),
@@ -819,6 +836,14 @@ def officialiser_ocr(cles=None, lecture_unique=False):
             bilan.append((d["cle"], "IGNORE", "une seule lecture du scan : seconde lecture requise"))
             continue
         articles, confiance, ecartes = prep["articles"], prep["confiance"], prep["ecartes"]
+        # Couverture vérifiée AVANT toute écriture (base, fichiers, journal). Un refus
+        # d'indexation après coup laissait une référence munie d'un extrait jamais
+        # indexé, contre lequel une citation aurait pu être « vérifiée » (20/10/2026).
+        taux_prevu, maximum_prevu = corpus.taux_couverture(articles)
+        if not articles or taux_prevu < corpus.COUVERTURE_MINIMALE:
+            bilan.append((d["cle"], "REFUSE", "couverture %.0f %% des articles 1..%s (minimum %.0f %%) : "
+                          "rien n'est écrit" % (100 * taux_prevu, maximum_prevu, 100 * corpus.COUVERTURE_MINIMALE)))
+            continue
         # Couverture vérifiée AVANT toute écriture : un refus d'indexation après coup
         # laissait une référence munie d'un extrait jamais indexé, contre lequel une
         # citation aurait pu être « vérifiée » (constaté le 20/10/2026).
@@ -922,6 +947,72 @@ def officialiser_ocr(cles=None, lecture_unique=False):
     return bilan
 
 
+def lecture_partielle(cles):
+    """Document REFUSÉ à l'intégration (couverture < seuil) : écrit, article par article,
+    ce qui est fiable et ce qui est exclu, avec la page du scan. Rien n'est indexé ni
+    citable ; le texte source et les lectures restent dans KNOWLEDGE/collecte/textes/."""
+    inventaire = lire_json(INVENTAIRE)
+    manifeste = {s["cle"]: s for s in lire_json(MANIFESTE)["sources"]}
+    dossier = os.path.join(DOSSIER, "lectures_partielles")
+    os.makedirs(dossier, exist_ok=True)
+    for d in inventaire["documents"]:
+        if d["cle"] not in cles:
+            continue
+        prep = preparer_ocr(d, inventaire, manifeste)
+        taux, maximum = corpus.taux_couverture(prep["articles"])
+        # page de chaque article dans la lecture principale (marqueurs « --- PAGE n --- »)
+        pages, page = {}, None
+        for ligne in ocr.normaliser_en_tetes_jo(prep["principal_brut"] or "")[0].splitlines():
+            m = re.match(r"^--- PAGE (\d+) ---", ligne)
+            if m:
+                page = int(m.group(1))
+                continue
+            m = re.match(r"^[ \t]*Art(?:icle)?\.?[ \t]+(\d{1,4})", ligne)
+            if m and m.group(1) not in pages:
+                pages[m.group(1)] = page
+        ecartes = dict(prep["ecartes"])
+        statuts = {}
+        for n in range(1, (maximum or 0) + 1):
+            numero = str(n)
+            if numero in prep["articles"]:
+                statut = "FIABLE_NON_INDEXE"
+            elif numero in prep["illisibles"]:
+                statut = "ILLISIBLE"
+            elif numero in prep["nombres_divergents"]:
+                statut = "NOMBRE_DIVERGENT"
+            elif numero in ecartes:
+                statut = "NON_CONFIRME"
+            else:
+                statut = "NON_LU"
+            entree = {"statut": statut, "page": pages.get(numero)}
+            if statut == "FIABLE_NON_INDEXE":
+                entree["sha256_texte"] = corpus.empreinte_texte(prep["articles"][numero])
+                entree["accord"] = (prep["confiance"] or {}).get(numero)
+            statuts[numero] = entree
+        compte = collections.Counter(e["statut"] for e in statuts.values())
+        par_page = collections.defaultdict(collections.Counter)
+        for e in statuts.values():
+            par_page[e["page"]][e["statut"]] += 1
+        degradees = sorted(p for p, c in par_page.items()
+                           if p and (c["ILLISIBLE"] + c["NON_CONFIRME"] + c["NON_LU"]) >= max(2, sum(c.values()) // 2))
+        rapport = {
+            "objet": ("Lecture partielle d'un exemplaire officiel REFUSÉ à l'intégration : aucun article n'est indexé "
+                      "ni citable. Sert à documenter les passages dégradés et à préparer une nouvelle lecture."),
+            "cle": d["cle"], "numero_texte": d["numero_texte"], "titre": d["titre"], "url": d["url"],
+            "sha256_pdf": d["sha256"], "date": datetime.date.today().isoformat(),
+            "lecture_principale": prep["nom_principal"], "etalons": prep["comparateur"],
+            "couverture_fiable": round(taux, 4), "seuil_integration": corpus.COUVERTURE_MINIMALE,
+            "decision": "NON_INTEGRE : couverture fiable inférieure au seuil",
+            "comptes": dict(sorted(compte.items())), "pages_degradees": degradees,
+            "textes_sources": sorted(os.path.relpath(p, RACINE) for p in __import__("glob").glob(
+                os.path.join(DOSSIER, "textes", d["cle"] + ".*"))),
+            "articles": statuts,
+        }
+        chemin = os.path.join(dossier, d["cle"] + ".json")
+        ecrire_json(chemin, rapport)
+        print("%s : %s ; pages dégradées %s -> %s" % (d["cle"], dict(compte), degradees, os.path.relpath(chemin, RACINE)))
+
+
 def mesurer(cles=None):
     """Ce qu'une intégration OCR retiendrait, document par document — rien n'est écrit."""
     inventaire = lire_json(INVENTAIRE)
@@ -956,7 +1047,8 @@ def mesurer(cles=None):
 
 def main(argv=None):
     analyseur = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    analyseur.add_argument("etape", choices=("pdf", "controler", "recouper", "officialiser", "officialiser_ocr", "mesurer"))
+    analyseur.add_argument("etape", choices=("pdf", "controler", "recouper", "officialiser", "officialiser_ocr", "mesurer",
+                                                    "lecture_partielle"))
     analyseur.add_argument("--cle", action="append")
     arguments = analyseur.parse_args(argv)
     if arguments.etape == "officialiser":
@@ -965,6 +1057,8 @@ def main(argv=None):
         officialiser_ocr(arguments.cle)
     elif arguments.etape == "mesurer":
         mesurer(arguments.cle)
+    elif arguments.etape == "lecture_partielle":
+        lecture_partielle(arguments.cle or [])
     else:
         {"pdf": rapatrier_pdf, "controler": controler, "recouper": recouper}[arguments.etape]()
     return 0

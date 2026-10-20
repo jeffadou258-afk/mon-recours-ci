@@ -1,0 +1,672 @@
+{
+ "objet": "Lecture partielle d'un exemplaire officiel REFUSÉ à l'intégration : aucun article n'est indexé ni citable. Sert à documenter les passages dégradés et à préparer une nouvelle lecture.",
+ "cle": "mffe_etat_civil_2018_862",
+ "numero_texte": "2018-862",
+ "titre": "Loi n° 2018-862 du 19 novembre 2018 relative à l'état civil",
+ "url": "https://mffe.ci/MFFE/site_famille/wp-content/uploads/2022/01/loi_numero_2018_862_du_19_11_2018_etat_civil.pdf",
+ "sha256_pdf": "sha256:ab84704cb56c8c1cb9ab55436ba18ecf9e4ef5952133c7ce035c26109e7c8ad7",
+ "date": "2026-10-20",
+ "lecture_principale": "TESSERACT_DISTANT:200 dpi",
+ "etalons": "TESSERACT_LOCAL_FAST:300 dpi+TESSERACT_LOCAL_BEST:300 dpi",
+ "couverture_fiable": 0.8319,
+ "seuil_integration": 0.85,
+ "decision": "NON_INTEGRE : couverture fiable inférieure au seuil",
+ "comptes": {
+  "FIABLE_NON_INDEXE": 94,
+  "ILLISIBLE": 6,
+  "NOMBRE_DIVERGENT": 1,
+  "NON_CONFIRME": 7,
+  "NON_LU": 5
+ },
+ "pages_degradees": [
+  2
+ ],
+ "textes_sources": [
+  "KNOWLEDGE/collecte/textes/mffe_etat_civil_2018_862.ocr.txt",
+  "KNOWLEDGE/collecte/textes/mffe_etat_civil_2018_862.ocr_best.txt",
+  "KNOWLEDGE/collecte/textes/mffe_etat_civil_2018_862.ocr_fast.txt",
+  "KNOWLEDGE/collecte/textes/mffe_etat_civil_2018_862.txt"
+ ],
+ "articles": {
+  "1": {
+   "statut": "NON_CONFIRME",
+   "page": 1
+  },
+  "2": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 1,
+   "sha256_texte": "sha256:423dbaaf9b504e3f0639429f3b12af40d41f66f33390bd3d4d022199b47fea84",
+   "accord": 1.0
+  },
+  "3": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 1,
+   "sha256_texte": "sha256:1e671a981777d3f1824d538e35d75c750fa48dd55139470e75d13dad15c492c6",
+   "accord": 1.0
+  },
+  "4": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 1,
+   "sha256_texte": "sha256:256307bfacb62d72257c71bc76a5892be1eb601f5af1c9c38fda9d15c8cbd69c",
+   "accord": 0.9914
+  },
+  "5": {
+   "statut": "NON_CONFIRME",
+   "page": 2
+  },
+  "6": {
+   "statut": "ILLISIBLE",
+   "page": 2
+  },
+  "7": {
+   "statut": "NON_CONFIRME",
+   "page": 2
+  },
+  "8": {
+   "statut": "NON_CONFIRME",
+   "page": 2
+  },
+  "9": {
+   "statut": "NON_CONFIRME",
+   "page": 2
+  },
+  "10": {
+   "statut": "ILLISIBLE",
+   "page": 2
+  },
+  "11": {
+   "statut": "NON_LU",
+   "page": null
+  },
+  "12": {
+   "statut": "ILLISIBLE",
+   "page": 2
+  },
+  "13": {
+   "statut": "ILLISIBLE",
+   "page": 2
+  },
+  "14": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 2,
+   "sha256_texte": "sha256:0249d92c1c04e89b3f5acc7c2112ee7add29e102280223787bad1cad9002741e",
+   "accord": 0.9267
+  },
+  "15": {
+   "statut": "NON_LU",
+   "page": null
+  },
+  "16": {
+   "statut": "NON_LU",
+   "page": null
+  },
+  "17": {
+   "statut": "ILLISIBLE",
+   "page": 2
+  },
+  "18": {
+   "statut": "NON_LU",
+   "page": null
+  },
+  "19": {
+   "statut": "NON_CONFIRME",
+   "page": null
+  },
+  "20": {
+   "statut": "ILLISIBLE",
+   "page": 2
+  },
+  "21": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:35b69e2518b2c2fdd0b424b30ddbc635831183ae02c75c5e39b9693baafabed8",
+   "accord": 1.0
+  },
+  "22": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:f86d9a4bc15b63b6c61409346e3194b0a079419485f078efca5d01bc171cb88d",
+   "accord": 1.0
+  },
+  "23": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:7b0aa3dc72586e14f436b944ba2ec56d768a2b2dfb46faa6c54695488b830b47",
+   "accord": 1.0
+  },
+  "24": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:cc8a4c5238d10a3e65605be6e2461fc85e7e6520ae839a8d8c25ce71177ba3af",
+   "accord": 0.9914
+  },
+  "25": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:5cc442cc544ff64dad0941a8f6fe4412314d0b2fa66a42aa2be9950910c1bb75",
+   "accord": 1.0
+  },
+  "26": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:43240704eb31ec0a68b895ef5ec33fafc72e8e5de2c21011ed390469ce8caabe",
+   "accord": 1.0
+  },
+  "27": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:9efc4790cb99f105d60f79f7ff13d60da84ece4d962d6047c12e79710bb69ef8",
+   "accord": 0.9948
+  },
+  "28": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:824512933fd1ff498692d879a2a6660871c5c4ae8867dd5a509ecde9d31b484e",
+   "accord": 1.0
+  },
+  "29": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:b9d07d4cb94db200cb34c506d53d09e6b13da21f4c5d5e1d663e37589b1f8ca5",
+   "accord": 1.0
+  },
+  "30": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:8ec9ba1fcc1e89589111c8ca0691da6108295a003d9311153d774351ea54faaf",
+   "accord": 1.0
+  },
+  "31": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:40dfbb916672b8ac08353071c8485e46232575e5fe03df1f93acd2e1fc51e632",
+   "accord": 0.9948
+  },
+  "32": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 3,
+   "sha256_texte": "sha256:a58659fd5ac90fad24effd6677194fb1d8264467104855c59bcb64138058b4b0",
+   "accord": 0.9961
+  },
+  "33": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:18d3515cc43c6eb67ec4f463501fc574a4a342d11cc4ebac2e30953fb77382f9",
+   "accord": 0.9986
+  },
+  "34": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:82cbee5de00626373264eca09ab2ddc8acc0560ead42a804ced72578077c74b4",
+   "accord": 0.9964
+  },
+  "35": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:c81ae2237c541a8a98b483dc4bc00ecb63803967047391e1927e4f101e586abf",
+   "accord": 1.0
+  },
+  "36": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:862759160207492e87c932990f16344d886efb127648c963a22373af6c19bb2f",
+   "accord": 1.0
+  },
+  "37": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:f597657efbd149103dcb307776c3f4fda29f10369fffc26f8a22c33ad89a7080",
+   "accord": 1.0
+  },
+  "38": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:4b45d0b5f99c3a9661b17a0e289755d5e1d8d5b10f02b00471e8c39809b21820",
+   "accord": 0.9974
+  },
+  "39": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:790063a718d0da2f3b7901df6953afbe71eafdda6b54766a0bdf6201f686bfc3",
+   "accord": 1.0
+  },
+  "40": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:c192d72968e2ebf555618f11061f20c7ee680e19651b5c81f49fed14b81cfb58",
+   "accord": 0.9964
+  },
+  "41": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:3522717c395af3e674f8ae3c070f6aa11e744dc71e538a6004c0d614985f31b9",
+   "accord": 1.0
+  },
+  "42": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 4,
+   "sha256_texte": "sha256:5b28ce321de6db63640347b96b880bbd2e7eaee6dce251b2f8d648c591b75c34",
+   "accord": 1.0
+  },
+  "43": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 5,
+   "sha256_texte": "sha256:f0123176972fbcef279cbc84106db82c500ed9eddaae6cb8c877df15ad945392",
+   "accord": 0.9977
+  },
+  "44": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 5,
+   "sha256_texte": "sha256:37195e50b3df39793091f915a3dbe560db70fc846c7d0b25188f34be9329fc23",
+   "accord": 1.0
+  },
+  "45": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": null,
+   "sha256_texte": "sha256:05afc7b11d9c6915fa8f863a1ee961a72656fdce5d5fa90512bd5b90e08af32c",
+   "accord": 0.9927
+  },
+  "46": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 5,
+   "sha256_texte": "sha256:22db4085b014af049338fd4eb8035ce6995350421b1d2b4a613a9e399f78ebed",
+   "accord": 0.9979
+  },
+  "47": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 5,
+   "sha256_texte": "sha256:ed76ddb6fc6c3a6bced73506a762ff7170238ccf83beb77b4fffc1e4dfd34b5b",
+   "accord": 1.0
+  },
+  "48": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 5,
+   "sha256_texte": "sha256:1f04ce85b7bf794b87379381f2ac87b68737a828c86a3236ffa4cd5bc0661d70",
+   "accord": 0.9981
+  },
+  "49": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 5,
+   "sha256_texte": "sha256:1d558f352498bde005f67c5a87f1980450718ccbc446c7d8b390faace4fdf310",
+   "accord": 0.9978
+  },
+  "50": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 5,
+   "sha256_texte": "sha256:f8369c6f01487456911d20cf5958de585eeb3715fceead60e4b1e5eabc909616",
+   "accord": 0.9986
+  },
+  "51": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:3bdacc65485dca9d513711733c8f0433a6b231bfc970b8b8a2e7d0bd64a00285",
+   "accord": 0.9982
+  },
+  "52": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:9d4f001ead0f48d4841f077093fa8357c9b18e290113a1e2b9fb91f21ffbf753",
+   "accord": 0.9964
+  },
+  "53": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:4b7de6ce440da7cc6fbb49e601f4a092991044217cce7af33a3e1b7f8b6e3a1d",
+   "accord": 1.0
+  },
+  "54": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:31331f357d6728b39d031f55355ea44bf3e07da0e2331b1f50d95ab80ce2b51a",
+   "accord": 0.9934
+  },
+  "55": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:d38ec9876c52c115715176630f24c9b69c5f3306d4a374a4854ffa9a0fcbf396",
+   "accord": 0.9965
+  },
+  "56": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:24644b3197809e64ae98a492414a8e02d4d5e41994c4ae44e2c7f81c7bfc3282",
+   "accord": 0.9937
+  },
+  "57": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:d6862d9990dfb62dd66347dbf0ede12291f580844a15ad7614898a18ae845a42",
+   "accord": 0.9979
+  },
+  "58": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:caed55c348384b0d4a15efe1bf1645b20d7a5735aa71382f8c1baf77bda077e4",
+   "accord": 1.0
+  },
+  "59": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:a63a28155c547ff8284b13f7c60462b05e9ad945f57a75fed22874ebd9e2a8bb",
+   "accord": 1.0
+  },
+  "60": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:3ec89eef25fde3bf9413b43cd6e5b2a7bd327031978e2f3487bbaedf3c6245fd",
+   "accord": 0.9969
+  },
+  "61": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:10eada53bfcb8951efb4b7936ed9e2c7f3f5177655e92d893cbc88103a6559fe",
+   "accord": 1.0
+  },
+  "62": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:25ad5891e0257ab34e6cf4b4dc1666f4f41f83410aaa5a731584469d5c3e2e39",
+   "accord": 1.0
+  },
+  "63": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 6,
+   "sha256_texte": "sha256:50acfea1f0a1461450c3b8411261bfe52477d41976f3f80f894ad4b9683fd28c",
+   "accord": 0.9711
+  },
+  "64": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:fcf7eff6d38852715c527295533fa0b885c2e9d3d8208d275427e15b118e0a4c",
+   "accord": 0.9987
+  },
+  "65": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:479fe4dc261e56e35cd6b49f9daac2e17dc605a0bf114a5fd294ad64bdd7b29c",
+   "accord": 0.9987
+  },
+  "66": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:e43973b464d45a6ebf0a380680a1dbb92506f6c5bfa53e337b720a9e8eba1a94",
+   "accord": 0.9913
+  },
+  "67": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:335fee90eb489dfa6e20a38f02b0d7f27d4c4653679c88e3e2c732f9e5a6613f",
+   "accord": 0.9993
+  },
+  "68": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:29cab30d392162767e371801b11d102f1537335e4ae30561f755d69c4e52783c",
+   "accord": 0.9968
+  },
+  "69": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:730480f6e2628e95417ad14c195b83df27374700a0808d2fa69f058cef2911fe",
+   "accord": 1.0
+  },
+  "70": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:0bbea5bcb3f0dce8291763d6da9f498ecfc819365c18188448855b3a891b9ef3",
+   "accord": 0.9972
+  },
+  "71": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:000e2e1be609eb43305d0127efd90f588ba95e3d5e7125a4c13ec9931c9dbaf6",
+   "accord": 0.9895
+  },
+  "72": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 7,
+   "sha256_texte": "sha256:932b1bf81c816e6296a6fe431ac19203a3ce3f861ba5de448da90eefcda378a8",
+   "accord": 0.996
+  },
+  "73": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:1431b51bb0a3b48f67a266a1d501ee40bb5270c4d6d6d7ddb770e62d43178a3e",
+   "accord": 0.991
+  },
+  "74": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:abec9716852f62bc5ef92f7e1934dd4a91686283b62de28910be05603d85c17e",
+   "accord": 0.9928
+  },
+  "75": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:a527291fbe76bd248fec442231835af2f4b7050bce410d4954ef0ff71a91dbd5",
+   "accord": 0.9925
+  },
+  "76": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:b255165b2d15c475889aa934ffa7e50f2f4a41517cb476ba6a886ecc329455fd",
+   "accord": 1.0
+  },
+  "77": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:2e32f4aa2033cf21679d74f4918ff1eead3cefcfe19c6f3229503097d76cba81",
+   "accord": 1.0
+  },
+  "78": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:1752cfee7a49ff3dd6e4f5b2fffc4afccdfdbd9e82fc4b5e442fffa4d5501244",
+   "accord": 0.9987
+  },
+  "79": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:e327dc9014730867d608d9542bafd24e6768a54eb558e9bfc4d1d6fd4ff7bd02",
+   "accord": 0.9924
+  },
+  "80": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:dd00677e327d55d79c2cba42d554ec374a82e8c94fe0b76236a459842eca17b3",
+   "accord": 0.9971
+  },
+  "81": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:c21f9b3ecd97c8f995296b05c53c4421adaf1ad9610e2533e03c1ce55e4a375a",
+   "accord": 0.9985
+  },
+  "82": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:c5bc1e78177a9936f207469bc8f92da7587fa8963a639853836f2c1405281dea",
+   "accord": 0.9988
+  },
+  "83": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:d52ea80b75cffe8bdc559a3173de1ad709094ba3ed54b28648b3ee0d988ae992",
+   "accord": 0.9944
+  },
+  "84": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 8,
+   "sha256_texte": "sha256:32c12d173905e319b2dedbd3329095ad5c4bb50e8518d94014ef93aa0c663bcf",
+   "accord": 0.9941
+  },
+  "85": {
+   "statut": "NON_LU",
+   "page": null
+  },
+  "86": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:fa2804d9b462d41c66d0459bc63ab365e8ffa1afdb38ce11d21174f988ecffbb",
+   "accord": 1.0
+  },
+  "87": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:af9ed6deaa2d02b1c2e14a224282da67c6097e243753f01146ea2ff9d4bf44e0",
+   "accord": 0.9959
+  },
+  "88": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:637cd71644240b81d1fb5f71eed5e97493f7eb5c43a634f13c9d277ec55356c9",
+   "accord": 0.9926
+  },
+  "89": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:84371643cebc734edb5b23c7a02ee0cfc8c09a4f63c591a129b9e52a9aada2fc",
+   "accord": 0.9946
+  },
+  "90": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:c0c872f34fa2d13cfc5a5f574430d6019d932618d0eba17bddd17137c6a1d8f5",
+   "accord": 0.9966
+  },
+  "91": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:26ac3a8f6abd6b33ec01017b231ee733a71cb7a3d3c377e2b4de96f6706393ea",
+   "accord": 0.9976
+  },
+  "92": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:61ad15bdc980fe365af4b71a6650441f9b9b575d70af77738d07efec604b0565",
+   "accord": 0.9958
+  },
+  "93": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:b749fdcc503b41a4d3ab58e2b39c4eed60e24606db583cac6b551cafa3065119",
+   "accord": 0.9945
+  },
+  "94": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": null,
+   "sha256_texte": "sha256:9ba0f276a86314dfe6435879e92e4fdffc72558efd2b25d838a5b230f66bc16e",
+   "accord": 0.9899
+  },
+  "95": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:12b13b9ddf668f487d6085471dfabd42844c7e97c15724f048ab553543fae549",
+   "accord": 1.0
+  },
+  "96": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:9c46ea4261e52746708e835179ac2ca52ab6cf7a05d097434a744bcef51720a7",
+   "accord": 1.0
+  },
+  "97": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:cb845155c40d9d4bf0db891a177fb0d67dba6909d48804844b3a48b33e05ad4b",
+   "accord": 1.0
+  },
+  "98": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 9,
+   "sha256_texte": "sha256:d9fabe914c2083a5e87ef2ba989e2bcc7a0f9fb090f6f56fad4d444869eec641",
+   "accord": 0.9931
+  },
+  "99": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:84ca3897e8c282562ba8a26f6f0db9358b9ac78b58d2410f8863e7e90ecb5066",
+   "accord": 1.0
+  },
+  "100": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:f3cbe1085b975479ded83c1c1f03325ea3d7736a4a53481fd67a75df9dbe9ec8",
+   "accord": 1.0
+  },
+  "101": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:d15673f9a7f390e302219f81de0632cdbbc689e6c95cb80ec9a953510da369d0",
+   "accord": 0.9973
+  },
+  "102": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:22f1b91fb67a2005f34679a679b03b348e29816d05a61a8b8c19bac3d6ac5fb2",
+   "accord": 1.0
+  },
+  "103": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:43302d0516cb0a43ec1bd5257d783e43afe31340eb1f000ea25471437aed9cbd",
+   "accord": 0.9981
+  },
+  "104": {
+   "statut": "NOMBRE_DIVERGENT",
+   "page": 10
+  },
+  "105": {
+   "statut": "NON_CONFIRME",
+   "page": 10
+  },
+  "106": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:bc6f55c74e8ec98fab4333869b3773f8a104a3bdfb9a6e0effebfeba2293d52d",
+   "accord": 1.0
+  },
+  "107": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:ef8bf7526c55d2562940157f0664b6fbbb74ed5a146a0419e84803fd94398c43",
+   "accord": 0.9981
+  },
+  "108": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:a90ffd091f6c2475816c0a6fd25bd4ad1772a2563daa7f96add215cc45e02b81",
+   "accord": 1.0
+  },
+  "109": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:1493c02587cd1aae913f5582c47ffc116d21490eabf3b9a5e99bad74dbe3368e",
+   "accord": 1.0
+  },
+  "110": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:f9cc8a513e8d98543f151ab5d798114b6d965d79d574aa300f27547e467b3ee4",
+   "accord": 0.996
+  },
+  "111": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:02395333821ffc7a1e582094d00933ac0825d156948e17404026e9f668af4953",
+   "accord": 1.0
+  },
+  "112": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:68b3dcdfdcce9462d04cd7f0675a1ba59c1b69bbe0f766ad8a05a61125ea2543",
+   "accord": 1.0
+  },
+  "113": {
+   "statut": "FIABLE_NON_INDEXE",
+   "page": 10,
+   "sha256_texte": "sha256:accadf25e66869dc313ad63cd23323bee0057ec4632b6d17d75d578c45529f39",
+   "accord": 0.9971
+  }
+ }
+}

@@ -10,6 +10,7 @@ metadonnees et leur etat de verification.
 Version : voir VERSION.
 """
 
+import os
 from pathlib import Path
 
 VERSION = "0.1.0"
@@ -28,7 +29,10 @@ WORKFLOWS_DIR = BASE_DIR / "WORKFLOWS"
 TESTS_DIR = BASE_DIR / "tests"
 JOURNAL_DIR = BASE_DIR / "journal"
 
-CHEMIN_DB = KNOWLEDGE_DIR / "corpus_juridique.sqlite3"
+# MONRECOURS_CHEMIN_DB : base de travail explicite (reconstruction dans un fichier
+# temporaire, bin/reconstruire_base.py). Par défaut, la base active du dépôt.
+CHEMIN_DB = Path(os.environ["MONRECOURS_CHEMIN_DB"]) if os.environ.get("MONRECOURS_CHEMIN_DB") \
+    else KNOWLEDGE_DIR / "corpus_juridique.sqlite3"
 CHEMIN_VERIFICATIONS_SOURCES = KNOWLEDGE_DIR / "verifications_sources.json"
 CHEMIN_JOURNAL_TECHNIQUE = JOURNAL_DIR / "technique.log"
 

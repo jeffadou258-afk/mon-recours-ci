@@ -29,7 +29,9 @@ def lire(chemin, defaut=None):
 
 
 def corpus_par_domaine():
-    conn = sqlite3.connect(os.path.join(RACINE, "KNOWLEDGE", "corpus_juridique.sqlite3"))
+    sys.path.insert(0, RACINE)
+    import config
+    conn = sqlite3.connect(str(config.CHEMIN_DB))
     lignes = conn.execute(
         "SELECT d.domaine, d.numero_texte, d.titre, d.methode_extraction, d.articles_fiables,"
         " d.url_source, (SELECT COUNT(*) FROM articles_corpus a WHERE a.doc_id = d.doc_id),"

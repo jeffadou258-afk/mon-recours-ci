@@ -50,6 +50,7 @@
     "186",
     "565"
    ],
+   "illisibles_ecartes": [],
    "nombres_contestes_a_verifier": {
     "73": [
      {
@@ -942,333 +943,6 @@
     "564": "TESSERACT_LOCAL_BEST:300 dpi"
    }
   },
-  "mffe_mariage_2019_570": {
-   "date": "2026-10-20",
-   "ref_id": "REF-952FF6F2D9B4",
-   "doc_id": "DOC-340AA7DE365C",
-   "numero_texte": "2019-570",
-   "lecture_principale": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-   "etalons": "TESSERACT_LOCAL_BEST:300 dpi+TESSERACT_DISTANT:300 dpi+OFFICIEL:assnat_mariage_2019_570",
-   "copies_ecartees": [
-    "SECONDAIRE:mariage_2019_570_faolex"
-   ],
-   "articles_indexes": 105,
-   "couverture": 1.0,
-   "accord_moyen": 0.9989,
-   "articles_ecartes": [],
-   "nombres_divergents_ecartes": [],
-   "nombres_contestes_a_verifier": {
-    "16": [
-     {
-      "lecture": "CALQUE_EDITEUR:producteur ",
-      "ecarts": [
-       [
-        "3",
-        "1 3"
-       ]
-      ]
-     }
-    ],
-    "23": [
-     {
-      "lecture": "TESSERACT_DISTANT:300 dpi",
-      "ecarts": [
-       [
-        "45",
-        "43"
-       ]
-      ]
-     }
-    ]
-   },
-   "lecture_par_article": {
-    "1": "TESSERACT_LOCAL_BEST:300 dpi",
-    "2": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "3": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "4": "TESSERACT_LOCAL_BEST:300 dpi",
-    "5": "TESSERACT_LOCAL_BEST:300 dpi",
-    "6": "TESSERACT_LOCAL_BEST:300 dpi",
-    "7": "TESSERACT_LOCAL_BEST:300 dpi",
-    "8": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "9": "TESSERACT_LOCAL_BEST:300 dpi",
-    "10": "TESSERACT_LOCAL_BEST:300 dpi",
-    "11": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "12": "TESSERACT_LOCAL_BEST:300 dpi",
-    "13": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "14": "TESSERACT_LOCAL_BEST:300 dpi",
-    "15": "TESSERACT_LOCAL_BEST:300 dpi",
-    "16": "TESSERACT_LOCAL_BEST:300 dpi",
-    "17": "TESSERACT_LOCAL_BEST:300 dpi",
-    "18": "TESSERACT_LOCAL_BEST:300 dpi",
-    "19": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "20": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "21": "TESSERACT_DISTANT:300 dpi",
-    "22": "TESSERACT_LOCAL_BEST:300 dpi",
-    "23": "TESSERACT_LOCAL_BEST:300 dpi",
-    "24": "TESSERACT_LOCAL_BEST:300 dpi",
-    "25": "TESSERACT_LOCAL_BEST:300 dpi",
-    "26": "TESSERACT_LOCAL_BEST:300 dpi",
-    "27": "TESSERACT_DISTANT:300 dpi",
-    "28": "TESSERACT_LOCAL_BEST:300 dpi",
-    "29": "TESSERACT_LOCAL_BEST:300 dpi",
-    "30": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "31": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "32": "TESSERACT_LOCAL_BEST:300 dpi",
-    "33": "TESSERACT_DISTANT:300 dpi",
-    "34": "TESSERACT_DISTANT:300 dpi",
-    "35": "TESSERACT_LOCAL_BEST:300 dpi",
-    "36": "TESSERACT_LOCAL_BEST:300 dpi",
-    "37": "TESSERACT_LOCAL_BEST:300 dpi",
-    "38": "TESSERACT_LOCAL_BEST:300 dpi",
-    "39": "TESSERACT_LOCAL_BEST:300 dpi",
-    "40": "TESSERACT_LOCAL_BEST:300 dpi",
-    "41": "TESSERACT_LOCAL_BEST:300 dpi",
-    "42": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "43": "TESSERACT_LOCAL_BEST:300 dpi",
-    "44": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "45": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "46": "TESSERACT_LOCAL_BEST:300 dpi",
-    "47": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "48": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "49": "TESSERACT_LOCAL_BEST:300 dpi",
-    "50": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "51": "TESSERACT_LOCAL_BEST:300 dpi",
-    "52": "TESSERACT_LOCAL_BEST:300 dpi",
-    "53": "TESSERACT_LOCAL_BEST:300 dpi",
-    "54": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "55": "TESSERACT_LOCAL_BEST:300 dpi",
-    "56": "TESSERACT_LOCAL_BEST:300 dpi",
-    "57": "TESSERACT_LOCAL_BEST:300 dpi",
-    "58": "TESSERACT_LOCAL_BEST:300 dpi",
-    "59": "TESSERACT_LOCAL_BEST:300 dpi",
-    "60": "TESSERACT_LOCAL_BEST:300 dpi",
-    "61": "TESSERACT_LOCAL_BEST:300 dpi",
-    "62": "TESSERACT_DISTANT:300 dpi",
-    "63": "TESSERACT_LOCAL_BEST:300 dpi",
-    "64": "TESSERACT_LOCAL_BEST:300 dpi",
-    "65": "TESSERACT_LOCAL_BEST:300 dpi",
-    "66": "TESSERACT_LOCAL_BEST:300 dpi",
-    "67": "TESSERACT_LOCAL_BEST:300 dpi",
-    "68": "TESSERACT_LOCAL_BEST:300 dpi",
-    "69": "TESSERACT_LOCAL_BEST:300 dpi",
-    "70": "TESSERACT_LOCAL_BEST:300 dpi",
-    "71": "TESSERACT_LOCAL_BEST:300 dpi",
-    "72": "TESSERACT_LOCAL_BEST:300 dpi",
-    "73": "TESSERACT_LOCAL_BEST:300 dpi",
-    "74": "TESSERACT_LOCAL_BEST:300 dpi",
-    "75": "TESSERACT_LOCAL_BEST:300 dpi",
-    "76": "TESSERACT_LOCAL_BEST:300 dpi",
-    "77": "TESSERACT_LOCAL_BEST:300 dpi",
-    "78": "TESSERACT_LOCAL_BEST:300 dpi",
-    "79": "TESSERACT_LOCAL_BEST:300 dpi",
-    "80": "TESSERACT_LOCAL_BEST:300 dpi",
-    "81": "TESSERACT_DISTANT:300 dpi",
-    "82": "TESSERACT_LOCAL_BEST:300 dpi",
-    "83": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "84": "TESSERACT_LOCAL_BEST:300 dpi",
-    "85": "TESSERACT_LOCAL_BEST:300 dpi",
-    "86": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "87": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "88": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "89": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "90": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "91": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "92": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "93": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "94": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "95": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "96": "TESSERACT_LOCAL_BEST:300 dpi",
-    "97": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "98": "TESSERACT_LOCAL_BEST:300 dpi",
-    "99": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "100": "TESSERACT_LOCAL_BEST:300 dpi",
-    "101": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "102": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "103": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "104": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "105": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP"
-   }
-  },
-  "mffe_successions_2019_573": {
-   "date": "2026-10-20",
-   "ref_id": "REF-1C999A88E5A6",
-   "doc_id": "DOC-3D87C465CA1F",
-   "numero_texte": "2019-573",
-   "lecture_principale": "TESSERACT_DISTANT:200 dpi",
-   "etalons": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP+TESSERACT_LOCAL_BEST:300 dpi+OFFICIEL:successions_2019_573_assnat",
-   "copies_ecartees": [
-    "SECONDAIRE:successions_2019_573_bice"
-   ],
-   "articles_indexes": 130,
-   "couverture": 0.9559,
-   "accord_moyen": 0.9946,
-   "articles_ecartes": [
-    {
-     "numero": "50",
-     "similarite": null
-    },
-    {
-     "numero": "130",
-     "similarite": null
-    },
-    {
-     "numero": "155",
-     "similarite": null
-    },
-    {
-     "numero": "156",
-     "similarite": null
-    },
-    {
-     "numero": "9",
-     "similarite": null
-    },
-    {
-     "numero": "99",
-     "similarite": null
-    },
-    {
-     "numero": "131",
-     "similarite": null
-    }
-   ],
-   "nombres_divergents_ecartes": [
-    "50"
-   ],
-   "nombres_contestes_a_verifier": {},
-   "lecture_par_article": {
-    "1": "TESSERACT_DISTANT:200 dpi",
-    "2": "TESSERACT_DISTANT:200 dpi",
-    "3": "TESSERACT_DISTANT:200 dpi",
-    "4": "TESSERACT_DISTANT:200 dpi",
-    "5": "TESSERACT_DISTANT:200 dpi",
-    "6": "TESSERACT_DISTANT:200 dpi",
-    "7": "TESSERACT_DISTANT:200 dpi",
-    "8": "TESSERACT_DISTANT:200 dpi",
-    "10": "TESSERACT_DISTANT:200 dpi",
-    "11": "TESSERACT_DISTANT:200 dpi",
-    "12": "TESSERACT_DISTANT:200 dpi",
-    "13": "TESSERACT_DISTANT:200 dpi",
-    "14": "TESSERACT_DISTANT:200 dpi",
-    "15": "TESSERACT_DISTANT:200 dpi",
-    "16": "TESSERACT_DISTANT:200 dpi",
-    "17": "TESSERACT_DISTANT:200 dpi",
-    "18": "TESSERACT_DISTANT:200 dpi",
-    "19": "TESSERACT_DISTANT:200 dpi",
-    "20": "TESSERACT_DISTANT:200 dpi",
-    "21": "TESSERACT_DISTANT:200 dpi",
-    "22": "TESSERACT_DISTANT:200 dpi",
-    "23": "TESSERACT_DISTANT:200 dpi",
-    "24": "TESSERACT_DISTANT:200 dpi",
-    "25": "TESSERACT_DISTANT:200 dpi",
-    "26": "TESSERACT_DISTANT:200 dpi",
-    "27": "TESSERACT_DISTANT:200 dpi",
-    "28": "TESSERACT_DISTANT:200 dpi",
-    "29": "TESSERACT_DISTANT:200 dpi",
-    "30": "TESSERACT_DISTANT:200 dpi",
-    "31": "TESSERACT_DISTANT:200 dpi",
-    "32": "TESSERACT_DISTANT:200 dpi",
-    "33": "TESSERACT_DISTANT:200 dpi",
-    "34": "TESSERACT_DISTANT:200 dpi",
-    "35": "TESSERACT_DISTANT:200 dpi",
-    "36": "TESSERACT_DISTANT:200 dpi",
-    "37": "TESSERACT_DISTANT:200 dpi",
-    "38": "TESSERACT_DISTANT:200 dpi",
-    "39": "TESSERACT_DISTANT:200 dpi",
-    "40": "TESSERACT_DISTANT:200 dpi",
-    "41": "TESSERACT_DISTANT:200 dpi",
-    "42": "TESSERACT_DISTANT:200 dpi",
-    "43": "TESSERACT_DISTANT:200 dpi",
-    "44": "TESSERACT_DISTANT:200 dpi",
-    "45": "TESSERACT_DISTANT:200 dpi",
-    "46": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "47": "TESSERACT_DISTANT:200 dpi",
-    "48": "TESSERACT_DISTANT:200 dpi",
-    "49": "TESSERACT_DISTANT:200 dpi",
-    "51": "TESSERACT_DISTANT:200 dpi",
-    "52": "TESSERACT_DISTANT:200 dpi",
-    "53": "TESSERACT_DISTANT:200 dpi",
-    "54": "TESSERACT_DISTANT:200 dpi",
-    "55": "TESSERACT_DISTANT:200 dpi",
-    "56": "TESSERACT_DISTANT:200 dpi",
-    "57": "TESSERACT_DISTANT:200 dpi",
-    "58": "TESSERACT_DISTANT:200 dpi",
-    "59": "TESSERACT_DISTANT:200 dpi",
-    "60": "TESSERACT_DISTANT:200 dpi",
-    "61": "TESSERACT_DISTANT:200 dpi",
-    "62": "TESSERACT_DISTANT:200 dpi",
-    "63": "TESSERACT_DISTANT:200 dpi",
-    "64": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "65": "TESSERACT_DISTANT:200 dpi",
-    "66": "TESSERACT_DISTANT:200 dpi",
-    "67": "TESSERACT_DISTANT:200 dpi",
-    "68": "TESSERACT_LOCAL_BEST:300 dpi",
-    "69": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "70": "TESSERACT_DISTANT:200 dpi",
-    "71": "TESSERACT_DISTANT:200 dpi",
-    "72": "TESSERACT_DISTANT:200 dpi",
-    "73": "TESSERACT_DISTANT:200 dpi",
-    "74": "TESSERACT_DISTANT:200 dpi",
-    "75": "TESSERACT_DISTANT:200 dpi",
-    "76": "TESSERACT_DISTANT:200 dpi",
-    "77": "TESSERACT_LOCAL_BEST:300 dpi",
-    "78": "TESSERACT_DISTANT:200 dpi",
-    "79": "TESSERACT_DISTANT:200 dpi",
-    "80": "TESSERACT_DISTANT:200 dpi",
-    "81": "TESSERACT_DISTANT:200 dpi",
-    "82": "TESSERACT_DISTANT:200 dpi",
-    "83": "TESSERACT_DISTANT:200 dpi",
-    "84": "TESSERACT_DISTANT:200 dpi",
-    "85": "TESSERACT_DISTANT:200 dpi",
-    "86": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "87": "TESSERACT_DISTANT:200 dpi",
-    "88": "TESSERACT_DISTANT:200 dpi",
-    "89": "TESSERACT_DISTANT:200 dpi",
-    "90": "TESSERACT_DISTANT:200 dpi",
-    "91": "TESSERACT_DISTANT:200 dpi",
-    "92": "TESSERACT_DISTANT:200 dpi",
-    "93": "TESSERACT_DISTANT:200 dpi",
-    "94": "TESSERACT_DISTANT:200 dpi",
-    "95": "TESSERACT_DISTANT:200 dpi",
-    "96": "TESSERACT_DISTANT:200 dpi",
-    "97": "TESSERACT_DISTANT:200 dpi",
-    "98": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
-    "101": "TESSERACT_DISTANT:200 dpi",
-    "102": "TESSERACT_DISTANT:200 dpi",
-    "103": "TESSERACT_DISTANT:200 dpi",
-    "104": "TESSERACT_DISTANT:200 dpi",
-    "105": "TESSERACT_DISTANT:200 dpi",
-    "106": "TESSERACT_DISTANT:200 dpi",
-    "107": "TESSERACT_DISTANT:200 dpi",
-    "108": "TESSERACT_DISTANT:200 dpi",
-    "109": "TESSERACT_DISTANT:200 dpi",
-    "110": "TESSERACT_DISTANT:200 dpi",
-    "111": "TESSERACT_DISTANT:200 dpi",
-    "112": "TESSERACT_DISTANT:200 dpi",
-    "113": "TESSERACT_DISTANT:200 dpi",
-    "114": "TESSERACT_DISTANT:200 dpi",
-    "115": "TESSERACT_DISTANT:200 dpi",
-    "116": "TESSERACT_DISTANT:200 dpi",
-    "117": "TESSERACT_DISTANT:200 dpi",
-    "118": "TESSERACT_DISTANT:200 dpi",
-    "119": "TESSERACT_DISTANT:200 dpi",
-    "120": "TESSERACT_DISTANT:200 dpi",
-    "121": "TESSERACT_DISTANT:200 dpi",
-    "122": "TESSERACT_LOCAL_BEST:300 dpi",
-    "123": "TESSERACT_LOCAL_BEST:300 dpi",
-    "124": "TESSERACT_DISTANT:200 dpi",
-    "125": "TESSERACT_DISTANT:200 dpi",
-    "126": "TESSERACT_DISTANT:200 dpi",
-    "127": "TESSERACT_DISTANT:200 dpi",
-    "128": "TESSERACT_DISTANT:200 dpi",
-    "129": "TESSERACT_DISTANT:200 dpi",
-    "132": "TESSERACT_DISTANT:200 dpi",
-    "133": "TESSERACT_DISTANT:200 dpi",
-    "134": "TESSERACT_DISTANT:200 dpi",
-    "135": "TESSERACT_DISTANT:200 dpi",
-    "136": "TESSERACT_DISTANT:200 dpi"
-   }
-  },
   "mffe_cpp_2018_975": {
    "date": "2026-10-20",
    "ref_id": "REF-31BF17F5ED6C",
@@ -1333,6 +1007,7 @@
     "168",
     "309"
    ],
+   "illisibles_ecartes": [],
    "nombres_contestes_a_verifier": {
     "803": [
      {
@@ -2289,32 +1964,182 @@
     "853": "TESSERACT_LOCAL_BEST:300 dpi"
    }
   },
-  "mffe_etat_civil_2018_862": {
+  "mffe_mariage_2019_570": {
    "date": "2026-10-20",
-   "ref_id": "REF-DD563B5E3C76",
-   "doc_id": "DOC-3C3B17B73AE9",
-   "numero_texte": "2018-862",
+   "ref_id": "REF-952FF6F2D9B4",
+   "doc_id": "DOC-340AA7DE365C",
+   "numero_texte": "2019-570",
+   "lecture_principale": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+   "etalons": "TESSERACT_LOCAL_BEST:300 dpi+TESSERACT_DISTANT:300 dpi+OFFICIEL:assnat_mariage_2019_570",
+   "copies_ecartees": [
+    "SECONDAIRE:mariage_2019_570_faolex"
+   ],
+   "articles_indexes": 105,
+   "couverture": 1.0,
+   "accord_moyen": 0.9989,
+   "articles_ecartes": [],
+   "nombres_divergents_ecartes": [],
+   "illisibles_ecartes": [],
+   "nombres_contestes_a_verifier": {
+    "16": [
+     {
+      "lecture": "CALQUE_EDITEUR:producteur ",
+      "ecarts": [
+       [
+        "3",
+        "1 3"
+       ]
+      ]
+     }
+    ],
+    "23": [
+     {
+      "lecture": "TESSERACT_DISTANT:300 dpi",
+      "ecarts": [
+       [
+        "45",
+        "43"
+       ]
+      ]
+     }
+    ]
+   },
+   "lecture_par_article": {
+    "1": "TESSERACT_LOCAL_BEST:300 dpi",
+    "2": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "3": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "4": "TESSERACT_LOCAL_BEST:300 dpi",
+    "5": "TESSERACT_LOCAL_BEST:300 dpi",
+    "6": "TESSERACT_LOCAL_BEST:300 dpi",
+    "7": "TESSERACT_LOCAL_BEST:300 dpi",
+    "8": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "9": "TESSERACT_LOCAL_BEST:300 dpi",
+    "10": "TESSERACT_LOCAL_BEST:300 dpi",
+    "11": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "12": "TESSERACT_LOCAL_BEST:300 dpi",
+    "13": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "14": "TESSERACT_LOCAL_BEST:300 dpi",
+    "15": "TESSERACT_LOCAL_BEST:300 dpi",
+    "16": "TESSERACT_LOCAL_BEST:300 dpi",
+    "17": "TESSERACT_LOCAL_BEST:300 dpi",
+    "18": "TESSERACT_LOCAL_BEST:300 dpi",
+    "19": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "20": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "21": "TESSERACT_DISTANT:300 dpi",
+    "22": "TESSERACT_LOCAL_BEST:300 dpi",
+    "23": "TESSERACT_LOCAL_BEST:300 dpi",
+    "24": "TESSERACT_LOCAL_BEST:300 dpi",
+    "25": "TESSERACT_LOCAL_BEST:300 dpi",
+    "26": "TESSERACT_LOCAL_BEST:300 dpi",
+    "27": "TESSERACT_DISTANT:300 dpi",
+    "28": "TESSERACT_LOCAL_BEST:300 dpi",
+    "29": "TESSERACT_LOCAL_BEST:300 dpi",
+    "30": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "31": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "32": "TESSERACT_LOCAL_BEST:300 dpi",
+    "33": "TESSERACT_DISTANT:300 dpi",
+    "34": "TESSERACT_DISTANT:300 dpi",
+    "35": "TESSERACT_LOCAL_BEST:300 dpi",
+    "36": "TESSERACT_LOCAL_BEST:300 dpi",
+    "37": "TESSERACT_LOCAL_BEST:300 dpi",
+    "38": "TESSERACT_LOCAL_BEST:300 dpi",
+    "39": "TESSERACT_LOCAL_BEST:300 dpi",
+    "40": "TESSERACT_LOCAL_BEST:300 dpi",
+    "41": "TESSERACT_LOCAL_BEST:300 dpi",
+    "42": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "43": "TESSERACT_LOCAL_BEST:300 dpi",
+    "44": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "45": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "46": "TESSERACT_LOCAL_BEST:300 dpi",
+    "47": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "48": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "49": "TESSERACT_LOCAL_BEST:300 dpi",
+    "50": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "51": "TESSERACT_LOCAL_BEST:300 dpi",
+    "52": "TESSERACT_LOCAL_BEST:300 dpi",
+    "53": "TESSERACT_LOCAL_BEST:300 dpi",
+    "54": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "55": "TESSERACT_LOCAL_BEST:300 dpi",
+    "56": "TESSERACT_LOCAL_BEST:300 dpi",
+    "57": "TESSERACT_LOCAL_BEST:300 dpi",
+    "58": "TESSERACT_LOCAL_BEST:300 dpi",
+    "59": "TESSERACT_LOCAL_BEST:300 dpi",
+    "60": "TESSERACT_LOCAL_BEST:300 dpi",
+    "61": "TESSERACT_LOCAL_BEST:300 dpi",
+    "62": "TESSERACT_DISTANT:300 dpi",
+    "63": "TESSERACT_LOCAL_BEST:300 dpi",
+    "64": "TESSERACT_LOCAL_BEST:300 dpi",
+    "65": "TESSERACT_LOCAL_BEST:300 dpi",
+    "66": "TESSERACT_LOCAL_BEST:300 dpi",
+    "67": "TESSERACT_LOCAL_BEST:300 dpi",
+    "68": "TESSERACT_LOCAL_BEST:300 dpi",
+    "69": "TESSERACT_LOCAL_BEST:300 dpi",
+    "70": "TESSERACT_LOCAL_BEST:300 dpi",
+    "71": "TESSERACT_LOCAL_BEST:300 dpi",
+    "72": "TESSERACT_LOCAL_BEST:300 dpi",
+    "73": "TESSERACT_LOCAL_BEST:300 dpi",
+    "74": "TESSERACT_LOCAL_BEST:300 dpi",
+    "75": "TESSERACT_LOCAL_BEST:300 dpi",
+    "76": "TESSERACT_LOCAL_BEST:300 dpi",
+    "77": "TESSERACT_LOCAL_BEST:300 dpi",
+    "78": "TESSERACT_LOCAL_BEST:300 dpi",
+    "79": "TESSERACT_LOCAL_BEST:300 dpi",
+    "80": "TESSERACT_LOCAL_BEST:300 dpi",
+    "81": "TESSERACT_DISTANT:300 dpi",
+    "82": "TESSERACT_LOCAL_BEST:300 dpi",
+    "83": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "84": "TESSERACT_LOCAL_BEST:300 dpi",
+    "85": "TESSERACT_LOCAL_BEST:300 dpi",
+    "86": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "87": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "88": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "89": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "90": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "91": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "92": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "93": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "94": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "95": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "96": "TESSERACT_LOCAL_BEST:300 dpi",
+    "97": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "98": "TESSERACT_LOCAL_BEST:300 dpi",
+    "99": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "100": "TESSERACT_LOCAL_BEST:300 dpi",
+    "101": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "102": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "103": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "104": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "105": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP"
+   }
+  },
+  "mffe_successions_2019_573": {
+   "date": "2026-10-20",
+   "ref_id": "REF-1C999A88E5A6",
+   "doc_id": "DOC-3D87C465CA1F",
+   "numero_texte": "2019-573",
    "lecture_principale": "TESSERACT_DISTANT:200 dpi",
-   "etalons": "TESSERACT_LOCAL_FAST:300 dpi+TESSERACT_LOCAL_BEST:300 dpi",
-   "copies_ecartees": [],
-   "articles_indexes": 100,
-   "couverture": 0.885,
-   "accord_moyen": 0.9892,
+   "etalons": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP+TESSERACT_LOCAL_BEST:300 dpi+OFFICIEL:successions_2019_573_assnat",
+   "copies_ecartees": [
+    "SECONDAIRE:successions_2019_573_bice"
+   ],
+   "articles_indexes": 130,
+   "couverture": 0.9559,
+   "accord_moyen": 0.9946,
    "articles_ecartes": [
     {
-     "numero": "1",
+     "numero": "50",
      "similarite": null
     },
     {
-     "numero": "5",
+     "numero": "130",
      "similarite": null
     },
     {
-     "numero": "7",
+     "numero": "155",
      "similarite": null
     },
     {
-     "numero": "8",
+     "numero": "156",
      "similarite": null
     },
     {
@@ -2322,81 +2147,42 @@
      "similarite": null
     },
     {
-     "numero": "104",
+     "numero": "99",
      "similarite": null
     },
     {
-     "numero": "19",
-     "similarite": null
-    },
-    {
-     "numero": "105",
+     "numero": "131",
      "similarite": null
     }
    ],
    "nombres_divergents_ecartes": [
-    "104"
+    "50"
    ],
-   "nombres_contestes_a_verifier": {
-    "84": [
-     {
-      "lecture": "TESSERACT_DISTANT:200 dpi",
-      "ecarts": [
-       [
-        "2",
-        "3"
-       ]
-      ]
-     }
-    ],
-    "98": [
-     {
-      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
-      "ecarts": [
-       [
-        "11",
-        "1"
-       ]
-      ]
-     }
-    ],
-    "102": [
-     {
-      "lecture": "TESSERACT_LOCAL_FAST:300 dpi",
-      "ecarts": [
-       [
-        "11",
-        "1"
-       ]
-      ]
-     }
-    ],
-    "110": [
-     {
-      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
-      "ecarts": [
-       [
-        "15",
-        "5"
-       ]
-      ]
-     }
-    ]
-   },
+   "illisibles_ecartes": [],
+   "nombres_contestes_a_verifier": {},
    "lecture_par_article": {
+    "1": "TESSERACT_DISTANT:200 dpi",
     "2": "TESSERACT_DISTANT:200 dpi",
-    "3": "TESSERACT_LOCAL_FAST:300 dpi",
+    "3": "TESSERACT_DISTANT:200 dpi",
     "4": "TESSERACT_DISTANT:200 dpi",
+    "5": "TESSERACT_DISTANT:200 dpi",
     "6": "TESSERACT_DISTANT:200 dpi",
+    "7": "TESSERACT_DISTANT:200 dpi",
+    "8": "TESSERACT_DISTANT:200 dpi",
     "10": "TESSERACT_DISTANT:200 dpi",
-    "12": "TESSERACT_LOCAL_FAST:300 dpi",
-    "13": "TESSERACT_LOCAL_BEST:300 dpi",
+    "11": "TESSERACT_DISTANT:200 dpi",
+    "12": "TESSERACT_DISTANT:200 dpi",
+    "13": "TESSERACT_DISTANT:200 dpi",
     "14": "TESSERACT_DISTANT:200 dpi",
+    "15": "TESSERACT_DISTANT:200 dpi",
+    "16": "TESSERACT_DISTANT:200 dpi",
     "17": "TESSERACT_DISTANT:200 dpi",
+    "18": "TESSERACT_DISTANT:200 dpi",
+    "19": "TESSERACT_DISTANT:200 dpi",
     "20": "TESSERACT_DISTANT:200 dpi",
     "21": "TESSERACT_DISTANT:200 dpi",
     "22": "TESSERACT_DISTANT:200 dpi",
-    "23": "TESSERACT_LOCAL_FAST:300 dpi",
+    "23": "TESSERACT_DISTANT:200 dpi",
     "24": "TESSERACT_DISTANT:200 dpi",
     "25": "TESSERACT_DISTANT:200 dpi",
     "26": "TESSERACT_DISTANT:200 dpi",
@@ -2405,7 +2191,7 @@
     "29": "TESSERACT_DISTANT:200 dpi",
     "30": "TESSERACT_DISTANT:200 dpi",
     "31": "TESSERACT_DISTANT:200 dpi",
-    "32": "TESSERACT_LOCAL_FAST:300 dpi",
+    "32": "TESSERACT_DISTANT:200 dpi",
     "33": "TESSERACT_DISTANT:200 dpi",
     "34": "TESSERACT_DISTANT:200 dpi",
     "35": "TESSERACT_DISTANT:200 dpi",
@@ -2418,12 +2204,11 @@
     "42": "TESSERACT_DISTANT:200 dpi",
     "43": "TESSERACT_DISTANT:200 dpi",
     "44": "TESSERACT_DISTANT:200 dpi",
-    "45": "TESSERACT_LOCAL_FAST:300 dpi",
-    "46": "TESSERACT_DISTANT:200 dpi",
+    "45": "TESSERACT_DISTANT:200 dpi",
+    "46": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
     "47": "TESSERACT_DISTANT:200 dpi",
-    "48": "TESSERACT_LOCAL_FAST:300 dpi",
+    "48": "TESSERACT_DISTANT:200 dpi",
     "49": "TESSERACT_DISTANT:200 dpi",
-    "50": "TESSERACT_DISTANT:200 dpi",
     "51": "TESSERACT_DISTANT:200 dpi",
     "52": "TESSERACT_DISTANT:200 dpi",
     "53": "TESSERACT_DISTANT:200 dpi",
@@ -2431,59 +2216,81 @@
     "55": "TESSERACT_DISTANT:200 dpi",
     "56": "TESSERACT_DISTANT:200 dpi",
     "57": "TESSERACT_DISTANT:200 dpi",
-    "58": "TESSERACT_LOCAL_FAST:300 dpi",
-    "59": "TESSERACT_LOCAL_FAST:300 dpi",
+    "58": "TESSERACT_DISTANT:200 dpi",
+    "59": "TESSERACT_DISTANT:200 dpi",
     "60": "TESSERACT_DISTANT:200 dpi",
     "61": "TESSERACT_DISTANT:200 dpi",
     "62": "TESSERACT_DISTANT:200 dpi",
     "63": "TESSERACT_DISTANT:200 dpi",
-    "64": "TESSERACT_LOCAL_FAST:300 dpi",
+    "64": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
     "65": "TESSERACT_DISTANT:200 dpi",
-    "66": "TESSERACT_LOCAL_FAST:300 dpi",
+    "66": "TESSERACT_DISTANT:200 dpi",
     "67": "TESSERACT_DISTANT:200 dpi",
-    "68": "TESSERACT_LOCAL_FAST:300 dpi",
-    "69": "TESSERACT_DISTANT:200 dpi",
-    "70": "TESSERACT_LOCAL_FAST:300 dpi",
+    "68": "TESSERACT_LOCAL_BEST:300 dpi",
+    "69": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "70": "TESSERACT_DISTANT:200 dpi",
     "71": "TESSERACT_DISTANT:200 dpi",
-    "72": "TESSERACT_LOCAL_FAST:300 dpi",
+    "72": "TESSERACT_DISTANT:200 dpi",
     "73": "TESSERACT_DISTANT:200 dpi",
     "74": "TESSERACT_DISTANT:200 dpi",
-    "75": "TESSERACT_LOCAL_FAST:300 dpi",
+    "75": "TESSERACT_DISTANT:200 dpi",
     "76": "TESSERACT_DISTANT:200 dpi",
-    "77": "TESSERACT_LOCAL_FAST:300 dpi",
+    "77": "TESSERACT_LOCAL_BEST:300 dpi",
     "78": "TESSERACT_DISTANT:200 dpi",
     "79": "TESSERACT_DISTANT:200 dpi",
     "80": "TESSERACT_DISTANT:200 dpi",
     "81": "TESSERACT_DISTANT:200 dpi",
     "82": "TESSERACT_DISTANT:200 dpi",
-    "83": "TESSERACT_LOCAL_FAST:300 dpi",
-    "84": "TESSERACT_LOCAL_FAST:300 dpi",
-    "86": "TESSERACT_DISTANT:200 dpi",
-    "87": "TESSERACT_LOCAL_FAST:300 dpi",
+    "83": "TESSERACT_DISTANT:200 dpi",
+    "84": "TESSERACT_DISTANT:200 dpi",
+    "85": "TESSERACT_DISTANT:200 dpi",
+    "86": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
+    "87": "TESSERACT_DISTANT:200 dpi",
     "88": "TESSERACT_DISTANT:200 dpi",
     "89": "TESSERACT_DISTANT:200 dpi",
     "90": "TESSERACT_DISTANT:200 dpi",
     "91": "TESSERACT_DISTANT:200 dpi",
-    "92": "TESSERACT_LOCAL_FAST:300 dpi",
-    "93": "TESSERACT_LOCAL_FAST:300 dpi",
-    "94": "TESSERACT_LOCAL_FAST:300 dpi",
-    "95": "TESSERACT_LOCAL_FAST:300 dpi",
+    "92": "TESSERACT_DISTANT:200 dpi",
+    "93": "TESSERACT_DISTANT:200 dpi",
+    "94": "TESSERACT_DISTANT:200 dpi",
+    "95": "TESSERACT_DISTANT:200 dpi",
     "96": "TESSERACT_DISTANT:200 dpi",
     "97": "TESSERACT_DISTANT:200 dpi",
-    "98": "TESSERACT_DISTANT:200 dpi",
-    "99": "TESSERACT_LOCAL_FAST:300 dpi",
-    "100": "TESSERACT_LOCAL_FAST:300 dpi",
+    "98": "CALQUE_EDITEUR:producteur : ABBYY,producteur : FineReader,producteur : Hewlett-Packard MFP",
     "101": "TESSERACT_DISTANT:200 dpi",
     "102": "TESSERACT_DISTANT:200 dpi",
     "103": "TESSERACT_DISTANT:200 dpi",
+    "104": "TESSERACT_DISTANT:200 dpi",
+    "105": "TESSERACT_DISTANT:200 dpi",
     "106": "TESSERACT_DISTANT:200 dpi",
     "107": "TESSERACT_DISTANT:200 dpi",
-    "108": "TESSERACT_LOCAL_FAST:300 dpi",
+    "108": "TESSERACT_DISTANT:200 dpi",
     "109": "TESSERACT_DISTANT:200 dpi",
     "110": "TESSERACT_DISTANT:200 dpi",
     "111": "TESSERACT_DISTANT:200 dpi",
-    "112": "TESSERACT_LOCAL_FAST:300 dpi",
-    "113": "TESSERACT_DISTANT:200 dpi"
+    "112": "TESSERACT_DISTANT:200 dpi",
+    "113": "TESSERACT_DISTANT:200 dpi",
+    "114": "TESSERACT_DISTANT:200 dpi",
+    "115": "TESSERACT_DISTANT:200 dpi",
+    "116": "TESSERACT_DISTANT:200 dpi",
+    "117": "TESSERACT_DISTANT:200 dpi",
+    "118": "TESSERACT_DISTANT:200 dpi",
+    "119": "TESSERACT_DISTANT:200 dpi",
+    "120": "TESSERACT_DISTANT:200 dpi",
+    "121": "TESSERACT_DISTANT:200 dpi",
+    "122": "TESSERACT_LOCAL_BEST:300 dpi",
+    "123": "TESSERACT_LOCAL_BEST:300 dpi",
+    "124": "TESSERACT_DISTANT:200 dpi",
+    "125": "TESSERACT_DISTANT:200 dpi",
+    "126": "TESSERACT_DISTANT:200 dpi",
+    "127": "TESSERACT_DISTANT:200 dpi",
+    "128": "TESSERACT_DISTANT:200 dpi",
+    "129": "TESSERACT_DISTANT:200 dpi",
+    "132": "TESSERACT_DISTANT:200 dpi",
+    "133": "TESSERACT_DISTANT:200 dpi",
+    "134": "TESSERACT_DISTANT:200 dpi",
+    "135": "TESSERACT_DISTANT:200 dpi",
+    "136": "TESSERACT_DISTANT:200 dpi"
    }
   },
   "oneci_jo_special_2019_572_573_575": {
@@ -2512,6 +2319,7 @@
     }
    ],
    "nombres_divergents_ecartes": [],
+   "illisibles_ecartes": [],
    "nombres_contestes_a_verifier": {
     "44": [
      {

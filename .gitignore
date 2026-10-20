@@ -77,3 +77,6 @@ htmlcov/
 ._*
 .Spotlight-V100
 .Trashes
+
+# --- Sauvegardes locales de la base (bin/reconstruire_base.py) ---------------
+KNOWLEDGE/.sauvegardes/

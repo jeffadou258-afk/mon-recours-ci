@@ -1,0 +1,77 @@
+{
+ "objet": "Reconstruction contrôlée de la base (bin/reconstruire_base.py)",
+ "date": "2026-10-20T11:45:27+00:00",
+ "depart": {
+  "revision": "1ca6e7f",
+  "sha256": "fd0587e68ae245c963a98002da7f632d1361d15f5e70ccce4178318a46693e46"
+ },
+ "base_active_avant": {
+  "sha256": "4f289663f8a0d379e722321902a3b70f284961a7301fb23c8e9434b4a3e5b1bd"
+ },
+ "integrations_demandees": [
+  "mffe_code_penal_2019_574",
+  "mffe_cpp_2018_975",
+  "mffe_mariage_2019_570",
+  "mffe_successions_2019_573",
+  "oneci_jo_special_2019_572_573_575",
+  "mffe_etat_civil_2018_862"
+ ],
+ "bilan_integration": [
+  "mffe_code_penal_2019_574                       INTEGRE  557 articles (couverture 99 %), 8 écartés, accord moyen 0.9986",
+  "mffe_cpp_2018_975                              INTEGRE  841 articles (couverture 99 %), 11 écartés, accord moyen 0.9981",
+  "mffe_etat_civil_2018_862                       REFUSE   couverture 83 % des articles 1..113 (minimum 85 %) : rien n'est écrit",
+  "mffe_mariage_2019_570                          INTEGRE  105 articles (couverture 100 %), 0 écartés, accord moyen 0.9989",
+  "mffe_successions_2019_573                      INTEGRE  130 articles (couverture 96 %), 7 écartés, accord moyen 0.9946",
+  "oneci_jo_special_2019_572_573_575              INTEGRE  157 articles (couverture 98 %), 3 écartés, accord moyen 0.9973"
+ ],
+ "controles": [
+  {
+   "controle": "PRAGMA integrity_check",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "PRAGMA foreign_key_check",
+   "ok": true,
+   "detail": "0 violation(s)"
+  },
+  {
+   "controle": "empreintes des articles recalculées",
+   "ok": true,
+   "detail": "0 écart(s)"
+  },
+  {
+   "controle": "aucune référence nouvelle avec un extrait non indexé",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "articles indexés = journal d'intégration",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "controle": "chaque article intégré figure dans l'extrait de sa référence",
+   "ok": true,
+   "detail": "0 absent(s) []"
+  },
+  {
+   "controle": "intégrité des documents (verifier_integrite)",
+   "ok": true,
+   "detail": "{\"alteres\": 0, \"absents\": 0, \"documents\": 34, \"fiches\": 77, \"questions\": 28}"
+  },
+  {
+   "controle": "catalogue et guide revalidés contre la copie",
+   "ok": true,
+   "detail": "77 fiches, 28 questions"
+  }
+ ],
+ "resultat": "CONTROLES_REUSSIS",
+ "base_reconstruite": {
+  "sha256": "1dd084986a56170758bcda62b2ffd3f06b8f8dc1cfae7ccae3740d78b53f62bf"
+ },
+ "remplacement": {
+  "sauvegarde": "KNOWLEDGE/.sauvegardes/corpus_20261020-114527_4f289663f8a0.sqlite3",
+  "base_active_apres": "1dd084986a56170758bcda62b2ffd3f06b8f8dc1cfae7ccae3740d78b53f62bf"
+ }
+}

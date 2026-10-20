@@ -260,3 +260,89 @@ class TestUrgencesAjoutees(unittest.TestCase):
         from core import urgence
         self.assertNotEqual(urgence.detecter("on veut la marier de force")["niveau"], "NORMALE")
         self.assertNotEqual(urgence.detecter("mon mari me menace")["niveau"], "NORMALE")
+
+
+# ---------------------------------------------------------------------------
+# Reconstruction de la base et refus sans écriture (20/10/2026)
+# ---------------------------------------------------------------------------
+class TestReconstructionDeBase(unittest.TestCase):
+    def _copie(self, dossier):
+        import shutil
+        import config
+        copie = os.path.join(dossier, "copie.sqlite3")
+        shutil.copyfile(str(config.CHEMIN_DB), copie)
+        return copie
+
+    def test_controles_passent_sur_la_base_active(self):
+        import reconstruire_base as rb
+        journal = os.path.join(RACINE, "KNOWLEDGE", "collecte", "integrations_ocr.json")
+        with tempfile.TemporaryDirectory() as dossier:
+            copie = self._copie(dossier)
+            controles = rb.controler(copie, journal, copie)
+        echecs = [c for c in controles if not c["ok"]]
+        self.assertEqual(echecs, [], echecs)
+
+    def test_reference_orpheline_detectee(self):
+        """Une référence munie d'un extrait mais sans article indexé doit bloquer."""
+        import sqlite3
+        import reconstruire_base as rb
+        with tempfile.TemporaryDirectory() as dossier:
+            depart = self._copie(dossier)
+            base = os.path.join(dossier, "base.sqlite3")
+            import shutil
+            shutil.copyfile(depart, base)
+            conn = sqlite3.connect(base)
+            colonnes = [c[1] for c in conn.execute("PRAGMA table_info(references_juridiques)")]
+            ligne = dict(zip(colonnes, conn.execute("SELECT * FROM references_juridiques LIMIT 1").fetchone()))
+            ligne.update(ref_id="REF-ORPHELINE0000", extrait_texte="Article 1\ntexte jamais indexé",
+                         titre_officiel="Référence orpheline de test")
+            conn.execute("INSERT INTO references_juridiques (%s) VALUES (%s)"
+                         % (", ".join(ligne), ", ".join("?" * len(ligne))), list(ligne.values()))
+            conn.commit()
+            conn.close()
+            controles = rb.controler(base, os.path.join(dossier, "absent.json"), depart)
+        orpheline = [c for c in controles if c["controle"].startswith("aucune référence nouvelle")][0]
+        self.assertFalse(orpheline["ok"])
+        self.assertIn("REF-ORPHELINE0000", orpheline["detail"])
+
+    def test_refus_de_couverture_n_ecrit_rien(self):
+        """L'état civil (83 % < 85 %) est refusé : ni référence, ni document, ni journal."""
+        import sqlite3
+        import subprocess
+        inventaire = json.load(open(os.path.join(RACINE, "KNOWLEDGE", "collecte", "inventaire_ressources.json"),
+                                    encoding="utf-8"))
+        if not any(d["cle"] == "mffe_etat_civil_2018_862" for d in inventaire["documents"]):
+            self.skipTest("document absent de l'inventaire")
+        with tempfile.TemporaryDirectory() as dossier:
+            copie = self._copie(dossier)
+            journal = os.path.join(dossier, "journal.json")
+            avant = sqlite3.connect(copie)
+            compte = lambda c: (c.execute("SELECT count(*) FROM references_juridiques").fetchone()[0],
+                                c.execute("SELECT count(*) FROM documents").fetchone()[0],
+                                c.execute("SELECT count(*) FROM articles_corpus").fetchone()[0])
+            n_avant = compte(avant)
+            avant.close()
+            env = dict(os.environ, MONRECOURS_CHEMIN_DB=copie, MONRECOURS_JOURNAL_OCR=journal)
+            sortie = subprocess.run([sys.executable, os.path.join(RACINE, "bin", "integrer_collecte.py"),
+                                     "officialiser_ocr", "--cle", "mffe_etat_civil_2018_862"],
+                                    env=env, capture_output=True, text=True, cwd=RACINE)
+            self.assertIn("REFUSE", sortie.stdout)
+            apres = sqlite3.connect(copie)
+            self.assertEqual(compte(apres), n_avant)
+            apres.close()
+            self.assertFalse(os.path.isfile(journal))
+
+    def test_lecture_partielle_documentee(self):
+        chemin = os.path.join(RACINE, "KNOWLEDGE", "collecte", "lectures_partielles", "mffe_etat_civil_2018_862.json")
+        rapport = json.load(open(chemin, encoding="utf-8"))
+        self.assertTrue(rapport["decision"].startswith("NON_INTEGRE"))
+        self.assertLess(rapport["couverture_fiable"], rapport["seuil_integration"])
+        self.assertIn(2, rapport["pages_degradees"])
+        self.assertEqual(rapport["articles"]["17"]["statut"], "ILLISIBLE")
+        import sqlite3
+        import config
+        conn = sqlite3.connect(str(config.CHEMIN_DB))
+        indexes = conn.execute("SELECT count(*) FROM articles_corpus a JOIN documents d ON d.doc_id = a.doc_id "
+                               "WHERE d.url_source = ?", (rapport["url"],)).fetchone()[0]
+        conn.close()
+        self.assertEqual(indexes, 0, "un document refusé ne doit avoir aucun article indexé")
