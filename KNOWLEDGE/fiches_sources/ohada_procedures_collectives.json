@@ -1,0 +1,53 @@
+{
+ "domaine": "contrats_dettes_commerce",
+ "numero_texte": "AUPCAP-2015",
+ "fiches": [
+  {
+   "id": "OHADA_AUPCAP_CESSATION",
+   "article": "1",
+   "titre": "Entreprise en cessation des paiements : définition",
+   "declencheurs": [
+    "cessation des paiements",
+    "ne peut plus payer ses dettes",
+    "societe en difficulte",
+    "entreprise en difficulte",
+    "redressement judiciaire",
+    "liquidation des biens",
+    "impayes entreprise"
+   ],
+   "citation_debut": "« cessation des paiements » : l",
+   "citation_fin": "lui permettent de faire face à son passif exigible",
+   "lecture": "Le texte définit la cessation des paiements comme l'impossibilité de faire face au passif exigible avec l'actif disponible. Les crédits ou délais accordés par les créanciers excluent cette qualification. Ce que le texte dit s'arrête là : les conséquences procédurales (déclaration, délais, tribunal compétent) ne sont pas établies par cet article et restent à vérifier. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [
+    [
+     "entreprise",
+     "S'agit-il d'une entreprise, d'un commerçant ou d'une société (et non d'un particulier endetté) ?"
+    ]
+   ],
+   "etape_plan": "Lister les dettes exigibles et l'actif disponible, puis consulter un professionnel"
+  },
+  {
+   "id": "OHADA_AUPCAP_SALAIRES",
+   "article": "95",
+   "titre": "Salaires impayés : super privilège en cas de procédure collective",
+   "declencheurs": [
+    "salaires impayes",
+    "super privilege",
+    "privilège des salaires",
+    "employeur en liquidation",
+    "employeur en redressement",
+    "salaire non paye procedure collective"
+   ],
+   "citation_debut": "Les créances résultant du contrat de travail",
+   "citation_fin": "par le super privilège des salaires",
+   "lecture": "Les créances nées du contrat de travail ou d'apprentissage sont garanties par le super privilège des salaires lorsque l'employeur est en redressement judiciaire ou en liquidation des biens. Le texte ne dit PAS ici comment déclarer la créance ni dans quel délai : ces démarches ne sont pas établies par cet article. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [
+    [
+     "employeur_procedure",
+     "Votre employeur fait-il l'objet d'une procédure collective (redressement ou liquidation) ?"
+    ]
+   ],
+   "etape_plan": "Réunir les bulletins de salaire et la preuve de la procédure collective"
+  }
+ ]
+}

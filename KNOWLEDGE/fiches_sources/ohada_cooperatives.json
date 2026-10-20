@@ -1,0 +1,74 @@
+{
+ "domaine": "contrats_dettes_commerce",
+ "numero_texte": "AUSCOOP-2010",
+ "fiches": [
+  {
+   "id": "OHADA_AUSCOOP_DEFINITION",
+   "article": "4",
+   "titre": "Qu'est-ce qu'une société coopérative",
+   "declencheurs": [
+    "cooperative",
+    "societe cooperative",
+    "creer une cooperative",
+    "cooperative agricole",
+    "groupement cooperatif",
+    "cooperative d'habitat"
+   ],
+   "citation_debut": "La société coopérative est un groupement autonome",
+   "citation_fin": "où le pouvoir est exercé démocratiquement et selon les principes coopératifs",
+   "lecture": "La coopérative est un groupement autonome de personnes volontairement réunies pour satisfaire des besoins communs, dont la propriété et la gestion sont collectives et le pouvoir exercé démocratiquement. Le texte ajoute qu'elle peut traiter avec des usagers non coopérateurs dans les limites fixées par les statuts. Les formalités de création ne sont pas traitées ici. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [],
+   "etape_plan": "Rassembler le projet de statuts et le nombre de coopérateurs fondateurs"
+  },
+  {
+   "id": "OHADA_AUSCOOP_PARTS",
+   "article": "208",
+   "titre": "Parts sociales d'une coopérative",
+   "declencheurs": [
+    "parts sociales",
+    "capital social cooperative",
+    "part de cooperative",
+    "valeur nominale",
+    "souscrire des parts"
+   ],
+   "citation_debut": "Le capital social est divisé en parts sociales égales",
+   "citation_fin": "dont la valeur nominale est fixée par les statuts",
+   "lecture": "Le capital d'une coopérative est divisé en parts sociales égales ; leur valeur nominale est fixée par les statuts. Le texte ne fixe donc aucun montant : chercher un chiffre légal serait une erreur. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [],
+   "etape_plan": "Lire les statuts pour la valeur nominale et le nombre de parts"
+  },
+  {
+   "id": "OHADA_AUSCOOP_ENGAGEMENTS",
+   "article": "62",
+   "titre": "Coopérative : augmentation des engagements des coopérateurs",
+   "declencheurs": [
+    "augmentation des engagements",
+    "engagements des cooperateurs",
+    "cooperative demande plus d'argent",
+    "appel de fonds cooperative"
+   ],
+   "citation_debut": "Sauf décision contraire spécialement motivée",
+   "citation_fin": "ne peut être décidée sans leur consentement",
+   "lecture": "Aucune augmentation des engagements d'un coopérateur envers la société ne peut être décidée sans son consentement, sauf décision contraire spécialement motivée de la juridiction compétente statuant à bref délai. L'exception est étroite : son application concrète relève du juge. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [],
+   "etape_plan": "Conserver la convocation et le procès-verbal de l'assemblée"
+  },
+  {
+   "id": "OHADA_AUSCOOP_RESERVE",
+   "article": "114",
+   "titre": "Coopérative : réserve générale prélevée sur les excédents",
+   "declencheurs": [
+    "reserve generale",
+    "excedents",
+    "affectation des excedents",
+    "benefices cooperative",
+    "ristourne cooperative"
+   ],
+   "citation_debut": "Les statuts prévoient, avant toute autre affectation",
+   "citation_fin": "excédents nets d’exploitation",
+   "lecture": "Les statuts doivent prévoir, avant toute autre affectation, la constitution d'une réserve générale par prélèvements annuels sur les excédents nets d'exploitation. Le taux et les autres affectations (dont l'éventuelle ristourne) ne sont pas fixés par cet article. Interprétation à valider par un juriste ; source OCR non recoupée.",
+   "faits_requis": [],
+   "etape_plan": "Demander les statuts et le rapport financier de l'exercice"
+  }
+ ]
+}
