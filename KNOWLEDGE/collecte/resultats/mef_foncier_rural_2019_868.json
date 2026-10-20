@@ -1,0 +1,50 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mef_foncier_rural_2019_868",
+ "date_recuperation": "2026-10-20T10:17:26+00:00",
+ "duree_s": 1.9,
+ "extraction": {
+  "caracteres_natifs": 6715,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mef_foncier_rural_2019_868.txt",
+  "ocr_force": false,
+  "pages": 4,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:855df5ab611c17a115d223bcf3a37c13080cb7229bd01c4b8d6229dde0fefc5a"
+ },
+ "fichier_pdf": "mef_foncier_rural_2019_868.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:17:26+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 388486,
+   "sha256": "sha256:9a8f8c777c9444bb670598992d428671383a53b484118bcca3dc28919f2fab5e",
+   "statut": "TELECHARGE",
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/2019-10-14%20L2019-868%20modifiant%20L98-750%20Foncier%20rural_compressed.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 388486,
+ "pdf": {
+  "CreationDate": "",
+  "Creator": "",
+  "ModDate": "Fri May  6 20:48:24 2022 UTC",
+  "PDF version": "1.6",
+  "Pages": "4",
+  "Producer": "iLovePDF",
+  "Title": "",
+  "indices_ocr_editeur": [
+   "police d'OCR invisible"
+  ],
+  "polices": 4,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:9a8f8c777c9444bb670598992d428671383a53b484118bcca3dc28919f2fab5e",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/2019-10-14%20L2019-868%20modifiant%20L98-750%20Foncier%20rural_compressed.pdf",
+ "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/2019-10-14%20L2019-868%20modifiant%20L98-750%20Foncier%20rural_compressed.pdf",
+ "version_ocr": 1
+}

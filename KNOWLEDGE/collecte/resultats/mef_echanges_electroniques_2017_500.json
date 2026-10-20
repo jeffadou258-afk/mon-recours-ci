@@ -1,0 +1,44 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mef_echanges_electroniques_2017_500",
+ "date_recuperation": "2026-10-20T10:18:10+00:00",
+ "duree_s": 2.9,
+ "extraction": {
+  "caracteres_natifs": 10,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mef_echanges_electroniques_2017_500.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 10,
+  "pages_sans_texte": 10,
+  "sha256_texte": "sha256:f60e1da0036e63065bdb02fa18d418a57baf3cfbaa79b4edd16f6016ecc5bbc9"
+ },
+ "fichier_pdf": "mef_echanges_electroniques_2017_500.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:10+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 2725090,
+   "sha256": "sha256:b71c2bebdf4555cb7341902a1ceb571cee2594299b53630ce27f8c6dc0b7d9a9",
+   "statut": "TELECHARGE",
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02017-500%20du%202%20ao%C3%BBt%202017%20relative%20aux%20%C3%A9changes%20%C3%A9lectroniques%20entre%20les%20usagers%20et%20les%20autorit%C3%A9s.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 2725090,
+ "pdf": {
+  "PDF version": "1.4",
+  "Pages": "10",
+  "indices_ocr_editeur": [],
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:b71c2bebdf4555cb7341902a1ceb571cee2594299b53630ce27f8c6dc0b7d9a9",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02017-500%20du%202%20ao%C3%BBt%202017%20relative%20aux%20%C3%A9changes%20%C3%A9lectroniques%20entre%20les%20usagers%20et%20les%20autorit%C3%A9s.pdf",
+ "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02017-500%20du%202%20ao%C3%BBt%202017%20relative%20aux%20%C3%A9changes%20%C3%A9lectroniques%20entre%20les%20usagers%20et%20les%20autorit%C3%A9s.pdf",
+ "version_ocr": 1
+}

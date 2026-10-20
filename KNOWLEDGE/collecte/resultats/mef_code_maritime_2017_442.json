@@ -1,0 +1,49 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mef_code_maritime_2017_442",
+ "date_recuperation": "2026-10-20T10:17:51+00:00",
+ "duree_s": 19.1,
+ "extraction": {
+  "caracteres_natifs": 134,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mef_code_maritime_2017_442.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 134,
+  "pages_sans_texte": 134,
+  "sha256_texte": "sha256:e968444e73e757bd5d645d1126901f8d71fd848a8348b103c36bbda60b6f5854"
+ },
+ "fichier_pdf": "mef_code_maritime_2017_442.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:17:51+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 17969387,
+   "sha256": "sha256:e5bca0fb379bc80c2e6c8e34edec27734dcf215e1b1740cc8bc803e818c62db7",
+   "statut": "TELECHARGE",
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202017-442%20du%2030%20juin%202017%20portant%20Code%20maritime.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 17969387,
+ "pdf": {
+  "CreationDate": "Mon Jan  8 10:13:23 2018 UTC",
+  "Creator": "HP Smart Document Scan Software 3.60",
+  "PDF version": "1.7",
+  "Pages": "134",
+  "Producer": "OmniPageCSDK18",
+  "indices_ocr_editeur": [
+   "producteur : OmniPage"
+  ],
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:e5bca0fb379bc80c2e6c8e34edec27734dcf215e1b1740cc8bc803e818c62db7",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202017-442%20du%2030%20juin%202017%20portant%20Code%20maritime.pdf",
+ "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202017-442%20du%2030%20juin%202017%20portant%20Code%20maritime.pdf",
+ "version_ocr": 1
+}

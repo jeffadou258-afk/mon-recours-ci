@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_au_organisation-des-suretes",
+ "date_recuperation": "2026-10-20T10:19:27+00:00",
+ "duree_s": 2.9,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:27+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 274007,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/organisation-des-suretes/"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 274007,
+ "statut": "DECOUVERTE",
+ "titre_page": "Organisation des sûretés – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/organisation-des-suretes/",
+ "url_finale": "https://www.ohada.org/organisation-des-suretes/"
+}

@@ -1,0 +1,49 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "commissaires_justice_2018_974_civlii_source",
+ "date_recuperation": "2026-10-20T10:18:51+00:00",
+ "duree_s": 3.6,
+ "extraction": {
+  "caracteres_natifs": 34155,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/commissaires_justice_2018_974_civlii_source.txt",
+  "ocr_force": false,
+  "pages": 12,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:008b9714d52fa37fc7f5e53dcc01f529981c0f2c8ecd6781cd090d89fb80a69d"
+ },
+ "fichier_pdf": "commissaires_justice_2018_974_civlii_source.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:51+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 235018,
+   "sha256": "sha256:d72aec9bae9d7eee87bf940ebbf89db1d8da0b972dc63e77ae714fb61ccb2f5a",
+   "statut": "TELECHARGE",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/source"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [
+  "creative commons",
+  "laws.africa"
+ ],
+ "octets": 235018,
+ "pdf": {
+  "CreationDate": "Sat Dec  6 07:52:07 2025 UTC",
+  "Creator": "Apache FOP Version 2.4",
+  "PDF version": "1.4",
+  "Pages": "12",
+  "Producer": "Apache FOP Version 2.4",
+  "indices_ocr_editeur": [],
+  "polices": 5,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:d72aec9bae9d7eee87bf940ebbf89db1d8da0b972dc63e77ae714fb61ccb2f5a",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/source",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/source.pdf",
+ "version_ocr": 1
+}

@@ -1,0 +1,23 @@
+{
+ "categorie_source": "SECONDAIRE_FAC_SIMILE",
+ "cle": "corruption_2013_660_civlii_jo",
+ "date_recuperation": "2026-10-20T10:19:03+00:00",
+ "duree_s": 0.5,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:03+00:00",
+   "erreur": null,
+   "http": 404,
+   "octets": 0,
+   "sha256": null,
+   "statut": "ECHEC_HTTP",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2013/660/fra@2024-01-17/publication"
+  }
+ ],
+ "http": 404,
+ "octets": 0,
+ "statut": "ECHEC_HTTP",
+ "type_contenu": "text/html; charset=utf-8",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2013/660/fra@2024-01-17/publication",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/ord/2013/660/fra@2024-01-17/publication"
+}

@@ -1,0 +1,49 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "petits_litiges_2015_904_civlii_source",
+ "date_recuperation": "2026-10-20T10:18:42+00:00",
+ "duree_s": 4.2,
+ "extraction": {
+  "caracteres_natifs": 11376,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/petits_litiges_2015_904_civlii_source.txt",
+  "ocr_force": false,
+  "pages": 5,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:69afe855386e401ba638ae3c62751f87c548d1cd4b13c11885ef98331014676e"
+ },
+ "fichier_pdf": "petits_litiges_2015_904_civlii_source.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:42+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 177997,
+   "sha256": "sha256:38ba199ed970ee545ce9d40a88e57656d5a16e984adcd3ba336b9cd2d0d40a9e",
+   "statut": "TELECHARGE",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2015/904/fra@2022-05-27/source"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [
+  "creative commons",
+  "laws.africa"
+ ],
+ "octets": 177997,
+ "pdf": {
+  "CreationDate": "Sat Dec  6 08:20:53 2025 UTC",
+  "Creator": "Apache FOP Version 2.4",
+  "PDF version": "1.4",
+  "Pages": "5",
+  "Producer": "Apache FOP Version 2.4",
+  "indices_ocr_editeur": [],
+  "polices": 5,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:38ba199ed970ee545ce9d40a88e57656d5a16e984adcd3ba336b9cd2d0d40a9e",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/2015/904/fra@2022-05-27/source",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2015/904/fra@2022-05-27/source.pdf",
+ "version_ocr": 1
+}

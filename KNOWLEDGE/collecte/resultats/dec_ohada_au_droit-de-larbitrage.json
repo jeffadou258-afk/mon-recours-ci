@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_au_droit-de-larbitrage",
+ "date_recuperation": "2026-10-20T10:19:12+00:00",
+ "duree_s": 3.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:12+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 260993,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/droit-de-larbitrage/"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 260993,
+ "statut": "DECOUVERTE",
+ "titre_page": "Droit de l’arbitrage – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/droit-de-larbitrage/",
+ "url_finale": "https://www.ohada.org/droit-de-larbitrage/"
+}

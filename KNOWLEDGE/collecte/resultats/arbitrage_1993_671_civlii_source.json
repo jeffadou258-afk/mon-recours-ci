@@ -1,0 +1,49 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "arbitrage_1993_671_civlii_source",
+ "date_recuperation": "2026-10-20T10:18:34+00:00",
+ "duree_s": 3.6,
+ "extraction": {
+  "caracteres_natifs": 38050,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/arbitrage_1993_671_civlii_source.txt",
+  "ocr_force": false,
+  "pages": 14,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:5972bce202724558a7757bb6a3dbad222306d05edf7d06e8736a1872938079dc"
+ },
+ "fichier_pdf": "arbitrage_1993_671_civlii_source.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:34+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 246564,
+   "sha256": "sha256:bce1f9dd1c1766c0a723e929a84399a28fac4bd55774ae3018ba97f8cd06e3c6",
+   "statut": "TELECHARGE",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27/source"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [
+  "creative commons",
+  "laws.africa"
+ ],
+ "octets": 246564,
+ "pdf": {
+  "CreationDate": "Fri Sep 25 13:32:24 2026 UTC",
+  "Creator": "Apache FOP Version 2.4",
+  "PDF version": "1.4",
+  "Pages": "14",
+  "Producer": "Apache FOP Version 2.4",
+  "indices_ocr_editeur": [],
+  "polices": 5,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:bce1f9dd1c1766c0a723e929a84399a28fac4bd55774ae3018ba97f8cd06e3c6",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27/source",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/1993/671/fra@2022-05-27/source.pdf",
+ "version_ocr": 1
+}

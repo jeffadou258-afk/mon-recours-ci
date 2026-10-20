@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_au_acte-uniforme-relatif-a-la-mediation",
+ "date_recuperation": "2026-10-20T10:19:15+00:00",
+ "duree_s": 3.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:15+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 243238,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/acte-uniforme-relatif-a-la-mediation/"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 243238,
+ "statut": "DECOUVERTE",
+ "titre_page": "Acte Uniforme relatif à la médiation – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/acte-uniforme-relatif-a-la-mediation/",
+ "url_finale": "https://www.ohada.org/acte-uniforme-relatif-a-la-mediation/"
+}

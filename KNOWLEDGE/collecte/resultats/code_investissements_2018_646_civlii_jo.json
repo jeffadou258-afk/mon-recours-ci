@@ -1,0 +1,50 @@
+{
+ "categorie_source": "SECONDAIRE_FAC_SIMILE",
+ "cle": "code_investissements_2018_646_civlii_jo",
+ "date_recuperation": "2026-10-20T10:18:59+00:00",
+ "duree_s": 1.7,
+ "extraction": {
+  "caracteres_natifs": 94907,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/code_investissements_2018_646_civlii_jo.txt",
+  "ocr_force": false,
+  "pages": 16,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:2aa4bf55aa417bf11816e9c989388e4dac2638c12939168bcfc1aca8248e9f3a"
+ },
+ "fichier_pdf": "code_investissements_2018_646_civlii_jo.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:59+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 1153963,
+   "sha256": "sha256:d533a1f3344ec7b1205ccd1afe1b3045302eb0778479d556cad5ebbc3e660451",
+   "statut": "TELECHARGE",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2018/646/fra@2024-12-27/publication"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1153963,
+ "pdf": {
+  "CreationDate": "Tue Nov 13 11:50:02 2018 UTC",
+  "Creator": "Nitro PDF Professional 6",
+  "ModDate": "Tue Nov 13 11:51:26 2018 UTC",
+  "PDF version": "1.5",
+  "Pages": "16",
+  "Producer": "ABBYY FineReader 11",
+  "indices_ocr_editeur": [
+   "producteur : ABBYY",
+   "producteur : FineReader"
+  ],
+  "polices": 5,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:d533a1f3344ec7b1205ccd1afe1b3045302eb0778479d556cad5ebbc3e660451",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/ord/2018/646/fra@2024-12-27/publication",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/ord/2018/646/fra@2024-12-27/publication",
+ "version_ocr": 1
+}

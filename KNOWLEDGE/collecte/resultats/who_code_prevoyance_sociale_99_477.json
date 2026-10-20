@@ -1,0 +1,49 @@
+{
+ "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
+ "cle": "who_code_prevoyance_sociale_99_477",
+ "date_recuperation": "2026-10-20T10:18:18+00:00",
+ "duree_s": 3.1,
+ "extraction": {
+  "caracteres_natifs": 82191,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/who_code_prevoyance_sociale_99_477.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "source secondaire : pas d'OCR (gain de temps) — le texte natif suffit au recoupement ou la source est écartée",
+  "pages": 58,
+  "pages_sans_texte": 1,
+  "sha256_texte": "sha256:ff102576382999c6aa97310afcd300f71afc6d5e4b2deebf6beb73d05ec18848"
+ },
+ "fichier_pdf": "who_code_prevoyance_sociale_99_477.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:18+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 335299,
+   "sha256": "sha256:6a624717d0b961c780d33de0fa4e1d810604a45a181e51a97a319be3b631347a",
+   "statut": "TELECHARGE",
+   "url": "https://extranet.who.int/cpcd/sites/default/files/public_file_repository/CIV_Cote-d-Ivoire_Law-99-477_Social-Insurance-Code_1999.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 335299,
+ "pdf": {
+  "CreationDate": "05/07/03 12:00:04",
+  "Creator": "PSCRIPT.DRV Version 4.0",
+  "ModDate": "Mon Aug  4 13:38:29 2014 UTC",
+  "PDF version": "1.3",
+  "Pages": "58",
+  "Producer": "GNU Ghostscript 7.05",
+  "Title": "Microsoft Word - LOI PORTANT CODE.doc",
+  "indices_ocr_editeur": [],
+  "polices": 231,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:6a624717d0b961c780d33de0fa4e1d810604a45a181e51a97a319be3b631347a",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://extranet.who.int/cpcd/sites/default/files/public_file_repository/CIV_Cote-d-Ivoire_Law-99-477_Social-Insurance-Code_1999.pdf",
+ "url_finale": "https://extranet.who.int/cpcd/sites/default/files/public_file_repository/CIV_Cote-d-Ivoire_Law-99-477_Social-Insurance-Code_1999.pdf",
+ "version_ocr": 1
+}

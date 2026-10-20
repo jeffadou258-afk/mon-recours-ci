@@ -1,0 +1,48 @@
+{
+ "categorie_source": "OFFICIEL_ORGANISATION",
+ "cle": "oapi_accord_bangui_fr",
+ "date_recuperation": "2026-10-20T10:18:13+00:00",
+ "duree_s": 5.0,
+ "extraction": {
+  "caracteres_natifs": 534124,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/oapi_accord_bangui_fr.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 272,
+  "pages_sans_texte": 27,
+  "sha256_texte": "sha256:3c87fe1a4517fcde275b4077b9135f311aed1490c4bc5aed53f50e88912cd49d"
+ },
+ "fichier_pdf": "oapi_accord_bangui_fr.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:13+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 1255837,
+   "sha256": "sha256:f37c2e85dcf238e35c651b37921b1309ec768b34ab0a35287292472c1025ca73",
+   "statut": "TELECHARGE",
+   "url": "https://www.oapi.int/wp-content/uploads/2023/11/francais.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1255837,
+ "pdf": {
+  "CreationDate": "Mon Dec 21 12:10:54 2020 UTC",
+  "Creator": "Microsoft® Word pour Microsoft 365",
+  "ModDate": "Mon Dec 21 12:10:54 2020 UTC",
+  "PDF version": "1.7",
+  "Pages": "272",
+  "Producer": "Microsoft® Word pour Microsoft 365",
+  "indices_ocr_editeur": [],
+  "polices": 11,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:f37c2e85dcf238e35c651b37921b1309ec768b34ab0a35287292472c1025ca73",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.oapi.int/wp-content/uploads/2023/11/francais.pdf",
+ "url_finale": "https://www.oapi.int/wp-content/uploads/2023/11/francais.pdf",
+ "version_ocr": 1
+}

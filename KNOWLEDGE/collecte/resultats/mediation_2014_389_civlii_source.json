@@ -1,0 +1,49 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "mediation_2014_389_civlii_source",
+ "date_recuperation": "2026-10-20T10:18:47+00:00",
+ "duree_s": 3.4,
+ "extraction": {
+  "caracteres_natifs": 20763,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mediation_2014_389_civlii_source.txt",
+  "ocr_force": false,
+  "pages": 8,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:930f36df02096320a0d06eadb732df772c4b82fdae767fc8539d962787f940d2"
+ },
+ "fichier_pdf": "mediation_2014_389_civlii_source.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:47+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 195444,
+   "sha256": "sha256:9231dda6a22ebd5b79c79294d23d00a79dd838b071a0bc44eed586244b606260",
+   "statut": "TELECHARGE",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27/source"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [
+  "creative commons",
+  "laws.africa"
+ ],
+ "octets": 195444,
+ "pdf": {
+  "CreationDate": "Fri Sep 25 13:32:04 2026 UTC",
+  "Creator": "Apache FOP Version 2.4",
+  "PDF version": "1.4",
+  "Pages": "8",
+  "Producer": "Apache FOP Version 2.4",
+  "indices_ocr_editeur": [],
+  "polices": 5,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:9231dda6a22ebd5b79c79294d23d00a79dd838b071a0bc44eed586244b606260",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27/source",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2014/389/fra@2022-05-27/source.pdf",
+ "version_ocr": 1
+}

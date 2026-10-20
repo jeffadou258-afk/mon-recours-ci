@@ -1,0 +1,48 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mef_annexe_fiscale_2024",
+ "date_recuperation": "2026-10-20T10:17:42+00:00",
+ "duree_s": 9.8,
+ "extraction": {
+  "caracteres_natifs": 7743,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mef_annexe_fiscale_2024.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 76,
+  "pages_sans_texte": 76,
+  "sha256_texte": "sha256:298364b1d89c915de54bb8b4eb6e767570051ca78a6507911db3db5bdc1a238f"
+ },
+ "fichier_pdf": "mef_annexe_fiscale_2024.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:17:42+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 17575953,
+   "sha256": "sha256:f45616da7809ed255c0df951e0934a1ff65576127cc6cd53157de20dc5600af8",
+   "statut": "TELECHARGE",
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Annexe%20fiscale%20%C3%A0%20la%20Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 17575953,
+ "pdf": {
+  "CreationDate": "Thu Feb 29 09:03:13 2024 UTC",
+  "ModDate": "Thu Feb 29 09:03:13 2024 UTC",
+  "PDF version": "1.7",
+  "Pages": "76",
+  "Producer": "Microsoft: Print To PDF",
+  "Title": "https://www.dgi.gouv.ci/assets/documents/EBOOK/ANNEXE_FISCALE_2024/",
+  "indices_ocr_editeur": [],
+  "polices": 1,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:f45616da7809ed255c0df951e0934a1ff65576127cc6cd53157de20dc5600af8",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Annexe%20fiscale%20%C3%A0%20la%20Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023.pdf",
+ "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Annexe%20fiscale%20%C3%A0%20la%20Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023.pdf",
+ "version_ocr": 1
+}

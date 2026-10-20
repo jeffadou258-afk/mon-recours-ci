@@ -1,0 +1,44 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mef_jo_code_eau_2023",
+ "date_recuperation": "2026-10-20T10:17:19+00:00",
+ "duree_s": 3.5,
+ "extraction": {
+  "caracteres_natifs": 32,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mef_jo_code_eau_2023.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 32,
+  "pages_sans_texte": 32,
+  "sha256_texte": "sha256:9a790012cd8582a187574bc533e97ecfeaa40a7b438f0ea1502a1bd255324cf1"
+ },
+ "fichier_pdf": "mef_jo_code_eau_2023.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:17:19+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 1130373,
+   "sha256": "sha256:638bb9bddcbf83a1bc2160411d7aaaecd1d301448eaa950ee54edafe2824be04",
+   "statut": "TELECHARGE",
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Eau%20%20f%C3%A9v%202024.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 1130373,
+ "pdf": {
+  "PDF version": "1.4",
+  "Pages": "32",
+  "indices_ocr_editeur": [],
+  "polices": 0,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:638bb9bddcbf83a1bc2160411d7aaaecd1d301448eaa950ee54edafe2824be04",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Eau%20%20f%C3%A9v%202024.pdf",
+ "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/JO%20contenant%20Loi%20portant%20Code%20de%20l'Eau%20%20f%C3%A9v%202024.pdf",
+ "version_ocr": 1
+}

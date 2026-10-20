@@ -1,0 +1,50 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mef_code_travail_2015_532",
+ "date_recuperation": "2026-10-20T10:17:06+00:00",
+ "duree_s": 10.0,
+ "extraction": {
+  "caracteres_natifs": 607640,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mef_code_travail_2015_532.txt",
+  "ocr_force": false,
+  "ocr_non_tente": "OCR reporté : fait dans l'espace de travail par bin/ocr_local.py (tesseract, modèle fra tessdata_best)",
+  "pages": 519,
+  "pages_sans_texte": 11,
+  "sha256_texte": "sha256:86cf8c1e9134ed13a532799576f66036c3f26d4b87b8a4c06f7b0f80b6713c22"
+ },
+ "fichier_pdf": "mef_code_travail_2015_532.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:17:06+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 1689360,
+   "sha256": "sha256:548417ee40285c8bcb2aae57dba1c5d51c4e53aa1a1d987f558fbb7cbd71dcdd",
+   "statut": "TELECHARGE",
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202015-532%20du%2020%20juillet%202015%20portant%20code%20du%20Travail.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [
+  "ivoire-juriste"
+ ],
+ "octets": 1689360,
+ "pdf": {
+  "CreationDate": "Sun Jan  3 14:18:09 2021 UTC",
+  "Creator": "www.konwerter.net",
+  "ModDate": "Sun Jan  3 14:18:21 2021 UTC",
+  "PDF version": "1.6",
+  "Pages": "519",
+  "Producer": "*",
+  "indices_ocr_editeur": [],
+  "polices": 17,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:548417ee40285c8bcb2aae57dba1c5d51c4e53aa1a1d987f558fbb7cbd71dcdd",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202015-532%20du%2020%20juillet%202015%20portant%20code%20du%20Travail.pdf",
+ "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Loi%20n%C2%B0%202015-532%20du%2020%20juillet%202015%20portant%20code%20du%20Travail.pdf",
+ "version_ocr": 1
+}

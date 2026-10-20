@@ -1,0 +1,50 @@
+{
+ "categorie_source": "SECONDAIRE_FAC_SIMILE",
+ "cle": "commissaires_justice_2018_974_civlii_jo",
+ "date_recuperation": "2026-10-20T10:18:54+00:00",
+ "duree_s": 2.4,
+ "extraction": {
+  "caracteres_natifs": 73275,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/commissaires_justice_2018_974_civlii_jo.txt",
+  "ocr_force": false,
+  "pages": 12,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:f5d49568706765304238a680b4c122406a9b2e4eb92fe5bbcf94f952a96f5e64"
+ },
+ "fichier_pdf": "commissaires_justice_2018_974_civlii_jo.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:54+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 2222641,
+   "sha256": "sha256:45988b4b100194cb1a1735ccd7713d581b3b12474bbc92aa1556396c544ff321",
+   "statut": "TELECHARGE",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/publication"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 2222641,
+ "pdf": {
+  "CreationDate": "Wed Jul  3 13:23:03 2024 UTC",
+  "Creator": "ABBYY FineReader PDF 15",
+  "ModDate": "Wed Jul  3 13:23:03 2024 UTC",
+  "PDF version": "1.5",
+  "Pages": "12",
+  "Producer": "ABBYY FineReader PDF 15",
+  "indices_ocr_editeur": [
+   "producteur : ABBYY",
+   "producteur : FineReader"
+  ],
+  "polices": 5,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:45988b4b100194cb1a1735ccd7713d581b3b12474bbc92aa1556396c544ff321",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/publication",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2018/974/fra@2023-11-23/publication",
+ "version_ocr": 1
+}

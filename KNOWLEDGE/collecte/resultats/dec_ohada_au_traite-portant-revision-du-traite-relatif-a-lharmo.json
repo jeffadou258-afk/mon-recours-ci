@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_au_traite-portant-revision-du-traite-relatif-a-lharmo",
+ "date_recuperation": "2026-10-20T10:19:30+00:00",
+ "duree_s": 2.8,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:30+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 258414,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/traite-portant-revision-du-traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique/"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 258414,
+ "statut": "DECOUVERTE",
+ "titre_page": "Traité portant révision du Traité relatif à l’harmonisation du droit des affaires en Afrique – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/traite-portant-revision-du-traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique/",
+ "url_finale": "https://www.ohada.org/traite-portant-revision-du-traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique/"
+}

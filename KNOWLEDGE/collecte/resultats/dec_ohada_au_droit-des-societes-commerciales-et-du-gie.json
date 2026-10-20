@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_au_droit-des-societes-commerciales-et-du-gie",
+ "date_recuperation": "2026-10-20T10:19:07+00:00",
+ "duree_s": 2.9,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:07+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 263258,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/droit-des-societes-commerciales-et-du-gie/"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 263258,
+ "statut": "DECOUVERTE",
+ "titre_page": "Droit des sociétés commerciales et du GIE – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/droit-des-societes-commerciales-et-du-gie/",
+ "url_finale": "https://www.ohada.org/droit-des-societes-commerciales-et-du-gie/"
+}

@@ -1,0 +1,48 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mef_loti_2014_812",
+ "date_recuperation": "2026-10-20T10:17:25+00:00",
+ "duree_s": 1.5,
+ "extraction": {
+  "caracteres_natifs": 31188,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mef_loti_2014_812.txt",
+  "ocr_force": false,
+  "pages": 12,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:41cc4c21a424cf173583f106730de4a1fbfe7a1858ca0e9dcced6f3685b16ca0"
+ },
+ "fichier_pdf": "mef_loti_2014_812.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:17:25+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 251391,
+   "sha256": "sha256:a7694771caeecb46b242eb8aa5286931e1026d16d2a925fed43e6408c85d166a",
+   "statut": "TELECHARGE",
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/LOI-N%C2%B02014-812-du-16-decembre-2014-dOrientation-du-Transport-InterieurLOTI.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 251391,
+ "pdf": {
+  "CreationDate": "Tue Mar  2 08:55:21 2021 UTC",
+  "Creator": "Microsoft® Word pour Microsoft 365",
+  "ModDate": "Tue Mar  2 08:55:21 2021 UTC",
+  "PDF version": "1.7",
+  "Pages": "12",
+  "Producer": "Microsoft® Word pour Microsoft 365",
+  "Title": "Ministère d’État",
+  "indices_ocr_editeur": [],
+  "polices": 11,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:a7694771caeecb46b242eb8aa5286931e1026d16d2a925fed43e6408c85d166a",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/LOI-N%C2%B02014-812-du-16-decembre-2014-dOrientation-du-Transport-InterieurLOTI.pdf",
+ "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/LOI-N%C2%B02014-812-du-16-decembre-2014-dOrientation-du-Transport-InterieurLOTI.pdf",
+ "version_ocr": 1
+}

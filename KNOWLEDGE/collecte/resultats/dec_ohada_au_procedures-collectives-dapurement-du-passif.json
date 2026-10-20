@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_au_procedures-collectives-dapurement-du-passif",
+ "date_recuperation": "2026-10-20T10:19:10+00:00",
+ "duree_s": 3.0,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:10+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 277944,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/procedures-collectives-dapurement-du-passif/"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 277944,
+ "statut": "DECOUVERTE",
+ "titre_page": "Procédures collectives d’apurement du passif – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/procedures-collectives-dapurement-du-passif/",
+ "url_finale": "https://www.ohada.org/procedures-collectives-dapurement-du-passif/"
+}

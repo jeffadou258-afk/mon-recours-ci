@@ -1,0 +1,49 @@
+{
+ "categorie_source": "SECONDAIRE_CONSOLIDE",
+ "cle": "juridictions_2016_1110_civlii_source",
+ "date_recuperation": "2026-10-20T10:18:38+00:00",
+ "duree_s": 3.2,
+ "extraction": {
+  "caracteres_natifs": 48349,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/juridictions_2016_1110_civlii_source.txt",
+  "ocr_force": false,
+  "pages": 18,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:5b3be7a6a3b0f21f1ab5b5635b95bdc816ca6770679119990129876573999073"
+ },
+ "fichier_pdf": "juridictions_2016_1110_civlii_source.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:18:38+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 280207,
+   "sha256": "sha256:386b1e1afae6addef1f41f2e917c0a2f3ba196929a5d1d68011a46a029d8c026",
+   "statut": "TELECHARGE",
+   "url": "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06/source"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [
+  "creative commons",
+  "laws.africa"
+ ],
+ "octets": 280207,
+ "pdf": {
+  "CreationDate": "Sat Dec  6 08:24:34 2025 UTC",
+  "Creator": "Apache FOP Version 2.4",
+  "PDF version": "1.4",
+  "Pages": "18",
+  "Producer": "Apache FOP Version 2.4",
+  "indices_ocr_editeur": [],
+  "polices": 5,
+  "qpdf_check": "ok"
+ },
+ "sha256": "sha256:386b1e1afae6addef1f41f2e917c0a2f3ba196929a5d1d68011a46a029d8c026",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06/source",
+ "url_finale": "https://civlii.laws.africa/en/akn/ci/act/2016/1110/fra@2023-07-06/source.pdf",
+ "version_ocr": 1
+}

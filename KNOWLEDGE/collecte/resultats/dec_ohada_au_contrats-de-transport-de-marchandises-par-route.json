@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_au_contrats-de-transport-de-marchandises-par-route",
+ "date_recuperation": "2026-10-20T10:19:21+00:00",
+ "duree_s": 2.9,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:21+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 267329,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/contrats-de-transport-de-marchandises-par-route/"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 267329,
+ "statut": "DECOUVERTE",
+ "titre_page": "Contrats de transport de marchandises par route – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/contrats-de-transport-de-marchandises-par-route/",
+ "url_finale": "https://www.ohada.org/contrats-de-transport-de-marchandises-par-route/"
+}

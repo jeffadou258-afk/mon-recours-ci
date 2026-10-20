@@ -1,0 +1,48 @@
+{
+ "categorie_source": "OFFICIEL_PORTAIL_GOUV",
+ "cle": "mef_ord_2021_902_travail",
+ "date_recuperation": "2026-10-20T10:17:16+00:00",
+ "duree_s": 2.6,
+ "extraction": {
+  "caracteres_natifs": 15688,
+  "dpi_ocr": 200,
+  "fichier_texte": "KNOWLEDGE/collecte/textes/mef_ord_2021_902_travail.txt",
+  "ocr_force": false,
+  "pages": 3,
+  "pages_sans_texte": 0,
+  "sha256_texte": "sha256:dc85d3b1f365c15c0d1ec918d8f1e4b66fc210a6cef5892c5b666abd13fdedc4"
+ },
+ "fichier_pdf": "mef_ord_2021_902_travail.pdf",
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:17:16+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 2135002,
+   "sha256": "sha256:9340c40364cdeebcfbced245201c10d12772b25633f625424689f9c4359077e2",
+   "statut": "TELECHARGE",
+   "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02021-902%20du%2022%20d%C3%A9cembre%202021%20modifiant%20la%20loi%20n%C2%B02015-532%20du%2020%20juillet%202015%20portant%20Code%20du%20travail.pdf"
+  }
+ ],
+ "http": 200,
+ "marques_tierces_observees": [],
+ "octets": 2135002,
+ "pdf": {
+  "CreationDate": "",
+  "Creator": "",
+  "ModDate": "",
+  "PDF version": "1.4",
+  "Pages": "3",
+  "Producer": "Eastman Kodak Company",
+  "Title": "",
+  "indices_ocr_editeur": [],
+  "polices": 16,
+  "qpdf_check": "avertissements"
+ },
+ "sha256": "sha256:9340c40364cdeebcfbced245201c10d12772b25633f625424689f9c4359077e2",
+ "statut": "TELECHARGE",
+ "type_contenu": "application/pdf",
+ "url": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02021-902%20du%2022%20d%C3%A9cembre%202021%20modifiant%20la%20loi%20n%C2%B02015-532%20du%2020%20juillet%202015%20portant%20Code%20du%20travail.pdf",
+ "url_finale": "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/Ordonnance%20n%C2%B02021-902%20du%2022%20d%C3%A9cembre%202021%20modifiant%20la%20loi%20n%C2%B02015-532%20du%2020%20juillet%202015%20portant%20Code%20du%20travail.pdf",
+ "version_ocr": 1
+}

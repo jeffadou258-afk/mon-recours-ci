@@ -1,0 +1,26 @@
+{
+ "ancres": [],
+ "categorie_source": "DECOUVERTE",
+ "cle": "dec_ohada_au_acte-uniforme-relatif-au-droit-comptable-et-a-linf",
+ "date_recuperation": "2026-10-20T10:19:24+00:00",
+ "duree_s": 2.9,
+ "historique": [
+  {
+   "date_recuperation": "2026-10-20T10:19:24+00:00",
+   "erreur": null,
+   "http": 200,
+   "octets": 246799,
+   "sha256": null,
+   "statut": "DECOUVERTE",
+   "url": "https://www.ohada.org/acte-uniforme-relatif-au-droit-comptable-et-a-linformation-financiere-audcif/"
+  }
+ ],
+ "http": 200,
+ "liens": [],
+ "octets": 246799,
+ "statut": "DECOUVERTE",
+ "titre_page": "Acte uniforme relatif au droit comptable et à l’information financière (AUDCIF) – OHADA",
+ "type_contenu": "text/html; charset=UTF-8",
+ "url": "https://www.ohada.org/acte-uniforme-relatif-au-droit-comptable-et-a-linformation-financiere-audcif/",
+ "url_finale": "https://www.ohada.org/acte-uniforme-relatif-au-droit-comptable-et-a-linformation-financiere-audcif/"
+}
