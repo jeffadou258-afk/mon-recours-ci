@@ -18,6 +18,40 @@
   "sha256_ocr": "sha256:d528718151f325ee3595d9af8b955caadeeda93b8129a364bc379c169101b0d4",
   "sha256_texte": "sha256:f60e1da0036e63065bdb02fa18d418a57baf3cfbaa79b4edd16f6016ecc5bbc9"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 65.4,
+  "confiance_par_page": {
+   "1": 56.7,
+   "10": 71.3,
+   "2": 32.1,
+   "3": 68.5,
+   "4": 73.0,
+   "5": 68.9,
+   "6": 74.2,
+   "7": 71.1,
+   "8": 69.9,
+   "9": 68.0
+  },
+  "date": "2026-10-20T10:12:45+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 10,
+  "pages_ocr_faibles": [
+   1,
+   2,
+   3,
+   5,
+   8,
+   9
+  ],
+  "pdf_verifie": "sha256:46e73858e41555d1d46edad183ac8c504c8c8fa449b8cd8ae2f196c4edbe0b49",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:b5163c8a51b6ee508520383b754468ea6185c66ae6a1df8261bae248422591d8"
+ },
  "fichier_pdf": "officiel_famille_loi_n_2018_862_du_19_novembre_2018_relative_l_ta.pdf",
  "http": 200,
  "marques_tierces_observees": [],

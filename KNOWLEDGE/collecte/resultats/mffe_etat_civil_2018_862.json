@@ -17,6 +17,35 @@
   "sha256_ocr": "sha256:4e7bc881059511491daf0564189e2d543e2ae479f1ef755e6db744b9b6571d32",
   "sha256_texte": "sha256:f60e1da0036e63065bdb02fa18d418a57baf3cfbaa79b4edd16f6016ecc5bbc9"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 89.1,
+  "confiance_par_page": {
+   "1": 86.9,
+   "10": 92.6,
+   "2": 58.9,
+   "3": 94.3,
+   "4": 93.5,
+   "5": 93.3,
+   "6": 93.5,
+   "7": 93.5,
+   "8": 92.4,
+   "9": 92.5
+  },
+  "date": "2026-10-20T10:13:36+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/mffe_etat_civil_2018_862.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 10,
+  "pages_ocr_faibles": [
+   2
+  ],
+  "pdf_verifie": "sha256:ab84704cb56c8c1cb9ab55436ba18ecf9e4ef5952133c7ce035c26109e7c8ad7",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:360b99f654081bd3c1b2b440dd744ff16e8b3b4d018bf2aaac7c725c10f85ddc"
+ },
  "fichier_pdf": "mffe_etat_civil_2018_862.pdf",
  "http": 200,
  "marques_tierces_observees": [],

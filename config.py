@@ -149,6 +149,7 @@ INSTITUTIONS_HORS_GOUV_CI = (
     # l'OHADA pour les Actes uniformes. A confirmer par le proprietaire.
     "cima-afrique.org",         # Conference Interafricaine des Marches d'Assurances (Code CIMA)
     "oapi.int",                 # Organisation Africaine de la Propriete Intellectuelle (Accord de Bangui)
+    "economie-ivoirienne.ci",   # Portail du Ministere de l'Economie et des Finances (republication de codes)
 )
 
 # --------------------------------------------------------------------------
@@ -259,6 +260,14 @@ SOURCES_OFFICIELLES = (
         "url": "https://ohada.org/",
         "role": "Actes uniformes applicables au droit des affaires (supranational)",
         "type": "organisation_supranationale",
+    },
+    {
+        "id": "MEF_PORTAIL_ECONOMIE",
+        "nom": "Ministere de l'Economie et des Finances — portail economie-ivoirienne.ci",
+        "url": "https://www.economie-ivoirienne.ci/",
+        "role": ("Portail lance par le ministre de l'Economie et des Finances (annonce sur finances.gouv.ci) ; "
+                 "republie des codes sectoriels et des Journaux officiels — republication, a recouper"),
+        "type": "ministere",
     },
     {
         "id": "CIMA",

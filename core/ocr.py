@@ -242,3 +242,38 @@ def decision(evaluation, controle_structurel=None):
     return {"decision": DECISION_OCR_A_CONFIRMER, "raisons": raisons,
             "articles_integrables": integrables, "articles_ecartes": ecartes,
             "statistiques": statistiques}
+
+
+# ---------------------------------------------------------------------------
+# En-têtes d'articles mal lus par l'OCR (Journal officiel)
+# ---------------------------------------------------------------------------
+# Le Journal officiel ivoirien compose ses articles « Art. 21. — Texte… ».
+# Sur un scan de qualité médiocre, l'OCR lit « Ait 20. — », « An 21, — »,
+# « Art.6. — » (sans espace) : le découpage perd alors l'article entier.
+# La correction ne porte QUE sur l'en-tête en début de ligne, exige le tiret
+# typographique après le numéro (aucune phrase ordinaire ne commence ainsi) et
+# ne touche jamais au corps de la disposition. Chaque correction est comptée et
+# rapportée : c'est une lecture, déclarée comme telle dans la provenance.
+_EN_TETE_OCR = re.compile(
+    r"(?m)^(?P<pre>[ \t]*)(?P<mot>Art|Ait|Aït|An|Arl|Ari|Aft|Ant|Aru|Arı|Arts|Artt|Aart|Ar|At|Avt|Atr)"
+    r"(?P<pt>[ \t]*[\.,']?[ \t]*)(?P<num>\d{1,3})(?P<apres>[ \t]*[\.,]?[ \t]*)(?P<tiret>[—–]|-{1,2}(?=[ \t]*\S))")
+
+
+_EN_TETE_DEJA_LISIBLE = re.compile(r"^[ \t]*Art\.?[ \t]+\d{1,3}[ \t]*[\.,]?[ \t]*[—–-]")
+
+
+def normaliser_en_tetes_jo(texte):
+    """Renvoie (texte, corrections) ; `corrections` liste [(numéro, en-tête lu)].
+
+    Un en-tête déjà lisible par le parseur (« Art. 5. — », « Art 5. — »,
+    « Art. 14, — ») est laissé tel quel et n'est pas compté. Réservé aux textes OCR."""
+    corrections = []
+
+    def remplacer(m):
+        original = m.group(0)
+        if _EN_TETE_DEJA_LISIBLE.match(original):
+            return original
+        corrections.append((m.group("num"), original.strip()))
+        return "%sArt. %s. %s" % (m.group("pre"), m.group("num"), m.group("tiret"))
+
+    return _EN_TETE_OCR.sub(remplacer, texte or ""), corrections

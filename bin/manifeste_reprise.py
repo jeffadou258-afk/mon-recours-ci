@@ -207,19 +207,136 @@ for suffixe in ("2015_532_fra@2023-08-10", "2018_975_fra@2024-06-23", "2019_570_
 for cle in ("dec_civlii_oeuvre_cpp", "dec_civlii_oeuvre_penal", "dec_civlii_oeuvre_travail"):
     DESACTIVER[cle] = None
 
+# ======================================================================
+# Second lot (après le run 39405665599 du 20/10/2026)
+# ======================================================================
+# Constat : sur CIVLII, les œuvres des grands codes (Code pénal, CPP, Code du
+# travail, lois de la famille de 2019, consommation, nationalité) sont réservées
+# aux abonnés « My CIVLII » (page d'œuvre : fonctionnalité réservée aux abonnés,
+# connexion requise) : `/source` et `/publication` répondent 404 sans
+# connexion. C'est une restriction d'accès : elle n'est PAS contournée.
+import urllib.parse as _up
+
+MEF = "https://www.economie-ivoirienne.ci/sites/default/files/sites/default/files/inline-files/"
+AUTORITE_MEF = ("Ministère de l'Économie et des Finances — portail economie-ivoirienne.ci "
+                "(republication ; portail lancé par le ministre, annonce sur finances.gouv.ci)")
+
+
+def mef(cle, fichier, titre, numero, date, domaines, type_texte="loi", notes=""):
+    return {"cle": cle, "titre": titre, "numero_texte": numero, "date_texte": date, "type_texte": type_texte,
+            "autorite": AUTORITE_MEF, "domaines": domaines,
+            "url": MEF + _up.quote(_up.unquote(fichier), safe="()'_-.,"),
+            "categorie_source": "OFFICIEL_PORTAIL_GOUV", "mode": "fichier",
+            "notes": ("Lien relevé sur la page « Codes sectoriels » (découverte du run 39405665599). " + notes).strip()}
+
+
+AJOUTS_2 = [
+    mef("mef_code_travail_2015_532", "Loi n° 2015-532 du 20 juillet 2015 portant code du Travail.pdf",
+        "Loi n° 2015-532 du 20 juillet 2015 portant Code du travail", "2015-532", "2015-07-20", [4],
+        notes="Version d'origine probable : l'ordonnance n° 2021-902 la modifie (entrée suivante)."),
+    mef("mef_ord_2021_902_travail", "Ordonnance n°2021-902 du 22 décembre 2021 modifiant la loi n°2015-532 du 20 juillet 2015 portant Code du travail.pdf",
+        "Ordonnance n° 2021-902 du 22 décembre 2021 modifiant la loi n° 2015-532 portant Code du travail",
+        "2021-902", "2021-12-22", [4], type_texte="ordonnance"),
+    mef("mef_jo_code_environnement_2023", "JO%20contenant%20Loi%20portant%20Code%20de%20l%27Environnement%20%20f%C3%A9v%202024.pdf",
+        "Loi portant Code de l'environnement (Journal officiel, février 2024)", "2023-900", "2023-11-23", [19],
+        notes="Numéro 2023-900 tiré de LEAP (PNUE) : à confirmer à la lecture du JO."),
+    mef("mef_jo_code_eau_2023", "JO%20contenant%20Loi%20portant%20Code%20de%20l%27Eau%20%20f%C3%A9v%202024.pdf",
+        "Loi portant Code de l'eau (Journal officiel, février 2024)", None, None, [19]),
+    mef("mef_code_hygiene_salubrite", "CODE%20HYGIENE%20ET%20DE%20LA%20SALUBRITE_compressed.pdf",
+        "Code de l'hygiène et de la salubrité", None, None, [15, 19], type_texte="code"),
+    mef("mef_loti_2014_812", "LOI-N%C2%B02014-812-du-16-decembre-2014-dOrientation-du-Transport-InterieurLOTI.pdf",
+        "Loi n° 2014-812 du 16 décembre 2014 d'orientation du transport intérieur", "2014-812", "2014-12-16", [13]),
+    mef("mef_foncier_rural_2019_868", "2019-10-14%20L2019-868%20modifiant%20L98-750%20Foncier%20rural_compressed.pdf",
+        "Loi n° 2019-868 du 14 octobre 2019 modifiant la loi n° 98-750 relative au domaine foncier rural",
+        "2019-868", "2019-10-14", [18]),
+    mef("mef_loi_finances_2024", "Loi%20de%20finances%20N%C2%B02023-1000%20du%2018%20d%C3%A9cembre%202023%20portant%20budget%20de%20l%E2%80%99Etat%20pour%20l%E2%80%99ann%C3%A9e%202024.pdf",
+        "Loi de finances n° 2023-1000 du 18 décembre 2023 portant budget de l'État pour l'année 2024",
+        "2023-1000", "2023-12-18", [11]),
+    mef("mef_annexe_fiscale_2024", "Annexe fiscale à la Loi de finances N°2023-1000 du 18 décembre 2023.pdf",
+        "Annexe fiscale à la loi de finances n° 2023-1000 du 18 décembre 2023", "2023-1000", "2023-12-18", [11],
+        notes="Mesures fiscales de l'année : ne remplace pas le Code général des impôts."),
+    mef("mef_code_maritime_2017_442", "Loi n° 2017-442 du 30 juin 2017 portant Code maritime.pdf",
+        "Loi n° 2017-442 du 30 juin 2017 portant Code maritime", "2017-442", "2017-06-30", [13]),
+    mef("mef_echanges_electroniques_2017_500", "Ordonnance%20n%C2%B02017-500%20du%202%20ao%C3%BBt%202017%20relative%20aux%20%C3%A9changes%20%C3%A9lectroniques%20entre%20les%20usagers%20et%20les%20autorit%C3%A9s.pdf",
+        "Ordonnance n° 2017-500 du 2 août 2017 relative aux échanges électroniques entre les usagers et les autorités administratives",
+        "2017-500", "2017-08-02", [9, 14], type_texte="ordonnance"),
+    {"cle": "oapi_accord_bangui_fr", "titre": "Accord de Bangui révisé (Bamako, 14 décembre 2015) — version française",
+     "numero_texte": "BANGUI-2015", "date_texte": "2015-12-14", "type_texte": "traite",
+     "autorite": "Organisation Africaine de la Propriété Intellectuelle (OAPI)", "domaines": [20],
+     "url": "https://www.oapi.int/wp-content/uploads/2023/11/francais.pdf",
+     "categorie_source": "OFFICIEL_ORGANISATION", "mode": "fichier",
+     "notes": "Lien relevé sur la page officielle de l'OAPI (découverte du run 39405665599)."},
+    {"cle": "who_code_prevoyance_sociale_99_477", "titre": "Loi n° 99-477 du 2 août 1999 portant modification du Code de prévoyance sociale (OMS)",
+     "numero_texte": "1999-477", "date_texte": "1999-08-02", "type_texte": "loi",
+     "autorite": "Organisation mondiale de la santé — répertoire de législation (reproduction)", "domaines": [4],
+     "url": "https://extranet.who.int/cpcd/sites/default/files/public_file_repository/CIV_Cote-d-Ivoire_Law-99-477_Social-Insurance-Code_1999.pdf",
+     "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE", "mode": "fichier", "notes": TROUVE},
+]
+AJOUTS_2 += civlii("etat_civil_2018_862", "2018/862/fra@2023-10-13", "Loi n° 2018-862 du 19 novembre 2018 relative à l'état civil",
+                   "2018-862", "2018-11-19", [2])
+AJOUTS_2 += civlii("violences_2021_894", "2021/894/fra@2023-10-11",
+                   "Loi n° 2021-894 du 21 décembre 2021 relative aux mesures de protection des victimes de violences domestiques, de viol et de violences sexuelles autres que domestiques",
+                   "2021-894", "2021-12-21", [22, 2, 5],
+                   "Le corpus porte ce texte sous le numéro « 202-894 » (faute de la source) : même loi.")
+AJOUTS_2 += civlii("prevoyance_sociale_1999_477", "1999/477/fra@2023-11-23", "Loi n° 99-477 du 2 août 1999 portant Code de prévoyance sociale",
+                   "1999-477", "1999-08-02", [4])
+AJOUTS_2 += civlii("cci_1977", "convention/1977/convention-collective-interprofessionnelle/fra@2024-02-16",
+                   "Convention collective interprofessionnelle du 19 juillet 1977", "CCI-1977", "1977-07-19", [4], publication=False)
+AJOUTS_2 += civlii("arbitrage_1993_671", "1993/671/fra@2022-05-27", "Loi n° 93-671 du 9 août 1993 relative à l'arbitrage",
+                   "1993-671", "1993-08-09", [6, 24])
+AJOUTS_2 += civlii("juridictions_2016_1110", "2016/1110/fra@2023-07-06",
+                   "Loi n° 2016-1110 du 8 décembre 2016 portant création, organisation et fonctionnement des juridictions de commerce",
+                   "2016-1110", "2016-12-08", [6, 9])
+AJOUTS_2 += civlii("petits_litiges_2015_904", "2015/904/fra@2022-05-27",
+                   "Loi n° 2015-904 du 30 décembre 2015 relative aux procédures spéciales pour le règlement des petits litiges",
+                   "2015-904", "2015-12-30", [9, 7])
+AJOUTS_2 += civlii("mediation_2014_389", "2014/389/fra@2022-05-27", "Loi n° 2014-389 du 20 juin 2014 relative à la médiation judiciaire et conventionnelle",
+                   "2014-389", "2014-06-20", [9, 6])
+AJOUTS_2 += civlii("commissaires_justice_2018_974", "2018/974/fra@2023-11-23", "Loi n° 2018-974 du 27 décembre 2018 portant statut des commissaires de justice",
+                   "2018-974", "2018-12-27", [23, 9])
+AJOUTS_2 += civlii("code_investissements_2018_646", "ord/2018/646/fra@2024-12-27", "Ordonnance n° 2018-646 du 1er août 2018 portant Code des investissements",
+                   "2018-646", "2018-08-01", [6])
+AJOUTS_2 += civlii("corruption_2013_660", "ord/2013/660/fra@2024-01-17",
+                   "Ordonnance n° 2013-660 du 20 septembre 2013 relative à la prévention et à la lutte contre la corruption",
+                   "2013-660", "2013-09-20", [5, 9])
+for page in ("droit-commercial-general", "droit-des-societes-commerciales-et-du-gie", "procedures-collectives-dapurement-du-passif",
+             "droit-de-larbitrage", "acte-uniforme-relatif-a-la-mediation", "droit-des-societes-cooperatives",
+             "contrats-de-transport-de-marchandises-par-route",
+             "acte-uniforme-relatif-au-droit-comptable-et-a-linformation-financiere-audcif", "organisation-des-suretes",
+             "traite-portant-revision-du-traite-relatif-a-lharmonisation-du-droit-des-affaires-en-afrique"):
+    AJOUTS_2.append(decouverte("dec_ohada_au_" + page[:50], "https://www.ohada.org/%s/" % page,
+                               r"wp-content/uploads/.+\.pdf", "Page de l'Acte uniforme sur ohada.org : relève le PDF officiel."))
+
+# Œuvres CIVLII réservées aux abonnés (404 sans connexion au run 39405665599).
+RESTREINTES = (
+    "mariage_2019_570_civlii_source", "mariage_2019_570_civlii_jo", "filiation_2019_571_civlii_source",
+    "filiation_2019_571_civlii_jo", "minorite_2019_572_civlii_source", "minorite_2019_572_civlii_jo",
+    "successions_2019_573_civlii_source", "successions_2019_573_civlii_jo", "travail_2015_532_civlii_source",
+    "travail_2015_532_civlii_jo", "travail_enfants_2010_272_civlii_source", "travail_enfants_2010_272_civlii_jo",
+    "code_penal_2019_574_civlii_source", "code_penal_2019_574_civlii_jo", "cpp_2018_975_civlii_source",
+    "cpp_2018_975_civlii_jo", "consommation_2016_412_civlii_source", "consommation_2016_412_civlii_jo",
+    "nationalite_1961_415_civlii_source", "nationalite_1961_415_civlii_jo", "code_civil_droits_civils_civlii_source",
+    "cpcca_1972_833_civlii_jo")
+MOTIF_RESTREINT = ("Œuvre CIVLII réservée aux abonnés « My CIVLII » (page d'œuvre : accès réservé, connexion "
+                   "requise ; constaté le 20/10/2026) : HTTP 404 sans connexion. Restriction d'accès non contournée.")
+DESACTIVER_2 = {cle: None for cle in RESTREINTES}
+for n in range(2, 17):
+    DESACTIVER_2["dec_civlii_en_legislation_p%d" % n] = None   # la liste ne pagine pas par ?page=N
+DESACTIVER_2["famille_minorite_2019_wm"] = "oneci_jo_special_2019_572_573_575"
+
 
 def main():
     manifeste = json.load(open(MANIFESTE, encoding="utf-8"))
     existantes = {s["cle"]: s for s in manifeste["sources"]}
     ajoutees = 0
-    for entree in AJOUTS:
+    for entree in AJOUTS + AJOUTS_2:
         if entree["cle"] not in existantes:
             entree["ajoutee_le"] = DATE
             manifeste["sources"].append(entree)
             existantes[entree["cle"]] = entree
             ajoutees += 1
     desactivees = 0
-    for cle, remplacante in DESACTIVER.items():
+    for cle, remplacante in list(DESACTIVER.items()) + list(DESACTIVER_2.items()):
         source = existantes.get(cle)
         if source is None or source.get("desactivee"):
             continue
@@ -229,7 +346,7 @@ def main():
             continue  # jamais désactiver une entrée qui a abouti
         source["desactivee"] = {
             "le": DATE, "http": constat.get("http"),
-            "motif": ("HTTP %s définitif (%s) : URL incorrecte ou document retiré ; non temporaire."
+            "motif": MOTIF_RESTREINT if cle in RESTREINTES else ("HTTP %s définitif (%s) : URL incorrecte ou document retiré ; non temporaire."
                       % (constat.get("http"), constat.get("date_recuperation", "?")[:10])
                       if constat.get("http") != 403 else
                       "HTTP 403 : refus d'accès du serveur ; aucune tentative de contournement."),

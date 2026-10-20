@@ -199,6 +199,9 @@ def controler_document(source, resultat):
                                   % (len(faibles), faibles[:15]))
         if extraction.get("ocr_tronque"):
             motifs.append("OCR tronqué : " + extraction["ocr_tronque"])
+    corrections_en_tetes = []
+    if methode.startswith("OCR"):
+        texte, corrections_en_tetes = ocr.normaliser_en_tetes_jo(texte)
     if source.get("segment"):
         try:
             texte = segmenter(texte, source["segment"])
@@ -273,6 +276,7 @@ def controler_document(source, resultat):
         "methode_extraction": methode,
         "indices_ocr_editeur": indices or [],
         "seconde_lecture_tesseract": bool(extraction.get("ocr_force") and extraction.get("fichier_ocr")),
+        "en_tetes_ocr_corriges": len(corrections_en_tetes),
         "densite_native_car_par_page": round(densite_native),
         "confiance_ocr_moyenne": confiance,
         "articles_detectes": len(articles),
@@ -365,6 +369,7 @@ def articles_de(cle):
     extraction = resultat.get("extraction") or {}
     texte = _texte(resultat, "fichier_ocr") if extraction.get("pages_sans_texte") else None
     texte = texte or _texte(resultat, "fichier_texte") or ""
+    texte, _ = ocr.normaliser_en_tetes_jo(texte)   # sans effet sur un calque texte conforme
     return corpus.extraire_articles(texte)
 
 
@@ -547,6 +552,7 @@ def officialiser_ocr(cles=None):
             else _texte(resultat, "fichier_ocr")
         second = _texte(resultat, "fichier_ocr") if d["methode_extraction"] == "OCR_EDITEUR" \
             and extraction.get("ocr_force") else None
+        principal, corrections_en_tetes = ocr.normaliser_en_tetes_jo(principal)
         principal, retraits = nettoyer_lecture(segmenter(principal, source_m.get("segment")))
         articles = corpus.extraire_articles(principal or "")
         confiance, ecartes = None, []
@@ -564,6 +570,7 @@ def officialiser_ocr(cles=None):
                     comparateur = "SECONDAIRE:" + autre["cle"]
                     break
         if second:
+            second = ocr.normaliser_en_tetes_jo(second)[0]
             articles_second = corpus.extraire_articles(nettoyer_lecture(
                 segmenter(second, source_m.get("segment")) if comparateur.startswith("LECTURE") else second)[0])
             confiance, retenus = {}, {}
@@ -590,6 +597,9 @@ def officialiser_ocr(cles=None):
                    if d["methode_extraction"] == "OCR_EDITEUR" else
                    "OCR tesseract (fra), confiance moyenne %s" % d["confiance_ocr_moyenne"])
         lecture += " ; %d en-tête(s), pied(s) ou numéro(s) de page retiré(s)" % retraits
+        if corrections_en_tetes:
+            lecture += (" ; %d en-tête(s) d'article mal lu(s) par l'OCR rétabli(s) au format « Art. N. — »"
+                        " (corps des articles inchangé)" % len(corrections_en_tetes))
         ref_id = base.ajouter_reference(
             titre_officiel=source["titre"], type_texte=source["type_texte"],
             numero_texte=source.get("numero_texte"), date_publication=source.get("date_texte"),

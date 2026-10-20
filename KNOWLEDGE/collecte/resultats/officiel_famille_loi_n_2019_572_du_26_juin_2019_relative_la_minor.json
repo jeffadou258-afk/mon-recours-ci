@@ -18,6 +18,41 @@
   "sha256_ocr": "sha256:e917b21c7050cf23ab6ab8c05b369b4bb4090a5b9550426002f23fe73ba97c30",
   "sha256_texte": "sha256:4dadacbf7b37380f7a2f005e9e6f14a93bc608061ac46f691f8a084b8eeddf19"
  },
+ "extraction_locale": {
+  "confiance_ocr_moyenne": 67.5,
+  "confiance_par_page": {
+   "1": 50.3,
+   "10": 72.0,
+   "11": 76.2,
+   "12": 57.2,
+   "13": 61.6,
+   "2": 72.6,
+   "3": 77.3,
+   "4": 70.9,
+   "5": 72.8,
+   "6": 71.5,
+   "7": 70.8,
+   "8": 72.3,
+   "9": 52.2
+  },
+  "date": "2026-10-20T10:12:09+00:00",
+  "dpi": 300,
+  "fichier_ocr": "KNOWLEDGE/collecte/textes/officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor.ocr_best.txt",
+  "lieu": "espace de travail Claude (session du 2026-10-20)",
+  "modele": "tessdata_best fra.traineddata",
+  "outil": "tesseract 5.3.4",
+  "pages": 13,
+  "pages_ocr_faibles": [
+   1,
+   9,
+   12,
+   13
+  ],
+  "pdf_verifie": "sha256:8a0cbf5e34540b964addfaa6913b57cee36b0564087f901734c71f5d91bccad1",
+  "psm": 3,
+  "sha256_modele": "sha256:907743d98915c91a3906dfbf6e48b97598346698fe53aaa797e1a064ffcac913",
+  "sha256_ocr": "sha256:8e15cba93b5f2a59a2d6c8fddbd41ef124b732580a0e2fd45553b7e388e5c8f1"
+ },
  "fichier_pdf": "officiel_famille_loi_n_2019_572_du_26_juin_2019_relative_la_minor.pdf",
  "http": 200,
  "marques_tierces_observees": [],
