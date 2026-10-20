@@ -81,6 +81,18 @@ SCHEMAS = {
         "entree": {"dossier_id": "str"},
         "sortie": {"supprime": "bool", "deja_absent": "bool"},
     },
+    "rechercher": {
+        "entree": {"question": "str, 1..%d caractères" % LONGUEUR_MAX_DEMANDE,
+                   "domaine": "str | None (clé de config.DOMAINES_JURIDIQUES)",
+                   "texte": "str | None (numero_texte exact, ex. AUSCGIE-2014)",
+                   "limite": "int 1..25 (défaut 5)"},
+        "sortie": {"question": "str", "domaine": "str | None", "texte": "str | None",
+                   "resultats": "[{ref_id, numero_texte, numero, domaine, titre, "
+                                "etat_verification, origine_texte, exemplaires, score, "
+                                "termes_reconnus, extrait}]",
+                   "abstention": "bool — True quand le corpus ne contient rien de correspondant",
+                   "message": "str | None", "avertissement": "str"},
+    },
     "sante": {
         "sortie": {"catalogue": "fiches par domaine", "corpus": "documents, articles, "
                    "provenance", "domaines": "statut par domaine"},
@@ -134,6 +146,17 @@ def _executer(fonction):
 
 def _conversation():
     return Conversation()
+
+
+def _extrait(texte, maximum=280):
+    """Début du texte, coupé sur un blanc — jamais au milieu d'un mot."""
+    propre = " ".join((texte or "").split())
+    if len(propre) <= maximum:
+        return propre
+    coupe = propre[:maximum]
+    if " " in coupe:
+        coupe = coupe[:coupe.rfind(" ")]
+    return coupe + "…"
 
 
 def ouvrir(dossier_id, demande):
@@ -191,6 +214,54 @@ def supprimer(dossier_id):
             raise _ErreurService("DOSSIER_INVALIDE", "dossier hors de la racine des dossiers")
         shutil.rmtree(cible)
         return {"supprime": True, "deja_absent": False}
+    return _executer(corps)
+
+
+def rechercher(question, domaine=None, limite=5, texte=None):
+    """Recherche documentaire dans le corpus : ce qui EXISTE, sans conclure.
+
+    Différence avec `ouvrir`/`repondre` : la conversation ne répond qu'à partir
+    de fiches rédigées, donc elle ignore des textes entiers indexés. `rechercher`
+    expose la recherche lexicale déjà utilisée en interne, sans créer de fiche,
+    sans ouvrir de dossier et sans écrire quoi que ce soit.
+
+    Un résultat n'est pas une réponse juridique : il localise un article, avec
+    sa référence, son état de vérification et son origine (calque ou OCR).
+    """
+    def corps():
+        _valider_texte(question, "question", LONGUEUR_MAX_DEMANDE)
+        if domaine is not None and (not isinstance(domaine, str)
+                                    or domaine not in config.DOMAINES_JURIDIQUES):
+            raise _ErreurService("ENTREE_INVALIDE", "domaine inconnu : %r" % (domaine,),
+                                 detail=sorted(config.DOMAINES_JURIDIQUES))
+        if isinstance(limite, bool) or not isinstance(limite, int) or not 1 <= limite <= 25:
+            raise _ErreurService("ENTREE_INVALIDE", "limite doit être un entier de 1 à 25",
+                                 detail=limite)
+        if texte is not None:
+            _valider_texte(texte, "texte", 200)
+        articles = corpus.chercher_articles(question, domaine=domaine, limite=limite,
+                                            numero_texte=texte)
+        resultats = [{"ref_id": a.get("ref_id"),
+                      "numero_texte": a.get("numero_texte"),
+                      "numero": str(a.get("numero")),
+                      "domaine": a.get("domaine"),
+                      "titre": a.get("titre"),
+                      "etat_verification": a.get("etat_verification"),
+                      "origine_texte": a.get("origine_texte"),
+                      "exemplaires": a.get("exemplaires", 1),
+                      "score": a.get("score"),
+                      "termes_reconnus": a.get("termes_reconnus"),
+                      "extrait": _extrait(a.get("texte"))}
+                     for a in articles]
+        return {"question": question, "domaine": domaine, "texte": texte,
+                "resultats": resultats,
+                "abstention": not resultats,
+                "message": ("Aucun article du corpus ne correspond à cette question. "
+                            "Le moteur s'abstient plutôt que de citer un texte approchant."
+                            if not resultats else None),
+                "avertissement": ("Un résultat localise un article ; il ne constitue pas "
+                                  "une réponse juridique et ne vaut pas validation. "
+                                  "Aucune fiche n'est créée automatiquement.")}
     return _executer(corps)
 
 

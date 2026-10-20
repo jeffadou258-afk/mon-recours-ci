@@ -1,0 +1,1111 @@
+{
+ "note": "Jeu derive des DECLENCHEURS du catalogue (KNOWLEDGE/catalogue.json), pas d'une intuition : chaque question est la formulation citoyenne deja utilisee par le routeur de fiches, et l'article attendu est celui que la fiche cite. Mesure : la recherche lexicale retrouve-t-elle l'article que le catalogue juge pertinent, et a quel rang.",
+ "genere_le": "2026-10-20",
+ "source": "catalogue.json (92 fiches)",
+ "questions": [
+  {
+   "fiche": "LOGEME_416",
+   "question": "depot de garantie",
+   "attendus": [
+    {
+     "numero_texte": "2019-576",
+     "ref_id": "REF-4596B86C3154",
+     "numero": "416"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_415",
+   "question": "avance sur loyer",
+   "attendus": [
+    {
+     "numero_texte": "2019-576",
+     "ref_id": "REF-4596B86C3154",
+     "numero": "415"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_423",
+   "question": "hausse du loyer",
+   "attendus": [
+    {
+     "numero_texte": "2019-576",
+     "ref_id": "REF-4596B86C3154",
+     "numero": "423"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_414",
+   "question": "contrat de bail",
+   "attendus": [
+    {
+     "numero_texte": "2019-576",
+     "ref_id": "REF-4596B86C3154",
+     "numero": "414"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_440",
+   "question": "me faire partir",
+   "attendus": [
+    {
+     "numero_texte": "2019-576",
+     "ref_id": "REF-4596B86C3154",
+     "numero": "440"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_443",
+   "question": "quitter le logement",
+   "attendus": [
+    {
+     "numero_texte": "2019-576",
+     "ref_id": "REF-4596B86C3154",
+     "numero": "443"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_445",
+   "question": "me jeter dehors",
+   "attendus": [
+    {
+     "numero_texte": "2019-576",
+     "ref_id": "REF-4596B86C3154",
+     "numero": "445"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_181",
+   "question": "bord de mer",
+   "attendus": [
+    {
+     "numero_texte": "2020-624",
+     "ref_id": "REF-A213C61AA69B",
+     "numero": "181"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_238",
+   "question": "utilite publique",
+   "attendus": [
+    {
+     "numero_texte": "2020-624",
+     "ref_id": "REF-A213C61AA69B",
+     "numero": "238"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "LOGEME_69",
+   "question": "reserve fonciere",
+   "attendus": [
+    {
+     "numero_texte": "2020-624",
+     "ref_id": "REF-A213C61AA69B",
+     "numero": "69"
+    }
+   ],
+   "domaine_fiche": "logement_baux_foncier"
+  },
+  {
+   "fiche": "TRANSP_2",
+   "question": "usage du telephone",
+   "attendus": [
+    {
+     "numero_texte": "2013-711",
+     "ref_id": "REF-B6FE04121ED1",
+     "numero": "2"
+    }
+   ],
+   "domaine_fiche": "transport_responsabilite_civile"
+  },
+  {
+   "fiche": "CONTRA_1",
+   "question": "garantir une dette",
+   "attendus": [
+    {
+     "numero_texte": null,
+     "ref_id": "REF-639AB2588C3F",
+     "numero": "1"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "CONTRA_4",
+   "question": "se porter caution",
+   "attendus": [
+    {
+     "numero_texte": null,
+     "ref_id": "REF-639AB2588C3F",
+     "numero": "4"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "FAMILL_1",
+   "question": "lien de filiation",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "1"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_2",
+   "question": "presomption de paternite",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "2"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_4",
+   "question": "test de paternite",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "4"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_6",
+   "question": "delai desaveu",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "6"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_9",
+   "question": "preuve de filiation",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "9"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_19",
+   "question": "sans etre maries",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "19"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_20",
+   "question": "reconnaitre mon enfant",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "20"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_21",
+   "question": "reconnaitre plus tard",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "21"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_22",
+   "question": "informer mon epouse",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "22"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_24",
+   "question": "action en paternite",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "24"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "FAMILL_26",
+   "question": "refuse de reconnaitre",
+   "attendus": [
+    {
+     "numero_texte": "2019-571",
+     "ref_id": "REF-E91DA7FFA10C",
+     "numero": "26"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "OHADA_8",
+   "question": "injonction de payer",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "8"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_10",
+   "question": "faire opposition",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "10"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_13",
+   "question": "prouver la dette",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "13"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_16",
+   "question": "pas fait opposition",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "16"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_28",
+   "question": "pratiquer une saisie",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "28"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_50",
+   "question": "que peut-on saisir",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "50"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_153",
+   "question": "saisie sur compte",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "153"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_173",
+   "question": "saisie sur salaire",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "173"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_177",
+   "question": "plafond saisie salaire",
+   "attendus": [
+    {
+     "numero_texte": "AUPSRVE-2023",
+     "ref_id": "REF-6590C8807800",
+     "numero": "177"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "MARIAGE_2",
+   "question": "mariage d'un mineur",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "2"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_4",
+   "question": "consentement au mariage",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "4"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_20",
+   "question": "celebrer le mariage",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "20"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_46",
+   "question": "danger au foyer",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "46"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_47",
+   "question": "nourrir les enfants",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "47"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_52",
+   "question": "charges du menage",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "52"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_56",
+   "question": "domicile conjugal",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "56"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_59",
+   "question": "biens du couple",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "59"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_73",
+   "question": "biens propres",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "73"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "MARIAGE_103",
+   "question": "dissolution du mariage",
+   "attendus": [
+    {
+     "numero_texte": "2019-570",
+     "ref_id": "REF-952FF6F2D9B4",
+     "numero": "103"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_5",
+   "question": "succession dernier domicile",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "5"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_12",
+   "question": "acte d'heredite",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "12"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_26",
+   "question": "part du veuf",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "26"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_27",
+   "question": "mort sans enfant",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "27"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_28",
+   "question": "aine herite plus",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "28"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_36",
+   "question": "conjoint separe herite",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "36"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_42",
+   "question": "refuser l'heritage",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "42"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_53",
+   "question": "heritage avec dettes",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "53"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_65",
+   "question": "dettes du defunt",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "65"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "SUCC_82",
+   "question": "partage de l'heritage",
+   "attendus": [
+    {
+     "numero_texte": "2019-573",
+     "ref_id": "REF-1C999A88E5A6",
+     "numero": "82"
+    }
+   ],
+   "domaine_fiche": "famille_mariage_filiation"
+  },
+  {
+   "fiche": "CPP_29",
+   "question": "ou porter plainte",
+   "attendus": [
+    {
+     "numero_texte": "2018-975",
+     "ref_id": "REF-31BF17F5ED6C",
+     "numero": "29"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "CPP_51",
+   "question": "ma plainte classee",
+   "attendus": [
+    {
+     "numero_texte": "2018-975",
+     "ref_id": "REF-31BF17F5ED6C",
+     "numero": "51"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "CPP_72",
+   "question": "garde a vue",
+   "attendus": [
+    {
+     "numero_texte": "2018-975",
+     "ref_id": "REF-31BF17F5ED6C",
+     "numero": "72"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "CPP_74",
+   "question": "droits en garde a vue",
+   "attendus": [
+    {
+     "numero_texte": "2018-975",
+     "ref_id": "REF-31BF17F5ED6C",
+     "numero": "74"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "CPP_75",
+   "question": "blesse en garde a vue",
+   "attendus": [
+    {
+     "numero_texte": "2018-975",
+     "ref_id": "REF-31BF17F5ED6C",
+     "numero": "75"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "CPP_90",
+   "question": "interroge sans avocat",
+   "attendus": [
+    {
+     "numero_texte": "2018-975",
+     "ref_id": "REF-31BF17F5ED6C",
+     "numero": "90"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "CPP_106",
+   "question": "juge d'instruction plainte",
+   "attendus": [
+    {
+     "numero_texte": "2018-975",
+     "ref_id": "REF-31BF17F5ED6C",
+     "numero": "106"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "CPP_12",
+   "question": "faits anciens plainte",
+   "attendus": [
+    {
+     "numero_texte": "2018-975",
+     "ref_id": "REF-31BF17F5ED6C",
+     "numero": "12"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_457",
+   "question": "vole ma moto",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "457"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_458",
+   "question": "peine pour un voleur",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "458"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_381",
+   "question": "on m'a frappe",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "381"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_383",
+   "question": "mon mari me frappe",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "383"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_382",
+   "question": "voie de fait",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "382"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_403",
+   "question": "relation sexuelle forcee",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "403"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_418",
+   "question": "harcelement sexuel",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "418"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_394",
+   "question": "mutilation genitale",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "394"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_421",
+   "question": "frapper un enfant",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "421"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_452",
+   "question": "abandon du foyer",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "452"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_453",
+   "question": "pension impayee",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "453"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_467",
+   "question": "abus de confiance",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "467"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_471",
+   "question": "on m'a escroque",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "471"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_475",
+   "question": "menace de publier",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "475"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_446",
+   "question": "accuse a tort",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "446"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "PENAL_98",
+   "question": "legitime defense",
+   "attendus": [
+    {
+     "numero_texte": "2019-574",
+     "ref_id": "REF-69BB5D7A2CEE",
+     "numero": "98"
+    }
+   ],
+   "domaine_fiche": "penal_procedure_penale"
+  },
+  {
+   "fiche": "OHADA_AUPCAP_CESSATION",
+   "question": "societe en difficulte",
+   "attendus": [
+    {
+     "numero_texte": "AUPCAP-2015",
+     "ref_id": "REF-3E1A0DA0A38F",
+     "numero": "1"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_AUPCAP_SALAIRES",
+   "question": "privilège des salaires",
+   "attendus": [
+    {
+     "numero_texte": "AUPCAP-2015",
+     "ref_id": "REF-3E1A0DA0A38F",
+     "numero": "95"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_AUSCOOP_DEFINITION",
+   "question": "creer une cooperative",
+   "attendus": [
+    {
+     "numero_texte": "AUSCOOP-2010",
+     "ref_id": "REF-54976178DD2F",
+     "numero": "4"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_AUSCOOP_PARTS",
+   "question": "part de cooperative",
+   "attendus": [
+    {
+     "numero_texte": "AUSCOOP-2010",
+     "ref_id": "REF-54976178DD2F",
+     "numero": "208"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_AUSCOOP_ENGAGEMENTS",
+   "question": "augmentation des engagements",
+   "attendus": [
+    {
+     "numero_texte": "AUSCOOP-2010",
+     "ref_id": "REF-54976178DD2F",
+     "numero": "62"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "OHADA_AUSCOOP_RESERVE",
+   "question": "affectation des excedents",
+   "attendus": [
+    {
+     "numero_texte": "AUSCOOP-2010",
+     "ref_id": "REF-54976178DD2F",
+     "numero": "114"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_CHAMP",
+   "question": "siege social ohada",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "1"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_CONSTITUTION",
+   "question": "contrat de societe",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "4"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_STATUTS",
+   "question": "modifier les statuts",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "10"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_DENOMINATION",
+   "question": "nom de la societe",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "14"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_MENTIONS",
+   "question": "entete de facture",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "17"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_CAPITAL",
+   "question": "capital de depart",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "65"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_CESSION_PARTS",
+   "question": "vendre ma part",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "274"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_SOCIETE_EN_FORMATION",
+   "question": "avant la creation",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "108"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  },
+  {
+   "fiche": "AUSCGIE_DUREE_DISSOLUTION",
+   "question": "arrivee du terme",
+   "attendus": [
+    {
+     "numero_texte": "AUSCGIE-2014",
+     "ref_id": "REF-8755A872A179",
+     "numero": "30"
+    }
+   ],
+   "domaine_fiche": "contrats_dettes_commerce"
+  }
+ ]
+}

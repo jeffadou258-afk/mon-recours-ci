@@ -695,7 +695,7 @@ def _fragments_de_requete(mots_cles):
     return vocabulaire, fragments
 
 
-def chercher_articles(mots_cles, domaine=None, limite=25, chemin=None):
+def chercher_articles(mots_cles, domaine=None, limite=25, chemin=None, numero_texte=None):
     """Recherche d'articles pour une question posée en langage courant.
 
     Score = somme des IDF des fragments reconnus (un fragment rare qui tombe
@@ -732,6 +732,11 @@ def chercher_articles(mots_cles, domaine=None, limite=25, chemin=None):
     if domaine:
         requete += " AND d.domaine = ?"
         params.append(domaine)
+    # Le domaine est un seau à 12 clés : les actes OHADA y sont réunis. Pour
+    # distinguer une SARL d'une coopérative, il faut le TEXTE, pas le domaine.
+    if numero_texte:
+        requete += " AND d.numero_texte = ?"
+        params.append(numero_texte)
     with connexion(chemin) as conn:
         lignes = [dict(r) for r in conn.execute(requete, params).fetchall()]
     textes = [(ligne, normaliser(ligne.get("texte") or "")) for ligne in lignes]

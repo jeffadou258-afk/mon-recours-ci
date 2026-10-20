@@ -290,7 +290,71 @@ au repos des dossiers. **Le serveur local n'est pas prêt pour la production.**
 5. Ne jamais présenter l'outil comme un avocat ; reprendre l'avertissement de
    `SYSTEM_PROMPT.md`.
 6. Un dossier = un identifiant opaque ; ne pas exposer les chemins de fichiers.
-7. Ne pas ajouter d'endpoint : le contrat est `ouvrir`, `repondre`, `sante`.
+7. Ne pas ajouter d'endpoint HTTP : le contrat est `ouvrir`, `repondre`, `sante`,
+   `supprimer` et — depuis la mission Document/RAG — `rechercher` (localisation
+   seule, sans conclusion).
+
+## 6 quinquies bis. Recherche documentaire — exposée, mesurée, bornée
+
+`core/service.rechercher(question, domaine=None, texte=None, limite=5)`
+
+**Ajout** au contrat : aucune des quatre opérations existantes n'est modifiée
+(`ouvrir`, `repondre`, `supprimer`, `sante` inchangées, test dédié).
+
+```
+{"ok": true, "data": {
+    "question": str, "domaine": str|null, "texte": str|null,
+    "resultats": [{ref_id, numero_texte, numero, domaine, titre, etat_verification,
+                   origine_texte, exemplaires, score, termes_reconnus, extrait}],
+    "abstention": bool, "message": str|null, "avertissement": str}}
+```
+
+### Ce qu'elle garantit
+
+* un article `articles_fiables = 0` **ne remonte jamais** (filtre déjà présent dans
+  `corpus.chercher_articles`, vérifié par `test_un_article_neutralise_ne_remonte_jamais`) ;
+* `domaine` inconnu → `ENTREE_INVALIDE` **avec la liste réelle** des 12 clés ;
+* `limite` hors `1..25` → `ENTREE_INVALIDE` (y compris `True`, `"5"`, `2.5`) ;
+* **aucune écriture** : ni base, ni dossier, ni fiche (empreinte logique avant/après) ;
+* **aucune conclusion** : la sortie ne contient ni `sections`, ni `statut_reponse`,
+  ni brouillon ; un `avertissement` le dit à chaque appel.
+
+### Ce qu'elle ne fait pas, et pourquoi
+
+* **pas d'endpoint HTTP.** Aucun client n'existe ; exposer une route maintenant
+  ajouterait authentification, débit et journalisation sans usage. La fonction de
+  service suffit et se branche plus tard sans réécriture.
+* **pas de recherche vectorielle.** Non nécessaire pour ce qui est mesuré ici.
+* **pas de fiches automatiques.** Les 549 articles « sans fiche » ne justifient pas
+  549 fiches : la plupart sont déjà retrouvables (voir ci-dessous).
+
+### Mesures réelles (20/10/2026)
+
+| Mesure | Résultat |
+|---|---|
+| Atteignabilité des textes sans fiche (auto-récupération) | **856 / 858 articles (99,8 %)** |
+| … dont par la référence exacte | 571 (le reste = même texte, autre exemplaire) |
+| Rappel@5 sur 92 déclencheurs du catalogue | **20/92 (22 %)** |
+| Rappel@25 | **42/92 (46 %)** |
+| Présent quelque part dans le classement | **72/92 (78 %)** |
+
+Conclusion mesurée : le problème est le **classement**, pas la couverture. Un article
+cité par une fiche descend souvent sous le top 5. C'est pourquoi les fiches restent
+le seul chemin qui conclut, et pourquoi la recherche est annoncée comme un outil de
+localisation.
+
+### Deux limites assumées, testées comme témoins
+
+1. **Le domaine est un seau à 12 clés** : AUSCGIE, AUSCOOP et AUPCAP partagent
+   `contrats_dettes_commerce` (1 500 articles). « capital minimum d'une SARL » remonte
+   une coopérative. D'où le paramètre `texte`, qui restreint par `numero_texte`
+   (`test_sans_filtre_la_confusion_entre_actes_ohada_est_reelle` documente le défaut).
+2. **Le lexical ne juge pas la pertinence** : « recette du gâteau au chocolat » remonte
+   des articles fiscaux (« recettes »), avec un score supérieur à celui d'une vraie
+   question. Trois signaux testés — couverture de la requête (33–100 %), vocabulaire
+   absent du corpus (0–1 fragment), score (4,86–17,91) — **ne séparent pas** les deux
+   classes. Aucun seuil n'est donc appliqué : il rejetterait une question légitime
+   avant une question absurde. L'abstention n'est prononcée que sur absence de résultat.
 
 ## 6 sexies. Base SQLite et arbre de travail
 

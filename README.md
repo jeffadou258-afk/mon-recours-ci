@@ -91,7 +91,19 @@ python3 bin/dialogue.py --catalogue       # ce que le catalogue sait traiter (fi
 python3 bin/dialogue.py --dossier D1 --demande "Mon bailleur garde ma caution."
 python3 bin/dialogue.py --dossier D1 --reponses logement=oui
 python3 bin/dialogue.py --fichier D1      # relit l'état de la conversation
+
+# --- recherche documentaire (localise un article, ne conclut pas) ----------
+python3 bin/mesurer_recherche.py          # atteignabilité réelle + mesure mesurée
+python3 bin/mesurer_recherche.py --questions KNOWLEDGE/qualite/questions_recherche.json
 ```
+
+**Recherche documentaire — mesurée, pas vantée.** `service.rechercher()` expose la
+recherche lexicale déjà utilisée en interne : elle localise un article avec sa
+référence et son état de vérification, sans ouvrir de dossier ni écrire quoi que ce soit.
+Sur les 92 déclencheurs du catalogue, l'article attendu est **présent dans le corpus
+dans 78 % des cas, dans le top 25 dans 46 %, dans le top 5 dans 22 %**. C'est un
+problème de **classement**, pas de couverture : les fiches restent le seul chemin
+qui conclut. La recherche ne remplace pas la conversation et ne la contourne pas.
 
 ## Documents de référence
 
