@@ -72,10 +72,27 @@ def sha256(octets):
     return "sha256:" + hashlib.sha256(octets).hexdigest()
 
 
-def telecharger(url, timeout=120, essais=3):
-    """Renvoie (statut_http, type_contenu, url_finale, octets). Lève après `essais` échecs."""
+# Temporisation entre deux requêtes vers un même hôte (politesse) ; les erreurs
+# temporaires (5xx, 429, réseau) sont reprises avec une attente croissante.
+DELAI_HOTE_S = float(os.environ.get("COLLECTE_DELAI_HOTE_S", "2"))
+_DERNIER_APPEL = {}
+
+
+def _patienter(url):
+    hote = urllib.parse.urlsplit(url).hostname or ""
+    attente = DELAI_HOTE_S - (time.time() - _DERNIER_APPEL.get(hote, 0))
+    if attente > 0:
+        time.sleep(attente)
+    _DERNIER_APPEL[hote] = time.time()
+
+
+def telecharger(url, timeout=120, essais=4):
+    """Renvoie (statut_http, type_contenu, url_finale, octets). Lève après `essais` échecs.
+
+    Un 4xx est définitif, sauf 408 et 429 (temporaires) : ceux-là sont repris."""
     derniere = None
     for essai in range(essais):
+        _patienter(url)
         try:
             requete = urllib.request.Request(url, headers={
                 "User-Agent": AGENT_HTTP, "Accept": "application/pdf,text/html;q=0.9,*/*;q=0.5",
@@ -85,13 +102,15 @@ def telecharger(url, timeout=120, essais=3):
                 return (reponse.status, reponse.headers.get("Content-Type", ""),
                         reponse.geturl(), octets)
         except urllib.error.HTTPError as erreur:
-            # Un 4xx est une réponse définitive : inutile d'insister.
-            if 400 <= erreur.code < 500:
+            # Un 4xx est une réponse définitive : inutile d'insister (sauf 408 / 429).
+            if 400 <= erreur.code < 500 and erreur.code not in (408, 429):
                 return erreur.code, erreur.headers.get("Content-Type", ""), url, b""
             derniere = erreur
+            if essai == essais - 1:
+                return erreur.code, erreur.headers.get("Content-Type", ""), url, b""
         except Exception as erreur:  # noqa: BLE001 — réseau : on consigne et on réessaie
             derniere = erreur
-        time.sleep(3 * (essai + 1))
+        time.sleep(5 * (2 ** essai))
     raise RuntimeError("échec après %d essais : %s" % (essais, derniere))
 
 
@@ -207,6 +226,9 @@ def extraire(chemin, pages, cle, ocr_autorise=True, ocr_force=False, dpi=None):
     if a_ocr and not ocr_autorise:
         constats["ocr_non_tente"] = ("source secondaire : pas d'OCR (gain de temps) — "
                                      "le texte natif suffit au recoupement ou la source est écartée")
+    elif a_ocr and os.environ.get("COLLECTE_OCR", "1") == "0":
+        constats["ocr_non_tente"] = ("OCR reporté : fait dans l'espace de travail par bin/ocr_local.py "
+                                     "(tesseract, modèle fra tessdata_best)")
     elif a_ocr and shutil.which("tesseract"):
         if len(a_ocr) > PAGES_OCR_MAX:
             constats["ocr_tronque"] = "%d pages à reconnaître, limite %d" % (len(a_ocr), PAGES_OCR_MAX)
@@ -374,8 +396,12 @@ def main(argv=None):
             synthese["reportes"].append(source["cle"])
             continue
         chemin_resultat = os.path.join(DOSSIER_RESULTATS, source["cle"] + ".json")
-        if os.path.isfile(chemin_resultat) and not arguments.forcer:
-            precedent = json.load(open(chemin_resultat, encoding="utf-8"))
+        if source.get("desactivee"):
+            synthese["ignores"].append(source["cle"])
+            continue
+        precedent = (json.load(open(chemin_resultat, encoding="utf-8"))
+                     if os.path.isfile(chemin_resultat) else None)
+        if precedent is not None and not arguments.forcer:
             deja_force = (precedent.get("extraction") or {}).get("ocr_force")
             if precedent.get("url") == source["url"] and precedent.get("statut") in (
                     "TELECHARGE", "DECOUVERTE") and (deja_force or not source.get("ocr_force")) \
@@ -386,6 +412,15 @@ def main(argv=None):
         debut = time.time()
         resultat = traiter(source)
         resultat["duree_s"] = round(time.time() - debut, 1)
+        # Historique : chaque tentative est conservée, pour ne pas recommencer à
+        # l'aveugle et pour distinguer une erreur passagère d'une URL morte.
+        historique = list((precedent or {}).get("historique") or [])
+        if precedent and not historique:
+            historique.append({k: precedent.get(k) for k in
+                               ("date_recuperation", "url", "statut", "http", "octets", "sha256", "erreur")})
+        historique.append({k: resultat.get(k) for k in
+                           ("date_recuperation", "url", "statut", "http", "octets", "sha256", "erreur")})
+        resultat["historique"] = historique[-12:]
         journal("   -> %s %s" % (resultat.get("statut"), {k: resultat.get(k) for k in
                                                          ("http", "octets", "sha256")}))
         with open(chemin_resultat, "w", encoding="utf-8") as flux:

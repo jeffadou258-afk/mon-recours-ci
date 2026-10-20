@@ -144,6 +144,11 @@ INSTITUTIONS_HORS_GOUV_CI = (
     "artci.ci",                 # Autorite de Regulation des Telecommunications/TIC
     "ohada.org",                # Organisation pour l'Harmonisation en Afrique du Droit des Affaires
     "courconstitutionnelle.ci", # Conseil constitutionnel
+    # Ajouts du 20/10/2026 (reprise de la collecte) : organisations supranationales
+    # dont la Côte d'Ivoire est membre et qui EDICTENT elles-memes le texte, comme
+    # l'OHADA pour les Actes uniformes. A confirmer par le proprietaire.
+    "cima-afrique.org",         # Conference Interafricaine des Marches d'Assurances (Code CIMA)
+    "oapi.int",                 # Organisation Africaine de la Propriete Intellectuelle (Accord de Bangui)
 )
 
 # --------------------------------------------------------------------------
@@ -253,6 +258,20 @@ SOURCES_OFFICIELLES = (
         "nom": "Organisation pour l'Harmonisation en Afrique du Droit des Affaires",
         "url": "https://ohada.org/",
         "role": "Actes uniformes applicables au droit des affaires (supranational)",
+        "type": "organisation_supranationale",
+    },
+    {
+        "id": "CIMA",
+        "nom": "Conference Interafricaine des Marches d'Assurances",
+        "url": "https://cima-afrique.org/",
+        "role": "Code des assurances des Etats membres (supranational, applicable en Cote d'Ivoire)",
+        "type": "organisation_supranationale",
+    },
+    {
+        "id": "OAPI",
+        "nom": "Organisation Africaine de la Propriete Intellectuelle",
+        "url": "https://oapi.int/",
+        "role": "Accord de Bangui et ses annexes (propriete industrielle, droit d'auteur)",
         "type": "organisation_supranationale",
     },
     {

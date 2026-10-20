@@ -290,9 +290,13 @@ def controler_document(source, resultat):
 def controler():
     manifeste = lire_json(MANIFESTE)
     sources = {s["cle"]: s for s in manifeste["sources"]}
-    documents, decouvertes, echecs, non_collectes = [], [], [], []
+    documents, decouvertes, echecs, non_collectes, abandonnees = [], [], [], [], []
     for cle, source in sources.items():
         resultat = lire_json(os.path.join(DOSSIER_RESULTATS, cle + ".json"))
+        if source.get("desactivee"):
+            abandonnees.append({"cle": cle, "url": source["url"], **source["desactivee"],
+                                "tentatives": len((resultat or {}).get("historique") or []) or (1 if resultat else 0)})
+            continue
         if resultat is None or resultat.get("url") != source["url"]:
             non_collectes.append({"cle": cle, "url": source["url"]})
             continue
@@ -330,6 +334,7 @@ def controler():
             "pages_de_decouverte_lues": len(decouvertes),
             "echecs": len(echecs),
             "non_encore_collectes": len(non_collectes),
+            "entrees_desactivees": len(abandonnees),
             "par_statut_controle": dict(sorted(compte.items())),
             "par_categorie": dict(sorted(collections.Counter(
                 d["categorie_source"] for d in documents).items())),
@@ -341,6 +346,7 @@ def controler():
         "echecs": echecs,
         "decouvertes": decouvertes,
         "non_encore_collectes": non_collectes,
+        "desactivees": abandonnees,
     }
     ecrire_json(INVENTAIRE, inventaire)
     print(json.dumps(inventaire["totaux"], ensure_ascii=False, indent=1))

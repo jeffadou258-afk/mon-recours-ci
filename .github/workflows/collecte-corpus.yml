@@ -16,12 +16,16 @@ name: Corpus — collecte documentaire
 
 on:
   push:
-    branches: [corpus/collecte-24-domaines]
+    branches: [corpus/collecte-24-domaines, corpus/collecte-autonome]
     paths: ["KNOWLEDGE/collecte/manifeste.json", "bin/collecte_distante.py", ".github/workflows/collecte-corpus.yml"]
   workflow_dispatch:
     inputs:
       forcer:
         description: "Retraiter les entrées déjà collectées"
+        type: boolean
+        default: false
+      ocr:
+        description: "OCR sur le runner (sinon : OCR local, bin/ocr_local.py)"
         type: boolean
         default: false
 
@@ -34,7 +38,7 @@ concurrency:
 
 jobs:
   collecte:
-    if: github.ref == 'refs/heads/corpus/collecte-24-domaines'
+    if: github.ref == 'refs/heads/corpus/collecte-24-domaines' || github.ref == 'refs/heads/corpus/collecte-autonome'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -52,6 +56,9 @@ jobs:
         env:
           COLLECTE_DOSSIER_PDF: ${{ runner.temp }}/pdf
           COLLECTE_BUDGET_S: "2400"
+          # Sur corpus/collecte-autonome, l'OCR est fait dans l'espace de travail
+          # (modèle tessdata_best) : le runner se limite au téléchargement.
+          COLLECTE_OCR: ${{ (github.ref_name == 'corpus/collecte-24-domaines' || inputs.ocr) && '1' || '0' }}
         run: |
           OPTIONS=""
           if [ "${{ inputs.forcer }}" = "true" ]; then OPTIONS="--forcer"; fi
@@ -77,7 +84,7 @@ jobs:
           (cd "$ARCH/pdf" && sha256sum *.pdf > ../SHA256SUMS)
           printf '%s\n' "# Archive des PDF collectés" "" \
             "Branche d'archive : fichiers bruts téléchargés par le workflow « Corpus — collecte documentaire »." \
-            "Provenance, catégorie (officielle ou secondaire) et constats : KNOWLEDGE/collecte/resultats/ sur corpus/collecte-24-domaines." \
+            "Provenance, catégorie (officielle ou secondaire) et constats : KNOWLEDGE/collecte/resultats/ sur ${{ github.ref_name }}." \
             "Un fichier présent ici n'est NI authentifié NI réputé en vigueur." > "$ARCH/README.md"
           git -C "$ARCH" add -f pdf SHA256SUMS README.md
           if git -C "$ARCH" diff --cached --quiet; then echo "archive inchangée"; exit 0; fi
@@ -93,13 +100,13 @@ jobs:
           mkdir -p "$SAUVE"
           cp -r KNOWLEDGE/collecte/resultats KNOWLEDGE/collecte/textes KNOWLEDGE/collecte/derniere_execution.json "$SAUVE/"
           for essai in 1 2 3; do
-            git fetch -q origin corpus/collecte-24-domaines
+            git fetch -q origin "${{ github.ref_name }}"
             git reset -q --hard FETCH_HEAD
             cp -r "$SAUVE"/* KNOWLEDGE/collecte/
             git add KNOWLEDGE/collecte/resultats KNOWLEDGE/collecte/textes KNOWLEDGE/collecte/derniere_execution.json
             if git diff --cached --quiet; then echo "aucun constat nouveau"; exit 0; fi
             git commit -q -m "Collecte : constats du run ${{ github.run_id }}"
-            git push -q origin HEAD:corpus/collecte-24-domaines && exit 0
+            git push -q origin "HEAD:${{ github.ref_name }}" && exit 0
             sleep 5
           done
           exit 1
