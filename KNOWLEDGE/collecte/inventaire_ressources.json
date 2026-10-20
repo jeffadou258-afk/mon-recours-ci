@@ -1,6 +1,6 @@
 {
  "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
- "genere_le": "2026-10-20T12:02:26+00:00",
+ "genere_le": "2026-10-20T12:18:24+00:00",
  "outils_collecte": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -18,11 +18,11 @@
   ]
  },
  "totaux": {
-  "entrees_manifeste": 251,
+  "entrees_manifeste": 256,
   "documents_telecharges": 75,
-  "pages_de_decouverte_lues": 88,
+  "pages_de_decouverte_lues": 91,
   "echecs": 0,
-  "non_encore_collectes": 0,
+  "non_encore_collectes": 2,
   "entrees_desactivees": 88,
   "par_statut_controle": {
    "EXPLOITABLE_OFFICIEL": 21,
@@ -3834,9 +3834,36 @@
    "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1881",
    "titre_page": "Journal Officiel de l'OHADA Catalogue en ligne",
    "liens": 12
+  },
+  {
+   "cle": "dec_biblio_ohada_bulletin_1561",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1561",
+   "titre_page": "Acte Uniforme relatif au Droit des Sociétés Comm... Catalogue en ligne",
+   "liens": 0
+  },
+  {
+   "cle": "dec_biblio_ohada_bulletin_1696",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1696",
+   "titre_page": "Acte uniforme relatif à la Médiation - Acte unif... Catalogue en ligne",
+   "liens": 1
+  },
+  {
+   "cle": "dec_biblio_ohada_bulletin_1722",
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1722",
+   "titre_page": "Acte uniforme relatif au Droit des Sociétés Comm... Catalogue en ligne",
+   "liens": 1
   }
  ],
- "non_encore_collectes": [],
+ "non_encore_collectes": [
+  {
+   "cle": "ohada_jo_bulletin_1696_explnum_2799",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=2799"
+  },
+  {
+   "cle": "ohada_jo_bulletin_1722_explnum_3974",
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=3974"
+  }
+ ],
  "desactivees": [
   {
    "cle": "code_penal_2019_574_mffe",

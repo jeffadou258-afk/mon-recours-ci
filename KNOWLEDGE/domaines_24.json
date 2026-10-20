@@ -226,7 +226,10 @@
     "contrats_dettes_commerce"
    ],
    "fiches": [],
-   "textes": [],
+   "textes": [
+    "AUCOOP-2010",
+    "AUPCAP-2015"
+   ],
    "reconnaissance": [
     "societe",
     "commercant",
@@ -239,7 +242,9 @@
     "facture impayee"
    ],
    "lacunes": [
-    "AUDCG 2010, AUSCGIE 2014, AUPCAP 2015, arbitrage 2017, coopératives 2010 : versions signées officielles collectées (biblio.ohada.org) ; OCR en cours, aucune fiche.",
+    "Coopératives (AUCOOP 2010, JO OHADA n° 23) : 365 articles intégrés par OCR (couverture 92 %, deux lectures tesseract), aucune fiche ; relecture humaine nécessaire.",
+    "Procédures collectives (AUPCAP 2015, JO OHADA numéro spécial du 25/09/2015) : 249 articles intégrés par OCR (couverture 97 %), aucune fiche.",
+    "AUDCG 2010, AUSCGIE 2014, arbitrage 2017 : seules les « versions signées » abrogées ou des republications étrangères sont collectées ; JO OHADA en vigueur à récupérer (bulletins 1561, 1696, 1722 repérés).",
     "Code des investissements (2018-646), juridictions de commerce (2016-1110), médiation (2014-389) : reproductions CIVLII seulement."
    ]
   },
@@ -675,7 +680,7 @@
    ],
    "lacunes": [
     "Sûretés (AUS) et voies d'exécution (AUPSRVE 2023) couverts ; quotités saisissables du salaire : droit national, absentes.",
-    "Procédures collectives (AUPCAP 2015) : version signée officielle collectée (biblio.ohada.org), OCR en cours, pas encore intégrée."
+    "Procédures collectives (AUPCAP 2015) : texte du JO OHADA intégré (249 articles, OCR, PARTIELLEMENT_VERIFIE), aucune fiche encore."
    ]
   },
   {

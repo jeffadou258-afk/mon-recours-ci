@@ -4526,6 +4526,40 @@
    "filtre_liens": "doc_num\\.php|explnum",
    "notes": "Numéro du JO OHADA : Acte uniforme relatif au droit des sociétés commerciales et du GIE, règlement de procédure de la CCJA (notice 1881).",
    "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_jo_bulletin_1696_explnum_2799",
+   "titre": "Journal officiel de l'OHADA — Médiation et arbitrage (2017) (bulletin 1696, fichier 2799)",
+   "numero_texte": "AUA-2017",
+   "date_texte": "2017-11-23",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (collection « Journal Officiel », notice 1881)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=2799",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Fichier relevé au run 39419713478 ; identité, date et version à contrôler à la lecture.",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "ohada_jo_bulletin_1722_explnum_3974",
+   "titre": "Journal officiel de l'OHADA — Sociétés commerciales et GIE, CCJA (bulletin 1722, fichier 3974)",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (collection « Journal Officiel », notice 1881)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=3974",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "mode": "fichier",
+   "notes": "Fichier relevé au run 39419713478 ; identité, date et version à contrôler à la lecture.",
+   "ajoutee_le": "2026-10-20"
   }
  ]
 }

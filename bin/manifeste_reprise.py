@@ -495,6 +495,14 @@ AJOUTS_6 = [
     for n, objet in ((1561, "Acte uniforme relatif au droit des sociétés commerciales et du GIE"),
                      (1696, "Acte uniforme relatif à la médiation et Acte uniforme relatif au droit de l'arbitrage"),
                      (1722, "Acte uniforme relatif au droit des sociétés commerciales et du GIE, règlement de procédure de la CCJA"))]
+AJOUTS_6 += [
+    {"cle": "ohada_jo_bulletin_%d_explnum_%d" % (b, n), "titre": "Journal officiel de l'OHADA — %s (bulletin %d, fichier %d)" % (objet, b, n),
+     "numero_texte": numero, "date_texte": date, "type_texte": "acte_uniforme",
+     "autorite": "OHADA — bibliothèque numérique (collection « Journal Officiel », notice 1881)", "domaines": [6, 23],
+     "url": "https://biblio.ohada.org/doc_num.php?explnum_id=%d" % n, "categorie_source": "OFFICIEL_ORGANISATION",
+     "mode": "fichier", "notes": "Fichier relevé au run 39419713478 ; identité, date et version à contrôler à la lecture."}
+    for b, n, objet, numero, date in ((1696, 2799, "Médiation et arbitrage (2017)", "AUA-2017", "2017-11-23"),
+                                      (1722, 3974, "Sociétés commerciales et GIE, CCJA", None, None))]
 
 
 def main():

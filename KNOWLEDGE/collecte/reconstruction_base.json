@@ -1,6 +1,6 @@
 {
  "objet": "Reconstruction contrôlée de la base (bin/reconstruire_base.py)",
- "date": "2026-10-20T12:04:56+00:00",
+ "date": "2026-10-20T12:17:55+00:00",
  "depart": {
   "revision": "1ca6e7f",
   "sha256": "fd0587e68ae245c963a98002da7f632d1361d15f5e70ccce4178318a46693e46"
@@ -25,7 +25,7 @@
   "mffe_mariage_2019_570                          INTEGRE  105 articles (couverture 100 %), 0 écartés, accord moyen 0.9989",
   "mffe_successions_2019_573                      INTEGRE  130 articles (couverture 96 %), 7 écartés, accord moyen 0.9946",
   "ohada_aucoop_2010                              INTEGRE  365 articles (couverture 92 %), 21 écartés, accord moyen 0.9963",
-  "ohada_jo_aupc_2015_explnum_19                  REFUSE   couverture 85 % des articles 1..258 (minimum 85 %) : rien n'est écrit",
+  "ohada_jo_aupc_2015_explnum_19                  INTEGRE  249 articles (couverture 97 %), 6 écartés, accord moyen 0.9955",
   "oneci_jo_special_2019_572_573_575              INTEGRE  157 articles (couverture 98 %), 3 écartés, accord moyen 0.9973"
  ],
  "controles": [
@@ -62,7 +62,7 @@
   {
    "controle": "intégrité des documents (verifier_integrite)",
    "ok": true,
-   "detail": "{\"alteres\": 0, \"absents\": 0, \"documents\": 35, \"fiches\": 77, \"questions\": 28}"
+   "detail": "{\"alteres\": 0, \"absents\": 0, \"documents\": 36, \"fiches\": 77, \"questions\": 28}"
   },
   {
    "controle": "catalogue et guide revalidés contre la copie",
@@ -72,7 +72,10 @@
  ],
  "resultat": "CONTROLES_REUSSIS",
  "base_reconstruite": {
-  "sha256": "f84039aecf026e9b93dfe2d4053de58fdc49f3fcc4565672cfc761fab8ba58e4"
+  "sha256": "3deec08fd70eb8260e7b69d654f7e69cf8d3474443c46c865c7f98a670c1d707"
  },
- "remplacement": null
+ "remplacement": {
+  "sauvegarde": "KNOWLEDGE/.sauvegardes/corpus_20261020-121755_dd17ce145254.sqlite3",
+  "base_active_apres": "3deec08fd70eb8260e7b69d654f7e69cf8d3474443c46c865c7f98a670c1d707"
+ }
 }

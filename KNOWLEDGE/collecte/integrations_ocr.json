@@ -2774,6 +2774,574 @@
     "396": "TESSERACT_LOCAL_BEST:300 dpi"
    }
   },
+  "ohada_jo_aupc_2015_explnum_19": {
+   "date": "2026-10-20",
+   "ref_id": "REF-3E1A0DA0A38F",
+   "doc_id": "DOC-A10C894B4C38",
+   "numero_texte": "AUPCAP-2015",
+   "lecture_principale": "TESSERACT_LOCAL_BEST:300 dpi",
+   "etalons": "CALQUE_EDITEUR:police d'OCR invisible+OFFICIEL:ohada_jo_aupc_2015_explnum_16",
+   "copies_ecartees": [
+    "OFFICIEL:ohada_jo_aupc_2015_explnum_17",
+    "OFFICIEL:ohada_jo_aupc_2015_explnum_18"
+   ],
+   "articles_indexes": 249,
+   "couverture": 0.9651,
+   "accord_moyen": 0.9955,
+   "articles_ecartes": [
+    {
+     "numero": "15",
+     "similarite": null
+    },
+    {
+     "numero": "31",
+     "similarite": null
+    },
+    {
+     "numero": "64",
+     "similarite": null
+    },
+    {
+     "numero": "155",
+     "similarite": null
+    },
+    {
+     "numero": "163",
+     "similarite": null
+    },
+    {
+     "numero": "214",
+     "similarite": null
+    }
+   ],
+   "nombres_divergents_ecartes": [
+    "15",
+    "31",
+    "155"
+   ],
+   "illisibles_ecartes": [],
+   "nombres_contestes_a_verifier": {
+    "13": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "0 1",
+        "01"
+       ]
+      ]
+     }
+    ],
+    "19": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "26": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "5 11",
+        "11"
+       ]
+      ]
+     }
+    ],
+    "30": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "0 1",
+        "01"
+       ]
+      ]
+     }
+    ],
+    "43": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "0 1",
+        "01"
+       ]
+      ]
+     }
+    ],
+    "48": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "63": [
+     {
+      "lecture": "OFFICIEL:ohada_jo_aupc_2015_explnum_16",
+      "ecarts": [
+       [
+        "1 45",
+        "4"
+       ]
+      ]
+     }
+    ],
+    "77": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ],
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "94": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "95": [
+     {
+      "lecture": "OFFICIEL:ohada_jo_aupc_2015_explnum_16",
+      "ecarts": [
+       [
+        "57",
+        "1"
+       ]
+      ]
+     }
+    ],
+    "96": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "10",
+        "1 0"
+       ]
+      ]
+     }
+    ],
+    "109": [
+     {
+      "lecture": "OFFICIEL:ohada_jo_aupc_2015_explnum_16",
+      "ecarts": [
+       [
+        "2 4",
+        "2"
+       ]
+      ]
+     }
+    ],
+    "113": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "115": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "0 1",
+        "01"
+       ]
+      ]
+     }
+    ],
+    "125": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "131": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "140": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "150": [
+     {
+      "lecture": "OFFICIEL:ohada_jo_aupc_2015_explnum_16",
+      "ecarts": [
+       [
+        "82",
+        "1 82"
+       ]
+      ]
+     }
+    ],
+    "157": [
+     {
+      "lecture": "OFFICIEL:ohada_jo_aupc_2015_explnum_16",
+      "ecarts": [
+       [
+        "10",
+        "1 0"
+       ]
+      ]
+     }
+    ],
+    "186": [
+     {
+      "lecture": "OFFICIEL:ohada_jo_aupc_2015_explnum_16",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "200": [
+     {
+      "lecture": "TESSERACT_LOCAL_BEST:300 dpi",
+      "ecarts": [
+       [
+        "1 0",
+        "10"
+       ]
+      ]
+     }
+    ],
+    "203": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "10",
+        "1 0"
+       ]
+      ]
+     }
+    ],
+    "210": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ],
+    "213": [
+     {
+      "lecture": "CALQUE_EDITEUR:police d'OCR invisible",
+      "ecarts": [
+       [
+        "01",
+        "0 1"
+       ]
+      ]
+     }
+    ]
+   },
+   "lecture_par_article": {
+    "1": "TESSERACT_LOCAL_BEST:300 dpi",
+    "2": "TESSERACT_LOCAL_BEST:300 dpi",
+    "3": "TESSERACT_LOCAL_BEST:300 dpi",
+    "4": "CALQUE_EDITEUR:police d'OCR invisible",
+    "5": "TESSERACT_LOCAL_BEST:300 dpi",
+    "6": "CALQUE_EDITEUR:police d'OCR invisible",
+    "7": "CALQUE_EDITEUR:police d'OCR invisible",
+    "8": "TESSERACT_LOCAL_BEST:300 dpi",
+    "9": "TESSERACT_LOCAL_BEST:300 dpi",
+    "10": "TESSERACT_LOCAL_BEST:300 dpi",
+    "11": "CALQUE_EDITEUR:police d'OCR invisible",
+    "12": "TESSERACT_LOCAL_BEST:300 dpi",
+    "13": "CALQUE_EDITEUR:police d'OCR invisible",
+    "14": "TESSERACT_LOCAL_BEST:300 dpi",
+    "16": "CALQUE_EDITEUR:police d'OCR invisible",
+    "17": "CALQUE_EDITEUR:police d'OCR invisible",
+    "18": "TESSERACT_LOCAL_BEST:300 dpi",
+    "19": "TESSERACT_LOCAL_BEST:300 dpi",
+    "20": "CALQUE_EDITEUR:police d'OCR invisible",
+    "21": "TESSERACT_LOCAL_BEST:300 dpi",
+    "22": "CALQUE_EDITEUR:police d'OCR invisible",
+    "23": "CALQUE_EDITEUR:police d'OCR invisible",
+    "24": "TESSERACT_LOCAL_BEST:300 dpi",
+    "25": "TESSERACT_LOCAL_BEST:300 dpi",
+    "26": "CALQUE_EDITEUR:police d'OCR invisible",
+    "27": "CALQUE_EDITEUR:police d'OCR invisible",
+    "28": "TESSERACT_LOCAL_BEST:300 dpi",
+    "29": "CALQUE_EDITEUR:police d'OCR invisible",
+    "30": "CALQUE_EDITEUR:police d'OCR invisible",
+    "32": "CALQUE_EDITEUR:police d'OCR invisible",
+    "33": "CALQUE_EDITEUR:police d'OCR invisible",
+    "34": "TESSERACT_LOCAL_BEST:300 dpi",
+    "35": "TESSERACT_LOCAL_BEST:300 dpi",
+    "36": "TESSERACT_LOCAL_BEST:300 dpi",
+    "37": "TESSERACT_LOCAL_BEST:300 dpi",
+    "38": "TESSERACT_LOCAL_BEST:300 dpi",
+    "39": "TESSERACT_LOCAL_BEST:300 dpi",
+    "40": "CALQUE_EDITEUR:police d'OCR invisible",
+    "41": "TESSERACT_LOCAL_BEST:300 dpi",
+    "42": "CALQUE_EDITEUR:police d'OCR invisible",
+    "43": "CALQUE_EDITEUR:police d'OCR invisible",
+    "44": "TESSERACT_LOCAL_BEST:300 dpi",
+    "45": "TESSERACT_LOCAL_BEST:300 dpi",
+    "46": "TESSERACT_LOCAL_BEST:300 dpi",
+    "47": "TESSERACT_LOCAL_BEST:300 dpi",
+    "48": "TESSERACT_LOCAL_BEST:300 dpi",
+    "49": "TESSERACT_LOCAL_BEST:300 dpi",
+    "50": "CALQUE_EDITEUR:police d'OCR invisible",
+    "51": "TESSERACT_LOCAL_BEST:300 dpi",
+    "52": "TESSERACT_LOCAL_BEST:300 dpi",
+    "53": "CALQUE_EDITEUR:police d'OCR invisible",
+    "54": "TESSERACT_LOCAL_BEST:300 dpi",
+    "55": "TESSERACT_LOCAL_BEST:300 dpi",
+    "56": "CALQUE_EDITEUR:police d'OCR invisible",
+    "57": "CALQUE_EDITEUR:police d'OCR invisible",
+    "58": "TESSERACT_LOCAL_BEST:300 dpi",
+    "59": "TESSERACT_LOCAL_BEST:300 dpi",
+    "60": "CALQUE_EDITEUR:police d'OCR invisible",
+    "61": "CALQUE_EDITEUR:police d'OCR invisible",
+    "62": "TESSERACT_LOCAL_BEST:300 dpi",
+    "63": "CALQUE_EDITEUR:police d'OCR invisible",
+    "65": "TESSERACT_LOCAL_BEST:300 dpi",
+    "66": "TESSERACT_LOCAL_BEST:300 dpi",
+    "67": "TESSERACT_LOCAL_BEST:300 dpi",
+    "68": "CALQUE_EDITEUR:police d'OCR invisible",
+    "69": "TESSERACT_LOCAL_BEST:300 dpi",
+    "70": "TESSERACT_LOCAL_BEST:300 dpi",
+    "71": "TESSERACT_LOCAL_BEST:300 dpi",
+    "72": "TESSERACT_LOCAL_BEST:300 dpi",
+    "73": "TESSERACT_LOCAL_BEST:300 dpi",
+    "74": "CALQUE_EDITEUR:police d'OCR invisible",
+    "75": "TESSERACT_LOCAL_BEST:300 dpi",
+    "76": "TESSERACT_LOCAL_BEST:300 dpi",
+    "77": "TESSERACT_LOCAL_BEST:300 dpi",
+    "78": "TESSERACT_LOCAL_BEST:300 dpi",
+    "79": "TESSERACT_LOCAL_BEST:300 dpi",
+    "80": "TESSERACT_LOCAL_BEST:300 dpi",
+    "81": "TESSERACT_LOCAL_BEST:300 dpi",
+    "82": "CALQUE_EDITEUR:police d'OCR invisible",
+    "83": "CALQUE_EDITEUR:police d'OCR invisible",
+    "84": "TESSERACT_LOCAL_BEST:300 dpi",
+    "85": "TESSERACT_LOCAL_BEST:300 dpi",
+    "86": "TESSERACT_LOCAL_BEST:300 dpi",
+    "87": "TESSERACT_LOCAL_BEST:300 dpi",
+    "88": "TESSERACT_LOCAL_BEST:300 dpi",
+    "89": "TESSERACT_LOCAL_BEST:300 dpi",
+    "90": "CALQUE_EDITEUR:police d'OCR invisible",
+    "91": "TESSERACT_LOCAL_BEST:300 dpi",
+    "92": "TESSERACT_LOCAL_BEST:300 dpi",
+    "93": "TESSERACT_LOCAL_BEST:300 dpi",
+    "94": "TESSERACT_LOCAL_BEST:300 dpi",
+    "95": "TESSERACT_LOCAL_BEST:300 dpi",
+    "96": "TESSERACT_LOCAL_BEST:300 dpi",
+    "97": "TESSERACT_LOCAL_BEST:300 dpi",
+    "98": "TESSERACT_LOCAL_BEST:300 dpi",
+    "99": "TESSERACT_LOCAL_BEST:300 dpi",
+    "100": "TESSERACT_LOCAL_BEST:300 dpi",
+    "101": "TESSERACT_LOCAL_BEST:300 dpi",
+    "102": "TESSERACT_LOCAL_BEST:300 dpi",
+    "103": "TESSERACT_LOCAL_BEST:300 dpi",
+    "104": "TESSERACT_LOCAL_BEST:300 dpi",
+    "105": "TESSERACT_LOCAL_BEST:300 dpi",
+    "106": "TESSERACT_LOCAL_BEST:300 dpi",
+    "107": "TESSERACT_LOCAL_BEST:300 dpi",
+    "108": "TESSERACT_LOCAL_BEST:300 dpi",
+    "109": "TESSERACT_LOCAL_BEST:300 dpi",
+    "110": "CALQUE_EDITEUR:police d'OCR invisible",
+    "111": "CALQUE_EDITEUR:police d'OCR invisible",
+    "112": "TESSERACT_LOCAL_BEST:300 dpi",
+    "113": "TESSERACT_LOCAL_BEST:300 dpi",
+    "114": "TESSERACT_LOCAL_BEST:300 dpi",
+    "115": "CALQUE_EDITEUR:police d'OCR invisible",
+    "116": "TESSERACT_LOCAL_BEST:300 dpi",
+    "117": "TESSERACT_LOCAL_BEST:300 dpi",
+    "118": "TESSERACT_LOCAL_BEST:300 dpi",
+    "119": "CALQUE_EDITEUR:police d'OCR invisible",
+    "120": "TESSERACT_LOCAL_BEST:300 dpi",
+    "121": "TESSERACT_LOCAL_BEST:300 dpi",
+    "122": "CALQUE_EDITEUR:police d'OCR invisible",
+    "123": "TESSERACT_LOCAL_BEST:300 dpi",
+    "124": "TESSERACT_LOCAL_BEST:300 dpi",
+    "125": "TESSERACT_LOCAL_BEST:300 dpi",
+    "126": "TESSERACT_LOCAL_BEST:300 dpi",
+    "127": "TESSERACT_LOCAL_BEST:300 dpi",
+    "128": "CALQUE_EDITEUR:police d'OCR invisible",
+    "129": "TESSERACT_LOCAL_BEST:300 dpi",
+    "130": "TESSERACT_LOCAL_BEST:300 dpi",
+    "131": "TESSERACT_LOCAL_BEST:300 dpi",
+    "132": "TESSERACT_LOCAL_BEST:300 dpi",
+    "133": "CALQUE_EDITEUR:police d'OCR invisible",
+    "134": "TESSERACT_LOCAL_BEST:300 dpi",
+    "135": "TESSERACT_LOCAL_BEST:300 dpi",
+    "136": "TESSERACT_LOCAL_BEST:300 dpi",
+    "137": "TESSERACT_LOCAL_BEST:300 dpi",
+    "138": "TESSERACT_LOCAL_BEST:300 dpi",
+    "139": "TESSERACT_LOCAL_BEST:300 dpi",
+    "140": "TESSERACT_LOCAL_BEST:300 dpi",
+    "141": "CALQUE_EDITEUR:police d'OCR invisible",
+    "142": "TESSERACT_LOCAL_BEST:300 dpi",
+    "143": "CALQUE_EDITEUR:police d'OCR invisible",
+    "144": "CALQUE_EDITEUR:police d'OCR invisible",
+    "145": "CALQUE_EDITEUR:police d'OCR invisible",
+    "146": "TESSERACT_LOCAL_BEST:300 dpi",
+    "147": "CALQUE_EDITEUR:police d'OCR invisible",
+    "148": "TESSERACT_LOCAL_BEST:300 dpi",
+    "149": "TESSERACT_LOCAL_BEST:300 dpi",
+    "150": "TESSERACT_LOCAL_BEST:300 dpi",
+    "151": "TESSERACT_LOCAL_BEST:300 dpi",
+    "153": "TESSERACT_LOCAL_BEST:300 dpi",
+    "154": "CALQUE_EDITEUR:police d'OCR invisible",
+    "156": "CALQUE_EDITEUR:police d'OCR invisible",
+    "157": "TESSERACT_LOCAL_BEST:300 dpi",
+    "158": "TESSERACT_LOCAL_BEST:300 dpi",
+    "159": "CALQUE_EDITEUR:police d'OCR invisible",
+    "160": "TESSERACT_LOCAL_BEST:300 dpi",
+    "161": "TESSERACT_LOCAL_BEST:300 dpi",
+    "162": "CALQUE_EDITEUR:police d'OCR invisible",
+    "164": "TESSERACT_LOCAL_BEST:300 dpi",
+    "165": "TESSERACT_LOCAL_BEST:300 dpi",
+    "166": "CALQUE_EDITEUR:police d'OCR invisible",
+    "167": "CALQUE_EDITEUR:police d'OCR invisible",
+    "168": "TESSERACT_LOCAL_BEST:300 dpi",
+    "169": "TESSERACT_LOCAL_BEST:300 dpi",
+    "170": "TESSERACT_LOCAL_BEST:300 dpi",
+    "171": "TESSERACT_LOCAL_BEST:300 dpi",
+    "172": "TESSERACT_LOCAL_BEST:300 dpi",
+    "173": "TESSERACT_LOCAL_BEST:300 dpi",
+    "174": "CALQUE_EDITEUR:police d'OCR invisible",
+    "175": "TESSERACT_LOCAL_BEST:300 dpi",
+    "176": "TESSERACT_LOCAL_BEST:300 dpi",
+    "177": "TESSERACT_LOCAL_BEST:300 dpi",
+    "178": "TESSERACT_LOCAL_BEST:300 dpi",
+    "179": "CALQUE_EDITEUR:police d'OCR invisible",
+    "180": "TESSERACT_LOCAL_BEST:300 dpi",
+    "181": "TESSERACT_LOCAL_BEST:300 dpi",
+    "182": "TESSERACT_LOCAL_BEST:300 dpi",
+    "183": "CALQUE_EDITEUR:police d'OCR invisible",
+    "184": "TESSERACT_LOCAL_BEST:300 dpi",
+    "185": "TESSERACT_LOCAL_BEST:300 dpi",
+    "186": "TESSERACT_LOCAL_BEST:300 dpi",
+    "187": "CALQUE_EDITEUR:police d'OCR invisible",
+    "188": "TESSERACT_LOCAL_BEST:300 dpi",
+    "189": "CALQUE_EDITEUR:police d'OCR invisible",
+    "190": "TESSERACT_LOCAL_BEST:300 dpi",
+    "191": "TESSERACT_LOCAL_BEST:300 dpi",
+    "192": "TESSERACT_LOCAL_BEST:300 dpi",
+    "193": "TESSERACT_LOCAL_BEST:300 dpi",
+    "194": "TESSERACT_LOCAL_BEST:300 dpi",
+    "195": "TESSERACT_LOCAL_BEST:300 dpi",
+    "196": "CALQUE_EDITEUR:police d'OCR invisible",
+    "197": "TESSERACT_LOCAL_BEST:300 dpi",
+    "198": "CALQUE_EDITEUR:police d'OCR invisible",
+    "199": "TESSERACT_LOCAL_BEST:300 dpi",
+    "200": "CALQUE_EDITEUR:police d'OCR invisible",
+    "201": "CALQUE_EDITEUR:police d'OCR invisible",
+    "202": "TESSERACT_LOCAL_BEST:300 dpi",
+    "203": "TESSERACT_LOCAL_BEST:300 dpi",
+    "204": "TESSERACT_LOCAL_BEST:300 dpi",
+    "205": "CALQUE_EDITEUR:police d'OCR invisible",
+    "206": "TESSERACT_LOCAL_BEST:300 dpi",
+    "207": "TESSERACT_LOCAL_BEST:300 dpi",
+    "208": "CALQUE_EDITEUR:police d'OCR invisible",
+    "209": "TESSERACT_LOCAL_BEST:300 dpi",
+    "210": "TESSERACT_LOCAL_BEST:300 dpi",
+    "211": "TESSERACT_LOCAL_BEST:300 dpi",
+    "212": "TESSERACT_LOCAL_BEST:300 dpi",
+    "213": "TESSERACT_LOCAL_BEST:300 dpi",
+    "215": "TESSERACT_LOCAL_BEST:300 dpi",
+    "216": "CALQUE_EDITEUR:police d'OCR invisible",
+    "217": "TESSERACT_LOCAL_BEST:300 dpi",
+    "218": "TESSERACT_LOCAL_BEST:300 dpi",
+    "219": "TESSERACT_LOCAL_BEST:300 dpi",
+    "220": "TESSERACT_LOCAL_BEST:300 dpi",
+    "221": "TESSERACT_LOCAL_BEST:300 dpi",
+    "222": "TESSERACT_LOCAL_BEST:300 dpi",
+    "223": "TESSERACT_LOCAL_BEST:300 dpi",
+    "224": "TESSERACT_LOCAL_BEST:300 dpi",
+    "225": "TESSERACT_LOCAL_BEST:300 dpi",
+    "226": "TESSERACT_LOCAL_BEST:300 dpi",
+    "227": "CALQUE_EDITEUR:police d'OCR invisible",
+    "228": "TESSERACT_LOCAL_BEST:300 dpi",
+    "229": "CALQUE_EDITEUR:police d'OCR invisible",
+    "230": "CALQUE_EDITEUR:police d'OCR invisible",
+    "231": "CALQUE_EDITEUR:police d'OCR invisible",
+    "232": "TESSERACT_LOCAL_BEST:300 dpi",
+    "233": "CALQUE_EDITEUR:police d'OCR invisible",
+    "234": "TESSERACT_LOCAL_BEST:300 dpi",
+    "235": "TESSERACT_LOCAL_BEST:300 dpi",
+    "236": "TESSERACT_LOCAL_BEST:300 dpi",
+    "237": "CALQUE_EDITEUR:police d'OCR invisible",
+    "238": "TESSERACT_LOCAL_BEST:300 dpi",
+    "239": "TESSERACT_LOCAL_BEST:300 dpi",
+    "240": "TESSERACT_LOCAL_BEST:300 dpi",
+    "241": "TESSERACT_LOCAL_BEST:300 dpi",
+    "242": "TESSERACT_LOCAL_BEST:300 dpi",
+    "244": "CALQUE_EDITEUR:police d'OCR invisible",
+    "245": "TESSERACT_LOCAL_BEST:300 dpi",
+    "247": "CALQUE_EDITEUR:police d'OCR invisible",
+    "248": "TESSERACT_LOCAL_BEST:300 dpi",
+    "249": "CALQUE_EDITEUR:police d'OCR invisible",
+    "250": "TESSERACT_LOCAL_BEST:300 dpi",
+    "251": "TESSERACT_LOCAL_BEST:300 dpi",
+    "252": "CALQUE_EDITEUR:police d'OCR invisible",
+    "253": "CALQUE_EDITEUR:police d'OCR invisible",
+    "254": "TESSERACT_LOCAL_BEST:300 dpi",
+    "255": "TESSERACT_LOCAL_BEST:300 dpi",
+    "256": "TESSERACT_LOCAL_BEST:300 dpi",
+    "257": "CALQUE_EDITEUR:police d'OCR invisible",
+    "258": "CALQUE_EDITEUR:police d'OCR invisible"
+   }
+  },
   "oneci_jo_special_2019_572_573_575": {
    "date": "2026-10-20",
    "ref_id": "REF-3834FEF05920",
