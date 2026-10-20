@@ -290,6 +290,7 @@ def controler_document(source, resultat):
         "motifs_quarantaine": motifs,
         "avertissements": avertissements,
         "notes": source.get("notes"),
+        "version_abrogee": source.get("version_abrogee"),
     }
 
 
@@ -713,7 +714,7 @@ def preparer_ocr(d, inventaire, manifeste):
             "provenance": provenance}
 
 
-def officialiser_ocr(cles=None):
+def officialiser_ocr(cles=None, lecture_unique=False):
     """Intègre les documents officiels dont le texte vient d'un OCR.
 
     Lecture principale : le calque de l'éditeur (OCR_EDITEUR) ou tesseract.
@@ -737,6 +738,9 @@ def officialiser_ocr(cles=None):
             continue
         if not d["categorie_source"].startswith("OFFICIEL") or not d["methode_extraction"].startswith("OCR"):
             continue
+        if (manifeste.get(d["cle"]) or {}).get("version_abrogee"):
+            bilan.append((d["cle"], "IGNORE", "version abrogée : " + manifeste[d["cle"]]["version_abrogee"]["constat"]))
+            continue
         motifs_bloquants = [m for m in d["motifs_quarantaine"] if not m.startswith("découpage en articles")]
         if motifs_bloquants or d["integrite_pdf"] != "OK":
             bilan.append((d["cle"], "IGNORE", "; ".join(motifs_bloquants) or d["integrite_pdf"]))
@@ -748,6 +752,11 @@ def officialiser_ocr(cles=None):
         prep = preparer_ocr(d, inventaire, manifeste)
         if prep is None:
             bilan.append((d["cle"], "IGNORE", "aucune lecture OCR exploitable"))
+            continue
+        if not prep["second"] and not lecture_unique:
+            # Une seule lecture : aucun article ne serait confirmé par une autre. Refusé
+            # depuis le 20/10/2026 (seconde lecture : bin/ocr_local.py --modele fast).
+            bilan.append((d["cle"], "IGNORE", "une seule lecture du scan : seconde lecture requise"))
             continue
         articles, confiance, ecartes = prep["articles"], prep["confiance"], prep["ecartes"]
         principal, nom_principal, comparateur = prep["principal"], prep["nom_principal"], prep["comparateur"]
@@ -851,6 +860,9 @@ def mesurer(cles=None):
     mesures = []
     for d in inventaire["documents"]:
         if (cles and d["cle"] not in cles) or not d["methode_extraction"].startswith("OCR"):
+            continue
+        if (manifeste.get(d["cle"]) or {}).get("version_abrogee"):
+            print("%-44s VERSION ABROGÉE — non intégrable" % d["cle"][:44])
             continue
         prep = preparer_ocr(d, inventaire, manifeste)
         if prep is None:

@@ -409,11 +409,42 @@ AJOUTS_3 += [
 ]
 
 
+# ======================================================================
+# Quatrième lot : versions EN VIGUEUR des Actes uniformes
+# ======================================================================
+# Constat du 20/10/2026 (lecture des scans) : les liens « version signée » de
+# ohada.org/en/<acte>/ renvoient aux versions D'ORIGINE, abrogées :
+# AUDCG 1997 (JO n° 1 du 1/10/1997), AUSC 1997, AUPC 1998 (JO du 1/7/1998),
+# AUA 1999. Elles ne sont JAMAIS intégrées (marque `version_abrogee`).
+VERSIONS_ABROGEES = {
+    "ohada_audcg_2010": "Le fichier est l'AUDCG du 17 avril 1997 (JO OHADA n° 1 du 1er octobre 1997), révisé le 15 décembre 2010.",
+    "ohada_auscgie_2014": "Le fichier est l'Acte uniforme sociétés commerciales du 17 avril 1997 (JO du 1er octobre 1997), révisé le 30 janvier 2014.",
+    "ohada_aupcap_2015": "Le fichier est l'Acte uniforme procédures collectives du 10 avril 1998 (JO du 1er juillet 1998), remplacé le 10 septembre 2015.",
+    "ohada_aua_2017": "Le fichier est l'Acte uniforme arbitrage du 11 mars 1999, remplacé le 23 novembre 2017.",
+}
+PMB = "https://biblio.ohada.org/pmb/opac_css/index.php?"
+AJOUTS_4 = [
+    decouverte("dec_biblio_ohada_notice_1860", PMB + "lvl=notice_display&id=1860", r"doc_num\.php|explnum",
+               "Notice du JO OHADA spécial du 25/09/2015 (AUPC révisé), citée par le Secrétariat permanent."),
+    decouverte("dec_biblio_ohada_recherche_jo_2014", PMB + "lvl=more_results&mode=keyword&user_query=journal+officiel+2014",
+               r"notice_display|doc_num\.php", "Recherche du JO de février 2014 (AUSCGIE révisé)."),
+    decouverte("dec_biblio_ohada_recherche_jo_2017", PMB + "lvl=more_results&mode=keyword&user_query=journal+officiel+2017",
+               r"notice_display|doc_num\.php", "Recherche du JO du 15/12/2017 (AUA, médiation)."),
+    decouverte("dec_biblio_ohada_recherche_jo_23", PMB + "lvl=more_results&mode=keyword&user_query=journal+officiel+23",
+               r"notice_display|doc_num\.php", "Recherche du JO n° 23 du 15/02/2011 (AUDCG, AUS, coopératives)."),
+    {"cle": "senegal_auscgie_jo_2014", "titre": "Acte uniforme révisé sociétés commerciales et GIE — JO OHADA de février 2014 (republication du ministère de la Justice du Sénégal)",
+     "numero_texte": "AUSCGIE-2014", "date_texte": "2014-01-30", "type_texte": "acte_uniforme",
+     "autorite": "Ministère de la Justice du Sénégal (État partie OHADA) — republication",
+     "domaines": [6], "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-relatif-droit-societes-commerciales-gie-auscgie-jo-fevrier-2014.pdf",
+     "categorie_source": "SECONDAIRE_AUTRE", "mode": "fichier", "notes": "Étalon de recoupement. " + TROUVE},
+]
+
+
 def main():
     manifeste = json.load(open(MANIFESTE, encoding="utf-8"))
     existantes = {s["cle"]: s for s in manifeste["sources"]}
     ajoutees = 0
-    for entree in AJOUTS + AJOUTS_2 + AJOUTS_3:
+    for entree in AJOUTS + AJOUTS_2 + AJOUTS_3 + AJOUTS_4:
         if entree["cle"] not in existantes:
             entree["ajoutee_le"] = DATE
             manifeste["sources"].append(entree)
@@ -422,6 +453,10 @@ def main():
     for cle, segment in SEGMENTS.items():
         if cle in existantes and existantes[cle].get("segment") != segment:
             existantes[cle]["segment"] = segment
+    for cle, constat in VERSIONS_ABROGEES.items():
+        if cle in existantes:
+            existantes[cle]["version_abrogee"] = {"le": DATE, "constat": constat,
+                                                  "consequence": "jamais intégré au corpus de référence"}
     for cle, ignores in ACTES_OCR_IGNORES.items():
         if cle in existantes:
             existantes[cle]["actes_ocr_ignores"] = ignores

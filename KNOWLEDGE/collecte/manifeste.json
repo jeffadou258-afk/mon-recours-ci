@@ -4021,7 +4021,12 @@
    "categorie_source": "OFFICIEL_ORGANISATION",
    "mode": "fichier",
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "version_abrogee": {
+    "le": "2026-10-20",
+    "constat": "Le fichier est l'AUDCG du 17 avril 1997 (JO OHADA n° 1 du 1er octobre 1997), révisé le 15 décembre 2010.",
+    "consequence": "jamais intégré au corpus de référence"
+   }
   },
   {
    "cle": "ohada_auscgie_2014",
@@ -4037,7 +4042,12 @@
    "categorie_source": "OFFICIEL_ORGANISATION",
    "mode": "fichier",
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "version_abrogee": {
+    "le": "2026-10-20",
+    "constat": "Le fichier est l'Acte uniforme sociétés commerciales du 17 avril 1997 (JO du 1er octobre 1997), révisé le 30 janvier 2014.",
+    "consequence": "jamais intégré au corpus de référence"
+   }
   },
   {
    "cle": "ohada_aupcap_2015",
@@ -4054,7 +4064,12 @@
    "categorie_source": "OFFICIEL_ORGANISATION",
    "mode": "fichier",
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "version_abrogee": {
+    "le": "2026-10-20",
+    "constat": "Le fichier est l'Acte uniforme procédures collectives du 10 avril 1998 (JO du 1er juillet 1998), remplacé le 10 septembre 2015.",
+    "consequence": "jamais intégré au corpus de référence"
+   }
   },
   {
    "cle": "ohada_aua_2017",
@@ -4071,7 +4086,12 @@
    "categorie_source": "OFFICIEL_ORGANISATION",
    "mode": "fichier",
    "notes": "Lien « version signée » de la page ohada.org/en/ de l'Acte (relevé le 20/10/2026).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "version_abrogee": {
+    "le": "2026-10-20",
+    "constat": "Le fichier est l'Acte uniforme arbitrage du 11 mars 1999, remplacé le 23 novembre 2017.",
+    "consequence": "jamais intégré au corpus de référence"
+   }
   },
   {
    "cle": "ohada_aus_2010",
@@ -4189,6 +4209,82 @@
     23
    ],
    "url": "https://justice.gouv.km/wp-content/uploads/2025/03/ohada-acte-uniforme-2015-procedures-collectives.pdf",
+   "categorie_source": "SECONDAIRE_AUTRE",
+   "mode": "fichier",
+   "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "dec_biblio_ohada_notice_1860",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1860",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "doc_num\\.php|explnum",
+   "notes": "Notice du JO OHADA spécial du 25/09/2015 (AUPC révisé), citée par le Secrétariat permanent.",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_2014",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+2014",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "notice_display|doc_num\\.php",
+   "notes": "Recherche du JO de février 2014 (AUSCGIE révisé).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_2017",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+2017",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "notice_display|doc_num\\.php",
+   "notes": "Recherche du JO du 15/12/2017 (AUA, médiation).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "dec_biblio_ohada_recherche_jo_23",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+23",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "notice_display|doc_num\\.php",
+   "notes": "Recherche du JO n° 23 du 15/02/2011 (AUDCG, AUS, coopératives).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "senegal_auscgie_jo_2014",
+   "titre": "Acte uniforme révisé sociétés commerciales et GIE — JO OHADA de février 2014 (republication du ministère de la Justice du Sénégal)",
+   "numero_texte": "AUSCGIE-2014",
+   "date_texte": "2014-01-30",
+   "type_texte": "acte_uniforme",
+   "autorite": "Ministère de la Justice du Sénégal (État partie OHADA) — republication",
+   "domaines": [
+    6
+   ],
+   "url": "https://justice.sec.gouv.sn/wp-content/uploads/textes-reglements/OHADA/Acte-uniforme-relatif-droit-societes-commerciales-gie-auscgie-jo-fevrier-2014.pdf",
    "categorie_source": "SECONDAIRE_AUTRE",
    "mode": "fichier",
    "notes": "Étalon de recoupement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
