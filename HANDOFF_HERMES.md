@@ -81,14 +81,38 @@ leur citation porte l'avertissement de césure OCR (`réu- nies`, `géné- rale`
 n'est validée juridiquement. **Il reste 365 articles AUSCOOP et 249 AUPCAP sans fiche** :
 ces six fiches couvrent des situations courantes, pas le texte entier.
 
-## AUSCGIE 2014 — identifié, toujours NON intégré
-`KNOWLEDGE/collecte/textes/ohada_jo_bulletin_1722_explnum_3974.txt` (602 209 caractères
-natifs, pas un scan) est le **JO OHADA spécial du 4 février 2014** contenant l'**AUSCGIE**
-(sociétés commerciales et GIE) et le règlement n°001/2014/CM. Blocage : l'intégration
-exige le PDF local (`integrer_collecte.py` vérifie `integrite_pdf == "OK"` avant toute
-écriture) et `git fetch` de `corpus/archives-pdf` ne se termine pas sur ce poste
-(archive volumineuse). **Ne pas contourner ce garde-fou** : le texte ne doit pas entrer
-en base sans son PDF vérifié.
+## AUSCGIE 2014 — PDF authentifié, INTÉGRATION REFUSÉE APRÈS CONTRÔLE QUALITÉ
+Séquence réellement exécutée :
+
+1. `git fetch --depth=1 origin corpus/archives-pdf` a **réussi** (la branche fait 76 PDF) ;
+   `pdf/ohada_jo_bulletin_1722_explnum_3974.pdf` y est.
+2. PDF extrait : **sha256 `143aab11d2fe189d…` identique** à l'empreinte enregistrée par
+   la collecte, 6 288 638 octets, PDF 1.4. Identité confirmée.
+3. `integrer_collecte.py controler` → `EXPLOITABLE_OFFICIEL`, `CALQUE_TEXTE`,
+   `integrite_pdf = OK`, 240 pages, aucune quarantaine.
+4. Intégration effectuée : 37 documents, 5 613 articles (+906), intégrité ok.
+5. **Contrôle qualité : REFUSÉ, base restaurée** (sauvegarde
+   `KNOWLEDGE/.sauvegardes/corpus_20261020-132725_avant_auscgie.sqlite3`).
+
+Motif mesuré — le calque texte de ce PDF InDesign 2014 est **systématiquement dégradé** :
+
+| Indice | Valeur |
+|---|---|
+| caractères accentués | **0,21 %** (987 / 469 160) |
+| comparaison 2019-576 (calque sain) | **3,28 %** (3 293 / 100 446) |
+| « Ie » au lieu de « le » | 1 366 |
+| « societe » sans accent | 1 039 |
+| « Btat » au lieu d'« État » | 4 |
+
+**Défaut du moteur mis au jour** : `officialiser` (voie calque) promeut la référence
+`VERIFIE` sur la seule couverture des numéros d'articles (98 % de 1..920), sans mesurer
+la qualité des caractères. Un texte à 0,21 % d'accents a donc été publié `VERIFIE`.
+**À corriger avant tout usage** : un seuil de qualité de caractères doit bloquer la
+promotion `VERIFIE` (et sans doute l'indexation) sur un calque dégradé.
+
+**Prochaine action pour l'AUSCGIE** : passer par `bin/ocr_local.py` (tesseract, double
+lecture concordante) comme pour AUPCAP/AUSCOOP, et non par le calque. Le PDF est
+authentique et disponible ; c'est la lecture qui doit être refaite.
 
 ## Doublon `2019-572` — proposition, aucune suppression
 | | `DOC-A443F2E78D1D` | `DOC-25C3088D557C` |
