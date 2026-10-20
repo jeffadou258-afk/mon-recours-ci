@@ -329,6 +329,9 @@ for n in range(2, 17):
     DESACTIVER_2["dec_civlii_en_legislation_p%d" % n] = None   # la liste ne pagine pas par ?page=N
 DESACTIVER_2["famille_minorite_2019_wm"] = "oneci_jo_special_2019_572_573_575"
 DESACTIVER_2["ohada_aua_2017_attachement"] = "ohada_aua_2017"
+# Run 39418336561 : HTTP 403 (refus du serveur) ; aucune nouvelle tentative.
+DESACTIVER_2["refworld_etat_civil_2018_862"] = None
+DESACTIVER_2["dec_faolex_notice_210897"] = None
 
 
 # Segments des Journaux officiels à plusieurs actes (début = en-tête de l'acte,
@@ -479,11 +482,26 @@ AJOUTS_5 += [
 ]
 
 
+
+# ======================================================================
+# Sixième lot (après le run 39418336561) : numéros du Journal officiel de
+# l'OHADA relevés sur la notice 1881 (collection « Journal Officiel »),
+# pour trouver la publication officielle des Actes uniformes en vigueur
+# dont seule la « version signée » abrogée était disponible.
+# ======================================================================
+AJOUTS_6 = [
+    decouverte("dec_biblio_ohada_bulletin_%d" % n, "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=%d" % n,
+               r"doc_num\.php|explnum", "Numéro du JO OHADA : %s (notice 1881)." % objet)
+    for n, objet in ((1561, "Acte uniforme relatif au droit des sociétés commerciales et du GIE"),
+                     (1696, "Acte uniforme relatif à la médiation et Acte uniforme relatif au droit de l'arbitrage"),
+                     (1722, "Acte uniforme relatif au droit des sociétés commerciales et du GIE, règlement de procédure de la CCJA"))]
+
+
 def main():
     manifeste = json.load(open(MANIFESTE, encoding="utf-8"))
     existantes = {s["cle"]: s for s in manifeste["sources"]}
     ajoutees = 0
-    for entree in AJOUTS + AJOUTS_2 + AJOUTS_3 + AJOUTS_4 + AJOUTS_5:
+    for entree in AJOUTS + AJOUTS_2 + AJOUTS_3 + AJOUTS_4 + AJOUTS_5 + AJOUTS_6:
         if entree["cle"] not in existantes:
             entree["ajoutee_le"] = DATE
             manifeste["sources"].append(entree)

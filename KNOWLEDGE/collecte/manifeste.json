@@ -4453,7 +4453,13 @@
    "categorie_source": "SECONDAIRE_BASE_INTERNATIONALE",
    "mode": "fichier",
    "notes": "Pour la page 2 illisible des deux exemplaires officiels (art. 5 à 20) : étalon seulement. URL relevée par recherche web le 2026-10-20 (résultat de moteur de recherche, puis page vérifiée).",
-   "ajoutee_le": "2026-10-20"
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 403,
+    "motif": "HTTP 403 : refus d'accès du serveur ; aucune tentative de contournement.",
+    "remplacee_par": null
+   }
   },
   {
    "cle": "dec_faolex_notice_210897",
@@ -4468,6 +4474,57 @@
    "mode": "decouverte",
    "filtre_liens": "\\.pdf|faolex",
    "notes": "Notice FAOLEX du fac-similé du Code du travail (provenance).",
+   "ajoutee_le": "2026-10-20",
+   "desactivee": {
+    "le": "2026-10-20",
+    "http": 403,
+    "motif": "HTTP 403 : refus d'accès du serveur ; aucune tentative de contournement.",
+    "remplacee_par": null
+   }
+  },
+  {
+   "cle": "dec_biblio_ohada_bulletin_1561",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1561",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "doc_num\\.php|explnum",
+   "notes": "Numéro du JO OHADA : Acte uniforme relatif au droit des sociétés commerciales et du GIE (notice 1881).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "dec_biblio_ohada_bulletin_1696",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1696",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "doc_num\\.php|explnum",
+   "notes": "Numéro du JO OHADA : Acte uniforme relatif à la médiation et Acte uniforme relatif au droit de l'arbitrage (notice 1881).",
+   "ajoutee_le": "2026-10-20"
+  },
+  {
+   "cle": "dec_biblio_ohada_bulletin_1722",
+   "titre": "Page de découverte",
+   "numero_texte": null,
+   "date_texte": null,
+   "type_texte": "page",
+   "autorite": null,
+   "domaines": [],
+   "url": "https://biblio.ohada.org/index.php?lvl=bulletin_display&id=1722",
+   "categorie_source": "DECOUVERTE",
+   "mode": "decouverte",
+   "filtre_liens": "doc_num\\.php|explnum",
+   "notes": "Numéro du JO OHADA : Acte uniforme relatif au droit des sociétés commerciales et du GIE, règlement de procédure de la CCJA (notice 1881).",
    "ajoutee_le": "2026-10-20"
   }
  ]

@@ -1,6 +1,6 @@
 {
  "objet": "Inventaire des ressources collectées — produit par bin/integrer_collecte.py à partir des constats réels (resultats/*.json). Aucun chiffre saisi à la main.",
- "genere_le": "2026-10-20T11:57:40+00:00",
+ "genere_le": "2026-10-20T12:02:26+00:00",
  "outils_collecte": {
   "pdftotext": "pdftotext version 24.02.0",
   "tesseract": "tesseract 5.3.4",
@@ -19,13 +19,13 @@
  },
  "totaux": {
   "entrees_manifeste": 251,
-  "documents_telecharges": 71,
-  "pages_de_decouverte_lues": 87,
+  "documents_telecharges": 75,
+  "pages_de_decouverte_lues": 88,
   "echecs": 0,
-  "non_encore_collectes": 7,
-  "entrees_desactivees": 86,
+  "non_encore_collectes": 0,
+  "entrees_desactivees": 88,
   "par_statut_controle": {
-   "EXPLOITABLE_OFFICIEL": 17,
+   "EXPLOITABLE_OFFICIEL": 21,
    "EXPLOITABLE_RECOUPEMENT_SEULEMENT": 12,
    "QUARANTAINE": 38,
    "VERSION_ABROGEE": 4
@@ -33,7 +33,7 @@
   "par_categorie": {
    "CANDIDAT_OFFICIEL": 12,
    "OFFICIEL_INSTITUTION": 4,
-   "OFFICIEL_ORGANISATION": 9,
+   "OFFICIEL_ORGANISATION": 13,
    "OFFICIEL_PORTAIL_GOUV": 24,
    "SECONDAIRE_AUTRE": 6,
    "SECONDAIRE_BASE_INTERNATIONALE": 3,
@@ -42,11 +42,11 @@
   },
   "par_methode_extraction": {
    "CALQUE_TEXTE": 28,
-   "OCR_EDITEUR": 13,
+   "OCR_EDITEUR": 17,
    "OCR_TESSERACT": 27,
    "OCR_TESSERACT_PARTIEL": 3
   },
-  "pdf_rapatries_et_verifies": 70
+  "pdf_rapatries_et_verifies": 75
  },
  "documents": [
   {
@@ -2648,6 +2648,176 @@
    "doublon_de": []
   },
   {
+   "cle": "ohada_jo_aupc_2015_explnum_16",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier 16 de la notice 1860",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=16",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=16",
+   "date_recuperation": "2026-10-20T11:55:08+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 37885837,
+   "sha256": "sha256:4b8b671ef0a75abbee1112ef159468d2478dd5da7f89871bcbbc43de8a8994d4",
+   "pages": 128,
+   "polices": 363,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : Paper Capture",
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2319,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 249,
+   "article_max": 258,
+   "couverture_articles": 0.9651,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture.",
+   "version_abrogee": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_17",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier 17 de la notice 1860",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=17",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=17",
+   "date_recuperation": "2026-10-20T11:55:33+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 20786130,
+   "sha256": "sha256:2faf254b73c1c3a65070a113e999ec042f9b94ae411f831e1a60776f3fb9cc67",
+   "pages": 128,
+   "polices": 450,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "producteur : Paper Capture",
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2325,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 252,
+   "article_max": 258,
+   "couverture_articles": 0.9767,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture.",
+   "version_abrogee": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_18",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier 18 de la notice 1860",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=18",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=18",
+   "date_recuperation": "2026-10-20T11:55:42+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 20905629,
+   "sha256": "sha256:468211ac9105234d7b87b6149c670e80ef5a0c77664ec115368718f8894e1662",
+   "pages": 131,
+   "polices": 456,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2363,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 252,
+   "article_max": 258,
+   "couverture_articles": 0.9767,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture.",
+   "version_abrogee": null,
+   "doublon_de": []
+  },
+  {
+   "cle": "ohada_jo_aupc_2015_explnum_19",
+   "titre": "Journal officiel de l'OHADA, numéro spécial du 25/09/2015 (AUPC révisé) — fichier 19 de la notice 1860",
+   "numero_texte": "AUPCAP-2015",
+   "date_texte": "2015-09-10",
+   "type_texte": "acte_uniforme",
+   "autorite": "OHADA — bibliothèque numérique (notice 1860, citée par le Secrétariat permanent)",
+   "domaines": [
+    6,
+    23
+   ],
+   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=19",
+   "url_finale": "https://biblio.ohada.org/doc_num.php?explnum_id=19",
+   "date_recuperation": "2026-10-20T11:55:52+00:00",
+   "categorie_source": "OFFICIEL_ORGANISATION",
+   "authenticite": "source officielle déclarée — non authentifiée, vigueur non vérifiée",
+   "format": "PDF 1.6",
+   "octets": 20807458,
+   "sha256": "sha256:feaec7fbd33a08f5bf6f6c609873a6f057eb023d80d125feac7ee9fd7aff6dfe",
+   "pages": 132,
+   "polices": 455,
+   "integrite_pdf": "OK",
+   "methode_extraction": "OCR_EDITEUR",
+   "indices_ocr_editeur": [
+    "police d'OCR invisible"
+   ],
+   "seconde_lecture_tesseract": false,
+   "en_tetes_ocr_corriges": 0,
+   "densite_native_car_par_page": 2336,
+   "confiance_ocr_moyenne": null,
+   "articles_detectes": 252,
+   "article_max": 258,
+   "couverture_articles": 0.9767,
+   "numero_present_dans_le_texte": null,
+   "marques_tierces": [],
+   "statut_controle": "EXPLOITABLE_OFFICIEL",
+   "motifs_quarantaine": [],
+   "avertissements": [],
+   "notes": "Fichier relevé sur la notice 1860 au run 39414429864 ; identité à contrôler à la lecture.",
+   "version_abrogee": null,
+   "doublon_de": []
+  },
+  {
    "cle": "ohada_jo_special_aupsrve_2023",
    "titre": "Journal officiel de l'OHADA, numéro spécial du 15 novembre 2023 — Acte uniforme du 17 octobre 2023 portant organisation des procédures simplifiées de recouvrement et des voies d'exécution",
    "numero_texte": "AUPSRVE-2023",
@@ -2893,7 +3063,7 @@
    "sha256": "sha256:e306e4f872075ae0af33d2beee5ef00b638077d8108dcff9e80ecd416f3c1829",
    "pages": 240,
    "polices": 26,
-   "integrite_pdf": "PDF_NON_RAPATRIE",
+   "integrite_pdf": "OK",
    "methode_extraction": "CALQUE_TEXTE",
    "indices_ocr_editeur": [],
    "seconde_lecture_tesseract": false,
@@ -3658,38 +3828,15 @@
    "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=more_results&mode=keyword&user_query=journal+officiel+23",
    "titre_page": "Résultats d'une recherche par tags Catalogue en ligne",
    "liens": 3
-  }
- ],
- "non_encore_collectes": [
-  {
-   "cle": "ohada_jo_aupc_2015_explnum_16",
-   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=16"
-  },
-  {
-   "cle": "ohada_jo_aupc_2015_explnum_17",
-   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=17"
-  },
-  {
-   "cle": "ohada_jo_aupc_2015_explnum_18",
-   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=18"
-  },
-  {
-   "cle": "ohada_jo_aupc_2015_explnum_19",
-   "url": "https://biblio.ohada.org/doc_num.php?explnum_id=19"
   },
   {
    "cle": "dec_biblio_ohada_notice_1881",
-   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1881"
-  },
-  {
-   "cle": "refworld_etat_civil_2018_862",
-   "url": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2018-12/5ce3ed834.pdf"
-  },
-  {
-   "cle": "dec_faolex_notice_210897",
-   "url": "https://www.fao.org/faolex/results/details/fr/c/LEX-FAOC210897/"
+   "url": "https://biblio.ohada.org/pmb/opac_css/index.php?lvl=notice_display&id=1881",
+   "titre_page": "Journal Officiel de l'OHADA Catalogue en ligne",
+   "liens": 12
   }
  ],
+ "non_encore_collectes": [],
  "desactivees": [
   {
    "cle": "code_penal_2019_574_mffe",
@@ -4463,6 +4610,24 @@
    "http": 404,
    "motif": "HTTP 404 définitif (2026-10-20) : URL incorrecte ou document retiré ; non temporaire.",
    "remplacee_par": "ohada_aua_2017",
+   "tentatives": 1
+  },
+  {
+   "cle": "refworld_etat_civil_2018_862",
+   "url": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2018-12/5ce3ed834.pdf",
+   "le": "2026-10-20",
+   "http": 403,
+   "motif": "HTTP 403 : refus d'accès du serveur ; aucune tentative de contournement.",
+   "remplacee_par": null,
+   "tentatives": 1
+  },
+  {
+   "cle": "dec_faolex_notice_210897",
+   "url": "https://www.fao.org/faolex/results/details/fr/c/LEX-FAOC210897/",
+   "le": "2026-10-20",
+   "http": 403,
+   "motif": "HTTP 403 : refus d'accès du serveur ; aucune tentative de contournement.",
+   "remplacee_par": null,
    "tentatives": 1
   }
  ]
