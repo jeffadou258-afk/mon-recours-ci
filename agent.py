@@ -285,7 +285,19 @@ class MonRecoursCI(object):
             for ref in base.rechercher(domaine, self.chemin_db):
                 if ref["ref_id"] not in {r["ref_id"] for r in resultats}:
                     resultats.append(ref)
-        return resultats[:20]
+        return [self._candidat_leger(r) for r in resultats[:20]]
+
+    @staticmethod
+    def _candidat_leger(reference):
+        """Référence conservée dans l'état du dossier — sans le texte de l'article.
+
+        `extrait_texte` peut dépasser 300 Ko par référence : c'est le texte complet
+        de l'acte, utile au calcul, inutile à la trace. Il était pourtant recopié
+        dans `DOSSIER_EN_COURS.json`, soit ~2,5 Mo par consultation, sans qu'aucune
+        partie du code ne le relise. Ce qui reste permet de savoir quelles
+        références ont été examinées, et dans quel état de vérification.
+        """
+        return {cle: valeur for cle, valeur in reference.items() if cle != "extrait_texte"}
 
     def _chemin_en_cours(self, dossier_id):
         return dossier_utilisateur(dossier_id) / "DOSSIER_EN_COURS.json"
