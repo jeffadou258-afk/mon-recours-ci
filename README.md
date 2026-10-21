@@ -55,16 +55,19 @@ bash scripts/demarrer-local.sh --tests    # contrôles complets avant démarrage
 État du produit, matrice de conformité et limites : `RAPPORT_PRODUIT.md`.
 Spécification reconstituée : `SPEC_RECONSTITUEE.md`.
 
-Runtime : **Python 3.9+ et la bibliothèque standard** (`sqlite3`, `urllib`,
-`ssl`, `json`, `unittest`). Aucune dépendance obligatoire pour faire tourner
-l'agent.
+Runtime du moteur : **Python 3.9+ et la bibliothèque standard** (`sqlite3`,
+`urllib`, `ssl`, `json`, `unittest`) — conversation, recherche, service HTTP,
+base de données.
+
+Export PDF des courriers : **`fpdf2` requis** (`requirements.txt`, version
+figée). L'import est local (`core/documents.py`), donc le moteur démarre sans ;
+mais sans `fpdf2` il n'y a **aucun PDF** : le résultat porte `pdf.ok = false`
+avec sa raison, et l'interface n'affiche pas de lien de téléchargement. La CI
+installe la dépendance et exerce l'export pour de vrai.
 
 Collecte uniquement : `pypdf`, installé dans un venv dédié (`.venv-corpus/`).
 Le runtime n'en a pas besoin, puisque les textes extraits sont conservés en
 clair à côté des PDF.
-
-Optionnel : `fpdf2` pour l'export PDF des brouillons. Sans lui, l'échec PDF est
-**déclaré** dans le résultat, jamais masqué.
 
 ```bash
 cd /Users/mac/mon_recours_ci

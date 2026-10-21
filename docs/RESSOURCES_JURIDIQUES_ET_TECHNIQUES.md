@@ -200,6 +200,10 @@ Une divergence est soit une erreur de lecture, soit une **modification du texte*
 | tesseract | tesseract 5.3.4 | runner GitHub Actions (paquets Ubuntu) |
 | Langues tesseract | eng, fra, osd | runner |
 | Python (bibliothèque standard), sqlite3, difflib | — | runner et poste de travail |
+| fpdf2 2.8.4 (`requirements.txt`) | export PDF des courriers | runner et poste de travail |
 
-Aucune dépendance Python ajoutée au projet. Aucune clé, aucun service payant, aucun fournisseur d'IA.
+Le moteur (conversation, recherche, service) n'utilise que la bibliothèque
+standard. L'export PDF des courriers ajoute **une** dépendance déclarée, `fpdf2`,
+installée par la CI avant les tests. `pypdf` reste réservé au venv de collecte.
+Aucune clé, aucun service payant, aucun fournisseur d'IA.
 

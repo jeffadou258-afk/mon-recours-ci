@@ -22,9 +22,11 @@ Aucune application n'est « déjà construite » : tout ce qui suit est une
 ## 2. Ce qu'il faut installer
 
 ```bash
-# Runtime de l'agent : Python 3.9+ et la bibliothèque standard. RIEN d'autre.
+# Runtime de l'agent : Python 3.9+ et la bibliothèque standard, plus fpdf2 pour
+# l'export PDF (requirements.txt). Rien d'autre.
 cd /Users/mac/mon_recours_ci
-python3 tests/run_all.py                  # 515 tests (514 OK, 1 ignoré), doit finir par exit 0
+python3 -m pip install -r requirements.txt   # fpdf2 — sans lui, pas de PDF
+python3 tests/run_all.py                  # 553 tests (552 OK, 1 ignoré), doit finir par exit 0
 python3 bin/verifier_sources.py           # requêtes HTTP réelles sur les sources
 
 # Collecte uniquement (n'affecte pas le runtime)
@@ -39,7 +41,7 @@ python3 bin/ocr_collecter.py              # OCR macOS : swiftc + macOS 13+
 | stdlib Python (`sqlite3`, `urllib`, `json`, `difflib`, `unittest`) | l'agent entier | — |
 | `pypdf` (venv séparé) | extraction du texte des PDF | les textes extraits sont conservés à côté des PDF, donc le runtime fonctionne sans |
 | `swiftc` + macOS Vision/PDFKit | lecture des scans | `bin/ocr_collecter.py` se déclare indisponible, il ne fait pas semblant |
-| `fpdf2` (optionnel) | export PDF des brouillons | l'échec PDF est **déclaré** dans le résultat, jamais masqué |
+| `fpdf2==2.8.4` (`requirements.txt`) | export PDF des courriers | pas de PDF : `pdf.ok = false` avec sa raison, aucun lien de téléchargement |
 
 **Variables de configuration attendues** : aucune clé d'API, aucun secret. Le
 projet n'appelle aucun service payant. `config.CHEMIN_DB` et

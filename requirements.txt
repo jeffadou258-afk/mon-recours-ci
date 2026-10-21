@@ -1,0 +1,15 @@
+# Dépendances Python du moteur — à installer avant de lancer les tests.
+#
+# Une seule dépendance : l'export PDF des courriers (core/documents.py). Elle est
+# importée localement (`from fpdf import FPDF`), donc le moteur démarre sans elle ;
+# mais sans elle l'export PDF ÉCHOUE et est signalé comme tel (aucun document ne
+# fait semblant d'être produit). La CI l'installe pour exercer réellement cette
+# fonctionnalité.
+#
+# Ce qui n'est PAS ici, volontairement :
+#   * pypdf — extraction de texte des PDF, réservée au venv de collecte
+#     (`.venv-corpus/`, voir CLAUDE_HANDOFF.md). Le runtime n'en a pas besoin :
+#     les textes extraits sont conservés en clair à côté des PDF.
+#
+# Version figée à celle sur laquelle la suite passe (553 tests, 0 échec).
+fpdf2==2.8.4

@@ -7,7 +7,7 @@
 > et l'historique des refus restent valables ; les compteurs, non.
 
 ## État actuel (à la date de rédaction)
-- Moteur juridique Python (stdlib seule) + interface Next.js (`web/`). Aucun fournisseur IA payant activé (`MONRECOURS_LLM_FOURNISSEUR` non défini = mode déterministe) : le laisser ainsi.
+- Moteur juridique Python (bibliothèque standard + `fpdf2` pour l'export PDF, voir `requirements.txt`) + interface Next.js (`web/`). Aucun fournisseur IA payant activé (`MONRECOURS_LLM_FOURNISSEUR` non défini = mode déterministe) : le laisser ainsi.
 - Base `KNOWLEDGE/corpus_juridique.sqlite3` : integrity_check ok, 0 violation de clé étrangère, 36 documents, 4 707 articles, 33 références (29 PARTIELLEMENT_VERIFIE, 4 VERIFIE). sha256 `3deec08f…c1d707`.
   Reconstruite par `bin/reconstruire_base.py` (8 contrôles OK) ; sauvegarde locale de la précédente non versionnée (`KNOWLEDGE/.sauvegardes/`).
 - Textes intégrés par OCR (journal `KNOWLEDGE/collecte/integrations_ocr.json`) : Code pénal 2019-574 (557 art.), CPP 2018-975 (841), mariage 2019-570 (105), successions 2019-573 (130), minorité 2019-572 (157), AUCOOP 2010 (365), AUPCAP 2015 JO OHADA (249, nouveau).

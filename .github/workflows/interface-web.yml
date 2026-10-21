@@ -7,9 +7,9 @@ name: Interface web — controles
 on:
   push:
     branches: [feature/interface-web, feature/domaine-famille, feature/produit-fonctionnel, audit/24-domaines, corpus/collecte-24-domaines, corpus/collecte-autonome]
-    paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", ".github/workflows/interface-web.yml"]
+    paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", "requirements.txt", ".github/workflows/interface-web.yml"]
   pull_request:
-    paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", ".github/workflows/interface-web.yml"]
+    paths: ["web/**", "core/**", "bin/**", "tests/**", "KNOWLEDGE/**", "agent.py", "config.py", "requirements.txt", ".github/workflows/interface-web.yml"]
   workflow_dispatch:
 
 permissions:
@@ -72,6 +72,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      # L'export PDF des courriers dépend de fpdf2 (core/documents.py). Sans cette
+      # installation, les tests PDF échouent en silence côté application : ils sont
+      # donc exercés ici avec la dépendance réellement présente.
+      - name: Dépendances Python du moteur
+        working-directory: .
+        run: |
+          python -m pip install --disable-pip-version-check --no-input -r requirements.txt
+          python -c "import fpdf; print('::notice title=Dépendances PDF::fpdf2 ' + fpdf.__version__)"
 
       - name: Clés de test éphémères (masquées)
         run: |
