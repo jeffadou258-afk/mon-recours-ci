@@ -64,8 +64,12 @@ export async function construireTableauDeBord(
         valeur: config ? `${config.debitVisiteur} demandes par minute` : "Non disponible",
       },
       { libelle: "Tentatives de connexion", valeur: "5 par minute et par visiteur, 5 par minute et par adresse" },
-      { libelle: "Durée d'une session d'administration", valeur: "8 heures" },
+      { libelle: "Durée d'une session d'administration", valeur: "2 heures" },
       { libelle: "Fichier d'audit", valeur: fichierAudit(env) ? "Configuré" : "Non configuré" },
+      {
+        libelle: "Source des comptes",
+        valeur: env.MONRECOURS_COMPTES_FICHIER?.trim() ? "Fichier protégé (MONRECOURS_COMPTES_FICHIER)" : "Variable MONRECOURS_COMPTES",
+      },
       { libelle: "Comptes configurés", valeur: String(comptes.length) },
     ],
   };

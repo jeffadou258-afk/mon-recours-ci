@@ -22,7 +22,8 @@ export type EvenementAudit =
   | "connexion_limitee"
   | "deconnexion"
   | "acces_administration"
-  | "acces_administration_refuse";
+  | "acces_administration_refuse"
+  | "authentification_fermee";
 
 export interface LigneAudit {
   horodatage: string;

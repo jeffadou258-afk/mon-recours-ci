@@ -59,22 +59,35 @@ export async function hacherMotDePasse(motDePasse: string): Promise<string> {
 }
 
 /**
- * Empreinte factice, calculée une fois : quand l'adresse ne correspond à aucun
- * compte, on vérifie quand même un mot de passe, pour que la durée de la
- * réponse ne révèle pas l'existence du compte.
+ * Empreinte factice : quand l'adresse ne correspond à aucun compte, on vérifie
+ * quand même un mot de passe contre elle, pour que la durée de la réponse ne
+ * révèle pas l'existence du compte.
+ *
+ * Elle est calculée DÈS LE CHARGEMENT du module (et, au démarrage du serveur,
+ * par `src/instrumentation.ts`), jamais pendant une tentative de connexion.
+ * Ses paramètres sont ceux d'une vraie empreinte : la vérification d'un compte
+ * inconnu coûte exactement un calcul scrypt, comme celle d'un compte existant.
  */
-let empreinteFactice: Promise<string> | null = null;
-function obtenirEmpreinteFactice(): Promise<string> {
-  empreinteFactice ??= hacherMotDePasse(randomBytes(24).toString("base64url"));
-  return empreinteFactice;
+const empreinteFactice: Promise<string> = hacherMotDePasse(randomBytes(24).toString("base64url"));
+// Évite un avertissement « rejet non géré » ; l'erreur éventuelle ressort à l'`await`.
+empreinteFactice.catch(() => {});
+
+/** Attend que l'empreinte factice soit prête (appelé au démarrage du serveur). */
+export async function preparerEmpreinteFactice(): Promise<void> {
+  await empreinteFactice;
 }
 
-/** Compare en temps constant. Une empreinte illisible ne valide jamais rien. */
+/**
+ * Compare en temps constant. Une empreinte illisible ne valide jamais rien.
+ * Les deux chemins (compte existant / inconnu) font les mêmes étapes : attente
+ * de l'empreinte factice, une dérivation scrypt, une comparaison.
+ */
 export async function verifierMotDePasse(motDePasse: string, empreinteStockee: string | null): Promise<boolean> {
-  const texte = empreinteStockee ?? (await obtenirEmpreinteFactice());
-  const lue = lireEmpreinte(texte) ?? lireEmpreinte(await obtenirEmpreinteFactice());
+  const factice = await empreinteFactice;
+  const stockee = empreinteStockee === null ? null : lireEmpreinte(empreinteStockee);
+  const lue = stockee ?? lireEmpreinte(factice);
   if (!lue) return false;
   const calculee = await deriver(motDePasse, lue.sel, lue.N, lue.r, lue.p, lue.empreinte.length);
   const egal = calculee.length === lue.empreinte.length && timingSafeEqual(calculee, lue.empreinte);
-  return egal && empreinteStockee !== null && lireEmpreinte(empreinteStockee) !== null;
+  return egal && stockee !== null;
 }

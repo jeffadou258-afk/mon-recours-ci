@@ -153,7 +153,9 @@ test("jeton : altéré, expiré, d'un autre secret ou d'un compte retiré → re
   const jetonFalsifie = `${Buffer.from(JSON.stringify(falsifiee)).toString("base64url")}.${signature}`;
   assert.equal(verifierJeton(jetonFalsifie, etat.comptes, SECRET, t0 + 10), null);
 
-  assert.equal(verifierJeton(jeton, etat.comptes, SECRET, t0 + 8 * 3600 + 1), null, "expiré");
+  assert.equal(verifierJeton(jeton, etat.comptes, SECRET, t0 + 2 * 3600 - 1)?.email, "lecteur@exemple.ci", "encore valide juste avant 2 h");
+  assert.equal(verifierJeton(jeton, etat.comptes, SECRET, t0 + 2 * 3600), null, "expiré à 2 h pile");
+  assert.equal(verifierJeton(jeton, etat.comptes, SECRET, t0 + 8 * 3600), null, "expiré");
   assert.equal(verifierJeton(jeton, etat.comptes, "x".repeat(40), t0 + 10), null, "autre secret");
   assert.equal(verifierJeton(jeton, [admin], SECRET, t0 + 10), null, "compte retiré");
   const mdpChange: Compte = { ...lecteur, empreinte: await hacherMotDePasse("nouveau mot de passe solide") };
@@ -255,7 +257,7 @@ test("connexion réussie : cookie HttpOnly, SameSite=Strict, Secure en productio
   assert.equal(r.status, 200);
   assert.deepEqual(await r.json(), { ok: true, data: { redirection: "/admin" } });
   const cookie = r.headers.get("set-cookie") ?? "";
-  for (const attendu of ["mrci_admin=", "Path=/", "HttpOnly", "SameSite=Strict", "Secure", "Max-Age=28800"]) {
+  for (const attendu of ["mrci_admin=", "Path=/", "HttpOnly", "SameSite=Strict", "Secure", "Max-Age=7200"]) {
     assert.ok(cookie.includes(attendu), `${attendu} absent de ${cookie}`);
   }
   assert.ok(!cookie.includes(MDP_ADMIN));
@@ -350,4 +352,63 @@ test("tableau de bord : aucune valeur secrète, données absentes dites absentes
   assert.equal(donnees.plateforme.moteur, "injoignable");
   assert.equal(donnees.audit, null);
   assert.equal(donnees.parametres.find((p) => p.libelle === "Clé d'accès au moteur")?.valeur, "Configurée");
+});
+
+// ---------------------------------------------------------------------------
+// F1 — sessions de deux heures
+// ---------------------------------------------------------------------------
+
+test("session : durée de 2 h, expiration vérifiée côté serveur même si le navigateur garde le cookie", async () => {
+  const { DUREE_SESSION_ADMIN_SECONDES } = await import("../../src/lib/server/auth/jeton");
+  assert.equal(DUREE_SESSION_ADMIN_SECONDES, 7200);
+  const { env } = await preparer();
+  const etat = lireEtatAuth(env);
+  if (etat.etat !== "actif") throw new Error("configuration de test invalide");
+  const admin = etat.comptes[0]!;
+  const t0 = 1_800_000_000;
+  const jeton = creerJeton(admin, SECRET, t0);
+  const cookie = `${NOM_COOKIE_ADMIN}=${jeton}`;
+  assert.equal(evaluerAccesAdmin(cookie, env, t0 + 7199).acces, "autorise");
+  assert.equal(evaluerAccesAdmin(cookie, env, t0 + 7200).acces, "anonyme");
+  assert.equal(evaluerAccesAdmin(cookie, env, t0 + 86400).acces, "anonyme");
+  // Un jeton « allongé » (exp repoussé) n'est pas accepté : la signature ne correspond plus.
+  const [charge, signature] = jeton.split(".") as [string, string];
+  const allonge = JSON.parse(Buffer.from(charge, "base64url").toString());
+  allonge.exp = t0 + 30 * 86400;
+  const faux = `${Buffer.from(JSON.stringify(allonge)).toString("base64url")}.${signature}`;
+  assert.equal(evaluerAccesAdmin(`${NOM_COOKIE_ADMIN}=${faux}`, env, t0 + 7300).acces, "anonyme");
+});
+
+// ---------------------------------------------------------------------------
+// F6 — empreinte factice prête dès le démarrage
+// ---------------------------------------------------------------------------
+
+test("empreinte factice : préparée au démarrage, coût comparable compte existant / inconnu", async () => {
+  const { preparerEmpreinteFactice } = await import("../../src/lib/server/auth/motdepasse");
+  await preparerEmpreinteFactice();
+  const { register } = await import("../../src/instrumentation");
+  const avant = process.env.NEXT_RUNTIME;
+  process.env.NEXT_RUNTIME = "nodejs";
+  try {
+    await register();
+  } finally {
+    if (avant === undefined) delete process.env.NEXT_RUNTIME;
+    else process.env.NEXT_RUNTIME = avant;
+  }
+
+  const empreinte = await hacherMotDePasse(MDP_ADMIN);
+  const mesurer = async (stockee: string | null) => {
+    const t = process.hrtime.bigint();
+    await verifierMotDePasse("mot de passe essayé", stockee);
+    return Number(process.hrtime.bigint() - t) / 1e6;
+  };
+  const existant: number[] = [];
+  const inconnu: number[] = [];
+  for (let i = 0; i < 7; i++) {
+    existant.push(await mesurer(empreinte));
+    inconnu.push(await mesurer(null));
+  }
+  const mediane = (v: number[]) => [...v].sort((a, b) => a - b)[Math.floor(v.length / 2)]!;
+  const rapport = mediane(inconnu) / mediane(existant);
+  assert.ok(rapport > 0.5 && rapport < 2, `rapport des durées inconnu/existant = ${rapport.toFixed(2)}`);
 });

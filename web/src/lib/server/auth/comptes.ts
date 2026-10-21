@@ -2,8 +2,19 @@
  * Comptes d'accès à l'administration — définis par la configuration du serveur.
  *
  * Il n'existe aucune base d'utilisateurs dans Mon Recours CI. Les comptes sont
- * donc déclarés dans une variable d'environnement serveur, `MONRECOURS_COMPTES`,
- * qui contient un tableau JSON :
+ * déclarés côté serveur, par UNE seule des deux sources suivantes :
+ *
+ *   - `MONRECOURS_COMPTES_FICHIER` (recommandé) : chemin ABSOLU d'un fichier JSON,
+ *     fichier ordinaire (pas un lien symbolique), propriété de l'utilisateur du
+ *     service, droits 0600 ou 0400, 64 Kio au plus. Relu à chaque requête :
+ *     retirer un compte du fichier ferme ses sessions sans redémarrage ;
+ *   - `MONRECOURS_COMPTES` (compatibilité) : le même tableau JSON, en variable.
+ *
+ * PRIORITÉ : il n'y en a pas. Si les deux sont définies, la configuration est
+ * jugée AMBIGUË et l'administration reste fermée, pour qu'on ne croie jamais
+ * avoir retiré un compte d'une source alors que l'autre l'accorde encore.
+ *
+ * Format (dans les deux cas) :
  *
  *   [{"email":"…","role":"administrateur","motDePasse":"scrypt$16384$8$1$…$…"}]
  *
@@ -18,6 +29,8 @@
  *   - secret de session absent ou trop court.
  */
 
+import { lstatSync, readFileSync } from "node:fs";
+import { isAbsolute } from "node:path";
 import { lireEmpreinte } from "./motdepasse";
 
 export const ROLES = ["administrateur", "lecteur"] as const;
@@ -45,24 +58,48 @@ export function emailValide(email: string): boolean {
   return email.length <= LONGUEUR_MAX_EMAIL && MOTIF_EMAIL.test(email);
 }
 
-export function lireEtatAuth(env: Record<string, string | undefined> = process.env): EtatAuth {
-  if (env.MONRECOURS_MODE === "demo") return { etat: "desactive_demo" };
+/** Taille maximale du fichier de comptes. */
+export const TAILLE_MAX_FICHIER_COMPTES = 64 * 1024;
 
-  const secret = env.MONRECOURS_SESSION_SECRET || "";
-  if (secret.length < 32) {
-    return { etat: "non_configure", raison: "secret de session absent ou trop court" };
+type Lecture = { ok: true; texte: string } | { ok: false; raison: string };
+
+/**
+ * Lit le fichier de comptes en refusant toute situation douteuse. Les messages
+ * d'erreur ne contiennent JAMAIS le contenu du fichier (adresses, empreintes).
+ */
+export function lireFichierComptes(chemin: string): Lecture {
+  if (!isAbsolute(chemin)) return { ok: false, raison: "chemin du fichier de comptes non absolu" };
+  let infos;
+  try {
+    infos = lstatSync(chemin);
+  } catch {
+    return { ok: false, raison: "fichier de comptes introuvable ou inaccessible" };
   }
+  if (infos.isSymbolicLink()) return { ok: false, raison: "le fichier de comptes ne doit pas être un lien symbolique" };
+  if (!infos.isFile()) return { ok: false, raison: "le fichier de comptes n'est pas un fichier ordinaire" };
+  if ((infos.mode & 0o077) !== 0) {
+    return { ok: false, raison: "permissions du fichier de comptes trop larges (attendu : 0600 ou 0400)" };
+  }
+  const uid = typeof process.getuid === "function" ? process.getuid() : null;
+  if (uid !== null && infos.uid !== uid) {
+    return { ok: false, raison: "le fichier de comptes doit appartenir à l'utilisateur du service" };
+  }
+  if (infos.size > TAILLE_MAX_FICHIER_COMPTES) return { ok: false, raison: "fichier de comptes trop volumineux" };
+  try {
+    return { ok: true, texte: readFileSync(chemin, "utf8") };
+  } catch {
+    return { ok: false, raison: "fichier de comptes illisible" };
+  }
+}
 
-  const brut = env.MONRECOURS_COMPTES;
-  if (!brut || !brut.trim()) return { etat: "non_configure", raison: "aucun compte configuré" };
-
+function analyserComptes(brut: string): { ok: true; comptes: Compte[]; ignores: number } | { ok: false; raison: string } {
   let donnees: unknown;
   try {
     donnees = JSON.parse(brut);
   } catch {
-    return { etat: "non_configure", raison: "liste de comptes illisible (JSON invalide)" };
+    return { ok: false, raison: "liste de comptes illisible (JSON invalide)" };
   }
-  if (!Array.isArray(donnees)) return { etat: "non_configure", raison: "la liste de comptes doit être un tableau" };
+  if (!Array.isArray(donnees)) return { ok: false, raison: "la liste de comptes doit être un tableau" };
 
   const comptes: Compte[] = [];
   const vus = new Set<string>();
@@ -89,9 +126,41 @@ export function lireEtatAuth(env: Record<string, string | undefined> = process.e
     vus.add(email);
     comptes.push({ email, role: role as Role, empreinte });
   }
+  return { ok: true, comptes, ignores };
+}
 
-  if (comptes.length === 0) return { etat: "non_configure", raison: "aucun compte valide configuré" };
-  return { etat: "actif", comptes, secret, ignores };
+export function lireEtatAuth(env: Record<string, string | undefined> = process.env): EtatAuth {
+  if (env.MONRECOURS_MODE === "demo") return { etat: "desactive_demo" };
+
+  const secret = env.MONRECOURS_SESSION_SECRET || "";
+  if (secret.length < 32) {
+    return { etat: "non_configure", raison: "secret de session absent ou trop court" };
+  }
+
+  const fichier = env.MONRECOURS_COMPTES_FICHIER?.trim();
+  const variable = env.MONRECOURS_COMPTES?.trim();
+  if (fichier && variable) {
+    return {
+      etat: "non_configure",
+      raison: "configuration ambiguë : MONRECOURS_COMPTES et MONRECOURS_COMPTES_FICHIER sont toutes deux définies",
+    };
+  }
+
+  let brut: string;
+  if (fichier) {
+    const lecture = lireFichierComptes(fichier);
+    if (!lecture.ok) return { etat: "non_configure", raison: lecture.raison };
+    brut = lecture.texte;
+  } else if (variable) {
+    brut = variable;
+  } else {
+    return { etat: "non_configure", raison: "aucun compte configuré" };
+  }
+
+  const analyse = analyserComptes(brut);
+  if (!analyse.ok) return { etat: "non_configure", raison: analyse.raison };
+  if (analyse.comptes.length === 0) return { etat: "non_configure", raison: "aucun compte valide configuré" };
+  return { etat: "actif", comptes: analyse.comptes, secret, ignores: analyse.ignores };
 }
 
 export function trouverCompte(comptes: Compte[], email: string): Compte | null {

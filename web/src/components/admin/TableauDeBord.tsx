@@ -40,6 +40,7 @@ const LIBELLES_EVENEMENTS: Record<string, string> = {
   deconnexion: "Déconnexion",
   acces_administration: "Consultation de l'administration",
   acces_administration_refuse: "Accès à l'administration refusé",
+  authentification_fermee: "Connexion fermée (configuration)",
 };
 
 function Etiquette({ ton, children }: { ton: "ok" | "alerte" | "neutre"; children: React.ReactNode }) {

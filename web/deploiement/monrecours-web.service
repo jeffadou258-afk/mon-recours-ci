@@ -14,6 +14,16 @@ NoNewPrivileges=true
 ProtectSystem=strict
 ReadWritePaths=/opt/mon-recours-ci/web/.next
 PrivateTmp=true
+# Journal d'audit de l'administration : systemd crée /var/lib/monrecours au
+# démarrage, propriété de monrecours:monrecours, droits 0700, et l'ajoute aux
+# chemins inscriptibles malgré ProtectSystem=strict. Le reste du système reste
+# en lecture seule. Fichier visé : MONRECOURS_AUDIT_FICHIER=/var/lib/monrecours/audit.jsonl
+StateDirectory=monrecours
+StateDirectoryMode=0700
+# Fichiers créés par le service (journal d'audit) lisibles par lui seul.
+UMask=0077
+# Le fichier de comptes (/etc/mon-recours-ci/comptes.json, 0600, monrecours)
+# reste lisible en lecture seule sous ProtectSystem=strict : rien à ouvrir.
 
 [Install]
 WantedBy=multi-user.target

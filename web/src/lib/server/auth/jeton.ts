@@ -12,7 +12,8 @@
  *   retirer un compte de la configuration ferme immédiatement ses sessions.
  * - `f` lie la session à l'empreinte du mot de passe : changer le mot de passe
  *   d'un compte invalide toutes ses sessions ouvertes.
- * - Expiration absolue : 8 heures. La déconnexion efface le cookie ; pour
+ * - Expiration absolue : 2 heures, contrôlée côté serveur (`exp` signé) ET par
+ *   l'attribut Max-Age du cookie. La déconnexion efface le cookie ; pour
  *   révoquer toutes les sessions d'un coup, changer MONRECOURS_SESSION_SECRET.
  */
 
@@ -20,7 +21,7 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 import { trouverCompte, type Compte } from "./comptes";
 
 export const NOM_COOKIE_ADMIN = "mrci_admin";
-export const DUREE_SESSION_ADMIN_SECONDES = 8 * 60 * 60;
+export const DUREE_SESSION_ADMIN_SECONDES = 2 * 60 * 60;
 const VERSION = 1;
 const TOLERANCE_HORLOGE_S = 60;
 

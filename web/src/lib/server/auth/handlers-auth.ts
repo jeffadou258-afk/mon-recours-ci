@@ -109,7 +109,12 @@ export async function gererConnexion(requete: Request, dep: DependancesAuth = {}
 
   const etat = lireEtatAuth(env);
   if (etat.etat === "desactive_demo") return echec("AUTH_DESACTIVEE_DEMO");
-  if (etat.etat !== "actif") return echec("AUTH_NON_CONFIGUREE");
+  if (etat.etat !== "actif") {
+    // La raison (phrase fixe, sans contenu de configuration) aide l'exploitant ; le visiteur
+    // ne reçoit qu'un message générique.
+    await audit({ horodatage: maintenant(dep), evenement: "authentification_fermee", detail: etat.raison });
+    return echec("AUTH_NON_CONFIGUREE");
+  }
 
   const lu = await lireCorpsJson(requete);
   if (lu instanceof Response) return echec("ENTREE_INVALIDE");
