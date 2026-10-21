@@ -135,7 +135,7 @@ function journalParDefaut(ligne: Record<string, unknown>): void {
 }
 
 /** Refuse les requêtes envoyées depuis un autre site (protection CSRF). */
-function origineAutorisee(requete: Request): boolean {
+export function origineAutorisee(requete: Request): boolean {
   const site = requete.headers.get("sec-fetch-site");
   if (site && site !== "same-origin" && site !== "none") return false;
   const origine = requete.headers.get("origin");
@@ -148,7 +148,7 @@ function origineAutorisee(requete: Request): boolean {
   }
 }
 
-async function lireCorpsJson(requete: Request): Promise<{ corps: Record<string, unknown> } | Response> {
+export async function lireCorpsJson(requete: Request): Promise<{ corps: Record<string, unknown> } | Response> {
   const type = (requete.headers.get("content-type") ?? "").split(";")[0]?.trim().toLowerCase();
   if (type !== "application/json") return erreur("TYPE_NON_SUPPORTE");
   const longueurAnnoncee = Number(requete.headers.get("content-length") ?? "0");
