@@ -1,23 +1,25 @@
-# Collecte documentaire du corpus juridique — exécutée par GitHub Actions parce que
-# l'espace de travail de développement n'a pas d'accès Internet vers les sites
-# juridiques. Aucun secret, aucun service payant, aucun déploiement.
+# Collecte documentaire du corpus juridique — exécutée MANUELLEMENT par GitHub
+# Actions (onglet Actions → « Corpus — collecte documentaire » → Run workflow).
+#
+# POURQUOI PAS AU PUSH : ce workflow ÉCRIT dans le dépôt distant (PDF sur
+# `corpus/archives-pdf`, constats sur la branche de travail). Déclenché par un
+# push, il ajoutait un commit automatique par-dessus les commits poussés. Il ne
+# se déclenche donc plus que sur demande explicite, et les écritures distantes
+# sont elles-mêmes soumises à l'entrée `publier` (défaut : faux).
 #
 # Ce que fait ce workflow :
 #   1. lit KNOWLEDGE/collecte/manifeste.json ;
 #   2. télécharge chaque document (bin/collecte_distante.py), mesure son empreinte,
 #      extrait le texte, fait l'OCR français des pages scannées ;
-#   3. pousse les CONSTATS (JSON + textes extraits) sur la branche de travail ;
-#   4. pousse les PDF sur la branche d'archive `corpus/archives-pdf` (jamais sur
-#      main) pour que l'intégration locale puisse recalculer leur empreinte.
+#   3. conserve PDF et constats en ARTEFACTS (aucune écriture distante) ;
+#   4. si `publier` est coché : pousse les PDF sur `corpus/archives-pdf` (jamais
+#      sur main) et les constats sur la branche de travail.
 # Il ne modifie ni la base du corpus ni les fiches : l'intégration est locale et
 # passe par les garde-fous du moteur.
 
 name: Corpus — collecte documentaire
 
 on:
-  push:
-    branches: [corpus/collecte-24-domaines, corpus/collecte-autonome]
-    paths: ["KNOWLEDGE/collecte/manifeste.json", "bin/collecte_distante.py", ".github/workflows/collecte-corpus.yml"]
   workflow_dispatch:
     inputs:
       forcer:
@@ -28,9 +30,13 @@ on:
         description: "OCR sur le runner (sinon : OCR local, bin/ocr_local.py)"
         type: boolean
         default: false
+      publier:
+        description: "Publier sur le dépôt : PDF vers corpus/archives-pdf et constats sur la branche courante"
+        type: boolean
+        default: false
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: collecte-corpus
@@ -41,6 +47,11 @@ jobs:
     if: github.ref == 'refs/heads/corpus/collecte-24-domaines' || github.ref == 'refs/heads/corpus/collecte-autonome'
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    # Écriture nécessaire UNIQUEMENT à l'étape « publier » (opt-in). Le jeton du
+    # workflow est en lecture seule par défaut ; cette permission ne couvre pas
+    # `main`, et aucune commande du fichier ne pousse vers `main`.
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -64,7 +75,18 @@ jobs:
           if [ "${{ inputs.forcer }}" = "true" ]; then OPTIONS="--forcer"; fi
           python3 -I bin/collecte_distante.py $OPTIONS
 
+      - name: Conserver les PDF téléchargés (artefact, sans écriture distante)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-collectes
+          path: ${{ runner.temp }}/pdf
+          if-no-files-found: ignore
+          retention-days: 14
+
       - name: Archive des PDF (branche corpus/archives-pdf)
+        # Écriture distante : uniquement si `publier` a été coché à la main.
+        if: inputs.publier
         env:
           PDF: ${{ runner.temp }}/pdf
         run: |
@@ -91,7 +113,21 @@ jobs:
           git -C "$ARCH" commit -q -m "Archive des PDF collectés (run ${{ github.run_id }})"
           git -C "$ARCH" push -q origin corpus/archives-pdf
 
+      - name: Conserver les constats (artefact, sans écriture distante)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: constats-collecte
+          path: |
+            KNOWLEDGE/collecte/resultats
+            KNOWLEDGE/collecte/textes
+            KNOWLEDGE/collecte/derniere_execution.json
+          if-no-files-found: ignore
+          retention-days: 14
+
       - name: Constats (branche de travail)
+        # Écriture distante : uniquement si `publier` a été coché à la main.
+        if: inputs.publier
         # Les constats de CE run font foi pour les entrées qu'il a traitées : ils
         # sont recopiés sur l'état le plus récent de la branche (pas de rebase,
         # qui échoue dès qu'un même fichier de constat a changé des deux côtés).
