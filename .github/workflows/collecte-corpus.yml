@@ -1,21 +1,24 @@
 # Collecte documentaire du corpus juridique — exécutée MANUELLEMENT par GitHub
 # Actions (onglet Actions → « Corpus — collecte documentaire » → Run workflow).
 #
-# POURQUOI PAS AU PUSH : ce workflow ÉCRIT dans le dépôt distant (PDF sur
-# `corpus/archives-pdf`, constats sur la branche de travail). Déclenché par un
-# push, il ajoutait un commit automatique par-dessus les commits poussés. Il ne
-# se déclenche donc plus que sur demande explicite, et les écritures distantes
-# sont elles-mêmes soumises à l'entrée `publier` (défaut : faux).
+# DEUX JOBS, DEUX NIVEAUX DE DROIT.
 #
-# Ce que fait ce workflow :
-#   1. lit KNOWLEDGE/collecte/manifeste.json ;
-#   2. télécharge chaque document (bin/collecte_distante.py), mesure son empreinte,
-#      extrait le texte, fait l'OCR français des pages scannées ;
-#   3. conserve PDF et constats en ARTEFACTS (aucune écriture distante) ;
-#   4. si `publier` est coché : pousse les PDF sur `corpus/archives-pdf` (jamais
-#      sur main) et les constats sur la branche de travail.
-# Il ne modifie ni la base du corpus ni les fiches : l'intégration est locale et
-# passe par les garde-fous du moteur.
+#   collecte     contents: read   — télécharge, extrait, mesure ; dépose les PDF et
+#                                   les constats en artefacts. Aucun push, aucun
+#                                   commit, aucun jeton d'écriture.
+#   publication  contents: write  — ne s'exécute que si `publier` vaut EXPLICITEMENT
+#                                   true ET que la branche est une branche corpus/*
+#                                   autorisée. Récupère les artefacts du job
+#                                   `collecte`, vérifie leur contenu, puis pousse
+#                                   les PDF sur `corpus/archives-pdf` et les
+#                                   constats sur la branche de travail.
+#
+# POURQUOI PAS AU PUSH : ce workflow ÉCRIT dans le dépôt distant. Déclenché par un
+# push, il ajoutait un commit automatique par-dessus les commits poussés. Il ne
+# part donc que sur demande explicite.
+#
+# CE QU'IL NE FAIT PAS : il ne modifie ni la base du corpus ni les fiches, il ne
+# touche jamais `main`, et il ne déploie rien.
 
 name: Corpus — collecte documentaire
 
@@ -31,7 +34,7 @@ on:
         type: boolean
         default: false
       publier:
-        description: "Publier sur le dépôt : PDF vers corpus/archives-pdf et constats sur la branche courante"
+        description: "PUBLIER : PDF vers corpus/archives-pdf et constats sur la branche courante"
         type: boolean
         default: false
 
@@ -43,19 +46,20 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # ---------------------------------------------------------------------------
+  # 1. COLLECTE — lecture seule. Produit des artefacts, n'écrit rien de distant.
+  # ---------------------------------------------------------------------------
   collecte:
     if: github.ref == 'refs/heads/corpus/collecte-24-domaines' || github.ref == 'refs/heads/corpus/collecte-autonome'
     runs-on: ubuntu-latest
     timeout-minutes: 90
-    # Écriture nécessaire UNIQUEMENT à l'étape « publier » (opt-in). Le jeton du
-    # workflow est en lecture seule par défaut ; cette permission ne couvre pas
-    # `main`, et aucune commande du fichier ne pousse vers `main`.
     permissions:
-      contents: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Outils (paquets Ubuntu officiels)
         run: |
@@ -75,24 +79,99 @@ jobs:
           if [ "${{ inputs.forcer }}" = "true" ]; then OPTIONS="--forcer"; fi
           python3 -I bin/collecte_distante.py $OPTIONS
 
-      - name: Conserver les PDF téléchargés (artefact, sans écriture distante)
+      - name: Conserver les PDF téléchargés (artefact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: pdf-collectes
           path: ${{ runner.temp }}/pdf
-          if-no-files-found: ignore
+          if-no-files-found: warn
           retention-days: 14
 
+      - name: Conserver les constats (artefact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: constats-collecte
+          # Racine commune = KNOWLEDGE/collecte : l'artefact contient
+          # `resultats/`, `textes/` et `derniere_execution.json`.
+          # `warn` et non `error` : un run sans constat n'est pas une panne, et
+          # c'est le job `publication` qui refuse un artefact vide ou absent.
+          path: |
+            KNOWLEDGE/collecte/resultats
+            KNOWLEDGE/collecte/textes
+            KNOWLEDGE/collecte/derniere_execution.json
+          if-no-files-found: warn
+          retention-days: 14
+
+  # ---------------------------------------------------------------------------
+  # 2. PUBLICATION — écriture, sur autorisation explicite uniquement.
+  # ---------------------------------------------------------------------------
+  publication:
+    needs: collecte
+    # Deux conditions cumulatives : la demande explicite, et une branche autorisée.
+    if: >-
+      inputs.publier == true &&
+      (github.ref_name == 'corpus/collecte-24-domaines' || github.ref_name == 'corpus/collecte-autonome')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Refuser toute cible hors branches corpus/*
+        env:
+          REF: ${{ github.ref_name }}
+        run: |
+          echo "branche cible : $REF"
+          case "$REF" in
+            corpus/collecte-24-domaines|corpus/collecte-autonome) ;;
+            *) echo "::error::publication refusée depuis la branche « $REF »"; exit 1 ;;
+          esac
+          if [ "$REF" = "main" ]; then echo "::error::publication interdite depuis main"; exit 1; fi
+          if [ -z "$REF" ]; then echo "::error::branche cible vide"; exit 1; fi
+
+      - name: Récupérer les PDF du job de collecte
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: pdf-collectes
+          path: ${{ runner.temp }}/pdf
+
+      - name: Récupérer les constats du job de collecte
+        uses: actions/download-artifact@v4
+        with:
+          name: constats-collecte
+          path: ${{ runner.temp }}/constats
+
+      - name: Vérifier les artefacts reçus
+        env:
+          PDF: ${{ runner.temp }}/pdf
+          CONSTATS: ${{ runner.temp }}/constats
+        run: |
+          # Les constats sont le produit principal : leur absence est une erreur,
+          # pas un cas nominal. On refuse de publier un run sans constats.
+          if [ ! -d "$CONSTATS" ]; then echo "::error::artefact de constats absent"; exit 1; fi
+          if [ ! -d "$CONSTATS/resultats" ] && [ ! -d "$CONSTATS/textes" ]; then
+            echo "::error::artefact de constats vide ou mal structuré"; ls -la "$CONSTATS"; exit 1
+          fi
+          N=$(find "$CONSTATS" -type f | wc -l | tr -d ' ')
+          P=0
+          if [ -d "$PDF" ]; then P=$(find "$PDF" -name '*.pdf' -type f | wc -l | tr -d ' '); fi
+          echo "constats : $N fichier(s) · PDF : $P"
+          if [ "$N" -eq 0 ]; then echo "::error::aucun constat à publier"; exit 1; fi
+
       - name: Archive des PDF (branche corpus/archives-pdf)
-        # Écriture distante : uniquement si `publier` a été coché à la main.
-        if: inputs.publier
         env:
           PDF: ${{ runner.temp }}/pdf
         run: |
           git config user.name "collecte-corpus[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [ ! -d "$PDF" ] || [ -z "$(ls -A "$PDF")" ]; then echo "aucun PDF"; exit 0; fi
+          if [ ! -d "$PDF" ] || [ -z "$(ls -A "$PDF" 2>/dev/null)" ]; then echo "aucun PDF : rien à archiver"; exit 0; fi
           ARCH="$RUNNER_TEMP/archives"
           if git ls-remote --exit-code --heads origin corpus/archives-pdf >/dev/null; then
             git fetch -q origin corpus/archives-pdf
@@ -113,36 +192,24 @@ jobs:
           git -C "$ARCH" commit -q -m "Archive des PDF collectés (run ${{ github.run_id }})"
           git -C "$ARCH" push -q origin corpus/archives-pdf
 
-      - name: Conserver les constats (artefact, sans écriture distante)
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: constats-collecte
-          path: |
-            KNOWLEDGE/collecte/resultats
-            KNOWLEDGE/collecte/textes
-            KNOWLEDGE/collecte/derniere_execution.json
-          if-no-files-found: ignore
-          retention-days: 14
-
       - name: Constats (branche de travail)
-        # Écriture distante : uniquement si `publier` a été coché à la main.
-        if: inputs.publier
         # Les constats de CE run font foi pour les entrées qu'il a traitées : ils
         # sont recopiés sur l'état le plus récent de la branche (pas de rebase,
         # qui échoue dès qu'un même fichier de constat a changé des deux côtés).
+        env:
+          CONSTATS: ${{ runner.temp }}/constats
         run: |
-          SAUVE="$RUNNER_TEMP/constats"
-          mkdir -p "$SAUVE"
-          cp -r KNOWLEDGE/collecte/resultats KNOWLEDGE/collecte/textes KNOWLEDGE/collecte/derniere_execution.json "$SAUVE/"
+          git config user.name "collecte-corpus[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          REF="${{ github.ref_name }}"
           for essai in 1 2 3; do
-            git fetch -q origin "${{ github.ref_name }}"
+            git fetch -q origin "$REF"
             git reset -q --hard FETCH_HEAD
-            cp -r "$SAUVE"/* KNOWLEDGE/collecte/
+            cp -r "$CONSTATS"/* KNOWLEDGE/collecte/
             git add KNOWLEDGE/collecte/resultats KNOWLEDGE/collecte/textes KNOWLEDGE/collecte/derniere_execution.json
             if git diff --cached --quiet; then echo "aucun constat nouveau"; exit 0; fi
             git commit -q -m "Collecte : constats du run ${{ github.run_id }}"
-            git push -q origin "HEAD:${{ github.ref_name }}" && exit 0
+            git push -q origin "HEAD:$REF" && exit 0
             sleep 5
           done
           exit 1
