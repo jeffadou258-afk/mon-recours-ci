@@ -418,6 +418,32 @@ pouvait remplir.
 **Tests** : `tests/test_courriers.py` (17), `web/tests/composants/affichage.test.tsx`,
 `web/tests/integration/moteur.test.ts` (2 tests contre le moteur réel).
 
+### Téléchargement du PDF — `GET /api/courrier/telecharger`
+
+Le fichier existe côté moteur ; l'interface le sert sans jamais exposer de chemin.
+
+**Quatre protections, dans cet ordre** (`web/src/lib/server/dossiers.ts`) :
+
+1. **L'identifiant vient du cookie signé** (`deballer`, HMAC + comparaison en temps
+   constant). Aucun identifiant n'est accepté en URL ni dans le corps : on ne peut
+   pas demander le courrier d'un autre visiteur.
+2. **Format verrouillé** (`MOTIF_ID` : `web-<uuid v4>`) : aucun `/`, aucun `.`, donc
+   aucune traversée possible par construction — plus une seconde vérification dans
+   `dernierCourrierPdf`.
+3. **Nom de fichier non choisi par l'appelant** : le dossier BROUILLONS est listé et
+   seuls les noms correspondant à `^\d{8}-\d{6}_reclamation\.pdf$` sont retenus.
+4. **Confinement réel** : `realpath` du fichier doit avoir pour parent réel le dossier
+   BROUILLONS attendu — un lien symbolique sortant est refusé (test dédié).
+
+En-têtes servis : `Content-Type: application/pdf`, `Content-Disposition: attachment;
+filename="courrier-mon-recours-ci.pdf"` (nom fixe, aucune donnée de l'utilisateur),
+`Cache-Control: no-store`, `X-Content-Type-Options: nosniff`, CSP `default-src 'none'`.
+Débit limité par le même limiteur que les autres routes. Aucun courrier → `404
+COURRIER_ABSENT` (message explicite, pas d'erreur système).
+
+Tests : `web/tests/unitaires/dossiers.test.ts` (8) et un test d'intégration qui
+télécharge un vrai PDF (`%PDF-`) et vérifie qu'un cookie absent ou forgé est refusé.
+
 ## 6 sexies. Base SQLite et arbre de travail
 
 `KNOWLEDGE/corpus_juridique.sqlite3` est versionnée : les tests en dépendent. Après une

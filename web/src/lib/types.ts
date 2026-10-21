@@ -173,6 +173,8 @@ export interface VueBrouillon {
   fondement: string | null;
   /** Informations que seul l'utilisateur peut fournir, encore manquantes. */
   champsACompleter: VueChampCourrier[];
+  /** Un PDF a-t-il été réellement produit côté moteur ? */
+  pdfDisponible: boolean;
 }
 
 /** Réponse de /api/courrier : le courrier régénéré avec les informations fournies. */
@@ -258,6 +260,7 @@ export type CodeErreur =
   | "CONFIGURATION"
   | "CATALOGUE_INVALIDE"
   | "REPONSE_INVALIDE"
+  | "COURRIER_ABSENT"
   | "RESEAU"
   | "INTERNE";
 

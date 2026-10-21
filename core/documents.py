@@ -21,6 +21,7 @@ import datetime
 import os
 import re
 
+import config
 from config import DOSSIERS_DIR, dossier_utilisateur
 from core.garde_fous import evaluer_sortie
 
@@ -235,12 +236,11 @@ def generer_brouillon(dossier_id, type_document, champs, export_pdf=True):
         )
 
     destination = dossier_brouillons(dossier_id)
-    os.makedirs(str(destination), exist_ok=True)
+    config.creer_dossier_prive(destination)
     horo = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     base = "%s_%s" % (horo, type_document)
     chemin_txt = destination / (base + ".txt")
-    with open(str(chemin_txt), "w", encoding="utf-8") as f:
-        f.write(texte)
+    config.ecrire_fichier_prive(chemin_txt, texte)
 
     resultat = {
         "dossier_id": dossier_id,
@@ -275,6 +275,10 @@ def generer_brouillon(dossier_id, type_document, champs, export_pdf=True):
                     pdf.multi_cell(pdf.epw, 5, ligne if ligne.strip() else " ")
             chemin_pdf = destination / (base + ".pdf")
             pdf.output(str(chemin_pdf))
+            try:
+                os.chmod(str(chemin_pdf), config.PERMISSIONS_FICHIER)
+            except OSError:
+                pass
             resultat["fichier_pdf"] = str(chemin_pdf)
             resultat["pdf"].update(ok=True, octets=os.path.getsize(str(chemin_pdf)))
         except Exception as erreur:  # noqa: BLE001 — l'échec PDF est déclaré, pas masqué

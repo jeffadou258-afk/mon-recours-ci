@@ -71,3 +71,54 @@ mieux vaut le dire que remplir un tableau.
 3. Pour la consommation et le bancaire : établir la liste des textes attendus
    (loi 2016-412, textes UEMOA/BCEAO) **avant** de chercher, comme pour les 23
    entrées « travail » — l'absence de liste est la vraie cause du blocage.
+
+---
+
+## Addendum du 20/10/2026 — bornes du Code du travail : démontrées, intégration bloquée par la provenance
+
+### Les bornes SONT démontrables
+
+Sonde page par page du recueil `mef_code_travail_2015_532.pdf` (519 pages, `pdftotext -layout`) :
+
+| Page | Marqueur littéral | Interprétation |
+|---|---|---|
+| 3 | `2010-272` | table des matières — **à ignorer** |
+| **7** | `LOI N° 2015-532 DU 20 JUILLET 2015 PORTANT CODE DU TRAVAIL` | **début de l'acte** |
+| **184** | `LOI N° 2010-272 DU 30 SEPTEMBRE 2010 PORTANT INTERDICTION DE LA TRAITE ET DES PIRATERIES` | **début de l'acte suivant** |
+| 428 | `2015-532` (dans une convention collective) | annexe, **hors acte** |
+
+Le segment est donc **p. 7 → p. 183** (177 pages), encadré par deux en-têtes d'actes
+explicitement imprimés. Les bornes ne sont pas devinées : elles sont lues dans le
+document.
+
+### Pourquoi l'intégration reste impossible aujourd'hui
+
+`core.corpus.importer_document` refuse toute source hors périmètre :
+
+```
+est_hote_officiel("https://www.economie-ivoirienne.ci/…")  →  False
+```
+
+L'hôte est classé `CANDIDAT_OFFICIEL` : c'est une **republication ministérielle**,
+pas un `*.gouv.ci`. Le garde-fou est volontaire et je ne l'ai pas désactivé.
+
+**Conséquence** : même segmenté, ce fichier ne peut pas entrer dans le corpus sans
+une décision explicite d'accepter `economie-ivoirienne.ci` comme source de
+provenance — décision de gouvernance, pas de technique. Le pipeline est prêt
+(`bin/indexer_segment.py --doc … --debut … --fin …`) ; il manque l'autorisation.
+
+### Textes attendus, à obtenir sur un hôte officiel
+
+**Travail** — Code du travail 2015-532 (ci-dessus) ; ordonnance 2021-902 modificative ;
+décrets d'application déjà repérés (2013-554 maladies, 2013-555 organisation, 2013-791 SMIG,
+2014-370 quotité cessible, 2017-210 indemnité de licenciement).
+
+**Consommation** — loi 2016-412 du 15 juin 2016 relative à la consommation (aucun
+exemplaire officiel accessible ; CIVLII en 404/paywall).
+
+**Bancaire et crédit** — aucun texte identifié au manifeste. À établir avant toute
+recherche : textes UEMOA/BCEAO applicables (réglementation bancaire, microfinance,
+conditions de crédit) et textes nationaux de transposition.
+
+Sans cette liste, chercher produirait des résultats invérifiables : c'est la cause
+réelle du blocage, plus que l'absence de moteur de recherche.

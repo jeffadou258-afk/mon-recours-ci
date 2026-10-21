@@ -9,6 +9,7 @@
  * sortie, traduire les erreurs. Aucune logique juridique ici.
  */
 
+import { readFile } from "node:fs/promises";
 import type { CodeErreur, ErreurApi, ResultatApi } from "../types";
 import { validerDemande, validerInformationsCourrier, validerReponses } from "../validation";
 import {
@@ -20,6 +21,7 @@ import {
   reponseAnalyseRefusee,
 } from "./assainir";
 import { ConfigurationInvalide, lireConfig, type ConfigServeur } from "./config";
+import { CourrierIntrouvable, dernierCourrierPdf } from "./dossiers";
 import { appelerMoteur, type Recuperateur, type ReponseMoteur } from "./moteur";
 import { identifiantVisiteur, limiteurParDefaut, type LimiteurVisiteurs } from "./limiteur";
 import { deballer, emballer, enteteCookie, enteteCookieEfface, lireCookie, nouvelIdentifiant } from "./session";
@@ -56,6 +58,8 @@ const MESSAGES: Record<CodeErreur, string> = {
   CATALOGUE_INVALIDE:
     "Le moteur a détecté une incohérence dans ses fiches et refuse de répondre. L'équipe doit intervenir.",
   REPONSE_INVALIDE: "Le moteur a renvoyé une réponse illisible. Aucune information n'est affichée.",
+  COURRIER_ABSENT:
+    "Aucun courrier n'est disponible pour cette consultation. Rédigez-le d'abord, puis téléchargez-le.",
   RESEAU: "Connexion impossible. Vérifiez votre accès à Internet puis réessayez.",
   INTERNE: "Le moteur a rencontré une erreur interne. Aucune réponse n'a été produite.",
 };
@@ -72,6 +76,7 @@ const STATUT_HTTP: Record<CodeErreur, number> = {
   CONFIGURATION: 500,
   CATALOGUE_INVALIDE: 503,
   REPONSE_INVALIDE: 502,
+  COURRIER_ABSENT: 404,
   RESEAU: 503,
   INTERNE: 502,
 };
@@ -362,6 +367,46 @@ export async function gererCourrier(requete: Request, dep: Dependances = {}): Pr
     if (e instanceof ReponseInattendue) return erreur("REPONSE_INVALIDE");
     throw e;
   }
+}
+
+// ---------------------------------------------------------------------------
+// GET /api/courrier/telecharger   — le PDF du dossier, et lui seul
+// ---------------------------------------------------------------------------
+
+export async function gererTelechargementCourrier(
+  requete: Request,
+  dep: Dependances = {},
+): Promise<Response> {
+  const config = obtenirConfig(dep);
+  if (config instanceof Response) return config;
+
+  // L'identifiant vient du cookie signé : on ne peut pas demander le dossier d'autrui.
+  const dossierId = deballer(lireCookie(requete.headers.get("cookie")), config.secretSession);
+  if (!dossierId) return erreur("SESSION_ABSENTE");
+  const trop = verifierDebitVisiteur(requete, config, dep);
+  if (trop) return trop;
+
+  let courrier;
+  try {
+    courrier = await dernierCourrierPdf(dossierId);
+  } catch (e) {
+    if (e instanceof CourrierIntrouvable) return erreur("COURRIER_ABSENT");
+    throw e;
+  }
+
+  const octets = await readFile(courrier.chemin);
+  return new Response(new Uint8Array(octets), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/pdf",
+      "Content-Length": String(courrier.octets),
+      // Nom fixé par le serveur : rien de ce que l'utilisateur a saisi n'y entre.
+      "Content-Disposition": `attachment; filename="${courrier.nom}"`,
+      "Cache-Control": "no-store, max-age=0",
+      "X-Content-Type-Options": "nosniff",
+      "Content-Security-Policy": "default-src 'none'; object-src 'none'",
+    },
+  });
 }
 
 // ---------------------------------------------------------------------------

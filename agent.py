@@ -27,6 +27,7 @@ import json
 import os
 import re
 
+import config
 from config import NOM_AGENT, VERSION, dossier_utilisateur
 from core import analyse as mod_analyse
 from core import base, corpus, documents, evidence, faits as mod_faits, garde_fous, plan_action, qualification, sources
@@ -96,7 +97,7 @@ class MonRecoursCI(object):
     def ouvrir_dossier(self, dossier_id, demande, elements_connus=()):
         """Étapes 1 et 2 : qualification, urgence, collecte, questions ciblées."""
         chemin = dossier_utilisateur(dossier_id)  # valide l'identifiant
-        os.makedirs(str(chemin), exist_ok=True)
+        config.creer_dossier_prive(chemin)
 
         evaluation = garde_fous.evaluer_demande(demande)
         dossier = {
@@ -291,9 +292,7 @@ class MonRecoursCI(object):
 
     def _ecrire_en_cours(self, dossier_id, dossier):
         chemin = self._chemin_en_cours(dossier_id)
-        os.makedirs(os.path.dirname(str(chemin)), exist_ok=True)
-        with open(str(chemin), "w", encoding="utf-8") as f:
-            json.dump(dossier, f, ensure_ascii=False, indent=2)
+        config.ecrire_fichier_prive(chemin, json.dumps(dossier, ensure_ascii=False, indent=2))
         return str(chemin)
 
     def lire_en_cours(self, dossier_id):

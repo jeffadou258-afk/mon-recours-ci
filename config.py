@@ -24,6 +24,40 @@ LANGUE = "fr"
 # --------------------------------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent
 DOSSIERS_DIR = BASE_DIR / "DOSSIERS"
+
+# Les dossiers de consultation contiennent le récit personnel d'une personne
+# (violences, famille, dettes). En 755/644, n'importe quel compte local de la
+# machine pouvait les lire. On crée en 700 et on écrit en 600.
+PERMISSIONS_DOSSIER = 0o700
+PERMISSIONS_FICHIER = 0o600
+
+
+def creer_dossier_prive(chemin):
+    """Crée un dossier de consultation lisible par son seul propriétaire."""
+    os.makedirs(str(chemin), exist_ok=True, mode=PERMISSIONS_DOSSIER)
+    try:
+        os.chmod(str(chemin), PERMISSIONS_DOSSIER)
+    except OSError:
+        pass
+    return chemin
+
+
+def ecrire_fichier_prive(chemin, contenu, binaire=False):
+    """Écrit un fichier de dossier en 600, sans exposer son contenu aux autres comptes."""
+    dossier = os.path.dirname(str(chemin))
+    if dossier:
+        creer_dossier_prive(dossier)
+    if binaire:
+        with open(str(chemin), "wb") as flux:
+            flux.write(contenu)
+    else:
+        with open(str(chemin), "w", encoding="utf-8") as flux:
+            flux.write(contenu)
+    try:
+        os.chmod(str(chemin), PERMISSIONS_FICHIER)
+    except OSError:
+        pass
+    return chemin
 KNOWLEDGE_DIR = BASE_DIR / "KNOWLEDGE"
 WORKFLOWS_DIR = BASE_DIR / "WORKFLOWS"
 TESTS_DIR = BASE_DIR / "tests"

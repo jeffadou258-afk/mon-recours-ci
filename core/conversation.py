@@ -76,9 +76,7 @@ class Conversation(object):
 
     def _ecrire_etat(self, dossier_id, etat):
         chemin = self._chemin_etat(dossier_id)
-        os.makedirs(os.path.dirname(chemin), exist_ok=True)
-        with open(chemin, "w", encoding="utf-8") as flux:
-            json.dump(etat, flux, ensure_ascii=False, indent=1)
+        config.ecrire_fichier_prive(chemin, json.dumps(etat, ensure_ascii=False, indent=1))
         return etat
 
     # -- tour 1 ----------------------------------------------------------

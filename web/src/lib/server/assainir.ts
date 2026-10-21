@@ -278,6 +278,8 @@ function brouillon(v: unknown): VueBrouillon | null {
   // `genere` contient des chemins de fichiers serveur : il n'est jamais transmis.
   // `texte` est le contenu du brouillon (moteur ≥ domaine-famille), borné en taille.
   const contenu = texte(v.texte);
+  const genere = objet(v.genere);
+  const pdf = objet(genere.pdf);
   return {
     disponible: v.disponible === true,
     note: texte(v.note),
@@ -285,6 +287,7 @@ function brouillon(v: unknown): VueBrouillon | null {
     texte: contenu ? contenu.slice(0, 12000) : null,
     fondement: texte(v.fondement),
     champsACompleter: champsCourrier(v.champs_a_completer),
+    pdfDisponible: pdf.ok === true,
   };
 }
 

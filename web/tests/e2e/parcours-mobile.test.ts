@@ -126,6 +126,10 @@ test("parcours complet au toucher : décrire → préciser → résultat avec ci
   assert.match(texte, /BROUILLON — NON ENVOYÉ/);
   assert.match(texte, /À COMPLÉTER/);
   assert.ok(await page.getByRole("button", { name: "Copier le brouillon" }).isVisible());
+  // Téléchargement du PDF : lien présent, sans identifiant de dossier dans l'URL.
+  const lienPdf = page.getByRole("link", { name: "Télécharger le courrier en PDF" });
+  assert.ok(await lienPdf.isVisible());
+  assert.match((await lienPdf.getAttribute("href")) ?? "", /^\/api\/courrier\/telecharger$/);
   assert.doesNotMatch(texte, /DOSSIERS|\/home\/|traceabilite/);
 
   // Provenance dépliable, lien vers le document officiel.

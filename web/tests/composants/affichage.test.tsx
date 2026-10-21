@@ -186,6 +186,7 @@ test("brouillon : texte affiché dans une zone lisible, avec bouton de copie", (
       champsACompleter: [
         { champ: "expediteur", libelle: "Vos nom, prénom et adresse", question: "Où répondre ?", exemple: "Awa KONÉ, Abidjan" },
       ],
+      pdfDisponible: true,
     },
   };
   const html = renderToStaticMarkup(<VueResultat vue={vue} urgence={null} />);

@@ -5,7 +5,7 @@
 
 import { after, before, test } from "node:test";
 import assert from "node:assert/strict";
-import { gererCourrier, gererOuvrir, gererRepondre, gererSante, gererSupprimer } from "../../src/lib/server/handlers";
+import { gererCourrier, gererOuvrir, gererRepondre, gererSante, gererSupprimer, gererTelechargementCourrier } from "../../src/lib/server/handlers";
 import type { ConfigServeur } from "../../src/lib/server/config";
 import { journalMuet, requeteJson } from "../aides";
 import { lancerMoteur, type MoteurLance } from "../moteur-reel";
@@ -263,4 +263,57 @@ test("courrier : un champ inconnu est refusé avant d'atteindre le moteur", asyn
   );
   assert.equal(rep.status, 400);
   assert.equal((await rep.json()).erreur.code, "ENTREE_INVALIDE");
+});
+
+test("courrier : le PDF se télécharge, et seulement pour son dossier", async () => {
+  const ouverture = await gererOuvrir(
+    requeteJson("/api/ouvrir", { demande: "Mon bailleur garde ma caution depuis deux mois." }),
+    { config },
+  );
+  const cookie = cookieDe(ouverture);
+  let charge = await ouverture.json();
+  let etape: string = charge.data.etape;
+  let garde = 0;
+  while (etape === "clarification" && garde < 5) {
+    garde += 1;
+    const cles: string[] = charge.data.questions.map((q: { cle: string }) => q.cle);
+    charge = await (
+      await gererRepondre(
+        requeteJson("/api/repondre", { reponses: Object.fromEntries(cles.map((c) => [c, "oui"])) }, { Cookie: cookie }),
+        { config },
+      )
+    ).json();
+    etape = charge.data.etape;
+  }
+  assert.equal(etape, "reponse");
+
+  const telechargement = await gererTelechargementCourrier(
+    new Request("http://localhost:3000/api/courrier/telecharger", { headers: { Cookie: cookie } }),
+    { config },
+  );
+  assert.equal(telechargement.status, 200);
+  assert.equal(telechargement.headers.get("content-type"), "application/pdf");
+  assert.match(
+    telechargement.headers.get("content-disposition") ?? "",
+    /^attachment; filename="courrier-mon-recours-ci\.pdf"$/,
+  );
+  assert.equal(telechargement.headers.get("cache-control"), "no-store, max-age=0");
+  const octets = new Uint8Array(await telechargement.arrayBuffer());
+  assert.ok(octets.length > 500, "le PDF doit avoir un contenu");
+  assert.equal(Buffer.from(octets.slice(0, 5)).toString("latin1"), "%PDF-");
+
+  // Sans cookie signé : refus, et aucun fichier servi.
+  const sansCookie = await gererTelechargementCourrier(
+    new Request("http://localhost:3000/api/courrier/telecharger"),
+    { config },
+  );
+  assert.equal(sansCookie.status, 409);
+
+  // Avec un cookie forgé pour un AUTRE dossier : refus aussi.
+  const autre = `web-00000000-0000-4000-8000-000000000000.${"0".repeat(43)}`;
+  const forge = await gererTelechargementCourrier(
+    new Request("http://localhost:3000/api/courrier/telecharger", { headers: { Cookie: `mrci_dossier=${autre}` } }),
+    { config },
+  );
+  assert.equal(forge.status, 409);
 });

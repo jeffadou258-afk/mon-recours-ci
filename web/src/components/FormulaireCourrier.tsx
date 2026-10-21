@@ -17,6 +17,7 @@ import { BoutonCopier } from "./BoutonCopier";
 export function FormulaireCourrier({ brouillon }: { brouillon: VueBrouillon }) {
   const [texte, setTexte] = useState<string | null>(brouillon.texte);
   const [champs, setChamps] = useState<VueChampCourrier[]>(brouillon.champsACompleter ?? []);
+  const [pdf, setPdf] = useState<boolean>(brouillon.pdfDisponible);
   const [valeurs, setValeurs] = useState<Record<string, string>>({});
   const [erreur, setErreur] = useState<string | null>(null);
   const [envoi, setEnvoi] = useState(false);
@@ -40,6 +41,7 @@ export function FormulaireCourrier({ brouillon }: { brouillon: VueBrouillon }) {
     }
     setTexte(resultat.data.texte);
     setChamps(resultat.data.champsACompleter);
+    setPdf(resultat.data.pdfDisponible);
     setValeurs({});
   }
 
@@ -51,6 +53,15 @@ export function FormulaireCourrier({ brouillon }: { brouillon: VueBrouillon }) {
             {texte}
           </pre>
           <BoutonCopier texte={texte} cible="texte-brouillon" />
+          {pdf ? (
+            <p className="bloc__note">
+              {/* Le PDF est servi par le serveur pour CE dossier, identifié par le cookie
+                  signé : le lien ne contient aucun identifiant ni chemin. */}
+              <a className="bouton bouton--secondaire" href="/api/courrier/telecharger" download>
+                Télécharger le courrier en PDF
+              </a>
+            </p>
+          ) : null}
         </>
       ) : null}
 

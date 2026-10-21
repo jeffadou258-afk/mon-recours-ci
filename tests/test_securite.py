@@ -13,6 +13,7 @@ import os
 import re
 import shutil
 import sqlite3
+import stat
 import sys
 import threading
 import unittest
@@ -353,6 +354,61 @@ class TestSanteExplicite(unittest.TestCase):
         texte = json.dumps(reponse, ensure_ascii=False)
         self.assertNotIn("/Users/", texte)
         self.assertNotIn(".pdf", texte)
+
+
+class TestPermissionsDesDossiers(unittest.TestCase):
+    """Un dossier de consultation n'est lisible que par son propriétaire.
+
+    Constat de départ : `DOSSIERS/` était en 755 et les fichiers en 644. Les
+    récits personnels (violences, famille, dettes) étaient lisibles par tout
+    compte local de la machine. Ces tests empêchent le retour du défaut.
+    """
+
+    def test_le_dossier_cree_est_en_700(self):
+        identifiant = "PERM_TEST_700"
+        shutil.rmtree(str(config.dossier_utilisateur(identifiant)), ignore_errors=True)
+        self.assertTrue(service.ouvrir(identifiant,
+                                       "Mon bailleur garde ma caution depuis deux mois.")["ok"])
+        base = config.dossier_utilisateur(identifiant)
+        self.assertEqual(stat.S_IMODE(os.stat(str(base)).st_mode), 0o700)
+        for nom in ("CONVERSATION.json", "DOSSIER_EN_COURS.json"):
+            chemin = base / nom
+            if chemin.exists():
+                self.assertEqual(stat.S_IMODE(os.stat(str(chemin)).st_mode), 0o600, nom)
+        shutil.rmtree(str(base), ignore_errors=True)
+
+    def test_le_courrier_et_le_pdf_sont_en_600(self):
+        identifiant = "PERM_TEST_600"
+        shutil.rmtree(str(config.dossier_utilisateur(identifiant)), ignore_errors=True)
+        reponse = service.ouvrir(identifiant, "Mon bailleur garde ma caution depuis deux mois.")
+        donnees = reponse["data"]
+        for _ in range(5):
+            if donnees.get("etape") == "reponse":
+                break
+            cles = [q["cle"] for q in (donnees.get("questions") or [])]
+            donnees = service.repondre(identifiant, {c: "oui" for c in cles}).get("data") or {}
+        brouillons = config.dossier_utilisateur(identifiant) / "BROUILLONS"
+        self.assertTrue(brouillons.exists(), "aucun brouillon produit")
+        for fichier in brouillons.iterdir():
+            self.assertEqual(stat.S_IMODE(os.stat(str(fichier)).st_mode), 0o600, fichier.name)
+        self.assertEqual(stat.S_IMODE(os.stat(str(brouillons)).st_mode), 0o700)
+        shutil.rmtree(str(config.dossier_utilisateur(identifiant)), ignore_errors=True)
+
+    def test_aucun_dossier_existant_n_est_ouvert_aux_autres(self):
+        """Contrôle d'ensemble : ni 755 sur un dossier, ni 644 sur un fichier."""
+        racine = config.DOSSIERS_DIR
+        if not racine.exists():
+            self.skipTest("aucun dossier de consultation")
+        fautifs = []
+        for chemin, dossiers, fichiers in os.walk(str(racine)):
+            for nom in dossiers + fichiers:
+                complet = os.path.join(chemin, nom)
+                mode = stat.S_IMODE(os.stat(complet, follow_symlinks=False).st_mode)
+                autorise = config.PERMISSIONS_DOSSIER if nom in dossiers \
+                    else config.PERMISSIONS_FICHIER
+                if mode != autorise:
+                    fautifs.append((complet.replace(str(racine), "DOSSIERS"), oct(mode)))
+        self.assertEqual(fautifs[:5], [], "dossiers lisibles par d'autres comptes")
 
 
 if __name__ == "__main__":
