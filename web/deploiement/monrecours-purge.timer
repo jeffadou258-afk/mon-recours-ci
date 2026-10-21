@@ -1,13 +1,19 @@
 # Purge quotidienne des consultations web plus anciennes que la durée décidée.
-# À accompagner d'un service monrecours-purge.service :
+# Le service associé est monrecours-purge.service (même dossier) : sans lui, le
+# timer ne déclencherait rien — c'était le cas avant le chantier P0.
 #
-#   [Service]
-#   Type=oneshot
-#   User=monrecours
-#   WorkingDirectory=/opt/mon-recours-ci/web
-#   ExecStart=/usr/bin/node scripts/purger-consultations.mjs --jours 30 --confirmer
+# Installation (non effectuée) :
+#   sudo cp monrecours-purge.service monrecours-purge.timer /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now monrecours-purge.timer
 #
-# Remplacer 30 par la durée de conservation décidée et annoncée aux utilisateurs.
+# Durée de conservation : 90 jours — HYPOTHÈSE DE CONCEPTION, à valider
+# juridiquement avant usage réel. La valeur est portée par `--jours` dans
+# monrecours-purge.service.
+#
+# La purge supprime les dossiers de l'espace ACTIF ; elle ne touche pas aux
+# archives chiffrées, qui peuvent encore contenir un récit purgé. Voir
+# docs/SAUVEGARDE_RESTAURATION.md pour la durée de vie des sauvegardes.
 
 [Unit]
 Description=Purge quotidienne des consultations Mon Recours CI

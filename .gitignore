@@ -80,3 +80,14 @@ htmlcov/
 
 # --- Sauvegardes locales de la base (bin/reconstruire_base.py) ---------------
 KNOWLEDGE/.sauvegardes/
+
+# Sauvegardes chiffrées, clés et archives — jamais versionnées (chantier P0)
+*.enc
+sauvegardes/
+cle-sauvegarde
+*.cle
+
+# Exception : le PDF de démonstration est un actif public synthétique (aucune
+# donnée réelle, aucun texte du corpus), nécessaire à la Preview Vercel.
+# Sans cette exception, `*.pdf` ci-dessus l'exclurait du déploiement.
+!web/public/demo/*.pdf
