@@ -14,6 +14,7 @@ export const CONFIG_TEST: ConfigServeur = {
   delaiMs: 2000,
   production: false,
   debitVisiteur: 1000,
+  demo: false,
 };
 
 export interface AppelEnregistre {

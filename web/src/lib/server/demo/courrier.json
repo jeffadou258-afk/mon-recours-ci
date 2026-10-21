@@ -1,0 +1,22 @@
+{
+ "dossier_id": "__DOSSIER__",
+ "type_document": "reclamation",
+ "fondement": "article 416 de la loi n° 2019-576",
+ "champs_a_completer": [],
+ "texte": "BROUILLON — NON ENVOYÉ — À RELIRE ET À VALIDER PAR L'UTILISATEUR\nGénéré le 2026-10-21\n====================================================================\n\nObjet : Réclamation — Dépôt de garantie (caution)\n\nDestinataire : Bailleur fictif, Abidjan\n\nMadame, Monsieur,\n\nJe porte à votre attention une réclamation concernant : Dépôt de garantie (caution).\n\nFaits tels que je les déclare (à vérifier avant envoi) :\n- S'agit-il d'un bail à usage d'habitation ? : oui\n- Le dépôt de garantie que vous avez versé dépasse-t-il deux mois de loyer ? : non\n- Avez-vous quitté le logement (fin du bail) ? : oui\n- Le bailleur invoque-t-il des dégradations, des loyers impayés ou un autre manquement de votre part pour garder le dépôt ?\n\nFondement : article 416 de la loi n° 2019-576.\n\nPièces jointes :\nCopie du bail, quittance de caution\n\nDemande : Mon bailleur refuse de me rendre la caution que j’ai versée.\n\nJe sollicite une réponse écrite dans vos meilleurs délais, à l'adresse suivante : Locataire fictif, 01 BP 0000 Abidjan.\n--------------------------------------------------------------------\nDocument préparé avec une assistance automatisée. L'agent n'est ni avocat, ni huissier, ni autorité administrative : il ne représente personne et ne garantit aucun résultat. Ce document doit être relu avant tout usage.\n",
+ "genere": {
+  "dossier_id": "__DOSSIER__",
+  "type_document": "reclamation",
+  "octets_txt": 1352,
+  "pdf": {
+   "tente": true,
+   "ok": true,
+   "erreur": null,
+   "octets": 1894
+  },
+  "envoi": "AUCUN — l'agent ne dispose d'aucune fonction d'envoi",
+  "horodatage": "2026-10-21T17:49:21+00:00",
+  "mention": "BROUILLON — NON ENVOYÉ — À RELIRE ET À VALIDER PAR L'UTILISATEUR"
+ },
+ "note": "BROUILLON — NON ENVOYÉ. À relire et compléter avant tout usage."
+}

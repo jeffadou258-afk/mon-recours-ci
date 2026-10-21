@@ -1,0 +1,189 @@
+{
+ "catalogue": {
+  "fiches": 92,
+  "domaines": [
+   "contrats_dettes_commerce",
+   "famille_mariage_filiation",
+   "logement_baux_foncier",
+   "penal_procedure_penale",
+   "transport_responsabilite_civile"
+  ],
+  "par_domaine": {
+   "logement_baux_foncier": [
+    "Dépôt de garantie (caution)",
+    "Avance sur loyers",
+    "Révision du loyer",
+    "Forme du bail d'habitation",
+    "Congé donné par le bailleur",
+    "Demande de résiliation",
+    "Expulsion forcée",
+    "Domaine public urbain",
+    "Expropriation",
+    "Aménagement foncier"
+   ],
+   "transport_responsabilite_civile": [
+    "Téléphone au volant"
+   ],
+   "contrats_dettes_commerce": [
+    "Définition de la sûreté (OHADA)",
+    "Sûretés personnelles et cautionnement (OHADA)",
+    "Injonction de payer : ce que doit contenir la signification",
+    "Injonction de payer : délai d'opposition",
+    "Injonction de payer : la preuve de la créance",
+    "Injonction de payer : faute d'opposition dans le délai",
+    "Saisie : droit du créancier et limites",
+    "Saisie : quels biens peuvent être saisis",
+    "Saisie-attribution des créances (compte bancaire, mobile money)",
+    "Saisie sur salaire : condition",
+    "Saisie sur salaire : part saisissable fixée par l'État",
+    "Entreprise en cessation des paiements : définition",
+    "Salaires impayés : super privilège en cas de procédure collective",
+    "Qu'est-ce qu'une société coopérative",
+    "Parts sociales d'une coopérative",
+    "Coopérative : augmentation des engagements des coopérateurs",
+    "Coopérative : réserve générale prélevée sur les excédents",
+    "Quelles sociétés relèvent de l'Acte uniforme (sociétés commerciales)",
+    "Création d'une société commerciale : ce que le contrat doit prévoir",
+    "Forme des statuts d'une société commerciale",
+    "Dénomination sociale d'une société",
+    "Mentions obligatoires sur les documents d'une société",
+    "Montant du capital social : qui le fixe",
+    "Cession de parts sociales : accord unanime des associés",
+    "Actes signés avant l'immatriculation : reprise par la société",
+    "Fin de la durée statutaire : dissolution de plein droit"
+   ],
+   "famille_mariage_filiation": [
+    "Droit de l'enfant à sa filiation",
+    "Paternité de l'enfant né pendant le mariage",
+    "Contester la paternité (désaveu par le mari)",
+    "Délai pour contester la paternité",
+    "Prouver la filiation d'un enfant né dans le mariage",
+    "Filiation de l'enfant né hors mariage",
+    "Reconnaître un enfant",
+    "Reconnaissance après l'acte de naissance",
+    "Homme marié qui reconnaît un enfant né hors mariage",
+    "Faire déclarer la paternité par le juge",
+    "Qui peut agir en recherche de paternité",
+    "Âge minimum pour se marier",
+    "Consentement libre de chaque époux",
+    "Où le mariage est célébré",
+    "Danger au foyer : demander à résider séparément",
+    "Obligation des époux envers les enfants",
+    "Époux qui ne contribue pas aux charges du ménage",
+    "Choix du domicile de la famille",
+    "Régime matrimonial sans contrat",
+    "Biens qui restent propres à chaque époux",
+    "Comment le mariage prend fin",
+    "Où s'ouvre la succession",
+    "Prouver qu'on est héritier",
+    "Parts des enfants et du conjoint survivant",
+    "Défunt sans enfant",
+    "Égalité des enfants dans la succession",
+    "Conjoint survivant séparé de corps",
+    "Délai pour accepter ou refuser une succession",
+    "Renoncer à une succession",
+    "Accepter sans payer les dettes au-delà des biens reçus",
+    "Sortir de l'indivision : demander le partage"
+   ],
+   "penal_procedure_penale": [
+    "Où porter plainte : la police judiciaire",
+    "Plainte au procureur et classement de l'affaire",
+    "Durée de la garde à vue",
+    "Droits de la personne gardée à vue : être informée, prévenir un proche",
+    "Examen médical pendant la garde à vue",
+    "Droit à l'assistance d'un avocat pendant l'enquête",
+    "Plainte avec constitution de partie civile",
+    "Délai pour poursuivre (prescription de l'action publique)",
+    "Ce qu'est un vol",
+    "Peine prévue pour le vol",
+    "Coups et blessures volontaires",
+    "Coups portés au conjoint, au concubin ou à un parent",
+    "Violence sans blessure (voie de fait)",
+    "Ce qu'est un viol",
+    "Harcèlement sexuel",
+    "Mutilations génitales féminines (excision)",
+    "Violences sur un enfant ou privation de nourriture et de soins",
+    "Abandon de famille par le père ou la mère",
+    "Pension alimentaire fixée par le juge et non payée",
+    "Abus de confiance",
+    "Escroquerie",
+    "Chantage",
+    "Dénonciation calomnieuse",
+    "Légitime défense présumée (nuit, effraction, vol avec violence)"
+   ]
+  }
+ },
+ "corpus": {
+  "verdict_integrite": "NON_CONNECTE",
+  "mode_integrite": "demonstration",
+  "alteres": 0,
+  "absents": 0,
+  "pdf_non_distribues": 0,
+  "documents": 0,
+  "articles": 0,
+  "articles_par_origine": {}
+ },
+ "domaines": [
+  {
+   "domaine": "logement_baux_foncier",
+   "statut": "TERMINE_TECHNIQUEMENT",
+   "completude": "INCOMPLET"
+  },
+  {
+   "domaine": "travail",
+   "statut": "BLOQUE_SOURCE",
+   "completude": "INCONNU"
+  },
+  {
+   "domaine": "famille_mariage_filiation",
+   "statut": "CORPUS_PARTIEL",
+   "completude": "INCOMPLET"
+  },
+  {
+   "domaine": "contrats_dettes_commerce",
+   "statut": "TERMINE_TECHNIQUEMENT",
+   "completude": "INCOMPLET"
+  },
+  {
+   "domaine": "penal_procedure_penale",
+   "statut": "CORPUS_PARTIEL",
+   "completude": "INCOMPLET"
+  },
+  {
+   "domaine": "consommation",
+   "statut": "BLOQUE_SOURCE",
+   "completude": "INCONNU"
+  },
+  {
+   "domaine": "associations_organisations_religieuses",
+   "statut": "BLOQUE_SOURCE",
+   "completude": "INCONNU"
+  },
+  {
+   "domaine": "donnees_personnelles_numerique",
+   "statut": "CORPUS_PARTIEL",
+   "completude": "INCOMPLET"
+  },
+  {
+   "domaine": "administratif_voies_de_recours",
+   "statut": "CORPUS_PARTIEL",
+   "completude": "INCOMPLET"
+  },
+  {
+   "domaine": "transport_responsabilite_civile",
+   "statut": "TERMINE_TECHNIQUEMENT",
+   "completude": "INCOMPLET"
+  },
+  {
+   "domaine": "sante_droits_usagers",
+   "statut": "BLOQUE_SOURCE",
+   "completude": "INCONNU"
+  }
+ ],
+ "langage": {
+  "actif": false,
+  "fournisseur": null
+ },
+ "avertissement": "Aucune validation juridique humaine n'a été effectuée. Un statut technique n'est pas une garantie de justesse.",
+ "demonstration": true
+}

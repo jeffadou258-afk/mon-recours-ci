@@ -22,6 +22,7 @@ before(async () => {
     delaiMs: 15000,
     production: false,
     debitVisiteur: 1000,
+    demo: false,
   });
 });
 

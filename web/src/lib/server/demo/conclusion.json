@@ -1,0 +1,149 @@
+{
+ "etape": "reponse",
+ "dossier_id": "__DOSSIER__",
+ "reponse": {
+  "statut_reponse": "ANALYSE_CONFORME",
+  "sections": {
+   "1_faits": {
+    "demande": "Mon bailleur refuse de me rendre la caution que j’ai versée.",
+    "note": "Les faits ci-dessous sont DÉCLARÉS par vous. Aucun n'est prouvé par une pièce dans ce dossier.",
+    "declares": [
+     {
+      "enonce": "Ces articles s'appliquent à la situation décrite par l'utilisateur, sous réserve des faits non établis.",
+      "ref_ids": [
+       "REF-4596B86C3154"
+      ],
+      "faits_ids": [
+       "F01",
+       "F02",
+       "F03",
+       "M01"
+      ]
+     }
+    ]
+   },
+   "2_droit": [
+    {
+     "titre": "Dépôt de garantie (caution)",
+     "article": "416",
+     "numero_texte": "2019-576",
+     "citation": "Le contrat de location peut prévoir un dépôt de garantie à la charge du locataire qui ne peut excéder deux mois de loyer pour garantir l’exécution de ses obligations en fin de contrat notamment les dégradations, les impayés ainsi que les divers manquements qui pourraient survenir de son fait.",
+     "lecture": "Le dépôt de garantie demandé au locataire ne peut pas dépasser deux mois de loyer.",
+     "note_lecture": null
+    }
+   ],
+   "3_application": "Ces textes s'appliquent SI les faits déclarés sont exacts. Je ne peux pas vérifier les faits.",
+   "4_demarches": [
+    "Mettre les pièces en sécurité",
+    "Réunir les informations manquantes",
+    "Vérifier chaque référence juridique utilisée",
+    "Saisir l'interlocuteur compétent",
+    "Conserver une trace de chaque échange",
+    "Réunir le bail, la preuve du dépôt versé et l'état des lieux"
+   ],
+   "5_a_verifier": [
+    "Information manquante — Le bailleur invoque-t-il des dégradations, des loyers impayés ou un autre manquement de votre part pour garder le dépôt ? (L'article 416 cite ces situations comme exemples de ce que le dépôt garantit.)"
+   ],
+   "6_sources": [
+    {
+     "reference": "LOI N° 2019-576 DU 26 JUIN 2019 INSTITUANT CODE DE LA CONSTRUCTION ET DE L'HABITAT",
+     "numero_texte": "2019-576",
+     "article": "416",
+     "citation": "Le contrat de location peut prévoir un dépôt de garantie à la charge du locataire qui ne peut excéder deux mois de loyer pour garantir l’exécution de ses obligations en fin de contrat notamment les dégradations, les impayés ainsi que les divers manquements qui pourraient survenir de son fait.",
+     "url_source": "https://www.dgi.gouv.ci/assets/documents/transfert_propriete/lois_reglements/LOI%20N%C2%B0%202019-576%20DU%2026%20JUIN%202019%20INSTITUANT%20CODE%20DE%20LA%20CONSTRUCTION%20ET%20DE%20L%27HABITAT.pdf",
+     "sha256_article": "sha256:b41f603c7ceb4d10f95704c8137c00e93842ea6ed96276baf239be4781a516be",
+     "etat_verification": "VERIFIE",
+     "origine_texte": "CALQUE_TEXTE",
+     "recoupe": false,
+     "confiance_ocr": null,
+     "limites_texte": "Texte lu dans un PDF officiel téléchargé. L'état de vigueur n'est pas garanti au-delà de la date de consultation : vérifier les modifications postérieures au Journal officiel.",
+     "note_lecture": null
+    }
+   ],
+   "3_application_aux_faits": {
+    "statut": "A_RELIRE_PAR_UN_JURISTE",
+    "note": "Lectures des articles au vu de VOS réponses. Ce ne sont pas des citations : elles n'ont pas encore été relues par un juriste.",
+    "lignes": [
+     {
+      "cle": "depot_plus_deux_mois",
+      "question": "Le dépôt de garantie que vous avez versé dépasse-t-il deux mois de loyer ?",
+      "reponse": "non",
+      "lecture": "Le montant que vous décrivez reste dans le plafond de deux mois de loyer prévu par l'article 416.",
+      "articles": [
+       {
+        "article": "416",
+        "numero_texte": "2019-576"
+       }
+      ],
+      "alerte": false
+     },
+     {
+      "cle": "logement_quitte",
+      "question": "Avez-vous quitté le logement (fin du bail) ?",
+      "reponse": "oui",
+      "lecture": "Selon l'article 416, le dépôt sert à garantir l'exécution de vos obligations en fin de contrat, notamment les dégradations, les impayés et les manquements de votre fait.",
+      "articles": [
+       {
+        "article": "416",
+        "numero_texte": "2019-576"
+       }
+      ],
+      "alerte": false
+     }
+    ]
+   },
+   "5_informations_manquantes": [
+    {
+     "cle": "manquement_invoque",
+     "question": "Le bailleur invoque-t-il des dégradations, des loyers impayés ou un autre manquement de votre part pour garder le dépôt ?",
+     "pourquoi": "L'article 416 cite ces situations comme exemples de ce que le dépôt garantit."
+    }
+   ],
+   "5_contradictions": []
+  },
+  "verrous_humains": [],
+  "actions_externes_autorisees": true,
+  "traceabilite": null,
+  "brouillon": {
+   "disponible": true,
+   "note": "BROUILLON — NON ENVOYÉ. À relire et compléter avant tout usage.",
+   "fondement": "article 416 de la loi n° 2019-576",
+   "champs_a_completer": [
+    {
+     "champ": "expediteur",
+     "libelle": "Vos nom, prénom et adresse",
+     "question": "À quelle adresse le destinataire doit-il vous répondre ? Indiquez vos nom, prénom et adresse complète.",
+     "exemple": "Awa KONÉ, 12 rue des Jardins, Cocody, Abidjan"
+    },
+    {
+     "champ": "destinataire",
+     "libelle": "Destinataire du courrier",
+     "question": "À qui adressez-vous ce courrier ? Nom ou qualité (par exemple « Monsieur le Bailleur ») et adresse si vous l'avez.",
+     "exemple": "Monsieur le Bailleur, 5 rue du Marché, Yopougon"
+    },
+    {
+     "champ": "pieces",
+     "libelle": "Pièces jointes",
+     "question": "Quelles pièces joignez-vous à ce courrier ? Une par ligne (contrat, reçus, échanges écrits…).",
+     "exemple": "Contrat de bail\nReçu du dépôt de garantie"
+    }
+   ],
+   "texte": "BROUILLON — NON ENVOYÉ — À RELIRE ET À VALIDER PAR L'UTILISATEUR\nGénéré le 2026-10-21\n====================================================================\n\nObjet : Réclamation — Dépôt de garantie (caution)\n\nMadame, Monsieur,\n\nJe porte à votre attention une réclamation concernant : Dépôt de garantie (caution).\n\nFaits tels que je les déclare (à vérifier avant envoi) :\n- S'agit-il d'un bail à usage d'habitation ? : oui\n- Le dépôt de garantie que vous avez versé dépasse-t-il deux mois de loyer ? : non\n- Avez-vous quitté le logement (fin du bail) ? : oui\n- Le bailleur invoque-t-il des dégradations, des loyers impayés ou un autre manquement de votre part pour garder le dépôt ?\n\nFondement : article 416 de la loi n° 2019-576.\n\nPièces jointes :\n[À COMPLÉTER : liste des documents joints, par exemple le contrat et les reçus]\n\nDemande : Mon bailleur refuse de me rendre la caution que j’ai versée.\n\nJe sollicite une réponse écrite dans vos meilleurs délais, à l'adresse suivante : [À COMPLÉTER : vos nom, prénom et adresse].\n--------------------------------------------------------------------\nDocument préparé avec une assistance automatisée. L'agent n'est ni avocat, ni huissier, ni autorité administrative : il ne représente personne et ne garantit aucun résultat. Ce document doit être relu avant tout usage.\n",
+   "genere": {
+    "dossier_id": "__DOSSIER__",
+    "type_document": "reclamation",
+    "octets_txt": 1367,
+    "pdf": {
+     "tente": true,
+     "ok": true,
+     "erreur": null,
+     "octets": 1908
+    },
+    "envoi": "AUCUN — l'agent ne dispose d'aucune fonction d'envoi",
+    "horodatage": "2026-10-21T17:49:15+00:00",
+    "mention": "BROUILLON — NON ENVOYÉ — À RELIRE ET À VALIDER PAR L'UTILISATEUR"
+   }
+  },
+  "avertissement": "DÉMONSTRATION — réponse figée, enregistrée sur une demande fictive : aucun moteur juridique n'est interrogé. Aucune action externe n'est exécutée par l'agent. Tout envoi exige une validation humaine explicite."
+ }
+}

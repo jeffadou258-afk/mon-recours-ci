@@ -13,6 +13,13 @@ export interface ConfigServeur {
   production: boolean;
   /** Demandes autorisées par visiteur et par minute (ouvrir + répondre). */
   debitVisiteur: number;
+  /**
+   * Mode démonstration (`MONRECOURS_MODE=demo`) : les réponses sont figées et
+   * aucun moteur n'est joint. Aucune clé d'API n'est alors exigée — il n'y a
+   * rien à authentifier. Le secret de session reste obligatoire : le cookie
+   * signé continue de protéger l'accès aux routes.
+   */
+  demo: boolean;
 }
 
 export class ConfigurationInvalide extends Error {}
@@ -20,6 +27,7 @@ export class ConfigurationInvalide extends Error {}
 const HOTES_LOCAUX = new Set(["127.0.0.1", "localhost", "[::1]"]);
 
 export function lireConfig(env: Record<string, string | undefined> = process.env): ConfigServeur {
+  const demo = env.MONRECOURS_MODE === "demo";
   const urlMoteur = (env.MONRECOURS_API_URL || "http://127.0.0.1:8765").replace(/\/+$/, "");
   const cleMoteur = env.MONRECOURS_API_KEY || "";
   const secretSession = env.MONRECOURS_SESSION_SECRET || "";
@@ -42,7 +50,7 @@ export function lireConfig(env: Record<string, string | undefined> = process.env
       "MONRECOURS_API_URL en http doit viser la machine locale ; un hôte distant exige https.",
     );
   }
-  if (cleMoteur.length < 16) {
+  if (!demo && cleMoteur.length < 16) {
     throw new ConfigurationInvalide("MONRECOURS_API_KEY est absente ou trop courte (16 caractères minimum).");
   }
   if (secretSession.length < 32) {
@@ -57,5 +65,6 @@ export function lireConfig(env: Record<string, string | undefined> = process.env
     delaiMs: Number.isFinite(delaiBrut) && delaiBrut > 0 ? Math.min(delaiBrut, 60000) : 15000,
     production: env.NODE_ENV === "production",
     debitVisiteur: Number.isFinite(debitBrut) && debitBrut >= 1 ? Math.min(Math.floor(debitBrut), 600) : 12,
+    demo,
   };
 }

@@ -1,0 +1,52 @@
+{
+ "etape": "clarification",
+ "dossier_id": "__DOSSIER__",
+ "tour": 1,
+ "avertissement": "DÉMONSTRATION — réponse figée, enregistrée sur une demande fictive : aucun moteur juridique n'est interrogé. Je suis un service d'information juridique, pas un avocat. Je ne réponds que sur les textes enregistrés dans mon corpus, et je dis quand je ne peux pas.",
+ "urgence": {
+  "niveau": "NORMALE",
+  "priorite": "ANALYSE_ET_ORIENTATION",
+  "analyse_longue_autorisee": true,
+  "declencheurs": [],
+  "consigne": "Traitement standard : qualification, faits, vérification, analyse, orientations."
+ },
+ "verrous_humains": [],
+ "fiches_identifiees": [
+  {
+   "titre": "Dépôt de garantie (caution)",
+   "article": "416",
+   "numero_texte": "2019-576",
+   "etat_verification": "VERIFIE"
+  }
+ ],
+ "questions": [
+  {
+   "cle": "logement",
+   "question": "S'agit-il d'un bail à usage d'habitation ?"
+  },
+  {
+   "cle": "depot_plus_deux_mois",
+   "question": "Le dépôt de garantie que vous avez versé dépasse-t-il deux mois de loyer ?",
+   "pourquoi": "L'article 416 fixe un plafond au dépôt de garantie.",
+   "type": "oui_non",
+   "suggestion": null
+  },
+  {
+   "cle": "logement_quitte",
+   "question": "Avez-vous quitté le logement (fin du bail) ?",
+   "pourquoi": "Le dépôt garantit les obligations du locataire en fin de contrat.",
+   "type": "oui_non",
+   "suggestion": null
+  }
+ ],
+ "contradictions": [],
+ "statut_questions": "A_RELIRE_PAR_UN_JURISTE",
+ "comprehension": {
+  "mode": "deterministe",
+  "fournisseur": null,
+  "resume": null,
+  "elements_rejetes": 0,
+  "coordonnees_masquees": 0
+ },
+ "note_corpus": "Les références candidates proviennent du corpus local. Un corpus vide signifie : aucune information juridique vérifiée n'est disponible pour cette demande — ce qui sera dit explicitement, sans suppléer par mémoire."
+}

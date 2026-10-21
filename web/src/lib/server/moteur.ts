@@ -7,6 +7,7 @@
  */
 
 import type { ConfigServeur } from "./config";
+import { reponseDemo } from "./demo";
 
 export type RouteMoteur = "/sante" | "/ouvrir" | "/repondre" | "/supprimer" | "/courrier";
 
@@ -22,6 +23,10 @@ export async function appelerMoteur(
   corps?: Record<string, unknown>,
   recuperer: Recuperateur = fetch,
 ): Promise<ReponseMoteur> {
+  // Mode démonstration : aucune requête réseau, aucune clé, réponses figées.
+  // Le point de passage est unique : les gestionnaires ne voient rien changer.
+  if (config.demo) return reponseDemo(route, corps);
+
   const controleur = new AbortController();
   const minuteur = setTimeout(() => controleur.abort(), config.delaiMs);
   try {

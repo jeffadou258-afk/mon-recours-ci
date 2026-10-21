@@ -27,7 +27,15 @@ function cartesDomaines(sante: VueSante): CarteDomaine[] {
  * Page d'accueil. La couverture et le bandeau défilant viennent de GET /sante,
  * en direct : si le moteur ne répond pas, la page le dit.
  */
-export function Accueil({ sante }: { sante: VueSante | null }) {
+export function Accueil({
+  sante,
+  demo = false,
+  nonConfigure = false,
+}: {
+  sante: VueSante | null;
+  demo?: boolean;
+  nonConfigure?: boolean;
+}) {
   const cartes = sante ? cartesDomaines(sante) : [];
   const situations = sante ? sante.catalogue.parDomaine.flatMap((d) => d.fiches) : [];
 
@@ -58,6 +66,27 @@ export function Accueil({ sante }: { sante: VueSante | null }) {
         </div>
       </section>
 
+      {nonConfigure ? (
+        <div
+          role="alert"
+          style={{
+            border: "2px solid #a11",
+            background: "#fff1f0",
+            color: "#5a0b0b",
+            padding: "0.8rem 1rem",
+            margin: "0 auto",
+            maxWidth: "62rem",
+            fontSize: "0.95rem",
+            lineHeight: 1.45,
+          }}
+        >
+          <strong>Cette instance n&apos;est pas configurée.</strong> Ni démonstration
+          (<code>MONRECOURS_MODE=demo</code>) ni moteur juridique
+          (<code>MONRECOURS_API_KEY</code>) ne sont définis : rien ne peut être
+          répondu. Ce n&apos;est pas le service en production.
+        </div>
+      ) : null}
+
       {situations.length > 0 ? (
         <div className="bandeau" aria-hidden="true">
           <div className="bandeau__piste">
@@ -74,7 +103,15 @@ export function Accueil({ sante }: { sante: VueSante | null }) {
         <div className="section__interieur">
           <div className="section__entete">
             <h2 id="titre-couverture-accueil">Ce que le service sait traiter aujourd&apos;hui</h2>
-            {sante ? (
+            {sante && demo ? (
+              <p>
+                <strong>Le corpus juridique complet n&apos;est pas connecté à cette démonstration.</strong>{" "}
+                Les {sante.catalogue.fiches} situations ci-dessous sont celles du produit complet ; ici,
+                aucune n&apos;est interrogée en direct, aucun texte de loi n&apos;est lu et aucune réponse
+                n&apos;est calculée. Les chiffres de couverture du corpus ne sont pas affichés, faute de
+                corpus réellement chargé.
+              </p>
+            ) : sante ? (
               <p>
                 {sante.catalogue.fiches} situations sont couvertes, chacune rattachée à un article de loi
                 précis. Pour tout autre sujet, le service vous dira qu&apos;il ne peut pas conclure.

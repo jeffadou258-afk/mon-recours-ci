@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Atkinson_Hyperlegible, Bricolage_Grotesque, Source_Serif_4 } from "next/font/google";
 import { EnTete, PiedDePage } from "@/components/Cadre";
+import { BandeauDemonstration } from "@/components/BandeauDemonstration";
 import { EnregistrementServiceWorker } from "@/components/EnregistrementServiceWorker";
 import "./globals.css";
 
@@ -47,6 +48,7 @@ export default function Racine({ children }: { children: React.ReactNode }) {
         <a href="#contenu" className="lien-evitement">
           Aller au contenu
         </a>
+        {process.env.MONRECOURS_MODE === "demo" ? <BandeauDemonstration /> : null}
         <EnTete />
         <main id="contenu" className="page">
           {children}

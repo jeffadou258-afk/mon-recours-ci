@@ -10,6 +10,7 @@
  */
 
 import { readFile } from "node:fs/promises";
+import { PDF_DEMONSTRATION } from "./demo";
 import type { CodeErreur, ErreurApi, ResultatApi } from "../types";
 import { validerDemande, validerInformationsCourrier, validerReponses } from "../validation";
 import {
@@ -385,6 +386,29 @@ export async function gererTelechargementCourrier(
   if (!dossierId) return erreur("SESSION_ABSENTE");
   const trop = verifierDebitVisiteur(requete, config, dep);
   if (trop) return trop;
+
+  // Mode démonstration : le PDF est un fichier statique livré avec l'application.
+  // Aucune lecture de `DOSSIERS/`, aucune écriture : rien ne dépend d'un disque
+  // persistant, ce qui est exactement la contrainte de Vercel.
+  if (config.demo) {
+    const origine = new URL(requete.url).origin;
+    const statique = await fetch(`${origine}/${PDF_DEMONSTRATION}`, { cache: "no-store" });
+    if (!statique.ok) return erreur("COURRIER_ABSENT");
+    const octetsDemo = new Uint8Array(await statique.arrayBuffer());
+    const nomDemo = PDF_DEMONSTRATION.split("/").pop() as string;
+    return new Response(octetsDemo, {
+      status: 200,
+      headers: {
+        "Content-Type": "application/pdf",
+        "Content-Length": String(octetsDemo.length),
+        "Content-Disposition": `attachment; filename="${nomDemo}"`,
+        "Cache-Control": "no-store, max-age=0",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Security-Policy": "default-src 'none'; object-src 'none'",
+        "X-Mode": "demonstration",
+      },
+    });
+  }
 
   let courrier;
   try {
