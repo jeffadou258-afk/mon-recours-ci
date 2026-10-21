@@ -53,7 +53,19 @@ else
       if grep -qiE '"motDePasse"[[:space:]]*:[[:space:]]*"[^s]' "$comptes" || ! grep -q 'scrypt\$' "$comptes"; then
         echec "fichier de comptes : une entrée ne contient pas d'empreinte scrypt"
       else
-        ok "fichier de comptes : uniquement des empreintes scrypt (contenu non affiché)"
+        # Chaque valeur de `motDePasse` doit commencer par « scrypt$ ». Un simple
+        # « contient au moins un scrypt » laissait passer un fichier mixte dont le
+        # mot de passe en clair commençait par « s ».
+        valeurs=$(grep -oE '"motDePasse"[[:space:]]*:[[:space:]]*"[^"]*"' "$comptes" | sed -E 's/.*"([^"]*)"$/\1/')
+        total=$(printf '%s\n' "$valeurs" | grep -c . || true)
+        scrypts=$(printf '%s\n' "$valeurs" | grep -c '^scrypt\$' || true)
+        if [ "$total" -eq 0 ]; then
+          echec "fichier de comptes : aucune empreinte trouvée"
+        elif [ "$total" -ne "$scrypts" ]; then
+          echec "fichier de comptes : $((total - scrypts)) mot(s) de passe non hachés (empreinte scrypt attendue)"
+        else
+          ok "fichier de comptes : $total empreinte(s) scrypt, aucun mot de passe en clair (contenu non affiché)"
+        fi
       fi
     fi
   elif variable_definie MONRECOURS_COMPTES; then
