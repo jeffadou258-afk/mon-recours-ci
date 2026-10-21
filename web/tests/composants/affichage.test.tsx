@@ -7,6 +7,7 @@ import { Clarification, composerReponse } from "../../src/components/Clarificati
 import { BandeauUrgence, EncadreVerrous } from "../../src/components/Alertes";
 import { Accueil } from "../../src/components/Accueil";
 import { MessageErreur } from "../../src/components/MessageErreur";
+import { Parcours } from "../../src/components/Parcours";
 import { assainirSante } from "../../src/lib/server/assainir";
 import type { VueClarification, VueReponse } from "../../src/lib/types";
 import { fixture } from "../aides";
@@ -198,4 +199,18 @@ test("brouillon : texte affiché dans une zone lisible, avec bouton de copie", (
   assert.match(texteVisible(html), /Compléter le courrier/);
   assert.match(texteVisible(html), /Vos nom, prénom et adresse/);
   assert.match(html, /name="expediteur"/);
+});
+
+test("consultation : en démonstration, aucun envoi au moteur n'est annoncé", () => {
+  const demo = renderToStaticMarkup(<Parcours demo />);
+  assert.match(demo, /Démonstration publique/);
+  assert.match(demo, /scénario fictif/);
+  assert.match(demo, /Aucune analyse juridique réelle/);
+  assert.match(demo, /information personnelle ou confidentielle/);
+  assert.doesNotMatch(demo, /transmise au moteur juridique/);
+  assert.doesNotMatch(demo, /garde une trace/);
+
+  const reel = renderToStaticMarkup(<Parcours />);
+  assert.match(reel, /transmise au moteur juridique/);
+  assert.doesNotMatch(reel, /Démonstration publique/);
 });

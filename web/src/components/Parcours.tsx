@@ -24,7 +24,7 @@ type Etat =
   | { phase: "fin"; ouverture: VueOuverture; reponse: VueReponse | null };
 
 /** Parcours complet : décrire → préciser → résultat. Tout l'état vit en mémoire. */
-export function Parcours() {
+export function Parcours({ demo = false }: { demo?: boolean } = {}) {
   const [etat, setEtat] = useState<Etat>({ phase: "saisie" });
   const [demande, setDemande] = useState("");
   const [erreurSaisie, setErreurSaisie] = useState<string | null>(null);
@@ -161,7 +161,13 @@ export function Parcours() {
             </p>
           ) : null}
           {etat.phase === "ouverture" ? (
-            <Chargement message="Recherche des textes qui correspondent à votre situation…" />
+            <Chargement
+              message={
+                demo
+                  ? "Chargement du scénario de démonstration…"
+                  : "Recherche des textes qui correspondent à votre situation…"
+              }
+            />
           ) : (
             <div className="actions">
               <button type="submit" className="bouton">
@@ -169,11 +175,19 @@ export function Parcours() {
               </button>
             </div>
           )}
-          <p className="formulaire__confidentialite">
-            Votre description est transmise au moteur juridique de Mon Recours CI uniquement, qui en
-            garde une trace sur son serveur pour pouvoir justifier sa réponse. Elle n&apos;est envoyée
-            à aucun service tiers ni à aucun modèle d&apos;intelligence artificielle.
-          </p>
+          {demo ? (
+            <p className="formulaire__confidentialite">
+              <strong>Démonstration publique :</strong> votre saisie sert uniquement à parcourir un
+              scénario fictif. Aucune analyse juridique réelle n&apos;est effectuée. N&apos;entrez
+              aucune information personnelle ou confidentielle.
+            </p>
+          ) : (
+            <p className="formulaire__confidentialite">
+              Votre description est transmise au moteur juridique de Mon Recours CI uniquement, qui en
+              garde une trace sur son serveur pour pouvoir justifier sa réponse. Elle n&apos;est envoyée
+              à aucun service tiers ni à aucun modèle d&apos;intelligence artificielle.
+            </p>
+          )}
         </form>
       ) : null}
 
@@ -185,7 +199,15 @@ export function Parcours() {
             envoi={etat.envoi}
             onEnvoyer={(reponses) => void lancerReponses(etat.vue, reponses)}
           />
-          {etat.envoi ? <Chargement message="Le moteur vérifie les textes et prépare le résultat…" /> : null}
+          {etat.envoi ? (
+            <Chargement
+              message={
+                demo
+                  ? "Chargement de la suite du scénario de démonstration…"
+                  : "Le moteur vérifie les textes et prépare le résultat…"
+              }
+            />
+          ) : null}
         </>
       ) : null}
 

@@ -6,5 +6,7 @@ export const metadata: Metadata = {
 };
 
 export default function PageConsultation() {
-  return <Parcours />;
+  // Lu côté serveur, comme le bandeau de `layout.tsx` : en démonstration, le
+  // parcours ne doit rien affirmer sur un moteur qui n'est pas interrogé.
+  return <Parcours demo={process.env.MONRECOURS_MODE === "demo"} />;
 }
