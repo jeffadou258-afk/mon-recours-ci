@@ -88,10 +88,16 @@ const pdf = await appel("/api/courrier/telecharger");
 const typePdf = pdf.entetes.get("content-type") || "";
 noter("PDF interdit sans session", /pdf/i.test(typePdf) ? "FAIL" : "PASS", `${pdf.statut} ${typePdf}`);
 
+const EN_TETES_POST = {
+  "content-type": "application/json",
+  // Le serveur refuse toute écriture sans origine : un navigateur l'envoie toujours.
+  origin: URL_BASE,
+};
+
 // 4. Le formulaire refuse proprement une saisie vide
 const ouvrir = await appel("/api/ouvrir", {
   method: "POST",
-  headers: { "content-type": "application/json" },
+  headers: EN_TETES_POST,
   body: JSON.stringify({ demande: "" }),
 });
 noter("saisie vide rejetée (pas 500)", ouvrir.statut >= 400 && ouvrir.statut < 500 ? "PASS" : "FAIL", `${ouvrir.statut}`);
@@ -102,7 +108,7 @@ let limite = false;
 for (let i = 0; i < 25 && !limite; i++) {
   const r = await appel("/api/ouvrir", {
     method: "POST",
-    headers: { "content-type": "application/json" },
+    headers: EN_TETES_POST,
     body: JSON.stringify({ demande: "" }),
   });
   if (r.statut === 429) limite = true;

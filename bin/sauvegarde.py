@@ -355,7 +355,15 @@ def commande_restaurer(args):
                          % (len(abimes), abimes[0]))
 
         # Les récits retrouvent des permissions privées, jamais celles de l'archive.
-        shutil.copytree(racine / "dossiers", sortie, dirs_exist_ok=True)
+        # Une sauvegarde prise alors que DOSSIERS/ était vide ne contient aucune
+        # entrée `dossiers/` : la restauration doit produire un répertoire vide et
+        # non échouer — c'est le cas d'une installation neuve, avant la première
+        # consultation.
+        source_recits = racine / "dossiers"
+        if source_recits.is_dir():
+            shutil.copytree(source_recits, sortie, dirs_exist_ok=True)
+        else:
+            sortie.mkdir(parents=True, exist_ok=True)
         os.chmod(sortie, MODE_DOSSIER)
         for chemin in sortie.rglob("*"):
             os.chmod(chemin, MODE_DOSSIER if chemin.is_dir() else MODE_FICHIER)
