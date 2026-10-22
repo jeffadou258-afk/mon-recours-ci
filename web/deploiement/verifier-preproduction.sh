@@ -39,6 +39,14 @@ else
   droits=$(stat -c '%a' "$FICHIER_ENV")
   [ "$droits" = "600" ] || [ "$droits" = "400" ] && ok "fichier d'environnement en $droits" || echec "fichier d'environnement en $droits (attendu 600)"
   valeur_egale MONRECOURS_MODE demo && echec "MONRECOURS_MODE=demo : l'administration serait fermée" || ok "mode démonstration désactivé"
+  if variable_definie MONRECOURS_CONSERVATION_HEURES; then
+    valeur_egale MONRECOURS_CONSERVATION_HEURES 24 && ok "conservation des consultations : 24 h" \
+      || echec "MONRECOURS_CONSERVATION_HEURES différent de 24 (décision produit)"
+  else
+    info "MONRECOURS_CONSERVATION_HEURES absent : 24 h par défaut"
+  fi
+  grep -q -- '--heures 24' /etc/systemd/system/monrecours-purge.service 2>/dev/null \
+    && ok "purge réglée sur 24 h" || echec "monrecours-purge.service absent ou pas réglé sur --heures 24"
   variable_definie MONRECOURS_LLM_FOURNISSEUR && echec "un fournisseur LLM est configuré (interdit en préproduction)" || ok "aucun fournisseur LLM configuré"
   variable_definie MONRECOURS_SESSION_SECRET && ok "secret de session présent (valeur non lue)" || echec "MONRECOURS_SESSION_SECRET absent"
   if variable_definie MONRECOURS_COMPTES && variable_definie MONRECOURS_COMPTES_FICHIER; then

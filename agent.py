@@ -30,7 +30,7 @@ import re
 import config
 from config import NOM_AGENT, VERSION, dossier_utilisateur
 from core import analyse as mod_analyse
-from core import base, corpus, documents, evidence, faits as mod_faits, garde_fous, plan_action, qualification, sources
+from core import base, conservation, corpus, documents, evidence, faits as mod_faits, garde_fous, plan_action, qualification, sources
 from core import corpus as mod_corpus
 from core.urgence import detecter as detecter_urgence
 
@@ -98,6 +98,9 @@ class MonRecoursCI(object):
         """Étapes 1 et 2 : qualification, urgence, collecte, questions ciblées."""
         chemin = dossier_utilisateur(dossier_id)  # valide l'identifiant
         config.creer_dossier_prive(chemin)
+        # Échéance de conservation écrite une seule fois, à la création : la purge
+        # et les contrôles de lecture s'y fient sans ouvrir le récit.
+        conservation.marquer(chemin)
 
         evaluation = garde_fous.evaluer_demande(demande)
         dossier = {

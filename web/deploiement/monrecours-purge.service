@@ -1,16 +1,18 @@
-# Purge quotidienne des consultations web expirées — Mon Recours CI.
+# Purge des consultations web expirées — Mon Recours CI (NON installée).
 #
-# Compagnon de monrecours-purge.timer (qui déclenchait un service inexistant).
-# Durée de conservation : 90 jours — HYPOTHÈSE DE CONCEPTION, à faire valider
-# juridiquement avant toute utilisation réelle. Modifier --jours ici ET dans la
-# page « comprendre » présentée aux utilisateurs.
+# Compagnon de monrecours-purge.timer (toutes les 15 minutes).
+# Conservation : 24 heures après la création (décision produit du 22/10/2026).
+# L'échéance est lue dans DOSSIERS/<id>/CONSERVATION.json ; la valeur --heures
+# ne sert qu'aux dossiers antérieurs à ce fichier. Garder la même durée dans
+# MONRECOURS_CONSERVATION_HEURES (/etc/mon-recours-ci/env) et dans la page
+# « Comprendre ».
 #
 # La sortie ne contient que des compteurs : aucune donnée personnelle n'entre
 # dans le journal systemd. Le journal applicatif (JSONL) ne contient lui aussi
 # que des compteurs — voir web/scripts/purger-consultations.mjs.
 
 [Unit]
-Description=Purge des consultations web expirées (Mon Recours CI)
+Description=Purge des consultations expirées, 24 h (Mon Recours CI)
 Documentation=file:/opt/mon-recours-ci/docs/SAUVEGARDE_RESTAURATION.md
 After=network.target
 
@@ -21,7 +23,7 @@ Group=monrecours
 WorkingDirectory=/opt/mon-recours-ci/web
 Environment=MONRECOURS_DOSSIERS=/opt/mon-recours-ci/DOSSIERS
 Environment=MONRECOURS_JOURNAL_PURGE=/opt/mon-recours-ci/KNOWLEDGE/qualite/purge.jsonl
-ExecStart=/usr/bin/node scripts/purger-consultations.mjs --jours 90 --confirmer
+ExecStart=/usr/bin/node scripts/purger-consultations.mjs --heures 24 --confirmer
 
 # Durcissement : aucun privilège, pas de /tmp partagé, système en lecture seule
 # sauf les deux chemins que la purge doit écrire. SANS ReadWritePaths, la purge

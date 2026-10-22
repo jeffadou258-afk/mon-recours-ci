@@ -207,10 +207,31 @@ test("consultation : en démonstration, aucun envoi au moteur n'est annoncé", (
   assert.match(demo, /scénario fictif/);
   assert.match(demo, /Aucune analyse juridique réelle/);
   assert.match(demo, /information personnelle ou confidentielle/);
-  assert.doesNotMatch(demo, /transmise au moteur juridique/);
-  assert.doesNotMatch(demo, /garde une trace/);
+  assert.doesNotMatch(demo, /transmise au seul moteur juridique/);
+  assert.doesNotMatch(demo, /Consultation temporaire/);
 
   const reel = renderToStaticMarkup(<Parcours />);
-  assert.match(reel, /transmise au moteur juridique/);
+  assert.match(reel, /transmise au seul moteur juridique/);
+  assert.match(reel, /Consultation temporaire/);
+  assert.match(reel, /24 heures au plus/);
+  assert.match(reel, /supprimée[\s\S]*automatiquement/);
   assert.doesNotMatch(reel, /Démonstration publique/);
+});
+
+test("conservation 24 h : l'écran de résultats l'annonce, et une consultation expirée propose de recommencer", async () => {
+  const { ActionsConsultation } = await import("../../src/components/ActionsConsultation");
+  const actions = renderToStaticMarkup(<ActionsConsultation reponse={null} />);
+  assert.match(actions, /Consultation temporaire/);
+  assert.match(actions, /24 heures au plus/);
+  assert.match(actions, /ne pourra pas être retrouvée/);
+
+  const expiree = renderToStaticMarkup(
+    <MessageErreur
+      erreur={{ code: "CONSULTATION_EXPIREE", message: "Cette consultation a dépassé sa durée de conservation.", reessayable: false }}
+      onRecommencer={() => undefined}
+    />,
+  );
+  assert.match(expiree, /Consultation expirée et supprimée/);
+  assert.match(expiree, /data-code="CONSULTATION_EXPIREE"/);
+  assert.match(expiree, /Recommencer|Décrire/);
 });

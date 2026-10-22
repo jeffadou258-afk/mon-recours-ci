@@ -46,9 +46,14 @@ export function ActionsConsultation({ reponse }: { reponse: VueReponse | null })
           </button>
         </div>
       ) : null}
+      <p className="info" data-conservation="24h">
+        <strong>Consultation temporaire.</strong> Elle sera supprimée du serveur 24 heures au plus après son début,
+        et ne pourra pas être retrouvée ensuite. Enregistrez dès maintenant ce dont vous avez besoin.
+      </p>
       <p className="bloc__note">
-        Les fichiers sont fabriqués sur votre appareil : rien n&apos;est envoyé. Pour un PDF, choisissez « Enregistrer
-        en PDF » dans la fenêtre d&apos;impression.
+        Les fichiers sont fabriqués sur votre appareil : rien n&apos;est envoyé. Une fois enregistrés, ils restent sur
+        votre appareil et ne sont pas concernés par la suppression. Pour un PDF, choisissez « Enregistrer en PDF »
+        dans la fenêtre d&apos;impression.
       </p>
 
       {suppression === "faite" ? (
@@ -73,7 +78,7 @@ export function ActionsConsultation({ reponse }: { reponse: VueReponse | null })
           {suppression === "echec" ? (
             <p className="info" role="alert">
               La suppression n&apos;a pas abouti (session expirée ou service indisponible). Votre consultation sera
-              effacée automatiquement selon la durée de conservation du service.
+              effacée automatiquement du serveur 24 heures au plus après son début.
             </p>
           ) : null}
           <button type="button" className="lien-bouton" onClick={() => setSuppression("confirmer")}>

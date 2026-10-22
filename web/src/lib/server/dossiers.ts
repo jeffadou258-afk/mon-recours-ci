@@ -26,12 +26,56 @@
  * chemin : il renvoie des octets, sous un nom fixé par nous.
  */
 
-import { readdir, realpath, stat } from "node:fs/promises";
+import { readFile, readdir, realpath, stat } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 
 const MOTIF_COURRIER = /^\d{8}-\d{6}_reclamation\.pdf$/;
 
 export class CourrierIntrouvable extends Error {}
+
+/** La durée de conservation de la consultation est écoulée : plus rien n'est servi. */
+export class ConsultationExpiree extends Error {}
+
+const HEURE_MS = 3600 * 1000;
+
+/** Durée de conservation en heures (MONRECOURS_CONSERVATION_HEURES, 24 par défaut). */
+export function dureeConservationHeures(env: Record<string, string | undefined> = process.env): number {
+  const brut = env.MONRECOURS_CONSERVATION_HEURES ?? "";
+  if (brut === "") return 24;
+  const valeur = Number(brut);
+  if (!Number.isInteger(valeur) || valeur < 1) throw new Error("MONRECOURS_CONSERVATION_HEURES invalide");
+  return valeur;
+}
+
+/**
+ * Échéance d'une consultation, même règle que le moteur (core/conservation.py) :
+ * `CONSERVATION.json` ; à défaut `ouvert_le` + durée ; à défaut date de
+ * modification + durée. `null` si le dossier n'existe pas.
+ */
+export async function echeanceConsultation(dossierId: string, heures = dureeConservationHeures()): Promise<number | null> {
+  const dossier = join(racineDossiers(), dossierId);
+  let infos;
+  try {
+    infos = await stat(dossier);
+  } catch {
+    return null;
+  }
+  if (!infos.isDirectory()) return null;
+  try {
+    const t = Date.parse(JSON.parse(await readFile(join(dossier, "CONSERVATION.json"), "utf8")).expire_le);
+    if (Number.isFinite(t)) return t;
+  } catch {
+    /* repli */
+  }
+  try {
+    const brut = String(JSON.parse(await readFile(join(dossier, "DOSSIER_EN_COURS.json"), "utf8")).ouvert_le ?? "");
+    const t = Date.parse(/[zZ]|[+-]\d\d:?\d\d$/.test(brut) ? brut : `${brut}Z`);
+    if (Number.isFinite(t)) return t + heures * HEURE_MS;
+  } catch {
+    /* repli */
+  }
+  return infos.mtimeMs + heures * HEURE_MS;
+}
 
 export function racineDossiers(): string {
   return resolve(process.env.MONRECOURS_DOSSIERS ?? join(process.cwd(), "..", "DOSSIERS"));
@@ -50,6 +94,8 @@ export async function dernierCourrierPdf(dossierId: string): Promise<CourrierPdf
   if (!/^web-[0-9a-f-]{36}$/.test(dossierId)) {
     throw new CourrierIntrouvable("identifiant de dossier refusé");
   }
+  const echeance = await echeanceConsultation(dossierId);
+  if (echeance !== null && Date.now() >= echeance) throw new ConsultationExpiree("consultation expirée");
   const dossier = join(racineDossiers(), dossierId, "BROUILLONS");
   let noms: string[];
   try {

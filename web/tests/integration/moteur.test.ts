@@ -318,3 +318,47 @@ test("courrier : le PDF se télécharge, et seulement pour son dossier", async (
   );
   assert.equal(forge.status, 409);
 });
+
+test("conservation 24 h : l'échéance est inscrite à l'ouverture ; échue, rien n'est plus servi ni recréé", async () => {
+  const { deballer, lireCookie } = await import("../../src/lib/server/session");
+  const { readFile, readdir, writeFile } = await import("node:fs/promises");
+  const { join } = await import("node:path");
+  const { RACINE_MOTEUR } = await import("../moteur-reel");
+
+  const ouverture = await gererOuvrir(
+    requeteJson("/api/ouvrir", { demande: "Mon bailleur garde ma caution depuis deux mois." }),
+    { config },
+  );
+  assert.equal(ouverture.status, 200);
+  const cookie = cookieDe(ouverture);
+  const dossierId = deballer(lireCookie(cookie), config().secretSession);
+  assert.ok(dossierId);
+  const dossier = join(RACINE_MOTEUR, "DOSSIERS", dossierId!);
+
+  const meta = JSON.parse(await readFile(join(dossier, "CONSERVATION.json"), "utf8"));
+  assert.equal(Date.parse(meta.expire_le) - Date.parse(meta.cree_le), 24 * 3600 * 1000);
+  assert.ok(Math.abs(Date.now() - Date.parse(meta.cree_le)) < 120_000);
+
+  // Vieillissement simulé (données synthétiques) : l'échéance passe dans le passé.
+  meta.expire_le = new Date(Date.now() - 1000).toISOString();
+  await writeFile(join(dossier, "CONSERVATION.json"), JSON.stringify(meta));
+  const avant = (await readdir(dossier)).sort();
+
+  const repondre = await gererRepondre(requeteJson("/api/repondre", { reponses: { logement: "oui" } }, { Cookie: cookie }), { config });
+  const courrier = await gererCourrier(requeteJson("/api/courrier", { informations: { expediteur: "Personne Fictive" } }, { Cookie: cookie }), { config });
+  const pdf = await gererTelechargementCourrier(
+    new Request("http://localhost:3000/api/courrier/telecharger", { headers: { Cookie: cookie } }),
+    { config },
+  );
+  for (const rep of [repondre, courrier, pdf]) {
+    const texte = await rep.text();
+    assert.equal(rep.status, 410, texte);
+    assert.equal(JSON.parse(texte).erreur.code, "CONSULTATION_EXPIREE");
+    assert.doesNotMatch(texte, /caution|bailleur/i, "aucun élément du récit renvoyé");
+  }
+  assert.deepEqual((await readdir(dossier)).sort(), avant, "le dossier expiré n'est pas modifié");
+
+  // La personne garde le droit de supprimer elle-même.
+  const suppression = await gererSupprimer(requeteJson("/api/supprimer", {}, { Cookie: cookie }), { config });
+  assert.equal(suppression.status, 200);
+});

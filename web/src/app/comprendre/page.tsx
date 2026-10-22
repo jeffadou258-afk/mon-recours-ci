@@ -71,6 +71,19 @@ export default function PageComprendre() {
         reformulation pour vous aider à lire : seul le texte cité fait foi.
       </p>
 
+      <h2>Combien de temps votre consultation est conservée</h2>
+      <p>
+        Une consultation est <strong>temporaire</strong>. Votre récit, vos réponses, les informations du
+        courrier et le courrier lui-même sont supprimés du serveur <strong>24 heures au plus</strong> après le
+        début de la consultation. Passé ce délai, ils ne sont plus affichés, même si la suppression technique
+        n&apos;a pas encore eu lieu, et ils ne peuvent pas être retrouvés. Vous pouvez aussi supprimer votre
+        consultation vous-même, à tout moment, depuis la page de résultats.
+      </p>
+      <p>
+        Les fichiers que vous enregistrez sur votre téléphone ou votre ordinateur restent chez vous : ils ne sont
+        pas concernés par cette suppression.
+      </p>
+
       <h2>Quand un professionnel doit intervenir</h2>
       <p>
         Si votre situation comporte un risque important (expulsion, procédure en justice, délai

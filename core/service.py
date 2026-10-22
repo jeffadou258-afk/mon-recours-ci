@@ -40,7 +40,7 @@ if RACINE not in sys.path:
     sys.path.insert(0, RACINE)
 
 import config  # noqa: E402
-from core import catalogue, corpus, couverture, llm  # noqa: E402
+from core import catalogue, conservation, corpus, couverture, llm  # noqa: E402
 from core import documents as mod_documents  # noqa: E402
 from core.conversation import Conversation  # noqa: E402
 
@@ -51,6 +51,7 @@ CODES_ERREUR = {
     "ENTREE_INVALIDE": "La demande ou les réponses ne respectent pas le contrat.",
     "DOSSIER_INVALIDE": "L'identifiant de dossier est refusé (traversée de chemin).",
     "DOSSIER_INCONNU": "Aucune conversation n'est ouverte pour ce dossier.",
+    "DOSSIER_EXPIRE": "La durée de conservation de cette consultation est écoulée : elle n'est plus servie.",
     "CATALOGUE_INVALIDE": "Le catalogue de fiches ne correspond plus au corpus.",
     "ANALYSE_INCOMPLETE": "Le courrier ne peut être rédigé avant l'identification du droit applicable.",
     "INTERNE": "Erreur interne : l'incident est déclaré, pas masqué.",
@@ -130,6 +131,12 @@ def _valider_dossier(dossier_id):
     return dossier_id
 
 
+def _refuser_si_expire(dossier_id):
+    """Un dossier dont l'échéance est passée n'est plus lu, même avant la purge."""
+    if conservation.est_expire(config.dossier_utilisateur(dossier_id)):
+        raise _ErreurService("DOSSIER_EXPIRE", CODES_ERREUR["DOSSIER_EXPIRE"])
+
+
 def _valider_texte(valeur, nom, maximum):
     if not isinstance(valeur, str) or not valeur.strip():
         raise _ErreurService("ENTREE_INVALIDE", "%s doit être une chaîne non vide" % nom)
@@ -175,6 +182,7 @@ def ouvrir(dossier_id, demande):
     def corps():
         _valider_dossier(dossier_id)
         _valider_texte(demande, "demande", LONGUEUR_MAX_DEMANDE)
+        _refuser_si_expire(dossier_id)
         if os.path.exists(str(config.dossier_utilisateur(dossier_id) / "CONVERSATION.json")):
             raise _ErreurService(
                 "ENTREE_INVALIDE",
@@ -187,6 +195,7 @@ def ouvrir(dossier_id, demande):
 def repondre(dossier_id, reponses):
     def corps():
         _valider_dossier(dossier_id)
+        _refuser_si_expire(dossier_id)
         if not isinstance(reponses, dict):
             raise _ErreurService("ENTREE_INVALIDE", "reponses doit être un dictionnaire")
         propre = {}
@@ -289,6 +298,7 @@ def rediger_courrier(dossier_id, informations=None):
     """
     def corps():
         _valider_dossier(dossier_id)
+        _refuser_si_expire(dossier_id)
         if informations is not None and not isinstance(informations, dict):
             raise _ErreurService("ENTREE_INVALIDE", "informations doit être un dictionnaire")
         propres = {}

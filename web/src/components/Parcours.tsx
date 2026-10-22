@@ -184,9 +184,11 @@ export function Parcours({ demo = false }: { demo?: boolean } = {}) {
             </p>
           ) : (
             <p className="formulaire__confidentialite">
-              Votre description est transmise au moteur juridique de Mon Recours CI uniquement, qui en
-              garde une trace sur son serveur pour pouvoir justifier sa réponse. Elle n&apos;est envoyée
-              à aucun service tiers ni à aucun modèle d&apos;intelligence artificielle.
+              <strong>Consultation temporaire :</strong> votre description est transmise au seul moteur
+              juridique de Mon Recours CI. Elle est conservée sur son serveur{" "}
+              <strong>24 heures au plus</strong> après le début de la consultation, puis supprimée
+              automatiquement. Elle n&apos;est envoyée à aucun service tiers ni à aucun modèle
+              d&apos;intelligence artificielle.
             </p>
           )}
         </form>

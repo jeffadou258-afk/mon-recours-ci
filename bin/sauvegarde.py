@@ -25,10 +25,15 @@ CLÉ
     la commande échoue, elle ne sauvegarde pas en clair.
 
 USAGE
-    sauvegarde.py sauvegarder --sortie DIR [--dossiers P] [--base P] [--cle F]
+    sauvegarde.py sauvegarder --sortie DIR (--dossiers P | --sans-dossiers) --base P
+                              [--inclure P ...] [--cle F]
     sauvegarde.py verifier    --archive F [--cle F]
-    sauvegarde.py restaurer   --archive F --sortie DIR [--base-destination P]
-                              [--cle F] [--ecraser]
+    sauvegarde.py restaurer   --archive F [--sortie DIR] [--base-destination P]
+                              [--permanent-destination DIR] [--cle F] [--ecraser]
+
+    Conservation de 24 h : en production, `--sans-dossiers` exclut les
+    consultations des archives (aucune copie ne survit à la purge) ; `--inclure`
+    ajoute la configuration et le journal d'audit, qui sont permanents.
 
 CODES DE SORTIE
     0 succès · 2 usage ou clé · 3 archive invalide ou clé incorrecte
@@ -189,12 +194,22 @@ def ajouter_arbre(archive, source, prefixe):
 
 def commande_sauvegarder(args):
     cle = lire_cle(args.cle)
-    dossiers = Path(args.dossiers).resolve()
+    # Politique de conservation de 24 h : les consultations peuvent être EXCLUES
+    # des archives (--sans-dossiers), pour qu'aucune copie ne survive à la purge.
+    dossiers = None if args.sans_dossiers else Path(args.dossiers).resolve()
     base = Path(args.base).resolve()
     sortie = Path(args.sortie).resolve()
+    permanents = [Path(p).resolve() for p in (args.inclure or [])]
 
-    if not dossiers.is_dir():
+    if dossiers is not None and not dossiers.is_dir():
         raise Erreur(2, "répertoire de consultations introuvable : %s" % dossiers)
+    noms_permanents = set()
+    for chemin in permanents:
+        if not chemin.exists():
+            raise Erreur(2, "élément permanent introuvable : %s" % chemin)
+        if chemin.name in noms_permanents:
+            raise Erreur(2, "deux éléments permanents portent le même nom : %s" % chemin.name)
+        noms_permanents.add(chemin.name)
     sortie.mkdir(parents=True, exist_ok=True, mode=MODE_DOSSIER)
     os.chmod(sortie, MODE_DOSSIER)
 
@@ -203,7 +218,15 @@ def commande_sauvegarder(args):
     try:
         preparation = travail / "contenu"
         preparation.mkdir(mode=MODE_DOSSIER)
-        shutil.copytree(dossiers, preparation / "dossiers", symlinks=False)
+        if dossiers is not None:
+            shutil.copytree(dossiers, preparation / "dossiers", symlinks=False)
+        for chemin in permanents:
+            destination = preparation / "permanent" / chemin.name
+            destination.parent.mkdir(parents=True, exist_ok=True, mode=MODE_DOSSIER)
+            if chemin.is_dir():
+                shutil.copytree(chemin, destination, symlinks=False)
+            else:
+                shutil.copy2(chemin, destination)
         base_locale = preparation / "base" / base.name
         base_locale.parent.mkdir(parents=True, mode=MODE_DOSSIER)
         copier_base_coherente(base, base_locale)
@@ -241,7 +264,8 @@ def commande_sauvegarder(args):
             "octets_chiffre": chemin_chiffre.stat().st_size,
             "sha256_chiffre": sha256_fichier(chemin_chiffre),
             "nb_fichiers": len(manifeste["fichiers"]),
-            "contient": {"dossiers": True, "base": base.name},
+            "contient": {"dossiers": dossiers is not None, "base": base.name,
+                         "permanent": sorted(noms_permanents)},
         }
         chemin_entete.write_text(json.dumps(entete, indent=1), encoding="utf-8")
         os.chmod(chemin_entete, MODE_FICHIER)
@@ -328,11 +352,13 @@ def commande_restaurer(args):
     if not hmac.compare_digest(entete["mac"], calculer_mac(cle, iv, args.archive)):
         raise Erreur(3, "MAC invalide : clé incorrecte ou archive altérée")
 
-    sortie = Path(args.sortie).resolve()
-    if sortie.exists() and any(sortie.iterdir()):
-        if not args.ecraser:
-            raise Erreur(5, "destination non vide : %s (utiliser --ecraser)" % sortie)
-    sortie.mkdir(parents=True, exist_ok=True)
+    if not (args.sortie or args.base_destination or args.permanent_destination):
+        raise Erreur(2, "rien à restaurer : indiquer --sortie, --base-destination ou --permanent-destination")
+    destinations = [Path(d).resolve() for d in (args.sortie, args.permanent_destination) if d]
+    for destination in destinations:
+        if destination.exists() and any(destination.iterdir()) and not args.ecraser:
+            raise Erreur(5, "destination non vide : %s (utiliser --ecraser)" % destination)
+    sortie = Path(args.sortie).resolve() if args.sortie else None
 
     travail = Path(tempfile.mkdtemp(prefix="restauration-"))
     os.chmod(travail, MODE_DOSSIER)
@@ -355,10 +381,24 @@ def commande_restaurer(args):
                          % (len(abimes), abimes[0]))
 
         # Les récits retrouvent des permissions privées, jamais celles de l'archive.
-        shutil.copytree(racine / "dossiers", sortie, dirs_exist_ok=True)
-        os.chmod(sortie, MODE_DOSSIER)
-        for chemin in sortie.rglob("*"):
-            os.chmod(chemin, MODE_DOSSIER if chemin.is_dir() else MODE_FICHIER)
+        if sortie is not None:
+            if not (racine / "dossiers").is_dir():
+                raise Erreur(3, "cette archive ne contient pas de consultations (--sans-dossiers)")
+            sortie.mkdir(parents=True, exist_ok=True)
+            shutil.copytree(racine / "dossiers", sortie, dirs_exist_ok=True)
+            os.chmod(sortie, MODE_DOSSIER)
+            for chemin in sortie.rglob("*"):
+                os.chmod(chemin, MODE_DOSSIER if chemin.is_dir() else MODE_FICHIER)
+
+        if args.permanent_destination:
+            if not (racine / "permanent").is_dir():
+                raise Erreur(3, "aucun élément permanent dans l'archive")
+            cible_permanente = Path(args.permanent_destination).resolve()
+            cible_permanente.mkdir(parents=True, exist_ok=True)
+            shutil.copytree(racine / "permanent", cible_permanente, dirs_exist_ok=True)
+            os.chmod(cible_permanente, MODE_DOSSIER)
+            for chemin in cible_permanente.rglob("*"):
+                os.chmod(chemin, MODE_DOSSIER if chemin.is_dir() else MODE_FICHIER)
 
         base_restauree = None
         if args.base_destination:
@@ -371,7 +411,7 @@ def commande_restaurer(args):
             os.chmod(cible, MODE_FICHIER)
             base_restauree = cible
 
-        print("restauration : %s" % sortie)
+        print("restauration : %s" % (sortie or "(consultations non demandées)"))
         print("  fichiers vérifiés : %d" % len(manifeste["fichiers"]))
         if base_restauree:
             print("  base : %s" % base_restauree)
@@ -386,8 +426,13 @@ def construire_analyseur():
 
     s = sous.add_parser("sauvegarder", help="créer une archive chiffrée")
     s.add_argument("--sortie", required=True)
-    s.add_argument("--dossiers", required=True)
+    choix = s.add_mutually_exclusive_group(required=True)
+    choix.add_argument("--dossiers", help="répertoire des consultations à inclure")
+    choix.add_argument("--sans-dossiers", action="store_true",
+                       help="exclure les consultations (politique de conservation de 24 h)")
     s.add_argument("--base", required=True)
+    s.add_argument("--inclure", action="append",
+                   help="fichier ou répertoire permanent à inclure (configuration, journal d'audit) ; répétable")
     s.add_argument("--cle")
     s.set_defaults(fonction=commande_sauvegarder)
 
@@ -398,8 +443,9 @@ def construire_analyseur():
 
     r = sous.add_parser("restaurer", help="restaurer une archive dans un répertoire")
     r.add_argument("--archive", required=True)
-    r.add_argument("--sortie", required=True)
+    r.add_argument("--sortie", help="répertoire où restaurer les consultations (si l'archive en contient)")
     r.add_argument("--base-destination")
+    r.add_argument("--permanent-destination", help="répertoire où restaurer les éléments permanents")
     r.add_argument("--cle")
     r.add_argument("--ecraser", action="store_true")
     r.set_defaults(fonction=commande_restaurer)

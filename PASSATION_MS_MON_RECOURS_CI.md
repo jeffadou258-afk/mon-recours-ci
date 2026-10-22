@@ -1,5 +1,7 @@
 # PASSATION — Mon Recours CI (reprise par MS)
 
+> **22/10/2026 — conservation 24 h** : préparée sur la branche `feature/conservation-24h`, non installée. Voir `docs/CONSERVATION_24H.md`.
+
 Rédigé le 22/10/2026 à partir du dépôt GitHub `jeffadou258-afk/mon-recours-ci`,
 branche `feature/admin-authentification`, commit `a1aa017`, et de l'état réel
 des services consultés le même jour. Ce document ne contient **aucun secret**.

@@ -8,6 +8,11 @@ server {
     server_name votre-domaine.ci;
 
     client_max_body_size 32k;
+    # Corps des requêtes (récits) gardés en mémoire : jamais écrits dans les
+    # fichiers temporaires de nginx sur le disque.
+    client_body_buffer_size 32k;
+    # Journal d'accès : adresse, chemin, statut — jamais le corps des requêtes.
+    # Ubuntu le fait tourner chaque jour et en garde 14 (/etc/logrotate.d/nginx).
     server_tokens off;
 
     location /api/ {

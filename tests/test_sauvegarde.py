@@ -222,5 +222,83 @@ class TestSauvegardeEtRestauration(unittest.TestCase):
         self.assertTrue(self.archive.exists())
 
 
+@unittest.skipUnless(shutil.which("openssl"), "openssl requis")
+class TestSauvegardeSansConsultations(unittest.TestCase):
+    """Politique de 24 h : archive des seules données permanentes."""
+
+    def setUp(self):
+        self.base = Path(tempfile.mkdtemp(prefix="test-sauvegarde-24h-"))
+        os.chmod(self.base, 0o700)
+        dossier = self.base / "DOSSIERS" / DOSSIER
+        dossier.mkdir(parents=True)
+        (dossier / "CONVERSATION.json").write_text('{"recit": "%s"}' % MARQUEUR, encoding="utf-8")
+        self.base_sqlite = self.base / "corpus.sqlite3"
+        connexion = sqlite3.connect(str(self.base_sqlite))
+        connexion.execute("create table articles(numero text, texte text)")
+        connexion.execute("insert into articles values ('416', 'texte public fictif')")
+        connexion.commit()
+        connexion.close()
+        self.configuration = self.base / "mon-recours-ci"
+        self.configuration.mkdir()
+        (self.configuration / "comptes.json").write_text('[{"email": "fictif@exemple.invalid"}]', encoding="utf-8")
+        self.audit = self.base / "audit.jsonl"
+        self.audit.write_text('{"evenement": "connexion_refusee"}\n', encoding="utf-8")
+        self.cle = self.base / "cle"
+        self.cle.write_text(os.urandom(32).hex(), encoding="utf-8")
+        os.chmod(self.cle, 0o600)
+        self.sortie = self.base / "sauvegardes"
+
+    def tearDown(self):
+        shutil.rmtree(self.base, ignore_errors=True)
+
+    def _executer(self, *arguments):
+        return subprocess.run([sys.executable, str(OUTIL), *arguments], capture_output=True, text=True)
+
+    def _sauvegarder(self):
+        resultat = self._executer("sauvegarder", "--sortie", str(self.sortie), "--sans-dossiers",
+                                  "--base", str(self.base_sqlite), "--inclure", str(self.configuration),
+                                  "--inclure", str(self.audit), "--cle", str(self.cle))
+        self.assertEqual(resultat.returncode, 0, resultat.stderr)
+        return next(self.sortie.glob("*.enc"))
+
+    def test_aucune_consultation_dans_l_archive(self):
+        archive = self._sauvegarder()
+        entete = json.loads(archive.with_suffix(".json").read_text(encoding="utf-8"))
+        self.assertFalse(entete["contient"]["dossiers"])
+        self.assertEqual(entete["contient"]["permanent"], ["audit.jsonl", "mon-recours-ci"])
+        destination = self.base / "restau"
+        resultat = self._executer("restaurer", "--archive", str(archive), "--cle", str(self.cle),
+                                  "--base-destination", str(destination / "base.sqlite3"),
+                                  "--permanent-destination", str(destination / "permanent"))
+        self.assertEqual(resultat.returncode, 0, resultat.stderr)
+        restaure = "".join(p.read_text(encoding="utf-8", errors="ignore")
+                           for p in destination.rglob("*") if p.is_file() and p.suffix != ".sqlite3")
+        self.assertNotIn(MARQUEUR, restaure, "aucun récit ne doit figurer dans l'archive")
+        self.assertFalse((destination / "permanent" / DOSSIER).exists())
+
+    def test_elements_permanents_restaures_a_l_identique_et_prives(self):
+        archive = self._sauvegarder()
+        destination = self.base / "restau"
+        self._executer("restaurer", "--archive", str(archive), "--cle", str(self.cle),
+                       "--permanent-destination", str(destination))
+        self.assertEqual((destination / "mon-recours-ci" / "comptes.json").read_text(encoding="utf-8"),
+                         (self.configuration / "comptes.json").read_text(encoding="utf-8"))
+        self.assertEqual((destination / "audit.jsonl").read_text(encoding="utf-8"),
+                         self.audit.read_text(encoding="utf-8"))
+        self.assertEqual(os.stat(destination / "mon-recours-ci" / "comptes.json").st_mode & 0o777, 0o600)
+
+    def test_demander_des_consultations_a_une_archive_qui_n_en_a_pas_est_refuse(self):
+        archive = self._sauvegarder()
+        resultat = self._executer("restaurer", "--archive", str(archive), "--cle", str(self.cle),
+                                  "--sortie", str(self.base / "restau-dossiers"))
+        self.assertEqual(resultat.returncode, 3)
+
+    def test_il_faut_choisir_explicitement_d_inclure_ou_d_exclure_les_consultations(self):
+        resultat = self._executer("sauvegarder", "--sortie", str(self.sortie),
+                                  "--base", str(self.base_sqlite), "--cle", str(self.cle))
+        self.assertNotEqual(resultat.returncode, 0)
+        self.assertFalse(self.sortie.exists() and any(self.sortie.iterdir()))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

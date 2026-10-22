@@ -22,7 +22,7 @@ import {
   reponseAnalyseRefusee,
 } from "./assainir";
 import { ConfigurationInvalide, lireConfig, type ConfigServeur } from "./config";
-import { CourrierIntrouvable, dernierCourrierPdf } from "./dossiers";
+import { ConsultationExpiree, CourrierIntrouvable, dernierCourrierPdf } from "./dossiers";
 import { appelerMoteur, type Recuperateur, type ReponseMoteur } from "./moteur";
 import { identifiantVisiteur, limiteurParDefaut, type LimiteurVisiteurs } from "./limiteur";
 import { deballer, emballer, enteteCookie, enteteCookieEfface, lireCookie, nouvelIdentifiant } from "./session";
@@ -51,6 +51,8 @@ const MESSAGES: Record<CodeErreur, string> = {
     "Votre consultation a expiré ou n'a pas été trouvée. Recommencez en décrivant votre situation.",
   DOSSIER_INCONNU:
     "Le service ne retrouve pas votre consultation. Recommencez en décrivant votre situation.",
+  CONSULTATION_EXPIREE:
+    "Cette consultation a dépassé sa durée de conservation (24 heures) : elle a été ou va être supprimée du serveur. Recommencez en décrivant votre situation.",
   DEBIT_DEPASSE: "Le service reçoit trop de demandes en ce moment. Réessayez dans un instant.",
   SERVICE_INDISPONIBLE:
     "Le moteur juridique ne répond pas. Réessayez dans quelques minutes.",
@@ -72,6 +74,7 @@ const STATUT_HTTP: Record<CodeErreur, number> = {
   ORIGINE_REFUSEE: 403,
   SESSION_ABSENTE: 409,
   DOSSIER_INCONNU: 409,
+  CONSULTATION_EXPIREE: 410,
   DEBIT_DEPASSE: 429,
   SERVICE_INDISPONIBLE: 503,
   CONFIGURATION: 500,
@@ -200,6 +203,8 @@ function traduireEchec(reponse: ReponseMoteur, dep: Dependances, route: string):
       case "DOSSIER_INCONNU":
       case "AUCUNE_FICHE":
         return erreur("DOSSIER_INCONNU");
+      case "DOSSIER_EXPIRE":
+        return erreur("CONSULTATION_EXPIREE");
       case "DOSSIER_INVALIDE":
         return erreur("SESSION_ABSENTE");
       case "CATALOGUE_INVALIDE":
@@ -414,6 +419,7 @@ export async function gererTelechargementCourrier(
   try {
     courrier = await dernierCourrierPdf(dossierId);
   } catch (e) {
+    if (e instanceof ConsultationExpiree) return erreur("CONSULTATION_EXPIREE");
     if (e instanceof CourrierIntrouvable) return erreur("COURRIER_ABSENT");
     throw e;
   }

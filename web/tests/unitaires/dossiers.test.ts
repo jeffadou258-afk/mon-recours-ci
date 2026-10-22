@@ -16,7 +16,14 @@ import assert from "node:assert/strict";
 import { mkdir, mkdtemp, rm, symlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { CourrierIntrouvable, dernierCourrierPdf, racineDossiers } from "../../src/lib/server/dossiers";
+import {
+  ConsultationExpiree,
+  CourrierIntrouvable,
+  dernierCourrierPdf,
+  dureeConservationHeures,
+  echeanceConsultation,
+  racineDossiers,
+} from "../../src/lib/server/dossiers";
 
 const ID = "web-11111111-2222-4333-8444-555555555555";
 
@@ -105,4 +112,74 @@ test("un dossier inconnu ne produit aucune erreur système visible", async () =>
     (erreur: Error) => erreur instanceof CourrierIntrouvable && !/ENOENT|EACCES/.test(erreur.message),
   );
   await rm(racine, { recursive: true, force: true });
+});
+
+// --- Conservation temporaire (24 heures) ------------------------------------
+
+async function conservation(racine: string, dossier: string, expireDansMs: number): Promise<void> {
+  const maintenant = Date.now();
+  await mkdir(join(racine, dossier), { recursive: true });
+  await writeFile(
+    join(racine, dossier, "CONSERVATION.json"),
+    JSON.stringify({
+      version: 1,
+      cree_le: new Date(maintenant + expireDansMs - 24 * 3600 * 1000).toISOString(),
+      expire_le: new Date(maintenant + expireDansMs).toISOString(),
+      duree_heures: 24,
+    }),
+  );
+}
+
+test("conservation : avant l'échéance, le courrier est servi", async () => {
+  const racine = await bac();
+  await ecrire(racine, ID, "20261022-080000_reclamation.pdf");
+  await conservation(racine, ID, 60_000);
+  const courrier = await dernierCourrierPdf(ID);
+  assert.ok(courrier.octets > 0);
+  await rm(racine, { recursive: true, force: true });
+});
+
+test("conservation : après l'échéance, le courrier n'est plus servi, même avant la purge", async () => {
+  const racine = await bac();
+  await ecrire(racine, ID, "20261022-080000_reclamation.pdf");
+  await conservation(racine, ID, -1);
+  await assert.rejects(() => dernierCourrierPdf(ID), (e: Error) => e instanceof ConsultationExpiree);
+  await rm(racine, { recursive: true, force: true });
+});
+
+test("conservation : une consultation expirée n'empêche pas une autre, non expirée", async () => {
+  const racine = await bac();
+  const autre = "web-99999999-8888-4777-8666-555555555555";
+  await ecrire(racine, ID, "20261022-080000_reclamation.pdf");
+  await ecrire(racine, autre, "20261022-090000_reclamation.pdf");
+  await conservation(racine, ID, -1);
+  await conservation(racine, autre, 3600_000);
+  await assert.rejects(() => dernierCourrierPdf(ID), (e: Error) => e instanceof ConsultationExpiree);
+  assert.ok((await dernierCourrierPdf(autre)).octets > 0);
+  await rm(racine, { recursive: true, force: true });
+});
+
+test("conservation : repli sur ouvert_le pour un dossier antérieur, sans CONSERVATION.json", async () => {
+  const racine = await bac();
+  await ecrire(racine, ID, "20261022-080000_reclamation.pdf");
+  const ouvert = new Date(Date.now() - 25 * 3600 * 1000).toISOString().replace(/\.\d{3}Z$/, "+00:00");
+  await writeFile(join(racine, ID, "DOSSIER_EN_COURS.json"), JSON.stringify({ ouvert_le: ouvert }));
+  const echeance = await echeanceConsultation(ID, 24);
+  assert.ok(echeance !== null && echeance < Date.now());
+  await assert.rejects(() => dernierCourrierPdf(ID), (e: Error) => e instanceof ConsultationExpiree);
+  await rm(racine, { recursive: true, force: true });
+});
+
+test("conservation : un dossier absent n'a pas d'échéance (rien n'est recréé)", async () => {
+  const racine = await bac();
+  assert.equal(await echeanceConsultation(ID), null);
+  await rm(racine, { recursive: true, force: true });
+});
+
+test("conservation : durée configurable, valeur invalide refusée", () => {
+  assert.equal(dureeConservationHeures({}), 24);
+  assert.equal(dureeConservationHeures({ MONRECOURS_CONSERVATION_HEURES: "48" }), 48);
+  for (const brut of ["0", "-1", "abc", "1.5"]) {
+    assert.throws(() => dureeConservationHeures({ MONRECOURS_CONSERVATION_HEURES: brut }));
+  }
 });

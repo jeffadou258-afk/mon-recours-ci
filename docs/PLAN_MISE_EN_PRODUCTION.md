@@ -145,6 +145,10 @@ la TVA éventuelle dépend du pays de facturation.
 
 ### 3.5 Durée de conservation des consultations
 
+> **Mise à jour 22/10/2026 — décision produit : 24 heures.** La durée de 90 jours ci-dessous est remplacée par une conservation de 24 heures au plus, consultations exclues des sauvegardes. Voir `docs/CONSERVATION_24H.md`.
+
+Conséquence sur les coûts : l'option d'instantanés de l'hébergeur n'est plus utile (5,99 €/mois au lieu de 7,09 €).
+
 **90 jours est une proposition, pas une décision.** Mécanisme prêt : purge
 quotidienne des dossiers `web-*` non modifiés depuis N jours (simulation par
 défaut, suppression seulement avec `--confirmer`). Points à trancher ensemble :

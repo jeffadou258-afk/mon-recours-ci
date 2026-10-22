@@ -137,6 +137,7 @@ test("erreurs du moteur traduites, sans fuite de détail interne", async () => {
     [401, { ok: false, erreur: { code: "NON_AUTHENTIFIE" } }, {}, 500, "CONFIGURATION"],
     [429, { ok: false, erreur: { code: "DEBIT_DEPASSE" } }, { "Retry-After": "12" }, 429, "DEBIT_DEPASSE"],
     [422, fixtureErreur("DOSSIER_INCONNU"), {}, 409, "DOSSIER_INCONNU"],
+    [422, fixtureErreur("DOSSIER_EXPIRE"), {}, 410, "CONSULTATION_EXPIREE"],
     [422, fixtureErreur("CATALOGUE_INVALIDE"), {}, 503, "CATALOGUE_INVALIDE"],
     [422, { ok: false, erreur: { code: "INTERNE", message: "Traceback /Users/mac/secret.py" } }, {}, 502, "INTERNE"],
     [500, {}, {}, 503, "SERVICE_INDISPONIBLE"],

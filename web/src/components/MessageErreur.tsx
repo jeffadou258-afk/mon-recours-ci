@@ -6,6 +6,7 @@ const TITRES: Partial<Record<ErreurApi["code"], string>> = {
   DEBIT_DEPASSE: "Trop de demandes en même temps",
   SESSION_ABSENTE: "Consultation expirée",
   DOSSIER_INCONNU: "Consultation introuvable",
+  CONSULTATION_EXPIREE: "Consultation expirée et supprimée",
   ENTREE_INVALIDE: "Votre texte doit être corrigé",
   CONFIGURATION: "Service indisponible",
   CATALOGUE_INVALIDE: "Service suspendu par sécurité",
@@ -18,7 +19,8 @@ interface Props {
 }
 
 export function MessageErreur({ erreur, onReessayer, onRecommencer }: Props) {
-  const recommencer = erreur.code === "SESSION_ABSENTE" || erreur.code === "DOSSIER_INCONNU";
+  const recommencer =
+    erreur.code === "SESSION_ABSENTE" || erreur.code === "DOSSIER_INCONNU" || erreur.code === "CONSULTATION_EXPIREE";
   return (
     <div className="erreur" role="alert" data-code={erreur.code}>
       <p className="erreur__titre">{TITRES[erreur.code] ?? "La demande n'a pas abouti"}</p>

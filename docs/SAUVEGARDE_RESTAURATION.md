@@ -91,7 +91,10 @@ Clé absente | refus, code 2 |
 Destination non vide | refus, code 5 |
 Originaux | empreintes **inchangées** après le cycle complet |
 
-## 5. Conservation des consultations — 90 jours
+## 5. Conservation des consultations — 90 jours (remplacé)
+
+> **Mise à jour 22/10/2026 — décision produit : 24 heures.** La durée de 90 jours ci-dessous est remplacée par une conservation de 24 heures au plus, consultations exclues des sauvegardes. Voir `docs/CONSERVATION_24H.md`.
+
 
 **Hypothèse de conception, à faire valider juridiquement.** La durée n'est ni
 annoncée aux utilisateurs ni appliquée nulle part pour l'instant.

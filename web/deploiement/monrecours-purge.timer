@@ -1,25 +1,25 @@
-# Purge quotidienne des consultations web plus anciennes que la durée décidée.
-# Le service associé est monrecours-purge.service (même dossier) : sans lui, le
-# timer ne déclencherait rien — c'était le cas avant le chantier P0.
+# Purge des consultations expirées, toutes les 15 minutes (NON installé).
+# Politique (décision produit du 22/10/2026) : une consultation est conservée
+# 24 heures au plus après sa création. Avec un passage tous les quarts d'heure,
+# un dossier expiré disparaît du disque au plus 15 minutes après son échéance ;
+# entre-temps, le moteur et l'interface refusent déjà de le servir.
 #
-# Installation (non effectuée) :
+# Installation — SEULEMENT après accord explicite du propriétaire : au premier
+# passage, tous les dossiers web existants de plus de 24 h seront supprimés.
 #   sudo cp monrecours-purge.service monrecours-purge.timer /etc/systemd/system/
 #   sudo systemctl daemon-reload
 #   sudo systemctl enable --now monrecours-purge.timer
 #
-# Durée de conservation : 90 jours — HYPOTHÈSE DE CONCEPTION, à valider
-# juridiquement avant usage réel. La valeur est portée par `--jours` dans
-# monrecours-purge.service.
-#
-# La purge supprime les dossiers de l'espace ACTIF ; elle ne touche pas aux
-# archives chiffrées, qui peuvent encore contenir un récit purgé. Voir
-# docs/SAUVEGARDE_RESTAURATION.md pour la durée de vie des sauvegardes.
+# La purge ne touche pas aux archives : en production, les consultations sont
+# exclues des sauvegardes (monrecours-sauvegarde.service, --sans-dossiers).
 
 [Unit]
-Description=Purge quotidienne des consultations Mon Recours CI
+Description=Purge des consultations expirées (Mon Recours CI)
 
 [Timer]
-OnCalendar=*-*-* 03:30:00
+OnBootSec=2min
+OnUnitActiveSec=15min
+AccuracySec=1min
 Persistent=true
 
 [Install]

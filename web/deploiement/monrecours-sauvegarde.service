@@ -1,8 +1,12 @@
 # Sauvegarde chiffrée quotidienne — Mon Recours CI (NON installée).
 #
-# Compagnon de monrecours-sauvegarde.timer. Archive DOSSIERS/ (récits, courriers)
-# et la base du corpus, chiffrées AES-256-CBC + HMAC-SHA256 par bin/sauvegarde.py.
-# Rien de lisible n'est écrit hors du répertoire temporaire privé de l'outil.
+# Compagnon de monrecours-sauvegarde.timer. Politique de conservation de 24 h :
+# les CONSULTATIONS SONT EXCLUES (--sans-dossiers) — aucune copie d'un récit ne
+# survit à sa purge. L'archive contient les seules données permanentes : la base
+# du corpus, le fichier d'environnement, le fichier de comptes (s'il existe) et
+# le journal d'audit. Chiffrement AES-256-CBC + HMAC-SHA256 (bin/sauvegarde.py).
+# Le code et le corpus sont aussi dans Git : la reconstruction ne dépend pas de
+# cette archive seule.
 #
 # Prérequis (voir docs/SAUVEGARDE_RESTAURATION.md) :
 #   openssl rand -hex 32 > /etc/mon-recours-ci/cle-sauvegarde
@@ -10,14 +14,14 @@
 #   chmod 600 /etc/mon-recours-ci/cle-sauvegarde
 #   + une COPIE de la clé hors du serveur (sans elle, les archives sont illisibles).
 #
-# Les archives sont écrites dans /var/lib/monrecours-sauvegardes (0700). Ce
-# répertoire est SUR LE MÊME SERVEUR : il protège contre une erreur ou une
-# corruption, pas contre la perte du serveur. La copie hors serveur et la durée
-# de vie des archives sont des DÉCISIONS DU PROPRIÉTAIRE (aucune suppression
-# automatique n'est configurée ici).
+# Les archives sont écrites dans /var/lib/monrecours-sauvegardes (0700), sur le
+# même serveur. Une copie hors serveur et la durée de vie des archives restent
+# des DÉCISIONS DU PROPRIÉTAIRE (aucune suppression automatique ici). Comme les
+# archives ne contiennent plus de récit, leur durée de vie ne dépend plus de la
+# politique des 24 heures.
 
 [Unit]
-Description=Sauvegarde chiffrée des dossiers et du corpus (Mon Recours CI)
+Description=Sauvegarde chiffrée des données permanentes, sans consultations (Mon Recours CI)
 Documentation=file:/opt/mon-recours-ci/docs/SAUVEGARDE_RESTAURATION.md
 
 [Service]
@@ -25,13 +29,15 @@ Type=oneshot
 User=monrecours
 Group=monrecours
 WorkingDirectory=/opt/mon-recours-ci
-ExecStart=/opt/mon-recours-ci/.venv/bin/python bin/sauvegarde.py sauvegarder \
-  --dossiers /opt/mon-recours-ci/DOSSIERS \
+# La clé de sauvegarde n'est jamais incluse dans l'archive qu'elle chiffre.
+# « $$ » : systemd remplacerait lui-même « $C » et « $A » ; doublé, il laisse le shell le faire.
+ExecStart=/bin/sh -c 'set -e; C=""; [ -f /etc/mon-recours-ci/comptes.json ] && C="--inclure /etc/mon-recours-ci/comptes.json"; \
+  exec /opt/mon-recours-ci/.venv/bin/python bin/sauvegarde.py sauvegarder --sans-dossiers \
   --base /opt/mon-recours-ci/KNOWLEDGE/corpus_juridique.sqlite3 \
-  --sortie /var/lib/monrecours-sauvegardes \
-  --cle /etc/mon-recours-ci/cle-sauvegarde
+  --inclure /etc/mon-recours-ci/env $$C --inclure /var/lib/monrecours \
+  --sortie /var/lib/monrecours-sauvegardes --cle /etc/mon-recours-ci/cle-sauvegarde'
 # Contrôle immédiat de la dernière archive (MAC, déchiffrement, manifeste).
-ExecStartPost=/bin/sh -c 'A=$(ls -1t /var/lib/monrecours-sauvegardes/*.enc | head -1) && /opt/mon-recours-ci/.venv/bin/python bin/sauvegarde.py verifier --archive "$A" --cle /etc/mon-recours-ci/cle-sauvegarde'
+ExecStartPost=/bin/sh -c 'A=$$(ls -1t /var/lib/monrecours-sauvegardes/*.enc | head -1) && /opt/mon-recours-ci/.venv/bin/python bin/sauvegarde.py verifier --archive "$$A" --cle /etc/mon-recours-ci/cle-sauvegarde'
 
 StateDirectory=monrecours-sauvegardes
 StateDirectoryMode=0700
