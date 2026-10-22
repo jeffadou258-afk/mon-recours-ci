@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import type { ErreurApi, VueClarification, VueOuverture, VueReponse } from "@/lib/types";
+import type { ErreurApi, VueAiguillage, VueClarification, VueOuverture, VueReponse } from "@/lib/types";
 import { envoyerReponses, ouvrirDossier } from "@/lib/client/api";
 import { LONGUEUR_MAX_DEMANDE, validerDemande } from "@/lib/validation";
 import { ActionsConsultation } from "./ActionsConsultation";
+import { ChoixSituation } from "./ChoixSituation";
 import { Clarification } from "./Clarification";
 import { Etapes } from "./Etapes";
 import { Chargement, MessageErreur } from "./MessageErreur";
@@ -21,6 +22,7 @@ type Etat =
   | { phase: "saisie" }
   | { phase: "ouverture" }
   | { phase: "clarification"; vue: VueClarification; envoi: boolean }
+  | { phase: "aiguillage"; vue: VueAiguillage; envoi: boolean }
   | { phase: "fin"; ouverture: VueOuverture; reponse: VueReponse | null };
 
 /** Parcours complet : décrire → préciser → résultat. Tout l'état vit en mémoire. */
@@ -54,6 +56,8 @@ export function Parcours({ demo = false }: { demo?: boolean } = {}) {
     }
     if (r.data.etape === "clarification") {
       setEtat({ phase: "clarification", vue: r.data, envoi: false });
+    } else if (r.data.etape === "aiguillage") {
+      setEtat({ phase: "aiguillage", vue: r.data, envoi: false });
     } else {
       setEtat({ phase: "fin", ouverture: r.data, reponse: null });
     }
@@ -70,14 +74,30 @@ export function Parcours({ demo = false }: { demo?: boolean } = {}) {
     void lancerOuverture(v.valeur);
   }
 
-  async function lancerReponses(vue: VueClarification, reponses: Record<string, string | null>) {
+  async function lancerReponses(
+    vue: VueClarification | VueAiguillage,
+    reponses: Record<string, string | null>,
+  ) {
     derniereReponse.current = reponses;
     setErreur(null);
-    setEtat({ phase: "clarification", vue, envoi: true });
+    setEtat(
+      vue.etape === "aiguillage"
+        ? { phase: "aiguillage", vue, envoi: true }
+        : { phase: "clarification", vue, envoi: true },
+    );
     const r = await envoyerReponses(reponses);
     if (!r.ok) {
-      setEtat({ phase: "clarification", vue, envoi: false });
+      setEtat(
+        vue.etape === "aiguillage"
+          ? { phase: "aiguillage", vue, envoi: false }
+          : { phase: "clarification", vue, envoi: false },
+      );
       setErreur({ e: r.erreur, reessayer: () => void lancerReponses(vue, derniereReponse.current) });
+      return;
+    }
+    if (r.data.etape === "aiguillage") {
+      // Sélection invalide : on repose la question, sans conclure.
+      setEtat({ phase: "aiguillage", vue: r.data, envoi: false });
       return;
     }
     if (r.data.etape === "clarification") {
@@ -208,6 +228,19 @@ export function Parcours({ demo = false }: { demo?: boolean } = {}) {
                   : "Le moteur vérifie les textes et prépare le résultat…"
               }
             />
+          ) : null}
+        </>
+      ) : null}
+
+      {etat.phase === "aiguillage" ? (
+        <>
+          <ChoixSituation
+            vue={etat.vue}
+            envoi={etat.envoi}
+            onChoisir={(cle) => void lancerReponses(etat.vue, { aiguillage: cle })}
+          />
+          {etat.envoi ? (
+            <Chargement message="Le moteur reprend avec la situation que vous avez indiquée…" />
           ) : null}
         </>
       ) : null}

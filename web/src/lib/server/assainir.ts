@@ -25,7 +25,9 @@ import type {
   VueHorsCatalogue,
   VueOuverture,
   VueQuestion,
-  VueRaisonRefus,
+  VueAiguillage,
+    VueAiguillageOption,
+    VueRaisonRefus,
   VueRefus,
   VueRegleDroit,
   VueReponse,
@@ -228,9 +230,44 @@ export function assainirOuverture(data: unknown): VueOuverture {
   const d = objet(data);
   const etape = texte(d.etape);
   if (etape === "clarification") return clarification(d);
+  if (etape === "aiguillage") return aiguillage(d);
   if (etape === "hors_catalogue") return horsCatalogue(objet(d.reponse), d.domaines, d);
   if (etape === "refus") return refus(objet(d.reponse));
   throw new ReponseInattendue(`étape d'ouverture inconnue : ${String(etape)}`);
+}
+
+/**
+ * Aiguillage : plusieurs procédures restent candidates et le moteur demande au
+ * citoyen laquelle est la sienne. Les libellés viennent de la table d'aiguillage,
+ * jamais du modèle — ils décrivent des faits, pas des notions juridiques.
+ */
+function aiguillage(d: Objet): VueAiguillage {
+  const options = liste(d.options)
+    .filter(estObjet)
+    .map((o): VueAiguillageOption => ({
+      cle: texteRequis(o.cle),
+      libelle: texteRequis(o.libelle),
+      titre: texteRequis(o.titre),
+      article: texteRequis(o.article, "?"),
+      numeroTexte: texte(o.numero_texte),
+      etatVerification: texteRequis(o.etat_verification, "NON_VERIFIE"),
+    }))
+    .filter((o) => o.cle.length > 0 && o.libelle.length > 0);
+  if (options.length < 2) {
+    throw new ReponseInattendue("aiguillage sans options exploitables");
+  }
+  return {
+    etape: "aiguillage",
+    dossierId: texte(d.dossier_id),
+    situation: texteRequis(d.situation),
+    question: texteRequis(d.question, "Laquelle de ces situations est la vôtre ?"),
+    pourquoi: texte(d.pourquoi),
+    message: texteRequis(d.message, "Plusieurs situations peuvent correspondre à votre récit."),
+    options,
+    optionAucune: texte(d.option_aucune) ?? "Aucune de ces situations ne correspond à la mienne",
+    erreurSelection: texte(d.erreur_selection),
+    avertissement: texte(d.avertissement),
+  };
 }
 
 function source(s: Objet): VueSource {
@@ -327,6 +364,8 @@ function applicationFaits(v: unknown): VueApplicationFaits | null {
 export function assainirSuite(data: unknown): VueSuite {
   const d = objet(data);
   if (texte(d.etape) === "clarification") return clarification(d);
+  // Sélection d'aiguillage invalide : le moteur repose la question.
+  if (texte(d.etape) === "aiguillage") return aiguillage(d);
   return assainirReponse(data);
 }
 

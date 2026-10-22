@@ -130,7 +130,29 @@ export interface VueRefus {
   avertissement: string | null;
 }
 
-export type VueOuverture = VueClarification | VueHorsCatalogue | VueRefus;
+export interface VueAiguillageOption {
+  cle: string;
+  libelle: string;
+  titre: string;
+  article: string;
+  numeroTexte: string | null;
+  etatVerification: string;
+}
+
+export interface VueAiguillage {
+  etape: "aiguillage";
+  dossierId: string | null;
+  situation: string;
+  question: string;
+  pourquoi: string | null;
+  message: string;
+  options: VueAiguillageOption[];
+  optionAucune: string;
+  erreurSelection: string | null;
+  avertissement: string | null;
+}
+
+export type VueOuverture = VueClarification | VueHorsCatalogue | VueRefus | VueAiguillage;
 
 export interface VueRegleDroit {
   titre: string;
@@ -223,7 +245,7 @@ export interface VueReponse {
 }
 
 /** Réponse de /api/repondre : un nouveau tour de questions, ou le résultat. */
-export type VueSuite = VueClarification | VueReponse;
+export type VueSuite = VueClarification | VueReponse | VueAiguillage;
 
 export interface VueSante {
   catalogue: { fiches: number; parDomaine: { domaine: string; fiches: string[] }[] };

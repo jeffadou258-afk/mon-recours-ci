@@ -1,0 +1,27 @@
+{
+  "statut": "A_VALIDER_PAR_JURISTE",
+  "avertissement": "Table d'aiguillage : elle ne dit pas le droit, elle nomme des situations. Chaque entrée doit être relue avant activation. Les fiches citées doivent exister dans le catalogue du moteur.",
+  "situations": [
+    {
+      "cle": "logement_reprise_par_le_bailleur",
+      "domaine": "logement_baux_foncier",
+      "intitule": "Le bailleur veut récupérer son logement",
+      "question": "Parmi ces situations, laquelle correspond à la vôtre ?",
+      "pourquoi": "Ces trois démarches ne s'appliquent pas aux mêmes faits, et la loi ne prévoit pas les mêmes conditions pour chacune.",
+      "options": [
+        {
+          "fiche": "LOGEME_440",
+          "libelle": "Le propriétaire veut reprendre le logement, pour l'habiter lui-même ou pour le vendre"
+        },
+        {
+          "fiche": "LOGEME_445",
+          "libelle": "Le propriétaire veut me faire partir, ou menace de le faire sans passer par le juge"
+        },
+        {
+          "fiche": "LOGEME_443",
+          "libelle": "C'est moi qui veux quitter le logement avant la fin du bail"
+        }
+      ]
+    }
+  ]
+}

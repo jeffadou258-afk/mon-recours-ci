@@ -30,11 +30,15 @@ from agent import MonRecoursCI
 from core import analyse as A
 from core import base, catalogue, clarification, corpus, documents as mod_documents
 from core import faits as mod_faits
-from core import domaines_vision, llm
+from core import aiguillage, domaines_vision, llm
 
 FICHIER_ETAT = "CONVERSATION.json"
 
 # Ce que la couche ne sait pas faire, dit à l'utilisateur avant toute réponse.
+# Trois tentatives de sélection au plus. Au-delà, on conclut prudemment : une
+# question reposée indéfiniment est une panne déguisée en dialogue.
+SEUIL_AIGUILLAGE = 3
+
 AVERTISSEMENT = (
     "Je suis un service d'information juridique, pas un avocat. Je ne réponds que "
     "sur les textes enregistrés dans mon corpus, et je dis quand je ne peux pas."
@@ -92,6 +96,9 @@ class Conversation(object):
         retenues, du_domaine = catalogue.pour_demande(
             demande, domaines, fiches=self.fiches, chemin_db=self.chemin_db,
             scores=qualification.get("scores_domaines"))
+        # Ce que le moteur a établi SANS le modèle : la référence pour décider
+        # plus bas si plusieurs procédures restent réellement candidates.
+        deterministes = [f["id"] for f in retenues]
 
         # Compréhension assistée par un modèle de langage, SI elle est activée
         # (fournisseur + clé + accord sur l'envoi des données). Ce qu'il propose
@@ -118,6 +125,27 @@ class Conversation(object):
                 # validée, la sélection déterministe est conservée telle quelle.
                 retenues = validees
         self._suggestions_llm = comprehension["suggestions"]
+
+        # Aiguillage : plusieurs procédures restent candidates. On ne les présente
+        # pas toutes comme applicables — on demande au citoyen laquelle est la
+        # sienne. Le modèle ne tranche jamais : il propose, la table nomme les
+        # situations, le citoyen choisit.
+        #
+        # Deux conditions, pas une :
+        #   * plusieurs fiches restent candidates ;
+        #   * le modèle en a AJOUTÉ au-delà de ce que le moteur avait établi
+        #     (sinon les paires complémentaires trouvées par le moteur — désaveu
+        #     et délai de désaveu — seraient cassées).
+        # Et si aucune entrée de table ne couvre ce cas, on ne présente RIEN :
+        # plusieurs procédures voisines ne valent pas une couverture juridique.
+        if len(retenues) > 1 and len(deterministes) < len(retenues):
+            entree = aiguillage.situation_pour(retenues, catalogue=self.fiches)
+            if entree is not None:
+                return self._ouvrir_aiguillage(dossier_id, demande, domaines, entree,
+                                               comprehension, dossier, deterministes)
+            # Amplification non vérifiable : la démarche n'est pas couverte par
+            # une fiche identifiable. On retombe sur le comportement prudent.
+            retenues = []
 
         if not retenues:
             # Aucun déclencheur ne tombe : on ne sert PAS d'articles au hasard.
@@ -198,6 +226,9 @@ class Conversation(object):
         if etat.get("etape") == "repondu":
             return {"etape": "repondu", "reponse": etat.get("reponse"),
                     "message": "Cette conversation a déjà reçu sa réponse."}
+
+        if etat.get("etape") == "aiguillage":
+            return self._traiter_aiguillage(dossier_id, etat, reponses)
 
         fiches = [self.catalogue[i] for i in etat["fiches"] if i in self.catalogue]
         if not fiches:
@@ -290,6 +321,108 @@ class Conversation(object):
             q for q in questions if q["cle"] not in {x["cle"] for x in etat.get("questions", [])}]
         self._ecrire_etat(dossier_id, etat)
         return self._vue_clarification(dossier_id, etat, fiches, questions, a_confirmer)
+
+    # -- aiguillage ------------------------------------------------------
+    def _ouvrir_aiguillage(self, dossier_id, demande, domaines, entree,
+                           comprehension, dossier, deterministes):
+        """Ouvre l'étape de choix : plusieurs procédures, une seule question."""
+        etat = {"dossier_id": dossier_id, "demande": demande, "tour": 1,
+                "fiches": [o["fiche"] for o in entree["options"]],
+                "questions": [], "reponses": {}, "etape": "aiguillage",
+                "situation": entree["cle"], "aiguillage_essais": 0,
+                "aiguillage_deterministes": list(deterministes),
+                "domaines": domaines,
+                "comprehension": self._vue_comprehension(comprehension),
+                "suggestions_llm": comprehension["suggestions"],
+                "urgence": dossier.get("urgence"),
+                "verrous_humains": dossier.get("verrous_humains"),
+                "note_corpus": dossier.get("note_corpus")}
+        self._ecrire_etat(dossier_id, etat)
+        return self._vue_aiguillage(etat, entree)
+
+    def _vue_aiguillage(self, etat, entree):
+        table = aiguillage.charger()
+        return {
+            "etape": "aiguillage",
+            "dossier_id": etat["dossier_id"],
+            "situation": entree["cle"],
+            "question": entree["question"],
+            "pourquoi": entree.get("pourquoi"),
+            "message": ("Plusieurs situations peuvent correspondre à ce que vous décrivez. "
+                        "Je ne peux pas déterminer laquelle est la vôtre : la loi ne prévoit "
+                        "pas les mêmes règles pour chacune."),
+            "options": aiguillage.options(entree, self.fiches),
+            "option_aucune": "Aucune de ces situations ne correspond à la mienne",
+            "avertissement": AVERTISSEMENT,
+            "urgence": etat.get("urgence"),
+            "verrous_humains": etat.get("verrous_humains"),
+            "comprehension": etat.get("comprehension"),
+            "statut_table": table.get("statut"),
+        }
+
+    def _traiter_aiguillage(self, dossier_id, etat, reponses):
+        """Valide la sélection du citoyen. Sélection invalide => jamais de conclusion."""
+        table = aiguillage.charger()
+        entree = None
+        for candidate in table.get("situations") or []:
+            if candidate.get("cle") == etat.get("situation"):
+                entree = candidate
+                break
+        if entree is None:
+            return self._conclure_prudemment(
+                dossier_id, etat,
+                "La situation à préciser n'est plus disponible. Je ne peux pas conclure.")
+
+        choix = aiguillage.choix_valide((reponses or {}).get("aiguillage"), entree)
+        if choix is None:
+            # Sélection absente ou hors des options : on repose la question, sans
+            # conclure. Trois tentatives au plus, puis réponse prudente : une
+            # boucle de questions serait une panne déguisée en dialogue.
+            essais = int(etat.get("aiguillage_essais") or 0) + 1
+            etat["aiguillage_essais"] = essais
+            if essais > SEUIL_AIGUILLAGE:
+                return self._conclure_prudemment(
+                    dossier_id, etat,
+                    "Je n'ai pas pu établir laquelle de ces situations est la vôtre. "
+                    "Je préfère ne rien conclure plutôt que de répondre à côté.")
+            self._ecrire_etat(dossier_id, etat)
+            vue = self._vue_aiguillage(etat, entree)
+            vue["erreur_selection"] = ("Choisissez l'une des situations proposées, "
+                                       "ou « aucune ».")
+            return vue
+
+        if choix == "aucune":
+            return self._conclure_prudemment(
+                dossier_id, etat,
+                "Aucune des situations proposées ne correspond à la vôtre. Je ne peux "
+                "donc pas déterminer quelle règle s'applique : je préfère vous le dire.")
+
+        fiche = self.catalogue.get(choix)
+        if fiche is None:
+            return self._conclure_prudemment(
+                dossier_id, etat,
+                "La fiche retenue n'est plus disponible. Je ne peux pas conclure.")
+        questions = []
+        deja = set()
+        for cle, question in fiche.get("faits_requis") or []:
+            if cle not in deja:
+                deja.add(cle)
+                questions.append({"cle": cle, "question": question})
+        guide = clarification.questions_pour([fiche], self.guide, deja_posees=deja)
+        questions.extend(self._question_guide(q, etat.get("demande")) for q in guide)
+        etat.update(etape="clarification", fiches=[choix], questions=questions,
+                    guide_posees=[q["cle"] for q in guide], reponses={}, tour=1,
+                    aiguillage_choisi=choix)
+        self._ecrire_etat(dossier_id, etat)
+        return self._vue_clarification(dossier_id, etat, [fiche], questions)
+
+    def _conclure_prudemment(self, dossier_id, etat, message):
+        reponse = {"statut_reponse": "CONCLUSION_IMPOSSIBLE",
+                   "message": message,
+                   "avertissement": AVERTISSEMENT}
+        etat.update(etape="repondu", reponse=reponse)
+        self._ecrire_etat(dossier_id, etat)
+        return {"etape": "reponse", "dossier_id": dossier_id, "reponse": reponse}
 
     def _construire_analyse(self, dossier_id, fiches, fait_ids):
         analyse = A.nouvelle_analyse(dossier_id, sorted({f["domaine"] for f in fiches}))
