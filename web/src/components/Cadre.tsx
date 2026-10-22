@@ -7,7 +7,7 @@ export function EnTete() {
           <span className="marque__nom">Mon Recours CI</span>
         </a>
         <a href="/consultation" className="entete__action">
-          Décrire mon problème
+          Commencer ma consultation
         </a>
       </div>
     </header>
@@ -32,8 +32,9 @@ export function PiedDePage() {
           </p>
         </div>
         <nav aria-label="Pied de page" className="pied__nav">
-          <a href="/consultation">Décrire mon problème</a>
+          <a href="/consultation">Commencer ma consultation</a>
           <a href="/comprendre">Comprendre les résultats</a>
+          <a href="/connexion" className="pied__admin">Espace administrateur</a>
         </nav>
       </div>
     </footer>

@@ -148,11 +148,13 @@ test("composition des réponses : « je ne sais pas » envoie null", () => {
 
 test("accueil : couverture lue sur le moteur, ou indisponibilité annoncée", () => {
   const avec = texteVisible(renderToStaticMarkup(<Accueil sante={assainirSante(fixture("sante").data)} />));
-  assert.match(avec, /13 situations sont couvertes/);
-  assert.match(avec, /Textes non disponibles/);
+  // Le contrat : le décompte vient du moteur, pas d'une valeur écrite dans la page.
+  assert.match(avec, /13 situations, dans \d+ domaines/);
+  // Les domaines sans texte sont signalés comme tels, sans être présentés comme couverts.
+  assert.match(avec, /Aucun texte disponible à ce jour/);
   const sans = texteVisible(renderToStaticMarkup(<Accueil sante={null} />));
   assert.match(sans, /Le moteur juridique ne répond pas pour le moment/);
-  assert.doesNotMatch(sans, /situations sont couvertes/);
+  assert.doesNotMatch(sans, /situations, dans/);
 });
 
 test("erreurs : réseau, service indisponible, session expirée", () => {

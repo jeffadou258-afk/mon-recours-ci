@@ -1864,3 +1864,239 @@ textarea[aria-invalid="true"] {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===========================================================================
+   Accueil du citoyen — refonte du 22/10/2026
+   Objectif : comprendre en un écran à quoi sert le service, et cliquer sur un
+   seul bouton. Le parcours citoyen ne partage rien avec l'administration.
+   =========================================================================== */
+
+.accueil-citoyen {
+  overflow-x: clip;
+}
+
+.heros {
+  background: var(--vert-nuit);
+  color: var(--sur-sombre);
+  padding: 3.5rem 0 3rem;
+}
+.heros__interieur {
+  max-width: calc(var(--large) + 2 * var(--gouttiere));
+  margin: 0 auto;
+  padding: 0 var(--gouttiere);
+}
+.heros__marque {
+  margin: 0 0 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--orange-vif);
+}
+.heros__titre {
+  margin: 0 0 1rem;
+  max-width: 24ch;
+  font-family: var(--police-titre-pile);
+  font-size: clamp(1.9rem, 4.4vw, 2.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+.heros__chapo {
+  margin: 0 0 1.75rem;
+  max-width: 58ch;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--sur-sombre-doux);
+}
+.heros__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+.heros__cta {
+  min-width: min(100%, 19rem);
+}
+.heros__lien {
+  color: var(--sur-sombre);
+  font-size: 0.95rem;
+  text-underline-offset: 3px;
+}
+.heros__garanties {
+  margin: 1.5rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--sur-sombre-doux);
+}
+
+.alerte-instance {
+  max-width: var(--large);
+  margin: 1.5rem auto 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #a11;
+  background: #fff1f0;
+  color: #5a0b0b;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.etapes-citoyen {
+  padding: 3.5rem 0;
+  background: var(--clair);
+}
+.etapes-citoyen__liste {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.etape-carte {
+  padding: 1.25rem;
+  border: 1px solid var(--ligne);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  min-width: 0;
+}
+.etape-carte__numero {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--orange-pale);
+  color: var(--orange-fonce);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.etape-carte__titre {
+  margin: 0.75rem 0 0.4rem;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+.etape-carte__texte {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--encre-douce);
+}
+.etapes-citoyen__action {
+  margin: 2rem 0 0;
+}
+
+.domaines-citoyen {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+.domaine-citoyen {
+  padding: 1.1rem;
+  border: 1px solid var(--ligne);
+  border-radius: var(--rayon);
+  background: var(--surface);
+  min-width: 0;
+}
+.domaine-citoyen__entete {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.domaine-citoyen__icone {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--clair);
+  color: var(--vert-nuit);
+}
+.domaine-citoyen__nom {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+.domaine-citoyen__compte {
+  margin: 0.1rem 0 0;
+  font-size: 0.8rem;
+  color: var(--encre-douce);
+}
+.domaine-citoyen__details {
+  margin-top: 0.75rem;
+}
+.domaine-citoyen__details summary {
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--orange-fonce);
+}
+.domaine-citoyen__details ul,
+.domaine-citoyen__liste {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--encre-douce);
+}
+.domaines-attente {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ligne);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--encre-douce);
+}
+.domaines-attente p {
+  margin: 0 0 0.5rem;
+}
+.domaines-attente p:last-child {
+  margin-bottom: 0;
+}
+
+.pied__admin {
+  color: var(--sur-sombre-doux);
+  opacity: 0.85;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 40rem) {
+  .heros {
+    padding: 2.25rem 0 2rem;
+  }
+  .heros__titre {
+    max-width: none;
+    font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+  .heros__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .heros__cta {
+    width: 100%;
+  }
+  .heros__lien {
+    text-align: center;
+  }
+  .etapes-citoyen,
+  .section {
+    padding: 2.5rem 0;
+  }
+  .entete__action {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.76rem;
+  }
+}
+
+/* Sur un petit téléphone, le bouton de l'en-tête est redondant avec celui du
+   héros, et il écrase le nom de la marque. On garde le héros, on retire l'autre. */
+@media (max-width: 26rem) {
+  .entete__action {
+    display: none;
+  }
+}
