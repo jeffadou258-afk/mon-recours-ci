@@ -194,6 +194,16 @@ class TestReferencesFautives(unittest.TestCase):
 class TestInvariantsJuridiques(unittest.TestCase):
     """Les propriétés qui rendent une réponse utilisable devant un citoyen."""
 
+    def tearDown(self):
+        # Cette classe ouvre des dossiers réels via `dossier()` mais n'hérite pas
+        # de BaseHTTP : sans ce nettoyage, `TEST_SEC_HORS_PROC` restait sur disque
+        # et le test suivant échouait sur « une conversation est déjà ouverte ».
+        # Le défaut ne se voyait pas tant que le dossier n'existait pas : un test
+        # qui ne passe qu'une fois masque l'état qu'il laisse.
+        for identifiant in DOSSIERS:
+            shutil.rmtree(str(config.dossier_utilisateur(identifiant)), ignore_errors=True)
+        del DOSSIERS[:]
+
     MOTS_NOMBRES = {1: "un", 2: "deux", 3: "trois", 4: "quatre", 5: "cinq", 6: "six",
                     7: "sept", 8: "huit", 9: "neuf", 10: "dix", 11: "onze", 12: "douze"}
 
