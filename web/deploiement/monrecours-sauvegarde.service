@@ -1,0 +1,47 @@
+# Sauvegarde chiffrée quotidienne — Mon Recours CI (NON installée).
+#
+# Compagnon de monrecours-sauvegarde.timer. Archive DOSSIERS/ (récits, courriers)
+# et la base du corpus, chiffrées AES-256-CBC + HMAC-SHA256 par bin/sauvegarde.py.
+# Rien de lisible n'est écrit hors du répertoire temporaire privé de l'outil.
+#
+# Prérequis (voir docs/SAUVEGARDE_RESTAURATION.md) :
+#   openssl rand -hex 32 > /etc/mon-recours-ci/cle-sauvegarde
+#   chown monrecours:monrecours /etc/mon-recours-ci/cle-sauvegarde
+#   chmod 600 /etc/mon-recours-ci/cle-sauvegarde
+#   + une COPIE de la clé hors du serveur (sans elle, les archives sont illisibles).
+#
+# Les archives sont écrites dans /var/lib/monrecours-sauvegardes (0700). Ce
+# répertoire est SUR LE MÊME SERVEUR : il protège contre une erreur ou une
+# corruption, pas contre la perte du serveur. La copie hors serveur et la durée
+# de vie des archives sont des DÉCISIONS DU PROPRIÉTAIRE (aucune suppression
+# automatique n'est configurée ici).
+
+[Unit]
+Description=Sauvegarde chiffrée des dossiers et du corpus (Mon Recours CI)
+Documentation=file:/opt/mon-recours-ci/docs/SAUVEGARDE_RESTAURATION.md
+
+[Service]
+Type=oneshot
+User=monrecours
+Group=monrecours
+WorkingDirectory=/opt/mon-recours-ci
+ExecStart=/opt/mon-recours-ci/.venv/bin/python bin/sauvegarde.py sauvegarder \
+  --dossiers /opt/mon-recours-ci/DOSSIERS \
+  --base /opt/mon-recours-ci/KNOWLEDGE/corpus_juridique.sqlite3 \
+  --sortie /var/lib/monrecours-sauvegardes \
+  --cle /etc/mon-recours-ci/cle-sauvegarde
+# Contrôle immédiat de la dernière archive (MAC, déchiffrement, manifeste).
+ExecStartPost=/bin/sh -c 'A=$(ls -1t /var/lib/monrecours-sauvegardes/*.enc | head -1) && /opt/mon-recours-ci/.venv/bin/python bin/sauvegarde.py verifier --archive "$A" --cle /etc/mon-recours-ci/cle-sauvegarde'
+
+StateDirectory=monrecours-sauvegardes
+StateDirectoryMode=0700
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+# Lecture seule partout ailleurs : l'outil lit DOSSIERS/ et la base, écrit
+# uniquement dans son StateDirectory.
+
+[Install]
+WantedBy=multi-user.target

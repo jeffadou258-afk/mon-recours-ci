@@ -21,20 +21,34 @@ Internet ──HTTPS──► nginx (443) ──► Next.js (127.0.0.1:3000) ─
 ## Étapes
 
 1. **Serveur** : Ubuntu LTS, Python 3.9+, Node.js 20.9+, nginx, certbot.
-2. **Code** : cloner le dépôt dans `/opt/mon-recours-ci` avec les PDF du corpus
-   (ils ne sont pas dans le dépôt), puis vérifier :
-   `python3 tests/run_all.py` doit finir par `VERDICT=SUCCES`.
+2. **Code** : cloner le dépôt dans `/opt/mon-recours-ci`. Les PDF officiels ne
+   sont pas dans le dépôt : soit les copier depuis la branche
+   `corpus/archives-pdf`, soit garder `MONRECOURS_PDF_NON_DISTRIBUES=1` (le
+   moteur vérifie alors les empreintes des textes extraits).
+   Python du moteur dans un environnement virtuel (Ubuntu 24.04 refuse
+   `pip install` dans le Python du système) :
+   `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`
+   (fpdf2 : sans lui, aucun courrier PDF). Lancer les tests avec
+   `MONRECOURS_PDF_NON_DISTRIBUES=1 .venv/bin/python tests/run_all.py` doit finir
+   par `VERDICT=SUCCES`.
 3. **Utilisateur système** dédié, sans droits d'administration : `monrecours`.
 4. **Secrets** dans `/etc/mon-recours-ci/env` (droits `600`, propriétaire
    `monrecours`) — voir `env.exemple`. Jamais dans le dépôt.
 5. **Interface** : `cd web && npm ci && npm run build && npm run verifier:secrets`.
 6. **Services** : copier `monrecours-moteur.service` et `monrecours-web.service`
-   dans `/etc/systemd/system/`, puis `systemctl enable --now` les deux.
+   dans `/etc/systemd/system/`, puis `systemctl enable --now` les deux. Créer
+   `DOSSIERS/` (propriétaire `monrecours`, droits 700).
 7. **nginx + HTTPS** : adapter `nginx.conf.exemple` (nom de domaine), puis
    `certbot --nginx -d votre-domaine.ci`.
 8. **Purge** : planifier `purger-consultations.mjs` (voir
    `monrecours-purge.timer`) avec la durée de conservation décidée.
-9. **Contrôle** : depuis un téléphone, faire un parcours complet ; vérifier
+9. **Sauvegarde** : créer la clé (`docs/SAUVEGARDE_RESTAURATION.md`, §3), en
+   garder une copie hors du serveur, puis installer
+   `monrecours-sauvegarde.service` + `monrecours-sauvegarde.timer` (chaque nuit,
+   archive vérifiée aussitôt). **Faire une restauration d'essai** dans un
+   répertoire neuf avant d'ouvrir le service. La copie des archives hors du
+   serveur reste à choisir.
+10. **Contrôle** : depuis un téléphone, faire un parcours complet ; vérifier
    qu'aucune page n'est en cache côté navigateur pour `/api/*`.
 
 ## Avant d'ouvrir au public (indispensable, non fait)

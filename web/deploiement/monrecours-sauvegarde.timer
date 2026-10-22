@@ -1,0 +1,15 @@
+# Déclenche monrecours-sauvegarde.service chaque nuit (NON installé).
+#   systemctl enable --now monrecours-sauvegarde.timer
+# Vérifier : systemctl list-timers monrecours-sauvegarde.timer
+#            journalctl -u monrecours-sauvegarde.service
+
+[Unit]
+Description=Sauvegarde chiffrée quotidienne (Mon Recours CI)
+
+[Timer]
+OnCalendar=*-*-* 02:30:00
+RandomizedDelaySec=15min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

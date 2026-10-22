@@ -8,12 +8,19 @@ Group=monrecours
 WorkingDirectory=/opt/mon-recours-ci
 EnvironmentFile=/etc/mon-recours-ci/env
 # Débit global du moteur : la limite par visiteur est appliquée par l'interface.
-ExecStart=/usr/bin/python3 bin/serveur_api.py --port 8765 --debit 300
+# Environnement virtuel : Ubuntu 24.04 interdit `pip install` dans le Python du
+# système (PEP 668), et fpdf2 est nécessaire aux courriers PDF. Création :
+#   python3 -m venv /opt/mon-recours-ci/.venv
+#   /opt/mon-recours-ci/.venv/bin/pip install -r /opt/mon-recours-ci/requirements.txt
+ExecStart=/opt/mon-recours-ci/.venv/bin/python bin/serveur_api.py --port 8765 --debit 300
 Restart=on-failure
 NoNewPrivileges=true
 ProtectSystem=strict
 ReadWritePaths=/opt/mon-recours-ci/DOSSIERS
 PrivateTmp=true
+ProtectHome=true
+# Récits et courriers créés lisibles par le seul service.
+UMask=0077
 
 [Install]
 WantedBy=multi-user.target

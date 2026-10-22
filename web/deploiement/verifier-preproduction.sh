@@ -89,6 +89,23 @@ else
   echec "unité $UNITE introuvable (systemd absent ou unité non installée)"
 fi
 
+echo "== Moteur, sauvegarde, purge =="
+VENV_PY="${MONRECOURS_VENV_PYTHON:-/opt/mon-recours-ci/.venv/bin/python}"
+if [ -x "$VENV_PY" ] && "$VENV_PY" -c 'import fpdf' 2>/dev/null; then
+  ok "fpdf2 présent dans l'environnement du moteur (courriers PDF)"
+else
+  echec "fpdf2 absent de $VENV_PY : aucun courrier PDF ne sera produit"
+fi
+if command -v systemctl >/dev/null; then
+  for minuteur in monrecours-sauvegarde.timer monrecours-purge.timer; do
+    systemctl is-active --quiet "$minuteur" && ok "$minuteur actif" || echec "$minuteur inactif"
+  done
+  [ -r /etc/mon-recours-ci/cle-sauvegarde ] && d=$(stat -c '%a %U' /etc/mon-recours-ci/cle-sauvegarde) || d="absente"
+  [ "$d" = "600 monrecours" ] && ok "clé de sauvegarde : $d (valeur non lue)" || echec "clé de sauvegarde : $d (attendu 600 monrecours)"
+  recente=$(find /var/lib/monrecours-sauvegardes -maxdepth 1 -name '*.enc' -mmin -1500 2>/dev/null | head -1)
+  [ -n "$recente" ] && ok "archive chiffrée de moins de 25 h présente" || echec "aucune archive de moins de 25 h dans /var/lib/monrecours-sauvegardes"
+fi
+
 echo "== HTTPS et réponses publiques =="
 code=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 15 "$BASE/" 2>/dev/null) || code="000"
 [ "$code" = "200" ] && ok "page d'accueil en HTTPS ($code)" || echec "page d'accueil : $code"

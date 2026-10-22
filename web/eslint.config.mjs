@@ -9,8 +9,25 @@ import { FlatCompat } from "@eslint/eslintrc";
 const compat = new FlatCompat({ baseDirectory: dirname(fileURLToPath(import.meta.url)) });
 
 const config = [
-  { ignores: [".next/**", "node_modules/**", "next-env.d.ts", "tests/e2e/captures/**"] },
+  {
+    // Fichiers générés ou produits par les outils : jamais relus à la main.
+    ignores: [".next/**", "node_modules/**", "next-env.d.ts", "apercu/dist/**", "tests/e2e/captures/**"],
+  },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // Choix délibéré : liens HTML ordinaires (rechargement complet). Ils
+      // fonctionnent sans le routeur Next.js — page « hors ligne » servie par le
+      // service worker, aperçu `apercu/` rendu hors de Next — et ne gardent
+      // aucun état de consultation en mémoire d'une page à l'autre.
+      "@next/next/no-html-link-for-pages": "off",
+    },
+  },
+  {
+    // Tests : les réponses enregistrées du moteur sont lues comme JSON libre.
+    files: ["tests/**/*.ts", "tests/**/*.tsx"],
+    rules: { "@typescript-eslint/no-explicit-any": "off" },
+  },
 ];
 
 export default config;

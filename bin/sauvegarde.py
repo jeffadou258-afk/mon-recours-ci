@@ -310,7 +310,13 @@ def extraire_surement(paquet, destination):
             cible = (destination / membre.name).resolve()
             if destination != cible and destination not in cible.parents:
                 raise Erreur(3, "chemin hors destination refusé : %s" % membre.name)
-        archive.extractall(destination)
+        # Deuxième barrière, celle de la bibliothèque standard (Python 3.12+,
+        # et correctifs de sécurité de 3.9 à 3.11) : refuse aussi les fichiers
+        # spéciaux et les chemins absolus. Elle deviendra le défaut en 3.14.
+        if hasattr(tarfile, "data_filter"):
+            archive.extractall(destination, filter="data")
+        else:
+            archive.extractall(destination)
 
 
 def commande_restaurer(args):
