@@ -105,7 +105,7 @@ CREATE INDEX IF NOT EXISTS idx_documents_domaine ON documents(domaine);
 # point n'est lu comme séparateur décimal que s'il est immédiatement suivi d'un
 # chiffre — « Article 552. La présente loi » reste l'article 552.
 MOTIF_ARTICLE = re.compile(
-    r"(?m)^[ \t]*(?:\d{1,3}[ \t]*)?(?:Article|ARTICLE|Art\.|Art(?=[ \t]+\d))[ \t]+"
+    r"(?m)^[ \t]*(?:\d{1,3}[ \t]*)?(?:Article|ARTICLE|Art\.|Art(?=[ \t]*\d))[ \t]*"
     r"(\d{1,4}\.\d{1,3}(?!\d)(?=[ \t]|$|[\.\-:)])"
     r"|\d{1,4}(?:[ \t]*(?:bis|ter|quater|quinquies))?(?=[ \t]*(?:[\.\-:)]|$|[ \t]+nouveau|,[ \t]*[—–\-]))"
     r"|premier|premiere|unique)"
