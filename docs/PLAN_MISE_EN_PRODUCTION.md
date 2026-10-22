@@ -188,6 +188,13 @@ OCR), contrats/OHADA (26), pénal (24).
 | Web intégration (moteur Python réel, PDF compris) | session de travail | **14 / 14** |
 | CI GitHub Actions run `39741900730` (commit `11e1dc2`) | GitHub, déclenché le 22/10 | audit npm 0 vulnérabilité · TypeScript OK · unitaires 103 OK + 1 ignoré (contrôle réservé à root) · construction Next.js OK · secrets 0 · intégration 14/14 · bout en bout Chromium 11/11 · moteur 575 · **ESLint : 6 erreurs, 690 avertissements** (premier passage) |
 | CI run `39743219578` (commit `18dc77c`, ESLint réglé) | GitHub, 22/10 | **toutes les étapes réussies** : mêmes résultats + **ESLint 0 erreur, 3 avertissements** (corrigés ensuite ; l'étape refuse désormais tout avertissement) |
+| CI run `39746130681` (commit `d22cab4`, état final de la journée) | GitHub, 22/10 | **toutes les étapes réussies** : audit npm 0 · TypeScript OK · unitaires 103 OK + 1 ignoré · construction OK · secrets 0 · intégration 14/14 · bout en bout 11/11 · moteur 580 · **ESLint 0 problème** |
+
+Un passage intermédiaire (run `39744788375`, commit `23ad0fe`) a échoué à la
+construction Next.js puis réussi au passage suivant sans changement du code de
+l'application. Le journal n'était pas lisible depuis la session ; cause
+probable mais **non prouvée** : le téléchargement des polices Google pendant la
+construction. La construction demande donc un accès à Internet, aussi sur le serveur.
 
 ESLint n'avait jamais été exécuté sur le projet. Les 690 avertissements venaient
 d'un fichier généré (`apercu/dist/app.js`), désormais ignoré ; les 6 erreurs

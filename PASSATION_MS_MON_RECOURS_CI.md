@@ -16,7 +16,7 @@ Légende utilisée partout :
 
 > **Mise à jour du 22/10/2026 (matin).** Avec `fpdf2` installé : moteur
 > **580 tests, 0 échec** ; web **104/104**, intégration **14/14** ; CI
-> `39743219578` entièrement verte, ESLint compris (étape ajoutée). Compatibilité
+> `39746130681` (commit `d22cab4`) entièrement verte, ESLint compris (étape ajoutée). Compatibilité
 > serveur Linux, sauvegarde/restauration, architecture, coûts, protection des
 > données et plan de relecture : **`docs/PLAN_MISE_EN_PRODUCTION.md`** (fait foi
 > sur ces points). État du Mac : `bash scripts/etat-poste.sh` (lecture seule).
