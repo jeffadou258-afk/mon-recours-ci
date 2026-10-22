@@ -19,7 +19,8 @@
     "verifier:instance": "node scripts/verifier-instance.mjs",
     "compte:creer": "node scripts/creer-compte.mjs",
     "apercu": "tsx --tsconfig tsconfig.test.json apercu/serveur-apercu.tsx",
-    "purger": "node scripts/purger-consultations.mjs"
+    "purger": "node scripts/purger-consultations.mjs",
+    "motdepasse:changer": "node scripts/changer-mot-de-passe.mjs"
   },
   "dependencies": {
     "next": "15.5.28",
