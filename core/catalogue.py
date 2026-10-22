@@ -223,6 +223,67 @@ def pour_demande(demande, domaines=(), fiches=None, chemin_db=None, scores=None)
     return retenues, par_domaine
 
 
+def valider_fiches_proposees(propositions, demande, fiches=None, domaines=(), scores=None):
+    """Contrôle INDÉPENDANT de la pertinence d'une fiche proposée par un modèle.
+
+    Un modèle de langage ne rend jamais une liste vide par prudence : il choisit
+    toujours la fiche la plus plausible. « Plausible » n'est pas « pertinente » —
+    c'est exactement l'écart qui a fait citer un article sur les personnes
+    vulnérables pour une déclaration de naissance.
+
+    Cette fonction rejoue donc la décision SANS le modèle. Une fiche n'entre que
+    par deux portes, toutes deux calculées hors du modèle :
+
+      A. un DÉCLENCHEUR tombe dans le récit, avec la même garde que
+         `pour_demande` (un déclencheur d'un seul mot exige que le domaine de la
+         fiche soit reconnu dans le récit) ;
+      B. le DOMAINE de la fiche fait partie des domaines qualifiés pour le récit
+         (`qualification`, déterministe). C'est la porte qui laisse au modèle son
+         utilité réelle : reconnaître « l'argent versé à l'entrée » là où aucun
+         mot-clé ne dit « caution ». Le modèle ne choisit donc pas le domaine ;
+         il ne peut que désigner une fiche DANS un domaine déjà établi.
+
+    Une fiche d'un domaine non qualifié est refusée même si ses mots ressemblent
+    à ceux du récit : les mots ne contournent pas le routage.
+
+    Retourne (retenues, rejets). Les rejets portent une raison exploitable par le
+    journal — jamais le récit.
+    """
+    fiches = fiches if fiches is not None else charger()
+    index = {f["id"]: f for f in fiches}
+    texte = normaliser(demande or "")
+
+    def note(domaine):
+        return ((scores or {}).get(domaine) or {}).get("score", 0)
+
+    retenues, rejets, vus = [], [], set()
+    for proposition in propositions or []:
+        identifiant = proposition.get("id") if isinstance(proposition, dict) else proposition
+        fiche = index.get(identifiant)
+        if fiche is None:
+            rejets.append({"fiche": identifiant, "raison": "absente du catalogue"})
+            continue
+        if identifiant in vus:
+            continue
+        touches = [d for d in fiche.get("declencheurs", ()) if _correspond(d, texte)]
+        if touches and scores is not None and note(fiche["domaine"]) == 0 and \
+                all(len(normaliser(d).split()) == 1 for d in touches):
+            touches = []
+        if touches:
+            vus.add(identifiant)
+            retenues.append(fiche)
+            continue
+        if fiche["domaine"] in domaines:
+            # Porte B : le domaine a été établi par la qualification déterministe.
+            # Les mots du récit ne sont PAS nécessaires — c'est précisément ce que
+            # le modèle apporte — mais le domaine, lui, n'est jamais choisi par lui.
+            vus.add(identifiant)
+            retenues.append(fiche)
+            continue
+        rejets.append({"fiche": identifiant, "raison": "domaine hors qualification"})
+    return retenues, rejets
+
+
 def par_domaine(domaine, fiches=None, chemin_db=None):
     fiches = fiches if fiches is not None else charger(chemin_db=chemin_db)
     return [f for f in fiches if f["domaine"] == domaine]

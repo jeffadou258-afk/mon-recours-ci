@@ -95,11 +95,28 @@ class Conversation(object):
 
         # Compréhension assistée par un modèle de langage, SI elle est activée
         # (fournisseur + clé + accord sur l'envoi des données). Ce qu'il propose
-        # est revalidé par `llm.valider_comprehension` ; sinon, déterministe.
+        # est revalidé DEUX fois : `llm.valider_comprehension` (identifiants
+        # connus, extraits recopiés mot pour mot) puis
+        # `catalogue.valider_fiches_proposees`, qui rejoue la décision SANS le
+        # modèle. Le modèle ne peut donc pas IMPOSER une fiche : il confirme ou
+        # complète la sélection déterministe, jamais il ne la remplace.
+        # Sans la seconde validation, un modèle hors sujet faisait entrer sa
+        # fiche préférée — le défaut exact observé sur « naissance » et « saisie ».
         comprehension = llm.comprendre(demande, self.fiches, self.guide,
                                        fournisseur=self.fournisseur_langage)
         if comprehension["mode"] == "llm" and comprehension["fiches"]:
-            retenues = [self.catalogue[i] for i in comprehension["fiches"]]
+            proposees = [self.catalogue[i] for i in comprehension["fiches"]
+                         if i in self.catalogue]
+            validees, rejets_pertinence = catalogue.valider_fiches_proposees(
+                proposees, demande, fiches=self.fiches, domaines=domaines,
+                scores=qualification.get("scores_domaines"))
+            if rejets_pertinence:
+                comprehension["rejets"] = list(comprehension.get("rejets") or []) + rejets_pertinence
+            if validees:
+                # Le modèle peut RESSERRER la sélection — après contrôle — jamais
+                # l'élargir hors des domaines qualifiés. S'il ne reste aucune fiche
+                # validée, la sélection déterministe est conservée telle quelle.
+                retenues = validees
         self._suggestions_llm = comprehension["suggestions"]
 
         if not retenues:
