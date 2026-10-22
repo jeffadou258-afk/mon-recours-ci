@@ -91,3 +91,6 @@ cle-sauvegarde
 # donnée réelle, aucun texte du corpus), nécessaire à la Preview Vercel.
 # Sans cette exception, `*.pdf` ci-dessus l'exclurait du déploiement.
 !web/public/demo/*.pdf
+
+# Registre de consommation du fournisseur de langage (compteurs, aucune donnée)
+RUNTIME/

@@ -216,6 +216,7 @@ def statut():
                              "variable_fournisseur": NOM_VARIABLE_FOURNISSEUR,
                              "cle_presente": bool(os.environ.get(NOM_VARIABLE_CLE)),
                              "adaptateur_http_present": os.path.isfile(CHEMIN_ADAPTATEUR)}
+    etat["budget"] = llm_budget.etat()
     etat["avertissement"] = (
         "Le mode LLM n'est PAS opérationnel : aucun appel réel n'a été validé. "
         "Le moteur déterministe reste la seule source de vérité.")
@@ -243,12 +244,16 @@ def statut():
 import json as _json
 import re as _re
 
-from core import pseudonymisation
+from core import llm_budget, pseudonymisation
 from core.base import normaliser as _normaliser
 
 NOM_VARIABLE_ACCORD = "MONRECOURS_LLM_ACCORD_DONNEES"
-FOURNISSEURS_COMPREHENSION = ("anthropic", "compatible_openai")
+FOURNISSEURS_COMPREHENSION = ("anthropic", "compatible_openai", "deepseek")
 LONGUEUR_MAX_RESUME = 600
+# Estimation HAUTE d'un appel : consigne + récit + 92 fiches + guide.
+# Sert au plafond AVANT l'appel, jamais à la facturation (le fournisseur
+# renvoie ses vrais compteurs).
+JETONS_ESTIMES_PAR_APPEL = 6000
 
 _SYSTEME_COMPREHENSION = (
     "Tu aides un service d'information juridique ivoirien. Tu ne donnes AUCUN avis "
@@ -280,8 +285,14 @@ def fournisseur_comprehension():
     if adaptateur is None:
         return None
     nom = os.environ.get(NOM_VARIABLE_FOURNISSEUR).lower()
-    classe = (adaptateur.FournisseurAnthropic if nom == "anthropic"
-              else adaptateur.FournisseurCompatibleOpenAI)
+    classes = {
+        "anthropic": getattr(adaptateur, "FournisseurAnthropic", None),
+        "deepseek": getattr(adaptateur, "FournisseurDeepSeek", None),
+        "compatible_openai": getattr(adaptateur, "FournisseurCompatibleOpenAI", None),
+    }
+    classe = classes.get(nom)
+    if classe is None:
+        return None
     fournisseur = classe()
     return fournisseur if fournisseur.disponible() else None
 
@@ -372,13 +383,22 @@ def comprendre(recit, fiches, guide, fournisseur=None, delai=DELAI_PAR_DEFAUT):
         rapport["erreur"] = "aucun fournisseur actif"
         return rapport
     rapport["fournisseur"] = getattr(fournisseur, "nom", "inconnu")
+    # Garde-fou AVANT l'appel : plafond journalier et disjoncteur. Rien n'est
+    # envoyé, le service continue en déterministe, le citoyen reçoit sa réponse.
+    if not llm_budget.peut_appeler(JETONS_ESTIMES_PAR_APPEL):
+        rapport["erreur"] = "garde-fou : plafond journalier atteint ou fournisseur en panne"
+        return rapport
     recit_masque, rapport["masquages"] = pseudonymisation.masquer(recit)
     try:
         texte = fournisseur.completer(_SYSTEME_COMPREHENSION,
                                       _message(recit_masque, fiches, guide), delai=delai)
+        consommation = getattr(fournisseur, "derniere_consommation", None) or {}
+        llm_budget.enregistrer(consommation.get("entree", 0), consommation.get("sortie", 0))
+        llm_budget.signaler_succes()
         brut = _extraire_json(texte or "")
         retenu, rejets = valider_comprehension(brut, recit_masque, fiches, guide)
     except Exception as erreur:  # noqa: BLE001 — repli déterministe, jamais de panne
+        llm_budget.signaler_echec()
         rapport["erreur"] = "%s : %s" % (type(erreur).__name__, erreur)
         return rapport
     rapport.update(retenu)

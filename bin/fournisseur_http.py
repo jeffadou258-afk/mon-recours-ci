@@ -161,3 +161,100 @@ class FournisseurCompatibleOpenAI(object):
             return donnees["choices"][0]["message"]["content"]
         except (KeyError, IndexError, TypeError) as erreur:
             raise ErreurTransport("réponse du fournisseur au format inattendu") from erreur
+
+
+def _poster_api(url, entetes, corps, delai, libelles=None):
+    """POST JSON avec des messages d'erreur LISIBLES et sans fuite.
+
+    Le corps d'erreur du fournisseur n'est jamais recopié : il peut contenir
+    l'extrait de requête, donc du texte citoyen. On ne rapporte que le statut,
+    traduit en clair. Aucun en-tête d'authentification n'entre dans le message.
+    """
+    requete = urllib.request.Request(
+        url, data=json.dumps(corps).encode("utf-8"), method="POST",
+        headers=dict({"Content-Type": "application/json"}, **entetes))
+    try:
+        with urllib.request.urlopen(requete, timeout=delai) as reponse:
+            return json.loads(reponse.read().decode("utf-8"))
+    except urllib.error.HTTPError as erreur:
+        libelle = (libelles or {}).get(erreur.code, "HTTP %s" % erreur.code)
+        raise ErreurTransport("fournisseur : %s" % libelle) from erreur
+    except (socket.timeout, TimeoutError) as erreur:
+        raise ErreurTransport("délai dépassé") from erreur
+    except urllib.error.URLError as erreur:
+        raise ErreurTransport("transport : %s" % (erreur.reason,)) from erreur
+    except ValueError as erreur:
+        raise ErreurTransport("réponse non JSON") from erreur
+
+
+class FournisseurDeepSeek(object):
+    """API DeepSeek (compatible OpenAI) — modèle par défaut : deepseek-flash.
+
+    Trois différences avec le générique `compatible_openai`, et trois seulement :
+      * URL et modèle par défaut, pour que la configuration tienne en une ligne ;
+      * `response_format: json_object` : la sortie est un OBJET, pas du texte à
+        découper — le service refuse déjà tout ce qui n'est pas un JSON strict ;
+      * `usage` capturé : les jetons consommés alimentent le plafond journalier.
+
+    Ce fournisseur ne décide de rien : il propose des identifiants de fiches et
+    des reformulations, que `core.llm.valider_comprehension` puis
+    `core.catalogue.valider_fiches_proposees` rejettent s'ils ne tiennent pas.
+    Il ne cite jamais d'article et n'écrit jamais de démarche.
+    """
+
+    nom = "deepseek"
+    URL_DEFAUT = "https://api.deepseek.com/chat/completions"
+    MODELE_DEFAUT = "deepseek-flash"
+
+    LIBELLES_ERREUR = {
+        400: "requête refusée",
+        401: "clé refusée",
+        402: "solde du compte épuisé",
+        422: "requête invalide",
+        429: "débit dépassé chez le fournisseur",
+        500: "erreur interne du fournisseur",
+        502: "passerelle du fournisseur en erreur",
+        503: "fournisseur indisponible",
+    }
+
+    def __init__(self, url=None, cle=None, modele=None, delai=DELAI_PAR_DEFAUT):
+        self.url = url or os.environ.get(NOM_VARIABLE_URL) or self.URL_DEFAUT
+        self._cle = cle if cle is not None else os.environ.get(NOM_VARIABLE_CLE, "")
+        self.modele = modele or os.environ.get(NOM_VARIABLE_MODELE) or self.MODELE_DEFAUT
+        self.delai = delai
+        self.derniere_consommation = None
+
+    def disponible(self):
+        return bool(self.url and self._cle and self.modele)
+
+    def completer(self, systeme, message, delai=None, max_tokens=300):
+        if not self.disponible():
+            raise ErreurTransport("clé, URL ou modèle absent de l'environnement")
+        donnees = _poster_api(
+            self.url,
+            {"Authorization": "Bearer %s" % self._cle},
+            {"model": self.modele,
+             "max_tokens": max_tokens,
+             "temperature": 0,
+             "stream": False,
+             "response_format": {"type": "json_object"},
+             "messages": [{"role": "system", "content": systeme},
+                          {"role": "user", "content": message}]},
+            delai or self.delai,
+            self.LIBELLES_ERREUR)
+        usage = donnees.get("usage") if isinstance(donnees, dict) else None
+        usage = usage if isinstance(usage, dict) else {}
+        try:
+            self.derniere_consommation = {
+                "entree": int(usage.get("prompt_tokens") or 0),
+                "sortie": int(usage.get("completion_tokens") or 0),
+            }
+        except (TypeError, ValueError):
+            self.derniere_consommation = None
+        try:
+            contenu = donnees["choices"][0]["message"]["content"]
+        except (KeyError, IndexError, TypeError) as erreur:
+            raise ErreurTransport("réponse du fournisseur au format inattendu") from erreur
+        if not isinstance(contenu, str) or not contenu.strip():
+            raise ErreurTransport("réponse vide du fournisseur")
+        return contenu
