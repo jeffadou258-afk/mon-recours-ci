@@ -47,11 +47,20 @@ export function empreinteSaisie(email: string, secret: string): string {
 
 export function creerEcrivain(env: Record<string, string | undefined> = process.env): Ecrivain {
   const chemin = fichierAudit(env);
+  const secret = env.MONRECOURS_SESSION_SECRET || "";
   return async (ligne) => {
-    console.warn(JSON.stringify({ journal: "audit", ...ligne }));
+    // Aucune adresse e-mail en clair ne sort du journal, même si un appelant l'oublie :
+    // `empreinteSaisie` existe pour corréler sans conserver. Sans secret exploitable,
+    // on écrit une mention plutôt que l'adresse — un journal n'est pas un annuaire.
+    const propre = { ...ligne };
+    if (typeof propre.compte === "string" && propre.compte.trim()) {
+      propre.compte =
+        secret.length >= 32 ? empreinteSaisie(propre.compte, secret) : "[adresse non journalisée]";
+    }
+    console.warn(JSON.stringify({ journal: "audit", ...propre }));
     if (!chemin) return;
     try {
-      await appendFile(chemin, `${JSON.stringify(ligne)}\n`, { encoding: "utf8", mode: 0o600 });
+      await appendFile(chemin, `${JSON.stringify(propre)}\n`, { encoding: "utf8", mode: 0o600 });
     } catch {
       console.warn(JSON.stringify({ journal: "audit", evenement: "ecriture_impossible" }));
     }

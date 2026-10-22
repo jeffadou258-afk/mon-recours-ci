@@ -15,6 +15,8 @@
     "test:integration": "tsx --tsconfig tsconfig.test.json --test --test-concurrency=1 tests/integration/*.test.ts",
     "test:e2e": "tsx --tsconfig tsconfig.test.json --test --test-concurrency=1 tests/e2e/*.test.ts",
     "verifier:secrets": "node scripts/verifier-secrets.mjs",
+    "verifier:admin": "node scripts/verifier-admin.mjs",
+    "compte:creer": "node scripts/creer-compte.mjs",
     "apercu": "tsx --tsconfig tsconfig.test.json apercu/serveur-apercu.tsx",
     "purger": "node scripts/purger-consultations.mjs"
   },
