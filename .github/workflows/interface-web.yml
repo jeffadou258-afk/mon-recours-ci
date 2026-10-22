@@ -187,7 +187,7 @@ jobs:
         run: |
           npm install --no-save --ignore-scripts --no-fund --no-audit eslint@9 eslint-config-next@15.5 @eslint/eslintrc@3
           set +e
-          npx eslint . 2>&1 | tee ../eslint.txt
+          npx eslint . --max-warnings=0 2>&1 | tee ../eslint.txt
           S=${PIPESTATUS[0]}
           R=$(grep -E '✖ [0-9]+ problem' ../eslint.txt || echo "0 problème")
           echo "::notice title=ESLint::$(npx eslint --version) — $R (code $S)"

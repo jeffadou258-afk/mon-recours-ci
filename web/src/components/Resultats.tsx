@@ -2,7 +2,6 @@ import type { VueHorsCatalogue, VueRefus, VueReponse, VueUrgence } from "@/lib/t
 import { libelleDomaine, presentationStatut } from "@/lib/libelles";
 import { BandeauUrgence, EncadreVerrous, OrientationHumaine } from "./Alertes";
 import { BadgeVerification } from "./Badges";
-import { BoutonCopier } from "./BoutonCopier";
 import { FormulaireCourrier } from "./FormulaireCourrier";
 import { CarteCitation, trouverSource } from "./CarteCitation";
 

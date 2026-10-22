@@ -34,13 +34,14 @@ export function Parcours({ demo = false }: { demo?: boolean } = {}) {
 
   // À chaque changement d'étape, le focus va au titre de la nouvelle étape
   // (lecteurs d'écran et clavier) et la page remonte en haut sur mobile.
+  const tourClarification = etat.phase === "clarification" ? etat.vue.tour : 0;
   useEffect(() => {
     const titre = zone.current?.querySelector<HTMLElement>("h2[tabindex='-1']");
     if (titre && etat.phase !== "saisie") {
       titre.focus({ preventScroll: true });
       titre.scrollIntoView?.({ block: "start", behavior: "auto" });
     }
-  }, [etat.phase, etat.phase === "clarification" ? etat.vue.tour : 0]);
+  }, [etat.phase, tourClarification]);
 
   async function lancerOuverture(texte: string) {
     setErreur(null);

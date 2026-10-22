@@ -75,7 +75,7 @@ for (const nom of readdirSync(racineReelle)) {
       continue;
     }
     reel = realpathSync(chemin);
-  } catch (erreur) {
+  } catch {
     console.error(`Ignoré (illisible) : ${nom}`);
     echecs += 1;
     continue;
