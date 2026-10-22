@@ -71,10 +71,27 @@ class FichesAValider(unittest.TestCase):
             self.assertIsNotNone(
                 ligne, "%s : article %s introuvable dans %s" % (fiche["id"], fiche["article"], fiche["numero_texte"])
             )
-            self.assertEqual(
-                _sans_tiret(ligne[0]), fiche["citation"],
-                "%s : la citation ne correspond pas au texte indexé" % fiche["id"],
-            )
+            if fiche.get("citation_tronquee"):
+                # Troncature DÉCLARÉE : la citation doit être un préfixe EXACT du texte
+                # indexé, et le reste ne doit contenir que des en-têtes de section que
+                # l'OCR a fusionnés dans le corps de l'article. Aucun mot inventé n'est
+                # toléré ; aucune troncature silencieuse non plus.
+                self.assertTrue(fiche.get("motif_troncature"), "%s : troncature non motivée" % fiche["id"])
+                indexe = _sans_tiret(ligne[0])
+                self.assertTrue(
+                    indexe.startswith(fiche["citation"]),
+                    "%s : la citation n'est pas le début du texte indexé" % fiche["id"],
+                )
+                reste = indexe[len(fiche["citation"]):].strip()
+                self.assertRegex(
+                    reste, r"^(TITRE|CHAPITRE|Section|LIVRE)\b",
+                    "%s : le texte écarté n'est pas un en-tête de section : %r" % (fiche["id"], reste[:80]),
+                )
+            else:
+                self.assertEqual(
+                    _sans_tiret(ligne[0]), fiche["citation"],
+                    "%s : la citation ne correspond pas au texte indexé" % fiche["id"],
+                )
             self.assertEqual(fiche["sha256_article"], ligne[1], "%s : empreinte divergente" % fiche["id"])
 
     def test_aucune_citation_vide_ou_tronquee(self):
