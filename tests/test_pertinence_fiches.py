@@ -160,6 +160,94 @@ class SurLeCatalogueReel(unittest.TestCase):
         self.assertEqual([f["id"] for f in retenues], ["LOGEME_416"])
 
 
+class PertinenceDeProcedure(unittest.TestCase):
+    """Le domaine ne suffit pas : il faut que ce soit la BONNE procédure.
+
+    « logement » contient dix fiches, « contrats » en contient vingt-six dont
+    cinq procédures de saisie. Une fiche proposée dans le bon domaine peut donc
+    décrire une procédure qui n'a rien à voir avec le récit.
+    """
+
+    @classmethod
+    def setUpClass(cls):
+        cls.fiches = catalogue.charger()
+
+    def _verdict(self, fiche_id, recit, domaine):
+        retenues, rejets = catalogue.valider_fiches_proposees(
+            [fiche_id], recit, fiches=self.fiches, domaines=[domaine])
+        return bool(retenues), rejets
+
+    def test_expulsion_ne_se_confond_pas_avec_le_depot_de_garantie(self):
+        accepte, rejets = self._verdict(
+            "LOGEME_416", "Mon bailleur veut m'expulser et a changé la serrure.",
+            "logement_baux_foncier")
+        self.assertFalse(accepte, "le dépôt de garantie a répondu à une expulsion")
+        self.assertEqual(rejets[0]["raison"], "une autre fiche du domaine correspond : LOGEME_445")
+
+    def test_le_depot_de_garantie_ne_se_confond_pas_avec_l_expulsion(self):
+        accepte, rejets = self._verdict(
+            "LOGEME_445", "Mon bailleur refuse de me rendre la caution de deux mois.",
+            "logement_baux_foncier")
+        self.assertFalse(accepte, "l'expulsion a répondu à une caution")
+        self.assertEqual(rejets[0]["raison"], "une autre fiche du domaine correspond : LOGEME_416")
+
+    def test_saisie_sur_salaire_ne_se_confond_pas_avec_saisie_de_compte(self):
+        accepte, rejets = self._verdict(
+            "OHADA_153", "On a saisi mon salaire ce mois-ci.", "contrats_dettes_commerce")
+        self.assertFalse(accepte, "la saisie-attribution a répondu à une saisie sur salaire")
+        self.assertEqual(rejets[0]["raison"], "une autre fiche du domaine correspond : OHADA_173")
+
+    def test_saisie_de_compte_ne_se_confond_pas_avec_saisie_sur_salaire(self):
+        accepte, rejets = self._verdict(
+            "OHADA_173", "Ils ont saisi mon compte bancaire.", "contrats_dettes_commerce")
+        self.assertFalse(accepte, "la saisie sur salaire a répondu à une saisie de compte")
+        self.assertEqual(rejets[0]["raison"], "une autre fiche du domaine correspond : OHADA_153")
+
+    def test_langage_courant_depot_de_garantie_reste_reconnu(self):
+        """Aucun mot juridique, aucun déclencheur : le modèle reste utile."""
+        accepte, _ = self._verdict(
+            "LOGEME_416", "L'argent que j'avais versé à l'entrée, il ne me le rend pas.",
+            "logement_baux_foncier")
+        self.assertTrue(accepte, "un langage courant légitime a été refusé")
+
+    def test_langage_courant_saisie_de_compte_reste_reconnu(self):
+        accepte, _ = self._verdict(
+            "OHADA_153", "La banque a bloqué mon compte à cause d'une dette.",
+            "contrats_dettes_commerce")
+        self.assertTrue(accepte, "un langage courant légitime a été refusé")
+
+    def test_langage_courant_conge_du_bailleur_reste_reconnu(self):
+        accepte, _ = self._verdict(
+            "LOGEME_440", "Le propriétaire veut récupérer son appartement pour y habiter.",
+            "logement_baux_foncier")
+        self.assertTrue(accepte, "un langage courant légitime a été refusé")
+
+    def test_le_controle_ne_rejette_jamais_une_fiche_du_moteur(self):
+        """Propriété de non-régression : 92 fiches, aucune rejetée à tort.
+
+        Pour chaque fiche, on construit une question à partir de son propre
+        déclencheur. Si le moteur déterministe la retient, le contrôle de
+        pertinence doit la retenir aussi — sinon le contrôle casse le service.
+        """
+        testees = 0
+        for fiche in self.fiches:
+            declencheur = (fiche.get("declencheurs") or [None])[0]
+            if not declencheur:
+                continue
+            question = "Bonjour, %s. Que dit la loi ?" % declencheur
+            retenues, _ = catalogue.pour_demande(
+                question, domaines=[fiche["domaine"]], fiches=self.fiches)
+            if fiche["id"] not in [f["id"] for f in retenues]:
+                continue
+            testees += 1
+            validees, rejets = catalogue.valider_fiches_proposees(
+                [fiche["id"]], question, fiches=self.fiches, domaines=[fiche["domaine"]])
+            self.assertTrue(
+                validees,
+                "%s rejetée à tort : %s" % (fiche["id"], rejets[0]["raison"] if rejets else "?"))
+        self.assertGreater(testees, 80, "trop peu de fiches testées pour conclure")
+
+
 class BranchementDansLaConversation(unittest.TestCase):
     """Le contrôle est-il réellement appliqué ? On fait parler un faux modèle."""
 

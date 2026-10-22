@@ -188,6 +188,13 @@ def _correspond(declencheur, texte_normalise):
     return bool(mots) and all(_mot_present(mot, mots_du_texte) for mot in mots)
 
 
+MOTS_VIDES = frozenset("""
+a ai au aux avec ce ces cet cette dans de des du elle elles en est et eux il ils
+je la le les leur lui ma mais mes moi mon ne nos notre nous on ou où par pas pour
+que qui quoi sa sans se ses si son sont sur ta te tes toi ton tu un une vos votre
+vous y plus moins tout tous toute toutes comme aussi bien fait faire suis etre
+""".split())
+
 def pour_demande(demande, domaines=(), fiches=None, chemin_db=None, scores=None):
     """Fiches qui répondent à la demande, par déclencheur puis par domaine.
 
@@ -252,7 +259,6 @@ def valider_fiches_proposees(propositions, demande, fiches=None, domaines=(), sc
     fiches = fiches if fiches is not None else charger()
     index = {f["id"]: f for f in fiches}
     texte = normaliser(demande or "")
-
     def note(domaine):
         return ((scores or {}).get(domaine) or {}).get("score", 0)
 
@@ -274,9 +280,23 @@ def valider_fiches_proposees(propositions, demande, fiches=None, domaines=(), sc
             retenues.append(fiche)
             continue
         if fiche["domaine"] in domaines:
-            # Porte B : le domaine a été établi par la qualification déterministe.
-            # Les mots du récit ne sont PAS nécessaires — c'est précisément ce que
-            # le modèle apporte — mais le domaine, lui, n'est jamais choisi par lui.
+            # Le domaine ne dit rien de la PROCÉDURE : « logement » contient le
+            # dépôt de garantie ET l'expulsion ; « contrats » contient cinq
+            # procédures de saisie. Si une AUTRE fiche du même domaine voit un de
+            # ses déclencheurs tomber dans le récit, c'est elle que le moteur
+            # déterministe aurait servie — le modèle ne peut pas l'écarter.
+            # Critère du moteur lui-même : aucune heuristique de score.
+            rival = None
+            for voisine in fiches:
+                if voisine["id"] == fiche["id"] or voisine["domaine"] != fiche["domaine"]:
+                    continue
+                if any(_correspond(d, texte) for d in voisine.get("declencheurs", ())):
+                    rival = voisine
+                    break
+            if rival is not None:
+                rejets.append({"fiche": identifiant,
+                               "raison": "une autre fiche du domaine correspond : %s" % rival["id"]})
+                continue
             vus.add(identifiant)
             retenues.append(fiche)
             continue
