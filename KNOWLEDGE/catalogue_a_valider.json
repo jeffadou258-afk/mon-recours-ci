@@ -1,0 +1,457 @@
+{
+  "genere_le": "2026-10-22",
+  "statut": "A_VALIDER_PAR_JURISTE",
+  "avertissement": "Fiches préparées à partir des textes du corpus, NON validées par un juriste. Elles ne sont pas lues par le moteur : elles ne répondent à aucun citoyen.",
+  "fiches": [
+    {
+      "id": "CONSO_11_RETOUR_VENTE_DISTANCE",
+      "domaine": "consommation",
+      "numero_texte": "2016-412",
+      "article": "11",
+      "titre": "Vente à distance : délai de dix jours pour retourner le produit",
+      "declencheurs": [
+        "vente à distance",
+        "achat en ligne",
+        "commande par internet",
+        "retour du produit",
+        "je veux retourner",
+        "délai de retour",
+        "achat par correspondance",
+        "vente hors établissement"
+      ],
+      "citation": "Pour toutes les opérations de vente à distance ou de vente hors établissement, l’acheteur d’un produit dispose d’un délai de dix jours ouvrables, à compter de la livraison de sa commande, pour faire retour de ce produit au vendeur pour échange ou remboursement, sans pénalités, à l’exception des frais de retour.",
+      "lecture": "Pour une vente à distance ou hors établissement, l'acheteur dispose de dix jours ouvrables à compter de la livraison pour retourner le produit au vendeur, en vue d'un échange ou d'un remboursement, sans pénalités autres que les frais de retour.",
+      "faits_requis": [
+        [
+          "achat_distance",
+          "L'achat a-t-il été fait à distance ou hors établissement ?"
+        ],
+        [
+          "date_livraison",
+          "À quelle date le produit a-t-il été livré ?"
+        ]
+      ],
+      "etape_plan": "Conserver la preuve d'achat et la date de livraison, puis adresser au vendeur une demande écrite de retour dans les dix jours ouvrables.",
+      "informations_non_etablies": [],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:a3879d23ad9a9b819df5eb9c49ed1684a00dda6cacf71e6e600eac34b53628cc",
+      "reference": {
+        "titre_officiel": "LOI n° 2016-412 du 15 juin 2016 relative à la consommation",
+        "date_publication": "2016-06-15",
+        "url_source": "https://faolex.fao.org/docs/pdf/Ivc172699.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "CONSO_3_INFORMATION_PREALABLE",
+      "domaine": "consommation",
+      "numero_texte": "2016-412",
+      "article": "3",
+      "titre": "Information à communiquer avant la conclusion du contrat",
+      "declencheurs": [
+        "information avant achat",
+        "le vendeur ne m'a rien dit",
+        "caractéristiques du produit",
+        "prix affiché",
+        "informations obligatoires",
+        "vendeur qui cache",
+        "conditions de vente"
+      ],
+      "citation": "Le professionnel doit communiquer de manière lisible et compréhensible au consommateur, avant la conclusion d’un contrat de vente ou de fourniture de service, les informations suivantes :  les principales caractéristiques du bien ou du service, quel que soit le support de communication utilisé ;  le prix du bien ou du service ;  en l’absence d’exécution immédiate du contrat, la date ou le délai auquel le professionnel s’engage à livrer le bien ou à exécuter le service ;  les informations relatives à son identité et ses activités, aux garanties, aux fonctionnalités du produit ou du service et éventuellement le contenu numérique du support d’accompagnement et le cas échéant à son interopérabilité, à l’existence et aux modalités de mise en œuvre des garanties et aux autres conditions contractuelles.",
+      "lecture": "Avant la conclusion d'un contrat de vente ou de fourniture de service, le professionnel doit communiquer de façon lisible les caractéristiques du bien ou du service, le prix, le délai de livraison ou d'exécution, son identité et les garanties applicables.",
+      "faits_requis": [
+        [
+          "contrat_conclu",
+          "Le contrat est-il déjà conclu ?"
+        ],
+        [
+          "information_recue",
+          "Quelles informations le professionnel vous a-t-il remises ?"
+        ]
+      ],
+      "etape_plan": "Rassembler les documents remis avant l'achat (devis, bon de commande, publicité) et comparer avec la liste d'informations que l'article 3 impose.",
+      "informations_non_etablies": [],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:49b5764d9e2d0f6c0e0c88281640e16acf15ca90a961899b54abd3991bc5da84",
+      "reference": {
+        "titre_officiel": "LOI n° 2016-412 du 15 juin 2016 relative à la consommation",
+        "date_publication": "2016-06-15",
+        "url_source": "https://faolex.fao.org/docs/pdf/Ivc172699.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "CONSO_6_RETARD_LIVRAISON",
+      "domaine": "consommation",
+      "numero_texte": "2016-412",
+      "article": "6",
+      "titre": "Retard de livraison : dénonciation du contrat au-delà de sept jours",
+      "declencheurs": [
+        "retard de livraison",
+        "je n'ai pas reçu ma commande",
+        "livraison en retard",
+        "produit jamais livré",
+        "date de livraison dépassée",
+        "annuler ma commande"
+      ],
+      "citation": "Dans tout contrat ayant pour objet la vente d’un bien meuble ou la fourniture d’une prestation de service à un consommateur, le professionnel doit, lorsque la livraison du bien ou la fourniture de la prestation n’est pas immédiate et si le prix convenu excède des seuils fixés par décret pris en Conseil des Ministres, indiquer la date limite à laquelle il s’engage à livrer le bien ou à exécuter la prestation. Le consommateur peut dénoncer le contrat de vente d’un bien meuble ou de fourniture d’une prestation de service par lettre recommandée avec demande d’avis de réception, en cas de dépassement de la date de livraison du bien ou d’exécution de la prestation excédant sept jours lorsque le dépassement n’est pas dût à un cas de force majeure. Loi relative à la consommation 2 www.droit‐afrique.com Côte d’Ivoire Le cas échéant, ce contrat est considéré comme rompu à la réception par le vendeur ou par le prestataire de services, de la lettre par laquelle le consommateur l’informe de sa décision, si la livraison n’est pas intervenue ou si la prestation n’a pas été exécutée entre l’envoi et la réception de cette lettre. Le consommateur exerce ce droit dans un délai de soixante jours ouvrés à compter de la date indiquée pour la livraison du bien ou l’exécution de la prestation. Sauf stipulation contraire du contrat, les sommes versées d’avance sont des arrhes. Chacun des contractants peut revenir sur son engagement, le consommateur en perdant les arrhes, le professionnel en les restituant au double. Chapitre 3 ‐ Certification des produits et services",
+      "lecture": "Lorsque la livraison n'est pas immédiate et que le prix dépasse un seuil fixé par décret, le professionnel doit indiquer une date limite ; le consommateur peut dénoncer le contrat par lettre recommandée si le dépassement excède sept jours, sauf force majeure.",
+      "faits_requis": [
+        [
+          "prix_achat",
+          "Quel est le prix de la commande ?"
+        ],
+        [
+          "date_prevue",
+          "Quelle date de livraison avait été indiquée ?"
+        ]
+      ],
+      "etape_plan": "Vérifier la date limite annoncée, puis adresser une lettre recommandée avec accusé de réception dénonçant le contrat.",
+      "informations_non_etablies": [
+        "Le seuil de prix à partir duquel l'article 6 s'applique est fixé par décret pris en Conseil des Ministres : ce décret n'est pas dans le corpus. INFORMATION_NON_ETABLIE."
+      ],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:b616e06c57a59e1688af63d36241e1f2109c4a34f7e093a2d8f466f7b2be938c",
+      "reference": {
+        "titre_officiel": "LOI n° 2016-412 du 15 juin 2016 relative à la consommation",
+        "date_publication": "2016-06-15",
+        "url_source": "https://faolex.fao.org/docs/pdf/Ivc172699.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "CONSO_45_RETRACTATION_OFFRE",
+      "domaine": "consommation",
+      "numero_texte": "2016-412",
+      "article": "45",
+      "titre": "Rétractation dans les dix jours suivant l'acceptation de l'offre",
+      "declencheurs": [
+        "je veux me rétracter",
+        "rétractation",
+        "annuler mon achat",
+        "j'ai signé une offre",
+        "délai de réflexion",
+        "changer d'avis"
+      ],
+      "citation": "L’acceptation de l’offre résulte de sa signature par le consommateur, précédée de la mention manuscrite « lu et approuvé », de la date et du lieu, suivie, s’il y a lieu, de son envoi au professionnel par lettre recommandée avec demande d’avis de réception ou, à défaut, par tout autre moyen présentant des garanties équivalentes pour la détermination de la date d’envoi. Dans les mêmes formes, le consommateur peut se rétracter dans un délai de dix jours à compter de l’envoi au professionnel de l’offre acceptée, sans indemnité ni frais, à l’exception éventuelle des frais tarifés nécessairement engagés.",
+      "lecture": "L'acceptation de l'offre résulte de sa signature, précédée de la mention manuscrite « lu et approuvé », de la date et du lieu ; le consommateur peut se rétracter dans les mêmes formes pendant dix jours à compter de l'envoi de l'offre acceptée, sans indemnité ni frais, hors frais tarifés déjà engagés.",
+      "faits_requis": [
+        [
+          "offre_signee",
+          "Avez-vous signé une offre ?"
+        ],
+        [
+          "date_envoi",
+          "À quelle date l'offre acceptée a-t-elle été envoyée ?"
+        ]
+      ],
+      "etape_plan": "Retrouver l'offre signée et sa date d'envoi, puis notifier la rétractation par écrit dans les mêmes formes que l'acceptation.",
+      "informations_non_etablies": [],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:0e03bd72f80f7253b6282423e4c182a9027f774c8b2efd5ac4d59a612b2d44d3",
+      "reference": {
+        "titre_officiel": "LOI n° 2016-412 du 15 juin 2016 relative à la consommation",
+        "date_publication": "2016-06-15",
+        "url_source": "https://faolex.fao.org/docs/pdf/Ivc172699.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "CONSO_62_PRATIQUE_TROMPEUSE",
+      "domaine": "consommation",
+      "numero_texte": "2016-412",
+      "article": "62",
+      "titre": "Pratique commerciale trompeuse",
+      "declencheurs": [
+        "publicité mensongère",
+        "on m'a menti sur le produit",
+        "fausse promotion",
+        "produit différent de la publicité",
+        "prix barré faux",
+        "arnaque",
+        "pratique trompeuse",
+        "allégations fausses"
+      ],
+      "citation": "Une pratique commerciale est trompeuse si elle est commise dans l’une des circonstances suivantes : 1° Lorsqu’elle crée une confusion avec un autre bien ou service, une marque, un nom commercial, ou un autre signe distinctif d’un concurrent ; 2° Lorsqu’elle repose sur des allégations, des indications ou présentations fausses ou de nature à induire en erreur et portant sur l’un ou plusieurs des éléments suivants :  a) l’existence, la disponibilité ou la nature du bien ou du service ;  b) les caractéristiques essentielles du bien ou du service, à savoir : ses qualités substantielles, sa composition, ses accessoires, son origine, sa quantité, son mode et sa date de fabrication, les conditions de son utilisation et son aptitude à l’usage, ses propriétés et les résultats attendus de son utilisation, ainsi que les résultats et les principales caractéristiques des tests et contrôles effectués sur le bien ou le service ;  c) le prix ou le mode de calcul du prix, le caractère promotionnel du prix et les conditions de vente, de paiement et de livraison du bien ou du service ;  d) le service après‐vente, la nécessité d’un service, d’une pièce détachée, d’un remplacement ou d’une réparation ;  e) la portée des engagements de l’annonceur, la nature, le procédé ou le motif de la vente ou de la prestation de services ;  f) l’identité, les qualités, les aptitudes et les droits du professionnel ;  g) le traitement des réclamations et les droits du consommateur. 3° Lorsque la personne pour le compte de laquelle elle est mise en œuvre n’est pas clairement identifiable.",
+      "lecture": "Une pratique commerciale est trompeuse lorsqu'elle crée une confusion avec un autre bien, service ou signe distinctif, ou lorsqu'elle repose sur des allégations fausses ou de nature à induire en erreur, notamment sur l'existence, la nature ou les caractéristiques essentielles du bien ou du service.",
+      "faits_requis": [
+        [
+          "preuve_publicite",
+          "Disposez-vous de la publicité ou de l'annonce (capture, tract) ?"
+        ],
+        [
+          "ecart",
+          "En quoi le produit reçu diffère-t-il de ce qui était annoncé ?"
+        ]
+      ],
+      "etape_plan": "Conserver la publicité et la preuve d'achat, puis signaler la pratique au service compétent ; l'article 62 énumère les circonstances, il ne fixe pas lui-même de démarche.",
+      "informations_non_etablies": [
+        "L'article 62 définit la pratique trompeuse. La sanction et l'autorité compétente figurent dans d'autres articles de la loi, non retenus dans cette fiche : INFORMATION_NON_ETABLIE ici."
+      ],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:19e19adbde0a337db2e59fddc2f6c7d93bd3ca0bb0d9f470e66638ea823ef81c",
+      "reference": {
+        "titre_officiel": "LOI n° 2016-412 du 15 juin 2016 relative à la consommation",
+        "date_publication": "2016-06-15",
+        "url_source": "https://faolex.fao.org/docs/pdf/Ivc172699.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "CONSO_96_SERVICE_APRES_VENTE",
+      "domaine": "consommation",
+      "numero_texte": "2016-412",
+      "article": "96",
+      "titre": "Service après-vente et information sur la réparation",
+      "declencheurs": [
+        "service après-vente",
+        "réparation",
+        "panne",
+        "sav",
+        "réparation forfaitaire",
+        "pièces remplacées"
+      ],
+      "citation": "Le service après‐vente s’entend de tous services fournis par un producteur ou par un distributeur à ses clients, après la vente du produit. Sa mention est parfois accompagnée des lettres P (pièces), MO (main‐d’œuvre) et/ou D (déplacement), qui qualifient sa portée et la nature de la garantie. Lorsque le professionnel facture des prestations de réparation forfaitaires, il doit, par écrit, informer l’acheteur de l’origine de la panne, de la nature de l’intervention et des pièces ou fournitures remplacées. Chapitre 2 ‐ Obligation générale de conformité",
+      "lecture": "Le service après-vente couvre les services fournis après la vente ; lorsque le professionnel facture une réparation forfaitaire, il doit informer par écrit l'acheteur de l'origine de la panne, de la nature de l'intervention et des pièces remplacées.",
+      "faits_requis": [
+        [
+          "facture",
+          "La réparation a-t-elle été facturée ?"
+        ],
+        [
+          "ecrit_recu",
+          "Avez-vous reçu une information écrite sur la panne ?"
+        ]
+      ],
+      "etape_plan": "Réclamer par écrit l'information sur l'origine de la panne et les pièces remplacées, en joignant la facture.",
+      "informations_non_etablies": [],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:d6d6f1822e004d2cbb6d9fde5d49addc4c0c4271864385002e788232f228e78b",
+      "reference": {
+        "titre_officiel": "LOI n° 2016-412 du 15 juin 2016 relative à la consommation",
+        "date_publication": "2016-06-15",
+        "url_source": "https://faolex.fao.org/docs/pdf/Ivc172699.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "ASSO_7_DECLARATION",
+      "domaine": "associations_organisations_religieuses",
+      "numero_texte": "2024-368",
+      "article": "7",
+      "titre": "Déclaration préalable d'une organisation de la société civile",
+      "declencheurs": [
+        "créer une association",
+        "déclarer une association",
+        "monter une association",
+        "association non déclarée",
+        "association cultuelle",
+        "ong",
+        "déclaration en préfecture"
+      ],
+      "citation": "Les OSC doivent faire l'objet d'tme déclaration préalable à la direction compétente du ministère en charge de l' Adminis­ tration du Territoire, à la préfecture ou à la sous-préfecture du lieu d'établissement du siège social en Côte d'Ivoire. Lorsque l'OSC a son siège à l'étranger, la déclaration est faite à la pré­ fecture ou à la sous-préfecture de son principal établissement en Côte d'Ivoire. La déclaration préalable est faite par écrit sur papier libre ou en ligne par les soins des membres fondateurs ou de l'organe exé­ cutif. Elle fait connaître la nature de l'OSC, le titre et son objet, l'adresse, le siège et, éventuellement, celui de ses établissements et les noms, professions et domiciles de ceux qui, à un titre quel­ conque, sont chargés de son administration ou de sa direction. Dans le délai de sept jours à compter de la saisine, il en est donné récépissé de dépôt énumérant les pièces annexées. Le récépissé est daté et signé par l'autorité chargée des OSC ter­ ritorialement compétente. La délivrance du récépissé de dépôt par l'autorité chargée des OSC territorialement compétente est conditionnée par le dépôt des pièces telles qu'énumérées aux articles 10 et 11 suivants.",
+      "lecture": "Une OSC doit faire l'objet d'une déclaration préalable à la direction compétente du ministère en charge de l'Administration du Territoire, à la préfecture ou à la sous-préfecture du siège social ; la déclaration est écrite, sur papier libre ou en ligne, et fait connaître la nature, le titre, l'objet, l'adresse, le siège et les responsables.",
+      "faits_requis": [
+        [
+          "siege",
+          "Où se situe le siège social de l'association ?"
+        ],
+        [
+          "forme",
+          "S'agit-il d'une association, d'une ONG ou d'une organisation cultuelle ?"
+        ]
+      ],
+      "etape_plan": "Préparer la déclaration écrite indiquant la nature, le titre, l'objet, le siège et les responsables, puis la déposer à la préfecture ou à la sous-préfecture du siège.",
+      "informations_non_etablies": [],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:bf887e213b039578c5b931dc7b1b589624407ed4e97e7ca1791a8d3d91b6e121",
+      "reference": {
+        "titre_officiel": "ORDONNANCE n° 2024-368 du 12 juin 2024 relative aux Organisations de la Société Civile — Journal officiel de la République de Côte d'Ivoire du 21 juin 2024",
+        "date_publication": "2024-06-12",
+        "url_source": "https://faolex.fao.org/docs/pdf/ivc229657.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "ASSO_10_PIECES_DOSSIER",
+      "domaine": "associations_organisations_religieuses",
+      "numero_texte": "2024-368",
+      "article": "10",
+      "titre": "Pièces à joindre à la déclaration",
+      "declencheurs": [
+        "pièces du dossier association",
+        "quels documents pour créer une association",
+        "dossier de déclaration",
+        "statuts à joindre",
+        "création asso documents"
+      ],
+      "citation": "Sont joints à la déclaration pour toutes les OSC : - la preuve du paiement d'un droit de dépôt du dossier dont le coût et les modalités de paiement sont fixés par voie réglemen­ taire; - trois exemplaires des statuts et du règlement intérieur signés par le président et le secrétaire général ou par deux membres de la haute direction ; trois exemplaires du procès-verbal de l'assemblée générale constitutive signés par le président ou un membre de la haute direction et le secrétaire de séance ; - trois exemplaires de la liste des membres fondateurs avec en regard : la nationalité, la profession, la date de naissance, le domicile et l'adresse de chacun d'eux; - trois exemplaires de la liste des membres de l'organe de direction avec l'indication de leur nationalité, leur profession, leur date de naissance, leur domicile et leur adresse ; - trois exemplaires de la liste de présence légalisée de l' assem­ blée générale constitutive signée par les membres ; - trois exemplaires de la liste des commissaires aux comptes. Pour les représentations, en plus des pièces ci-dessus énumé­ rées, doivent être adjoints: - trois exemplaires de la déclaration de l'organisation-mère ou de la copie certifiée conforme , - trois exemplaires de l'extrait du Journal officiel de publica­ tion du pays d'origine de l'organisation-mère ou tout autre document en tenant lieu ; - trois exemplaires du mandat de représentation délivré et signé par le président ou le dirigeant de l'organisation-mère au repré­ sentant local. En cas de besoin, l'autorité chargée des OSC territorialement compétente peut demander un ou plusieurs autres exemplaires des pièces exigées par le présent article. Les documents susmentionnés rédigés en langue étrangère doi­ vent être traduits en langue française. La déclaration est véritable, exacte et sincère sous peine de dis­ solution de l'organisation prononcée dans les conditions prévues à l'article 21, sans préjudice des sanctions pénales prévues à l'ar­ ticle 53.",
+      "lecture": "La déclaration est accompagnée de la preuve du paiement du droit de dépôt, de trois exemplaires des statuts et du règlement intérieur signés, de trois exemplaires du procès-verbal de l'assemblée générale constitutive, et de trois exemplaires de la liste des membres fondateurs et de celle des membres de l'organe de direction.",
+      "faits_requis": [
+        [
+          "assemblee_constitutive",
+          "Une assemblée générale constitutive a-t-elle eu lieu ?"
+        ],
+        [
+          "statuts_rediges",
+          "Les statuts sont-ils rédigés et signés ?"
+        ]
+      ],
+      "etape_plan": "Réunir les pièces en trois exemplaires chacune (statuts, règlement intérieur, procès-verbal constitutif, listes des fondateurs et des dirigeants) et s'acquitter du droit de dépôt.",
+      "informations_non_etablies": [
+        "Le montant du droit de dépôt est fixé par voie réglementaire : ce texte n'est pas dans le corpus. INFORMATION_NON_ETABLIE."
+      ],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:c1f8dc309d58d341d6efec0e210171641c1debe725403952dbd46ee77ab4c95b",
+      "reference": {
+        "titre_officiel": "ORDONNANCE n° 2024-368 du 12 juin 2024 relative aux Organisations de la Société Civile — Journal officiel de la République de Côte d'Ivoire du 21 juin 2024",
+        "date_publication": "2024-06-12",
+        "url_source": "https://faolex.fao.org/docs/pdf/ivc229657.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "ASSO_11_CONTENU_STATUTS",
+      "domaine": "associations_organisations_religieuses",
+      "numero_texte": "2024-368",
+      "article": "11",
+      "titre": "Contenu obligatoire des statuts",
+      "declencheurs": [
+        "rédiger les statuts",
+        "statuts d'association",
+        "que doivent contenir les statuts",
+        "modifier les statuts",
+        "objet de l'association"
+      ],
+      "citation": "Les statuts prévus à l'alinéa l de l'article 10 contiennent: - le titre, l'objet, la durée, l'adresse et le siège social de l'OSC; - les conditions d'acquisition et de perte de la qualité des mem- bres; - l'indication de l'origine des ressources financières; - les règles d'organisation et de fonctionnement de l'OSC et de ses établissements, ainsi que la détermination des pouvoirs conférés aux membres chargés de l'administration ou de la direction, les modalités et les fréquences de contrôle, la compo­ sition, le quorum et la fréquence des sessions de l'organe suprême, les conditions de modification des statuts et de sa dis­ solution; - l'engagement de faire connaître dans le mois, à l'administra­ tion où a été reçue la déclaration, tous les changements survenus dans l'administration ou la direction et de présenter, sans dépla­ cement, les registres et pièces de comptabilité sur toute réquisition de l'autorité chargée des OSC territorialement com­ pétente; - les règles suivant lesquelles les biens seront dévolus en cas de dissolution volontaire, statutaire ou prononcée par voie admi­ nistrative ou par la justice ; - les règles suivant lesquelles des contributions pourront être exigées des membres et des bénéficiaires des prestations de l'OSC. Les statuts doivent spécifier la nature et l'objet de l'organisa­ tion, les droits et obligations des membres et celui du personnel opérationnel. Ils doivent également mentionner l'engagement des membres de l'OSC à se conformer aux dispositions de la présente ordonnance. 240 JOURNAL OFFICIEL DE LA RÉPUBLIQUE DE CÔTE D'IVOIRE 21 juin 2024",
+      "lecture": "Les statuts contiennent le titre, l'objet, la durée, l'adresse et le siège social, les conditions d'acquisition et de perte de la qualité de membre, l'origine des ressources financières, les règles d'organisation et de fonctionnement, les pouvoirs des dirigeants, le quorum et la fréquence des sessions de l'organe suprême, ainsi que les conditions de modification des statuts et de dissolution.",
+      "faits_requis": [
+        [
+          "statuts_existants",
+          "Des statuts existent-ils déjà ?"
+        ],
+        [
+          "objet_asso",
+          "Quel est l'objet de l'association ?"
+        ]
+      ],
+      "etape_plan": "Comparer les statuts rédigés à la liste de l'article 11 et compléter les mentions absentes avant le dépôt.",
+      "informations_non_etablies": [],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:dd23adab03e0b3c036648b7c98654b11957afdbbb7f95cbf951bb48fa7feb261",
+      "reference": {
+        "titre_officiel": "ORDONNANCE n° 2024-368 du 12 juin 2024 relative aux Organisations de la Société Civile — Journal officiel de la République de Côte d'Ivoire du 21 juin 2024",
+        "date_publication": "2024-06-12",
+        "url_source": "https://faolex.fao.org/docs/pdf/ivc229657.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "ASSO_55_UTILITE_PUBLIQUE",
+      "domaine": "associations_organisations_religieuses",
+      "numero_texte": "2024-368",
+      "article": "55",
+      "titre": "Conditions pour être reconnue d'utilité publique",
+      "declencheurs": [
+        "reconnaissance d'utilité publique",
+        "utilité publique",
+        "devenir association reconnue",
+        "agrément utilité publique"
+      ],
+      "citation": "Pour être reconnue d'utilité publique, une OSC régulièrement déclarée est tenue de satisfaire aux conditions sui­ vantes: - fonctionner depuis au moins cinq (5) ans; - regrouper au moins cent (100) membres adhérents ; - jouir d'une influence et d'un rayonnement suffisant et dépas- sant, en tout état de cause, le cadre de la région, circonscription administrative ; - exécuter une mission d'intérêt général ou d'utilité sociale à caractère non lucratif; 244 JOURNAL OFFICIEL DE LA RÉPUBLIQUE DE CÔTE D'IVOIRE 21 juin 2024 - respecter les principes démocratiques de gestion et de gou­ vernance associative ; - jouir d'une solidité financière tangible qui se traduit par un montant annuel des ressources propres au moins égal à vingt mil­ lions (20 000 000) de francs et justifier de résultats positifs au cours des trois derniers exercices.",
+      "lecture": "Pour être reconnue d'utilité publique, une OSC régulièrement déclarée doit fonctionner depuis au moins cinq ans, regrouper au moins cent membres adhérents, jouir d'une influence dépassant le cadre de la région, exécuter une mission d'intérêt général à caractère non lucratif, respecter des principes démocratiques de gestion et justifier de ressources propres annuelles d'au moins vingt millions de francs.",
+      "faits_requis": [
+        [
+          "anciennete",
+          "Depuis combien d'années l'association fonctionne-t-elle ?"
+        ],
+        [
+          "membres",
+          "Combien de membres adhérents compte-t-elle ?"
+        ]
+      ],
+      "etape_plan": "Vérifier chacun des critères de l'article 55 (ancienneté, membres, rayonnement, ressources propres) avant de présenter une demande.",
+      "informations_non_etablies": [
+        "La procédure et l'autorité qui prononce la reconnaissance d'utilité publique ne sont pas établies par l'article 55 : INFORMATION_NON_ETABLIE."
+      ],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:fdab49924fd777cd0fff05b8ba3b61b70a73142ec273c5df35d3013dbb00e955",
+      "reference": {
+        "titre_officiel": "ORDONNANCE n° 2024-368 du 12 juin 2024 relative aux Organisations de la Société Civile — Journal officiel de la République de Côte d'Ivoire du 21 juin 2024",
+        "date_publication": "2024-06-12",
+        "url_source": "https://faolex.fao.org/docs/pdf/ivc229657.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    },
+    {
+      "id": "ASSO_133_MISE_EN_CONFORMITE",
+      "domaine": "associations_organisations_religieuses",
+      "numero_texte": "2024-368",
+      "article": "133",
+      "titre": "Associations créées sous la loi de 1960 : délai de mise en conformité",
+      "declencheurs": [
+        "association de 1960",
+        "ancienne association",
+        "mise en conformité",
+        "loi 60-315",
+        "association existante nouvelle loi",
+        "amende association"
+      ],
+      "citation": "Les OSC régulièrement constituées conformément à la loi n°60-3 l 5 du 21 septembre 1960 relative aux associations sont tenues de se conformer à la présente ordonnance dans le délai de douze mois, sous peine d'une amende d'un million ( 1.000.000) de francs. En cas d'inobservation des obligations prévues à l'alinéa pré­ cédent, trois mois après le prononcé de l'amende, la dissolution de l'OSC peut intervenir dans les conditions prévues à l'article 21.",
+      "lecture": "Les OSC constituées conformément à la loi n° 60-315 du 21 septembre 1960 doivent se conformer à la présente ordonnance dans un délai de douze mois, sous peine d'une amende d'un million de francs ; trois mois après le prononcé de l'amende, la dissolution peut intervenir.",
+      "faits_requis": [
+        [
+          "date_creation",
+          "À quelle date l'association a-t-elle été déclarée ?"
+        ],
+        [
+          "conformite",
+          "Une mise en conformité a-t-elle déjà été engagée ?"
+        ]
+      ],
+      "etape_plan": "Vérifier la date de déclaration initiale, puis engager la mise en conformité auprès de l'autorité où la déclaration a été reçue.",
+      "informations_non_etablies": [],
+      "etat_verification": "A_VALIDER_PAR_JURISTE",
+      "origine_texte": "CALQUE_TEXTE",
+      "recoupe": false,
+      "confiance_ocr": null,
+      "sha256_article": "sha256:0b5f2f5ce2decdd6584b06ebed237ffa595c13896b4e116920bfa3f987a0fb23",
+      "reference": {
+        "titre_officiel": "ORDONNANCE n° 2024-368 du 12 juin 2024 relative aux Organisations de la Société Civile — Journal officiel de la République de Côte d'Ivoire du 21 juin 2024",
+        "date_publication": "2024-06-12",
+        "url_source": "https://faolex.fao.org/docs/pdf/ivc229657.pdf",
+        "etat_reference": "PARTIELLEMENT_VERIFIE"
+      }
+    }
+  ]
+}
