@@ -5,6 +5,7 @@
  * dite absente (« Non disponible », « Non connecté ») : aucun chiffre n'est
  * inventé, aucune valeur secrète n'est reçue ni affichée.
  */
+import { VerifierSolde } from "./VerifierSolde";
 
 import type { VueSante } from "@/lib/types";
 
@@ -96,6 +97,7 @@ export function TableauDeBord({ donnees }: { donnees: DonneesTableauDeBord }) {
             {incident.consequence ? <li>{incident.consequence}</li> : null}
             {incident.actionAttendue ? <li>{incident.actionAttendue}</li> : null}
           </ul>
+          <VerifierSolde />
         </section>
       ) : null}
 

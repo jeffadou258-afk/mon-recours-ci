@@ -310,6 +310,13 @@ def rediger_courrier(dossier_id, informations=None):
     return _executer(corps)
 
 
+def verifier_solde_llm():
+    """Vérification du solde du fournisseur et réactivation contrôlée."""
+    def corps():
+        return llm.verifier_solde_et_reactiver()
+    return _executer(corps)
+
+
 def sante(chemin_db=None):
     """État exploitable par une supervision : catalogue, corpus, domaines."""
     def corps():

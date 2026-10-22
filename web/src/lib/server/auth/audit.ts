@@ -23,7 +23,10 @@ export type EvenementAudit =
   | "deconnexion"
   | "acces_administration"
   | "acces_administration_refuse"
-  | "authentification_fermee";
+  | "authentification_fermee"
+  | "verification_solde_llm_demandee"
+  | "solde_llm_verifie_reactif"
+  | "solde_llm_verifie_sans_reactivation";
 
 export interface LigneAudit {
   horodatage: string;

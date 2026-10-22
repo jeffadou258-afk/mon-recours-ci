@@ -9,7 +9,13 @@
 import type { ConfigServeur } from "./config";
 import { reponseDemo } from "./demo";
 
-export type RouteMoteur = "/sante" | "/ouvrir" | "/repondre" | "/supprimer" | "/courrier";
+export type RouteMoteur =
+  | "/sante"
+  | "/ouvrir"
+  | "/repondre"
+  | "/supprimer"
+  | "/courrier"
+  | "/llm/verifier-solde";
 
 export type ReponseMoteur =
   | { joignable: true; statut: number; corps: unknown; retryAfter: string | null }

@@ -81,10 +81,13 @@ test("administration : l'alerte ne contient ni clé ni donnée personnelle", () 
   assert.doesNotMatch(zone, /@exemple\.ci/);
 });
 
-test("administration : aucun faux bouton de réactivation", () => {
+test("administration : la vérification est une action réelle, pas un décor", () => {
   const html = renderToStaticMarkup(
     <TableauDeBord donnees={donnees({ ...SANTE, incidentLangage: INCIDENT })} />,
   );
   const zone = html.slice(html.indexOf("credits-epuises"), html.indexOf("admin__entete"));
-  assert.doesNotMatch(zone, /<button/i, "un bouton inerte est proposé dans l'alerte");
+  assert.match(zone, /<button[^>]*type="button"/, "le bouton n'est pas un bouton");
+  assert.ok(zone.includes("Vérifier le solde et réactiver DeepSeek"));
+  assert.doesNotMatch(zone, /<a\s[^>]*href=/, "l'action est un lien, pas un traitement");
+  assert.doesNotMatch(zone, /<button[^>]*disabled/, "le bouton est inerte au repos");
 });

@@ -50,6 +50,7 @@ from core import service  # noqa: E402
 TAILLE_MAX_CORPS = 64 * 1024
 NOM_VARIABLE_CLE = "MONRECOURS_API_KEY"
 ROUTES_POST = {"/ouvrir": service.ouvrir, "/repondre": service.repondre,
+               "/llm/verifier-solde": lambda charge: service.verifier_solde_llm(),
                "/supprimer": service.supprimer, "/courrier": service.rediger_courrier}
 ROUTES_GET = {"/sante": lambda: service.sante()}
 

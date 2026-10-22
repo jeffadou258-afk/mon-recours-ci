@@ -13,6 +13,7 @@ activé, aucune dépense engagée, aucun appel réel effectué.
 Aucune clé dans ce fichier : elle vient de `MONRECOURS_LLM_API_KEY`.
 """
 
+import decimal
 import json
 import os
 import socket
@@ -223,6 +224,7 @@ class FournisseurDeepSeek(object):
     nom = "deepseek"
     URL_DEFAUT = "https://api.deepseek.com/chat/completions"
     MODELE_DEFAUT = "deepseek-flash"
+    URL_SOLDE = "https://api.deepseek.com/user/balance"
 
     LIBELLES_ERREUR = {
         400: "requête refusée",
@@ -283,3 +285,59 @@ class FournisseurDeepSeek(object):
         if not isinstance(contenu, str) or not contenu.strip():
             raise ErreurTransport("réponse vide du fournisseur")
         return contenu
+
+    def verifier_solde(self, delai=10.0):
+        """Interroge GET /user/balance (documentation officielle DeepSeek).
+
+        Lecture seule : aucun jeton consommé, aucune donnée de citoyen envoyée.
+        Renvoie un état qualifié — jamais une interprétation optimiste :
+          POSITIF  : is_available vrai ET solde total > 0
+          EPUISE   : is_available faux, ou solde total <= 0
+          AMBIGU   : réponse 200 mais illisible (ni solde ni indicateur)
+          ERREUR   : statut non 200, réseau, délai
+        """
+        cle = os.environ.get("MONRECOURS_LLM_API_KEY")
+        if not cle:
+            return {"etat": "ERREUR", "detail": "clé absente"}
+        requete = urllib.request.Request(self.URL_SOLDE, method="GET", headers={
+            "Authorization": "Bearer %s" % cle,
+            "Accept": "application/json",
+        })
+        try:
+            with urllib.request.urlopen(requete, timeout=delai) as reponse:
+                if reponse.status != 200:
+                    return {"etat": "ERREUR", "detail": "HTTP %s" % reponse.status}
+                corps = reponse.read(20000).decode("utf-8", "replace")
+        except urllib.error.HTTPError as erreur:
+            return {"etat": "ERREUR", "detail": "HTTP %s" % erreur.code,
+                    "statut_http": erreur.code}
+        except Exception as erreur:  # noqa: BLE001 — réseau, délai, DNS
+            return {"etat": "ERREUR", "detail": type(erreur).__name__}
+        try:
+            donnees = json.loads(corps)
+        except ValueError:
+            return {"etat": "AMBIGU", "detail": "réponse non JSON"}
+        if not isinstance(donnees, dict):
+            return {"etat": "AMBIGU", "detail": "réponse inattendue"}
+        disponible = donnees.get("is_available")
+        infos = donnees.get("balance_infos")
+        if not isinstance(infos, list) or not infos:
+            return {"etat": "AMBIGU", "detail": "aucun solde dans la réponse"}
+        devise = None
+        total = None
+        for info in infos:
+            if not isinstance(info, dict):
+                continue
+            try:
+                montant = decimal.Decimal(str(info.get("total_balance")))
+            except (decimal.InvalidOperation, TypeError, ValueError):
+                continue
+            if total is None or montant > total:
+                total = montant
+                devise = info.get("currency")
+        if total is None:
+            return {"etat": "AMBIGU", "detail": "solde non numérique"}
+        if disponible is False or total <= 0:
+            return {"etat": "EPUISE", "devise": devise, "total": str(total)}
+        return {"etat": "POSITIF", "devise": devise, "total": str(total)}
+

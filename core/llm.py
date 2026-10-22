@@ -28,6 +28,7 @@ Aucune clé API dans le code : la clé est lue dans `MONRECOURS_LLM_API_KEY`.
 """
 
 import importlib.util
+import fcntl
 import os
 
 from core import corpus
@@ -421,3 +422,116 @@ def comprendre(recit, fiches, guide, fournisseur=None, delai=DELAI_PAR_DEFAUT):
     if retenu["fiches"] or retenu["resume"]:
         rapport["mode"] = "llm"
     return rapport
+
+
+# ---------------------------------------------------------------------------
+# Réactivation après épuisement des crédits
+# ---------------------------------------------------------------------------
+
+NOM_VARIABLE_VERROU = "MONRECOURS_VERROU_SOLDE"
+DUREE_VERROU = 30.0
+
+
+def _verrouiller():
+    """Verrou exclusif : deux clics simultanés ne produisent qu'une vérification.
+
+    Renvoie le descripteur, ou None si une vérification est déjà en cours.
+    """
+    chemin = os.environ.get(NOM_VARIABLE_VERROU) or os.path.join(RACINE, "RUNTIME", "verification_solde.lock")
+    try:
+        os.makedirs(os.path.dirname(chemin), mode=0o700, exist_ok=True)
+        descripteur = os.open(chemin, os.O_CREAT | os.O_RDWR, 0o600)
+    except OSError:
+        return None
+    try:
+        fcntl.flock(descripteur, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        os.close(descripteur)
+        return None
+    return descripteur
+
+
+def _deverrouiller(descripteur):
+    try:
+        fcntl.flock(descripteur, fcntl.LOCK_UN)
+    finally:
+        os.close(descripteur)
+
+
+def configuration_manquante():
+    """Ce qui empêche une activation — jamais une clé, seulement des noms."""
+    manques = []
+    nom = (os.environ.get(NOM_VARIABLE_FOURNISSEUR) or "").lower()
+    if nom not in FOURNISSEURS_COMPREHENSION:
+        manques.append("fournisseur non configuré")
+    if not os.environ.get(NOM_VARIABLE_CLE):
+        manques.append("clé absente")
+    if (os.environ.get(NOM_VARIABLE_ACCORD) or "").lower() != "oui":
+        manques.append("accord de traitement des données non donné")
+    return manques
+
+
+def verifier_solde_et_reactiver(delai=10.0, verificateur=None):
+    """Interroge le solde officiel et ne rétablit QUE sur preuve.
+
+    Rien n'est supposé : si la réponse est ambiguë, si le réseau échoue ou si la
+    configuration est incomplète, l'incident reste ouvert et le moteur
+    déterministe continue. Aucun succès fictif n'est jamais renvoyé.
+    """
+    resultat = {"reactive": False, "mode": "deterministe", "etat": None,
+                "manques": configuration_manquante(),
+                "methode": "GET https://api.deepseek.com/user/balance"}
+
+    if "clé absente" in resultat["manques"]:
+        resultat["etat"] = "SANS_CLE"
+        resultat["message"] = "Aucune clé configurée : le solde ne peut pas être vérifié."
+        resultat["incident"] = incident_llm.etat()
+        return resultat
+
+    verrou = _verrouiller()
+    if verrou is None:
+        resultat["etat"] = "EN_COURS"
+        resultat["message"] = "Une vérification est déjà en cours."
+        resultat["incident"] = incident_llm.etat()
+        return resultat
+    try:
+        if verificateur is None:
+            adaptateur = charger_adaptateur_http()
+            classe = getattr(adaptateur, "FournisseurDeepSeek", None) if adaptateur else None
+            if classe is None:
+                resultat["etat"] = "ERREUR"
+                resultat["message"] = "Adaptateur indisponible."
+                resultat["incident"] = incident_llm.etat()
+                return resultat
+            verificateur = classe().verifier_solde
+        try:
+            solde = verificateur(delai=delai)
+        except Exception as erreur:  # noqa: BLE001 — une panne ne ferme jamais l'incident
+            resultat["etat"] = "ERREUR"
+            resultat["message"] = ("Vérification impossible : l'incident reste ouvert, "
+                                   "le secours déterministe continue.")
+            resultat["incident"] = incident_llm.etat()
+            return resultat
+        resultat["etat"] = solde.get("etat")
+        resultat["devise"] = solde.get("devise")
+        resultat["solde"] = solde.get("total")
+
+        if solde.get("etat") == "POSITIF" and not resultat["manques"]:
+            incident_llm.resoudre("solde vérifié : %s %s" % (solde.get("total"), solde.get("devise") or ""))
+            resultat["reactive"] = True
+            resultat["mode"] = "llm"
+            resultat["message"] = "Solde confirmé : compréhension assistée réactivée."
+        elif solde.get("etat") == "POSITIF":
+            resultat["message"] = ("Solde confirmé, mais la configuration est incomplète : "
+                                   "DeepSeek reste désactivé.")
+        elif solde.get("etat") == "EPUISE":
+            resultat["message"] = "Solde épuisé : l'incident reste ouvert, le secours déterministe continue."
+        elif solde.get("etat") == "AMBIGU":
+            resultat["message"] = ("Réponse du fournisseur inexploitable : l'incident reste ouvert.")
+        else:
+            resultat["message"] = ("Vérification impossible : l'incident reste ouvert, "
+                                   "le secours déterministe continue.")
+        resultat["incident"] = incident_llm.etat()
+        return resultat
+    finally:
+        _deverrouiller(verrou)
