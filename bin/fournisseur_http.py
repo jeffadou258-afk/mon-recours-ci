@@ -227,7 +227,7 @@ class FournisseurDeepSeek(object):
     def disponible(self):
         return bool(self.url and self._cle and self.modele)
 
-    def completer(self, systeme, message, delai=None, max_tokens=300):
+    def completer(self, systeme, message, delai=None, max_tokens=800):
         if not self.disponible():
             raise ErreurTransport("clé, URL ou modèle absent de l'environnement")
         donnees = _poster_api(
@@ -237,6 +237,13 @@ class FournisseurDeepSeek(object):
              "max_tokens": max_tokens,
              "temperature": 0,
              "stream": False,
+             # MESURÉ le 22/10/2026 sur l'API réelle : le mode réflexion est
+             # ACTIF PAR DÉFAUT sur deepseek-flash. Avec 300 jetons de plafond,
+             # il consommait tout le budget en raisonnement et la réponse
+             # arrivait tronquée : 2 appels sur 7 rendaient un JSON invalide.
+             # On le désactive — cette tâche est de l'extraction, pas du
+             # raisonnement — et on laisse 800 jetons à la sortie.
+             "thinking": {"type": "disabled"},
              "response_format": {"type": "json_object"},
              "messages": [{"role": "system", "content": systeme},
                           {"role": "user", "content": message}]},

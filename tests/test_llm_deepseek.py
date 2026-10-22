@@ -134,7 +134,11 @@ class ContratDuFournisseur(Base):
         self.assertEqual(corps["temperature"], 0)
         self.assertEqual(corps["response_format"], {"type": "json_object"})
         self.assertFalse(corps["stream"])
-        self.assertLessEqual(corps["max_tokens"], 300)
+        # MESURÉ sur l'API réelle : le mode réflexion est actif par défaut et
+        # consommait les 300 jetons (2 appels sur 7 tronqués). On l'exige donc
+        # explicitement désactivé, avec 800 jetons de sortie.
+        self.assertEqual(corps["thinking"], {"type": "disabled"})
+        self.assertLessEqual(corps["max_tokens"], 800)
         self.assertEqual([m["role"] for m in corps["messages"]], ["system", "user"])
 
     def test_la_cle_part_dans_l_en_tete_et_nulle_part_ailleurs(self):
