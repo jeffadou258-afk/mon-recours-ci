@@ -131,7 +131,10 @@ jobs:
         if: always()
         run: |
           set -o pipefail
-          npm run build 2>&1 | tee ../build.txt
+          if ! npm run build 2>&1 | tee ../build.txt; then
+            echo "::error title=Construction Next.js (échec)::$(tail -40 ../build.txt | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')"
+            exit 1
+          fi
           RESUME=$(grep -E "Compiled|Generating static|^Route|^[┌├└]|First Load|^ƒ|^○" ../build.txt | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')
           echo "::notice title=Construction Next.js::$RESUME"
 
