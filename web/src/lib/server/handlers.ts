@@ -139,6 +139,12 @@ export function origineAutorisee(requete: Request): boolean {
   const site = requete.headers.get("sec-fetch-site");
   if (site && site !== "same-origin" && site !== "none") return false;
   const origine = requete.headers.get("origin");
+  // `Referrer-Policy: no-referrer` (posée par next.config.ts) fait envoyer
+  // `Origin: null` par Chrome sur une soumission de formulaire, y compris de
+  // même origine : la déconnexion par formulaire échouait donc en 403. Dans ce
+  // cas précis, `Sec-Fetch-Site` reste la preuve d'une requête de même origine,
+  // et il est exigé — sans lui, la requête est refusée.
+  if (origine === "null") return site === "same-origin";
   if (!origine) return true;
   const hote = requete.headers.get("x-forwarded-host") ?? requete.headers.get("host");
   try {

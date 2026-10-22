@@ -10,6 +10,7 @@ import { evaluerAccesAdmin } from "../../src/lib/server/auth/acces";
 import { gererConnexion, gererDeconnexion } from "../../src/lib/server/auth/handlers-auth";
 import { creerEcrivain, lireAudit, type LigneAudit } from "../../src/lib/server/auth/audit";
 import { construireTableauDeBord } from "../../src/lib/server/auth/tableau";
+import { origineAutorisee } from "../../src/lib/server/handlers";
 import { LimiteurVisiteurs } from "../../src/lib/server/limiteur";
 // @ts-expect-error script .mjs sans déclaration de types
 import { hacher as hacherScript, controlerMotDePasse } from "../../scripts/creer-compte.mjs";
@@ -227,6 +228,23 @@ test("connexion : origine étrangère et entrées invalides refusées", async ()
     const r = await gererConnexion(requeteConnexion(corps), dependances(env));
     assert.equal(r.status, 400, JSON.stringify(corps).slice(0, 60));
   }
+});
+
+test("origine : formulaire même origine avec Origin « null » accepté, croisé refusé", () => {
+  // `Referrer-Policy: no-referrer` fait envoyer `Origin: null` par Chrome sur une
+  // soumission de formulaire, même de même origine. La déconnexion échouait en 403
+  // en production : ce test décrit la règle attendue.
+  const cas = (entetes: Record<string, string>) =>
+    origineAutorisee(
+      new Request("https://exemple.ci/api/deconnexion", { method: "POST", headers: entetes }),
+    );
+  assert.equal(cas({ origin: "null", "sec-fetch-site": "same-origin" }), true, "navigateur même origine");
+  assert.equal(cas({ origin: "null" }), false, "« null » sans preuve de même origine");
+  assert.equal(cas({ origin: "null", "sec-fetch-site": "cross-site" }), false, "« null » depuis un autre site");
+  assert.equal(cas({ origin: "null", "sec-fetch-site": "same-site" }), false, "« null » depuis un sous-domaine");
+  assert.equal(cas({ origin: "https://exemple.ci", host: "exemple.ci" }), true, "origine explicite identique");
+  assert.equal(cas({ origin: "https://pirate.example", host: "exemple.ci" }), false, "origine étrangère");
+  assert.equal(cas({}), true, "aucune origine (curl, tests) : toléré");
 });
 
 test("connexion : tentatives limitées par adresse (même depuis plusieurs visiteurs)", async () => {

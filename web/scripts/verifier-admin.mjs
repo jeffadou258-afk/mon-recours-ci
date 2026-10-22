@@ -150,8 +150,19 @@ try {
   const faux = await fetch(`${BASE}/admin`, { headers: { cookie: `${cookieAdmin ?? "monrecours_admin=x"}.tampered` }, redirect: "manual" });
   verifier("cookie falsifié refusé", faux.status === 307, String(faux.status));
 
-  // 7. déconnexion
-  const deconnexion = await poster("/api/deconnexion", {}, { cookie: cookieAdmin ?? "" });
+  // 7. déconnexion — telle que le navigateur la fait réellement : avec
+  // `Referrer-Policy: no-referrer`, Chrome envoie `Origin: null` et
+  // `Sec-Fetch-Site: same-origin` sur une soumission de formulaire.
+  const entetesNavigateur = {
+    cookie: cookieAdmin ?? "",
+    origin: "null",
+    "sec-fetch-site": "same-origin",
+    "content-type": "application/x-www-form-urlencoded",
+  };
+  const refusSansPreuve = await poster("/api/deconnexion", {}, { cookie: cookieAdmin ?? "", origin: "null", "content-type": "application/x-www-form-urlencoded" });
+  verifier("déconnexion : « Origin: null » sans Sec-Fetch-Site refusé", refusSansPreuve.status === 403, String(refusSansPreuve.status));
+
+  const deconnexion = await poster("/api/deconnexion", {}, entetesNavigateur);
   const efface = (deconnexion.headers.getSetCookie?.() ?? []).join(" | ");
   verifier("déconnexion traitée", [200, 303].includes(deconnexion.status), String(deconnexion.status));
   verifier("cookie effacé à la déconnexion", /Max-Age=0|Expires=Thu, 01 Jan 1970/i.test(efface));
