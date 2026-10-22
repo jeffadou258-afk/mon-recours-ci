@@ -1,0 +1,22 @@
+{
+  "domaine": "consommation",
+  "dossier": "DETTES_CONSOMMATION",
+  "date_collecte": "2026-10-22",
+  "sources": [
+    {
+      "cle": "loi_2016_412_consommation",
+      "titre": "LOI n° 2016-412 du 15 juin 2016 relative à la consommation",
+      "type_texte": "loi",
+      "numero_texte": "2016-412",
+      "date_texte": "2016-06-15",
+      "autorite": "République de Côte d'Ivoire",
+      "url": "https://faolex.fao.org/docs/pdf/Ivc172699.pdf",
+      "fichier": "consommation_loi_2016_412.pdf",
+      "pages": 58,
+      "sans_texte_attendu": false,
+      "reproduction_tiers": true,
+      "source_secondaire": "reproduction de l'editeur droit-afrique hebergee par FAOLEX : texte ivoirien integral, hebergeur non officiel",
+      "limites": "Reproduction de l'éditeur droit-afrique, hébergée par FAOLEX. Le texte est ivoirien et intégral, mais la source n'est PAS officielle : l'état de vérification doit rester plafonné et le Journal officiel de 2016 reste à retrouver pour une vérification pleine."
+    }
+  ]
+}

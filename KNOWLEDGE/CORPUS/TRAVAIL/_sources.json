@@ -1,0 +1,20 @@
+{
+  "domaine": "travail",
+  "dossier": "TRAVAIL",
+  "date_collecte": "2026-10-22",
+  "sources": [
+    {
+      "cle": "loi_2015_532_code_travail_jo",
+      "titre": "LOI n° 2015-532 du 20 juillet 2015 portant Code du travail — Journal officiel de la République de Côte d'Ivoire du 14 septembre 2015",
+      "type_texte": "loi",
+      "numero_texte": "2015-532",
+      "date_texte": "2015-07-20",
+      "autorite": "République de Côte d'Ivoire",
+      "url": "https://faolex.fao.org/docs/pdf/ivc210897.pdf",
+      "fichier": "travail_loi_2015_532_jo.pdf",
+      "pages": 37,
+      "sans_texte_attendu": false,
+      "limites": "Copie du Journal officiel du 14 septembre 2015 hébergée par FAOLEX (FAO) : le texte est officiel, l'hébergeur ne l'est pas. Le Code a été modifié par l'ordonnance n° 2021-902 du 22 décembre 2021 ; cette modification n'est PAS appliquée dans ce document. Les articles touchés doivent être lus avec l'ordonnance."
+    }
+  ]
+}

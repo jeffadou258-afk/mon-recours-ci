@@ -36,7 +36,7 @@ import sqlite3
 import config
 from config import CHEMIN_DB
 from core.base import horodatage, normaliser
-from core.sources import est_hote_officiel
+from core.sources import est_hote_officiel, est_source_secondaire
 
 # Taux de couverture minimal du parseur d'articles. En dessous, l'import est
 # refusé : un parseur qui rate un quart des articles produirait un corpus
@@ -388,6 +388,7 @@ def importer_document(
     date_collecte=None,
     methode_extraction=None,
     actualiser=False,
+    source_secondaire=None,
     chemin=None,
 ):
     """Enregistre un document officiel téléchargé, avec sa preuve.
@@ -403,9 +404,15 @@ def importer_document(
     if not int(pages or 0) > 0:
         raise ValueError("le nombre de pages doit être > 0 (reçu %r)" % (pages,))
     if not est_hote_officiel(url_source):
-        raise ValueError(
-            "source non officielle refusée : %r n'appartient pas au périmètre "
-            "(registre des sources ou *.gouv.ci)" % (url_source,))
+        # Exception BORNÉE : un hôte déclaré secondaire dans config.SOURCES_SECONDAIRES
+        # (FAOLEX, qui reproduit le Journal officiel). Le document entre au corpus,
+        # mais l'état VERIFIE reste hors d'atteinte : core/base.py refuse de le
+        # promouvoir sur un hôte non officiel. Le plafond est PARTIELLEMENT_VERIFIE.
+        if not source_secondaire or est_source_secondaire(url_source) is None:
+            raise ValueError(
+                "source non officielle refusée : %r n'appartient pas au périmètre "
+                "(registre des sources, *.gouv.ci, ou source secondaire déclarée)"
+                % (url_source,))
 
     sha_reel = empreinte_fichier(chemin_local)
     if sha256_declare and sha256_declare != sha_reel:

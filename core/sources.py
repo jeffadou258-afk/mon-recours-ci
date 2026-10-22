@@ -28,6 +28,7 @@ import urllib.request
 from config import (
     CHEMIN_VERIFICATIONS_SOURCES,
     SOURCES_OFFICIELLES,
+    SOURCES_SECONDAIRES,
     USER_AGENT,
     source_par_id,
 )
@@ -269,3 +270,26 @@ def est_hote_officiel(url):
         if hote_registre and (hote == hote_registre or hote.endswith("." + hote_registre)):
             return True
     return False
+
+
+def est_source_secondaire(url):
+    """Identifiant de la source SECONDAIRE connue pour cet hôte, sinon None.
+
+    Un texte lu chez un hébergeur non ivoirien (FAOLEX) peut être importé et
+    cité, mais jamais promu VERIFIE : `core/base.py` réserve ce statut au
+    périmètre officiel. Cette fonction ne dit donc pas « officiel » — elle dit
+    « hôte connu et déclaré comme secondaire ».
+    """
+    if not url:
+        return None
+    hote = urllib.parse.urlparse(url).hostname or ""
+    hote = hote.lower().lstrip(".")
+    if not hote:
+        return None
+    for source in SOURCES_SECONDAIRES:
+        hote_registre = (urllib.parse.urlparse(source["url"]).hostname or "").lower()
+        if hote_registre.startswith("www."):
+            hote_registre = hote_registre[4:]
+        if hote_registre and (hote == hote_registre or hote.endswith("." + hote_registre)):
+            return source["id"]
+    return None

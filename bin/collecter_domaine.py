@@ -308,6 +308,7 @@ def collecter(domaine, telecharger_si_absent=True, chemin_db=None):
             entree["ref_id"] = ref_id
 
         doc_id = corpus.importer_document(
+            source_secondaire=source_secondaire,
             ref_id=ref_id,
             titre=source["titre"],
             type_texte=source["type_texte"],

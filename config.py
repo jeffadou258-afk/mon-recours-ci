@@ -319,6 +319,32 @@ SOURCES_OFFICIELLES = (
 
 
 # --------------------------------------------------------------------------
+# Sources SECONDAIRES (decision du 22/10/2026)
+# --------------------------------------------------------------------------
+# Hebergeurs non ivoiriens qui publient une COPIE du Journal officiel. Un texte
+# lu chez eux entre dans le corpus et peut etre cite, mais ne peut JAMAIS
+# atteindre l'etat VERIFIE : core/base.py le refuse deja, et core/corpus.py
+# n'accepte l'import que si l'hote figure ici. Le plafond est
+# PARTIELLEMENT_VERIFIE, et la reference doit dire ou elle a ete lue.
+# Ni blog, ni forum, ni editeur commercial : FAOLEX seulement.
+SOURCES_SECONDAIRES = (
+    {
+        "id": "FAOLEX",
+        "nom": "FAOLEX — base de donnees juridiques de la FAO (Organisation des Nations unies)",
+        "url": "https://faolex.fao.org/",
+        "role": "Reproduit des numeros du Journal officiel ivoirien (texte integral, scan)",
+        "plafond": "PARTIELLEMENT_VERIFIE",
+        "exigence": (
+            "Le document doit porter l'en-tete du Journal officiel de la Republique "
+            "de Cote d'Ivoire et sa date. Une reproduction d'editeur commercial "
+            "hebergee par FAOLEX est declaree comme telle et ne depasse pas "
+            "PARTIELLEMENT_VERIFIE."
+        ),
+    },
+)
+
+
+# --------------------------------------------------------------------------
 # Sources CANDIDATES (decision du proprietaire du 20/10/2026)
 # --------------------------------------------------------------------------
 # Hors du perimetre officiel : leurs documents sont collectes et analyses, mais

@@ -1,0 +1,20 @@
+{
+  "domaine": "associations_organisations_religieuses",
+  "dossier": "ASSOCIATIONS",
+  "date_collecte": "2026-10-22",
+  "sources": [
+    {
+      "cle": "ordonnance_2024_368_osc_jo",
+      "titre": "ORDONNANCE n° 2024-368 du 12 juin 2024 relative aux Organisations de la Société Civile — Journal officiel de la République de Côte d'Ivoire du 21 juin 2024",
+      "type_texte": "ordonnance",
+      "numero_texte": "2024-368",
+      "date_texte": "2024-06-12",
+      "autorite": "République de Côte d'Ivoire",
+      "url": "https://faolex.fao.org/docs/pdf/ivc229657.pdf",
+      "fichier": "associations_ordonnance_2024_368_jo.pdf",
+      "pages": 15,
+      "sans_texte_attendu": false,
+      "limites": "Texte le plus récent : l'article 134 abroge expressément la loi n° 60-315 du 21 septembre 1960 relative aux associations. Toute réponse fondée sur la loi de 1960 serait périmée. Le Journal officiel reproduit également d'autres textes en fin de numéro."
+    }
+  ]
+}
