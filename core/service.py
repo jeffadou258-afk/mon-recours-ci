@@ -40,7 +40,7 @@ if RACINE not in sys.path:
     sys.path.insert(0, RACINE)
 
 import config  # noqa: E402
-from core import catalogue, corpus, couverture, llm  # noqa: E402
+from core import catalogue, corpus, couverture, incident_llm, llm  # noqa: E402
 from core import documents as mod_documents  # noqa: E402
 from core.conversation import Conversation  # noqa: E402
 
@@ -334,7 +334,8 @@ def sante(chemin_db=None):
                          for l in inventaire["domaines"]],
             "langage": {"actif": llm.comprehension_active(),
                         "fournisseur": (os.environ.get(llm.NOM_VARIABLE_FOURNISSEUR) or None)
-                        if llm.comprehension_active() else None},
+                        if llm.comprehension_active() else None,
+                        "incident": incident_llm.etat()},
             "avertissement": ("Aucune validation juridique humaine n'a été effectuée. "
                               "Un statut technique n'est pas une garantie de justesse."),
         }

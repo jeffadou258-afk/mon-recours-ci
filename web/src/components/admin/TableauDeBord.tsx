@@ -72,9 +72,33 @@ function date(iso: string): string {
 export function TableauDeBord({ donnees }: { donnees: DonneesTableauDeBord }) {
   const { plateforme, sante } = donnees;
   const corpusConnecte = sante !== null && sante.corpus.integrite !== "NON_CONNECTE";
+  const incident = sante?.incidentLangage ?? null;
 
   return (
     <div className="admin">
+      {incident ? (
+        <section
+          className="bloc bloc--attention"
+          role="alert"
+          aria-labelledby="titre-incident-langage"
+          data-incident="credits-epuises"
+        >
+          <h2 id="titre-incident-langage" className="bloc__titre">
+            {incident.objet ?? "Crédits du fournisseur épuisés — Mon Recours CI"}
+          </h2>
+          <p>
+            <strong>DeepSeek indisponible — crédits épuisés.</strong> Le moteur de secours
+            fonctionne. Vérifiez le solde du fournisseur.
+          </p>
+          <ul>
+            {incident.detecteLe ? <li>Détecté le {incident.detecteLe}</li> : null}
+            {incident.fournisseur ? <li>Fournisseur : {incident.fournisseur}</li> : null}
+            {incident.consequence ? <li>{incident.consequence}</li> : null}
+            {incident.actionAttendue ? <li>{incident.actionAttendue}</li> : null}
+          </ul>
+        </section>
+      ) : null}
+
       <header className="admin__entete">
         <div>
           <p className="connexion__surtitre">Administration</p>

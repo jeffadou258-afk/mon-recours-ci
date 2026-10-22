@@ -247,7 +247,20 @@ export interface VueReponse {
 /** Réponse de /api/repondre : un nouveau tour de questions, ou le résultat. */
 export type VueSuite = VueClarification | VueReponse | VueAiguillage;
 
+export interface VueIncidentLangage {
+  statut: string | null;
+  ouvert: boolean;
+  fournisseur?: string | null;
+  detecteLe?: string | null;
+  resoluLe?: string | null;
+  objet?: string | null;
+  consequence?: string | null;
+  actionAttendue?: string | null;
+}
+
 export interface VueSante {
+  /** Incident du fournisseur de langage (crédits épuisés), s'il existe. */
+  incidentLangage?: VueIncidentLangage | null;
   catalogue: { fiches: number; parDomaine: { domaine: string; fiches: string[] }[] };
   corpus: {
     integrite: string | null;

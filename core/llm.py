@@ -244,7 +244,7 @@ def statut():
 import json as _json
 import re as _re
 
-from core import llm_budget, pseudonymisation
+from core import incident_llm, llm_budget, pseudonymisation
 from core.base import normaliser as _normaliser
 
 NOM_VARIABLE_ACCORD = "MONRECOURS_LLM_ACCORD_DONNEES"
@@ -388,6 +388,11 @@ def comprendre(recit, fiches, guide, fournisseur=None, delai=DELAI_PAR_DEFAUT):
     if not llm_budget.peut_appeler(JETONS_ESTIMES_PAR_APPEL):
         rapport["erreur"] = "garde-fou : plafond journalier atteint ou fournisseur en panne"
         return rapport
+    # Incident ouvert (crédits épuisés) : plus aucun appel inutile tant que le
+    # solde n'a pas été vérifié. Le service continue en déterministe.
+    if incident_llm.ouvert():
+        rapport["erreur"] = "incident ouvert : crédits du fournisseur épuisés"
+        return rapport
     recit_masque, rapport["masquages"] = pseudonymisation.masquer(recit)
     try:
         texte = fournisseur.completer(_SYSTEME_COMPREHENSION,
@@ -399,6 +404,16 @@ def comprendre(recit, fiches, guide, fournisseur=None, delai=DELAI_PAR_DEFAUT):
         retenu, rejets = valider_comprehension(brut, recit_masque, fiches, guide)
     except Exception as erreur:  # noqa: BLE001 — repli déterministe, jamais de panne
         llm_budget.signaler_echec()
+        # Épuisement de crédits : ce n'est PAS une panne réseau. On l'identifie sur
+        # le STATUT ET LE MESSAGE du fournisseur — jamais sur un code seul. Un 402
+        # sans mention de solde, ou un 429 (débit dépassé), restent des erreurs.
+        statut = getattr(erreur, "statut_http", None)
+        detail = getattr(erreur, "message_fournisseur", "") or ""
+        if statut == 402 and incident_llm.message_credits(detail):
+            nouveau = incident_llm.declarer(getattr(fournisseur, "nom", "deepseek"), detail, statut)
+            rapport["erreur"] = "crédits du fournisseur épuisés"
+            rapport["incident_nouveau"] = nouveau
+            return rapport
         rapport["erreur"] = "%s : %s" % (type(erreur).__name__, erreur)
         return rapport
     rapport.update(retenu)

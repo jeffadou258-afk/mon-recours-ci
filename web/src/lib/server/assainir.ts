@@ -467,6 +467,20 @@ export function assainirSante(data: unknown): VueSante {
         completude: texteRequis(l.completude, "INCONNU"),
       })),
     langageActif: objet(d.langage).actif === true,
+    incidentLangage: (() => {
+      const incident = objet(objet(d.langage).incident);
+      if (incident.ouvert !== true) return null;
+      return {
+        statut: texte(incident.statut),
+        ouvert: true,
+        fournisseur: texte(incident.fournisseur),
+        detecteLe: texte(incident.detecte_le),
+        resoluLe: texte(incident.resolu_le),
+        objet: texte(incident.objet),
+        consequence: texte(incident.consequence),
+        actionAttendue: texte(incident.action_attendue),
+      };
+    })(),
     avertissement: texte(d.avertissement),
   };
 }

@@ -32,6 +32,16 @@ CONSIGNE = (
 
 
 class ErreurTransport(Exception):
+    """Erreur de transport, SANS détail sensible.
+
+    `statut_http` et `message_fournisseur` sont renseignés quand le fournisseur a
+    répondu : le cœur s'en sert pour distinguer un épuisement de crédits d'une
+    simple panne. Le corps brut n'est jamais conservé au-delà de 400 caractères et
+    ne contient pas la clé.
+    """
+
+    statut_http = None
+    message_fournisseur = ""
     pass
 
 
@@ -178,7 +188,15 @@ def _poster_api(url, entetes, corps, delai, libelles=None):
             return json.loads(reponse.read().decode("utf-8"))
     except urllib.error.HTTPError as erreur:
         libelle = (libelles or {}).get(erreur.code, "HTTP %s" % erreur.code)
-        raise ErreurTransport("fournisseur : %s" % libelle) from erreur
+        detail = ""
+        try:
+            detail = erreur.read(400).decode("utf-8", "replace")
+        except Exception:  # noqa: BLE001 — le détail est un bonus, jamais bloquant
+            detail = ""
+        levee = ErreurTransport("fournisseur : %s" % libelle)
+        levee.statut_http = erreur.code
+        levee.message_fournisseur = detail
+        raise levee from erreur
     except (socket.timeout, TimeoutError) as erreur:
         raise ErreurTransport("délai dépassé") from erreur
     except urllib.error.URLError as erreur:
