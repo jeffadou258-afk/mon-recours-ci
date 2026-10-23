@@ -214,7 +214,7 @@ export function Parcours({
                       }}
                     >
                       <span className="situation__icone">
-                        <IconeDomaine domaine={sit.domaine} taille={26} />
+                        <IconeDomaine domaine={sit.domaine} taille={22} />
                       </span>
                       <span className="situation__titre">{sit.titre}</span>
                     </button>
