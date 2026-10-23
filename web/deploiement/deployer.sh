@@ -91,16 +91,32 @@ rm -rf "$TRAVAIL"
 NB=$(tar tzf "$ARCHIVE" | wc -l)
 tar tzf "$ARCHIVE" | grep -qx "COMMIT_AVANT" || { echo "ARRÊT : archive incomplète." >&2; exit 4; }
 echo "   $ARCHIVE ($NB entrées, $(du -h "$ARCHIVE" | cut -f1), lisible)"
+# Build de l'interface en service : si la reconstruction échoue pendant un retour
+# arrière, on remet celui-ci tel quel plutôt que de laisser un build cassé.
+BUILD_SAUVE=""
+if [ -d "$RACINE/web/.next" ]; then
+  BUILD_SAUVE="$SAUVEGARDES/next-$HORO"
+  cp -a "$RACINE/web/.next" "$BUILD_SAUVE"
+  echo "   build en service copié : $BUILD_SAUVE"
+fi
 DOSSIERS_AVANT=$(find "$RACINE/DOSSIERS" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l)
 echo "   dossiers de consultation présents : $DOSSIERS_AVANT"
 
 retour_arriere() {
-  echo "!! RETOUR ARRIÈRE vers ${AVANT:0:7}" >&2
+  # Désarmer le piège AVANT tout : sinon un échec pendant le retour arrière
+  # relancerait retour_arriere en boucle (constaté en répétition).
+  trap - ERR
   set +e
+  echo "!! RETOUR ARRIÈRE vers ${AVANT:0:7}" >&2
   if [ "$BRANCHE_ACTUELLE" = "HEAD" ]; then g checkout -q --detach "$AVANT"; else g checkout -q "$BRANCHE_ACTUELLE" && g reset -q --keep "$AVANT"; fi
   tar xzf "$ARCHIVE" -C / etc/systemd/system 2>/dev/null
   systemctl daemon-reload
-  (cd "$RACINE/web" && sudo -u "$UTIL" npm ci --silent && sudo -u "$UTIL" npm run build >/tmp/build-retour.log 2>&1)
+  if ! (cd "$RACINE/web" && sudo -u "$UTIL" npm ci --silent && sudo -u "$UTIL" npm run build >/tmp/build-retour.log 2>&1); then
+    echo "   reconstruction en échec (/tmp/build-retour.log) : remise du build précédent" >&2
+    if [ -n "$BUILD_SAUVE" ]; then
+      rm -rf "$RACINE/web/.next" && cp -a "$BUILD_SAUVE" "$RACINE/web/.next"
+    fi
+  fi
   systemctl restart monrecours-moteur monrecours-web
   sleep 5
   CODE=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3000/api/sante || echo 000)
@@ -160,6 +176,7 @@ for service in monrecours-moteur monrecours-web; do
 done
 trap - ERR
 
+[ -n "$BUILD_SAUVE" ] && rm -rf "$BUILD_SAUVE"
 echo "== DÉPLOYÉ : ${AVANT:0:7} -> ${APRES:0:7} =="
 echo "   sauvegarde : $ARCHIVE"
 echo "   retour arrière manuel : sudo -u $UTIL git -C $RACINE reset --keep ${AVANT:0:7} && sudo bash $RACINE/web/deploiement/maj.sh"
