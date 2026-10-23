@@ -91,6 +91,25 @@ test("hors catalogue : CONCLUSION_IMPOSSIBLE et couverture réelle, aucune citat
   assert.match(visible, /Faire relire votre situation/);
 });
 
+test("hors catalogue : articles sans lien repliés, sans badge, après l'orientation", () => {
+  const base = assainirOuverture(fixture("ouvrir_hors").data);
+  if (base.etape !== "hors_catalogue") throw new Error("fixture inattendue");
+  // Cas réel signalé : un litige de terrain affichait l'article 416 (caution).
+  const vue = {
+    ...base,
+    articlesSansFiche: [
+      { domaine: "logement_baux_foncier", articles: [{ article: "416", numeroTexte: "2019-576", etatVerification: "VERIFIE" }] },
+    ],
+  };
+  const html = renderToStaticMarkup(<VueSansFiche vue={vue} />);
+  assert.match(html, /<details class="bloc bloc--discret textes-domaine">/);
+  assert.doesNotMatch(html, /<details[^>]*textes-domaine[^>]*open/);
+  assert.ok(html.indexOf("Faire relire votre situation") < html.indexOf("textes-domaine"));
+  assert.match(html, /Article 416, texte n° 2019-576/);
+  assert.doesNotMatch(html, /Articles du domaine, non appliqués/);
+  assert.doesNotMatch(html, /Référence vérifiée/);
+});
+
 test("refus : raison et alternative sûre affichées", () => {
   const vue = assainirOuverture(fixture("ouvrir_refus").data);
   if (vue.etape !== "refus") throw new Error("fixture inattendue");

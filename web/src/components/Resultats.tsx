@@ -1,7 +1,6 @@
 import type { VueHorsCatalogue, VueRefus, VueReponse, VueUrgence } from "@/lib/types";
 import { libelleDomaine, presentationStatut } from "@/lib/libelles";
 import { BandeauUrgence, EncadreVerrous, OrientationHumaine } from "./Alertes";
-import { BadgeVerification } from "./Badges";
 import { FormulaireCourrier } from "./FormulaireCourrier";
 import { CarteCitation, trouverSource } from "./CarteCitation";
 
@@ -206,6 +205,8 @@ export function VueSansFiche({ vue }: { vue: VueHorsCatalogue }) {
         </section>
       ) : null}
 
+      <OrientationHumaine />
+
       {vue.domaines.length > 0 ? (
         <section className="bloc" aria-labelledby="titre-domaines">
           <h2 id="titre-domaines">Domaine repéré</h2>
@@ -214,32 +215,6 @@ export function VueSansFiche({ vue }: { vue: VueHorsCatalogue }) {
               <li key={d}>{libelleDomaine(d)}</li>
             ))}
           </ul>
-        </section>
-      ) : null}
-
-      {articlesTrouves.length > 0 ? (
-        <section className="bloc bloc--attention" aria-labelledby="titre-articles-sans-fiche">
-          <h2 id="titre-articles-sans-fiche">Articles du domaine, non appliqués à votre question</h2>
-          <p className="bloc__note">
-            Le corpus contient ces articles, mais aucune fiche validée ne permet de dire s&apos;ils
-            répondent à votre situation. Ils ne constituent pas une réponse.
-          </p>
-          {articlesTrouves.map((d) => (
-            <div key={d.domaine}>
-              <h3>{libelleDomaine(d.domaine)}</h3>
-              <ul className="liste-articles">
-                {d.articles.map((a, i) => (
-                  <li key={i}>
-                    <span>
-                      Article {a.article}
-                      {a.numeroTexte ? `, texte n° ${a.numeroTexte}` : ""}
-                    </span>
-                    <BadgeVerification etat={a.etatVerification} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </section>
       ) : null}
 
@@ -261,7 +236,36 @@ export function VueSansFiche({ vue }: { vue: VueHorsCatalogue }) {
         </section>
       ) : null}
 
-      <OrientationHumaine />
+      {articlesTrouves.length > 0 ? (
+        // Replié par défaut et sans badge « Référence vérifiée » : ces articles
+        // ne répondent PAS à la question. Affichés en clair, ils passaient pour
+        // une réponse (constaté avec un test réel : un litige de terrain
+        // affichait l'article sur la caution d'un loyer).
+        <details className="bloc bloc--discret textes-domaine">
+          <summary>
+            Voir les textes de ce domaine présents dans le service (aucun lien établi avec votre question)
+          </summary>
+          <p className="bloc__note">
+            Ces articles existent dans les textes du service, mais aucune fiche ne permet de dire s&apos;ils
+            s&apos;appliquent à votre situation. Ce n&apos;est pas une réponse : ne vous appuyez pas dessus sans
+            l&apos;avis d&apos;une personne qualifiée.
+          </p>
+          {articlesTrouves.map((d) => (
+            <div key={d.domaine}>
+              <h3>{libelleDomaine(d.domaine)}</h3>
+              <ul className="textes-domaine__liste">
+                {d.articles.map((a, i) => (
+                  <li key={i}>
+                    Article {a.article}
+                    {a.numeroTexte ? `, texte n° ${a.numeroTexte}` : ""}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </details>
+      ) : null}
+
       <Avertissement texte={vue.avertissement} />
     </section>
   );
