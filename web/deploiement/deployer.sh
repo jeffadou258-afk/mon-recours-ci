@@ -119,6 +119,12 @@ if [ "$BRANCHE_ACTUELLE" != "$BRANCHE" ]; then
   fi
 fi
 g branch -q --set-upstream-to="origin/$BRANCHE" "$BRANCHE"
+# Le code est avancé ICI, avant maj.sh : sinon `git pull` réécrirait maj.sh
+# pendant que bash l'exécute (bash lit un script au fil de l'eau) et ce serait
+# l'ANCIENNE version qui s'exécuterait — constaté en répétition : RUNTIME n'était
+# pas créé. maj.sh trouve ensuite le code déjà à jour.
+g merge -q --ff-only "origin/$BRANCHE"
+echo "   code : $(g rev-parse --short HEAD)"
 
 echo "== 4. Mise à jour (maj.sh) =="
 bash "$RACINE/web/deploiement/maj.sh"
@@ -144,11 +150,11 @@ PY
 CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST -H 'Content-Type: application/json' \
        -H 'Origin: http://127.0.0.1:3000' -d '{}' http://127.0.0.1:3000/api/admin/solde)
 echo "   /api/admin/solde sans session : $CODE (403 attendu)"; [ "$CODE" = "403" ]
-sudo -u "$UTIL" test -w "$RACINE/RUNTIME"
+sudo -u "$UTIL" test -w "$RACINE/RUNTIME" || { echo "ÉCHEC : RUNTIME absent ou non inscriptible par $UTIL" >&2; false; }
 echo "   RUNTIME inscriptible par $UTIL : oui"
 DOSSIERS_APRES=$(find "$RACINE/DOSSIERS" -mindepth 1 -maxdepth 1 -type d 2>/dev/null | wc -l)
 echo "   dossiers de consultation : $DOSSIERS_AVANT avant, $DOSSIERS_APRES après"
-[ "$DOSSIERS_APRES" -ge "$DOSSIERS_AVANT" ]
+[ "$DOSSIERS_APRES" -ge "$DOSSIERS_AVANT" ] || { echo "ÉCHEC : des dossiers ont disparu" >&2; false; }
 for service in monrecours-moteur monrecours-web; do
   journalctl -u "$service" --since "-3 min" --no-pager -q -p err | tail -5
 done
