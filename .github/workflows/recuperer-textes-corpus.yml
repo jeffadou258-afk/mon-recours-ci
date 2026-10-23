@@ -1,0 +1,75 @@
+# Récupération VÉRIFIÉE de textes extraits absents du dépôt.
+#
+# Déclenché uniquement par un envoi sur la branche outils/recuperation-textes-corpus.
+# Pour chaque document listé, le runner :
+#   1. télécharge le PDF à l'adresse source ENREGISTRÉE dans la base du corpus ;
+#   2. refuse de continuer si l'empreinte SHA-256 du PDF diffère de celle de la base ;
+#   3. extrait le texte avec la fonction de collecte du projet (pypdf) ;
+#   4. refuse si l'empreinte du texte diffère de `sha256_texte` dans la base ;
+#   5. seulement alors, commite le .txt sur cette même branche.
+# Rien n'est inventé, rien n'est modifié dans la base, aucun contrôle n'est assoupli.
+name: Corpus — récupération vérifiée de textes extraits
+
+on:
+  push:
+    branches: [outils/recuperation-textes-corpus]
+    paths: [".github/workflows/recuperer-textes-corpus.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  recuperer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: pypdf (version qui reproduit les empreintes existantes)
+        run: python -m pip install --disable-pip-version-check -q pypdf==6.21.2
+      - name: Télécharger, vérifier, extraire, vérifier
+        run: |
+          python - <<'PY'
+          import hashlib, os, sqlite3, sys, urllib.request
+          sys.path.insert(0, "bin")
+          from collecter_domaine import extraire_texte_pdf
+          DOCS = ["DOC-AA04B605B386", "DOC-13E6467A4BD4"]
+          base = sqlite3.connect("KNOWLEDGE/corpus_juridique.sqlite3")
+          echecs = 0
+          for doc in DOCS:
+              url, sha_pdf, fichier, sha_txt = base.execute(
+                  "select url_source, sha256, fichier_texte, sha256_texte from documents where doc_id=?", (doc,)).fetchone()
+              relatif = fichier.split("/mon_recours_ci/", 1)[1]
+              requete = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Mon Recours CI - verification corpus)"})
+              donnees = urllib.request.urlopen(requete, timeout=120).read()
+              recu = "sha256:" + hashlib.sha256(donnees).hexdigest()
+              print(f"::notice title={doc} PDF::{url} — {len(donnees)} octets — {'CONFORME' if recu == sha_pdf else 'DIFFERENT'}")
+              if recu != sha_pdf:
+                  print(f"::error title={doc}::empreinte du PDF différente de la base ({recu} != {sha_pdf})")
+                  echecs += 1
+                  continue
+              chemin_pdf = os.path.join(os.environ["RUNNER_TEMP"], doc + ".pdf")
+              open(chemin_pdf, "wb").write(donnees)
+              texte, pages = extraire_texte_pdf(chemin_pdf)
+              obtenu = "sha256:" + hashlib.sha256(texte.encode("utf-8")).hexdigest()
+              print(f"::notice title={doc} texte::{pages} pages — {len(texte)} caractères — {'CONFORME' if obtenu == sha_txt else 'DIFFERENT'}")
+              if obtenu != sha_txt:
+                  print(f"::error title={doc}::empreinte du texte différente de la base ({obtenu} != {sha_txt})")
+                  echecs += 1
+                  continue
+              os.makedirs(os.path.dirname(relatif), exist_ok=True)
+              with open(relatif, "w", encoding="utf-8") as flux:
+                  flux.write(texte)
+              print(f"::notice title={doc} écrit::{relatif}")
+          sys.exit(1 if echecs else 0)
+          PY
+      - name: Commiter les textes vérifiés
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add KNOWLEDGE/CORPUS/ASSOCIATIONS/*.txt KNOWLEDGE/CORPUS/DETTES_CONSOMMATION/*.txt
+          git diff --cached --quiet && { echo "rien à commiter"; exit 0; }
+          git commit -m "Corpus : textes extraits OSC (2024-368) et consommation (2016-412), empreintes vérifiées contre la base"
+          git push origin HEAD:outils/recuperation-textes-corpus
