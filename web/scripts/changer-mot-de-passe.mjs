@@ -17,7 +17,7 @@
  */
 
 import { randomInt } from "node:crypto";
-import { chmodSync, existsSync, readFileSync, renameSync, statSync, writeFileSync } from "node:fs";
+import { chmodSync, chownSync, existsSync, readFileSync, renameSync, statSync, writeFileSync } from "node:fs";
 import { hacher, controlerMotDePasse } from "./creer-compte.mjs";
 
 const ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789-_";
@@ -56,7 +56,8 @@ async function principal() {
     console.error(`Fichier introuvable : ${fichier}`);
     process.exit(2);
   }
-  const mode = statSync(fichier).mode & 0o777;
+  const avantStat = statSync(fichier);
+  const mode = avantStat.mode & 0o777;
   if (mode & 0o077) {
     console.error(`Le fichier ${fichier} est accessible au-delà du propriétaire (${mode.toString(8)}). Aucune modification.`);
     process.exit(3);
@@ -110,6 +111,14 @@ async function principal() {
   chmodSync(provisoire, 0o600);
   renameSync(provisoire, fichier);
   chmodSync(fichier, 0o600);
+  // La réécriture crée un fichier NEUF : sans ce rétablissement, un script lancé
+  // en root laisse le fichier en root:root et le service (monrecours) ne peut plus
+  // le lire — la connexion tombe avec « aucun compte configuré ».
+  try {
+    chownSync(fichier, avantStat.uid, avantStat.gid);
+  } catch {
+    console.error("Attention : propriétaire du fichier non rétabli — vérifiez-le à la main.");
+  }
 
   if (genererIci) ecrirePrive(sortie, motDePasse + "\n");
 
