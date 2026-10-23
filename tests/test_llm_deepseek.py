@@ -22,6 +22,7 @@ import os
 import secrets
 import shutil
 import sys
+from urllib.parse import urlparse
 import tempfile
 import threading
 import unittest
@@ -115,7 +116,12 @@ class ContratDuFournisseur(Base):
     def test_valeurs_par_defaut(self):
         f = ADAPTATEUR.FournisseurDeepSeek(cle=CLE)
         self.assertEqual(f.nom, "deepseek")
-        self.assertTrue(f.url.startswith("https://api.deepseek.com"))
+        # Comparaison sur l'hôte exact, pas sur une sous-chaîne : « api.deepseek.com.attaquant.tld »
+        # passerait un startswith. CodeQL le signalait à juste titre (py/incomplete-url-
+        # substring-sanitization) ; l'assertion devient en plus plus stricte.
+        adresse = urlparse(f.url)
+        self.assertEqual(adresse.scheme, "https")
+        self.assertEqual(adresse.hostname, "api.deepseek.com")
         self.assertEqual(f.modele, "deepseek-flash")
 
     def test_disponible_depend_de_la_cle(self):
