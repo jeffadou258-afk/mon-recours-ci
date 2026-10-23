@@ -26,7 +26,17 @@ type Etat =
   | { phase: "fin"; ouverture: VueOuverture; reponse: VueReponse | null };
 
 /** Parcours complet : décrire → préciser → résultat. Tout l'état vit en mémoire. */
-export function Parcours({ demo = false }: { demo?: boolean } = {}) {
+export function Parcours({
+  demo = false,
+  iaExterne = true,
+}: {
+  demo?: boolean;
+  /**
+   * La couche de langage (DeepSeek) est-elle active ? Par défaut VRAI : sans
+   * preuve du contraire, on n'affirme jamais qu'aucune IA n'est utilisée.
+   */
+  iaExterne?: boolean;
+} = {}) {
   const [etat, setEtat] = useState<Etat>({ phase: "saisie" });
   const [demande, setDemande] = useState("");
   const [erreurSaisie, setErreurSaisie] = useState<string | null>(null);
@@ -203,11 +213,22 @@ export function Parcours({ demo = false }: { demo?: boolean } = {}) {
               aucune information personnelle ou confidentielle.
             </p>
           ) : (
-            <p className="formulaire__confidentialite">
-              Votre description est transmise au moteur juridique de Mon Recours CI uniquement, qui en
-              garde une trace sur son serveur pour pouvoir justifier sa réponse. Elle n&apos;est envoyée
-              à aucun service tiers ni à aucun modèle d&apos;intelligence artificielle.
-            </p>
+            iaExterne ? (
+              <p className="formulaire__confidentialite" data-confidentialite="ia-externe">
+                Votre description est transmise au moteur juridique de Mon Recours CI, qui en garde une
+                trace sur son serveur pour pouvoir justifier sa réponse. Pour mieux comprendre votre
+                situation, elle est aussi analysée par un service d&apos;intelligence artificielle
+                externe (DeepSeek). Les numéros de téléphone et adresses e-mail sont retirés
+                automatiquement avant l&apos;envoi ; n&apos;indiquez ni votre nom ni votre adresse. Les
+                articles de loi cités viennent toujours des textes officiels, jamais de l&apos;IA.
+              </p>
+            ) : (
+              <p className="formulaire__confidentialite" data-confidentialite="moteur-seul">
+                Votre description est transmise au moteur juridique de Mon Recours CI uniquement, qui en
+                garde une trace sur son serveur pour pouvoir justifier sa réponse. Elle n&apos;est envoyée
+                à aucun service tiers ni à aucun modèle d&apos;intelligence artificielle.
+              </p>
+            )
           )}
         </form>
       ) : null}

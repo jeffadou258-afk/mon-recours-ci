@@ -86,8 +86,9 @@ export function Accueil({
             </a>
           </div>
           <p className="heros__garanties">
-            Sans compte ni inscription · Aucune donnée transmise à un tiers · Vous pouvez effacer
-            votre consultation à tout moment
+            {sante && sante.langageActif === false
+              ? "Sans compte ni inscription · Aucune donnée transmise à un tiers · Vous pouvez effacer votre consultation à tout moment"
+              : "Sans compte ni inscription · Vous pouvez effacer votre consultation à tout moment"}
           </p>
         </div>
       </section>

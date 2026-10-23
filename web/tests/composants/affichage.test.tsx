@@ -216,3 +216,29 @@ test("consultation : en démonstration, aucun envoi au moteur n'est annoncé", (
   assert.match(reel, /transmise au moteur juridique/);
   assert.doesNotMatch(reel, /Démonstration publique/);
 });
+
+test("consultation : avec DeepSeek actif, la page ne prétend jamais « aucune IA »", () => {
+  const ia = texteVisible(renderToStaticMarkup(<Parcours iaExterne />));
+  assert.doesNotMatch(ia, /aucun modèle d.intelligence artificielle/);
+  assert.doesNotMatch(ia, /aucun service tiers/);
+  assert.match(ia, /intelligence artificielle externe \(DeepSeek\)/);
+  // Ce qui est masqué est dit exactement : téléphones et e-mails, pas les noms.
+  assert.match(ia, /numéros de téléphone et adresses e-mail sont retirés/);
+  assert.match(ia, /n.indiquez ni votre nom ni votre adresse/);
+  // Par défaut (état inconnu), l'avis prudent est celui de l'IA.
+  assert.match(texteVisible(renderToStaticMarkup(<Parcours />)), /DeepSeek/);
+  // Seule une couche de langage confirmée inactive autorise « aucune IA ».
+  const seul = texteVisible(renderToStaticMarkup(<Parcours iaExterne={false} />));
+  assert.match(seul, /aucun modèle d.intelligence artificielle/);
+  assert.doesNotMatch(seul, /DeepSeek/);
+});
+
+test("accueil : « aucune donnée transmise à un tiers » seulement si l'IA est inactive", () => {
+  const base = assainirSante(fixture("sante").data);
+  const actif = texteVisible(renderToStaticMarkup(<Accueil sante={{ ...base, langageActif: true }} />));
+  assert.doesNotMatch(actif, /Aucune donnée transmise à un tiers/);
+  const inactif = texteVisible(renderToStaticMarkup(<Accueil sante={{ ...base, langageActif: false }} />));
+  assert.match(inactif, /Aucune donnée transmise à un tiers/);
+  const inconnu = texteVisible(renderToStaticMarkup(<Accueil sante={null} />));
+  assert.doesNotMatch(inconnu, /Aucune donnée transmise à un tiers/);
+});
