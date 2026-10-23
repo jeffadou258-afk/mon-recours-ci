@@ -64,7 +64,8 @@ test("accueil mobile : couverture réelle, pas de débordement", async () => {
   const page = await ctx.newPage();
   await page.goto(base + "/");
   await page.getByRole("heading", { level: 1 }).waitFor();
-  assert.match(await page.locator("body").innerText(), /\d+ situations sont couvertes/);
+  // Libellé de l'accueil depuis e933912 : « N situations, dans M domaines ».
+  assert.match(await page.locator("body").innerText(), /\d+ situations, dans \d+ domaines/);
   await sansDefilementHorizontal(page);
   await page.screenshot({ path: join(CAPTURES, "01-accueil-mobile.png"), fullPage: true });
   await ctx.close();
@@ -74,7 +75,8 @@ test("parcours complet au toucher : décrire → préciser → résultat avec ci
   const ctx = await contexteMobile();
   const page = await ctx.newPage();
   await page.goto(base + "/");
-  await page.getByRole("link", { name: "Décrire mon problème" }).first().tap();
+  // Bouton unique de l'accueil depuis e933912.
+  await page.getByRole("link", { name: "Commencer ma consultation" }).first().tap();
   await page.waitForURL(/\/consultation$/);
 
   // Entrée malformée : refusée localement, aucun appel réseau.
