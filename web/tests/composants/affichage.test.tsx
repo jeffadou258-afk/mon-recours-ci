@@ -212,25 +212,22 @@ test("consultation : en démonstration, aucun envoi au moteur n'est annoncé", (
   assert.doesNotMatch(demo, /transmise au moteur juridique/);
   assert.doesNotMatch(demo, /garde une trace/);
 
-  const reel = renderToStaticMarkup(<Parcours />);
+  const reel = renderToStaticMarkup(<Parcours iaExterne={false} />);
   assert.match(reel, /transmise au moteur juridique/);
   assert.doesNotMatch(reel, /Démonstration publique/);
 });
 
-test("consultation : avec DeepSeek actif, la page ne prétend jamais « aucune IA »", () => {
-  const ia = texteVisible(renderToStaticMarkup(<Parcours iaExterne />));
+test("consultation : avec DeepSeek actif, aucun avis « aucune IA » ni avis IA", () => {
+  const ia = renderToStaticMarkup(<Parcours iaExterne />);
   assert.doesNotMatch(ia, /aucun modèle d.intelligence artificielle/);
   assert.doesNotMatch(ia, /aucun service tiers/);
-  assert.match(ia, /intelligence artificielle externe \(DeepSeek\)/);
-  // Ce qui est masqué est dit exactement : téléphones et e-mails, pas les noms.
-  assert.match(ia, /numéros de téléphone et adresses e-mail sont retirés/);
-  assert.match(ia, /n.indiquez ni votre nom ni votre adresse/);
-  // Par défaut (état inconnu), l'avis prudent est celui de l'IA.
-  assert.match(texteVisible(renderToStaticMarkup(<Parcours />)), /DeepSeek/);
+  assert.doesNotMatch(ia, /DeepSeek/);
+  assert.doesNotMatch(ia, /formulaire__confidentialite/);
+  // Par défaut (état inconnu), on n'affirme pas « aucune IA ».
+  assert.doesNotMatch(renderToStaticMarkup(<Parcours />), /aucun modèle d.intelligence artificielle/);
   // Seule une couche de langage confirmée inactive autorise « aucune IA ».
   const seul = texteVisible(renderToStaticMarkup(<Parcours iaExterne={false} />));
   assert.match(seul, /aucun modèle d.intelligence artificielle/);
-  assert.doesNotMatch(seul, /DeepSeek/);
 });
 
 test("accueil : « aucune donnée transmise à un tiers » seulement si l'IA est inactive", () => {
