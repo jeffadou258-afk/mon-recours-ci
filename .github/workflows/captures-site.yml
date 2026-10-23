@@ -51,7 +51,7 @@ jobs:
         working-directory: site/web
         run: |
           mkdir -p "$GITHUB_WORKSPACE/outil/captures"
-          cat > /tmp/captures.mjs <<'JS'
+          cat > captures.mjs <<'JS'
           import { chromium } from "playwright";
           const sortie = process.env.SORTIE;
           const b = await chromium.launch();
@@ -89,12 +89,15 @@ jobs:
           await serie("ordinateur", { viewport: { width: 1366, height: 800 } });
           await b.close();
           JS
-          SORTIE="$GITHUB_WORKSPACE/outil/captures" node /tmp/captures.mjs
+          SORTIE="$GITHUB_WORKSPACE/outil/captures" node captures.mjs 2>&1 | tee "$GITHUB_WORKSPACE/outil/captures/journal.txt"
           ls -la "$GITHUB_WORKSPACE/outil/captures"
-      - name: Journaux (en cas d'échec)
-        if: failure()
-        run: tail -30 /tmp/web.log /tmp/moteur.log || true
+      - name: Journaux
+        if: always()
+        run: |
+          mkdir -p "$GITHUB_WORKSPACE/outil/captures"
+          tail -40 /tmp/web.log /tmp/moteur.log /tmp/build.log > "$GITHUB_WORKSPACE/outil/captures/serveurs.txt" 2>&1 || true
       - name: Publier les captures sur la branche
+        if: always()
         working-directory: outil
         run: |
           git config user.name "github-actions[bot]"
