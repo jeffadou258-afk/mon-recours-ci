@@ -242,6 +242,15 @@ export interface VueReponse {
   actionsExternesAutorisees: boolean | null;
   brouillon: VueBrouillon | null;
   avertissement: string | null;
+  /** Explication en langage simple des articles cités (couche de langage). */
+  explication?: VueExplication | null;
+}
+
+export interface VueExplication {
+  explications: { article: string; numeroTexte: string | null; titre: string | null; enClair: string }[];
+  pourVous: string | null;
+  etapes: string[];
+  note: string | null;
 }
 
 /** Réponse de /api/repondre : un nouveau tour de questions, ou le résultat. */

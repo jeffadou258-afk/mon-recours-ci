@@ -30,6 +30,7 @@ import type {
     VueRaisonRefus,
   VueRefus,
   VueRegleDroit,
+  VueExplication,
   VueReponse,
   VueSante,
   VueSource,
@@ -405,7 +406,33 @@ export function assainirReponse(data: unknown): VueReponse {
       typeof r.actions_externes_autorisees === "boolean" ? r.actions_externes_autorisees : null,
     brouillon: brouillon(r.brouillon),
     avertissement: texte(r.avertissement),
+    explication: explication(sections["7_explication"]),
   };
+}
+
+/**
+ * Explication en langage simple : seulement si le moteur l'a produite ET
+ * contrôlée (mode « llm »). Champs connus uniquement, textes bornés.
+ */
+function explication(v: unknown): VueExplication | null {
+  const e = objet(v);
+  if (e.mode !== "llm") return null;
+  const explications = liste(e.explications)
+    .filter(estObjet)
+    .map((x) => ({
+      article: texteRequis(x.article),
+      numeroTexte: texte(x.numero_texte),
+      titre: texte(x.titre),
+      enClair: texteRequis(x.en_clair).slice(0, 800),
+    }))
+    .filter((x) => x.article && x.enClair);
+  const pourVous = texte(e.pour_vous);
+  const etapes = liste(e.etapes)
+    .filter(estObjet)
+    .map((x) => texteRequis(x.en_clair).slice(0, 300))
+    .filter((x) => x.length > 0);
+  if (explications.length === 0 && !pourVous) return null;
+  return { explications, pourVous: pourVous ? pourVous.slice(0, 1000) : null, etapes, note: texte(e.note) };
 }
 
 /**

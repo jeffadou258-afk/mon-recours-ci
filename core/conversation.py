@@ -510,6 +510,27 @@ class Conversation(object):
             + ["Information manquante — %s (%s)" % (m["question"], m["pourquoi"])
                for m in manquantes]
             + [c["message"] for c in sections["5_contradictions"]])
+        # Explication en langage simple, APRÈS les citations : le modèle explique
+        # les articles retenus, sans rien y ajouter (contrôles dans
+        # llm.valider_explication). Sans fournisseur, rien n'est produit et la
+        # page garde les citations et les lectures des fiches.
+        lignes_reponses = [(q.get("question"), reponses.get(q.get("cle")))
+                           for q in etat.get("questions", [])
+                           if reponses.get(q.get("cle")) not in (None, "", [])]
+        explication = llm.expliquer(etat.get("demande"), lignes_reponses, fiches,
+                                    [d for d in sections["4_demarches"] if d],
+                                    fournisseur=self.fournisseur_langage)
+        sections["7_explication"] = {
+            "mode": explication["mode"],
+            "explications": explication["explications"],
+            "pour_vous": explication["pour_vous"],
+            "etapes": explication["etapes"],
+            "note": ("Explication simplifiée, rédigée automatiquement à partir des articles cités "
+                     "ci-dessus. Seul le texte de loi fait foi ; elle n'a pas été relue par un juriste."),
+        }
+        if explication.get("rejets") or explication.get("erreur"):
+            etat["explication_controle"] = {"rejets": explication.get("rejets"),
+                                            "erreur": explication.get("erreur")}
         brouillon = self._brouillon(cloture, fiches, etat)
         return {
             "statut_reponse": statut,

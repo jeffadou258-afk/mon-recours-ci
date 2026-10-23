@@ -2844,3 +2844,45 @@ textarea[aria-invalid="true"] {
   color: var(--encre-douce);
   line-height: 1.6;
 }
+
+/* Explication en langage simple, juste après les citations. */
+.explication {
+  border-left: 5px solid var(--vert);
+  background: var(--vert-pale);
+}
+.explication__pour-vous {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0 0 1rem;
+}
+.explication__articles {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.explication__articles li {
+  padding: 0.85rem 1rem;
+  border-radius: var(--rayon-petit);
+  background: var(--surface);
+}
+.explication__articles p {
+  margin: 0;
+  line-height: 1.6;
+}
+.explication__ref {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--vert);
+  margin-bottom: 0.3rem !important;
+}
+.explication__sous-titre {
+  margin: 1.2rem 0 0.5rem;
+  font-size: 1rem;
+}
+.explication__etapes {
+  margin: 0;
+  padding-left: 1.3rem;
+  line-height: 1.6;
+}

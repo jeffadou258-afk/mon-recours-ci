@@ -570,3 +570,183 @@ def verifier_solde_et_reactiver(delai=10.0, verificateur=None):
         return resultat
     finally:
         _deverrouiller(verrou)
+
+
+# ---------------------------------------------------------------------------
+# Explication en langage simple (après la citation des textes)
+# ---------------------------------------------------------------------------
+#
+# Le moteur CITE les articles mot pour mot ; beaucoup de citoyens ne les
+# comprennent pas. Le modèle les EXPLIQUE ensuite, en français simple, sans
+# rien ajouter au droit. Ce qu'il propose est contrôlé comme le reste :
+#   * il n'explique que les articles RETENUS par le moteur (aucun autre) ;
+#   * aucun nombre (délai, montant, numéro d'article ou de loi) qui ne figure
+#     pas dans les citations, les titres, le récit, les réponses ou les
+#     démarches fournies ;
+#   * aucune mention d'un article autre que ceux retenus ;
+#   * aucune promesse de résultat ;
+#   * les étapes ne sont que des reformulations des démarches déjà produites
+#     par le moteur (référencées par leur numéro) ;
+#   * longueurs bornées.
+# Tout élément qui échoue est écarté (et consigné) ; si rien ne tient, la page
+# garde la citation et la lecture déterministe de la fiche. Ne lève jamais.
+
+LONGUEUR_MAX_EXPLICATION = 700
+LONGUEUR_MAX_POUR_VOUS = 900
+LONGUEUR_MAX_ETAPE = 260
+JETONS_ESTIMES_EXPLICATION = 3000
+
+_SYSTEME_EXPLICATION = (
+    "Tu aides un service d'information juridique ivoirien à EXPLIQUER, en français très "
+    "simple (phrases courtes, mots de tous les jours, pas de jargon), des articles de loi "
+    "DÉJÀ cités à une personne qui n'est pas juriste. Tu n'utilises QUE les textes fournis. "
+    "Tu n'ajoutes AUCUN article, AUCUNE loi, AUCUN délai, AUCUN montant, AUCUN nombre qui "
+    "n'apparaît pas dans les textes, le récit, les réponses ou les démarches fournies. Tu "
+    "parles au conditionnel pour la situation de la personne (« si ce que vous décrivez est "
+    "exact… »). Tu ne promets jamais de résultat. Réponds UNIQUEMENT par un objet JSON, sans "
+    "texte autour, de la forme : {\"explications\": [{\"article\": numéro d'article fourni, "
+    "\"en_clair\": deux à quatre phrases qui disent ce que l'article signifie concrètement}], "
+    "\"pour_vous\": trois à cinq phrases qui relient ces articles à la situation décrite, au "
+    "conditionnel, en disant aussi ce qui reste incertain, \"etapes\": [{\"numero\": numéro "
+    "d'une démarche fournie, \"en_clair\": la même démarche reformulée simplement}]}."
+)
+
+_PROMESSES = ("vous allez gagner", "vous gagnerez", "c'est garanti", "est garanti", "garantie de",
+              "sans aucun doute", "a coup sur", "à coup sûr", "100 %", "100%", "certainement gain")
+_ARTICLE_CITE = _re.compile(r"\barticles?\s+(?:n[°o]\s*)?(\d+)", _re.IGNORECASE)
+
+
+def _message_explication(recit, lignes_reponses, fiches, demarches):
+    lignes = ["RÉCIT DE LA PERSONNE :", recit or "(non fourni)", "", "SES RÉPONSES :"]
+    lignes += ["- %s %s" % (q, r) for q, r in lignes_reponses] or ["(aucune)"]
+    lignes += ["", "ARTICLES CITÉS (à expliquer) :"]
+    for f in fiches:
+        lignes.append("Article %s (texte n° %s) — %s :\n« %s »"
+                      % (f.get("article"), f.get("numero_texte") or "?", f.get("titre"), f.get("citation")))
+    lignes += ["", "DÉMARCHES PROPOSÉES PAR LE SERVICE (numéro — démarche) :"]
+    lignes += ["%d — %s" % (i + 1, d) for i, d in enumerate(demarches)] or ["(aucune)"]
+    return "\n".join(lignes)
+
+
+def _texte_autorise(texte, nombres_permis, articles_permis, maximum):
+    """Renvoie la raison du refus, ou None si le texte est acceptable."""
+    if not isinstance(texte, str) or not texte.strip():
+        return "vide"
+    if len(texte) > maximum:
+        return "trop long"
+    inconnus = _nombres(texte) - nombres_permis
+    if inconnus:
+        return "nombre absent des sources : %s" % ", ".join(sorted(inconnus))
+    autres = {n for n in _ARTICLE_CITE.findall(texte)} - articles_permis
+    if autres:
+        return "article non retenu : %s" % ", ".join(sorted(autres))
+    bas = _normaliser(texte)
+    if any(_normaliser(p) in bas for p in _PROMESSES):
+        return "promesse de résultat"
+    return None
+
+
+def valider_explication(brut, recit, lignes_reponses, fiches, demarches):
+    """Ne garde que ce qui reste fidèle aux sources. Renvoie (retenu, rejets)."""
+    sources = " ".join([recit or ""]
+                       + ["%s %s" % (q, r) for q, r in lignes_reponses]
+                       + ["%s %s %s %s" % (f.get("titre"), f.get("article"), f.get("numero_texte") or "",
+                                           f.get("citation")) for f in fiches]
+                       + list(demarches))
+    nombres_permis = _nombres(sources)
+    articles_permis = {str(f.get("article")) for f in fiches}
+    rejets = []
+    explications = []
+    for e in (brut.get("explications") or [])[:len(fiches)]:
+        if not isinstance(e, dict):
+            rejets.append({"element": "explication", "raison": "format"})
+            continue
+        article = str(e.get("article") or "").strip()
+        fiche = next((f for f in fiches if str(f.get("article")) == article), None)
+        if fiche is None:
+            rejets.append({"element": "explication", "valeur": article, "raison": "article non retenu"})
+            continue
+        raison = _texte_autorise(e.get("en_clair"), nombres_permis, articles_permis, LONGUEUR_MAX_EXPLICATION)
+        if raison:
+            rejets.append({"element": "explication", "valeur": article, "raison": raison})
+            continue
+        if any(x["article"] == article for x in explications):
+            continue
+        explications.append({"article": article, "numero_texte": fiche.get("numero_texte"),
+                             "titre": fiche.get("titre"), "en_clair": e["en_clair"].strip()})
+    pour_vous = brut.get("pour_vous")
+    raison = _texte_autorise(pour_vous, nombres_permis, articles_permis, LONGUEUR_MAX_POUR_VOUS)
+    if raison:
+        if pour_vous:
+            rejets.append({"element": "pour_vous", "raison": raison})
+        pour_vous = None
+    else:
+        pour_vous = pour_vous.strip()
+    etapes = []
+    for e in (brut.get("etapes") or [])[:len(demarches)]:
+        try:
+            numero = int(e.get("numero")) if isinstance(e, dict) else 0
+        except (TypeError, ValueError):
+            numero = 0
+        if not 1 <= numero <= len(demarches):
+            rejets.append({"element": "etape", "valeur": numero, "raison": "démarche inconnue"})
+            continue
+        raison = _texte_autorise(e.get("en_clair"), nombres_permis, articles_permis, LONGUEUR_MAX_ETAPE)
+        if raison:
+            rejets.append({"element": "etape", "valeur": numero, "raison": raison})
+            continue
+        if numero not in {x["numero"] for x in etapes}:
+            etapes.append({"numero": numero, "en_clair": e["en_clair"].strip()})
+    etapes.sort(key=lambda x: x["numero"])
+    return {"explications": explications, "pour_vous": pour_vous, "etapes": etapes}, rejets
+
+
+def expliquer(recit, lignes_reponses, fiches, demarches, fournisseur=None, delai=DELAI_PAR_DEFAUT):
+    """Explication simple des articles cités, avec repli. Ne lève jamais.
+
+    Renvoie {"mode": "llm"|"deterministe", "explications", "pour_vous", "etapes",
+    "rejets", "erreur"}. En mode déterministe, rien n'est inventé : la page garde
+    les citations et les lectures des fiches.
+    """
+    rapport = {"mode": "deterministe", "explications": [], "pour_vous": None, "etapes": [],
+               "rejets": [], "erreur": None}
+    if not fiches:
+        rapport["erreur"] = "aucun article à expliquer"
+        return rapport
+    fournisseur = fournisseur if fournisseur is not None else fournisseur_comprehension()
+    if fournisseur is None:
+        rapport["erreur"] = "aucun fournisseur actif"
+        return rapport
+    if not llm_budget.peut_appeler(JETONS_ESTIMES_EXPLICATION):
+        rapport["erreur"] = "garde-fou : plafond journalier atteint ou fournisseur en panne"
+        return rapport
+    if incident_llm.ouvert():
+        rapport["erreur"] = "incident ouvert : crédits du fournisseur épuisés"
+        return rapport
+    recit_masque, _ = pseudonymisation.masquer(recit or "")
+    reponses_masquees = [(q, pseudonymisation.masquer(str(r))[0]) for q, r in lignes_reponses]
+    try:
+        texte = fournisseur.completer(
+            _SYSTEME_EXPLICATION,
+            _message_explication(recit_masque, reponses_masquees, fiches, demarches),
+            delai=delai, max_tokens=1100)
+        consommation = getattr(fournisseur, "derniere_consommation", None) or {}
+        llm_budget.enregistrer(consommation.get("entree", 0), consommation.get("sortie", 0))
+        llm_budget.signaler_succes()
+        retenu, rejets = valider_explication(_extraire_json(texte or ""), recit_masque,
+                                             reponses_masquees, fiches, demarches)
+    except Exception as erreur:  # noqa: BLE001 — repli : la citation reste, rien n'est inventé
+        llm_budget.signaler_echec()
+        statut = getattr(erreur, "statut_http", None)
+        detail = getattr(erreur, "message_fournisseur", "") or ""
+        if statut == 402 and incident_llm.message_credits(detail):
+            incident_llm.declarer(getattr(fournisseur, "nom", "deepseek"), detail, statut)
+            rapport["erreur"] = "crédits du fournisseur épuisés"
+            return rapport
+        rapport["erreur"] = "%s : %s" % (type(erreur).__name__, str(erreur)[:200])
+        return rapport
+    rapport.update(retenu)
+    rapport["rejets"] = rejets
+    if retenu["explications"] or retenu["pour_vous"]:
+        rapport["mode"] = "llm"
+    return rapport

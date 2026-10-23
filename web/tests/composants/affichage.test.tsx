@@ -258,3 +258,39 @@ test("accueil : « aucune donnée transmise à un tiers » seulement si l'IA est
   const inconnu = texteVisible(renderToStaticMarkup(<Accueil sante={null} />));
   assert.doesNotMatch(inconnu, /Aucune donnée transmise à un tiers/);
 });
+
+function avecExplication(mode: string) {
+  const brut = fixture("repondre_caution");
+  const donnees = JSON.parse(JSON.stringify(brut.data));
+  donnees.reponse.sections["7_explication"] = {
+    mode,
+    explications: [
+      { article: "416", numero_texte: "2019-576", titre: "Dépôt de garantie (caution)",
+        en_clair: "La caution ne peut pas dépasser deux mois de loyer.", champ_inconnu: "x" },
+    ],
+    pour_vous: "Si ce que vous décrivez est exact, le bailleur devrait justifier toute retenue.",
+    etapes: [{ numero: 1, en_clair: "Rassemblez votre bail et la preuve du paiement." }],
+    note: "Explication simplifiée, rédigée automatiquement. Seul le texte de loi fait foi.",
+  };
+  return assainirReponse(donnees);
+}
+
+test("explication simple : affichée APRÈS les citations, présentée pour ce qu'elle est", () => {
+  const vue = avecExplication("llm");
+  assert.ok(vue.explication);
+  const html = renderToStaticMarkup(<VueResultat vue={vue} urgence={null} />);
+  const visible = texteVisible(html);
+  assert.match(visible, /Ce que cela veut dire pour vous/);
+  assert.match(visible, /La caution ne peut pas dépasser deux mois de loyer/);
+  assert.match(visible, /Concrètement, vous pouvez/);
+  assert.match(visible, /Seul le texte de loi fait foi/);
+  assert.ok(html.indexOf("Ce que disent les textes") < html.indexOf("Ce que cela veut dire pour vous"));
+  assert.doesNotMatch(html, /champ_inconnu/);
+});
+
+test("explication simple : absente si le moteur ne l'a pas produite (mode déterministe)", () => {
+  const vue = avecExplication("deterministe");
+  assert.equal(vue.explication, null);
+  const visible = texteVisible(renderToStaticMarkup(<VueResultat vue={vue} urgence={null} />));
+  assert.doesNotMatch(visible, /Ce que cela veut dire pour vous/);
+});

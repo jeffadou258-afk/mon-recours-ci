@@ -1,4 +1,4 @@
-import type { VueHorsCatalogue, VueRefus, VueReponse, VueUrgence } from "@/lib/types";
+import type { VueExplication, VueHorsCatalogue, VueRefus, VueReponse, VueUrgence } from "@/lib/types";
 import { libelleDomaine, presentationStatut } from "@/lib/libelles";
 import { BandeauUrgence, EncadreVerrous, OrientationHumaine } from "./Alertes";
 import { FormulaireCourrier } from "./FormulaireCourrier";
@@ -80,6 +80,8 @@ export function VueResultat({ vue, urgence }: { vue: VueReponse; urgence: VueUrg
           </div>
         )}
       </section>
+
+      {vue.explication ? <ExplicationSimple explication={vue.explication} /> : null}
 
       {vue.application ? (
         <section className="bloc" aria-labelledby="titre-application">
@@ -178,6 +180,43 @@ export function VueResultat({ vue, urgence }: { vue: VueReponse; urgence: VueUrg
 }
 
 // ---------------------------------------------------------------------------
+
+/**
+ * « Ce que cela veut dire pour vous » : les articles cités ci-dessus, expliqués
+ * en mots simples. Toujours APRÈS les citations, et présenté pour ce qu'il est.
+ */
+function ExplicationSimple({ explication }: { explication: VueExplication }) {
+  return (
+    <section className="bloc explication" aria-labelledby="titre-explication">
+      <h2 id="titre-explication">Ce que cela veut dire pour vous</h2>
+      {explication.pourVous ? <p className="explication__pour-vous">{explication.pourVous}</p> : null}
+      {explication.explications.length > 0 ? (
+        <ul className="explication__articles">
+          {explication.explications.map((e) => (
+            <li key={`${e.numeroTexte}-${e.article}`}>
+              <p className="explication__ref">
+                Article {e.article}
+                {e.titre ? ` — ${e.titre}` : ""}, en clair
+              </p>
+              <p>{e.enClair}</p>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {explication.etapes.length > 0 ? (
+        <>
+          <h3 className="explication__sous-titre">Concrètement, vous pouvez</h3>
+          <ol className="explication__etapes">
+            {explication.etapes.map((e, i) => (
+              <li key={i}>{e}</li>
+            ))}
+          </ol>
+        </>
+      ) : null}
+      {explication.note ? <p className="bloc__note">{explication.note}</p> : null}
+    </section>
+  );
+}
 
 export function VueSansFiche({ vue }: { vue: VueHorsCatalogue }) {
   const articlesTrouves = vue.articlesSansFiche.filter((d) => d.articles.length > 0);
