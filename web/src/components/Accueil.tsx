@@ -1,6 +1,12 @@
 import type { VueSante } from "@/lib/types";
 import { libelleDomaine } from "@/lib/libelles";
 import { IconeDomaine } from "./Icones";
+import { Apparitions } from "./anime/Apparitions";
+import { Compteur } from "./anime/Compteur";
+import { IllustrationHeros } from "./anime/IllustrationHeros";
+import { Faq } from "./Faq";
+import { PartageWhatsApp } from "./PartageWhatsApp";
+import { VideoPresentation } from "./VideoPresentation";
 
 interface CarteDomaine {
   domaine: string;
@@ -63,11 +69,15 @@ export function Accueil({
   const couverts = cartes.filter((c) => c.fiches.length > 0);
   const enAttente = cartes.filter((c) => c.fiches.length === 0);
   const totalSituations = couverts.reduce((n, c) => n + c.fiches.length, 0);
+  const articles = sante?.corpus?.articles ?? null;
+  const textes = sante?.corpus?.documents ?? null;
 
   return (
     <div className="accueil-citoyen">
+      <Apparitions />
       <section className="heros" aria-labelledby="titre-accueil">
-        <div className="heros__interieur">
+        <div className="heros__interieur heros__interieur--grille">
+          <div className="heros__texte">
           <p className="heros__marque">Information juridique · Côte d&apos;Ivoire</p>
           <h1 id="titre-accueil" className="heros__titre">
             Comprenez vos droits, avec le texte de loi sous les yeux.
@@ -90,7 +100,41 @@ export function Accueil({
               ? "Sans compte ni inscription · Aucune donnée transmise à un tiers · Vous pouvez effacer votre consultation à tout moment"
               : "Sans compte ni inscription · Vous pouvez effacer votre consultation à tout moment"}
           </p>
+          </div>
+          <IllustrationHeros />
         </div>
+        {sante && totalSituations > 0 ? (
+          <dl className="chiffres">
+            <div className="chiffres__item">
+              <dt>situations traitées</dt>
+              <dd>
+                <Compteur valeur={totalSituations} />
+              </dd>
+            </div>
+            <div className="chiffres__item">
+              <dt>domaines du droit</dt>
+              <dd>
+                <Compteur valeur={couverts.length} duree={900} />
+              </dd>
+            </div>
+            {articles ? (
+              <div className="chiffres__item">
+                <dt>articles de loi</dt>
+                <dd>
+                  <Compteur valeur={articles} duree={1800} />
+                </dd>
+              </div>
+            ) : null}
+            {textes ? (
+              <div className="chiffres__item">
+                <dt>textes officiels</dt>
+                <dd>
+                  <Compteur valeur={textes} duree={1200} />
+                </dd>
+              </div>
+            ) : null}
+          </dl>
+        ) : null}
       </section>
 
       {nonConfigure ? (
@@ -103,13 +147,18 @@ export function Accueil({
 
       <section className="etapes-citoyen" id="etapes" aria-labelledby="titre-etapes">
         <div className="section__interieur">
-          <div className="section__entete">
+          <div className="section__entete" data-apparition="">
             <h2 id="titre-etapes">Comment ça marche</h2>
             <p>Quatre étapes, aucune inscription, environ cinq minutes.</p>
           </div>
           <ol className="etapes-citoyen__liste">
             {ETAPES.map((e, i) => (
-              <li key={e.titre} className="etape-carte">
+              <li
+                key={e.titre}
+                className="etape-carte"
+                data-apparition=""
+                style={{ ["--delai" as string]: `${i * 120}ms` }}
+              >
                 <span className="etape-carte__numero" aria-hidden="true">
                   {i + 1}
                 </span>
@@ -126,6 +175,8 @@ export function Accueil({
         </div>
       </section>
 
+      <VideoPresentation />
+
       <section className="section section--blanche" aria-labelledby="titre-domaines">
         <div className="section__interieur">
           <div className="section__entete">
@@ -133,7 +184,8 @@ export function Accueil({
             {sante ? (
               <p>
                 <strong>
-                  {totalSituations} situations, dans {couverts.length} domaines
+                  <Compteur valeur={totalSituations} /> situations, dans{" "}
+                  <Compteur valeur={couverts.length} duree={900} /> domaines
                 </strong>{" "}
                 — chacune rattachée à un article de loi précis. Pour tout autre sujet, le service
                 vous dira qu&apos;il ne peut pas conclure.
@@ -154,8 +206,13 @@ export function Accueil({
 
           {sante ? (
             <ul className="domaines-citoyen">
-              {couverts.map((c) => (
-                <li key={c.domaine} className="domaine-citoyen">
+              {couverts.map((c, i) => (
+                <li
+                  key={c.domaine}
+                  className="domaine-citoyen"
+                  data-apparition=""
+                  style={{ ["--delai" as string]: `${i * 90}ms` }}
+                >
                   <div className="domaine-citoyen__entete">
                     <span className="domaine-citoyen__icone">
                       <IconeDomaine domaine={c.domaine} />
@@ -235,12 +292,17 @@ export function Accueil({
         </div>
       </section>
 
+      <Faq />
+
       <section className="appel" aria-labelledby="titre-appel">
         <div className="section__interieur appel__interieur">
-          <h2 id="titre-appel">Un souci de logement, de bail ou de caution ?</h2>
-          <a href="/consultation" className="bouton bouton--grand bouton--sombre">
-            Commencer ma consultation
-          </a>
+          <h2 id="titre-appel">Un souci de logement, de famille ou de dette ?</h2>
+          <div className="appel__actions">
+            <a href="/consultation" className="bouton bouton--grand bouton--sombre">
+              Commencer ma consultation
+            </a>
+            <PartageWhatsApp variante="sombre" />
+          </div>
         </div>
       </section>
     </div>

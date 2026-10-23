@@ -5,17 +5,67 @@ import type { ErreurApi, VueAiguillage, VueClarification, VueOuverture, VueRepon
 import { envoyerReponses, ouvrirDossier } from "@/lib/client/api";
 import { LONGUEUR_MAX_DEMANDE, validerDemande } from "@/lib/validation";
 import { ActionsConsultation } from "./ActionsConsultation";
+import { BoutonDictee } from "./BoutonDictee";
+import { ChargementAnime } from "./ChargementAnime";
+import { IconeDomaine } from "./Icones";
+import { PartageWhatsApp } from "./PartageWhatsApp";
 import { ChoixSituation } from "./ChoixSituation";
 import { Clarification } from "./Clarification";
 import { Etapes } from "./Etapes";
 import { Chargement, MessageErreur } from "./MessageErreur";
 import { VueRefusee, VueResultat, VueSansFiche } from "./Resultats";
 
-/** Amorces de rédaction : elles remplissent la zone de texte, la personne les modifie. */
-const AMORCES = [
-  "Mon bailleur refuse de me rendre ma caution depuis que j'ai quitté le logement.",
-  "Mon propriétaire veut augmenter mon loyer.",
-  "On veut m'expulser de mon logement.",
+/**
+ * Situations proposées en un clic. Chacune a été vérifiée contre le moteur
+ * réel : elle ouvre une consultation (questions de précision), pas un refus.
+ * Le clic REMPLIT la zone de texte ; la personne relit, complète, puis envoie.
+ */
+export const SITUATIONS: { titre: string; texte: string; domaine: string }[] = [
+  {
+    titre: "Mon bailleur garde ma caution",
+    texte: "Mon bailleur refuse de me rendre ma caution depuis que j'ai quitté le logement.",
+    domaine: "logement_baux_foncier",
+  },
+  { titre: "On veut m'expulser", texte: "Mon propriétaire veut m'expulser de mon logement.", domaine: "logement_baux_foncier" },
+  { titre: "Mon loyer augmente", texte: "Mon propriétaire veut augmenter mon loyer.", domaine: "logement_baux_foncier" },
+  {
+    titre: "Pension alimentaire non payée",
+    texte: "Le père de mon enfant ne paie pas la pension alimentaire fixée par le juge.",
+    domaine: "famille_mariage_filiation",
+  },
+  {
+    titre: "Reconnaître mon enfant",
+    texte: "Je veux reconnaître mon enfant né hors mariage.",
+    domaine: "famille_mariage_filiation",
+  },
+  {
+    titre: "Partage d'un héritage",
+    texte: "Mon père est décédé et la famille refuse de partager l'héritage.",
+    domaine: "famille_mariage_filiation",
+  },
+  {
+    titre: "On me réclame une dette",
+    texte: "J'ai reçu une injonction de payer pour une dette que je conteste.",
+    domaine: "contrats_dettes_commerce",
+  },
+  {
+    titre: "Saisie sur mon salaire",
+    texte: "Mon créancier veut saisir mon salaire.",
+    domaine: "contrats_dettes_commerce",
+  },
+  {
+    titre: "Victime d'une escroquerie",
+    texte: "J'ai été victime d'une escroquerie : on m'a pris de l'argent avec un faux projet.",
+    domaine: "penal_procedure_penale",
+  },
+  { titre: "Violences à la maison", texte: "Mon conjoint me frappe.", domaine: "penal_procedure_penale" },
+];
+
+const ETAPES_OUVERTURE = [
+  "Lecture de votre description…",
+  "Recherche des textes qui correspondent à votre situation…",
+  "Vérification des articles et de leur source…",
+  "Préparation des questions de précision…",
 ];
 
 type Etat =
@@ -148,21 +198,25 @@ export function Parcours({
             votre numéro de téléphone ou votre adresse : ils ne servent pas à l&apos;analyse.
           </p>
           {etat.phase === "saisie" ? (
-            <div className="amorces">
-              <p className="amorces__titre">Pour commencer, vous pouvez partir d&apos;un exemple :</p>
-              <ul>
-                {AMORCES.map((a) => (
-                  <li key={a}>
+            <div className="situations">
+              <p className="situations__titre">Choisissez une situation proche de la vôtre, ou écrivez directement :</p>
+              <ul className="situations__grille">
+                {SITUATIONS.map((sit, i) => (
+                  <li key={sit.titre} style={{ ["--delai" as string]: `${i * 45}ms` }}>
                     <button
                       type="button"
-                      className="amorce"
+                      className={`situation${demande === sit.texte ? " situation--choisie" : ""}`}
+                      aria-pressed={demande === sit.texte}
                       onClick={() => {
-                        setDemande(a);
+                        setDemande(sit.texte);
                         setErreurSaisie(null);
                         document.getElementById("demande")?.focus();
                       }}
                     >
-                      {a}
+                      <span className="situation__icone">
+                        <IconeDomaine domaine={sit.domaine} taille={26} />
+                      </span>
+                      <span className="situation__titre">{sit.titre}</span>
                     </button>
                   </li>
                 ))}
@@ -181,6 +235,16 @@ export function Parcours({
             disabled={etat.phase === "ouverture"}
             placeholder="Exemple : mon bailleur refuse de me rendre ma caution depuis que j'ai quitté l'appartement il y a deux mois."
           />
+          {etat.phase === "saisie" && !demo ? (
+            <BoutonDictee
+              onTexte={(dicte) =>
+                setDemande((avant) => {
+                  const suite = avant.trim() ? `${avant.trim()} ${dicte}` : dicte;
+                  return suite.slice(0, LONGUEUR_MAX_DEMANDE);
+                })
+              }
+            />
+          ) : null}
           <div className="formulaire__pied">
             <span id="compteur-demande" className="compteur">
               {demande.length} / {LONGUEUR_MAX_DEMANDE} caractères
@@ -192,13 +256,11 @@ export function Parcours({
             </p>
           ) : null}
           {etat.phase === "ouverture" ? (
-            <Chargement
-              message={
-                demo
-                  ? "Chargement du scénario de démonstration…"
-                  : "Recherche des textes qui correspondent à votre situation…"
-              }
-            />
+            demo ? (
+              <Chargement message="Chargement du scénario de démonstration…" />
+            ) : (
+              <ChargementAnime etapes={ETAPES_OUVERTURE} />
+            )
           ) : (
             <div className="actions">
               <button type="submit" className="bouton">
@@ -276,6 +338,10 @@ export function Parcours({
             <button type="button" className="bouton" onClick={recommencer}>
               Nouvelle demande
             </button>
+          </div>
+          <div className="partage-fin">
+            <p>Ce service pourrait aider quelqu&apos;un de votre entourage ?</p>
+            <PartageWhatsApp />
           </div>
         </>
       ) : null}
