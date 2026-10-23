@@ -80,3 +80,18 @@ Internet ──HTTPS──► nginx (443) ──► Next.js (127.0.0.1:3000) ─
 `bash scripts/demarrer-local.sh` (depuis la racine du dépôt) démarre le moteur et
 l'interface sur la machine, avec des clés tirées au hasard ; `--tests` lance
 d'abord tous les contrôles.
+
+
+## Déploiement d'une version validée (sauvegarde + retour arrière automatique)
+
+```bash
+sudo -u monrecours git -C /opt/mon-recours-ci fetch origin feature/admin-authentification
+sudo -u monrecours git -C /opt/mon-recours-ci show origin/feature/admin-authentification:web/deploiement/deployer.sh > /tmp/deployer.sh
+sudo bash /tmp/deployer.sh <commit validé par la CI>
+```
+
+`deployer.sh` sauvegarde (`/var/backups/mon-recours-ci/`, 600) avant tout changement,
+n'avance qu'en avance rapide, lance `maj.sh`, fait les tests de fumée (interface,
+moteur, intégrité du corpus, RUNTIME inscriptible, route d'administration protégée,
+dossiers préservés) et revient seul au commit précédent si un contrôle échoue.
+Aucun secret n'est affiché ; DeepSeek n'est jamais appelé.
