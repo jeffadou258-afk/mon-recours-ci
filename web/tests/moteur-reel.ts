@@ -26,12 +26,14 @@ print("PORT=%d" % s.server_address[1], flush=True)
 s.serve_forever()
 `;
 
-export function lancerMoteur(options: { debit?: number } = {}): Promise<MoteurLance> {
+export function lancerMoteur(
+  options: { debit?: number; env?: Record<string, string> } = {},
+): Promise<MoteurLance> {
   const cle = `cle-integration-${randomBytes(12).toString("hex")}`;
   return new Promise((resoudre, rejeter) => {
     const processus: ChildProcess = spawn(process.env.PYTHON ?? "python3", ["-c", SCRIPT], {
       cwd: RACINE_MOTEUR,
-      env: { ...process.env, MONRECOURS_API_KEY: cle, DEBIT: String(options.debit ?? 1000) },
+      env: { ...process.env, ...(options.env ?? {}), MONRECOURS_API_KEY: cle, DEBIT: String(options.debit ?? 1000) },
       stdio: ["ignore", "pipe", "pipe"],
     });
     let sortie = "";

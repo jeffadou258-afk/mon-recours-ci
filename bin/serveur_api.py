@@ -208,9 +208,20 @@ def _fabrique(cle_api, limiteur, journal=None):
                 elif route == "/courrier":
                     resultat = service.rediger_courrier(charge.get("dossier_id"),
                                                         charge.get("informations"))
-                else:
+                elif route == "/llm/verifier-solde":
+                    # Route d'administration : aucun dossier, aucun récit. Elle
+                    # était déclarée dans ROUTES_POST mais retombait sur
+                    # `repondre` (ENTREE_INVALIDE) : la réactivation n'avait donc
+                    # jamais atteint le moteur réel.
+                    dossier = "-"
+                    resultat = service.verifier_solde_llm()
+                elif route == "/repondre":
                     resultat = service.repondre(charge.get("dossier_id"),
                                                 charge.get("reponses"))
+                else:  # route déclarée sans aiguillage : refus explicite, jamais un repli
+                    self._erreur(404, "ROUTE_INCONNUE", "route non aiguillée : %s" % route,
+                                 time.monotonic() - debut)
+                    return
             except TypeError as manque:
                 self._erreur(400, "CHAMP_MANQUANT", str(manque),
                              time.monotonic() - debut, dossier)

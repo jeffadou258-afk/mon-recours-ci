@@ -256,6 +256,8 @@ export interface VueIncidentLangage {
   objet?: string | null;
   consequence?: string | null;
   actionAttendue?: string | null;
+  /** Faux si le moteur n'a pas pu enregistrer l'état sur disque (perdu au redémarrage). */
+  persistant?: boolean;
 }
 
 export interface VueSante {

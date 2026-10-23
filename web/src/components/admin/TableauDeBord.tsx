@@ -96,6 +96,12 @@ export function TableauDeBord({ donnees }: { donnees: DonneesTableauDeBord }) {
             {incident.fournisseur ? <li>Fournisseur : {incident.fournisseur}</li> : null}
             {incident.consequence ? <li>{incident.consequence}</li> : null}
             {incident.actionAttendue ? <li>{incident.actionAttendue}</li> : null}
+            {incident.persistant === false ? (
+              <li data-incident-persistant="non">
+                État conservé en mémoire seulement : il sera perdu au redémarrage du moteur.
+                Le dossier RUNTIME du serveur doit être rendu inscriptible.
+              </li>
+            ) : null}
           </ul>
           <VerifierSolde />
         </section>

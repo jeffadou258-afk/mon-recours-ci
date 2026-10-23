@@ -30,6 +30,7 @@ Aucune clé API dans le code : la clé est lue dans `MONRECOURS_LLM_API_KEY`.
 import importlib.util
 import fcntl
 import os
+import threading
 
 from core import corpus
 
@@ -432,30 +433,47 @@ NOM_VARIABLE_VERROU = "MONRECOURS_VERROU_SOLDE"
 DUREE_VERROU = 30.0
 
 
+_VERROU_PROCESSUS = threading.Lock()
+
+
 def _verrouiller():
     """Verrou exclusif : deux clics simultanés ne produisent qu'une vérification.
 
-    Renvoie le descripteur, ou None si une vérification est déjà en cours.
+    Renvoie un jeton opaque, ou None si une vérification est déjà en cours.
+
+    Le verrou de fichier protège contre plusieurs processus. S'il ne peut pas
+    être créé (RUNTIME absent ou en lecture seule), on ne répond PAS « déjà en
+    cours » pour toujours — c'était le comportement précédent, qui rendait la
+    réactivation impossible en production : on se replie sur un verrou du
+    processus, suffisant puisque le moteur tourne dans un seul processus.
     """
+    if not _VERROU_PROCESSUS.acquire(blocking=False):
+        return None
     chemin = os.environ.get(NOM_VARIABLE_VERROU) or os.path.join(RACINE, "RUNTIME", "verification_solde.lock")
     try:
         os.makedirs(os.path.dirname(chemin), mode=0o700, exist_ok=True)
         descripteur = os.open(chemin, os.O_CREAT | os.O_RDWR, 0o600)
     except OSError:
-        return None
+        return {"fichier": None}
     try:
         fcntl.flock(descripteur, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except OSError:
         os.close(descripteur)
+        _VERROU_PROCESSUS.release()
         return None
-    return descripteur
+    return {"fichier": descripteur}
 
 
-def _deverrouiller(descripteur):
+def _deverrouiller(jeton):
     try:
-        fcntl.flock(descripteur, fcntl.LOCK_UN)
+        descripteur = jeton.get("fichier") if isinstance(jeton, dict) else None
+        if descripteur is not None:
+            try:
+                fcntl.flock(descripteur, fcntl.LOCK_UN)
+            finally:
+                os.close(descripteur)
     finally:
-        os.close(descripteur)
+        _VERROU_PROCESSUS.release()
 
 
 def configuration_manquante():
@@ -481,6 +499,16 @@ def verifier_solde_et_reactiver(delai=10.0, verificateur=None):
     resultat = {"reactive": False, "mode": "deterministe", "etat": None,
                 "manques": configuration_manquante(),
                 "methode": "GET https://api.deepseek.com/user/balance"}
+
+    if (os.environ.get(NOM_VARIABLE_FOURNISSEUR) or "").lower() != "deepseek":
+        # La vérification interroge l'API de solde de DeepSeek avec la clé
+        # configurée : si le fournisseur configuré est un autre, cette clé n'est
+        # pas une clé DeepSeek et ne doit JAMAIS être envoyée à DeepSeek.
+        resultat["etat"] = "NON_APPLICABLE"
+        resultat["message"] = ("Le fournisseur configuré n'est pas DeepSeek : aucune "
+                               "vérification de solde n'est faite, l'incident reste en l'état.")
+        resultat["incident"] = incident_llm.etat()
+        return resultat
 
     if "clé absente" in resultat["manques"]:
         resultat["etat"] = "SANS_CLE"
@@ -518,9 +546,16 @@ def verifier_solde_et_reactiver(delai=10.0, verificateur=None):
 
         if solde.get("etat") == "POSITIF" and not resultat["manques"]:
             incident_llm.resoudre("solde vérifié : %s %s" % (solde.get("total"), solde.get("devise") or ""))
-            resultat["reactive"] = True
-            resultat["mode"] = "llm"
-            resultat["message"] = "Solde confirmé : compréhension assistée réactivée."
+            resultat["reactive"] = not incident_llm.ouvert()
+            resultat["mode"] = "llm" if resultat["reactive"] else "deterministe"
+            if not resultat["reactive"]:
+                resultat["message"] = "La clôture de l'incident a échoué : le secours déterministe continue."
+            elif not incident_llm.etat().get("persistant", True):
+                resultat["message"] = ("Solde confirmé : compréhension assistée réactivée pour ce "
+                                       "processus, mais l'état n'a pas pu être enregistré sur disque "
+                                       "(droits du dossier RUNTIME à corriger).")
+            else:
+                resultat["message"] = "Solde confirmé : compréhension assistée réactivée."
         elif solde.get("etat") == "POSITIF":
             resultat["message"] = ("Solde confirmé, mais la configuration est incomplète : "
                                    "DeepSeek reste désactivé.")

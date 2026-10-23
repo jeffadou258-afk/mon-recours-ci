@@ -91,3 +91,18 @@ test("administration : la vérification est une action réelle, pas un décor", 
   assert.doesNotMatch(zone, /<a\s[^>]*href=/, "l'action est un lien, pas un traitement");
   assert.doesNotMatch(zone, /<button[^>]*disabled/, "le bouton est inerte au repos");
 });
+
+test("administration : un état d'incident non enregistré sur disque est signalé", () => {
+  const html = renderToStaticMarkup(
+    <TableauDeBord donnees={donnees({ ...SANTE, incidentLangage: { ...INCIDENT, persistant: false } })} />,
+  );
+  assert.match(html, /data-incident-persistant="non"/);
+  assert.ok(texteVisible(html).includes("perdu au redémarrage du moteur"));
+});
+
+test("administration : aucun avertissement de persistance quand l'état est enregistré", () => {
+  const html = renderToStaticMarkup(
+    <TableauDeBord donnees={donnees({ ...SANTE, incidentLangage: { ...INCIDENT, persistant: true } })} />,
+  );
+  assert.doesNotMatch(html, /data-incident-persistant/);
+});

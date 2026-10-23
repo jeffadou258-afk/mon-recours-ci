@@ -17,7 +17,9 @@ que le risque qu'il couvre.
 import datetime
 import json
 import os
+import sys
 import tempfile
+import threading
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOSSIER = os.path.join(RACINE, "RUNTIME")
@@ -39,9 +41,25 @@ def _jour():
     return datetime.date.today().isoformat()
 
 
+# Repli mémoire, comme pour l'incident : si RUNTIME n'est pas inscriptible
+# (systemd `ProtectSystem=strict` sans `ReadWritePaths`), le plafond journalier
+# et le disjoncteur restent appliqués dans le processus du moteur au lieu de
+# disparaître en silence — un plafond qui ne compte rien n'est pas un plafond.
+_MEMOIRE = {}
+_NON_PERSISTANT = set()
+_VERROU = threading.RLock()
+
+
+def persistant():
+    return _chemin() not in _NON_PERSISTANT
+
+
 def _lire():
+    chemin = _chemin()
+    if chemin in _NON_PERSISTANT and chemin in _MEMOIRE:
+        return dict(_MEMOIRE[chemin])
     try:
-        with open(_chemin(), encoding="utf-8") as flux:
+        with open(chemin, encoding="utf-8") as flux:
             donnees = json.load(flux)
         return donnees if isinstance(donnees, dict) else {}
     except (OSError, ValueError):
@@ -51,6 +69,7 @@ def _lire():
 def _ecrire(donnees):
     chemin = _chemin()
     dossier = os.path.dirname(chemin)
+    _MEMOIRE[chemin] = dict(donnees)
     try:
         os.makedirs(dossier, mode=0o700, exist_ok=True)
         descripteur, temporaire = tempfile.mkstemp(dir=dossier, prefix=".llm-", suffix=".tmp")
@@ -59,9 +78,15 @@ def _ecrire(donnees):
         os.chmod(temporaire, 0o600)
         os.replace(temporaire, chemin)
     except OSError:
-        # Un registre illisible ne doit pas bloquer le service : on préfère
-        # perdre le comptage que refuser une réponse.
-        pass
+        # Un registre non inscriptible ne bloque pas le service, mais le
+        # comptage continue en mémoire et l'anomalie est signalée.
+        if chemin not in _NON_PERSISTANT:
+            sys.stderr.write("llm_budget : registre NON enregistre sur disque (dossier %s "
+                             "non inscriptible) ; comptage en memoire\n" % dossier)
+        _NON_PERSISTANT.add(chemin)
+        return False
+    _NON_PERSISTANT.discard(chemin)
+    return True
 
 
 def plafond():
@@ -76,13 +101,15 @@ def etat():
     donnees = _lire()
     jour = _jour()
     if donnees.get("jour") != jour:
-        return {"jour": jour, "jetons": 0, "plafond": plafond(), "echecs": 0, "en_panne": False}
+        return {"jour": jour, "jetons": 0, "plafond": plafond(), "echecs": 0, "en_panne": False,
+                "persistant": persistant()}
     return {
         "jour": jour,
         "jetons": int(donnees.get("jetons") or 0),
         "plafond": plafond(),
         "echecs": int(donnees.get("echecs") or 0),
         "en_panne": _panne_active(donnees),
+        "persistant": persistant(),
     }
 
 
@@ -108,29 +135,32 @@ def peut_appeler(jetons_estimes=2000):
 
 def enregistrer(entree=0, sortie=0):
     """Ajoute la consommation réelle. Ne lève jamais."""
-    donnees = _lire()
-    jour = _jour()
-    if donnees.get("jour") != jour:
-        donnees = {"jour": jour, "jetons": 0, "echecs": 0}
-    donnees["jetons"] = int(donnees.get("jetons") or 0) + max(0, int(entree)) + max(0, int(sortie))
-    _ecrire(donnees)
+    with _VERROU:
+        donnees = _lire()
+        jour = _jour()
+        if donnees.get("jour") != jour:
+            donnees = {"jour": jour, "jetons": 0, "echecs": 0}
+        donnees["jetons"] = int(donnees.get("jetons") or 0) + max(0, int(entree)) + max(0, int(sortie))
+        _ecrire(donnees)
 
 
 def signaler_succes():
-    donnees = _lire()
-    jour = _jour()
-    if donnees.get("jour") != jour:
-        donnees = {"jour": jour, "jetons": 0}
-    donnees["echecs"] = 0
-    donnees.pop("dernier_echec", None)
-    _ecrire(donnees)
+    with _VERROU:
+        donnees = _lire()
+        jour = _jour()
+        if donnees.get("jour") != jour:
+            donnees = {"jour": jour, "jetons": 0}
+        donnees["echecs"] = 0
+        donnees.pop("dernier_echec", None)
+        _ecrire(donnees)
 
 
 def signaler_echec():
-    donnees = _lire()
-    jour = _jour()
-    if donnees.get("jour") != jour:
-        donnees = {"jour": jour, "jetons": 0, "echecs": 0}
-    donnees["echecs"] = int(donnees.get("echecs") or 0) + 1
-    donnees["dernier_echec"] = datetime.datetime.now().isoformat()
-    _ecrire(donnees)
+    with _VERROU:
+        donnees = _lire()
+        jour = _jour()
+        if donnees.get("jour") != jour:
+            donnees = {"jour": jour, "jetons": 0, "echecs": 0}
+        donnees["echecs"] = int(donnees.get("echecs") or 0) + 1
+        donnees["dernier_echec"] = datetime.datetime.now().isoformat()
+        _ecrire(donnees)

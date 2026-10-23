@@ -479,6 +479,7 @@ export function assainirSante(data: unknown): VueSante {
         objet: texte(incident.objet),
         consequence: texte(incident.consequence),
         actionAttendue: texte(incident.action_attendue),
+        persistant: incident.persistant !== false,
       };
     })(),
     avertissement: texte(d.avertissement),

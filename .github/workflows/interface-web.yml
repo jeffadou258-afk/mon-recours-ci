@@ -162,7 +162,7 @@ jobs:
           npm run test:e2e 2>&1 | tee ../e2e.txt
           echo "::notice title=E2E::$(grep -E '^# (tests|pass|fail)' ../e2e.txt | tr '\n' ' ')"
           if grep -qE '^not ok' ../e2e.txt; then
-            echo "::warning title=E2E echecs::$(grep -E "^not ok|^  error: " ../e2e.txt | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')"
+            echo "::warning title=E2E echecs::$(grep -E -A14 "^not ok" ../e2e.txt | head -80 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')"
           fi
           ! grep -qE '^# fail [1-9]' ../e2e.txt
 
@@ -179,8 +179,11 @@ jobs:
           MONRECOURS_PDF_NON_DISTRIBUES: "1"
         run: |
           set -o pipefail
-          python3 bin/enregistrer_tests.py --etiquette ci 2>&1 | tee moteur.txt
-          echo "::notice title=Moteur::$(grep -E '^Tests ' moteur.txt | head -1)"
+          python3 bin/enregistrer_tests.py --etiquette ci 2>&1 | tee moteur.txt || {
+            echo "::error title=Moteur (échecs)::$(grep -E '^TESTS=|^  - |^VERDICT' moteur.txt | head -30 | sed 's/%/%25/g' | awk '{printf "%s%%0A", $0}')"
+            exit 1
+          }
+          echo "::notice title=Moteur::$(grep -E '^Tests |^TESTS=' moteur.txt | head -2 | tr '\n' ' ')"
 
       # ESLint n'est pas une dépendance du projet : il est installé ici, sans
       # modifier package.json ni le verrou, APRÈS la construction (sinon

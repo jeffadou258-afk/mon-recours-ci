@@ -18,6 +18,7 @@ import json
 import os
 import socket
 import urllib.error
+import urllib.parse
 import urllib.request
 
 NOM_VARIABLE_CLE = "MONRECOURS_LLM_API_KEY"
@@ -206,6 +207,31 @@ def _poster_api(url, entetes, corps, delai, libelles=None):
         raise ErreurTransport("réponse non JSON") from erreur
 
 
+NOM_VARIABLE_URL_SOLDE = "MONRECOURS_LLM_URL_SOLDE"
+
+
+def url_solde_autorisee():
+    """Adresse de l'API de solde DeepSeek.
+
+    Par défaut l'adresse officielle. `MONRECOURS_LLM_URL_SOLDE` ne sert qu'aux
+    tests (faux fournisseur local) : elle n'est acceptée que vers l'hôte
+    officiel en HTTPS ou vers la boucle locale. Toute autre valeur est refusée,
+    pour qu'une variable mal renseignée ne puisse pas envoyer la clé ailleurs.
+    """
+    valeur = os.environ.get(NOM_VARIABLE_URL_SOLDE)
+    if not valeur:
+        return FournisseurDeepSeek.URL_SOLDE
+    try:
+        morceaux = urllib.parse.urlsplit(valeur)
+    except ValueError:
+        return None
+    if morceaux.scheme == "https" and morceaux.hostname == "api.deepseek.com":
+        return valeur
+    if morceaux.scheme == "http" and morceaux.hostname in ("127.0.0.1", "localhost", "::1"):
+        return valeur
+    return None
+
+
 class FournisseurDeepSeek(object):
     """API DeepSeek (compatible OpenAI) — modèle par défaut : deepseek-flash.
 
@@ -299,7 +325,10 @@ class FournisseurDeepSeek(object):
         cle = os.environ.get("MONRECOURS_LLM_API_KEY")
         if not cle:
             return {"etat": "ERREUR", "detail": "clé absente"}
-        requete = urllib.request.Request(self.URL_SOLDE, method="GET", headers={
+        url_solde = url_solde_autorisee()
+        if url_solde is None:
+            return {"etat": "ERREUR", "detail": "adresse de solde refusée"}
+        requete = urllib.request.Request(url_solde, method="GET", headers={
             "Authorization": "Bearer %s" % cle,
             "Accept": "application/json",
         })
@@ -339,5 +368,9 @@ class FournisseurDeepSeek(object):
             return {"etat": "AMBIGU", "detail": "solde non numérique"}
         if disponible is False or total <= 0:
             return {"etat": "EPUISE", "devise": devise, "total": str(total)}
+        if disponible is not True:
+            # Contrat documenté : POSITIF exige is_available VRAI. Un indicateur
+            # absent ou d'un autre type n'est pas une preuve : réponse ambiguë.
+            return {"etat": "AMBIGU", "detail": "indicateur de disponibilité absent"}
         return {"etat": "POSITIF", "devise": devise, "total": str(total)}
 

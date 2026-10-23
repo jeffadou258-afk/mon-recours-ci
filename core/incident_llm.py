@@ -13,7 +13,9 @@ récit, jamais de donnée personnelle.
 import datetime
 import json
 import os
+import sys
 import tempfile
+import threading
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOSSIER = os.path.join(RACINE, "RUNTIME")
@@ -46,9 +48,30 @@ def _maintenant():
     return datetime.datetime.now().isoformat(timespec="seconds")
 
 
+# Copie en mémoire du dernier état connu. Elle ne sert QUE si le fichier ne
+# peut pas être écrit (dossier RUNTIME absent ou en lecture seule, par exemple
+# sous systemd `ProtectSystem=strict`) : sans elle, chaque consultation
+# re-déclarerait l'incident (une alerte par consultation) et rappellerait le
+# fournisseur malgré un solde épuisé. Le moteur tourne dans UN processus : cette
+# copie est donc bien l'état qu'il utilise. Elle ne survit pas à un redémarrage,
+# et `etat()["persistant"]` le dit.
+_MEMOIRE = {}            # chemin -> dernier état écrit (ou tenté)
+_NON_PERSISTANT = set()  # chemins dont la dernière écriture a échoué
+# Le serveur du moteur est multi-fil : sans verrou, deux consultations
+# simultanées pourraient toutes deux « ouvrir » l'incident (deux alertes).
+_VERROU = threading.Lock()
+
+
+def _persistant():
+    return _chemin() not in _NON_PERSISTANT
+
+
 def _lire():
+    chemin = _chemin()
+    if chemin in _NON_PERSISTANT and chemin in _MEMOIRE:
+        return dict(_MEMOIRE[chemin])
     try:
-        with open(_chemin(), encoding="utf-8") as flux:
+        with open(chemin, encoding="utf-8") as flux:
             donnees = json.load(flux)
         return donnees if isinstance(donnees, dict) else {}
     except (OSError, ValueError):
@@ -56,8 +79,10 @@ def _lire():
 
 
 def _ecrire(donnees):
+    """Écrit l'état ; renvoie True seulement s'il est réellement sur disque."""
     chemin = _chemin()
     dossier = os.path.dirname(chemin)
+    _MEMOIRE[chemin] = dict(donnees)
     try:
         os.makedirs(dossier, mode=0o700, exist_ok=True)
         descripteur, temporaire = tempfile.mkstemp(dir=dossier, prefix=".incident-", suffix=".tmp")
@@ -66,15 +91,22 @@ def _ecrire(donnees):
         os.chmod(temporaire, 0o600)
         os.replace(temporaire, chemin)
     except OSError:
-        pass
+        _NON_PERSISTANT.add(chemin)
+        sys.stderr.write("incident_llm : etat NON enregistre sur disque (dossier %s "
+                         "non inscriptible) ; conserve en memoire jusqu'au redemarrage\n"
+                         % dossier)
+        return False
+    _NON_PERSISTANT.discard(chemin)
+    return True
 
 
 def etat():
     """État courant de l'incident (vide si aucun)."""
     donnees = _lire()
     if not donnees.get("statut"):
-        return {"statut": None, "ouvert": False}
+        return {"statut": None, "ouvert": False, "persistant": _persistant()}
     donnees["ouvert"] = donnees.get("statut") == OUVERT
+    donnees["persistant"] = _persistant()
     return donnees
 
 
@@ -88,6 +120,11 @@ def declarer(fournisseur, message="", statut_http=None):
     L'appelant s'en sert pour n'alerter qu'une fois : plusieurs consultations
     pendant la panne ne produisent aucune nouvelle alerte.
     """
+    with _VERROU:
+        return _declarer(fournisseur, statut_http)
+
+
+def _declarer(fournisseur, statut_http):
     courant = _lire()
     if courant.get("statut") == OUVERT:
         return False
@@ -103,22 +140,29 @@ def declarer(fournisseur, message="", statut_http=None):
         "objet": "Crédits %s épuisés — Mon Recours CI" % (fournisseur or "du fournisseur"),
         "consequence": ("Le moteur déterministe fonctionne en secours : les consultations "
                         "restent traitées, sans compréhension assistée."),
-        "action_attendue": ("Vérifier le solde du fournisseur et rétablir le service. "
-                            "La réactivation se fait par la vérification du solde, pas par un bouton."),
+        "action_attendue": ("Vérifier le solde du fournisseur et rétablir le service : après "
+                            "rechargement du compte, utiliser « Vérifier le solde et réactiver "
+                            "DeepSeek ». Le service ne se rétablit que sur preuve d'un solde positif."),
     })
     return True
 
 
 def resoudre(motif=""):
-    """Clôt l'incident. Renvoie True si un incident était ouvert."""
-    courant = _lire()
-    if courant.get("statut") != OUVERT:
-        return False
-    courant["statut"] = RESOLU
-    courant["resolu_le"] = _maintenant()
-    courant["resolution"] = (motif or "")[:200]
-    _ecrire(courant)
-    return True
+    """Clôt l'incident. Renvoie True si un incident était ouvert.
+
+    La clôture vaut pour le processus du moteur même si le disque refuse
+    l'écriture ; `etat()["persistant"]` indique alors qu'elle ne survivra pas à
+    un redémarrage.
+    """
+    with _VERROU:
+        courant = _lire()
+        if courant.get("statut") != OUVERT:
+            return False
+        courant["statut"] = RESOLU
+        courant["resolu_le"] = _maintenant()
+        courant["resolution"] = (motif or "")[:200]
+        _ecrire(courant)
+        return True
 
 
 def message_credits(texte):

@@ -49,7 +49,7 @@ async function cookie(role: "administrateur" | "lecteur"): Promise<string> {
 function requete(entetes: Record<string, string> = {}): Request {
   return new Request("http://localhost/api/admin/solde", {
     method: "POST",
-    headers: { "content-type": "application/json", host: "localhost", ...entetes },
+    headers: { "content-type": "application/json", host: "localhost", origin: "http://localhost", ...entetes },
     body: "{}",
   });
 }
@@ -66,7 +66,6 @@ function moteur(corps: unknown, statut = 200) {
   return { recuperer, appels };
 }
 
-const AUDIT: never[] = [];
 const audit = async () => {};
 
 function charge(data: Record<string, unknown>) {
@@ -227,4 +226,44 @@ test("un corps inattendu du moteur ne produit pas de succès", async () => {
   const { statut, corps } = await appeler({ cookie: await cookie("administrateur") }, recuperer);
   assert.equal(statut, 200);
   assert.equal((corps as never as { data: { reactive: boolean } }).data.reactive, false);
+});
+
+test("ni Origin ni Sec-Fetch-Site : refusée (provenance non prouvée)", async () => {
+  const { env } = await preparer();
+  const { recuperer, appels } = moteur(charge({ reactive: true }));
+  const nue = new Request("http://localhost/api/admin/solde", {
+    method: "POST",
+    headers: { "content-type": "application/json", host: "localhost", cookie: await cookie("administrateur") },
+    body: "{}",
+  });
+  const reponse = await executerVerificationSolde(nue, { env, recuperer: recuperer as never, audit });
+  assert.equal(reponse.status, 403);
+  assert.equal(appels.length, 0);
+});
+
+test("Sec-Fetch-Site cross-site : refusée même avec une origine plausible", async () => {
+  const { recuperer, appels } = moteur(charge({ reactive: true }));
+  const { statut } = await appeler(
+    { cookie: await cookie("administrateur"), "sec-fetch-site": "cross-site" },
+    recuperer,
+  );
+  assert.equal(statut, 403);
+  assert.equal(appels.length, 0);
+});
+
+test("l'incident renvoyé ne contient que des champs connus", async () => {
+  const { recuperer } = moteur(
+    charge({
+      reactive: false,
+      etat: "EPUISE",
+      incident: { statut: "CREDITS_EPUISES", ouvert: true, persistant: false, champ_inconnu: "sk-fuite-0123456789" },
+    }),
+  );
+  const { corps } = await appeler({ cookie: await cookie("administrateur") }, recuperer);
+  const texte = JSON.stringify(corps);
+  assert.ok(!texte.includes("champ_inconnu"));
+  assert.ok(!texte.includes("sk-fuite"));
+  const incident = (corps as never as { data: { incident: { ouvert: boolean; persistant: boolean } } }).data.incident;
+  assert.equal(incident.ouvert, true);
+  assert.equal(incident.persistant, false);
 });

@@ -16,7 +16,12 @@ ExecStart=/opt/mon-recours-ci/.venv/bin/python bin/serveur_api.py --port 8765 --
 Restart=on-failure
 NoNewPrivileges=true
 ProtectSystem=strict
-ReadWritePaths=/opt/mon-recours-ci/DOSSIERS
+# RUNTIME : état de l'incident « crédits épuisés », registre du plafond de jetons
+# et verrou de la vérification de solde. Sans cette ligne, ProtectSystem=strict
+# rend ce dossier en lecture seule : l'incident n'était jamais enregistré et le
+# bouton de réactivation répondait « déjà en cours » indéfiniment. Le dossier
+# doit exister (maj.sh le crée) : systemd refuse de démarrer sinon.
+ReadWritePaths=/opt/mon-recours-ci/DOSSIERS /opt/mon-recours-ci/RUNTIME
 PrivateTmp=true
 ProtectHome=true
 # Récits et courriers créés lisibles par le seul service.

@@ -37,7 +37,9 @@ Internet ──HTTPS──► nginx (443) ──► Next.js (127.0.0.1:3000) ─
 5. **Interface** : `cd web && npm ci && npm run build && npm run verifier:secrets`.
 6. **Services** : copier `monrecours-moteur.service` et `monrecours-web.service`
    dans `/etc/systemd/system/`, puis `systemctl enable --now` les deux. Créer
-   `DOSSIERS/` (propriétaire `monrecours`, droits 700).
+   `DOSSIERS/` et `RUNTIME/` (propriétaire `monrecours`, droits 700). `RUNTIME/` porte
+   l'état de l'incident du fournisseur de langage et le registre du plafond ; l'unité du
+   moteur le déclare en écriture et ne démarre pas s'il manque.
 7. **nginx + HTTPS** : adapter `nginx.conf.exemple` (nom de domaine), puis
    `certbot --nginx -d votre-domaine.ci`.
 8. **Purge** : planifier `purger-consultations.mjs` (voir

@@ -104,6 +104,7 @@ Puis :
 ```bash
 chown -R monrecours:monrecours /opt/mon-recours-ci
 chmod 700 /opt/mon-recours-ci/DOSSIERS
+install -d -o monrecours -g monrecours -m 700 /opt/mon-recours-ci/RUNTIME
 ```
 
 ### Étape 4 — dépendances

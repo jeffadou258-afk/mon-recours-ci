@@ -47,7 +47,18 @@ sudo -u "$UTIL" npm ci --silent
 sudo -u "$UTIL" npm run build > /tmp/build-maj.log 2>&1 || { tail -25 /tmp/build-maj.log; exit 1; }
 echo "   build réussi"
 
-echo "== 4. Redémarrage =="
+echo "== 4. Dossiers d'état du moteur =="
+# RUNTIME doit exister AVANT le redémarrage : l'unité systemd le déclare en
+# ReadWritePaths et refuse de démarrer s'il manque.
+install -d -o "$UTIL" -g "$UTIL" -m 700 "$RACINE/RUNTIME"
+echo "   RUNTIME prêt (700, $UTIL)"
+if ! cmp -s "$RACINE/web/deploiement/monrecours-moteur.service" /etc/systemd/system/monrecours-moteur.service; then
+  install -m 644 "$RACINE/web/deploiement/monrecours-moteur.service" /etc/systemd/system/monrecours-moteur.service
+  systemctl daemon-reload
+  echo "   unité du moteur mise à jour"
+fi
+
+echo "== 5. Redémarrage =="
 systemctl restart "$SERVICE_MOTEUR" "$SERVICE_WEB"
 sleep 4
 for service in "$SERVICE_MOTEUR" "$SERVICE_WEB"; do
@@ -56,9 +67,12 @@ for service in "$SERVICE_MOTEUR" "$SERVICE_WEB"; do
   [ "$etat" = "active" ] || { echo "ECHEC : $service inactif" >&2; exit 1; }
 done
 
-echo "== 5. Contrôle =="
+echo "== 6. Contrôle =="
 CODE=$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:3000/api/sante || echo 000)
 echo "   /api/sante : $CODE"
 [ "$CODE" = "200" ] || { echo "ECHEC : le service ne répond pas" >&2; exit 1; }
+if ! sudo -u "$UTIL" test -w "$RACINE/RUNTIME"; then
+  echo "ECHEC : RUNTIME n'est pas inscriptible par $UTIL" >&2; exit 1
+fi
 
 echo "== TERMINÉ : $APRES en service =="

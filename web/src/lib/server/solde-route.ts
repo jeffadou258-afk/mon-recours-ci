@@ -2,6 +2,7 @@ import { creerEcrivain, type LigneAudit } from "@/lib/server/auth/audit";
 import { lireConfig, type ConfigServeur } from "@/lib/server/config";
 import { appelerMoteur, type Recuperateur } from "@/lib/server/moteur";
 import { decisionVerificationSolde } from "@/lib/server/solde";
+import { origineAutorisee } from "@/lib/server/handlers";
 
 /**
  * Cœur de la route POST /api/admin/solde, isolé du contexte Next pour être
@@ -23,6 +24,23 @@ function refus(statut: number, code: string, message: string): Response {
   return Response.json({ ok: false, erreur: { code, message } }, { status: statut, headers: ENTETES });
 }
 
+/**
+ * Seuls les champs connus de l'incident sortent du serveur : un champ ajouté
+ * plus tard côté moteur ne fuit pas sans décision explicite.
+ */
+function incidentPublic(brut: unknown): Record<string, string | boolean | null> | null {
+  if (!brut || typeof brut !== "object") return null;
+  const source = brut as Record<string, unknown>;
+  const sortie: Record<string, string | boolean | null> = {};
+  for (const champ of ["statut", "fournisseur", "detecte_le", "resolu_le", "consequence", "action_attendue"]) {
+    const valeur = source[champ];
+    sortie[champ] = typeof valeur === "string" ? valeur.slice(0, 300) : null;
+  }
+  sortie.ouvert = source.ouvert === true;
+  sortie.persistant = source.persistant !== false;
+  return sortie;
+}
+
 export async function executerVerificationSolde(
   requete: Request,
   options: OptionsSolde = {},
@@ -36,21 +54,14 @@ export async function executerVerificationSolde(
     return refus(403, "ACCES_REFUSE", "Action réservée à l'administration.");
   }
 
-  // Contrôle d'origine : même règle que les autres écritures. Un `Origin: null`
-  // n'est accepté que si le navigateur déclare lui-même une requête de même site.
-  const origine = requete.headers.get("origin");
-  const site = requete.headers.get("sec-fetch-site");
-  const hote = requete.headers.get("host");
-  if (origine && hote) {
-    let memeHote = false;
-    try {
-      memeHote = new URL(origine).host === hote;
-    } catch {
-      memeHote = false;
-    }
-    if (!memeHote && !(origine === "null" && site === "same-origin")) {
-      return refus(403, "ORIGINE_REFUSEE", "Origine non autorisée.");
-    }
+  // Contrôle d'origine (CSRF) : la règle commune des écritures
+  // (`origineAutorisee`, qui tient compte de `Sec-Fetch-Site` et de
+  // `X-Forwarded-Host` derrière nginx), plus une exigence propre à cette action
+  // d'administration : la requête doit PROUVER sa provenance (en-tête `Origin`
+  // ou `Sec-Fetch-Site`). Une requête qui n'en porte aucun est refusée.
+  const preuve = requete.headers.get("origin") !== null || requete.headers.get("sec-fetch-site") !== null;
+  if (!preuve || !origineAutorisee(requete)) {
+    return refus(403, "ORIGINE_REFUSEE", "Origine non autorisée.");
   }
 
   await audit({
@@ -109,7 +120,7 @@ export async function executerVerificationSolde(
         manques: Array.isArray(donnees.manques)
           ? donnees.manques.filter((m): m is string => typeof m === "string")
           : [],
-        incident: donnees.incident ?? null,
+        incident: incidentPublic(donnees.incident),
       },
     },
     { status: 200, headers: ENTETES },
